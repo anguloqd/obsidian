@@ -1,0 +1,90 @@
+---
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+# Loi de Poisson
+
+## Définition 
+
+La loi de Poisson est une loi de probabilité discrète qui décrit le nombre d'événements se produisant au hasard dans un intervalle de temps fixé. L'hypothèse est que ces événements se produisent à taux constant dans le temps et indépendamment les uns des autres.
+
+### Loi de probabilité
+
+Soit $\lambda > 0$. La variable aléatoire à valeurs entières $X$ suit la loi de Poisson de paramètre $\lambda$ si
+
+$$
+{\rm Prob}(X = k) = \frac{\lambda^k}{k!} e^{-\lambda} \,, \quad k = 0, 1, 2, \dots
+$$
+où $k! = k\times(k-1)\cdots \times 2 \times 1$ et $0! = 1! = 1$.
+
+### Propriétés
+
+* Supposons que $X$ décrit le nombre d'événements se produisant dans un intervalle de temps fixé et que $X$ suit la loi de Poisson de paramètre $\lambda$. Alors le **nombre moyen** d'événements se produisant dans l'intervalle est égale à $\lambda$
+
+$$
+\mathbb{E}[X] = \lambda \, .
+$$
+
+* **Addition**: Supposons que $X_1$ suit la loi de Poisson de paramètre $\lambda_1$ et que  $X_2$ suit la loi de Poisson de paramètre $\lambda_2$. Si $X_1$ et $X_2$ sont indépendantes, alors $X_1 + X_2$ suit la loi de Poisson de paramètre $\lambda_1+\lambda_2$.
+
+
+
+## Exercice
+
+* Supposons que $X$ suit la loi de Poisson de paramètre $\lambda$.  Pour tout $k \geq 1$, démontrer que 
+
+$$
+k \times {\rm Prob}(X = k)  = \lambda \times {\rm Prob}(X = k - 1) \,  .
+$$
+* Prouver que 
+
+$$
+\mathbb{E}[X] = \sum_{k = 0}^{\infty} k \times {\rm Prob}(X = k) = \lambda \, .
+$$
+* On suppose que le nombre de buts marqués lors d'un match de football de Ligue 1 suit la loi de Poisson de paramètre $\lambda = 2.8$. Calculer numériquement la probabilité de match nul et la probabilité pour que plus de quatre buts soient marqués (commande utile : `dpois`).
+
+* Quelle hypothèse peut on faire sur le nombre total de buts marqués lors d'une journée de Ligue 1 (10 matchs) ? Justifier mathématiquement votre affirmation. 
+
+* On suppose que le **nombre de buts marqués à domicile** lors d'un match de football de Ligue 1 suit la loi de Poisson de paramètre $\lambda = 1.58$.On suppose que le **nombre de buts marqués à l'extérieur** lors d'un match de football de Ligue 1 suit la loi de Poisson de paramètre $\lambda = 1.22$. Quelle hypothèse peut on faire sur le nombre total de buts marqués dans le match ?
+
+
+* Ecrire un programme R pour simuler $n = 380$ observations de la loi de Poisson de paramètre $\lambda = 1.58$ ($x_1,\dots, x_n$) et $n = 380$ observations de la loi de Poisson de paramètre $\lambda = 1.22$ ($y_1,\dots, y_n$) mutuellement indépendantes les uns des autres (commande utile : `rpois`).  
+
+
+```{r}
+# comment 1
+programme_chatgpt <- NULL #à modifier
+```
+
+
+* Former la somme $z_i = x_i + y_i$ pour $i = 1$ à $n$ et donner une table des effectifs correspondant à chaque valeur  (commande utile : `table`). Comparer cette table aux effectifs prédits par une loi de Poisson dont on déterminera le paramètre.
+
+```{r}
+# comment 1
+programme_chatgpt <- NULL #à modifier
+```
+
+
+* Calculer la valeur moyenne de l'echantillon simulé $(z_1, z_2, \dots, z_n)$.
+
+```{r}
+# comment 1
+```
+
+
+* Comparer graphiquement les probabilités empiriques et théoriques. 
+
+```{r}
+# NULL a modifier
+#plot(table(z), 
+#     lwd = 6, col ="red3",ylab = "frequency")
+
+#points(0:9+0.2, dpois(0:9, lambda = 2.8)*length(z),
+#       type = "h", col = "green4", lwd = 6)
+
+#legend(x = 5,y = 0.2*length(z), col = c("red3","green4"), pch =19, legend = #c("observé", "prédit"))
+```
+

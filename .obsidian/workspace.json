@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "a3a8e09adbb17331",
+    "type": "split",
+    "children": [
+      {
+        "id": "f36b8e89dc55c7dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a815c0c88f9de86",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nouvel onglet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bf46c3b14f18fe7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37d9c3c86809b8e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cca5311cf59bbf1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "145b048da66834d0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "289bbeeb533dc83a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Signet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 714.5
+  },
+  "right": {
+    "id": "11d628113a0311a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "55c92a328736f2ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2addcec4bf0c62d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ensimag/first_year/work/api_numpy.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétrolien pour api_numpy"
+            }
+          },
+          {
+            "id": "fd80e9a54681ff6e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "L3S5 MIASHS/S5 math -- stats mathématiques 2/03 -- estimation non paramétrique et fonctionnelle/03 -- estimation non paramétrique et fonctionnelle.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants de 03 -- estimation non paramétrique et fonctionnelle"
+            }
+          },
+          {
+            "id": "9a316a76d20b0613",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "7611cdaae2e79dd6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "9a815c0c88f9de86",
+  "lastOpenFiles": [
+    "new/uga/l3/s5/math/S5 math complé maths 1/99 les pdfs/CM.pdf",
+    "new/uga/l3/s5/math/S5 math complé maths 1/99 les pdfs.md",
+    "new/uga/l3/s5/math/S5 math complé maths 1/01 analyse fonctionnelle (complexes, topologie, es.md",
+    "new/uga/l3/s5/math/S5 math complé maths 1/01 analyse fonctionnelle (complexes, topologie, es/slides_analyse_fonctionnelle_annote.pdf",
+    "old/Otras libretas 38b07a4041b949a7aba5ec3a03d2931f.md",
+    "01 analyse fonctionnelle (complexes, topologie, es a6d9fb64c4434bd7b118d4ddf18e0e66/slides_analyse_fonctionnelle_annote.pdf.md",
+    "old/test 1771fb44a792807988f9e81558ee4c3e.md",
+    "old/Untitled 22f1fb44a792800ebb24e777c44c7ae5.md",
+    "old/S5 éco économétrie 1/01 rappels et régression linéaire/Untitled.png 1.md",
+    "old/S5 éco économétrie 1/01 rappels et régression linéaire/Untitled.png.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/01 rappels et régression linéaire.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/00 notes interrogation.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non-respect des hypothèses.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/02 régression linéaire multiple.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/02 régression linéaire multiple/Ch3slides-multiple-linear-regression.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/02 régression linéaire multiple.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/S5 éco économétrie 1/03 non respect des hypothèses d39bc946233d4ec68109c90a4e6298d4.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 9.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 8.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 7.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 6.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 5.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 3.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 4.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 2.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/Untitled 13.png",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/6_Chapitre4_partie43_econometrie1_20232024.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/5_Chapitre4_partie42_econometrie1_20232024.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses/4_Chapitre4_partie41_econometrie1_202232024.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/03 non respect des hypothèses",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/02 régression linéaire multiple/2_Chapitre2_Econometrie1_20232024.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/02 régression linéaire multiple",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/01 rappels et régression linéaire/1_Chapitre1_Econometrie1_20232024.pdf",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/01 rappels et régression linéaire",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/S5 éco économétrie 1/02 régression linéaire multiple acbe670dd69d4e1b83e97400c1e52272.md",
+    "new/uga/l3/s5/eco/S5 éco économétrie 1/S5 éco économétrie 1/01 rappels et régression linéaire 509fadfe94974d66bcb00198cc7fefa6.md",
+    "new/uga/l3/s5/math/S5 math complé maths 1/03 équations différentielles.md",
+    "new/uga/l3/s5/math/S5 math complé maths 1/02 théorie du signal.md",
+    "new/uga/l3/s5/math/S5 math stats mathématiques 2/99 le pdf.md",
+    "new/uga/l3/s5/math/S5 math stats mathématiques 2/02 estimation paramétrique.md",
+    "new/uga/l3/s5/math/S5 math stats mathématiques 2/01 approximations des grands échantillons.md",
+    "new/uga/l3/s5/math/S5 math stats mathématiques 2/00 notes de cours.md",
+    "new/uga/l3/s5/math/S5 math complé maths 1 f45f92dbe1874c8db6ee9502566965e1/02 théorie du signal 65f60bd2e5eb484fbb20eb48605ca173.md",
+    "new/uga/l3/s6/stage/S6 extra stage/03 paper de comparaison de BFAST, données synthé.md"
+  ]
+}

@@ -1,0 +1,4 @@
+﻿Property,Binomial,Poisson
+Argumentos,n: número de oportunidades de éxito (o también llamada al unidad de tiempo)x: números de éxitosp: probabilidad de éxito,k: éxitos a predecir que sucederán en una ventana de tiempo
+Fórmula,(n escoge k)*(p)^k*(1-p)^(n-k),m^x * e^(-m)/x!
+Éxitos permitidos en una oportunidad,Solamente 1 o 0,Puede haber cualquier número de éxitos

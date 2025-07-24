@@ -1,0 +1,61 @@
+% prédicat principal
+jouer(graduel, L, R) :- L=[], R=c;
+    not(grEnEtatRelax(L)), not(grEnEtatPunir(L)), not(grVientDeTrahir(L)), R=c; % état normal
+    not(grEnEtatRelax(L)), not(grEnEtatPunir(L)), grVientDeTrahir(L), R=t; % état punir : commence les punissions
+    not(grEnEtatRelax(L)), grEnEtatPunir(L), grIlManquePunissions(L), R=t; % état punir : finit les punissions
+    grEnEtatRelax(L), R=c. % etat relax
+
+% prédicats supplémentaires
+% sont marqués avec "gr" en prefixe pour "graduel"
+
+% explication : le algo est en etat relax si...
+grEnEtatRelax(L) :-
+		% on était en etat punir mais il ne reste aucune trahison à jouer, donc on a fini
+    grEnEtatPunir(L), not(grIlManquePunissions(L));
+		% ou si on avait déjà rentré dans le état relax et on a coopéré une fois
+    not(grEnEtatPunir(L)), grJaiRelacheUneFois(L).
+
+% explication : il manque des punissions si...
+grIlManquePunissions(L) :-
+		% on compte les trahisons de le adversaire avant de ma dernier coopération
+    grHistDepuisMaDernCoop(L, LaPartirDeDernC), grNbTrahisons(LaPartirDeDernC, NbTrahisonsAdvCumulees), 
+    % on compte les punissions que jai donné jusque là
+		grNbMesTrahisonsAvantMaDernCoop(L,NbMesTrahisonsEnCours),
+    % si il elles ne sont pas encores les memes, il manque donc des punissions à jouer
+		NbMesTrahisonsEnCours < NbTrahisonsAdvCumulees.
+
+% explication : jai relaché une fois si mon dernier coup était coopération
+grJaiRelacheUneFois([[A,_],[C,_]|_]) :- C=t, A=c.
+% explication : je suis en état punir si mon dernier coup était trahison
+grEnEtatPunir([[A,_]|_]) :- A=t.
+% explication : adversaire vient de trahir si son dernier coup était trahison
+grVientDeTrahir([[_,B]|_]) :- B=t.
+
+% utilitaire : donnée une histoire L,
+% compte le nombre de trahisions N de le adversaire
+grNbTrahisons(L,N) :-
+    L=[], fail;
+    L=[[_,c]], N=0;
+    L=[[_,t]], N=1;
+    not(L=[[_,_]]), L=[[_,B]|Reste],
+        grNbTrahisons([[_,B]], NListeCourante), grNbTrahisons(Reste, NReste),
+        N is (NListeCourante + NReste).
+
+% utilitaire : donnée une histoire L1,
+% retourne la histoire L2 du debut jusquà ma dernière coopération 
+grHistDepuisMaDernCoop(L1, L2) :-
+    L1 = [[c,_]], L2 = [[c,_]];
+    L1 = [[t,_]], L2 = [[]];
+    not(L1=[[_,_]]), L1 = [[A,B]|Reste], A=c, L2=Sol, append([[A,B]],Reste,Sol);
+    not(L1=[[_,_]]), L1 = [[A,_]|Reste], A=t, L2=Sol, grHistDepuisMaDernCoop(Reste, Sol).
+
+% utilitaire : donnée une histore L,
+% retourne la quantité de trahisons N que jai fait avant ma dernière coopération
+grNbMesTrahisonsAvantMaDernCoop(L, N) :-     
+    L=[], N=0;
+    L=[[c,_]], N=0;
+    L=[[t,_]], N=1;
+    L=[[A,_],[C,_]|Reste],
+        (A=c, !, N=0;
+        A=t, C=c, !, N=1;
+        A=t, C=t, grNbMesTrahisonsAvantMaDernCoop(Reste, NReste), N is (2+NReste)).
