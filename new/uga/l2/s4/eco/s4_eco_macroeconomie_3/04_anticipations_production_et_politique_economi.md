@@ -76,7 +76,7 @@ On vient de voir que l’inflation $\pi$ augmente si la production actuelle $Y_t
 
 # La nouvelle courbe IS
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/04_anticipations,_production_et_politique_economi/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/04_anticipations_production_et_politique_economi/untitled.png)
 
 ## L’inclusion des anticipations : $A$
 
@@ -90,7 +90,7 @@ $$
 
 Ayant inclus les variables anticipées dans $A$, on ne spécifie jamais une forme fonctionnelle de $A$, on juste va établir des relations en même sens avec $Y,Y^e$ et des relations en sens inverse avec $T,T^e$ et $r,r^e$.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/04_anticipations,_production_et_politique_economi/untitled_1.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/04_anticipations_production_et_politique_economi/untitled_1.png)
 
 On fait remarquer au passage que les anticipations diminuent l’élasticité de $A$ à $r$ actuel :
 

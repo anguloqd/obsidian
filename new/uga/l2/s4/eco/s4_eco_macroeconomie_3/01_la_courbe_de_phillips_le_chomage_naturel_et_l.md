@@ -11,7 +11,7 @@ En 1958, A. W. Phillips met en évidence une corrélation négative très nette 
 
 La théorie serait que plus on se rapproche au plein emploi des facteurs, plus les ajustement se font par les prix et non pas par les quantités. On pensait que cette relation était consistante jusqu’aux années 1970s où on a vu la stagflation : forte chômage et forte inflation simultanément. Avant de cette époque, on appréciait une relation régulièrement négative entre les deux indicateurs.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips,_le_chomage_naturel_et_l/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips_le_chomage_naturel_et_l/untitled.png)
 
 # Inflation, inflation anticipée et chômage
 
@@ -118,11 +118,11 @@ $$
 \pi_t=\overline{\pi}+(m+z)-\alpha u_t \tag{6}
 $$
 
-![On peut apprécier la relation négative entre inflation et chômage avant 1970.](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips,_le_chomage_naturel_et_l/untitled_1.png)
+![On peut apprécier la relation négative entre inflation et chômage avant 1970.](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips_le_chomage_naturel_et_l/untitled_1.png)
 
 On peut apprécier la relation négative entre inflation et chômage avant 1970.
 
-![Par contre, il est difficile à trouver la même relation négative clairement à cause de la *stagflation* à partir des années 1970. ](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips,_le_chomage_naturel_et_l/untitled_2.png)
+![Par contre, il est difficile à trouver la même relation négative clairement à cause de la *stagflation* à partir des années 1970. ](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips_le_chomage_naturel_et_l/untitled_2.png)
 
 Par contre, il est difficile à trouver la même relation négative clairement à cause de la *stagflation* à partir des années 1970. 
 
@@ -171,7 +171,7 @@ La valeur de la persistance de l’inflation $\theta$ affecte la relation inflat
 
 ## Explication de la *stagflation* des années 1970
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips,_le_chomage_naturel_et_l/untitled_3.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/01_la_courbe_de_phillips_le_chomage_naturel_et_l/untitled_3.png)
 
 - Il y avait un $\theta$ forte, donc la relation simple inflation-chômage n’applique plus.
 - Si on voit à l’équation 8 et le graphique, on confirme la relation négative de la variation de l’inflation $(\pi_{t+1}-\pi_t)$ et le taux de chômage $u_t$.

@@ -96,7 +96,7 @@ Cette opération peut être divisée en deux étapes. On prend deux tables $R$ e
 1. Les attributs de $T = R/S$ seront les attributs de $R$ qui ne sont pas dans $S$.
 2. Les lignes ou entrées de $T$ seront tels tuples dont toutes les possibles combinaisons avec les tuples de $S$ sont présentes dans la table de départ $R$.
 
-![Seulement X=1 a des combinaisons avec les pairs de Y et Z (2,3) et (5,6).](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/02_l’algebre_relationnelle/untitled_9.png)
+![Seulement X=1 a des combinaisons avec les pairs de Y et Z (2,3) et (56).](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/02_l’algebre_relationnelle/untitled_9.png)
 
 Seulement X=1 a des combinaisons avec les pairs de Y et Z (2,3) et (5,6).
 

@@ -65,7 +65,7 @@ df['col'].value_counts(normalize=True)  # proportions
 ```python
 # Sélection de colonnes
 df['col']
-df[['col1',_'col2']]
+df[['col1'_'col2']]
 df.col  # accès par attribut
 
 # Sélection de lignes par label
@@ -77,7 +77,7 @@ df.loc[boolean_mask]
 # Sélection de lignes par position
 df.iloc[0]
 df.iloc[0:5]
-df.iloc[[0,_2,_4]]
+df.iloc[[0_2_4]]
 df.iloc[boolean_array]
 
 # Sélection combinée

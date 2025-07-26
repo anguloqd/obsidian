@@ -488,7 +488,7 @@ public int size() {
 
 # Maps : notion des dictionnaires
 
-![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `map<k,v>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_4.png)
+![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `map<kv>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_4.png)
 
 Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `Map<K,V>`.
 

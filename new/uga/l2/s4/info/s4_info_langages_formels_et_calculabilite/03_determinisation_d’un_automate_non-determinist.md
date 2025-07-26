@@ -58,7 +58,7 @@ La $\varepsilon$-fermeture est un ensemble lié à un état : c’est l’ensemb
 
 On considère une suite de transitions $\varepsilon$ une seule transition jusqu’à que on ne peut plus enchaîner avec une autre transition $\varepsilon$ mais avec un caractère propre.
 
-![Ici, l’ensemble $E(1)$ est $\{1,2,3,4,6\}$.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/03_determinisation_d’un_automate_non-determinist/untitled_3.png)
+![Ici, l’ensemble $E(1)$ est $\{12346\}$.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/03_determinisation_d’un_automate_non-determinist/untitled_3.png)
 
 Ici, l’ensemble $E(1)$ est $\{1,2,3,4,6\}$.
 

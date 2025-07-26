@@ -56,7 +56,7 @@ Finalement, cela serait l’investissement d’un seul (une seule machine). On p
 
 Les entreprises peuvent s’attendre à ce que le profit courant prédise généralement bien le profit futur. En fait, l’investissement $I$ est plus affecté par le profits courants que ceux futurs.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/03_anticipations,_consommation_et_investissement/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/03_anticipations_consommation_et_investissement/untitled.png)
 
 Si le profit d’une firme est faible, elle est contrainte à emprunter pour investir, mais l’endettement l’expose à un risque de rentabilité. Si le profit est fort, par contre, ses garanties de repaiement sont plus fortes et ses besoins d’emprunter sont moindres. Si le profit est encore plus forte, la firme pourrait même se financer elle-même.
 

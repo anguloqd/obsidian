@@ -76,26 +76,26 @@ grVientDeTrahir([[_,B]|_]) :- B=t.
 % utilitaire : donnée une histoire L, compte le nombre de trahisions N de le adversaire
 grNbTrahisons(L,N) :-
     L=[], fail;
-    L=[[_,c]], N=0;
-    L=[[_,t]], N=1;
-    not(L=[[_,_]]), L=[[_,B]|Reste],
-        grNbTrahisons([[_,b]], NListeCourante), grNbTrahisons(Reste, NReste),
+    L=[[_c]], N=0;
+    L=[[_t]], N=1;
+    not(L=[[__]]), L=[[_,B]|Reste],
+        grNbTrahisons([[_b]], NListeCourante), grNbTrahisons(Reste, NReste),
         N is (NListeCourante + NReste).
 
 % utilitaire : donnée une histoire L1,
 % retourne la histoire L2 du debut jusquà ma dernière coopération 
 grHistDepuisMaDernCoop(L1, L2) :-
-    L1 = [[c,_]], L2 = [[c,_]];
-    L1 = [[t,_]], L2 = [[]];
-    not(L1=[[_,_]]), L1 = [[A,B]|Reste], A=c, L2=Sol, append([[a,b]],Reste,Sol);
-    not(L1=[[_,_]]), L1 = [[A,_]|Reste], A=t, L2=Sol, grHistDepuisMaDernCoop(Reste, Sol).
+    L1 = [[c_]], L2 = [[c_]];
+    L1 = [[t_]], L2 = [[]];
+    not(L1=[[__]]), L1 = [[A,B]|Reste], A=c, L2=Sol, append([[ab]],Reste,Sol);
+    not(L1=[[__]]), L1 = [[A,_]|Reste], A=t, L2=Sol, grHistDepuisMaDernCoop(Reste, Sol).
 
 % utilitaire : donnée une histore L,
 % retourne la quantité de trahisons N que jai fait avant ma dernière coopération
 grNbMesTrahisonsAvantMaDernCoop(L, N) :-     
     L=[], N=0;
-    L=[[c,_]], N=0;
-    L=[[t,_]], N=1;
+    L=[[c_]], N=0;
+    L=[[t_]], N=1;
     L=[[A,_],[C,_]|Reste],
         (A=c, !, N=0;
         A=t, C=c, !, N=1;

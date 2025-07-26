@@ -528,7 +528,7 @@ class Point {
 
 ## *Encapsulation* et contrôle d'accès
 
-![Notion d’encapsulation.](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs,_packages_et_modificateurs_d’acce/untitled.png)
+![Notion d’encapsulation.](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled.png)
 
 Notion d’encapsulation.
 
@@ -546,7 +546,7 @@ On peut appliquer aussi les modificateurs sur les classes. Normalement on utilis
 
 Ils peuvent être places devant une déclaration de classe, méthode ou d’attribut (d’instance ou de classe).
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs,_packages_et_modificateurs_d’acce/untitled_1.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_1.png)
 
 Principes pour choisir un modificateur :
 

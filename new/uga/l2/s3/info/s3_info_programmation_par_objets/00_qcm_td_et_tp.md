@@ -132,7 +132,7 @@ int[] c = new int[];  // erreur !
 
 Diagramme de classe de UML :
 
-![](new/uga/l2/s3/info/s3_info_programmation_par_objets/00_qcm,_td_et_tp/untitled.png)
+![](new/uga/l2/s3/info/s3_info_programmation_par_objets/00_qcm_td_et_tp/untitled.png)
 
 « une voiture est composée d'un moteur et de plusieurs roues » (*=plusieurs).
 « une roue est associée une et une seule voiture ».

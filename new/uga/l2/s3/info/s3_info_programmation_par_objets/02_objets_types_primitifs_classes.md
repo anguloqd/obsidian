@@ -33,14 +33,14 @@ String u=s ;
 
 Il existent deux endroits où on garde les références (noms des variables) et les valeurs des objets : la pile et le tas, respectivement.
 
-![Dans cette image, u fait référence à la valeur qui fait référence s, “Licence Miashs”. ATTENTION : on crée pas, DANS CE CAS, un autre objet string de valeur “Licence Miashs”, mais c’est possible aussi !](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets,_types_primitifs,_classes/untitled.png)
+![Dans cette image, u fait référence à la valeur qui fait référence s, “Licence Miashs”. ATTENTION : on crée pas, DANS CE CAS, un autre objet string de valeur “Licence Miashs”, mais c’est possible aussi !](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets_types_primitifs_classes/untitled.png)
 
 Dans cette image, u fait référence à la valeur qui fait référence s, “Licence Miashs”. ATTENTION : on crée pas, DANS CE CAS, un autre objet string de valeur “Licence Miashs”, mais c’est possible aussi !
 
 Si on juste initialise la référence ou variable, et on ne le donne pas un objet ou valeur, le résultat est comme suit :
 (Pour les tableaux, la valeur par défaut est `null` !)
 
-![`null` n’est pas une valeur !](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets,_types_primitifs,_classes/untitled_1.png)
+![`null` n’est pas une valeur !](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets_types_primitifs_classes/untitled_1.png)
 
 `null` n’est pas une valeur !
 
@@ -51,7 +51,7 @@ Si on juste initialise la référence ou variable, et on ne le donne pas un obje
 L'allocation dynamique sur le tas est pratique mais n'est pas très efficace.
 Java traite les types de données très fréquents, i.e. les types primitifs de manière différente.
 
-![Les types primitifs sont alloues dans la pile, **A EXCEPTION DU `STRING` !**](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets,_types_primitifs,_classes/untitled_2.png)
+![Les types primitifs sont alloues dans la pile, **A EXCEPTION DU `STRING` !**](new/uga/l2/s3/info/s3_info_programmation_par_objets/02_objets_types_primitifs_classes/untitled_2.png)
 
 Les types primitifs sont alloues dans la pile, **A EXCEPTION DU `STRING` !**
 

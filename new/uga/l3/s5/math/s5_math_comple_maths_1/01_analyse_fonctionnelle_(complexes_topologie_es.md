@@ -3,7 +3,7 @@
 Date de création: July 16, 2024 11:47 PM
 Modifié: July 16, 2024 11:47 PM
 
-[Slides annotés #1 : analyse fonctionnelle.pdf](01_analyse_fonctionnelle_(complexes,_topologie,_es/slides_analyse_fonctionnelle_annote.pdf)
+[Slides annotés #1 : analyse fonctionnelle.pdf](01_analyse_fonctionnelle_(complexes_topologie_es/slides_analyse_fonctionnelle_annote.pdf)
 
 # Nombres complexes
 
@@ -17,7 +17,7 @@ $$
 
 Supposons que $z=-1+i$. Donc, sa représentation graphique est la suivante :
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled.png)
 
 Le module est défini comme une fonction qui prend un nombre complexe sur le plain complexe et retourne de ce nombre complexe à partir de l’origine. $|z|$ est le module du nombre $z$ et il est calculé comme suit :
 
@@ -29,9 +29,9 @@ $$
 
 La forme trigonométrique d’un nombre complexe $z$ nécessite la conception du cercle trigonométrique : un cercle de rayon $1$ centré sur l’origine. Si on trace une ligne de l’origine à $z$, on pourrait déterminer tout $z$ à partir de son module et les radians $\theta$ jusqu’au point d’intersection de telle ligne avec cercle unitaire. **Ce $\theta$ est appelé l’*argument ou phase***.
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_1.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_1.png)
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_2.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_2.png)
 
 Une technique intéressante c’est de prendre un nombre $z$ et de le diviser par son module $|z|$. Le résultat de cette opération est appelé le point d’affixe noté $\tilde z=z/|z|$, et il garde le même angle $\theta$ que le nombre original $z$, mais son module est $1$.
 
@@ -174,7 +174,7 @@ Malgré ça, dans la pratique une distance est issue par une norme et les distan
 
 ### Espaces normés et espaces métriques
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_3.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_3.png)
 
 Comme il est visible dans l’image ci-contre, un espace (ensemble) $E$ muni d’une distance $d$ constitue un espace métrique représenté par la couple $(E,d)$. Il est de même pour un espace muni d’une norme, appelé espace normé $(E, ||\cdot||)$. Cela dit, tout espace normé est un espace métrique, mais la réciproque n’est pas vrai.
 
@@ -229,11 +229,11 @@ $$
 
 Ceci veut dire qu’on peut prendre un point du sous-ensemble $U$ et qu’on peut faire une boule centré sur $a$ et de rayon arbitrairement petit tel que toute la boule est incluse dans $U$, qui est lui-même inclut en $E$. Il est possible donc de couvrir tout $U$ avec des boules de différentes tailles. **L’ouvert ne contient pas de frontières**.
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_4.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_4.png)
 
 On définit un ouvert à partir d’un fermé : $F$ est (sous-ensemble) fermé de $E$ si son complémentaire $F^c=E\setminus F$ est ouvert. Voyons que le problème de l’image suivante c’est que, si on essai de définir un ouvert sur toute la forme géométrique, les boules sur la frontière forcément contiendront des points dehors la forme.
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_5.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_5.png)
 
 **Remarque**. Un ensemble peut être ni ouvert ni fermé. Sur $\R$, par exemple, $[a,b[$ est un tel exemple.
 
@@ -257,11 +257,11 @@ $$
 \bigcap_{n=1}^\infin \left] -\frac{1}{n}, \frac{1}{n}\right[=\{0\}
 $$
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_6.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_6.png)
 
 **Note**. Dans $\R^n$, un ensemble $E$ fermé et **borné** (admettant un élément dont la norme est maximale) est un ensemble compact. Voyons que d’être fermé n’est pas d’être borné. Borné veut dire que ses bornes sont finies.
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_7.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_7.png)
 
 ## Limites, continuité et fonctions lipschitziennes
 
@@ -282,7 +282,7 @@ $$
 
 Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble) fermé d’une manière qui n’est pas juste le complémentaire d’un ouvert. $F$ est un fermé de $E$ si, pour toute suite $(x_k)$ d’éléments de $F$ qui converge vers $\ell$, on a que $\ell\in F$. Ceci aide trivialement à atteindre les bornes. 
 
-![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_8.png)
+![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_8.png)
 
 ### Continuité avec des boules
 
@@ -320,7 +320,7 @@ Quelques propriétés :
     
 - Si $f$ est lpz. pour tout compact (fermé et borné) de $E$, donc $f$ est localement lpz : c’est le cas de $f(x)=x^2$ aussi.
     
-    ![Untitled](01_analyse_fonctionnelle_(complexes,_topologie,_es/untitled_9.png)
+    ![Untitled](01_analyse_fonctionnelle_(complexes_topologie_es/untitled_9.png)
     
 - Si une application $L$-lipschitzienne a une constante de Lipschitz $L<1$, l’application est contractante. Ceci permet l’existence d’un point fixe.
 - Si $E$ est un espace métrique complet, $f : E\rightarrow E$ et $f$ est une application contractante, donc il existe un point fixe $x^*$ tel que $f(x^*)=x^*$. De plus, toute suite  de la forme $x_{n+1}=f(x_n)$ converge vers $x^*$.

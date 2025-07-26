@@ -251,7 +251,7 @@ $$
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
 
 $$
-B\bold{Y}_{\mathcal{B}}=Q^{-1}AP\bold{Y}_{\mathcal{B}'}\\[4pt](e,\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
+B\bold{Y}_{\mathcal{B}}=Q^{-1}AP\bold{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
 $$
 
 1. $P$ : On prend un vecteur $\bold{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.

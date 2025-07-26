@@ -54,15 +54,15 @@ Côté producteurs, si on part d’une situation où il y a une variété rempla
 
 Ce modèle tente de faire une analogie d’une caractéristique avec une rue linéaire : sur un point se trouve un modalité de la caractéristique, et plus on est loin de ce point, plus on s’éloigne de la modalité de la caractéristique. Voyons :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled.png)
 
 Une firme vend un produit homogène à prix p. Il y a des consommateurs repartis homogènement sur la rue $[0,1]$. Ils supportent un cout de transport $t$ qui croît avec l’éloignement du point de vente, et représente une mesure de la désutilité marginale liée à l’éloignement.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_1.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_1.png)
 
 Maintenant, on suppose deux magasins placés sur les extrémités de la rue, $x=0$ et $x=1$, avec $p_1 < p_2$. À partir d’un magasin, plus on s’éloigne, plus le prix à payer (prix du produit + distance) augmente pour les consommateurs. **Les consommateurs achètent au magasin où leur surplus est le plus grand**. $V$ étant le prix de reserve de tous le consommateurs, on peut tracer $\bar{x}_1$, qui est le consommateur le plus à droite allant au magasin 1, et pareil avec $\bar{x}_2$ et le magasin 2. Les consommateurs entre $\bar{x}_1$ et $\bar{x}_2$ n’achètent pas, car le prix à payer est plus cher que leur reserve.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_2.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_2.png)
 
 Par la suite, on suppose $p_1=p_2=p$ et $Cm_1=Cm_2=c$. La courbe de prix à payer pour les consommateurs est $p_1 + tx$, le maximum étant quand $p_1+tx=V$, leur reserve, et tel valeur de $x$ on le marque $\bar{x}_1 =\frac{V-p}{t}$, le prix à payer maximum.
 
@@ -94,11 +94,11 @@ On suppose, de plus, que la firme veut servir à la totalité du marché.
 
 </aside>
 
-![Cas de deux magasins : $n=2$. Les rectangles verts sont les profits de chaque magasin.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_3.png)
+![Cas de deux magasins : $n=2$. Les rectangles verts sont les profits de chaque magasin.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_3.png)
 
 Cas de deux magasins : $n=2$. Les rectangles verts sont les profits de chaque magasin.
 
-![Cas de trois magasins, $n=3$.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_4.png)
+![Cas de trois magasins, $n=3$.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_4.png)
 
 Cas de trois magasins, $n=3$.
 
@@ -118,7 +118,7 @@ Pour déterminer jusqu’à quel point il est profitable de créer un établisse
 
 Si jamais on considère de ne pas servir tout le marché mais juste une partie, on pourrait commencer à monter le prix à partir du prix maximum qui sert à tout le marché.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_5.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_5.png)
 
 En particulier, on veut un prix à payer aux consommateurs égal à $p+tr=V$. De là, on déduit que $r=\frac{V-p}{t}$. La demande par magasin est donc $q(p)=2N\frac{V-p}{t}$, donc le profit est $\pi_P = \frac{2N(p-c)(V-p)}{t}-F$. Maximisant le profit par rapport aux prix, on obtient $p^*_P=\frac{V+c}{2}$.
 
@@ -170,7 +170,7 @@ On calcules les CPO par rapport aux quantités des deux firmes rivales, puis leu
 
 **À noter que le graphique des fonction de réaction contient $p_1$ en abscisse et $p_2$ en ordonnée**, les quantités ne sont pas importantes analysant les fonction de réaction mais pour calculer les profits après.
 
-![Exemple où $a=1, d = \gamma$ et coûts marginaux constants $0<c<1$.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_6.png)
+![Exemple où $a=1, d = \gamma$ et coûts marginaux constants $0<c<1$.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_6.png)
 
 Exemple où $a=1, d = \gamma$ et coûts marginaux constants $0<c<1$.
 
@@ -195,7 +195,7 @@ En plus, on dira que le produit 1 sera de meilleure qualité que le produit 2, d
 
 On graphique le niveau d’utilité du produit $i$, $U_i$, en fonction de $\phi$ comme suit :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_7.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_7.png)
 
 On notera qu’il y a un niveau de préférence où $U_1=U_2$. Ceci sera appelé le consommateur de préférence marginale, et il est indifférent entre choisir le produit 1 et le produit 2. On pourrait calculer logiquement ce point :
 
@@ -325,7 +325,7 @@ Aussi, étudiant les deux fonctions de profit, supposant $f_1=f_2=0$ :
 - Quand les produits sont totalement différents, càd. $d=0$, chacun fait un monopole dans son marché.
 - Quand les produits sont totalement égaux et substituables, càd. $d=1$, les profits des deux devient nuls.
 
-![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_8.png)
+![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_8.png)
 
 On fixe $a=1$ pour simplicité de lecture du graphique.
 [https://www.desmos.com/calculator/qspaij3o72](https://www.desmos.com/calculator/qspaij3o72)
@@ -340,7 +340,7 @@ Leur prix total à payer pour une unité du bien vendu par i serait le prix du b
 
 On revient sur une rue linéaire. Pour un premier temps, on suppose deux firmes qui sont franchisés, et leur franchiseurs leur exigent à chacun de fixer leur prix à $p=0$. Un détail aussi évidant c’est que $a+b\le\ell$.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_9.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_9.png)
 
 Pour la firme en $A$, elle vend à tous les consommateurs à sa gauche et à la moitié des consommateurs à sa droite qui ne sont pas capturés (à droite de…) par $B$. Donc :
 
@@ -367,7 +367,7 @@ $$
 
 Sur une deuxième rue linéaire de longueur $\ell=35$, une firme est fixée sur $a=4$ et l’autre firme est fixé sur $b=1$., avec $Cm=0$ Elle jouent sur leur prix. Chaque consommateur consomme une baguette et supporte un prix égal au prix du bien plus le coût de transport : $p+td$.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_10.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_10.png)
 
 Supposons que, en premier temps, $A$ et $B$ vont fixer le même prix : $p_A = p_B$. Le consommateur marginal est celui entre les intervalles $x$ et $y$, pour lequel le prix d’acheter en $A$ ou $B$ est le même. Tout à gauche du consommateur marginal achetera en $A$, et de même pour $B$ pour tout ceux qui sont à droite.
 
@@ -418,7 +418,7 @@ $$
 
 Si on graphique ces fonctions de réactions, on obtient le graphique ci-dessous :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_11.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_11.png)
 
 Finalement, les paramètres optimaux d’équilibre de Nash sont les suivants :
 
@@ -462,12 +462,12 @@ La part de marché de la firme 1 est plus grande quand l’avantage en qualité 
 
 Lancaster suggère plutôt une différenciation horizontale et verticale pas avec un modèle, mais avec un vecteur : une liste de caractéristiques. Pour deux types des clients A et B, on peut voir leur prix de reserves de chaque unité d’une certaine caractéristique.
 
-![Chaque chiffre représente des milles. Par exemple, un client de type $A$ a une reserve de $(0.5)(\$1000)$ pour une unité d’air (qualité de la clime de la voiture), et $(1)(\$1000)$ pour une unité de taille de voiture. Bien sûr, il a aussi rationnellement un prix de reserve de $-\$1000$ pour chaque $\$1000$ de valeur de la voiture.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_12.png)
+![Chaque chiffre représente des milles. Par exemple, un client de type $A$ a une reserve de $(0.5)(\$1000)$ pour une unité d’air (qualité de la clime de la voiture), et $(1)(\$1000)$ pour une unité de taille de voiture. Bien sûr, il a aussi rationnellement un prix de reserve de $-\$1000$ pour chaque $\$1000$ de valeur de la voiture.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_12.png)
 
 Chaque chiffre représente des milles. Par exemple, un client de type $A$ a une reserve de $(0.5)(\$1000)$ pour une unité d’air (qualité de la clime de la voiture), et $(1)(\$1000)$ pour une unité de taille de voiture. Bien sûr, il a aussi rationnellement un prix de reserve de $-\$1000$ pour chaque $\$1000$ de valeur de la voiture.
 
 On voit qu’un CEO est prêt pour payer plus pour la plupart de caractéristiques d’une voiture. Si on calcule ceci avec deux voitures, GEO et Porsche, comme des vecteurs, on obtient alors :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole,_oligopoles,_en_st/untitled_13.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/05_differenciation_en_monopole_oligopoles_en_st/untitled_13.png)
 
 Pour le consommateur $A$ (étudiant), ça ne vaut même pas la peine d’acheter un Porsche, tant que le GEO l’apporte une utilité positive nette. Pour le consommateur $B$ (CEO), les deux voitures valent la peine, mais surtout le Porsche sur le GEO.
