@@ -57,7 +57,7 @@ arr[:, 1]  # toutes lignes, colonne 1
 arr[0, :]  # ligne 0, toutes colonnes
 
 # Indexation avancée
-arr[[1, 2, 4]]  # indexation fantaisie
+arr[[1,_2,_4]]  # indexation fantaisie
 arr[arr > 5]    # indexation booléenne
 np.where(condition, x, y)
 np.select(conditions_list, choices_list)
