@@ -1,8 +1,5 @@
 # 02 // fondamentaux 2
 
-Date de création: January 27, 2023 5:29 PM
-Modifié: June 10, 2023 1:15 PM
-
 [Slides de fondamentaux 2](corolleur_f._2022_lecture_2_introduction__la_thorie_des_jeux.pdf)
 
 <aside>

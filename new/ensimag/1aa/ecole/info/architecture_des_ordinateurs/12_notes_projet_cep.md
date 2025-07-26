@@ -1,8 +1,5 @@
 # 12 // notes projet CEP
 
-Date de création: May 12, 2025 10:53 PM
-Modifié: May 12, 2025 11:20 PM
-
 ---
 
 mcause : contient l’origine de l’interruption, la nature de l’interruption

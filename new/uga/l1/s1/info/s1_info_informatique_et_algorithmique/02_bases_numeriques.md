@@ -1,8 +1,5 @@
 # 02 // bases numériques
 
-Date de création: November 8, 2021 10:48 PM
-Modifié: June 2, 2023 11:34 AM
-
 # Le codage binaire
 
 ## Le *bit*

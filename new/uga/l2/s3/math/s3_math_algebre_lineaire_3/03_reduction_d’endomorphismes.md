@@ -1,8 +1,5 @@
 # 03 // réduction d’endomorphismes
 
-Date de création: September 29, 2022 10:39 AM
-Modifié: June 25, 2023 4:09 PM
-
 # Rappel: changement de base
 
 ## Préparation : de $y=f(x)$ à $\bold{Y}_{B'}=A\bold{X}_B$

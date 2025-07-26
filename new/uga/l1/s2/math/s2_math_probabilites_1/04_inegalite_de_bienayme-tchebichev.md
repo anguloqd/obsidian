@@ -1,8 +1,5 @@
 # 04 // inégalité de bienaymé-tchebichev
 
-Date de création: May 7, 2022 5:50 PM
-Modifié: June 7, 2023 12:58 PM
-
 # Inégalité de Bienaymé-Tchebichev
 
 ## L’inégalité : une borne supérieure utile sur une V.A $X$

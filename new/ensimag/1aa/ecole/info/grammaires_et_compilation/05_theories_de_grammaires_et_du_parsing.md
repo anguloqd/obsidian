@@ -1,8 +1,5 @@
 # 05 // théories de grammaires et du parsing
 
-Date de création: January 11, 2025 5:24 PM
-Modifié: January 26, 2025 3:47 PM
-
 [chap5-4up.pdf](chap5-4up.pdf)
 
 ## Exo 5.3

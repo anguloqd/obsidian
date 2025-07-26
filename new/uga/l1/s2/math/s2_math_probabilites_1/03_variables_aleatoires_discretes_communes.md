@@ -1,8 +1,5 @@
 # 03 // variables aléatoires discrètes communes
 
-Date de création: May 6, 2022 7:49 PM
-Modifié: November 8, 2023 10:46 PM
-
 # Paramètres descriptifs d’une distribution discrète
 
 ## Mode

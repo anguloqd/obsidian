@@ -1,8 +1,5 @@
 # 05 // la demande
 
-Date de création: February 27, 2022 1:47 AM
-Modifié: June 2, 2023 4:42 PM
-
 - À ce stade, on se rend compte que la quantité demandée d'un bien est une fonction de son prix, le prix de l'autre bien et du revenu.
     - x1 = x1(p1, p2, m)
     - Pareil pour x2.

@@ -1,8 +1,5 @@
 # 01 // la courbe de Phillips, le chômage naturel et l’inflation
 
-Date de création: January 15, 2023 11:26 PM
-Modifié: June 10, 2023 12:50 PM
-
 [Slides de Phillips](chapitre_1_-_diapo.pdf)
 
 # Introduction

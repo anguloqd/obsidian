@@ -1,8 +1,5 @@
 # 02 // déterminants
 
-Date de création: March 30, 2022 2:04 AM
-Modifié: January 31, 2025 10:36 AM
-
 # Déterminants élémentaires : dimension $2$ et $3$
 
 ## Matrice $2\times2$

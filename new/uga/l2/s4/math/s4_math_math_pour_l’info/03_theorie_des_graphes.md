@@ -1,8 +1,5 @@
 # 03 // théorie des graphes
 
-Date de création: April 19, 2023 6:40 PM
-Modifié: April 10, 2025 6:29 PM
-
 # Introduction
 
 [Slides de théorie de graphes](slides_graphes_minfo_annote2.pdf)

@@ -1,8 +1,5 @@
 # 04 // keynes : le cadre d'analyse
 
-Date de création: April 9, 2022 3:10 AM
-Modifié: June 2, 2023 4:42 PM
-
 - Par rapport à l'analyse du **chômage**, il existe une nette différence entre les deux traditions.
 
 ### L'origine de la rupture

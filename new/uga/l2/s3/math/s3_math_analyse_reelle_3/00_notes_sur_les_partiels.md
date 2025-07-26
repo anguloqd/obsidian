@@ -1,8 +1,5 @@
 # 00 // notes sur les partiels
 
-Date de création: November 9, 2022 11:30 PM
-Modifié: December 29, 2022 4:33 AM
-
 # CC1
 
 #1.2.b. : il arrive de voir $n$ comme un paramètre dans un intégrale de variable $t$. Le paramètre $n$ ne permet pas d’arriver à une forme fermée ou explicite. Donc, il serait bon de développer quelques cas de $n$ pour regarder le motif. **Il est utile de faire division longue, où D° dén. ≤ D° num., même s’ils sont égaux !**

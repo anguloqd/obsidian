@@ -1,8 +1,5 @@
 # 00 // notes sur les partiels
 
-Date de création: October 26, 2022 4:10 PM
-Modifié: June 9, 2023 1:58 PM
-
 # Contrôles de l’année passée
 
 ## Évaluation d’une intégrale suite à IPP

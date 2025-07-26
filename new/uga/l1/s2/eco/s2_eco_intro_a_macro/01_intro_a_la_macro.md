@@ -1,8 +1,5 @@
 # 01 // intro à la macro
 
-Date de création: February 14, 2022 10:53 AM
-Modifié: June 2, 2023 4:41 PM
-
 ## Définition de la macroéconomie
 
 - Étude de l'interaction parmi les agrégats de l'économie.

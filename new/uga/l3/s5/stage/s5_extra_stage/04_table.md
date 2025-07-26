@@ -1,8 +1,5 @@
 # 04 // Table
 
-Date de création: July 16, 2024 11:49 PM
-Modifié: July 16, 2024 11:49 PM
-
 | BFAST | BEAST |
 | --- | --- |
 | Y value | Y value |

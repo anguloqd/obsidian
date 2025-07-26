@@ -1,8 +1,5 @@
 # 00 // tps
 
-Date de création: March 29, 2024 6:06 PM
-Modifié: April 2, 2024 1:02 PM
-
 ## TP1
 
 - `ifconfig` pour trouver :

@@ -1,8 +1,5 @@
 # 01 // rappels sur les espaces vectoriels
 
-Date de création: September 11, 2022 12:12 AM
-Modifié: June 10, 2023 9:32 PM
-
 # Équations linéaires ou cartésiennes
 
 ## Définition et astuces

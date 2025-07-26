@@ -1,8 +1,5 @@
 # 01 // java
 
-Date de création: November 8, 2021 10:49 PM
-Modifié: June 26, 2023 6:49 PM
-
 # Premiers éléments de programmation Java
 
 ## Lecture

@@ -1,8 +1,5 @@
 # Period #2 - kann-models-zoo in kaf
 
-Date de création: February 17, 2025 9:49 AM
-Modifié: February 17, 2025 10:34 AM
-
 ```bash
 # In kaf folder, with Quentin
 git pull --rebase origin master

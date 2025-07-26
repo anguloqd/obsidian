@@ -1,8 +1,5 @@
 # 04 // convergences des suites
 
-Date de création: November 22, 2021 10:59 AM
-Modifié: June 10, 2023 9:57 PM
-
 [Slides de convergences](chap4_(4).pdf)
 
 # Limite d'une suite

@@ -1,8 +1,5 @@
 # 01 // théorie de la décision en incertitude
 
-Date de création: February 14, 2024 3:57 PM
-Modifié: April 20, 2025 2:22 AM
-
 [Partie I Théorie de la décision en Incertitude 2022.pdf](partie_i_thorie_de_la_dcision_en_incertitude_2022.pdf)
 
 # Le critère de maximisation de l’utilité espérée

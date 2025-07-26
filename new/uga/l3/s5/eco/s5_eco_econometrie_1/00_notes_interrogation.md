@@ -1,8 +1,5 @@
 # 00 // notes interrogation
 
-Date de création: October 24, 2023 10:18 AM
-Modifié: October 24, 2023 11:15 PM
-
 # Première interrogation
 
 - j’ai oublié de spécifier la significativité du test de fisher dans le commentaire des résultats (5%, elle la donne) et aussi “sous respect des hypothèses”

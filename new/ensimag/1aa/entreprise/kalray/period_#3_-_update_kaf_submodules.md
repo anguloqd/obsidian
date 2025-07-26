@@ -1,8 +1,5 @@
 # Period #3 - Update kaf submodules
 
-Date de création: June 25, 2025 10:23 PM
-Modifié: June 25, 2025 10:23 PM
-
 ```bash
   437  ssh ws2405
   438  clear

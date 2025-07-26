@@ -1,8 +1,5 @@
 # 01 // fondamentaux 1
 
-Date de création: January 30, 2023 2:43 PM
-Modifié: June 23, 2023 10:30 AM
-
 [Slides de fondamentaux 1](corolleur_f._2021_22_lecture_1_fondamentaux.pdf)
 
 # Concurrence et pouvoir de marché

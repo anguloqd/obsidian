@@ -1,8 +1,5 @@
 # 07 // TD processus aléatoires
 
-Date de création: April 15, 2025 2:05 PM
-Modifié: April 27, 2025 6:55 PM
-
 File M/D/\infin (Kendall): M est parce que les arrivées ont la propriété de Markov, D est le temps de services parce c’est deterministe, \infin est le nombre de serveurs.
 
 Donc, processus de Poisson de paramètre \lambda, temps de service deterministe 1/\mu (toujours, ce n’est pas une moyenne, c’est toujours 1/\mu), \infin comme infinité de serveurs.

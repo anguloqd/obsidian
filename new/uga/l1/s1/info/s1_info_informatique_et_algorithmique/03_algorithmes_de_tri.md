@@ -1,8 +1,5 @@
 # 03 // algorithmes de tri
 
-Date de création: November 8, 2021 10:49 PM
-Modifié: June 2, 2023 11:44 AM
-
 # Tri-bulle (Bubble sort) ou tri par propagation
 
 ## L’algorithme

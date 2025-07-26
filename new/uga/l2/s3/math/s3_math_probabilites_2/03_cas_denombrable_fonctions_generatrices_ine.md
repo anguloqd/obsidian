@@ -1,8 +1,5 @@
 # 03 // cas dénombrable : fonctions génératrices, inégalités et loi des grands nombres
 
-Date de création: October 7, 2022 3:15 AM
-Modifié: September 11, 2023 8:53 AM
-
 # Fonctions génératrices
 
 ## Définition générale

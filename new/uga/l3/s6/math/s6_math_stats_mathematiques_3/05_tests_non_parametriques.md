@@ -1,8 +1,5 @@
 # 05 // tests non paramétriques
 
-Date de création: May 6, 2025 9:19 PM
-Modifié: July 18, 2025 12:56 AM
-
 [slides non param stat 3 annote.pdf](slides_non_param_stat_3_annote.pdf)
 
 # Introduction

@@ -1,8 +1,5 @@
 # 03 // séries entières
 
-Date de création: November 1, 2022 4:13 PM
-Modifié: June 7, 2023 8:08 PM
-
 # Définitions : série entière et rayon de convergence
 
 ## Pourquoi série “entière” ?

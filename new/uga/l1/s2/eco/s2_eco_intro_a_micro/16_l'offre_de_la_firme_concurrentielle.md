@@ -1,8 +1,5 @@
 # 16 // l'offre de la firme concurrentielle
 
-Date de création: April 28, 2022 6:29 PM
-Modifié: October 22, 2022 7:36 PM
-
 ## Quatre hypothèses de concurrence parfaite
 
 - Économie d'echelles sont faibles relativement à la taille du marché.

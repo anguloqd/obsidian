@@ -1,8 +1,5 @@
 # 12 // la technologie
 
-Date de création: April 28, 2022 7:20 AM
-Modifié: January 13, 2023 4:39 PM
-
 - L’output d’un processus de production est, en principe, observable.
 - L’output de la consommation, c’est-à-dire l’utilité, n’est pas directement observable.
 

@@ -1,8 +1,5 @@
 # 04 // politique monétaire et politique budgétaire en France
 
-Date de création: December 12, 2022 1:52 PM
-Modifié: June 10, 2023 9:45 PM
-
 # La politique monétaire française
 
 ## L’offre de monnaie

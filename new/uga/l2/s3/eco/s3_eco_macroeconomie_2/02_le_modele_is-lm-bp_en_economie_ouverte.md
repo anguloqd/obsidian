@@ -1,8 +1,5 @@
 # 02 // le modèle is-lm-bp en économie ouverte
 
-Date de création: October 6, 2022 10:22 AM
-Modifié: June 10, 2023 9:44 PM
-
 # Passage à l’économie ouverte
 
 ## Introduction de la courbe BP

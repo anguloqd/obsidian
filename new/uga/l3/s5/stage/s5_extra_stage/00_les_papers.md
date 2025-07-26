@@ -1,8 +1,5 @@
 # 00 // les papers
 
-Date de création: July 16, 2024 11:49 PM
-Modifié: July 16, 2024 11:49 PM
-
 # Paper #1 : DBEST, BFAST, BEAST
 
 - Le Paper #1 : 

@@ -1,8 +1,5 @@
 # 02 // mécanisme de résolution
 
-Date de création: February 19, 2023 7:57 PM
-Modifié: June 10, 2023 12:41 PM
-
 [Slides de mécanisme de résolution](coursprologl2_2_(2).pdf)
 
 # Unification

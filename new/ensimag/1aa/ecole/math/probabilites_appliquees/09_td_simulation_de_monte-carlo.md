@@ -1,8 +1,5 @@
 # 09 // TD simulation de monte-carlo
 
-Date de création: May 9, 2025 2:20 PM
-Modifié: May 9, 2025 3:00 PM
-
 Moyenne empirique : E(\bar(X)_n) = E(X_i) pour tout i.
 
 Variance : Var(\bar{X}_n) = \frac{Var(X_i)}{n} ou aussi \frac{\sigma^2}{n}. La méthode de monte-carlo se repose sur le fait que la variance tends vers zero lorsque n grandit.

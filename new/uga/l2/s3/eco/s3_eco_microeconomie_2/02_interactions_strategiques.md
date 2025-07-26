@@ -1,8 +1,5 @@
 # 02 // interactions stratégiques
 
-Date de création: October 17, 2022 12:55 PM
-Modifié: March 6, 2024 7:55 PM
-
 [Slides de partie 2.pdf](slides_partie_2_micro2.pdf)
 
 # Théorie des jeux non coopératifs

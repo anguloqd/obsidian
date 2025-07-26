@@ -1,8 +1,5 @@
 # 03 // firme dominante et barrières à l’entrée
 
-Date de création: January 15, 2023 11:26 PM
-Modifié: June 10, 2023 2:13 PM
-
 [Slides de firme dominante](corolleur_f._2021_22_lecture_3_firmes_dominantes.pdf)
 
 # Rappels de monopole, cas général

@@ -1,8 +1,5 @@
 # 06 // la réutilisation des classes
 
-Date de création: October 7, 2022 11:54 PM
-Modifié: June 30, 2023 9:50 AM
-
 [Slides de cours 6.pdf](inff3-2223-cours6.pdf)
 
 # Composition, délégation et héritage

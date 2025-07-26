@@ -1,8 +1,5 @@
 # 02 // estimation paramétrique
 
-Date de création: July 16, 2024 11:45 PM
-Modifié: December 28, 2024 2:13 AM
-
 # Rappel : espace probabilisé
 
 ## Préparation : $\sigma$-algèbre

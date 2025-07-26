@@ -1,8 +1,5 @@
 # 02 // tests de convergence
 
-Date de création: September 26, 2022 11:36 AM
-Modifié: June 7, 2023 8:00 PM
-
 # Comparaison à une série géométrique
 
 ## Règle de d’Alembert et Critère de d’Alembert

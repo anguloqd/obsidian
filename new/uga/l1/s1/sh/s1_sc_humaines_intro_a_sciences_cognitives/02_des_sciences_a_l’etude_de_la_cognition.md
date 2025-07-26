@@ -1,8 +1,5 @@
 # 02 // des sciences à l’étude de la cognition
 
-Date de création: January 3, 2022 10:50 PM
-Modifié: June 10, 2023 10:07 PM
-
 # Vous avez dit… cognition ?
 
 - **Cognition** : réf. à l'activité du sujet qui connaît (qui sait).

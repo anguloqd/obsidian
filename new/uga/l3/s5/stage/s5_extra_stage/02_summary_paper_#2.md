@@ -1,8 +1,5 @@
 # 02 // summary : paper #2
 
-Date de création: July 16, 2024 11:49 PM
-Modifié: July 16, 2024 11:49 PM
-
 <aside>
 📌 Link to the state-of-the-art paper :
 [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/)

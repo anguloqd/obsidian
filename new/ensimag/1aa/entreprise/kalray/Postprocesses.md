@@ -1,8 +1,5 @@
 # Postprocesses
 
-Date de création: April 4, 2025 8:38 PM
-Modifié: April 28, 2025 4:12 PM
-
 Old postprocess files : __init__ and output_processor.py. EVERY FUNCTION IN `OUT_PROC.PY`.
 
 - post-process:

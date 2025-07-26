@@ -1,8 +1,5 @@
 # 00 // notes sur les contrôles
 
-Date de création: October 21, 2022 5:30 PM
-Modifié: June 10, 2023 9:27 PM
-
 # CC1
 
 ## Polynôme caractéristique

@@ -1,8 +1,5 @@
 # 06 // projet prolog : algo. pour jouer le dilemme des prisonniers
 
-Date de création: April 28, 2023 2:59 PM
-Modifié: June 10, 2023 12:47 PM
-
 ## Expliquant *graduel*
 
 > Graduel joue “coopération” toujours au premier coup. Après, il continue à joue “coopération” jusqu’à ce qu’il est trahi pour la $n$-ième fois, dans ce cas il punira avec $n$ “trahisons” consécutives, puis il se relâchera avec deux coopérations consécutives inconditionnelles. Le nombre de trahisons dans les punissions augmente “graduellement”, d’où son nom.

@@ -1,8 +1,5 @@
 # 01 // analyse fonctionnelle (complexes, topologie, espaces)
 
-Date de création: July 16, 2024 11:47 PM
-Modifié: July 16, 2024 11:47 PM
-
 [Slides annotés #1 : analyse fonctionnelle.pdf](01_analyse_fonctionnelle_(complexes_topologie_es/slides_analyse_fonctionnelle_annote.pdf)
 
 # Nombres complexes

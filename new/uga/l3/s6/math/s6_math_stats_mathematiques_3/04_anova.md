@@ -1,8 +1,5 @@
 # 04 // ANOVA
 
-Date de création: March 10, 2024 1:25 AM
-Modifié: July 15, 2025 11:02 PM
-
 [slides anova1 stat3 annote.pdf](slides_anova1_stat3_annote.pdf)
 
 [slides anova 2 stat 3 annote.pdf](slides_anova_2_stat_3_annote.pdf)

@@ -1,8 +1,5 @@
 # 08 // les choix intertemporels
 
-Date de création: April 25, 2022 8:51 PM
-Modifié: June 2, 2023 4:42 PM
-
 ## La contrainte budgétaire
 
 - On considère un individu et deux périodes : le présent (1) et le futur (2).

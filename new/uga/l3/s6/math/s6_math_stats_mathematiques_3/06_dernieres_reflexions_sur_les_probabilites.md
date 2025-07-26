@@ -1,8 +1,5 @@
 # 06 // dernières réflexions sur les probabilités
 
-Date de création: January 9, 2025 3:18 PM
-Modifié: July 20, 2025 10:47 PM
-
 [slides Synthèse tests annote.pdf](slides_synthse_tests_annote.pdf)
 
 <aside>

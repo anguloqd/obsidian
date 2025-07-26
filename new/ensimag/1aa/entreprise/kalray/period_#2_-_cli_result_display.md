@@ -1,8 +1,5 @@
 # Period #2 - CLI result display
 
-Date de création: February 17, 2025 2:17 PM
-Modifié: February 27, 2025 10:30 AM
-
 <aside>
 ❗
 

@@ -1,8 +1,5 @@
 # 03 // suites réelles
 
-Date de création: November 22, 2021 10:59 AM
-Modifié: June 10, 2023 9:57 PM
-
 [Slides des suites réelles](chap3.pdf)
 
 # Généralités sur les suites réelles

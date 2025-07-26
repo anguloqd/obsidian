@@ -1,8 +1,5 @@
 # 05 // cadre général : théorème centrale de la limite
 
-Date de création: November 10, 2022 12:58 AM
-Modifié: July 27, 2023 5:47 PM
-
 # Fonction caractéristique : $\mathbb E[e^{iXt}]$
 
 ## Plus puissante que la fonction génératrice

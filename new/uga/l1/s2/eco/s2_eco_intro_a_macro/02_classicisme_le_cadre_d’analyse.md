@@ -1,8 +1,5 @@
 # 02 //  classicisme : le cadre d’analyse
 
-Date de création: February 14, 2022 11:53 AM
-Modifié: June 3, 2023 10:44 PM
-
 ## Représentation de l'économie
 
 - L'économie est une collection de marchés.

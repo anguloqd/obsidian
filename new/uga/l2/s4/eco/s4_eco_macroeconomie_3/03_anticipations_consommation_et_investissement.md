@@ -1,8 +1,5 @@
 # 03 // anticipations, consommation et investissement
 
-Date de création: April 4, 2023 6:02 PM
-Modifié: June 10, 2023 12:52 PM
-
 [Slides de consommation et investissement](chapitre_3_-_diapo.pdf)
 
 # La consommation : $C$

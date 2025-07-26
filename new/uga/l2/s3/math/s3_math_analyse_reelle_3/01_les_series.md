@@ -1,8 +1,5 @@
 # 01 // les séries
 
-Date de création: September 7, 2022 2:36 PM
-Modifié: June 7, 2023 7:49 PM
-
 # Définition et notation
 
 ## Une suite *accrochée* à une autre suite

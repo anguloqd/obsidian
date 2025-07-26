@@ -1,8 +1,5 @@
 # 02 // espaces vectoriels en général
 
-Date de création: September 26, 2021 9:32 PM
-Modifié: May 30, 2023 12:36 AM
-
 # Espace vectoriel per se
 
 ## Définition

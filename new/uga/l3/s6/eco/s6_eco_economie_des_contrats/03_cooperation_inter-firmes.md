@@ -1,8 +1,5 @@
 # 03 // coopération inter-firmes
 
-Date de création: April 14, 2024 9:45 PM
-Modifié: April 24, 2024 4:54 PM
-
 [Partie 2_03_L3 MIASHS_Collusion_moodle .pdf](partie_2_03_l3_miashs_collusion_moodle_.pdf)
 
 [Partie 2_ 04_L3 MIASHS_Partenariat_cours.pdf](partie_2__04_l3_miashs_partenariat_cours.pdf)

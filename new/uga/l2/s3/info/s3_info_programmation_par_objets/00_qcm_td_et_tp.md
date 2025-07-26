@@ -1,8 +1,5 @@
 # 00 // QCM, TD et TP
 
-Date de création: September 22, 2022 11:25 AM
-Modifié: November 30, 2022 2:35 PM
-
 # QCM
 
 ## QCM 1

@@ -1,8 +1,5 @@
 # 03 // régression linéaire
 
-Date de création: March 23, 2023 11:33 PM
-Modifié: November 13, 2023 11:51 PM
-
 [Slides de régression linéaire](slides_cours_reglin_stat1_annote_4.pdf)
 
 # Régression linéaire et statistiques descriptives

@@ -1,8 +1,5 @@
 # 08 // exceptions
 
-Date de création: November 15, 2022 11:37 AM
-Modifié: October 9, 2023 10:27 AM
-
 [Slides de cours 8.pdf](inff3-2223-cours8.pdf)
 
 # Exceptions et Java

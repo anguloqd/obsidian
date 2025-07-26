@@ -1,8 +1,5 @@
 # 04 // tests d’hypothèses paramétriques
 
-Date de création: July 16, 2024 11:45 PM
-Modifié: December 28, 2024 2:12 AM
-
 # Introduction
 
 ## Théorie de la décision

@@ -1,8 +1,5 @@
 # 01 // tests de $\chi^2$
 
-Date de création: March 9, 2024 10:39 PM
-Modifié: April 19, 2025 2:09 PM
-
 [slides chi2 stat 3 annote.pdf](slides_chi2_stat_3_annote.pdf)
 
 # Tests du $χ²$

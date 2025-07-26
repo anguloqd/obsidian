@@ -1,8 +1,5 @@
 # 01 // l’entreprise dominante
 
-Date de création: September 20, 2022 8:57 PM
-Modifié: June 10, 2023 10:19 PM
-
 [Slides de partie 1](slides_partie_1_micro2_vers_et_2022.pdf)
 
 # Le monopole

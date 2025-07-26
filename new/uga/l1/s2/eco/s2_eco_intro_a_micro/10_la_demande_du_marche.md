@@ -1,8 +1,5 @@
 # 10 // la demande du marché
 
-Date de création: April 26, 2022 3:24 AM
-Modifié: January 13, 2023 4:39 PM
-
 ## De la demande individuelle à la demande de marché
 
 - La demande agrégée serait égal à la somme des demandes individuelles.

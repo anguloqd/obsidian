@@ -1,8 +1,5 @@
 # 01 // arithmétique
 
-Date de création: January 15, 2023 11:26 PM
-Modifié: June 9, 2023 5:40 PM
-
 # Division euclidienne
 
 ## Définition

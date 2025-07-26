@@ -1,8 +1,5 @@
 # 05 // automates à pile
 
-Date de création: April 17, 2023 3:04 PM
-Modifié: June 10, 2023 12:34 PM
-
 [Slides du chapitre 5](chapitre_5_compressed.pdf)
 
 # Motivation

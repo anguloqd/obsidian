@@ -1,8 +1,5 @@
 # (2) 08 // complexité
 
-Date de création: December 11, 2024 10:50 AM
-Modifié: February 6, 2025 10:29 PM
-
 [Complexite-algo_Tris.pdf](complexite-algo_tris.pdf)
 
 Performance → coût temporel / spatial

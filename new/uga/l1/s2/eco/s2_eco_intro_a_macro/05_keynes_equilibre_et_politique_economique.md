@@ -1,8 +1,5 @@
 # 05 // keynes : équilibre et politique économique
 
-Date de création: April 9, 2022 3:10 AM
-Modifié: June 2, 2023 4:42 PM
-
 ## L'équilibre keynésien
 
 ### L'équilibre de sous-emploi

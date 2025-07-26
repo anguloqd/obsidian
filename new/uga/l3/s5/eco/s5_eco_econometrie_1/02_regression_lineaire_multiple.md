@@ -1,8 +1,5 @@
 # 02 // régression linéaire multiple
 
-Date de création: September 20, 2023 9:35 PM
-Modifié: April 29, 2024 12:10 AM
-
 [Économétrie 1 - Chap. #2](2_chapitre2_econometrie1_20232024.pdf)
 
 # Le modèle

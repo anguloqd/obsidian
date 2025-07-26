@@ -1,8 +1,5 @@
 # 02 // marchés financiers et anticipations
 
-Date de création: April 4, 2023 6:01 PM
-Modifié: June 10, 2023 12:50 PM
-
 [Slides des anticipations](chapitre_2_-_diapo.pdf)
 
 # Valeur Actuelle Nette (VAN)

@@ -1,8 +1,5 @@
 # 03 // théorie des syntaxes abstraites
 
-Date de création: January 11, 2025 5:22 PM
-Modifié: January 25, 2025 8:10 PM
-
 [chap3-4up.pdf](chap3-4up.pdf)
 
 ## Exo 3.1

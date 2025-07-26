@@ -1,8 +1,5 @@
 # 03 // classicisme : équilibre et politique économique
 
-Date de création: March 28, 2022 12:46 AM
-Modifié: June 2, 2023 4:41 PM
-
 - Rappel : le modèle macroéconomique classique voit l'économie comme une collection de marchés.
 - Il existe aussi une interdependence entre les marchés.
 - Un équilibre global est alors recherché.

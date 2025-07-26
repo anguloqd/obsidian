@@ -1,8 +1,5 @@
 # 03 //  opérateurs
 
-Date de création: September 15, 2022 11:13 AM
-Modifié: June 10, 2023 10:18 PM
-
 [Slides de cours 3.pdf](inff3-2223-cours3.pdf)
 
 # Commentaires

@@ -1,8 +1,5 @@
 # 05 // thm. de De Moivre-Laplace
 
-Date de création: May 8, 2022 5:29 PM
-Modifié: July 27, 2023 5:42 PM
-
 # Théorème de De Moivre-Laplace
 
 ## Le théorème : une approximation d’une loi binomiale

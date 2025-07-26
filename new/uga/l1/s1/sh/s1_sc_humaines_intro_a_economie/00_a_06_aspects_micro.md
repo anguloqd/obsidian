@@ -1,8 +1,5 @@
 # 00 à 06 // aspects micro
 
-Date de création: May 2, 2020 10:16 AM
-Modifié: January 10, 2025 11:42 AM
-
 # Introduction à l'économie
 
 ## Les dix principes de l'économie

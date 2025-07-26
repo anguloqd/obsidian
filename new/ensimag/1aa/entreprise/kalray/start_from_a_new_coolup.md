@@ -1,8 +1,5 @@
 # start from a new coolup
 
-Date de création: July 15, 2025 1:47 PM
-Modifié: July 22, 2025 2:14 PM
-
 ```bash
 # starting from HOME DIR (~)...
 

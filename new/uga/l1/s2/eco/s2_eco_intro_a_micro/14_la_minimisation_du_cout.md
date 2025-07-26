@@ -1,8 +1,5 @@
 # 14 // la minimisation du coût
 
-Date de création: April 28, 2022 4:16 PM
-Modifié: January 13, 2023 4:39 PM
-
 ## La minimisation du cout
 
 - **Fonction de coût** : C(w1, w2, q).

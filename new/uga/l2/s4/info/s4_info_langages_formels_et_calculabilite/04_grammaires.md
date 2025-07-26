@@ -1,8 +1,5 @@
 # 04 // grammaires
 
-Date de création: April 17, 2023 2:41 PM
-Modifié: June 10, 2023 12:32 PM
-
 [Slides du chapitre 4](chapitre_4_compressed.pdf)
 
 # Les grammaires

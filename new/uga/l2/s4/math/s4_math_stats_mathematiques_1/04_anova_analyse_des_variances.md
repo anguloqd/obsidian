@@ -1,8 +1,5 @@
 # 04 // ANOVA : analyse des variances
 
-Date de création: March 23, 2023 11:33 PM
-Modifié: December 28, 2024 2:12 AM
-
 [Slides d’ANOVA](slides_anova_1_stat1_annote.pdf)
 
 # Régression linéaire pour les variables qualitatives

@@ -1,8 +1,5 @@
 # 02 // les préférences
 
-Date de création: February 27, 2022 1:46 AM
-Modifié: June 2, 2023 4:42 PM
-
 ### Hypothèses de préférences
 
 - **Complétitude** : deux paniers peuvent toujours être comparés.

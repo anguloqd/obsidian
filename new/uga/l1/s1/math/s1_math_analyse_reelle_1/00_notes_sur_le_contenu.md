@@ -1,8 +1,5 @@
 # 00 //  notes sur le contenu
 
-Date de création: December 23, 2021 12:20 AM
-Modifié: May 30, 2023 2:03 AM
-
 ## #2 : les nombres réels
 
 - Définir N en termes de ε :

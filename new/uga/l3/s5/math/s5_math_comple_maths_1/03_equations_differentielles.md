@@ -1,8 +1,5 @@
 # 03 // équations différentielles
 
-Date de création: July 16, 2024 11:47 PM
-Modifié: July 16, 2024 11:47 PM
-
 [Slides - Équations différentielles](slides_eq_diff_annote_3.pdf)
 
 # Problème de Cauchy

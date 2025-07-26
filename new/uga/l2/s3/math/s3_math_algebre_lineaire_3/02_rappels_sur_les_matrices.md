@@ -1,8 +1,5 @@
 # 02 // rappels sur les matrices
 
-Date de création: September 29, 2022 10:39 AM
-Modifié: June 7, 2023 12:25 PM
-
 # Règles générales sur le déterminant d’une matrice
 
 ## Linéarité du déterminant

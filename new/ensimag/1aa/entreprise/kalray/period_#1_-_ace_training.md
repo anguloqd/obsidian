@@ -1,8 +1,5 @@
 # Period #1 - ACE training
 
-Date de création: October 30, 2024 2:45 PM
-Modifié: November 20, 2024 11:51 AM
-
 Install ACE on a concrete tag (5.3.1 rc2)
 Install ACE submodules (kEnv, kann, kaf_applications) on that same tag
 

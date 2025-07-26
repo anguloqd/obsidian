@@ -1,8 +1,5 @@
 # Period #3 - CVAPPS 462
 
-Date de création: June 30, 2025 3:18 PM
-Modifié: June 30, 2025 5:08 PM
-
 retinanet-resnet50 : `decode_util.py`, ligne 83 (et 65 aussi), variable `box_head`
 
 with original kann-video-demo: [576, 4]

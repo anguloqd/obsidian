@@ -1,8 +1,5 @@
 # 02 // méthodes de statistiques inférentielles
 
-Date de création: March 24, 2023 1:50 AM
-Modifié: November 13, 2023 11:49 PM
-
 [Slides de méthodes de stats inférentielles](slides_mthodes_stat_inf_annote.pdf)
 
 # Intervalle de confiance

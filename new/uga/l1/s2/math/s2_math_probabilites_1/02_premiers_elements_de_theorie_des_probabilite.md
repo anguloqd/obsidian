@@ -1,8 +1,5 @@
 # 02 // premiers éléments de théorie des probabilités
 
-Date de création: March 5, 2022 9:42 PM
-Modifié: June 9, 2023 11:07 AM
-
 # Les bases
 
 ## Les événements : $\omega \in \Omega$

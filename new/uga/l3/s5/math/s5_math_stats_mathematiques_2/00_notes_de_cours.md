@@ -1,8 +1,5 @@
 # 00 // notes de cours
 
-Date de création: July 16, 2024 11:45 PM
-Modifié: July 16, 2024 11:45 PM
-
 Cours #2 :
 
 Exemple 1.2.1

@@ -1,8 +1,5 @@
 # 03 // déterminisation d’un automate non-déterministe (AEFND)
 
-Date de création: February 27, 2023 2:07 AM
-Modifié: June 10, 2023 12:32 PM
-
 [Slides du chapitre 3](chapitre_3_compressed.pdf)
 
 # Relation entre les AEFD et AEFND

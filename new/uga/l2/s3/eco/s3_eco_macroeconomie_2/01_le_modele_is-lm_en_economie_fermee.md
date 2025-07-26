@@ -1,8 +1,5 @@
 # 01 // le modèle is-lm en économie fermée
 
-Date de création: September 26, 2022 3:28 PM
-Modifié: June 9, 2023 4:44 PM
-
 # L’histoire du modèle
 
 ## Interaction des secteurs réel et monétaire

@@ -1,8 +1,5 @@
 # 13 // la maximisation du profit
 
-Date de création: April 28, 2022 2:06 PM
-Modifié: January 13, 2023 4:39 PM
-
 - On va modéliser le comportement d'une firme avec le modèle de maximisation du profit.
     - C'est-à-dire, la firme choisit le plan de production ou couple de facteurs de production (x1, x2) qui maximise ses profits.
 

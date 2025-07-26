@@ -1,8 +1,5 @@
 # 03 // estimation non paramétrique et fonctionnelle
 
-Date de création: July 16, 2024 11:45 PM
-Modifié: July 16, 2024 11:45 PM
-
 # Motivation
 
 ## La loi mère est inconnue !

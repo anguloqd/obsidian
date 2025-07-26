@@ -1,8 +1,5 @@
 # 06 // machines de Turing
 
-Date de création: April 17, 2023 3:04 PM
-Modifié: June 10, 2023 12:34 PM
-
 [Slides du chapitre 6](chapitre_6_compressed.pdf)
 
 # Définition intuitive

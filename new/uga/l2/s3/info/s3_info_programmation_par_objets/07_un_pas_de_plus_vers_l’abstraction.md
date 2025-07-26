@@ -1,8 +1,5 @@
 # 07 // un pas de plus vers l’abstraction
 
-Date de création: October 26, 2022 2:09 PM
-Modifié: September 25, 2023 10:16 AM
-
 [Slides de cours 7.pdf](inff3-2223-cours7.pdf)
 
 # Le mot-clé `final`

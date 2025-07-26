@@ -1,8 +1,5 @@
 # 03 // régression linéaire
 
-Date de création: March 9, 2024 10:40 PM
-Modifié: May 9, 2025 11:32 AM
-
 [slides intro reglin stat3 annote.pdf](slides_intro_reglin_stat3_annote.pdf)
 
 [slides reglin inf annote.pdf](slides_reglin_inf_annote.pdf)

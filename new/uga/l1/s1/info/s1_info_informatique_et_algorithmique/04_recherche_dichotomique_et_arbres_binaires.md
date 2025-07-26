@@ -1,8 +1,5 @@
 # 04 // recherche dichotomique et arbres binaires
 
-Date de création: December 13, 2021 7:43 PM
-Modifié: July 19, 2023 5:50 PM
-
 # Recherche dichotomique
 
 ## Définition

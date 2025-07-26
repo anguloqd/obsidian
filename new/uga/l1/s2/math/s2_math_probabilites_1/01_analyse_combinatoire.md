@@ -1,8 +1,5 @@
 # 01 // analyse combinatoire
 
-Date de création: March 5, 2022 6:27 PM
-Modifié: June 10, 2023 9:50 PM
-
 # Arrangements
 
 ## Définition et types

@@ -1,8 +1,5 @@
 # 07 // le revenu endogène
 
-Date de création: April 4, 2022 2:10 AM
-Modifié: June 2, 2023 4:42 PM
-
 - Jusqu’ici, nous avons considéré que le revenu du consommateur était fixe et " exogène ".
 - En réalité, on gagne son revenu en vendant les biens que nous possédons.
 

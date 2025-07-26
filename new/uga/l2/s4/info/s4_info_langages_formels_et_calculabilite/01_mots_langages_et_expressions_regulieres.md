@@ -1,8 +1,5 @@
 # 01 // mots, langages et expressions régulières
 
-Date de création: January 15, 2023 11:26 PM
-Modifié: June 10, 2023 12:32 PM
-
 [Slides du chapitre 1](chapitre_1_compressed.pdf)
 
 # Le cours : la théorie du calcul

@@ -1,8 +1,5 @@
 # 05 // différenciation en monopole, oligopoles, en statique
 
-Date de création: January 27, 2023 5:30 PM
-Modifié: June 23, 2023 10:34 AM
-
 [Slides de différenciation](corolleur_f._2020_21_lecture_4_diffrenciation_en_monopole_oligopoles_cadre_statique_l2_micro3_miashs.pdf)
 
 # La différenciation

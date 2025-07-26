@@ -1,8 +1,5 @@
 # Period #2 - Exporting and importing with numpy
 
-Date de création: March 10, 2025 4:23 PM
-Modifié: March 10, 2025 5:34 PM
-
 ```bash
   521  mkdir test
   522  cd test

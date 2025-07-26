@@ -1,8 +1,5 @@
 # 02 // automates à états finis
 
-Date de création: February 22, 2023 3:01 PM
-Modifié: June 23, 2023 10:35 AM
-
 [Slides du chapitre 2](chapitre_2.pdf)
 
 # Automates à états finis déterministes (AEFD)

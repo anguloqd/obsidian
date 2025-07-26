@@ -1,8 +1,5 @@
 # 02 // théorie du signal
 
-Date de création: July 16, 2024 11:47 PM
-Modifié: July 16, 2024 11:47 PM
-
 [Slides : Série de Fourier.pdf](slides_srie_fourier_annote.pdf)
 
 [Slides : Transformée de Fourier.pdf](slides_transforme_fourier_annote.pdf)

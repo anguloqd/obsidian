@@ -1,8 +1,5 @@
 # 04 // critères de diagonalisabilité
 
-Date de création: November 15, 2022 6:24 PM
-Modifié: January 31, 2025 8:46 AM
-
 # Vocabulaire
 
 ## Multiplicité algébrique $\alpha_\lambda$ et géométrique

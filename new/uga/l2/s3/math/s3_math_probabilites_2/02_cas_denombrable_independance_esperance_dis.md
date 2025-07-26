@@ -1,8 +1,5 @@
 # 02 // cas dénombrable : indépendance, espérance, dispersion
 
-Date de création: October 7, 2022 3:12 AM
-Modifié: June 10, 2023 9:35 PM
-
 # Indépendance
 
 ## Notion et événements indépendants

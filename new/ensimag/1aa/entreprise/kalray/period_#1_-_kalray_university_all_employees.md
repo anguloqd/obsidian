@@ -1,8 +1,5 @@
 # Period #1 - Kalray University, All Employees
 
-Date de création: October 31, 2024 4:25 PM
-Modifié: October 31, 2024 4:33 PM
-
 <aside>
 💡
 

@@ -1,8 +1,5 @@
 # 02 // régressions linéaires
 
-Date de création: November 28, 2021 3:34 PM
-Modifié: June 2, 2023 1:59 PM
-
 # Motivation
 
 ## Quand on veut utiliser une régression linéaire

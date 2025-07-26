@@ -1,8 +1,5 @@
 # 03 // politiques conjoncturelles en économie ouverte
 
-Date de création: October 19, 2022 1:45 PM
-Modifié: June 9, 2023 4:50 PM
-
 # Les politiques avec une mobilité parfaite des capitaux
 
 ## Qu’est-ce que la mobilité parfaite

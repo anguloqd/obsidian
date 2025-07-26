@@ -1,8 +1,5 @@
 # 02 // théorie des contrats
 
-Date de création: February 14, 2024 3:58 PM
-Modifié: April 22, 2024 10:44 PM
-
 [Partie II Théorie des Contrats 2022.pdf](partie_ii_thorie_des_contrats_2022.pdf)
 
 <aside>

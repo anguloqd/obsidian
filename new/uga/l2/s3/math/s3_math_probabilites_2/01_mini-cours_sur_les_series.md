@@ -1,8 +1,5 @@
 # 01 // mini-cours sur les séries
 
-Date de création: September 7, 2022 2:36 PM
-Modifié: October 21, 2022 5:44 PM
-
 # Définition et notation
 
 ## Une suite *accrochée* à une autre suite

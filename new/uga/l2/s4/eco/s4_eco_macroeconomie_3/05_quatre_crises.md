@@ -1,8 +1,5 @@
 # 05 // quatre crises
 
-Date de création: April 21, 2023 10:18 AM
-Modifié: January 20, 2025 11:40 AM
-
 [Slides des quatres crises](chapitre_4c_-_diapo_(1).pdf)
 
 # Introduction

@@ -1,8 +1,5 @@
 # 04 // cadre général : espace probabilisé, fonction de répartition et de densité
 
-Date de création: October 12, 2022 6:01 PM
-Modifié: July 27, 2023 7:31 PM
-
 # Espace probabilisé
 
 ## Préparation : $\sigma$-algèbre

@@ -1,8 +1,5 @@
 # 05 // constructeurs, packages et modificateurs d’accès
 
-Date de création: September 29, 2022 11:30 AM
-Modifié: July 1, 2023 12:02 PM
-
 [Slides de cours 5.pdf](inff3-2223-cours5.pdf)
 
 # Initialisation des objets

@@ -1,8 +1,5 @@
 # 02 // objets, types primitifs, classes
 
-Date de création: September 14, 2022 12:57 PM
-Modifié: June 10, 2023 10:17 PM
-
 [Slides de cours 2.pdf](inff3-2223-cours2.pdf)
 
 # Référence et valeurs

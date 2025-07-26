@@ -1,8 +1,5 @@
 # Period #1 - Frequent Links
 
-Date de création: October 30, 2024 11:29 AM
-Modifié: November 25, 2024 9:42 AM
-
 # Introduction
 
 ## Checklist

@@ -1,8 +1,5 @@
 # 05 // fondements logiques
 
-Date de création: April 10, 2023 8:43 PM
-Modifié: June 10, 2023 12:47 PM
-
 [Slides de fondaments logiques](coursprologl2_6_(3).pdf)
 
 # Logique des prédicats

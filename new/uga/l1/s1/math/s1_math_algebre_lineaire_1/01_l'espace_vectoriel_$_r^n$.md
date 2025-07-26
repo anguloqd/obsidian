@@ -1,8 +1,5 @@
 # 01 // l'espace vectoriel $\R^n$
 
-Date de création: September 19, 2021 8:26 PM
-Modifié: May 30, 2023 12:25 AM
-
 # Les bases, venant de l'algèbre abstraite
 
 ## Définition

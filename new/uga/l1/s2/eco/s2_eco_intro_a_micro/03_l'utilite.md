@@ -1,8 +1,5 @@
 # 03 // l'utilité
 
-Date de création: February 27, 2022 1:47 AM
-Modifié: June 2, 2023 4:42 PM
-
 - Utilité marginale :
     - delta U / delta x ou delta y.
     - TmS = Um1 / Um2.

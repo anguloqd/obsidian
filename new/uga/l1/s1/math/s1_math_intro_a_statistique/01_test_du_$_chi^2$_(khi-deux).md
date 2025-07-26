@@ -1,8 +1,5 @@
 # 01 // test du $\chi^2$ (khi-deux)
 
-Date de création: September 19, 2021 8:27 PM
-Modifié: June 10, 2023 9:58 PM
-
 # Le test
 
 ## Principes d’un test statistique

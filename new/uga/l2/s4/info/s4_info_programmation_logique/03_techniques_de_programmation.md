@@ -1,8 +1,5 @@
 # 03 // techniques de programmation
 
-Date de création: March 23, 2023 5:56 PM
-Modifié: June 10, 2023 12:46 PM
-
 [Slides de techniques 1](coursprologl2_3.pdf)
 
 [Slides de techniques 2](coursprologl2_4.pdf)

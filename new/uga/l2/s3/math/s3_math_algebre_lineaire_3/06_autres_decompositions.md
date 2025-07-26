@@ -1,8 +1,5 @@
 # 06 // autres décompositions
 
-Date de création: December 12, 2022 1:40 PM
-Modifié: June 10, 2023 9:30 PM
-
 # Qu’est-ce une décomposition ?
 
 ## Définition

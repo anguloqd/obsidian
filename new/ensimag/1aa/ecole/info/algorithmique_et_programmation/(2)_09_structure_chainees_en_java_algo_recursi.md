@@ -1,8 +1,5 @@
 # (2) 09 // structure chaînées en java, algo récursifs
 
-Date de création: December 18, 2024 8:25 AM
-Modifié: February 7, 2025 11:43 AM
-
 Pile d’appels : mécanisme intégré aux langage pour permettre la récursivité. “Empilement de l’environnement”.
 
 n = (n + 1)!/(n + 1). c’est mathématique juste mais improgrammable.

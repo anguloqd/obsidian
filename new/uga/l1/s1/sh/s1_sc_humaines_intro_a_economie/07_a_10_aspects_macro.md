@@ -1,8 +1,5 @@
 # 07 à 10 // aspects macro
 
-Date de création: June 2, 2023 2:20 PM
-Modifié: June 2, 2023 3:39 PM
-
 # L'inégalité des revenus et la pauvreté
 
 ## La mesure de l'inégalité

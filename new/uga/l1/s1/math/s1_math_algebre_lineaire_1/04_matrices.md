@@ -1,8 +1,5 @@
 # 04 // matrices
 
-Date de création: December 6, 2021 8:49 AM
-Modifié: June 10, 2023 9:56 PM
-
 # Opérations basiques entre deux matrices
 
 ## Addition de matrices

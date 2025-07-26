@@ -1,8 +1,5 @@
 # 00 // notes sur VHDL
 
-Date de création: September 3, 2024 6:12 PM
-Modifié: January 14, 2025 12:59 AM
-
 ```vhdl
 entity my_entity is
 	-- les ports (entrées et sorties) de l'entité, de la composante

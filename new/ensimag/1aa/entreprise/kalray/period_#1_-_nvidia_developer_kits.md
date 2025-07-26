@@ -1,8 +1,5 @@
 # Period #1 - NVidia Developer Kits
 
-Date de création: November 12, 2024 5:32 PM
-Modifié: December 2, 2024 9:32 AM
-
 # NVidia Jetson AGX Orin
 
 ## SSH stuff

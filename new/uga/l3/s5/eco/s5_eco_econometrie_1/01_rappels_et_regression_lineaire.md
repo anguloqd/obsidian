@@ -1,8 +1,5 @@
 # 01 // rappels et régression linéaire
 
-Date de création: September 20, 2023 9:33 PM
-Modifié: December 17, 2023 9:37 PM
-
 [Économétrie - Chap #1](1_chapitre1_econometrie1_20232024.pdf)
 
 # Les modèles linéaires déterministes

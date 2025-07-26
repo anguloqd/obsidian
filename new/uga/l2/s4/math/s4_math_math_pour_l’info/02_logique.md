@@ -1,8 +1,5 @@
 # 02 // logique
 
-Date de création: March 16, 2023 12:18 AM
-Modifié: April 10, 2025 6:31 PM
-
 # Propositions
 
 [Slides de propositions](slides_proposition_minfo_annote_final.pdf)

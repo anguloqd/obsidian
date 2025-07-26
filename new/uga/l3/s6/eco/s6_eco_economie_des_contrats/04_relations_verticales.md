@@ -1,8 +1,5 @@
 # 04 // relations verticales
 
-Date de création: March 27, 2024 9:11 AM
-Modifié: April 20, 2025 2:20 AM
-
 [Partie 2_05_L3 MIASHS_Relations verticales_cours.pdf](partie_2_05_l3_miashs_relations_verticales_cours.pdf)
 
 [06_L3 MIASHS_Eco_cont_Intégration et restrictions verticales_moodle.pdf](06_l3_miashs_eco_cont_integration_et_restrictions_verticales_moodle.pdf)

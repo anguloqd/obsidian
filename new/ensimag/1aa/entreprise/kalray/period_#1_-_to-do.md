@@ -1,8 +1,5 @@
 # Period #1 - To-Do
 
-Date de création: October 30, 2024 11:09 AM
-Modifié: December 2, 2024 9:18 AM
-
 # Normal To-Do
 
 - [ ]  NVidia Jetson (for AGX Orin):

@@ -1,8 +1,5 @@
 # 06 // l'équation de Slutsky
 
-Date de création: April 3, 2022 8:13 PM
-Modifié: June 2, 2023 4:42 PM
-
 ### L'effet de substitution
 
 - Une variation du prix d'un bien entraîne deux effets :

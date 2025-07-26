@@ -1,8 +1,5 @@
 # 03 // familles de vecteurs et dimensions finies
 
-Date de création: October 13, 2021 9:25 PM
-Modifié: June 10, 2023 9:54 PM
-
 # Familles de vecteurs
 
 ## Famille libre

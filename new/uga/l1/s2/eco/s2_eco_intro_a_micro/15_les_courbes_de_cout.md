@@ -1,8 +1,5 @@
 # 15 // les courbes de coût
 
-Date de création: April 28, 2022 5:28 PM
-Modifié: January 13, 2023 4:39 PM
-
 ## Les coûts moyens
 
 - On classifie les coûts comme coûts variables et coûts fixes.

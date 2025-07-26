@@ -1,8 +1,5 @@
 # 01 // sciences, humain et société
 
-Date de création: October 21, 2021 11:28 PM
-Modifié: June 10, 2023 10:05 PM
-
 # C'est quoi une science ?
 
 - Lien entre les théories scientifiques et la réalité :

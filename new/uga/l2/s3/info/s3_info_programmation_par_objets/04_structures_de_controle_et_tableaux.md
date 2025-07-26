@@ -1,8 +1,5 @@
 # 04 // structures de contrôle et tableaux
 
-Date de création: September 22, 2022 11:25 AM
-Modifié: June 10, 2023 10:18 PM
-
 [Slides de cours 4.pdf](inff3-2223-cours4.pdf)
 
 # Qu’est-ce que les structures de contrôle

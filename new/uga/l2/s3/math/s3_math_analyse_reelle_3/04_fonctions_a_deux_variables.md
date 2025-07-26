@@ -1,8 +1,5 @@
 # 04 // fonctions à deux variables
 
-Date de création: November 7, 2022 9:46 PM
-Modifié: June 7, 2023 8:12 PM
-
 # Points critiques, extrêmes locaux et globaux
 
 ## Points critiques : $\frac{\partial f}{\partial x}=0$

@@ -1,8 +1,5 @@
 # (2) 11 // tas (files de priorité), diviser-pour-régner, master theorem
 
-Date de création: January 22, 2025 8:37 AM
-Modifié: February 11, 2025 10:03 PM
-
 [Cours_ArbresGénéraux_Tas.pdf](cours_arbresgnraux_tas.pdf)
 
 [diviser_pour_regner_multiplication.pdf](revision_2425.pdf)

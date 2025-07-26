@@ -1,8 +1,5 @@
 # 04 // anticipations, production et politique économique
 
-Date de création: April 24, 2023 12:08 AM
-Modifié: March 10, 2024 1:40 AM
-
 [Slides de IS/LM/PC](chapitre_4b_-_diapo.pdf)
 
 # Le modèle IS/LM/PC

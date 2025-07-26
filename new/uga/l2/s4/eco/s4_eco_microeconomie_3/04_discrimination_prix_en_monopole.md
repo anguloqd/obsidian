@@ -1,8 +1,5 @@
 # 04 // discrimination prix en monopole
 
-Date de création: January 27, 2023 5:30 PM
-Modifié: June 10, 2023 2:11 PM
-
 [Slides de discrimination prix](corolleur_f._2020_21_lecture_4_discrimination_prix.pdf)
 
 ![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled.png)

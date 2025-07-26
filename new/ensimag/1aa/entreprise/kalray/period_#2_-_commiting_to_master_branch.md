@@ -1,8 +1,5 @@
 # Period #2 - Commiting to master branch
 
-Date de création: February 20, 2025 2:48 PM
-Modifié: July 1, 2025 5:09 PM
-
 - Before anything, make sure you have configured your profile following the steps in Training slides.
 - After that, in a new repo you just cloned, run `installCommitHook` for the first time.
 - Create a branch `aci/dangulo/master` to the `kann-models-zoo` and `kaf` repos.

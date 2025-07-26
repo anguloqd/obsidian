@@ -1,8 +1,5 @@
 # Period #1 - Kalray University, SW
 
-Date de création: October 30, 2024 10:25 AM
-Modifié: November 14, 2024 5:10 PM
-
 [https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=5ZxLYN&CID=f8fbb2d1%2D5b66%2D4bfa%2D89cf%2D1c2cf75bd216&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FSW&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b](https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=5ZxLYN&CID=f8fbb2d1%2D5b66%2D4bfa%2D89cf%2D1c2cf75bd216&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FSW&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b)
 
 # FLOSS - SW Licensing

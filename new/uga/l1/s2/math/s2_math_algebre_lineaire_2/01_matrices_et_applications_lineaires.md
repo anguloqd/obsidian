@@ -1,8 +1,5 @@
 # 01 // matrices et applications linéaires
 
-Date de création: December 7, 2021 4:28 PM
-Modifié: June 23, 2023 12:05 AM
-
 # Rang d'une famille de vecteurs
 
 ## Définition

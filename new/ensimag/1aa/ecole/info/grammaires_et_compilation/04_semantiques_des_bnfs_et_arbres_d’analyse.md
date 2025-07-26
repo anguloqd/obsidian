@@ -1,8 +1,5 @@
 # 04 // sémantiques des BNFs et arbres d’analyse
 
-Date de création: January 11, 2025 5:23 PM
-Modifié: January 26, 2025 12:46 PM
-
 [chap4-4up.pdf](chap4-4up.pdf)
 
 ## Exo 4.4

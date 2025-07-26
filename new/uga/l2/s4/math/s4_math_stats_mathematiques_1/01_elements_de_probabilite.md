@@ -1,8 +1,5 @@
 # 01 // éléments de probabilité
 
-Date de création: January 15, 2023 11:25 PM
-Modifié: June 9, 2023 5:41 PM
-
 [Slides de rappels de proba](slides_rappels_proba_stat1_annote_2301.pdf)
 
 # Rappels

@@ -1,8 +1,5 @@
 # Periode #3 - Lock
 
-Date de création: July 1, 2025 11:14 AM
-Modifié: July 1, 2025 11:14 AM
-
 ```bash
    13  cp /nfs/users/qmuller/share/dangulo/libkann-service.so .
    14  find $KALRAY_TOOLCHAIN_DIR

@@ -1,8 +1,5 @@
 # 01 // introduction à la programmation par objets
 
-Date de création: September 8, 2022 7:55 AM
-Modifié: June 30, 2023 9:06 AM
-
 [Slides de cours 1](inff3-2223-cours1.pdf)
 
 # Programmes, langages de programmation et paradigmes

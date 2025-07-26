@@ -1,8 +1,5 @@
 # 01 // approximations des grands échantillons
 
-Date de création: July 16, 2024 11:45 PM
-Modifié: July 16, 2024 11:45 PM
-
 # Convergence, grands échantillons, approx. gaussiennes
 
 ## Inégalités : Markov et Bienaymé-Tchebychev

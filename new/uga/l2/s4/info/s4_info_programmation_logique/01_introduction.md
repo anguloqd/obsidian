@@ -1,8 +1,5 @@
 # 01 // introduction
 
-Date de création: January 15, 2023 11:26 PM
-Modifié: June 10, 2023 12:39 PM
-
 [Slides d’intro](coursprologl2_1_(3).pdf)
 
 # Principaux paradigmes en programmation

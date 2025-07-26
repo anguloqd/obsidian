@@ -1,8 +1,5 @@
 # Period #1 - KaNN Training
 
-Date de création: October 30, 2024 11:10 AM
-Modifié: November 12, 2024 9:47 AM
-
 <aside>
 💡
 

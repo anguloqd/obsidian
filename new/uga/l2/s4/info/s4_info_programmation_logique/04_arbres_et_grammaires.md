@@ -1,8 +1,5 @@
 # 04 // arbres et grammaires
 
-Date de création: April 10, 2023 8:43 PM
-Modifié: July 19, 2023 5:52 PM
-
 [Slides d’arbres et grammaires](coursprologl2_5_(4).pdf)
 
 # Arbres

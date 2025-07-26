@@ -1,8 +1,5 @@
 # 05 // produit scalaire et algèbre bilinéaire
 
-Date de création: November 15, 2022 7:59 PM
-Modifié: November 1, 2023 12:07 AM
-
 # Définitions
 
 ## Produit scalaire : ce n’est pas que le produit matriciel

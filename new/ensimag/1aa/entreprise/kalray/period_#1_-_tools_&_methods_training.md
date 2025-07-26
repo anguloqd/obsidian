@@ -1,8 +1,5 @@
 # Period #1 - Tools & Methods training
 
-Date de création: November 5, 2024 9:54 AM
-Modifié: November 5, 2024 3:14 PM
-
 organigramme simple 
 
 N1: HW (Dolomites), Core SW (Dolo, CV1 et CV2) (Contient equipe board, low level, linux, toolchain, ethernet)

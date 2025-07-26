@@ -1,8 +1,5 @@
 # 02 // tests de normalité
 
-Date de création: March 9, 2024 10:40 PM
-Modifié: April 20, 2025 1:19 AM
-
 [slides normalite stat 3 annote 2.pdf](slides_normalite_stat_3_annote_2.pdf)
 
 # D’autres tests de normalité

@@ -1,8 +1,5 @@
 # 11 // l'équilibre
 
-Date de création: April 28, 2022 4:34 AM
-Modifié: January 13, 2023 4:39 PM
-
 ## L'offre
 
 - Dans de nombreuses situations, il n’est pas vraiment nécessaire de connaître le comportement d’optimisation qui est à la base de la courbe d’offre ou de la courbe de demande.

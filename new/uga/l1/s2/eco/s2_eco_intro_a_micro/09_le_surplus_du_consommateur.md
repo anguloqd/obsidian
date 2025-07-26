@@ -1,8 +1,5 @@
 # 09 // le surplus du consommateur
 
-Date de création: April 25, 2022 11:00 PM
-Modifié: June 2, 2023 4:42 PM
-
 ## La demande pour un bien discret
 
 - **Prix de réserve** : niveau de prix où le consommateur est indifférent entre acheter un bien et garder son argent.

@@ -1,8 +1,5 @@
 # 04 // le choix optimal
 
-Date de création: February 27, 2022 1:47 AM
-Modifié: June 2, 2023 4:42 PM
-
 - **Interpretation importante du TmS** : c’est le taux d’échange pour lequel le consommateur **ne désire pas modifier** sa consommation.
 - Le marché offre au consommateur un taux d’échange égal à −p1/p2 : s’il renonce à une unité de bien 1, il peut acheter p1/p2 unités de bien 2.
 - Donc, la condition optimalité d'utilité est :

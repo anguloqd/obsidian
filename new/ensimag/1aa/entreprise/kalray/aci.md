@@ -1,8 +1,5 @@
 # aci
 
-Date de création: July 2, 2025 4:31 PM
-Modifié: July 17, 2025 10:14 AM
-
 pas besoin de branche dirty si tu ne modifies pas ton code de aci/dangulo/main
 
 rebuild avec jenkins pour relancer les tests d’aci

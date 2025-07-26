@@ -1,8 +1,5 @@
 # 03 // non respect des hypothèses
 
-Date de création: November 8, 2023 10:21 PM
-Modifié: January 10, 2024 3:24 AM
-
 [Économetrie 1 - Chap. #4.1](4_chapitre4_partie41_econometrie1_202232024.pdf)
 
 [Économetrie 1 - Chap. #4.2](5_chapitre4_partie42_econometrie1_20232024.pdf)

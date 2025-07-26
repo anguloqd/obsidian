@@ -1,8 +1,5 @@
 # (2) 07 // introduction à Java
 
-Date de création: December 11, 2024 8:48 AM
-Modifié: February 6, 2025 10:03 PM
-
 Histoire:
 
 | Binaire

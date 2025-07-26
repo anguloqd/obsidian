@@ -1,8 +1,5 @@
 # 02 // les nombres réels (propriétés et partie entière)
 
-Date de création: November 22, 2021 11:03 AM
-Modifié: June 10, 2023 9:56 PM
-
 [Slides des nombres réels](02_les_nombres_reels_(proprietes_et_partie_enti/chap2.pdf)
 
 # Bornes inférieures et supérieures

@@ -1,8 +1,5 @@
 # 02 // langages algébriques et BNF
 
-Date de création: January 11, 2025 5:21 PM
-Modifié: January 16, 2025 3:40 PM
-
 [chap2-4up.pdf](chap2-4up.pdf)
 
 ## Exo 2.1

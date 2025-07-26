@@ -1,8 +1,5 @@
 # onnxsim
 
-Date de création: July 1, 2025 5:51 PM
-Modifié: July 2, 2025 4:01 PM
-
 ```bash
   607  git checkout fa46ba5 -- networks/classifiers/inception-v3/onnx/inception_v3_i8.yaml
   608  ./generate -c networks/classifiers/inception-v3/onnx/inception_v3_i8.yaml
