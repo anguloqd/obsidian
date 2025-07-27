@@ -1,5 +1,21 @@
 # 00 // tps
 
+## Documents de TP
+
+[00_tps_tp_ip1.pdf](ressources/00_tps_tp_ip1.pdf)
+
+[00_tps_tp_ip2.pdf](ressources/00_tps_tp_ip2.pdf)
+
+[00_tps_tp_ip3.pdf](ressources/00_tps_tp_ip3.pdf)
+
+[00_tps_tp_routage1.pdf](ressources/00_tps_tp_routage1.pdf)
+
+[00_tps_tp_routage2.pdf](ressources/00_tps_tp_routage2.pdf)
+
+[00_tps_routage2-form.pdf](ressources/00_tps_routage2-form.pdf)
+
+[00_tps_tp_firewall.pdf](ressources/00_tps_tp_firewall.pdf)
+
 ## TP1
 
 - `ifconfig` pour trouver :

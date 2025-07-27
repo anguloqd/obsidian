@@ -1,2 +1,3 @@
 # 07 // administration des réseaux
 
+[07_administration_des_reseaux_transparents_administration_reseaux.pdf](ressources/07_administration_des_reseaux_transparents_administration_reseaux.pdf)
