@@ -35,14 +35,11 @@ Ces tests sont relativement puissants et, ce qui est notable, le restent pour de
 
 ## Le QQ-plot
 
-<aside>
-💡
-
-Idée : deux distributions sont égales si touts leurs quantiles sont égaux.
-
-Les quantiles observés $q_i$ sont à compares aux quantiles de la loi théorique $q^*_i$.
-
-</aside>
+> [!tip] 💡
+>
+> Idée : deux distributions sont égales si touts leurs quantiles sont égaux.
+>
+> Les quantiles observés $q_i$ sont à compares aux quantiles de la loi théorique $q^*_i$.
 
 Soit $x₁, ..., xₙ$ une série statistique. On peut chercher à savoir si la distribution des données suit une loi gaussienne, de Poisson, etc. Notons $F₀$ la fonction de répartition de cette loi de probabilité d'intérêt.
 

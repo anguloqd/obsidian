@@ -30,10 +30,8 @@ Face à une disjonctive entre deux situations A et B, un agent veut toujours pre
 
 Supposons deux loteries L_1= \{(1000€, 0.5) ; (-1000€, 0.5)\} et L_2 = \{(2€, 0.5) ; (1€, 0.5) \}. La EMG (espérance mathématique de gain) pour L_2 est plus élevée que celle de L_1. L’agent choisit donc L_2.
 
-<aside>
-💡 Ici, il faut remarquer que les lotos L_1 et L_2 sont elles-mêmes des actions a_1 et a_2. En fait, dans ce contexte, chaque action pourrait se voir comme une loterie (le composant aléatoire étant l’état de la nature). Donc, une action se décrit comme a_i = \{(1€, 0.5) ; (-1€, 0.5) \}.
-
-</aside>
+> [!note]
+> Ici, il faut remarquer que les lotos L_1 et L_2 sont elles-mêmes des actions a_1 et a_2. En fait, dans ce contexte, chaque action pourrait se voir comme une loterie (le composant aléatoire étant l’état de la nature). Donc, une action se décrit comme a_i = \{(1€, 0.5) ; (-1€, 0.5) \}.
 
 Ceci étant dit, il y a des situations problématiques si on décide de choisir la EMG comme notre critère de décision. L’une de ces situations est la paradoxe de St. Petesbourg : c’est un jeu d’une pièce équilibrée lancée jusqu’à l’obtention de l’événement “Face”. A chaque jet qui sort pile, le joeur gagne 2^n€. Donc :
 

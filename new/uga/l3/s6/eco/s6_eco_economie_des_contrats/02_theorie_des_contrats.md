@@ -2,10 +2,8 @@
 
 [Partie II Théorie des Contrats 2022.pdf](ressources/02_theorie_des_contrats_partie_ii_thorie_des_contrats_2022.pdf)
 
-<aside>
-💡 Remarquer pour l’examen finale : utilité de réservation dans la contrainte de participation (par définition, le salaire si je suis au chômage) // Le trois points : “comment vont agir les agents, quantité et prix d’équilibre”. // “rente informationnelle” différence entre w_i en info parfaite et w_i en asymétrie d’info // “exo de partiel final” : la contrainte de participation dépend de la forme de sa fonction d’utilité !!! (son attitude vers le risque)
-
-</aside>
+> [!note]
+> Remarquer pour l’examen finale : utilité de réservation dans la contrainte de participation (par définition, le salaire si je suis au chômage) // Le trois points : “comment vont agir les agents, quantité et prix d’équilibre”. // “rente informationnelle” différence entre w_i en info parfaite et w_i en asymétrie d’info // “exo de partiel final” : la contrainte de participation dépend de la forme de sa fonction d’utilité !!! (son attitude vers le risque)
 
 # Introduction
 
@@ -151,10 +149,8 @@ Il y a toujours trois question à répondre, selon le prof. Llerena :
 - Quels contrats le Principal proposera-t-il à l’Agent ?
 - De quels variables dépendra la rémunération de l’Agent ?
 
-<aside>
-📌 L’indice i est là parce que on suppose que les résultats de la variable aléatoire y sont dénombrables. Si on suppose que $y\in \{1,5,11\}$, donc il y a trois résultats qu’on indexe avec $i\in\{1,2,3\}$.
-
-</aside>
+> [!note]
+> L’indice i est là parce que on suppose que les résultats de la variable aléatoire y sont dénombrables. Si on suppose que $y\in \{1,5,11\}$, donc il y a trois résultats qu’on indexe avec $i\in\{1,2,3\}$.
 
 Hypothèses :
 

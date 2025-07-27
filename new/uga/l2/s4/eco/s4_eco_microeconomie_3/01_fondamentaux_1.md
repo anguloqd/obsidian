@@ -114,10 +114,8 @@ Astuce : si on lit le premier graphique de droite `guache (à l'invers), l'utili
 
 Le paramètre $a$ a l’interpretation économique d’utilité marginale maximale. En termes mathématiques, c’est simplement le point maximum de $\frac{\partial U}{\partial q}$, et on avait dit que si la fonction d’utilité est quadratique, la fonction de demande qui en découle est $p=a-bq$, précisément la fonction linéaire de demande qu’on traite. Donc, $\frac{\partial U}{\partial q} = a-bq$.
 
-<aside>
-💡 On pourrait voir la fonction de demande simplement comme l’utilité marginale !
-
-</aside>
+> [!note]
+> On pourrait voir la fonction de demande simplement comme l’utilité marginale !
 
 Dans un sens plus économique, pensons qu’on est le demandeur du bien. Pour une quantité minimale $\epsilon$ proche de $0$, on est prêt à payer $p(\epsilon)$ proche de $a$. Donc, a serait l’utilité marginal maximale de consommer une unité du bien, et notons qu’elle diminue pour chaque unité supplémentaire jusqu’à qu’on consomme $a/b$, où on n’est plus interesé au bien et on préfère garde la monnaie $M$. Cette utilité marginale maximale $a$ est mesurée en unités de monnaie.
 
@@ -158,10 +156,8 @@ Notons que dans la fonction d’utilité et sa première dérivée, $d$ multipli
 - Pour $d>0$, les biens sont substituables ($Umg_i$ décroissante)
     - Pour $d = 1$, les biens sont **parfaitement** substituables
 
-<aside>
-💡 Pour des raisons mathématiques, on impose $|b_i| > |d|$. Si on voit sur l’expression d’utilité marginale, on voit que $b_i$ régule $q_i$ et $d$ régule $q_j$. On veut que l’effet sur l’utilité marginale de bien i soit plus affectée par la quantité du même bien que celle de l’autre bien, d’où la condition $|b_i|>|d|$.
-
-</aside>
+> [!note]
+> Pour des raisons mathématiques, on impose $|b_i| > |d|$. Si on voit sur l’expression d’utilité marginale, on voit que $b_i$ régule $q_i$ et $d$ régule $q_j$. On veut que l’effet sur l’utilité marginale de bien i soit plus affectée par la quantité du même bien que celle de l’autre bien, d’où la condition $|b_i|>|d|$.
 
 Pour des consommateurs parfaitement rationnels, on peut déduire leurs demandes à partir de leurs fonctions d’utilité comme on l’avait vu dans le cas général dans la section précédente :
 
@@ -237,10 +233,8 @@ Voyons $q_i=\alpha-\beta p_1+\delta p_2$ : il y a une relation inverse entre pri
 
 On part d’une fonction d’utilité de la forme $U(q_1,q_2)=v(q_1)+q_2$ et on fixe $U$ a une constante $C$ qui représent le niveau de préférence. On impose que $v$ est une fonction non-linéaire, et $v\prime(q_1) > 0, \space v\prime\prime(q_2)<0$, donc le bien $1$ est un bien désirable mais à rendements décroissants. On fait noter toute suite que $U$ est linéaire par rapport au bien $2$ mais pas au bien $1$, d’où son nom *quasi-linéaire*.
 
-<aside>
-💡 On peut voir $v(q_1)$ comme la propension totale à payer pour $q_1$ unités du bien $1$ et $v\prime(q_1)$ comme la propension marginale pour payer une unité de plus de bien $1$ ayant déjà $q_1$ unités acquises.
-
-</aside>
+> [!note]
+> On peut voir $v(q_1)$ comme la propension totale à payer pour $q_1$ unités du bien $1$ et $v\prime(q_1)$ comme la propension marginale pour payer une unité de plus de bien $1$ ayant déjà $q_1$ unités acquises.
 
 ![2.png](ressources/01_fondamentaux_1_2.png)
 
@@ -399,10 +393,8 @@ Toutes les trois définitions sont mathématiquement équivalentes : si l’une 
 
 ### Économies d’échelle spécifiques
 
-<aside>
-💡 Les coûts spécifiques sont des coûts pour produire un bien $1$ mais pas un bien $2$.
-
-</aside>
+> [!note]
+> Les coûts spécifiques sont des coûts pour produire un bien $1$ mais pas un bien $2$.
 
 Ayant défini le coût moyen incrémentale $CMI$ (aussi appelé à coût supplémentaire moyen), on peut aussi définir les “économies d’échelles spécifiques”, que c’est une réécriture de l’indice d’économie d’échelles mono-produit mais remplaçant le $CM(q)$ pour le $CMI(q_i|q_j)=CMI_i$.
 

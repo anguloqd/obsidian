@@ -20,14 +20,13 @@ La **matrice de passage** $P_{B,B'}$ est la matrice qui exprime les vecteurs de 
 
 Si on multiplie un vecteur à la droite de $P_{B,B’}$, il se "traduit" de $B'$ à $B$. L'arrivée est toujours la base $B$ avec laquelle on s'exprime actuellement. On la note aussi $\text{Mat}_B(B')$.
 
-<aside>
-⚠️ Quelques notes par rapport à $P_{B,B’}$ :
-
-- Puisqu'on reste dans un même espace vectoriel $E$, on peut noter $\text{Mat}_{B',B}(\text{id}(E))$.
-- Ici, $\text{id}(E)$ est une fonction de $E \mapsto E$ qui laisse un vecteur inchangé. La seule chose qui change donc c'est l'expression de l'image de la base $B'$ exprimés en termes de la base $B$.
-- Mais, puisque l'image "ne change rien", on juste exprime $B'$ en termes de $B$.
-- **Fais attention à l'inversion des bases dans la notation !**
-</aside>
+> [!note]
+> Quelques notes par rapport à $P_{B,B’}$ :
+>
+> - Puisqu'on reste dans un même espace vectoriel $E$, on peut noter $\text{Mat}_{B',B}(\text{id}(E))$.
+> - Ici, $\text{id}(E)$ est une fonction de $E \mapsto E$ qui laisse un vecteur inchangé. La seule chose qui change donc c'est l'expression de l'image de la base $B'$ exprimés en termes de la base $B$.
+> - Mais, puisque l'image "ne change rien", on juste exprime $B'$ en termes de $B$.
+> - **Fais attention à l'inversion des bases dans la notation !**
 
 On devrait connaître trois propriétés importantes de la matrice de passage :
 
@@ -41,10 +40,8 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 
 Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \mapsto F$. Elle montre l'image de la base de départ dans la base d'arrivée. Une **matrice de passage** exprime un nouvelle base en terme d'une ancienne base toujours d'un même ensemble $E$. Il est très important de comprendre la différence entre les deux !
 
-<aside>
-⛑️ Aide : la notation $\text{Mat}_{1,2}$ se lit “de $1$ à $2$” tant que $P_{1,2}$ se lit “à $1$ de $2$”. $\text{Mat}$ se lit dans “le bon ordre”, càd. de gauche à droite ; et $P$ dans l’ordre inverse.
-
-</aside>
+> [!note]
+> Aide : la notation $\text{Mat}_{1,2}$ se lit “de $1$ à $2$” tant que $P_{1,2}$ se lit “à $1$ de $2$”. $\text{Mat}$ se lit dans “le bon ordre”, càd. de gauche à droite ; et $P$ dans l’ordre inverse.
 
 La formule de changement de base est la suivante :
 

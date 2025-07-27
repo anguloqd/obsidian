@@ -363,10 +363,8 @@ int main(void)
 
 ## Sémaphores, exo #1
 
-<aside>
-❓  Q4. “Utiliser votre implémentation de la classe Semaphore pour compléter les classes Main, ThreadA, ThreadB et ThreadC fournies. Les classes ThreadA, ThreadB et ThreadC sont des threads qui ont pour but d’afficher respectivement cinq ‘A’, cinq ‘B’ et cinq ‘C’. Il s’agit de synchroniser les threads de sorte que l’affichage corresponde à : ABCABCABCABCABC.“
-
-</aside>
+> [!note]
+> Q4. “Utiliser votre implémentation de la classe Semaphore pour compléter les classes Main, ThreadA, ThreadB et ThreadC fournies. Les classes ThreadA, ThreadB et ThreadC sont des threads qui ont pour but d’afficher respectivement cinq ‘A’, cinq ‘B’ et cinq ‘C’. Il s’agit de synchroniser les threads de sorte que l’affichage corresponde à : ABCABCABCABCABC.“
 
 Quelques choses à remarquer :
 

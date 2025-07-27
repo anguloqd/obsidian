@@ -15,10 +15,8 @@ Par la suite, on va supposer les cinq hypothèses ”fondamentales” qui suiven
 Dans ce cas c’est linéaire, donc $y_i = \beta_0+\beta_1x_i+u_i$.
 - $H_5$, non colinéarité: la variable explicative $x_i$ n’est pas constante pour toutes les observations.
 
-<aside>
-⚠️ Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\bold x u] \ne 0$ donc $\text{Cov}(\bold x, u) \ne 0$.
-
-</aside>
+> [!note]
+> Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\bold x u] \ne 0$ donc $\text{Cov}(\bold x, u) \ne 0$.
 
 Sous ces hypothèses, il découle que : 
 
@@ -100,14 +98,12 @@ u_n
 \end{bmatrix}
 $$
 
-<aside>
-📖 Le vecteur $\hat\beta$ qui contient les estimateurs des MCO de $\beta$ et qui résous ce système d’équations linéaires utilise la [pseudo-inverse](https://en.wikipedia.org/wiki/Generalized_inverse) ou l’inverse de [Moore-Penrose](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse) de $\bold X$ (une généralisation de l’inverse pour les matrices pas forcément carrés. Elle est égale à l’inverse régulière si la matrice est carré).
-
-$$
-\hat\beta=(\bold X^T \bold X)^{-1}\bold X^T\bold y
-$$
-
-</aside>
+> [!note]
+> Le vecteur $\hat\beta$ qui contient les estimateurs des MCO de $\beta$ et qui résous ce système d’équations linéaires utilise la [pseudo-inverse](https://en.wikipedia.org/wiki/Generalized_inverse) ou l’inverse de [Moore-Penrose](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse) de $\bold X$ (une généralisation de l’inverse pour les matrices pas forcément carrés. Elle est égale à l’inverse régulière si la matrice est carré).
+>
+> $$
+> \hat\beta=(\bold X^T \bold X)^{-1}\bold X^T\bold y
+> $$
 
 Les cinq hypothèses du cas linéaire simple sont légèrement changées dans le cas général :
 

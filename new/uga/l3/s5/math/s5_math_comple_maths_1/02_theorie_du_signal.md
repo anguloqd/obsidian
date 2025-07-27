@@ -49,19 +49,15 @@ Voyons la prochaine courbe $x(t)=\cos(t)$ qui pourrait représenter de l’éner
 
 En réalité, on garde juste un période à deux signes dans le cas où la signal $x(t)$ présente un seul phénomène de période $t_0$, càd. si $t_0$ est la périodicité minimale du signal, toute autre période est un multiple de $t_0$. **Si la signal n’est pas élémentaire, on garde juste $f_0$ positif**.
 
-<aside>
-💡 Un signal élémentaire est juste un signal harmonique : càd, un signale qui admet une unique fréquence $\pm f_0$. Les autres signaux sont dit “non-harminques” ou “compliqués”.
-
-</aside>
+> [!note]
+> Un signal élémentaire est juste un signal harmonique : càd, un signale qui admet une unique fréquence $\pm f_0$. Les autres signaux sont dit “non-harminques” ou “compliqués”.
 
 La représentation spectrale d’un signal (à droite) est une fonction de la fréquence $f_0 = 1/T_0$, et les unités de fréquence est “quantité d’un cycle par une unité de temps”. Dans le cas d’un signal à un seul phénomène, on divise l’amplitude (maximum absolue du signal $x(t)$) par deux dans ce cas et on le graphique contre $\pm f_0$.
 
 # Séries de Fourier
 
-<aside>
-📌 Les exercices en partiel sur les séries de Fourier sont normalement comme suit : calculer coefficients de Fourier pour monter la série, appliquer thm. de Dirichlet pour confirmer la convergence, et puis le thm. de Parseval pour “faire un truc”, càd. une conséquence logique intéressante.
-
-</aside>
+> [!note]
+> Les exercices en partiel sur les séries de Fourier sont normalement comme suit : calculer coefficients de Fourier pour monter la série, appliquer thm. de Dirichlet pour confirmer la convergence, et puis le thm. de Parseval pour “faire un truc”, càd. une conséquence logique intéressante.
 
 ## Définitions requises
 

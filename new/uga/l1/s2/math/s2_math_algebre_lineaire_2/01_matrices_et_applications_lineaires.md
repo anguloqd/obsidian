@@ -56,10 +56,8 @@ Une application linéaire crée une correspondance entre les vecteurs d'un espac
 
 Supposons que $A$ n'a que deux vecteurs, $\{v_1, v_2\}$ et le même pour $B$, $\{w_1, w_2\}$. Donc, il existe une **unique application linéaire** pour chaque possible manière unique de faire des correspondances entre les vecteurs de $A$ et $B$. Et donc, il existe une unique matrice qui décrit une unique application linéaire, il y a bijection.
 
-<aside>
-💡 On dit aussi que chaque A.L. est ***caractérisée*** par une unique matrice. **Si on connaît les coefficients, on connaît la A.L.**
-
-</aside>
+> [!note]
+> On dit aussi que chaque A.L. est ***caractérisée*** par une unique matrice. **Si on connaît les coefficients, on connaît la A.L.**
 
 Il peut être vite fatigant de devoir faire des opérations mathématiques pour savoir quel vecteur $v$ de $A$ correspond à quel vecteur $w$ de $B$. Donc, c'est plus vite si on sépare chaque vecteur comme un produit des coordonnées et les vecteurs bases.
 
@@ -69,10 +67,8 @@ $$
 
 Après, on juste passe chaque vecteur base par la fonction. Les vecteurs résultants seront une base de l'image de $f(x)$.
 
-<aside>
-❗ **Attention** **!** Les vecteurs résultants ne sont pas forcément une base de tout $B$, juste la base de $\text{lm}(f)$. Ils pourrait être la base de $F$ si et seulement si $f(x)$ est surjective, car donc $\text{Im}(f) = B$, et si les vecteurs sont indépendants entre eux. Sinon, au moins la famille $\{f(e_1), ... , f(e_n)\}$ est génératrice.
-
-</aside>
+> [!note]
+> **Attention** **!** Les vecteurs résultants ne sont pas forcément une base de tout $B$, juste la base de $\text{lm}(f)$. Ils pourrait être la base de $F$ si et seulement si $f(x)$ est surjective, car donc $\text{Im}(f) = B$, et si les vecteurs sont indépendants entre eux. Sinon, au moins la famille $\{f(e_1), ... , f(e_n)\}$ est génératrice.
 
 Deux notes pratiques :
 
@@ -115,10 +111,8 @@ $$
 f(e_j)=a_{1,j}f_1+a_{2,j}f_2+\dots+a_{n,j}f_n=\begin{bmatrix}a_{1,j}\\a_{2,j}\\\vdots\\a_{n,j}\end{bmatrix}_{B^\prime}
 $$
 
-<aside>
-❗ **Attention !** On utilise la lettre $f$ pour la fonction/A.L. et aussi pour les vecteurs de la base $B^\prime$.
-
-</aside>
+> [!note]
+> **Attention !** On utilise la lettre $f$ pour la fonction/A.L. et aussi pour les vecteurs de la base $B^\prime$.
 
 La matrice d'application linéaire $f$ (par rapport aux bases $B$ et $B'$) est la matrice dont la $j$-ième colonne est constituée par les coordonnées du vecteur $f(e_j)$ dans la base $B^\prime=(f_i)_{1\le i\le n}$.
 
@@ -146,14 +140,13 @@ Aussi, et **la propriété la plus importante** : $\text{Mat}_{B,B'}(g \circ f) 
 
 ### Matrice d’un endomorphisme : $E \mapsto E$
 
-<aside>
-⚠️ Avant d'aborder les A.L. plus connus exprimés en forme matricielle, un point sur la notation :
-
-- Si on prend la même base dans l'ensemble de départ et arrivée, alors on note $\text{Mat}_B(f)$.
-- Si on prend deux bases différentes dans le même ensemble, alors on note $\text{Mat}_{B,B'}(f)$ pour deux bases $B$ et $B'$.
-- Notons aussi que la taille de la matrice est toujours carrée dans cette section.
-- **Propriété**. Si $f$ est un endomorphisme, alors $\text{Mat}_B(f^p) = (\text{Mat}_B(f))^p$, où $f^p$ est $f$ composée avec elle même $p$ fois. Ceci est juste une reformulation de la équivalence de composition/multiplication des matrices de A.L.
-</aside>
+> [!note]
+> Avant d'aborder les A.L. plus connus exprimés en forme matricielle, un point sur la notation :
+>
+> - Si on prend la même base dans l'ensemble de départ et arrivée, alors on note $\text{Mat}_B(f)$.
+> - Si on prend deux bases différentes dans le même ensemble, alors on note $\text{Mat}_{B,B'}(f)$ pour deux bases $B$ et $B'$.
+> - Notons aussi que la taille de la matrice est toujours carrée dans cette section.
+> - **Propriété**. Si $f$ est un endomorphisme, alors $\text{Mat}_B(f^p) = (\text{Mat}_B(f))^p$, où $f^p$ est $f$ composée avec elle même $p$ fois. Ceci est juste une reformulation de la équivalence de composition/multiplication des matrices de A.L.
 
 - **Identité** : $\text{Mat}_B(f) = I_n$. 
 Évident, car on prend la même base en départ/arrivée.
@@ -209,14 +202,13 @@ La **matrice de passage** $P_{B,B'}$ est la matrice qui exprime les vecteurs de 
 
 Si on multiplie un vecteur à la droite de $P_{B,B’}$, il se "traduit" de $B'$ à $B$. L'arrivée est toujours la base $B$ avec laquelle on s'exprime actuellement. On la note aussi $\text{Mat}_B(B')$.
 
-<aside>
-⚠️ Quelques notes par rapport à $P_{B,B’}$ :
-
-- Puisqu'on reste dans un même espace vectoriel $E$, on peut noter $\text{Mat}_{B',B}(\text{id}(E))$.
-- Ici, $\text{id}(E)$ est une fonction de $E \mapsto E$ qui laisse un vecteur inchangé. La seule chose qui change donc c'est l'expression de l'image de la base $B'$ exprimés en termes de la base $B$.
-- Mais, puisque l'image "ne change rien", on juste exprime $B'$ en termes de $B$.
-- **Fais attention à l'inversion des bases dans la notation !**
-</aside>
+> [!note]
+> Quelques notes par rapport à $P_{B,B’}$ :
+>
+> - Puisqu'on reste dans un même espace vectoriel $E$, on peut noter $\text{Mat}_{B',B}(\text{id}(E))$.
+> - Ici, $\text{id}(E)$ est une fonction de $E \mapsto E$ qui laisse un vecteur inchangé. La seule chose qui change donc c'est l'expression de l'image de la base $B'$ exprimés en termes de la base $B$.
+> - Mais, puisque l'image "ne change rien", on juste exprime $B'$ en termes de $B$.
+> - **Fais attention à l'inversion des bases dans la notation !**
 
 On devrait connaître trois propriétés importantes de la matrice de passage :
 
@@ -230,10 +222,8 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 
 Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \mapsto F$. Elle montre l'image de la base de départ dans la base d'arrivée. Une **matrice de passage** exprime un nouvelle base en terme d'une ancienne base toujours d'un même ensemble $E$. Il est très important de comprendre la différence entre les deux !
 
-<aside>
-⛑️ Aide : la notation $\text{Mat}_{1,2}$ se lit “de $1$ à $2$” tant que $P_{1,2}$ se lit “à $1$ de $2$”. $\text{Mat}$ se lit dans “le bon ordre”, càd. de gauche à droite ; et $P$ dans l’ordre inverse.
-
-</aside>
+> [!note]
+> Aide : la notation $\text{Mat}_{1,2}$ se lit “de $1$ à $2$” tant que $P_{1,2}$ se lit “à $1$ de $2$”. $\text{Mat}$ se lit dans “le bon ordre”, càd. de gauche à droite ; et $P$ dans l’ordre inverse.
 
 La formule de changement de base est la suivante :
 

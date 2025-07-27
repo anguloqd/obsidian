@@ -163,18 +163,17 @@ En 2000, il y a eu un nouveau choc pétrolier, mais moins déstabilisateur que l
 
 ## La crise financière : 2008-2015
 
-<aside>
-✏️ Il existent trois concepts importants pour cette époque :
-
-- **Créances hypothécaires titrisées (CHT)** : c’est l’intrument financier protagoniste de l’époque. C’est une collection d’hypothèques de plusieurs ménages dans un seul *bundle*, vendu dans le marché par les banques.
-- **Multiplicateur de l’investissement** : c’est un concept affirmant que l’impact d’une unité d’investissement est plus d’une unité sur le revenu agrégée et l’économie en général. Si $PMC$ est la propension marginale à consommer, donc le multiplicateur est $MI=1/(1-PMC)$.
-- **Accélérateur financier** : c’est une cercle vertueux.
-    1. Les prêteurs demandent une capacité de repaiement directe des prêteurs, souvent de la forme des actifs collatéralisés.
-    2. Quand la valeur du collatéral chute, la valeur nette des firmes chute aussi.
-    3. Ceci a un impact négatif sur leur investissement $I$, et donc sur l’activité économique (production) $Y$, et finalement sur la consommation $C$.
-    4. Cet impact sur la consommation (réduction de la demande) réduit encore plus les prix des collatéraux.
-    5. On revient à 2.
-</aside>
+> [!note]
+> Il existent trois concepts importants pour cette époque :
+>
+> - **Créances hypothécaires titrisées (CHT)** : c’est l’intrument financier protagoniste de l’époque. C’est une collection d’hypothèques de plusieurs ménages dans un seul *bundle*, vendu dans le marché par les banques.
+> - **Multiplicateur de l’investissement** : c’est un concept affirmant que l’impact d’une unité d’investissement est plus d’une unité sur le revenu agrégée et l’économie en général. Si $PMC$ est la propension marginale à consommer, donc le multiplicateur est $MI=1/(1-PMC)$.
+> - **Accélérateur financier** : c’est une cercle vertueux.
+> 1. Les prêteurs demandent une capacité de repaiement directe des prêteurs, souvent de la forme des actifs collatéralisés.
+> 2. Quand la valeur du collatéral chute, la valeur nette des firmes chute aussi.
+> 3. Ceci a un impact négatif sur leur investissement $I$, et donc sur l’activité économique (production) $Y$, et finalement sur la consommation $C$.
+> 4. Cet impact sur la consommation (réduction de la demande) réduit encore plus les prix des collatéraux.
+> 5. On revient à 2.
 
 Les causes des la crises financière sont trois :
 

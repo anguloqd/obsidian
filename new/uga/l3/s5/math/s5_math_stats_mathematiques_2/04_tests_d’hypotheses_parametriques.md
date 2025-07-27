@@ -285,33 +285,31 @@ Dans ce cas, la région d’acceptation est de la forme $T<k$ ou $T>k$.
 
 On peut aussi garantir l’existence d’un test UPP dans une autre situation : si la loi mère dont on tire l‘échantillon $f$ est de la **classe exponentielle** et si $\eta(\theta)$ est monotone, donc il existe un test UPP et la région de rejet est $\sum_{i=1}^nT(x_i)<k$ ou $\sum_{i=1}^nT(x_i)>k$. 
 
-<aside>
-💡 La “classe exponentielle” est une famille de fonctions qui peuvent s’exprimer de la forme suivante
-
-$$
-f(x|\theta)=h(x)g(\theta)e^{\eta(\theta)T(x)}\text{ ou } f(x|\theta)=h(x)e^{\eta(\theta)T(x)-A(\eta)}
-$$
-
-La première forme est celle présentée dans le matériel de Michel Lejeune, tant que la deuxième forme est présentée dans la page de Wikipédia. Dans le cas de Wikipédia :
-
-- $T(x)$ est une statistique exhaustive.
-Normalement, cette statistique est juste $x$, l’observation.
-- $h(x)$ est la “mesure de base”, une fonction positive
-Attention ! Ce $h(x)$ ne doit pas avec la fonction puissance d’un test !
-- $\eta(\theta)=T^\prime(x) \ln f(x|\theta)$ est le “paramètre naturel”.
-Sa définition est la dérivée de la fonction génératrice cumulante. qui est une fonction qui capture toutes les propriétés statistiques de la distribution.
-- $A(\theta)$ est le log. du facteur de normalisation.
-    
-    $$
-    A(\eta)=\ln\left( \int_Xh(x)e^{\eta(\theta)T(x)}dx \right)
-    $$
-    
-    - Si jamais on préfère la version avec $g(\theta)$, à savoir que
-    $g(\theta)=e^{-A(\eta)} \iff A(\eta)=-\ln(g(\theta))$.
-
-On pourra voir un liste de plusieurs distributions écrites sous cette forme [ici](https://en.wikipedia.org/wiki/Exponential_family#:~:text=as%20logit.-,Table%20of%20distributions,-%5Bedit%5D).
-
-</aside>
+> [!note]
+> La “classe exponentielle” est une famille de fonctions qui peuvent s’exprimer de la forme suivante
+>
+> $$
+> f(x|\theta)=h(x)g(\theta)e^{\eta(\theta)T(x)}\text{ ou } f(x|\theta)=h(x)e^{\eta(\theta)T(x)-A(\eta)}
+> $$
+>
+> La première forme est celle présentée dans le matériel de Michel Lejeune, tant que la deuxième forme est présentée dans la page de Wikipédia. Dans le cas de Wikipédia :
+>
+> - $T(x)$ est une statistique exhaustive.
+> Normalement, cette statistique est juste $x$, l’observation.
+> - $h(x)$ est la “mesure de base”, une fonction positive
+> Attention ! Ce $h(x)$ ne doit pas avec la fonction puissance d’un test !
+> - $\eta(\theta)=T^\prime(x) \ln f(x|\theta)$ est le “paramètre naturel”.
+> Sa définition est la dérivée de la fonction génératrice cumulante. qui est une fonction qui capture toutes les propriétés statistiques de la distribution.
+> - $A(\theta)$ est le log. du facteur de normalisation.
+>
+> $$
+> A(\eta)=\ln\left( \int_Xh(x)e^{\eta(\theta)T(x)}dx \right)
+> $$
+>
+> - Si jamais on préfère la version avec $g(\theta)$, à savoir que
+> $g(\theta)=e^{-A(\eta)} \iff A(\eta)=-\ln(g(\theta))$.
+>
+> On pourra voir un liste de plusieurs distributions écrites sous cette forme [ici](https://en.wikipedia.org/wiki/Exponential_family#:~:text=as%20logit.-,Table%20of%20distributions,-%5Bedit%5D).
 
 Il faudrait consacrer un moment pour parler du choix de $H_0$ dans ce cas : si on la choisit $\theta \le\theta_0$ ou $\theta\ge\theta_0$. **Généralement, l’erreur qui serait considérée le plus indésirable et problématique serait l’erreur assigné à $\alpha$.** Si on désigne une alarme d’incendie, on voudrait que son erreur de première espèce soit qu’elle ne sonne pas tant qu’il y a du feu, et on laisse l’erreur de deuxième espèce le cas plus courant de sonner quand il n’y a pas du feu.
 
@@ -395,10 +393,8 @@ Ce résultat dont la validité s’étend au-delà de l’échantillonnage aléa
 
 # Test paramétriques usuels
 
-<aside>
-📖 Le tests ci-dessous peuvent se diviser en deux catégories : test où on compare un paramètre contre une valeur numérique de référence, comme “$\mu=2$” ; et des tests où on compare les paramètres de deux échantillons, comme “$p_1 = p_2$”.
-
-</aside>
+> [!note]
+> Le tests ci-dessous peuvent se diviser en deux catégories : test où on compare un paramètre contre une valeur numérique de référence, comme “$\mu=2$” ; et des tests où on compare les paramètres de deux échantillons, comme “$p_1 = p_2$”.
 
 ## Loi normale
 

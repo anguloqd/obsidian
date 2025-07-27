@@ -74,13 +74,12 @@ static class House {
 
 Il peut aider cette questionnaire :
 
-<aside>
-💡 Questionnaire :
-
-1. Le const. par défaut existe ou a été plutôt rédéfini et donc n’existe plus ?
-2. On appelle le const. ? Dans la première ligne ?
-3. On appelle le const. de la classe courante ou de la super-classe ?
-</aside>
+> [!note]
+> Questionnaire :
+>
+> 1. Le const. par défaut existe ou a été plutôt rédéfini et donc n’existe plus ?
+> 2. On appelle le const. ? Dans la première ligne ?
+> 3. On appelle le const. de la classe courante ou de la super-classe ?
 
 #3 : private (méthode) ne peut pas être redéfini dans les sous-classes.
 

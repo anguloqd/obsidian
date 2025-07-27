@@ -100,10 +100,8 @@ Imaginons qu’un jeu se joue deux fois. Disons que A et B collabore la premièr
 
 Ceci finit dans une situation où A et B se trahissent tous le coups du jeu.
 
-<aside>
-📌 Theorème de Selten. Il stipule que si le jeu de base a un équilibre de Nash unique, alors pour un nombre fini de répétitions (T), le jeu répété a un équilibre de Nash parfait en sous-jeu unique, qui est l’équilibre de Nash du jeu de base joué à chaque étape.
-
-</aside>
+> [!note]
+> Theorème de Selten. Il stipule que si le jeu de base a un équilibre de Nash unique, alors pour un nombre fini de répétitions (T), le jeu répété a un équilibre de Nash parfait en sous-jeu unique, qui est l’équilibre de Nash du jeu de base joué à chaque étape.
 
 ### Jeux répétés à horizon infini
 
@@ -125,14 +123,12 @@ $$
 \delta > \frac{\pi^D-\frac{1}{2}\pi^M}{\pi^D-\pi^N}
 $$
 
-<aside>
-📌 **Folk Theorem**. 
-
-1) Supposons qu’un jeu répété à l’infini comporte un ensemble de gains qui dépassent les gains d’équilibre du jeu à un coup pour chaque entreprise.
-
-2) Alors tout ensemble de gains réalisables qui sont préférés par toutes les entreprises à l’équilibre de Nash peut être un équilibre de sous-jeu parfait pour le jeu répété, si le facteur d’escompte est suffisamment près de 1.
-
-</aside>
+> [!note]
+> **Folk Theorem**.
+>
+> 1) Supposons qu’un jeu répété à l’infini comporte un ensemble de gains qui dépassent les gains d’équilibre du jeu à un coup pour chaque entreprise.
+>
+> 2) Alors tout ensemble de gains réalisables qui sont préférés par toutes les entreprises à l’équilibre de Nash peut être un équilibre de sous-jeu parfait pour le jeu répété, si le facteur d’escompte est suffisamment près de 1.
 
 En d’autres termes, toute issue de jeu Pareto améliorante par rapport
 à un équilibre de Nash du jeu non répété est un équilibre possible du

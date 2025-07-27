@@ -231,18 +231,15 @@ Host jetson01
 	IdentityFile ~/.ssh/dangulo_win
 ```
 
-<aside>
-❓
-
-```bash
-# At a given moment I executed this,
-# I think it was to automate
-# the login process, but I'm not sure
-
-ssh-copy-id -i .ssh/dangulo_win dangulo@ws2405
-```
-
-</aside>
+> [!question] ❓
+>
+> ```bash
+> # At a given moment I executed this,
+> # I think it was to automate
+> # the login process, but I'm not sure
+>
+> ssh-copy-id -i .ssh/dangulo_win dangulo@ws2405
+> ```
 
 Then, to automatize `jetson01` login (from `ws2405`, for some reason. maybe works from somewhere else): this takes your password to access jetson01 and crypts it then stores it in the file `.ssh/authorized_keys`.
 

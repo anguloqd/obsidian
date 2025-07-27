@@ -1,13 +1,10 @@
 # Period #1 - Kalray University, All Employees
 
-<aside>
-💡
-
-Une fois un dossier de “All employees” a été lit en entier, le marquer sur ce lien :
-
-[https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1](https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1)
-
-</aside>
+> [!tip] 💡
+>
+> Une fois un dossier de “All employees” a été lit en entier, le marquer sur ce lien :
+>
+> [https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1](https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1)
 
 # Compensation
 

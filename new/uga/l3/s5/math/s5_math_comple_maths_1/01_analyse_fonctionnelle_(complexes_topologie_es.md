@@ -70,32 +70,30 @@ $$
 z=re^{i\theta}
 $$
 
-<aside>
-💡 La preuve de ce théorème vient de l’expansion de Taylor pour $e^x$, $\sin x$ et $\cos x$. Il est aussi nécessaire le fait que le rayon de convergence est infini pour telles séries de Taylor.
-
-$$
-\begin{align*}
-e^{iz}
-&=\frac{(iz)^0}{0!}+\frac{(iz)^1}{1!}+\frac{(iz)^2}{2!}+\frac{(iz)^3}{3!}+\frac{(iz)^4}{4!}+\frac{(iz)^5}{5!}+\frac{(iz)^6}{6!}+\frac{(iz)^7}{7!}+\cdots
-\\[8pt]
-&=\frac{z^0}{0!}+i\frac{z^1}{1!}-\frac{z^2}{2!}-i\frac{z^3}{3!}+\frac{z^4}{4!}+i\frac{z^5}{5!}-\frac{z^6}{6!}-i\frac{z^7}{7!}+\cdots
-\\[8pt]
-&=
-\left(
-\frac{z^0}{0!}-\frac{z^2}{2!}+\frac{z^4}{4!}-\frac{z^6}{6!}+\cdots
-\right)
-+i
-\left(
-\frac{z^1}{1!}-\frac{z^3}{3!}+\frac{z^5}{5!}-\frac{z^7}{7!}+\cdots
-\right)
-\\[10pt]
-&=\cos(z)+i\sin(z)
-\end{align*}
-$$
-
-**Note**. Le réordonnancement est possible car chaque série évoquée est absolument convergente.
-
-</aside>
+> [!note]
+> La preuve de ce théorème vient de l’expansion de Taylor pour $e^x$, $\sin x$ et $\cos x$. Il est aussi nécessaire le fait que le rayon de convergence est infini pour telles séries de Taylor.
+>
+> $$
+> \begin{align*}
+> e^{iz}
+> &=\frac{(iz)^0}{0!}+\frac{(iz)^1}{1!}+\frac{(iz)^2}{2!}+\frac{(iz)^3}{3!}+\frac{(iz)^4}{4!}+\frac{(iz)^5}{5!}+\frac{(iz)^6}{6!}+\frac{(iz)^7}{7!}+\cdots
+> \\[8pt]
+> &=\frac{z^0}{0!}+i\frac{z^1}{1!}-\frac{z^2}{2!}-i\frac{z^3}{3!}+\frac{z^4}{4!}+i\frac{z^5}{5!}-\frac{z^6}{6!}-i\frac{z^7}{7!}+\cdots
+> \\[8pt]
+> &=
+> \left(
+> \frac{z^0}{0!}-\frac{z^2}{2!}+\frac{z^4}{4!}-\frac{z^6}{6!}+\cdots
+> \right)
+> +i
+> \left(
+> \frac{z^1}{1!}-\frac{z^3}{3!}+\frac{z^5}{5!}-\frac{z^7}{7!}+\cdots
+> \right)
+> \\[10pt]
+> &=\cos(z)+i\sin(z)
+> \end{align*}
+> $$
+>
+> **Note**. Le réordonnancement est possible car chaque série évoquée est absolument convergente.
 
 Notons qu’avec la notation exponentielle, on peut définir $\sin$ et $\cos$ comme suit :
 
@@ -420,12 +418,11 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 
 ### Orthonormalisation : procédé de Gram-Schmidt
 
-<aside>
-📖 Théorème. Si $\{v_i\}$ est famille libre, donc il existe une unique $\{e_i\}$ orthonormée telle que :
-
-1. $\{e_i\}$ engendre le même espace que $\{v_i\}$, donc $\text{Vect}(\{e_i\})=\text{Vect}(\{v_i\})$
-2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\lang v_i, e_j \rang > 0, \forall i,j \le n$.
-</aside>
+> [!note]
+> Théorème. Si $\{v_i\}$ est famille libre, donc il existe une unique $\{e_i\}$ orthonormée telle que :
+>
+> 1. $\{e_i\}$ engendre le même espace que $\{v_i\}$, donc $\text{Vect}(\{e_i\})=\text{Vect}(\{v_i\})$
+> 2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\lang v_i, e_j \rang > 0, \forall i,j \le n$.
 
 À partir d’une famille libre de vecteurs $\{v_i\} \in E$, on peut construire une base orthonormée $\{e_i\}$ avec ce procédé de Gram-Schmidt. La logique est la suivante :
 

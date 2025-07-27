@@ -70,10 +70,8 @@ La racine carré de la variance est connue comme l’écart-type, noté comme $\
 
 ## Loi discrète uniforme : $U(a,b)$
 
-<aside>
-⛑️ Aide : la somme des entiers dans l’intervalle $[a,b]$ inclus est $\frac{n(a+b)}{2}$, où $n=(b-a+1)$ est la quantité d’entiers dans l’intervalle.
-
-</aside>
+> [!note]
+> Aide : la somme des entiers dans l’intervalle $[a,b]$ inclus est $\frac{n(a+b)}{2}$, où $n=(b-a+1)$ est la quantité d’entiers dans l’intervalle.
 
 $$
 X\sim U(a,b)\iff\mathbb P(X=x)=\frac{1}{\underbrace{(b-a+1)}_n},\hspace{4pt}\forall x\in[a,b]

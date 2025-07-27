@@ -1,13 +1,11 @@
 # Period #2 - CLI result display
 
-<aside>
-❗
-
-- [x]  Uniformiser les outputs des Object-detection
-- [ ]  Modifier unit_tests.py pour reporter les résultats des obj-det et seg
-- [ ]  Ajouter des critères dans unit_tests pour confirmer dans les deux MPPA et CPU si les labels sont égaux et si la différence de confiance (proba) est suffisamment petite
-- [ ]  Montrer les résultats de Segmentation
-</aside>
+> [!important] ❗
+>
+> - [x]  Uniformiser les outputs des Object-detection
+> - [ ]  Modifier unit_tests.py pour reporter les résultats des obj-det et seg
+> - [ ]  Ajouter des critères dans unit_tests pour confirmer dans les deux MPPA et CPU si les labels sont égaux et si la différence de confiance (proba) est suffisamment petite
+> - [ ]  Montrer les résultats de Segmentation
 
 - [ ]  Object-detection:
     - [x]  efficientdet-d0

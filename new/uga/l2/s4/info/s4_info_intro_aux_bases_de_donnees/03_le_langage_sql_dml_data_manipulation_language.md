@@ -46,12 +46,10 @@ WHERE LOCALITE = 'Toulouse';
 
 ![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_1.png)
 
-<aside>
-🚫 Problème : dans une requête monotable, ils se peuvent afficher autant de lignes qu’il y a des lignes vérifiant la condition, donc possiblement de lignes dupliquées. Pour l’éviter, on utiliser le mot clé `DISTINCT` après `SELECT`.
-
-Si la clause `SELECT` cite tous les composants d’un identifiant de la table, l’unicité des lignes résultats est garantie. Il est donc inutile d’utiliser `DISTINCT`.
-
-</aside>
+> [!note]
+> Problème : dans une requête monotable, ils se peuvent afficher autant de lignes qu’il y a des lignes vérifiant la condition, donc possiblement de lignes dupliquées. Pour l’éviter, on utiliser le mot clé `DISTINCT` après `SELECT`.
+>
+> Si la clause `SELECT` cite tous les composants d’un identifiant de la table, l’unicité des lignes résultats est garantie. Il est donc inutile d’utiliser `DISTINCT`.
 
 ## Conditions élémentaires
 
@@ -331,15 +329,13 @@ Particulièrement, la première requête va donner tous les NCOM qui existent et
 
 Exemple : si la valeur de NCOM ‘1234’ existe dans COMMANDE mais pas dans DETAIL, elle ne sera pas affichée dans la première requête. Ceci ne vas jamais arriver si tous les valeurs de NCOM dans COMMANDE sont mentionnées au moins une fois dans DETAIL.
 
-<aside>
-❗ Prenons ce schéma :
-
-- TA(IA, DA).
-- TB(IB, RA, DB).
-
-Il est à noter que toutes les valeurs de IA sont mentionnées dans TA. Toutes les valeurs de RA existent dans IA. Pas forcément toute valeur de IA existe dans RA.
-
-</aside>
+> [!note]
+> Prenons ce schéma :
+>
+> - TA(IA, DA).
+> - TB(IB, RA, DB).
+>
+> Il est à noter que toutes les valeurs de IA sont mentionnées dans TA. Toutes les valeurs de RA existent dans IA. Pas forcément toute valeur de IA existe dans RA.
 
 Le point à retenir c’est que les conditions de non-association ne sont généralement exprimables que pas des sous-requêtes, ainsi que par la forme `NOT EXISTS`.
 

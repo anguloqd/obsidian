@@ -112,10 +112,8 @@ Par contre, pour les AEFND, il peut avoir une situation où on puisse arriver à
 - Cas AEFD : $\delta : Q \times \Sigma \mapsto Q$
 - Cas AEFND : $\delta : Q \times \Sigma \mapsto \mathcal{P}(Q)$, où $\mathcal{P}(Q)$ est l’ensemble puissance de $Q$.
 
-<aside>
-✏️ Dans ce cours, plutôt que redéfinir $\delta$ comme le fait Wikipedia, on va tout simplement remplacer la fonction de transition avec un ensemble de possibles transitions appelé $R$.
-
-</aside>
+> [!note]
+> Dans ce cours, plutôt que redéfinir $\delta$ comme le fait Wikipedia, on va tout simplement remplacer la fonction de transition avec un ensemble de possibles transitions appelé $R$.
 
 Dans la pratique, la plupart du temps une transition dans le cas AEFND nous mène à un seul état, mais faire cette redéfinition de l’image permet de représenter quand une transition peut nous mener à plus d’un état.
 
@@ -141,10 +139,8 @@ Cas déterministe.
 
 ## Wikipédia : redéfinition de l’acceptation de mots
 
-<aside>
-✏️ Je laisse cette redéfinition car je l’ai trouvé utile, même si elle fais pas partie du cours.
-
-</aside>
+> [!note]
+> Je laisse cette redéfinition car je l’ai trouvé utile, même si elle fais pas partie du cours.
 
 Un mot ou input $w=x_0x_1…x_n$ est accepté par un AEFND $A$ s’il existe une suite d’états $\{r_i\} \in Q$  qui vérifie les trois conditions suivantes :
 

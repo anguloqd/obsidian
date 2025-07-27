@@ -173,11 +173,10 @@ public void parade(Parapentiste[] participants) {
 }
 ```
 
-<aside>
-✅ Il y a deux manières de lancer un message d’erreur intentionnellement (quand on attrape un erreur) :
-
-- Faire un `try-catch`, et mettre un `System.err.println(”le message d’erreur”)`.
-- Faire un `if` avec un `throw new Exception()/OutOfBoundsException()/NullPointerException()/etc` à l’intérieur.
-    - Si c’est une `Exception` qui n’est pas `RuntimeException`, il faut la propager dans la déclaration de méthode : “`void maMethode() throws Exception {…}`”.
-    - Sinon, on peut laisser la déclaration de méthode intouchée.
-</aside>
+> [!note]
+> Il y a deux manières de lancer un message d’erreur intentionnellement (quand on attrape un erreur) :
+>
+> - Faire un `try-catch`, et mettre un `System.err.println(”le message d’erreur”)`.
+> - Faire un `if` avec un `throw new Exception()/OutOfBoundsException()/NullPointerException()/etc` à l’intérieur.
+> - Si c’est une `Exception` qui n’est pas `RuntimeException`, il faut la propager dans la déclaration de méthode : “`void maMethode() throws Exception {…}`”.
+> - Sinon, on peut laisser la déclaration de méthode intouchée.

@@ -59,14 +59,12 @@ $$
 - Un chemin simple ne passe deux fois par un même arc.
 - Un *circuit* est un chemin dont le sommet de départ et d’arrivé sont le même sommet.
 
-<aside>
-❗ Comme conséquence de cette définition, **il existe toujours un chemin de longueur $0$ d’un sommet à lui-même, sans besoin de le connecter à lui-même avec un arc**.
-
-Pour un graphe avec un seule sommet connecté à lui-même, le chemin de longueur plus courte est $0$, càd. de ne pas bouger du sommet. La chemin de ce sommet à lui-même passant par la boucle est de longueur $1$.
-
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_2.png)
-
-</aside>
+> [!note]
+> Comme conséquence de cette définition, **il existe toujours un chemin de longueur $0$ d’un sommet à lui-même, sans besoin de le connecter à lui-même avec un arc**.
+>
+> Pour un graphe avec un seule sommet connecté à lui-même, le chemin de longueur plus courte est $0$, càd. de ne pas bouger du sommet. La chemin de ce sommet à lui-même passant par la boucle est de longueur $1$.
+>
+> ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_2.png)
 
 Notons déjà qu’un chemin de longueur $1$ est tout simplement un arc, qui sont notés dans la matrice d’adjancence. Deux sommets sont *adjacents* s’il sont connectés par un arc. Une propriété intéressante de telle matrice est qu’on peut en déduire les chemins de longueur $n$ générale avec l’opération $M^n$. 
 
@@ -216,19 +214,18 @@ Parmi ces chemins, le chemin minimal est (1) et le maximal est (2).
 
 Avant de commence, le terme “distance” dans le contexte de l’algorithme de Dijkstra est juste la valeur de l’arc qui connecte un sommet avec un autre, et non pas la longueur d’un chemin. On pourrait penser que la valeur d’un arc représente les kilomètres entre les deux sommets.
 
-<aside>
-💻 En reformulant plus simplement :
-
-1. On marque tous les sommets comme non visités.
-2. On donne à tous les sommets une distance provisoire : $0$ au sommet source et $\infin$ aux autres. Aussi, on marque le sommet source comme sommet courant.
-3. Pour tous les voisins non visités du sommet courant :
-    1. On calcule la distance à travers le sommet courant (distance accumulé depuis le sommet source + la distance du passage direct).
-    2. Si cette nouvelle distance est plus courte que la distance provisoire existante, on la remplace et on garde en tête le chemin qui la produit, sinon on garde la précédente.
-4. Quand on ait fini, on marque le sommet courant comme visité.
-5. On vérifie si le sommet destination a été marqué visité.
-    1. Si oui, on arrête, on a fini l’algorithme.
-    2. Sinon, on marque comme sommet courant celui qui n’est pas encore marqué comme visité et qui a la distance provisoire la plus petite. **On répète dès l’étape 3**.
-</aside>
+> [!note]
+> En reformulant plus simplement :
+>
+> 1. On marque tous les sommets comme non visités.
+> 2. On donne à tous les sommets une distance provisoire : $0$ au sommet source et $\infin$ aux autres. Aussi, on marque le sommet source comme sommet courant.
+> 3. Pour tous les voisins non visités du sommet courant :
+> 1. On calcule la distance à travers le sommet courant (distance accumulé depuis le sommet source + la distance du passage direct).
+> 2. Si cette nouvelle distance est plus courte que la distance provisoire existante, on la remplace et on garde en tête le chemin qui la produit, sinon on garde la précédente.
+> 4. Quand on ait fini, on marque le sommet courant comme visité.
+> 5. On vérifie si le sommet destination a été marqué visité.
+> 1. Si oui, on arrête, on a fini l’algorithme.
+> 2. Sinon, on marque comme sommet courant celui qui n’est pas encore marqué comme visité et qui a la distance provisoire la plus petite. **On répète dès l’étape 3**.
 
 **Note** : un axiome courant en mathématiques dit que si on a le chemin le plus court entre un point et un autre, alors, si on prend un point de ce chemin, la suite du chemin est encore le chemin le plus court de ce point vers l’extrémité.
 
@@ -292,10 +289,8 @@ Le but de l’ordonnancement, si on voit les sommets comme des tâches, est de p
 
 La réalisation d’un projet passe par l’exécution de différentes tâches, de durées souvent différentes. Si certaines tâches peuvent être réalisées simultanément, d’autres nécessitent que certaines tâches aient été réalisées antérieurement. Faire l’ordonnancement d’un projet consiste à organiser ce projet en respectant les contraintes d’antériorité des tâches tout en minimisant la durée totale de réalisation.
 
-<aside>
-❗ La méthode MPM (Méthode des potentiels metra) permet l’ordonnancement de projets, c’est la méthode que nous exposerons dans ce cours. Nous aurions pu choisir la méthode PERT, mais elle est plus complexe à mettre en oeuvre.
-
-</aside>
+> [!note]
+> La méthode MPM (Méthode des potentiels metra) permet l’ordonnancement de projets, c’est la méthode que nous exposerons dans ce cours. Nous aurions pu choisir la méthode PERT, mais elle est plus complexe à mettre en oeuvre.
 
 Reprenons le graphe précédente, on l’ajoute un sommet “fin” après $C$ et, à chaque arc, on ajoute un numéro qui représentera les unités de temps pour compléter la tâche et passer à la suivante.
 

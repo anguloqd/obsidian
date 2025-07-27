@@ -31,22 +31,20 @@ Les propriétés qui suivent découlent de la définition de la somme et multipl
 
 ## Quelques extras
 
-<aside>
-1️⃣ **Extra**: la différence entre une tuple et un ensemble.
+> [!note]
+> **Extra**: la différence entre une tuple et un ensemble.
+>
+> - **Répétition**: un tuple peut contenir plusieurs instances du même élément.
+> - Alors la tuple $(1,2,2,3) \ne (1,2,3)$, mais l'ensemble $\{1,2,2,3\} = \{1,2,3\}$.
+> - **Ordre**: Les éléments de tuple sont ordonnés.
+> - Alors la tuple $(1,2,3) \ne (3,2,1)$, mais l'ensemble $\{1,2,3\}$ = $\{3,2,1\}$.
+> - **Finitude**: un tuple a un nombre fini d'éléments, tandis qu'un ensemble ou un multi-ensemble peut avoir un nombre infini d'éléments.
 
-- **Répétition**: un tuple peut contenir plusieurs instances du même élément.
-    - Alors la tuple $(1,2,2,3) \ne (1,2,3)$, mais l'ensemble $\{1,2,2,3\} = \{1,2,3\}$.
-- **Ordre**: Les éléments de tuple sont ordonnés.
-    - Alors la tuple $(1,2,3) \ne (3,2,1)$, mais l'ensemble $\{1,2,3\}$ = $\{3,2,1\}$.
-- **Finitude**: un tuple a un nombre fini d'éléments, tandis qu'un ensemble ou un multi-ensemble peut avoir un nombre infini d'éléments.
-</aside>
-
-<aside>
-2️⃣ **Extra**: sur les structures algébriques...
-
-- Les arguments des opérations doivent être finis.
-- Elles doivent aussi contenir des identités, propriétés et axiomes dérivées des opérations.
-</aside>
+> [!note]
+> **Extra**: sur les structures algébriques...
+>
+> - Les arguments des opérations doivent être finis.
+> - Elles doivent aussi contenir des identités, propriétés et axiomes dérivées des opérations.
 
 # $\R^n$ vu comme un espace vectoriel
 

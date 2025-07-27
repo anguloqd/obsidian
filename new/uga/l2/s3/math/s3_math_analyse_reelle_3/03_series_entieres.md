@@ -112,10 +112,8 @@ En particulier, la série que permet de réécrire $f(x)$ sous forme de série e
 
 ## Développements limités usuels
 
-<aside>
-💡 Mnéumonique TEBG : trigo, exponentiel, binôme et géométrique.
-
-</aside>
+> [!note]
+> Mnéumonique TEBG : trigo, exponentiel, binôme et géométrique.
 
 ## Formule de binôme généralisée
 

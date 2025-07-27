@@ -35,12 +35,10 @@ $$
 
 On peut réarranger cette dernière équation pour obtenir la règle de l’élasticité inverse ou règle de mark-up.
 
-<aside>
-🖊️ *Le prix de marché est un **taux de marge** sur le coût marginal.
-Un monopole augmente son taux de marge à mesure que la demande
-devient faiblement élastique.*
-
-</aside>
+> [!note]
+> *Le prix de marché est un **taux de marge** sur le coût marginal.
+> Un monopole augmente son taux de marge à mesure que la demande
+> devient faiblement élastique.*
 
 $$
 \underbrace{\frac{p-Cm}{p}}_{\text{Taux de marge}}=\underbrace{\frac{1}{|\epsilon|}}_\text{Élasticité inverse}
@@ -232,12 +230,10 @@ Dans le graphique ci-dessous, lorsque le prix du marché est $p^*$, les consomma
 
 ![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_8.png)
 
-<aside>
-💡 Si on était dans une situation de prix limite et on fixe “bêtement” un prix limite tel que $p$ soit toujours dessous de la courbe de couts moyens de l’entrant, cela est plutôt prédation par le prix et non un prix limite. 
-
-Le fait de fixer le prix comme ça pourrait entraîner des pertes, et s’il y a de pertes ce n’est plus un prix limite, car **le prix limite ne peut pas entraîner des pertes**.
-
-</aside>
+> [!note]
+> Si on était dans une situation de prix limite et on fixe “bêtement” un prix limite tel que $p$ soit toujours dessous de la courbe de couts moyens de l’entrant, cela est plutôt prédation par le prix et non un prix limite.
+>
+> Le fait de fixer le prix comme ça pourrait entraîner des pertes, et s’il y a de pertes ce n’est plus un prix limite, car **le prix limite ne peut pas entraîner des pertes**.
 
 ## Limites et crédibilité de ces stratégies
 

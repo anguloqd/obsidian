@@ -341,10 +341,8 @@ Si la firme veut toujours fixer le prix du *bundle* au surplus le plus petit, do
 
 À l’équilibre, les universités veulent acheter $12$ cartouches pour $\$48$ et les collèges veulent $8$ cartouches pour $\$32$. Le but d’offrir le *bundle* est que le consommateurs préfèrent de l’achéter plutôt que d’acheter les cartouches tous seuls. Donc, on veut trouver le prix $p_c^B$ qui mène au consommateur d’acheter le bundle $(\$32, p_c^B)$.
 
-<aside>
-💡 Pourquoi on prend la l’aire du rectangle encadré entre $p_c^*=\$2$ et $p_c^{**}=\$4$ ? Si on remarque dans la réponse en bas, on va offrir $q_c^{**}$ dans le *bundle* mais au prix de marché concurrentiel, $p_c^*=\$2$, et non pas le nouveau prix $p_c^{**}=\$4$. En plus, dans ce cas, on peut discriminer par rapport au prix des cartouches dans le bundle (ce qui n’est pas possible avec le prix de l’imprimante).
-
-</aside>
+> [!note]
+> Pourquoi on prend la l’aire du rectangle encadré entre $p_c^*=\$2$ et $p_c^{**}=\$4$ ? Si on remarque dans la réponse en bas, on va offrir $q_c^{**}$ dans le *bundle* mais au prix de marché concurrentiel, $p_c^*=\$2$, et non pas le nouveau prix $p_c^{**}=\$4$. En plus, dans ce cas, on peut discriminer par rapport au prix des cartouches dans le bundle (ce qui n’est pas possible avec le prix de l’imprimante).
 
 Si on offre aux universités le bundle d’une imprimante à prix $\$32$ avec $12$ cartouches pour $\$24$ en tout, le *bundle* aux universités en total couterait $\$56$. On respecte aussi que le cartouche dans le bundle est moins cher que le cartouche tout seule, car $\$24$ pour $12$ cartouches est moins que $\$48$ pour la même quantité de cartouches mais achetés individuellement.
 

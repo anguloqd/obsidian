@@ -76,10 +76,8 @@ $$
 P_1 = \frac{100}{(1+i_0)}, \space P_2=\frac{100}{(1+i_0)(1+i_1^e)}
 $$
 
-<aside>
-✏️ Notation : maintenant $P_{A,B}$ est le prix dès temps $A$ à temps $B$, et de même avec le taux d’intérêt $i_{A,B}$. Notons que ce qu’on notait avant $P_1$ et $P_2$ peuvent être réécrits comme $P_{0,1}$ et $P_{0,2}$.
-
-</aside>
+> [!note]
+> Notation : maintenant $P_{A,B}$ est le prix dès temps $A$ à temps $B$, et de même avec le taux d’intérêt $i_{A,B}$. Notons que ce qu’on notait avant $P_1$ et $P_2$ peuvent être réécrits comme $P_{0,1}$ et $P_{0,2}$.
 
 Réfléchissons à $P_2$, car on va faire deux investissements en deux périodes. À la fin de la première période, on a la possibilité de vendre l’obligation au lieu d’attendre la maturité. Quel est le prix à ce moment là de l’obligation ? C’est encore le même critère : c’est la valeur “actuelle” (à ce moment-là) du rendement de l’obligation. **On parle d’une estimation**.
 

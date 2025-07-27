@@ -27,10 +27,8 @@ $$
 \hat{\theta}_n=E[\theta_n|X_1=x_1, \dots, X_n=x_n]
 $$
 
-<aside>
-💡 **Note de la variance estimée**. La variance est une moyenne des écarts (au carré). Dans un échantillon de taille $n$, il y a $n-1$ écarts.
-
-</aside>
+> [!note]
+> **Note de la variance estimée**. La variance est une moyenne des écarts (au carré). Dans un échantillon de taille $n$, il y a $n-1$ écarts.
 
 ## Estimation par intervalle de confiance
 
@@ -58,12 +56,10 @@ Note : réellement, le $2$ est remplacé pour un $1.96$.
 
 Si la statistique se retrouve dehors de l’intervalle, on dira qu’on ne peut pas le faire confiance et qu’elle est biaisée.
 
-<aside>
-💡 Par contre, si la statistique est dans l’intervalle, on ne peut pas dire que on peut le faire confiance ! **On dit juste que *rien s’oppose au fait* qu’elle soit équilibrée**.
-
-Une pièce qui montre 58% des fois réalisées des piles se trouve dans l’intervalle de confiance d’une pièce qui montre en moyenne une pile 50% des fois, mais aussi si elle montre des pile 60% des fois (une pièce non-équilibrée quoi) !
-
-</aside>
+> [!note]
+> Par contre, si la statistique est dans l’intervalle, on ne peut pas dire que on peut le faire confiance ! **On dit juste que *rien s’oppose au fait* qu’elle soit équilibrée**.
+>
+> Une pièce qui montre 58% des fois réalisées des piles se trouve dans l’intervalle de confiance d’une pièce qui montre en moyenne une pile 50% des fois, mais aussi si elle montre des pile 60% des fois (une pièce non-équilibrée quoi) !
 
 Notons qu’ici, on utilise les paramètre théoriques ou non pas des estimations ponctuelles comme on la fait dans la section précédente !
 

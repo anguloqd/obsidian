@@ -8,10 +8,8 @@ La Banque Centrale met en œuvre de la monnaie en fonction de deux paramètres :
 
 La Banque Centrale se base sur les prévisions de croissance de la production en volume. Le modèle théorique de référence qui a dominé les actions des Banques Centrales est le **Monétarisme de Friedman** : l’offre de monnaie doit suivre le même rythme que la croissance de la production en volume. C’est un peu comme la politique standard monétaire.
 
-<aside>
-🗺️ Note contextuelle : les États-Unis et la FED ont été plus détachés de Friedman, tant que la BCE a suivi à Friedman religieusement jusqu’à Mario Draghi comme président de la BCE, qui a décidé de plutôt s’en détacher.
-
-</aside>
+> [!note]
+> Note contextuelle : les États-Unis et la FED ont été plus détachés de Friedman, tant que la BCE a suivi à Friedman religieusement jusqu’à Mario Draghi comme président de la BCE, qui a décidé de plutôt s’en détacher.
 
 Tout ces leviers monétaires sont basées sur la théorie quantitative de la monnaie de Friedman : $MV = PY$, où la production $Y$ et la vitesse de la monnaie $V$ sont considérées constantes, donc une augmentation dans $M$ (masse monétaire) se traduit forcément par une augmentation des niveaux de prix $P$ pour garder l’égalité. 
 
@@ -69,9 +67,7 @@ Traditionnellement, le premier poste budgétaire de l’état est occupé par l�
 
 Aussi par tradition, le deuxième poste est la défense. Cela dit, récemment (hors tradition) il se trouve au même niveau les “engagement financiers de l’état” , c’est-à-dire la charge de la dette ou remboursement de la dette publique française. On rembourse une partie du capitale et l’intérêt annuel.
 
-<aside>
-💡 La dette (les capitaux qu’on a emprunté) augmente continûment en termes absolus, il ne semble pas se réduire, mais c’est différent si on le compare avec le PIB. Depuis plusieurs décennies, on augmente la charge de la dette systématiquement. cela crée un effet “boule de neige” sur le paiement d’intérêt.
-
-</aside>
+> [!note]
+> La dette (les capitaux qu’on a emprunté) augmente continûment en termes absolus, il ne semble pas se réduire, mais c’est différent si on le compare avec le PIB. Depuis plusieurs décennies, on augmente la charge de la dette systématiquement. cela crée un effet “boule de neige” sur le paiement d’intérêt.
 
 Après, le troisième poste est l’université, la recherche et l’éducation supérieur.

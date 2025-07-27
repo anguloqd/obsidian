@@ -2,15 +2,11 @@
 
 [INFF5-6.pdf](ressources/06_collections_et_maps_inff5-6.pdf)
 
-<aside>
-⚠️ À connaître par cœur : les méthodes de Lists, ses méthodes héritées de Collection et Iterator et ListIterator. Les iterators sont moins importants.
+> [!note]
+> À connaître par cœur : les méthodes de Lists, ses méthodes héritées de Collection et Iterator et ListIterator. Les iterators sont moins importants.
 
-</aside>
-
-<aside>
-⚠️ Par rapport au dernier TD, il faut determiner quelle type de liste est meilleure à utiliser : LinkedList ou ArrayList.
-
-</aside>
+> [!note]
+> Par rapport au dernier TD, il faut determiner quelle type de liste est meilleure à utiliser : LinkedList ou ArrayList.
 
 # Collections : listes et plus
 

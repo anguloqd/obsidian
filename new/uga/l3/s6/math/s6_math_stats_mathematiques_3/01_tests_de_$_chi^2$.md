@@ -91,19 +91,13 @@ L'interprétation est la suivante :
 
 ## Test du $χ²$ pour l'*ajustement* d'une série à une loi de probabilité
 
-<aside>
-❗
+> [!important] ❗
+>
+> Ce test est plutôt directement expliqué avec un exemple.
 
-Ce test est plutôt directement expliqué avec un exemple.
-
-</aside>
-
-<aside>
-⚠️
-
-Note pratique : On évite d'utiliser le test du $χ²$ si un effectif du tableau est inférieur ou égal à $5$ à cause de l'approximation avec le Théorème Central Limite.
-
-</aside>
+> [!warning] ⚠️
+>
+> Note pratique : On évite d'utiliser le test du $χ²$ si un effectif du tableau est inférieur ou égal à $5$ à cause de l'approximation avec le Théorème Central Limite.
 
 On considère une série de 500 sacs de ciment avec leurs poids. On souhaite tester si cette série suit une loi normale $(m, σ)$ avec :
 

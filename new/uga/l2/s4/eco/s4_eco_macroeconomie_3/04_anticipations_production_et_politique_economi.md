@@ -24,14 +24,12 @@ $$
 \underbrace{\pi_t-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_t-u_n)
 $$
 
-<aside>
-⚠️ Pour simplicité, on évite de spécifier la période $t$ dans l’’inflation et le chômage à chaque moment. On juste considère la période actuelle $t$ ($\pi$) et une période future quelconque, pas forcément $t+1$ ($\pi^e$). Ceci devient donc :
-
-$$
-\underbrace{\pi-\pi^e}_{\Delta\pi}=-\alpha(u-u_n)
-$$
-
-</aside>
+> [!note]
+> Pour simplicité, on évite de spécifier la période $t$ dans l’’inflation et le chômage à chaque moment. On juste considère la période actuelle $t$ ($\pi$) et une période future quelconque, pas forcément $t+1$ ($\pi^e$). Ceci devient donc :
+>
+> $$
+> \underbrace{\pi-\pi^e}_{\Delta\pi}=-\alpha(u-u_n)
+> $$
 
 On rappelle que $\alpha$ est l’impact du chômage $u$ sur les salaires $W$, ou “l’élasticité-chômage des salaires”, et c’est une relation en sens inverse.
 

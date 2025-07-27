@@ -36,12 +36,10 @@ Par exemple, un événement peut être simplement que le dé montre $2$, dans ce
 
 Continuant avec l’exemple, si on suppose un dé non-pipé, donc $\mathbb{P}(X \in \{2\})=\frac{1}{6}$ et $\mathbb{P}(X \text{ pair}) = \mathbb{P}(X \in \{2,4,6\}) = \frac{1}{2}$.
 
-<aside>
-💡 Lorsqu’une expérience est conduite, on imagine que la “nature” “sélectionne” un **résultat** unique $\omega$ de l’univers $\Omega$, supposons $\omega = 2$. Tous les **événements** de $\mathcal{A}$ qui contiennent le **résultat** $\omega$ sont dit *produits*. Par exemple, l’événement “le dé montre $2$” s’est produit, mais l’événement “le dé montre un nombre pair” s’est aussi produit, et de même pour l’événement “le dé montre un nombre premier”, car $2$ est premier.
-
-Cette "sélection" se produit de telle manière que, si l'expérience se répétait plusieurs fois, le nombre d'occurrences de chaque événement comme fraction du nombre total d'expériences conduites tendrait très probablement vers la probabilité attribuée à cet événement par la fonction de probabilités $\mathbb{P}$. Ceci c’est juste la loi des grands nombres.
-
-</aside>
+> [!note]
+> Lorsqu’une expérience est conduite, on imagine que la “nature” “sélectionne” un **résultat** unique $\omega$ de l’univers $\Omega$, supposons $\omega = 2$. Tous les **événements** de $\mathcal{A}$ qui contiennent le **résultat** $\omega$ sont dit *produits*. Par exemple, l’événement “le dé montre $2$” s’est produit, mais l’événement “le dé montre un nombre pair” s’est aussi produit, et de même pour l’événement “le dé montre un nombre premier”, car $2$ est premier.
+>
+> Cette "sélection" se produit de telle manière que, si l'expérience se répétait plusieurs fois, le nombre d'occurrences de chaque événement comme fraction du nombre total d'expériences conduites tendrait très probablement vers la probabilité attribuée à cet événement par la fonction de probabilités $\mathbb{P}$. Ceci c’est juste la loi des grands nombres.
 
 On peut se demander pourquoi ne pas choisir un autre $\mathcal{A}$ différent de $\mathcal{P}(\Omega)$. Pour le cas où $\Omega$ est dénombrable, on peut se contenter toujours faisant cette choix de $\mathcal{A}$.
 
@@ -51,11 +49,9 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 
 ## Propriétés des probabilités
 
-<aside>
-💡 Pour simplicité de notation, on note simplement $\mathbb P(a\in A) = \mathbb P(A)$.
-$a$ est une variable d’intérêt dont on parle souvent, donc ce n’est pas nécessaire de la mentionner tout le temps. $A$ peut être un ensemble ou un intervalle.
-
-</aside>
+> [!note]
+> Pour simplicité de notation, on note simplement $\mathbb P(a\in A) = \mathbb P(A)$.
+> $a$ est une variable d’intérêt dont on parle souvent, donc ce n’est pas nécessaire de la mentionner tout le temps. $A$ peut être un ensemble ou un intervalle.
 
 ### Propriétés basiques
 
@@ -85,10 +81,8 @@ Plusieurs notions en statistique sont définies à partir de la définition de p
 
 À partir de ça, la **statistique paramétrique** est une branche des statistiques qui suppose que les données d'échantillon proviennent d'une population qui peut être modélisée de manière adéquate par une distribution de probabilité qui a un ensemble fixe de paramètres. La plupart des méthodes statistiques connues sont paramétriques.
 
-<aside>
-💡 **Exemple**. Si on suppose que la taille des personnes en France suit une distribution normale (ou une autre distribution connue qui accepte des paramètres), alors un petit ensemble de paramètres peut être mesuré (la moyenne et l’écart-type, dans ce cas) pour décrire exactement cette population.
-
-</aside>
+> [!note]
+> **Exemple**. Si on suppose que la taille des personnes en France suit une distribution normale (ou une autre distribution connue qui accepte des paramètres), alors un petit ensemble de paramètres peut être mesuré (la moyenne et l’écart-type, dans ce cas) pour décrire exactement cette population.
 
 Dans tout problème statistique, on dispose d’une observation $x$ d’un élément aléatoire $X$, qui est une seule variable ou un vecteur (une collection de plusieurs variables). La statistique inférentielle associe cette observation à un modèle statistique ou une structure statistique qui est un **espace probabilisé** $\{\Omega, \mathcal A, \mathbb P\}$ où :
 
@@ -205,10 +199,8 @@ Un exemple de ce dernier théorème est $\bar X_n \rightarrow \mu$ en moyenne qu
 
 Il faut savoir qu’il n’existe pas un seul estimateur sans biais pour un paramètre. Par exemple, les statistiques $X_2$, $2X_3-X_1$ et $\bar X_n$ sont tous des estimateurs sans biais de $\mu$. Donc, quel estimateur choisir ? 
 
-<aside>
-💡 **Le professeur de ce cours insiste sur le fait que, même s’il y a plusieurs estimateurs de la moyenne poblationelle, il est *naturel* de sélectionner la moyenne échantillonnale comme estimation de la moyenne poblationelle**.
-
-</aside>
+> [!note]
+> **Le professeur de ce cours insiste sur le fait que, même s’il y a plusieurs estimateurs de la moyenne poblationelle, il est *naturel* de sélectionner la moyenne échantillonnale comme estimation de la moyenne poblationelle**.
 
 Une manière est de regarder l’erreur moyenne quadratique (ou MSE comme Mean Square Error en anglais) de l’estimateur par rapport à son estimande :
 
@@ -368,12 +360,9 @@ $$
 
 ## Méthodes de construction d’un estimateur
 
-<aside>
-❗
-
-Phrase du prof: la méthode de construction de l’estimateur ne garantit pas sa qualité !
-
-</aside>
+> [!important] ❗
+>
+> Phrase du prof: la méthode de construction de l’estimateur ne garantit pas sa qualité !
 
 ### Méthode des moments
 
@@ -526,11 +515,9 @@ L’estimation par intervalle de confiance consiste a entourer, d’un intervall
 
 ## Intervalle de confiance pour $\mu$, connaissant $\sigma^2$
 
-<aside>
-💡 J’ai joué un peu avec la dist. exponentielle pour construire un intervalle de confiance
-[https://www.desmos.com/calculator/9kkl96qxre?lang=fr](https://www.desmos.com/calculator/9kkl96qxre?lang=fr)
-
-</aside>
+> [!note]
+> J’ai joué un peu avec la dist. exponentielle pour construire un intervalle de confiance
+> [https://www.desmos.com/calculator/9kkl96qxre?lang=fr](https://www.desmos.com/calculator/9kkl96qxre?lang=fr)
 
 Pour lancer cette estimation de $\mu$, on doit établir deux suppositions :
 

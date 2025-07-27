@@ -63,14 +63,12 @@ Notons que les facteurs peuvent être en forme normale, appelé juste forme “n
     - $b_1 = \partial y/\partial \log x_1=\partial y \times x_1/\partial x_1$. **Ceci n’est pas une semi-élasticité ! On dit “l’élasticité sans nom”.**
     - Une augmentation de $1\%$ de $x_1$ cause un augmentation de $b_1/100$ unités.
 
-<aside>
-⚠️ Prenons $y_i = b_0 + b_1 x_{1i} + b_2 x_{1i}^2 + b_3 x_{2i} + u_i$.
-La dérivé partielle sur niveau-niveau est l’effet marginale : $\partial y_i /\partial x_1=b_1+2b_2x_1$
-La dérivé partielle sur log-log est l’élasticité.
-La dérivé partielle sur log-niveau est la semi-élasticité.
-Il se peut qu’on parle juste de “effet $x_1$” qui est juste le coefficient de $x_1$ : $\partial y_i / \partial “x_1” = b_1$. Ce n’est pas l’effet marginale totale de $x_1$. Parfois on veut juste se concentrer sur le coefficient direct isolé.
-
-</aside>
+> [!note]
+> Prenons $y_i = b_0 + b_1 x_{1i} + b_2 x_{1i}^2 + b_3 x_{2i} + u_i$.
+> La dérivé partielle sur niveau-niveau est l’effet marginale : $\partial y_i /\partial x_1=b_1+2b_2x_1$
+> La dérivé partielle sur log-log est l’élasticité.
+> La dérivé partielle sur log-niveau est la semi-élasticité.
+> Il se peut qu’on parle juste de “effet $x_1$” qui est juste le coefficient de $x_1$ : $\partial y_i / \partial “x_1” = b_1$. Ce n’est pas l’effet marginale totale de $x_1$. Parfois on veut juste se concentrer sur le coefficient direct isolé.
 
 La question sur comment choisir la forme fonctionnelle adaptée dépend de la nature de chaque variable, ses graphiques et les statistique de relation entre les variables (covariance, corrélation).
 
@@ -247,10 +245,8 @@ Par la suite, on va supposer les cinq hypothèses ”fondamentales” qui suiven
 Dans ce cas c’est linéaire, donc $y_i = \beta_0+\beta_1x_i+u_i$.
 - $H_5$, non colinéarité: la variable explicative $x_i$ n’est pas constante pour toutes les observations.
 
-<aside>
-⚠️ Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\bold x u] \ne 0$ donc $\text{Cov}(\bold x, u) \ne 0$.
-
-</aside>
+> [!note]
+> Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\bold x u] \ne 0$ donc $\text{Cov}(\bold x, u) \ne 0$.
 
 Sous ces hypothèses, il découle que : 
 

@@ -12,10 +12,8 @@ $$
 
 Dessus, le nombre $Q$ est le quotient et $R$ est le reste, où $0 \le R < B$. Notons qu’ici on parle de la division entière et pas de la division rationnelle.
 
-<aside>
-✏️ À partir d’ici, on note la division euclidienne de $a$ et $b$ comme $a/b$, on ne parle jamais ici de la division rationnelle ou réelle.
-
-</aside>
+> [!note]
+> À partir d’ici, on note la division euclidienne de $a$ et $b$ comme $a/b$, on ne parle jamais ici de la division rationnelle ou réelle.
 
 # Numération en base $b$
 
@@ -223,10 +221,8 @@ $$
 
 ### Propriétés de PGCD et PPCM
 
-<aside>
-✏️ Notation. $a \mid b$ signifie $a$ divise $b$. C’est-à-dire, $\exists a\in \N : \exists k \in \N, a = kb$.
-
-</aside>
+> [!note]
+> Notation. $a \mid b$ signifie $a$ divise $b$. C’est-à-dire, $\exists a\in \N : \exists k \in \N, a = kb$.
 
 - $PGCD(a,b) \times PPCM(a,b)=ab$
 - Les diviseurs communs à deux nombres sont les diviseurs de leur PGCD.
@@ -549,12 +545,11 @@ L’algorithme se divise en trois étapes : génération de clefs, chiffrement e
 
 On choisit deux grands nombres premiers distincts $p$ et $q$, puis on calcule $n=pq$. Il est à noter que, connaissant $n$, il est très difficile de trouver $p$ et $q$. Comme note pratique, $p$ et $q$ doivent être choisis de manière aléatoire et avoir une longueur en bits similaire. Après, on calcule $\varphi(n)=(p-1)(q-1)$.
 
-<aside>
-✏️ $\varphi(n)$ est la fonction indicatrice d’Euler, où elle prend un entier $n$ et retourne les nombres copremiers avec $n$ entre $1$ et $n$ inclus. En plus, elle a deux propriétés utilisées ici :
-
-1. $\varphi(p) = p-1$, pour $p$ premier.
-2. Si $m$ et $n$ sont copremiers, donc $\varphi(mn)=\varphi(m)\varphi(n)$.
-</aside>
+> [!note]
+> $\varphi(n)$ est la fonction indicatrice d’Euler, où elle prend un entier $n$ et retourne les nombres copremiers avec $n$ entre $1$ et $n$ inclus. En plus, elle a deux propriétés utilisées ici :
+>
+> 1. $\varphi(p) = p-1$, pour $p$ premier.
+> 2. Si $m$ et $n$ sont copremiers, donc $\varphi(mn)=\varphi(m)\varphi(n)$.
 
 Ayant $\varphi(n)$, on choisit un entier positif $e < \varphi(n)$ et copremier avec $\varphi(n)$. On utiliser $e$ pour dire “encoding” en anglais. Puis, on définit $d$ (comme “decoding” en anglais) tel que $e \cdot d \equiv 1[\varphi(n)]$, càd. $d$ est l’inverse multiplicative modulaire de $e$ modulo $\varphi(n)$. Cette dernière opération on la fait avec l’algorithme d’Euclide généralisé.
 

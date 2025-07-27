@@ -1,11 +1,8 @@
 # Period #1 - KaNN Training
 
-<aside>
-💡
-
-Here, I want to take notes from the KaNN Training session, KaNN How-To pages from confluence, and my usage of KaNN in general.
-
-</aside>
+> [!tip] 💡
+>
+> Here, I want to take notes from the KaNN Training session, KaNN How-To pages from confluence, and my usage of KaNN in general.
 
 # PPTX
 
@@ -15,12 +12,9 @@ Here, I want to take notes from the KaNN Training session, KaNN How-To pages fro
 
 # Notes from KaNN: How-To
 
-<aside>
-💡
-
-You first install the “kaf” module following the ACE training.
-
-</aside>
+> [!tip] 💡
+>
+> You first install the “kaf” module following the ACE training.
 
 Running a neural network is a 4 step process:
 

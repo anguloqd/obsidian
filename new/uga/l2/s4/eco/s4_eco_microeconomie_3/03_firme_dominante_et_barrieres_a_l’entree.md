@@ -83,15 +83,11 @@ Une demande convexe commence étant inélastique puis élastique, et l’inverse
 
 Un monopole sera plus récitent à augmenter $q$ pour une demande convexe que pour une demande concave (au moins dans leurs parties inélastique et élastique, respectivement).
 
-<aside>
-💡 Note pratique #1 : rappel que élasticité est normalement l’élasticité-prix de la quantité (combien bouge la quantité par rapport au prix). La quantité étant inélastique au prix implique que le prix est élastique à la quantité. De la même manière, quand la quantité est élastique au prix, le prix est inélastique à la quantité.
+> [!note]
+> Note pratique #1 : rappel que élasticité est normalement l’élasticité-prix de la quantité (combien bouge la quantité par rapport au prix). La quantité étant inélastique au prix implique que le prix est élastique à la quantité. De la même manière, quand la quantité est élastique au prix, le prix est inélastique à la quantité.
 
-</aside>
-
-<aside>
-💡 Note pratique #2 : le monopole préfère une demande inélastique, les consommateurs préfèrent une demande élastique.
-
-</aside>
+> [!note]
+> Note pratique #2 : le monopole préfère une demande inélastique, les consommateurs préfèrent une demande élastique.
 
 En plus, rappelons que $q^m=\frac{q^c}{2}$ et $SC^m=\frac{SP^m}{2}$ dans le cas de demande linéaire. Ceci change pour des demandes concaves et convexes (supposons que la demande concave est par dessous de la demande linéaire et la convexe est par dessus, c’est qui mathématiquement ne devrait pas être toujours le cas, donc on fait cette supposition).
 

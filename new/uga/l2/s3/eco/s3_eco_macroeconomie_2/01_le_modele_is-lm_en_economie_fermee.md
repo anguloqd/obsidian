@@ -17,25 +17,23 @@ On ajoute quelques suppositions :
 
 # La construction du modèle
 
-<aside>
-💡 L’un des points les plus importants de ce modèle est interdépendance réel-monétaire.
-Dans les diagrammes de flux en bas, je ne représente pas la variation sur la demande de monnaie $D_M$, mais je passe du change de $Y$ à $i$ directement.
-
-$$
-\Delta i
-\rightarrow
-\Delta I
-\rightarrow
-\Delta Y
-\space\space\space\space
-\text{ et }
-\space\space\space\space
-\Delta Y
-\rightarrow {^*\Delta} {L_1} \rightarrow\Delta i
-
-$$
-
-</aside>
+> [!note]
+> L’un des points les plus importants de ce modèle est interdépendance réel-monétaire.
+> Dans les diagrammes de flux en bas, je ne représente pas la variation sur la demande de monnaie $D_M$, mais je passe du change de $Y$ à $i$ directement.
+>
+> $$
+> \Delta i
+> \rightarrow
+> \Delta I
+> \rightarrow
+> \Delta Y
+> \space\space\space\space
+> \text{ et }
+> \space\space\space\space
+> \Delta Y
+> \rightarrow {^*\Delta} {L_1} \rightarrow\Delta i
+>
+> $$
 
 ## La courbe IS (Investment-Savings)
 
@@ -129,10 +127,8 @@ L’équilibre sur chaque marché dépend de l’équilibre sur l’autre march�
 
 # Les politiques conjoncturelles
 
-<aside>
-💡 Pour toutes les politiques, on assume que l’objectif de l’état est de atteindre le plein emploi, donc faire augmenter $Y$.
-
-</aside>
+> [!note]
+> Pour toutes les politiques, on assume que l’objectif de l’état est de atteindre le plein emploi, donc faire augmenter $Y$.
 
 ## La politique budgétaire
 

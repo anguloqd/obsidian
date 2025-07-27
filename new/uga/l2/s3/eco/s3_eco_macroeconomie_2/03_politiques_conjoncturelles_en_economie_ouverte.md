@@ -6,12 +6,10 @@
 
 La mobilité parfaite des capitaux implique que l’élasticité $k$ tend ver l’infini. Économiquement, ils vont réagir immédiatement vers le taux d’intérêt le plus attractif.
 
-<aside>
-💡 La politique monétaire n’est pas efficace avec un régime de change fixes et efficace en change flexible (grâce à la parité monétaire), peu importe la mobilité de capitaux.
-
-Pour la politique budgétaire, c’est qui est plutôt important c’est le degré de mobilité des capitaux.
-
-</aside>
+> [!note]
+> La politique monétaire n’est pas efficace avec un régime de change fixes et efficace en change flexible (grâce à la parité monétaire), peu importe la mobilité de capitaux.
+>
+> Pour la politique budgétaire, c’est qui est plutôt important c’est le degré de mobilité des capitaux.
 
 **Note pratique**. $G = \text{Dépenses publiques} - \text{Recette fiscale}$. Donc si $G$ positif, il y a déficit.
 

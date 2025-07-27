@@ -79,11 +79,9 @@ Une série $\Sigma u_n$ est à termes positifs si pour tout $n ≥ 0$, $u_n ≥ 
 - La suite $\Sigma u_n$ est forcément croissante (pas confondre avec la suite de base $(u_n)$ !)
 - La série $\Sigma u_n$ converge $\iff$ la suite de base $(u_n)$ est majorée.
 
-<aside>
-💡 La chose qui tombe bien des séries à termes positifs, c’est que pour montre qu’elle converge, on doit seulement démontrer qu’elle est majoré.
-Soit elle et majoré et converge, ou soit elle diverge vers l’infini. **Évidemment, une série à termes positifs est toujours croissante**.
-
-</aside>
+> [!note]
+> La chose qui tombe bien des séries à termes positifs, c’est que pour montre qu’elle converge, on doit seulement démontrer qu’elle est majoré.
+> Soit elle et majoré et converge, ou soit elle diverge vers l’infini. **Évidemment, une série à termes positifs est toujours croissante**.
 
 ## Règle de d’Alembert et Critère de d’Alembert
 

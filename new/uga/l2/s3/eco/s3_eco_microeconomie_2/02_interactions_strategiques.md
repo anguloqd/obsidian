@@ -222,17 +222,13 @@ Le rouge est un équilibre parfait de sous-jeu, tant que le bleu est un équilib
 
 # L’oligopole non coopératif
 
-<aside>
-💡 Une firme dans ce contexte d’oligopole est censée de vouloir toujours maximiser le profit mathématiquement. Les critères de gestion alternative comme la gestion à l’équilibre n’existe plus ici. On est dans le contexte de théorie de jeux.
-
-</aside>
+> [!note]
+> Une firme dans ce contexte d’oligopole est censée de vouloir toujours maximiser le profit mathématiquement. Les critères de gestion alternative comme la gestion à l’équilibre n’existe plus ici. On est dans le contexte de théorie de jeux.
 
 ## Duopole de Cournot (concurrence par la $q$, simultané)
 
-<aside>
-💡 Un exo de Cournot à l’examen prend 10 minutes, maximum 15 minutes.
-
-</aside>
+> [!note]
+> Un exo de Cournot à l’examen prend 10 minutes, maximum 15 minutes.
 
 ### Description et hypothèses du modèle
 

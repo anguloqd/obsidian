@@ -1,10 +1,8 @@
 # 02 // summary : paper #2
 
-<aside>
-📌 Link to the state-of-the-art paper :
-[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/)
-
-</aside>
+> [!note]
+> Link to the state-of-the-art paper :
+> [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/)
 
 # Introduction
 
@@ -275,14 +273,12 @@ $$
 - As with the ROC, the area under a PRC can be computed to compare two algorithms and attempt to optimize CPD performance.
 - The PR curve in particular provides insightful analysis when the class distribution is highly skewed.
 
-<aside>
-⚠️ The previous methods are used in a context of binary classification, i.e. if a point is a change point or not. The idea of “how much a point is a change point” or “how close is a point to be a change point” is not taking in consideration in binary classification.  
-
-If the difference in time between the detected change point (CP) and the actual CP represents the measure of performance (utilizing supervised or unsupervised CPD methods), then the above metrics are not appropriate choices.
-
-Evaluating the performance of these algorithms is not as straightforward as for the previous case, because there is no single label against which the performance of the algorithm can be measured.
-
-</aside>
+> [!note]
+> The previous methods are used in a context of binary classification, i.e. if a point is a change point or not. The idea of “how much a point is a change point” or “how close is a point to be a change point” is not taking in consideration in binary classification.
+>
+> If the difference in time between the detected change point (CP) and the actual CP represents the measure of performance (utilizing supervised or unsupervised CPD methods), then the above metrics are not appropriate choices.
+>
+> Evaluating the performance of these algorithms is not as straightforward as for the previous case, because there is no single label against which the performance of the algorithm can be measured.
 
 However, a number of useful metrics exist for this case. For all algorithms below, let $n$ be both the number of real change points and the number of predicted change points.
 

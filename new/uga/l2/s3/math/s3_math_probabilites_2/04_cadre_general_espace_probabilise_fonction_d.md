@@ -36,12 +36,10 @@ Par exemple, un événement peut être simplement que le dé montre $2$, dans ce
 
 Continuant avec l’exemple, si on suppose un dé non-pipé, donc $\mathbb{P}(X \in \{2\})=\frac{1}{6}$ et $\mathbb{P}(X \text{ pair}) = \mathbb{P}(X \in \{2,4,6\}) = \frac{1}{2}$.
 
-<aside>
-💡 Lorsqu’une expérience est conduite, on imagine que la “nature” “sélectionne” un **résultat** unique $\omega$ de l’univers $\Omega$, supposons $\omega = 2$. Tous les **événements** de $\mathcal{A}$ qui contiennent le **résultat** $\omega$ sont dit *produits*. Par exemple, l’événement “le dé montre $2$” s’est produit, mais l’événement “le dé montre un nombre pair” s’est aussi produit, et de même pour l’événement “le dé montre un nombre premier”, car $2$ est premier.
-
-Cette "sélection" se produit de telle manière que, si l'expérience se répétait plusieurs fois, le nombre d'occurrences de chaque événement comme fraction du nombre total d'expériences conduites tendrait très probablement vers la probabilité attribuée à cet événement par la fonction de probabilités $\mathbb{P}$. Ceci c’est juste la loi des grands nombres.
-
-</aside>
+> [!note]
+> Lorsqu’une expérience est conduite, on imagine que la “nature” “sélectionne” un **résultat** unique $\omega$ de l’univers $\Omega$, supposons $\omega = 2$. Tous les **événements** de $\mathcal{A}$ qui contiennent le **résultat** $\omega$ sont dit *produits*. Par exemple, l’événement “le dé montre $2$” s’est produit, mais l’événement “le dé montre un nombre pair” s’est aussi produit, et de même pour l’événement “le dé montre un nombre premier”, car $2$ est premier.
+>
+> Cette "sélection" se produit de telle manière que, si l'expérience se répétait plusieurs fois, le nombre d'occurrences de chaque événement comme fraction du nombre total d'expériences conduites tendrait très probablement vers la probabilité attribuée à cet événement par la fonction de probabilités $\mathbb{P}$. Ceci c’est juste la loi des grands nombres.
 
 On peut se demander pourquoi ne pas choisir un autre $\mathcal{A}$ différent de $\mathcal{P}(\Omega)$. Pour le cas où $\Omega$ est dénombrable, on peut se contenter toujours faisant cette choix de $\mathcal{A}$.
 
@@ -51,11 +49,9 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 
 ## Propriétés des probabilités
 
-<aside>
-💡 Pour simplicité de notation, on note simplement $\mathbb P(a\in A) = \mathbb P(A)$.
-$a$ est une variable d’intérêt dont on parle souvent, donc ce n’est pas nécessaire de la mentionner tout le temps. $A$ peut être un ensemble ou un intervalle.
-
-</aside>
+> [!note]
+> Pour simplicité de notation, on note simplement $\mathbb P(a\in A) = \mathbb P(A)$.
+> $a$ est une variable d’intérêt dont on parle souvent, donc ce n’est pas nécessaire de la mentionner tout le temps. $A$ peut être un ensemble ou un intervalle.
 
 ### Propriétés basiques
 

@@ -40,14 +40,12 @@
 
 ## Écrire des négatifs comme des positifs : l**a méthode du *complément vrai*, en toutes bases**
 
-<aside>
-🖊️ Le but de cette méthode est de, étant donné une base $b$ et une quantité de chiffres $n$ dans cette base, représenter des entiers entre $[-b^{n-1}, b^{n-1}-1]$ comme un entier positif.
-
-Une autre manière de le voir c’est comme une fonction bijective qui va de l’intervalle $[-b^{n-1},b^{n-1}-1]\mapsto[0,b^n]$  et, puisque c’est bijective, on peut le faire à l’inverse aussi.
-
-Attention : le but de cette méthode est de pouvoir représenter des entiers négatifs avec que des entiers positifs. On ne considère pas encore les réels.
-
-</aside>
+> [!note]
+> Le but de cette méthode est de, étant donné une base $b$ et une quantité de chiffres $n$ dans cette base, représenter des entiers entre $[-b^{n-1}, b^{n-1}-1]$ comme un entier positif.
+> 
+> Une autre manière de le voir c’est comme une fonction bijective qui va de l’intervalle $[-b^{n-1},b^{n-1}-1]\mapsto[0,b^n]$  et, puisque c’est bijective, on peut le faire à l’inverse aussi.
+> 
+> Attention : le but de cette méthode est de pouvoir représenter des entiers négatifs avec que des entiers positifs. On ne considère pas encore les réels.
 
 - D'abord, notons que coder $−7$ sur $8$ bits ne donne pas le même résultat que sur $16$ bits. **La base change la représentation si on considère les négatifs !**
 - On fixe une base et une quantité de chiffres dans la base.

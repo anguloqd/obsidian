@@ -224,16 +224,14 @@ C’est pourquoi les firmes mettent en place des restrictions verticales qui per
 - Solution #3 : quotas de vente
     - Le fabricant impose des quotas de vente aux distributeurs, limitant la quantité de produits qu’ils peuvent vendre. Cela peut empêcher la saturation du marché et maintenir des prix stables, tout en encourageant les distributeurs à se concentrer sur la qualité du service et la satisfaction client plutôt que sur la quantité vendue.
 
-<aside>
-📌 La solution de Blockbuster :
-
-Distributeur de cassettes vidéos dans les états-unis, avant 98’, la pratique de blockbuster c’était de vendre cette cassettes vidéos aux magasins de location en vendant à un prix entre 65 et 70 dollar, en suite le magasin de location décide le prix de location.
-
-Cette cadre n’est pas si éloigné du modèle à double marge. après ‘98, blockbusters décide un nouveau type de contrat : ils propose un tarif fixe de chaque cassette vidéo de seulement 8 dollars et comme prix variable, c’est un partage de revenus entre lui et les magasin de locations entre 40% et 60%. donc, blockbuster passe d’une tarification linéaire à une tarification à prix double. 
-
-Des estimations sur ce nouveau contrat, le prix de location moyen est passé de 4,6 à 4 ; puis une augmentation de quantité de location. Les profits augmentent. On a passé donc d’une situation de double marge à un monopole intégrer.
-
-</aside>
+> [!note]
+> La solution de Blockbuster :
+>
+> Distributeur de cassettes vidéos dans les états-unis, avant 98’, la pratique de blockbuster c’était de vendre cette cassettes vidéos aux magasins de location en vendant à un prix entre 65 et 70 dollar, en suite le magasin de location décide le prix de location.
+>
+> Cette cadre n’est pas si éloigné du modèle à double marge. après ‘98, blockbusters décide un nouveau type de contrat : ils propose un tarif fixe de chaque cassette vidéo de seulement 8 dollars et comme prix variable, c’est un partage de revenus entre lui et les magasin de locations entre 40% et 60%. donc, blockbuster passe d’une tarification linéaire à une tarification à prix double.
+>
+> Des estimations sur ce nouveau contrat, le prix de location moyen est passé de 4,6 à 4 ; puis une augmentation de quantité de location. Les profits augmentent. On a passé donc d’une situation de double marge à un monopole intégrer.
 
 ## Enjeux de concurrence intramarque et intermarques
 
@@ -262,9 +260,7 @@ Exemple de concurrence intermarques
 
 Parce qu’elles affectent les formes de la concurrence entre distributeurs d’une même marque, les contraintes verticales affectent indirectement la concurrence entre distributeurs de produits rivaux et, par suite, en amont la concurrence entre producteurs.
 
-<aside>
-📌 Loi Galland : renforcer la transparence, interdire aux fabricants de discriminer par le prix aux distributeurs, un rabais fait à un distributeur devra se faire à tous le distributeur. Premier problème : si tous les distributeur vont recevoir le même rabais, pas besoin de concurrence intra-distributeur. Deuxième problème : les fabricants se sont dits qu’ils pouvaient augmenter le prix, même ensemble comme un monopole. Résultat : les prix des biens sont augmentés de 30%.
-
-En fait, le fait d’interdire la discrimination par le prix est aussi, de manière cachée, une manière d’interdire l’intégration verticale.
-
-</aside>
+> [!note]
+> Loi Galland : renforcer la transparence, interdire aux fabricants de discriminer par le prix aux distributeurs, un rabais fait à un distributeur devra se faire à tous le distributeur. Premier problème : si tous les distributeur vont recevoir le même rabais, pas besoin de concurrence intra-distributeur. Deuxième problème : les fabricants se sont dits qu’ils pouvaient augmenter le prix, même ensemble comme un monopole. Résultat : les prix des biens sont augmentés de 30%.
+>
+> En fait, le fait d’interdire la discrimination par le prix est aussi, de manière cachée, une manière d’interdire l’intégration verticale.

@@ -77,19 +77,15 @@ $$
 Q(p)=2N\frac{V-p}{t}, \text{ où } V>p>V-\frac{t}{2}
 $$
 
-<aside>
-✏️ Il manque le cas de coûts asymétriques : $c_1 \ne c_2$. J’ai pas du temps moi !
-
-</aside>
+> [!note]
+> Il manque le cas de coûts asymétriques : $c_1 \ne c_2$. J’ai pas du temps moi !
 
 ## Combien de variétés ?
 
-<aside>
-❗ Dans le modèle précédent, on fixer maximiser le profit en fonction de $q$, étant donné que les deux magasins rivaux étaient localisés sur les extrémités de la rue. Ici, on parle d’une seule firme qui possède plusieurs établissement, et elle veut savoir comment les repartir sur la rue **hors extrémités**.
-
-On suppose, de plus, que la firme veut servir à la totalité du marché.
-
-</aside>
+> [!note]
+> Dans le modèle précédent, on fixer maximiser le profit en fonction de $q$, étant donné que les deux magasins rivaux étaient localisés sur les extrémités de la rue. Ici, on parle d’une seule firme qui possède plusieurs établissement, et elle veut savoir comment les repartir sur la rue **hors extrémités**.
+>
+> On suppose, de plus, que la firme veut servir à la totalité du marché.
 
 ![Cas de deux magasins : $n=2$. Les rectangles verts sont les profits de chaque magasin.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/05_differenciation_en_monopole_oligopoles_en_st_untitled_3.png)
 
@@ -135,20 +131,19 @@ On peut aussi déduire le nombre d’établissements $n$ socialement efficace : 
 
 # Cournot et Bertrand avec des biens différenciés
 
-<aside>
-✏️ Bilan :
-
-- La rivalité décroît avec la différenciation des biens
-- Pour des biens homogènes, prix et quantités sont plus importantes à la Cournot qu’à la
-Bertrand
-- En duopole, la solution concurrentielle est atteinte à la Bertrand normalement, supposant des bien homogènes. Cournot est meilleur pour les deux firmes.
-- Le duopole devient naturellement asymétrique pour des firmes dont la variable de choix est distincte (jouer prix vs. quantité, par exemple).
-- Il y a trois conditions pour que jouer en prix soit plus profitable que jouer en quantité :
-    1. Il est plus coûteux de changer les prix plutôt que les quantités
-    2. Les marques sont différenciées verticalement la différenciation est suffisamment grande
-    3. Pour un jeu séquentiel, le suiveur aura la même probabilité de jouer en prix ou en
-    quantité, que le leader ait joué en quantité ou en prix en 1ère période
-</aside>
+> [!note]
+> Bilan :
+>
+> - La rivalité décroît avec la différenciation des biens
+> - Pour des biens homogènes, prix et quantités sont plus importantes à la Cournot qu’à la
+> Bertrand
+> - En duopole, la solution concurrentielle est atteinte à la Bertrand normalement, supposant des bien homogènes. Cournot est meilleur pour les deux firmes.
+> - Le duopole devient naturellement asymétrique pour des firmes dont la variable de choix est distincte (jouer prix vs. quantité, par exemple).
+> - Il y a trois conditions pour que jouer en prix soit plus profitable que jouer en quantité :
+> 1. Il est plus coûteux de changer les prix plutôt que les quantités
+> 2. Les marques sont différenciées verticalement la différenciation est suffisamment grande
+> 3. Pour un jeu séquentiel, le suiveur aura la même probabilité de jouer en prix ou en
+> quantité, que le leader ait joué en quantité ou en prix en 1ère période
 
 ## Cournot
 

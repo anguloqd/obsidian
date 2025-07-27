@@ -4,34 +4,25 @@
 
 ## Exo 2.1
 
-<aside>
-❓
-
-Soit $V$ un vocabulaire fini. Soient $A, B \subseteq V^*$. Quel est le plus petit ensemble $X \subseteq V^*$ tel que $X = A.X \cup B$ ?
-
-</aside>
+> [!question] ❓
+>
+> Soit $V$ un vocabulaire fini. Soient $A, B \subseteq V^*$. Quel est le plus petit ensemble $X \subseteq V^*$ tel que $X = A.X \cup B$ ?
 
 $X = A^*B$, d’après le lemme d’Arden.
 
 ## Exo 2.2
 
-<aside>
-❓
-
-Dessiner le diagramme de Hasse de $P(\{1, 2, 3, 4\})$.
-
-</aside>
+> [!question] ❓
+>
+> Dessiner le diagramme de Hasse de $P(\{1, 2, 3, 4\})$.
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
 ## Exo 2.8
 
-<aside>
-❓
-
-Soit $f : X \rightarrow \{a\}.X.\{b\} \cup \{\epsilon\}$ (pour $X \subseteq \{a, b\}^*$). Que vaut $f^i(\emptyset)$ pour $i \in \mathbb{N}$ ? Que vaut $\bigcup_{i\in\mathbb{N}} f^i (\emptyset)$ ?
-
-</aside>
+> [!question] ❓
+>
+> Soit $f : X \rightarrow \{a\}.X.\{b\} \cup \{\epsilon\}$ (pour $X \subseteq \{a, b\}^*$). Que vaut $f^i(\emptyset)$ pour $i \in \mathbb{N}$ ? Que vaut $\bigcup_{i\in\mathbb{N}} f^i (\emptyset)$ ?
 
 Pour $i = 0$, $f^0(\empty) = \empty$. Pour $i=1, f(\empty) = \{\epsilon\}$. Pour $i=2$, $f^2(\empty) = \{ab\} \cup \{\epsilon\}$. Pour $i = 3$, $f^3(\empty] = \{\epsilon\} \cup \{ab\} \cup \{aabb\}$. 
 
@@ -40,14 +31,11 @@ Deuxième résultat: $\bigcup_{i\in\mathbb{N}} f^i (\emptyset) = \{a^n b^n : n \
 
 ## Exo 2.11 et 2.13
 
-<aside>
-❓
-
-Soit $\mathbb{N}_1 = \mathbb{N} \setminus \{0\}$ et soit $V = \{-, \&, |, >, t, f\} \cup \mathbb{N}_1$.
-
-Définir par plus petit point fixe, l'ensemble des mots de $V^*$ qui correspondent à la notation préfixe d'une formule propositionnelle (cf. syntaxe du TP). On doit trouver un $f$ tel que le langage recherché est $\lim_{h\rightarrow+\infty} f^h(\emptyset)$.
-
-</aside>
+> [!question] ❓
+>
+> Soit $\mathbb{N}_1 = \mathbb{N} \setminus \{0\}$ et soit $V = \{-, \&, |, >, t, f\} \cup \mathbb{N}_1$.
+>
+> Définir par plus petit point fixe, l'ensemble des mots de $V^*$ qui correspondent à la notation préfixe d'une formule propositionnelle (cf. syntaxe du TP). On doit trouver un $f$ tel que le langage recherché est $\lim_{h\rightarrow+\infty} f^h(\emptyset)$.
 
 Définition du problème :
 
@@ -79,12 +67,9 @@ $$
 f(X) = \{t, f\} \cup \mathbb{N}_1 \cup \{-u \mid u \in X\} \cup \{ouv \mid o \in \{\&, |, >\}, u, v \in X\}
 $$
 
-<aside>
-❓
-
-Définir par plus petit point fixe, l'ensemble des mots de $(V \cup \{(, )\})^*$ qui correspondent à la notation **infixe** d'une formule propositionnelle (cf. syntaxe du TP).
-
-</aside>
+> [!question] ❓
+>
+> Définir par plus petit point fixe, l'ensemble des mots de $(V \cup \{(, )\})^*$ qui correspondent à la notation **infixe** d'une formule propositionnelle (cf. syntaxe du TP).
 
 Très pareil à l’exo précédent, mais on change deux choses :
 
@@ -99,23 +84,17 @@ $$
 
 ## Exo 2.14 et 2.15
 
-<aside>
-💡
+> [!tip] 💡
+>
+> **Lemme de commutation**. Pour $k \in \{1, 2\}$, soient $f_k$ applications continues de $P(E_k) \rightarrow P(E_k)$, et $g$ application de $P(E_1) \rightarrow P(E_2)$ telle que $g \circ f_1 = f_2 \circ g$. Si $f_2$ a un unique point-fixe ou si $g$ continue et $g(\emptyset) = \emptyset$, alors :
+>
+> $$
+> g\left(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)\right) = \lim_{i\rightarrow+\infty} f^i_2(\emptyset)
+> $$
 
-**Lemme de commutation**. Pour $k \in \{1, 2\}$, soient $f_k$ applications continues de $P(E_k) \rightarrow P(E_k)$, et $g$ application de $P(E_1) \rightarrow P(E_2)$ telle que $g \circ f_1 = f_2 \circ g$. Si $f_2$ a un unique point-fixe ou si $g$ continue et $g(\emptyset) = \emptyset$, alors :
-
-$$
-g\left(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)\right) = \lim_{i\rightarrow+\infty} f^i_2(\emptyset)
-$$
-
-</aside>
-
-<aside>
-❓
-
-Soient $A, B \subseteq V^*$ et $E_1 = V^*$. Pour $f_1(X) = A.X.B \cup B^*$ et $g(X) = \{\epsilon\}\setminus X$, montrer $g(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)) = \emptyset$.
-
-</aside>
+> [!question] ❓
+>
+> Soient $A, B \subseteq V^*$ et $E_1 = V^*$. Pour $f_1(X) = A.X.B \cup B^*$ et $g(X) = \{\epsilon\}\setminus X$, montrer $g(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)) = \emptyset$.
 
 **Preuve :**
 
@@ -131,12 +110,9 @@ $g(\lim_{i \to +\infty} f^i_1(\emptyset)) = \lim_{i \to +\infty} f^i_2(\emptyset
 
 **Conclusion :** $g(\lim_{i \to +\infty} f^i_1(\emptyset)) = \emptyset.$
 
-<aside>
-❓
-
-Soient $f_1(X) = A.X \cup \{\epsilon\}$ et $f_2(Y) = A.Y \cup B$. Par définition $A^* = \lim_{i\rightarrow+\infty} f^i_1(\emptyset)$. En appliquant le lemme de commutation, redémontrer $A^*.B = \lim_{i\rightarrow+\infty} f^i_2(\emptyset)$ (lemme d'Arden).
-
-</aside>
+> [!question] ❓
+>
+> Soient $f_1(X) = A.X \cup \{\epsilon\}$ et $f_2(Y) = A.Y \cup B$. Par définition $A^* = \lim_{i\rightarrow+\infty} f^i_1(\emptyset)$. En appliquant le lemme de commutation, redémontrer $A^*.B = \lim_{i\rightarrow+\infty} f^i_2(\emptyset)$ (lemme d'Arden).
 
 **Preuve :**
 
@@ -160,15 +136,12 @@ En appliquant le lemme de commutation, on a redémontré que $A^*.B = \lim_{i \t
 
 ## Exo 2.16
 
-<aside>
-❓
-
-Soit le système suivant sur $\{a, b\}^* \times \{a, b\}^*$ :
-$X_1 = \{b\} \cup X_2.X_2$
-$X_2 = \{a\}.X_1$
-Calculer $f^4(\emptyset, \emptyset)$
-
-</aside>
+> [!question] ❓
+>
+> Soit le système suivant sur $\{a, b\}^* \times \{a, b\}^*$ :
+> $X_1 = \{b\} \cup X_2.X_2$
+> $X_2 = \{a\}.X_1$
+> Calculer $f^4(\emptyset, \emptyset)$
 
 **Définition de** $f$ **:**
 La fonction $f$ agit sur des couples $(X_1, X_2)$, et est définie comme : $f(X_1, X_2) = \left( \{b\} \cup X_2.X_2, \{a\}.X_1 \right)$.
@@ -220,12 +193,9 @@ $f^4(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab, aabab\} \right)$
 
 ## Exo 2.17
 
-<aside>
-❓
-
-Montrer que les langages définis dans le TP (`Prop`, `Nnf` en notations préfixes ou infixes) sont algébriques.
-
-</aside>
+> [!question] ❓
+>
+> Montrer que les langages définis dans le TP (`Prop`, `Nnf` en notations préfixes ou infixes) sont algébriques.
 
 $\bold{Prop}$ est un ensemble défini de manière récursive. Avant de parler de Prop, on définit une function telle que $\lim f^n(\empty) = \bold{Prop}$. On peut déjà utiliser la fonction de l’exo 2.13
 
@@ -255,12 +225,9 @@ $$
 
 ## Exo 2.18
 
-<aside>
-❓
-
-Pour $V = \{a, b, c\}$, donner une BNF pour chacun des langages suivants.
-
-</aside>
+> [!question] ❓
+>
+> Pour $V = \{a, b, c\}$, donner une BNF pour chacun des langages suivants.
 
 1. $\{a^nb^n | n \in \mathbb{N}\} \to$  `L ::= a L b | ε`
 2. $\{a^nb^p | n \geq p \geq 0\} \to$ 
@@ -291,12 +258,9 @@ On utilise une fonction de substitution $\sigma$ sur la première réponse.
 
 ## Exo 2.19
 
-<aside>
-❓
-
-Donner une BNF sur $\{0, 1\}$ qui définit le langage des mots ayant un nombre pair de 0 et un nombre impair de 1.
-
-</aside>
+> [!question] ❓
+>
+> Donner une BNF sur $\{0, 1\}$ qui définit le langage des mots ayant un nombre pair de 0 et un nombre impair de 1.
 
 Le flow à suivre dans cette exercise est de savoir qu’on peut partir d’un automate fini, puis créer un système d’équations régulières, finalement en déduisant l’expression régulière qui est facilement transformable en BNF. Le dernier automate est le produit des deux premiers.
 
@@ -306,12 +270,9 @@ Le flow à suivre dans cette exercise est de savoir qu’on peut partir d’un a
 
 ## Exo 2.20
 
-<aside>
-❓
-
-Montrer que tout langage régulier peut être défini par une BNF. Réciproquement, à quelles conditions (suffisantes) une BNF définit-elle un langage régulier ?
-
-</aside>
+> [!question] ❓
+>
+> Montrer que tout langage régulier peut être défini par une BNF. Réciproquement, à quelles conditions (suffisantes) une BNF définit-elle un langage régulier ?
 
 Soir L un langage défini par une BNF. L est régulier si:
 

@@ -178,10 +178,8 @@ Une relation est en deuxième forme normale ssi. :
 - Elle est un première forme normale
 - Tout attribut non clé est determiné par *toute* la clé et ne pas seulement une partie d’elle.
 
-<aside>
-💡 **Note pratique**. Si une table a une une clé simple (càd. d’un seul attribut), elle est automatiquement en 2ème forme normale. Le problème arrive quand dans une seule table il y a une clé composée de deux ou plus attributs.
-
-</aside>
+> [!note]
+> **Note pratique**. Si une table a une une clé simple (càd. d’un seul attribut), elle est automatiquement en 2ème forme normale. Le problème arrive quand dans une seule table il y a une clé composée de deux ou plus attributs.
 
 **Exemple**. Imaginons une table PILOT (ID, NOM, LICENCE, DATE_OBTENTION).
 

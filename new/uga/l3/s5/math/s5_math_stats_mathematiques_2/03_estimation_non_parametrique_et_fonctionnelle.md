@@ -31,10 +31,8 @@ $$
 
 La première relation reflétant un biais nul et la deuxième montrant directement la convergence en moyenne quadratique. En conclusion, nous utiliserons naturellement la moyenne empirique pour estimer la moyenne de la loi, nous satisfaisant de ces propriétés.
 
-<aside>
-💡 Il n’est pas possible de dire si tel est le meilleur choix possible, sauf à imposer des conditions restrictives sur la nature de la loi mère, ce qui n’est pas dans l’esprit de l’estimation non paramétrique.
-
-</aside>
+> [!note]
+> Il n’est pas possible de dire si tel est le meilleur choix possible, sauf à imposer des conditions restrictives sur la nature de la loi mère, ce qui n’est pas dans l’esprit de l’estimation non paramétrique.
 
 En plus, et aussi grâce à $n\ge 30$ (pour TCL) et la convergence de $S^2$ vers $\sigma^2$, pour n'importe quelle loi des $X_i$, on a que
 
@@ -70,15 +68,13 @@ Par contre, dans cette section, on a présumé qu’on ne connaît absolument pa
 
 Ok, on laisse tomber telle statistique de $\frac{(n-1)S^{2^\prime}}{\sigma^2}$. Ceci dit, on peut dire que $S^{2^\prime}$ tout courte suit elle-même une loi gaussienne. Ici, on devrait faire une petite note :
 
-<aside>
-💡 Comme pour la loi des grands nombres il existe différentes versions du TCL partant de conditions plus ou moins restrictives.
-
-En particulier, il n’est pas nécessaire que les VA soient de même loi ni même qu’elles soient indépendantes dans la mesure ou leur degré de dépendance reste faible. Ceci explique que certains phénomènes naturels répondent bien a un
-modèle gaussien du fait que la variable étudiée résulte de l’addition d’effets aléatoires multiples.
-
-Ainsi, on peut établir un comportement asymptotique gaussien pour d’autres types de statistiques dans la mesure ou elles sont des moyennes de VA qui, sans être nécessairement indépendantes pour $n$ fini, tendent à être iid. quand $n → ∞$.
-
-</aside>
+> [!note]
+> Comme pour la loi des grands nombres il existe différentes versions du TCL partant de conditions plus ou moins restrictives.
+>
+> En particulier, il n’est pas nécessaire que les VA soient de même loi ni même qu’elles soient indépendantes dans la mesure ou leur degré de dépendance reste faible. Ceci explique que certains phénomènes naturels répondent bien a un
+> modèle gaussien du fait que la variable étudiée résulte de l’addition d’effets aléatoires multiples.
+>
+> Ainsi, on peut établir un comportement asymptotique gaussien pour d’autres types de statistiques dans la mesure ou elles sont des moyennes de VA qui, sans être nécessairement indépendantes pour $n$ fini, tendent à être iid. quand $n → ∞$.
 
 Ceci est le cas pour $S^{2^\prime}$ : les élément $(X_i-\bar X)$  (et donc leur carrés) tendent à devenir indépendants du fait que $\bar X$ converge vers $\mu$. Il est toutefois nécessaire que $\text{Var}(S^{2^\prime})$ existe, mais ceci est garanti si $\mu_4=\mathbb E [X^4]$ existe aussi, qui est le raccourci qu’on utilise le plus souvent.
 
@@ -235,14 +231,12 @@ $$
 
 ### → L’intérêt de cette méthode
 
-<aside>
-💡 La proposition importante c’est que, si le biais de $\hat\theta$ est de la forme $\frac c n$, où $c$ constante, **alors l’estimateur jackknife $\hat\theta^*$ est sans biais**. Si le biais contient au moins un terme $\frac c n$, donc $\hat\theta^*$ réduira le biais en $\frac c n$. La preuve est la proposition 8.2 du livre de Michel Lejeune, page 178.
-
-Le résultat du jackknife sur un estimateur est un autre estimateur avec un biais plus baisse. De faire du jackknife sur la variance non corrigée nous retourne la variance corrigée, par exemple.
-
-Pour un estimateur sans biais comme $\bar X$, de faire du jackknife sur $\bar X$ nous retourne l’estimateur lui-même.
-
-</aside>
+> [!note]
+> La proposition importante c’est que, si le biais de $\hat\theta$ est de la forme $\frac c n$, où $c$ constante, **alors l’estimateur jackknife $\hat\theta^*$ est sans biais**. Si le biais contient au moins un terme $\frac c n$, donc $\hat\theta^*$ réduira le biais en $\frac c n$. La preuve est la proposition 8.2 du livre de Michel Lejeune, page 178.
+>
+> Le résultat du jackknife sur un estimateur est un autre estimateur avec un biais plus baisse. De faire du jackknife sur la variance non corrigée nous retourne la variance corrigée, par exemple.
+>
+> Pour un estimateur sans biais comme $\bar X$, de faire du jackknife sur $\bar X$ nous retourne l’estimateur lui-même.
 
 En général, la loi étant totalement inconnue, on ne connaît pas la forme du biais, mais on s’attend à ce qu’il soit de toute façon réduit par la procédure décrite.
 

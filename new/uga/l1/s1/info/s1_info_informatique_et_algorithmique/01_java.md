@@ -86,7 +86,7 @@ if (condition1) {
 }
 ```
 
-### (*) `switch`, `break` et `default`
+### (\*) `switch`, `break` et `default`
 
 Le mot clef `switch` rends plus simple l’écriture et lecture des opérations qui auraient besoins d’`if` imbriqués.
 Optionnellement, il y a deux autres mots clefs qui vont avec `switch`:
@@ -149,7 +149,7 @@ for (type nomVariable : nomListe) {
 }
 ```
 
-### (*) `break` et `continue` dans les loops
+### (\*) `break` et `continue` dans les loops
 
 C’est possible aussi d’utiliser `break` et `continue` dans les loops. `continue` arrêt l’exécution d’un bloc de code et passe à la suivante itération. `break` arrête le loop complètement et en sort. On peut les utiliser avec les deux `while` et `for`.
 
@@ -203,7 +203,7 @@ Il est aussi possible de définir une méthode et de l’utiliser dans la défin
 - `Math.sqrt(x)` : retourne la racine carrée de x. Elle a un paramètre de type double. Comme il n’y a pas de perte d’information à transformer un int, un short, etc. en double, il n’est pas nécessaire d’utiliser un cast si le paramètre est entier ou float, la conversion se faisant automatiquement par Java.
 - `Math.pow(x,y)` : retourne x^y . Attention à l’ordre des paramètres.
 
-### (*) Surcharge de méthodes
+### (\*) Surcharge de méthodes
 
 Il est possible de définir deux méthodes avec le même nom. Normalement, c’est fait quand les deux méthodes font des actions similaires, est c’est plus convenant de les avoir sous un même nom.
 
@@ -244,9 +244,9 @@ public static void main(String[] args) {
 
 Notons que Java peut faire la différence entre les deux fonctions à partir des types des variables. 
 
-### (*) Rang des variables
+### (\*) Portée des variables
 
-Quand une variable est définie, sa valeur est accessible **seulement dans la région ou elle à été définie**. Cette région est appelée le rang de la variable, et elle est marquée par l’aire entre deux accolades `{}`.
+Quand une variable est définie, sa valeur est accessible **seulement dans la région ou elle à été définie**. Cette région est appelée la portée de la variable, et elle est marquée par l’aire entre deux accolades `{}`.
 
 ```java
 public class Main {
@@ -276,7 +276,7 @@ public class Main {
 
 Un bloc de code (avec `{}`) peut exister par si seul ou accompagné des mots clés comme `if`, `while` et `for`. Dans le cas de `for`, les variables dans les parenthèses du `for` font aussi partie de code, même s’ils sont avant de l’ouverture des accolades.
 
-### (*) Définition récursive d’une méthode
+### (\*) Définition récursive d’une méthode
 
 Une méthode définie par récursion est une fonction qui s’appelle elle même dans sa définition. Une définition par récursion a besoin de deux éléments:
 
@@ -318,11 +318,11 @@ public class Main {
 // finalement, sum(3) = 7.
 ```
 
-## (*) Les classes
+## (\*) Les classes
 
 ![Un *objet* est une collection de de données et operations.](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled.png)
 
-Un *objet* est une collection de de données et opérations.
+Un *objet* est une collection de données et opérations.
 
 Java est un langage de programmation orientée objet (POO). Dans ce type de langage, tout est vu comme un objet. Un objet est juste une collection de données et procédures, connues comme attributs (ou variables ou *fields*) et méthodes.
 
@@ -672,44 +672,3 @@ Si l’on veut ajouter les éléments à la fin d’un fichier existant, et non 
 ```java
 f = new BufferedWriter(new FileWriter ("<nom fichier>", true));
 ```
-
-# (*) Préparer Sublime Text pour écrire Java
-
-## JRE, JDK et JVM
-
-![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled_4.png)
-
-[https://www.javatpoint.com/difference-between-jdk-jre-and-jvm](https://www.javatpoint.com/difference-between-jdk-jre-and-jvm)
-
-## Compilation et exécution (”building”)
-
-- Compilation : c’est un sous-procès de l’exécution. Il s’agit de transformer le code source en code objet, traduire le code Java (lisible par l'homme) en bytecode, afin que la machine virtuelle le comprenne. Dans le contexte Java, c’est transformer les fichiers .java en fichiers .class.
-- Liaison (”linking”) : l'acte de combiner du code objet avec des bibliothèques dans un exécutable brut. De nombreux compilateurs, dont Java, gèrent automatiquement l'étape de **liaison après la compilation du code source.**
-- Exécution : la séquence composée de la **compilation** et de la **liaison**, avec éventuellement d'autres tâches telles que la création de l'installateur.
-
-## Java dans Sublime Text
-
-- En premier, on a besoin de créer un nouveau système d’exécution “RunJava”.
-Tools → Build System → New Build System…
-Il aura un nouveau onglet qui s’ouvrira. On va écrire le code suivant  et garder le fichier sous le nom “RunJava.sublime_build”.
-[https://www.sublimetext.com/docs/build_systems.html](https://www.sublimetext.com/docs/build_systems.html)
-    
-    ```java
-    {
-    "target": "terminus_exec",
-    "cancel": "terminus_cancel_build",
-    "shell_cmd": "javac $file && java $file_base_name",
-    "working_dir": "$file_path"
-    "file_regex": "^(...*?):([0-9]*):?([0-9]*)"
-    }
-    ```
-    
-- Après, on installe les paquets Javatar et Terminus. Le dernier permet de faire inputs.
-L’installateur s’ouvre avec Ctrl + Shift + P → “Package Controll: Install…”.
-[https://javatar.readthedocs.io/en/latest/installation.html](https://javatar.readthedocs.io/en/latest/installation.html)
-[https://forum.sublimetext.com/t/how-to-have-input-java/47826/9](https://forum.sublimetext.com/t/how-to-have-input-java/47826/9)
-- J’avais un erreur chaque fois que j’essayais de run un script Java.
-”Error: Could not find or load main class”. C’était un erreur avec javac.
-**Il faut installer JDK (pas confondre avec JRE !)**, puis réparer le path and %JAVA_HOME% avec le tutoriel YouTube suivant.
-
-[https://www.youtube.com/watch?v=104dNWmM6Rs&list=PLE9K8gXMCpUG5C1JarMA7p9cDcWtvi-0b&index=9](https://www.youtube.com/watch?v=104dNWmM6Rs&list=PLE9K8gXMCpUG5C1JarMA7p9cDcWtvi-0b&index=9)

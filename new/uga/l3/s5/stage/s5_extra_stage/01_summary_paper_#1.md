@@ -2,10 +2,8 @@
 
 # Introduction
 
-<aside>
-📌 Link to the paper : [https://www-sciencedirect-com.sid2nomade-1.grenet.fr/science/article/pii/S0034425722003285](https://www-sciencedirect-com.sid2nomade-1.grenet.fr/science/article/pii/S0034425722003285)
-
-</aside>
+> [!note]
+> Link to the paper : [https://www-sciencedirect-com.sid2nomade-1.grenet.fr/science/article/pii/S0034425722003285](https://www-sciencedirect-com.sid2nomade-1.grenet.fr/science/article/pii/S0034425722003285)
 
 ## A dictionary of frequently used terms
 

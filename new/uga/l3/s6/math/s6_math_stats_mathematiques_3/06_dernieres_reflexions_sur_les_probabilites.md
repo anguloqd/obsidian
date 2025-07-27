@@ -2,12 +2,9 @@
 
 [slides Synthèse tests annote.pdf](ressources/06_dernieres_reflexions_sur_les_probabilites_slides_synthse_tests_annote.pdf)
 
-<aside>
-❗
-
-Cet exposé suit les lignes de la thèse de doctorat de Jacques POITEVINEAU, *Méthodologie de l'analyse des données expérimentales : Étude de la pratique des tests statistiques chez les chercheurs en psychologie, approches normative, prescriptive et descriptive*, soutenue le 11 mars 1998.
-
-</aside>
+> [!important] ❗
+>
+> Cet exposé suit les lignes de la thèse de doctorat de Jacques POITEVINEAU, *Méthodologie de l'analyse des données expérimentales : Étude de la pratique des tests statistiques chez les chercheurs en psychologie, approches normative, prescriptive et descriptive*, soutenue le 11 mars 1998.
 
 # Les grandes interprétations de la probabilité
 

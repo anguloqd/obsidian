@@ -219,10 +219,8 @@ Celle-ci est la solution finale. La manière d’y arriver est décrite dessous.
 
 ### Rappel et explication du terme “contexte”
 
-<aside>
-💭 **Rappel**. Dans une grammaire hors-contexte (GHC), la partie gauche d'une règle de grammaire est un non-terminal et la partie droite peut consister en tout nombre de terminaux ou non-terminaux, dans n'importe quel ordre.
-
-</aside>
+> [!note]
+> **Rappel**. Dans une grammaire hors-contexte (GHC), la partie gauche d'une règle de grammaire est un non-terminal et la partie droite peut consister en tout nombre de terminaux ou non-terminaux, dans n'importe quel ordre.
 
 Les GHC sont appelées *hors-contexte* parce que leurs règles de réécriture peuvent être appliquées sans rapport avec le contexte dans lequel elles apparaissent.
 

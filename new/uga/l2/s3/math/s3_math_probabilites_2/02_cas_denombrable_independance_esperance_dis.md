@@ -42,23 +42,21 @@ $$
 
 On peut penser à $\Omega_1$ et $\Omega_2$ comme l’univers “local” de la pièce et du dé, respectivement. C’est à dire, l’ensemble des résultats qu’on aurait si on jouais *seulement* avec une pièce ou un dé, respectivement.
 
-<aside>
-⚠️ Notons que l’expérience est *le jeu conjoint de la pièce et du dé*. C’est n’est pas le jeu *seul* de la pièce ou du dé. Donc, **chaque résultat dans $\Omega$ nécessite que toute variable aléatoire prenne une valeur**.
-
-Après, si on voudrait considérer seulement le résultat d’une seule variable aléatoire (disons, la pièce montre pile) ignorant l’autre, ou pourrait écrire :
-
-$$
-\text{Manière incorrecte : } S = \{X_1 =0\}
-\newline
-\text{}
-\newline
-\text{Manière correcte : }S = \{X_1 =0\}\hspace{6pt} \times \underbrace{\{X_2 = x,\hspace{4pt}x \in \Omega_2\}}_{\text{"peu importe la valeur du dé"}}
-
-$$
-
-De cette manière, on considère le résultat du l’univers local $\Omega_1$ lié à la pièce $X_1$ quand elle montre une pile.
-
-</aside>
+> [!note]
+> Notons que l’expérience est *le jeu conjoint de la pièce et du dé*. C’est n’est pas le jeu *seul* de la pièce ou du dé. Donc, **chaque résultat dans $\Omega$ nécessite que toute variable aléatoire prenne une valeur**.
+>
+> Après, si on voudrait considérer seulement le résultat d’une seule variable aléatoire (disons, la pièce montre pile) ignorant l’autre, ou pourrait écrire :
+>
+> $$
+> \text{Manière incorrecte : } S = \{X_1 =0\}
+> \newline
+> \text{}
+> \newline
+> \text{Manière correcte : }S = \{X_1 =0\}\hspace{6pt} \times \underbrace{\{X_2 = x,\hspace{4pt}x \in \Omega_2\}}_{\text{"peu importe la valeur du dé"}}
+>
+> $$
+>
+> De cette manière, on considère le résultat du l’univers local $\Omega_1$ lié à la pièce $X_1$ quand elle montre une pile.
 
 Formellement, l’indépendance entre une famille de V.A est vérifiée si et seulement si :
 

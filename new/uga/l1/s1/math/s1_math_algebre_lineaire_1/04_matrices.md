@@ -4,25 +4,20 @@
 
 ## Addition de matrices
 
-<aside>
-🤷‍♂️ En vrai, je connaissais déjà que c’est la somme entrée par entrée entre deux matrices.
-
-</aside>
+> [!note]
+> En vrai, je connaissais déjà que c’est la somme entrée par entrée entre deux matrices. 🤷‍♂️
 
 ## Multiplication de matrices
 
-<aside>
-🤷‍♂️ Pareil, je savais déjà que le produit entre deux matrices est le produit matriciel ou produit *point* de chaque ligne de la matrice gauche avec chaque colonne de la matrice droite.
+> [!note]
+> Pareil, je savais déjà que le produit entre deux matrices est le produit matriciel ou produit *point* de chaque ligne de la matrice gauche avec chaque colonne de la matrice droite. 🤷‍♂️
 
-</aside>
-
-<aside>
-💡 Pièges communes :
-
-- Le produit n'est pas commutatif en général. Juste avec une matrice et son inverse, et aussi une matrice et l'identité.
-- $AB = 0$ n'implique pas $A = 0$ ou $B = 0$.
-- $AB = AB$ n'implique pas $B = C$. On peut avoir $AB = AC$ et $B \ne C$.
-</aside>
+> [!note]
+> Pièges communes :
+>
+> - Le produit n'est pas commutatif en général. Juste avec une matrice et son inverse, et aussi une matrice et l'identité.
+> - $AB = 0$ n'implique pas $A = 0$ ou $B = 0$.
+> - $AB = AB$ n'implique pas $B = C$. On peut avoir $AB = AC$ et $B \ne C$.
 
 Propriétés :
 

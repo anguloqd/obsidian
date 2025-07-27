@@ -5,32 +5,31 @@
 > Graduel joue “coopération” toujours au premier coup. Après, il continue à joue “coopération” jusqu’à ce qu’il est trahi pour la $n$-ième fois, dans ce cas il punira avec $n$ “trahisons” consécutives, puis il se relâchera avec deux coopérations consécutives inconditionnelles. Le nombre de trahisons dans les punissions augmente “graduellement”, d’où son nom.
 > 
 
-<aside>
-💻 L’algorithme de graduel se décrit en trois états : normal, punir et relax. En état normal, graduelle attend une trahison pour punir, sinon il continue à coopérer. En état punir, il commence un suite consécutive de trahisons ($n$ trahisons s’il a été trahi pour la $n$-ième fois). En état relax, il “pardonne” a son adversaire avec deux coopérations consécutives, puis il revient en état normal.
-
-$\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space \text{Algorithme : graduel}
-\\
-\text{}
-\\$
-
-1. Je suis au premier coup ?
-Oui → coopération, rentre état normal
-2. Je suis en état “normal” ? Oui →
-    1. Lors du dernier coup, l’adversaire a coopéré ?
-    Oui → coopération, garde état “normal”
-    2. Lors du dernier coup, l’adversaire a trahi ?
-    Oui → trahison, rentre état “punir”
-3. Je suis en état “punir” ? Oui →
-    1. Il manque plus d’une trahison à faire ?
-    Oui → trahison, garde l’état “punir”
-    2. Il ne manque qu’une trahison à faire ?
-    Oui → trahison, rentre en état “relax”
-4. Je suis en état “relax” ? Oui →
-    1. Je n’ai pas coopéré le coup précédant ?
-    Oui → coopération, garde l’état “relax”
-    2. J’ai relâché (cooperé) aussi le coup précédant ?
-    Oui → coopération, rentre en état “normal”
-</aside>
+> [!note]
+> L’algorithme de graduel se décrit en trois états : normal, punir et relax. En état normal, graduelle attend une trahison pour punir, sinon il continue à coopérer. En état punir, il commence un suite consécutive de trahisons ($n$ trahisons s’il a été trahi pour la $n$-ième fois). En état relax, il “pardonne” a son adversaire avec deux coopérations consécutives, puis il revient en état normal.
+>
+> $\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space\space \text{Algorithme : graduel}
+> \\
+> \text{}
+> \\$
+>
+> 1. Je suis au premier coup ?
+> Oui → coopération, rentre état normal
+> 2. Je suis en état “normal” ? Oui →
+> 1. Lors du dernier coup, l’adversaire a coopéré ?
+> Oui → coopération, garde état “normal”
+> 2. Lors du dernier coup, l’adversaire a trahi ?
+> Oui → trahison, rentre état “punir”
+> 3. Je suis en état “punir” ? Oui →
+> 1. Il manque plus d’une trahison à faire ?
+> Oui → trahison, garde l’état “punir”
+> 2. Il ne manque qu’une trahison à faire ?
+> Oui → trahison, rentre en état “relax”
+> 4. Je suis en état “relax” ? Oui →
+> 1. Je n’ai pas coopéré le coup précédant ?
+> Oui → coopération, garde l’état “relax”
+> 2. J’ai relâché (cooperé) aussi le coup précédant ?
+> Oui → coopération, rentre en état “normal”
 
 ## Le code : *graduel* (version .txt en lien pour copier-coller)
 

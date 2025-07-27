@@ -228,10 +228,8 @@ Le cas si $\beta$—le coefficient de $x$ dans $e^{\beta x}$— est racine doubl
 
 On écrire $Q(t)$ dans sa forme plus générale selon son degré, comme $ax^2+bx+c$, $ax+b$, $a$, etc.
 
-<aside>
-📖 Si le second membre $c(x)$ est une fonction trigonométrique, on essaie les $a\sin(x)+b\cos(x)$.
-
-</aside>
+> [!note]
+> Si le second membre $c(x)$ est une fonction trigonométrique, on essaie les $a\sin(x)+b\cos(x)$.
 
 Une fois on connaît $y_*$, on dérive deux fois pour obtenir $y_*^\prime$ et $y_*^{\prime\prime}$, puis on injecte dans l’équation originale pour déduire les valeurs des constantes dans la formulation générale de $y_*$.
 

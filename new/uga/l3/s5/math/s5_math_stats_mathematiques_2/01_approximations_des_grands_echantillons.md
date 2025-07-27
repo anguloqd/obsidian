@@ -193,10 +193,8 @@ Le théorème de la limite centrale assume que deux conditions essentielles soie
 
 ## Théorème de De Moivre-Laplace
 
-<aside>
-🗺️ La première foi que le TLC a été énoncé a été sous la forme du théorème de De Moivre-Laplace, d’où son importance historique.
-
-</aside>
+> [!note]
+> La première foi que le TLC a été énoncé a été sous la forme du théorème de De Moivre-Laplace, d’où son importance historique.
 
 Le théorème de De Moivre-Laplace est juste un cas du théorème central de la limite : le cas où les VA iid. $(X_i)$ qui sont sommées suivent chacune une loi de Bernoulli. Notons que le TLC n’est pas limité à que les $(X_i)$ suivent cette loi.
 
@@ -267,23 +265,21 @@ Par contre, il n’est pas possible de construire une densité, car il devrait a
 
 Le choix de multiplier $(\bar{X}_n-\mathbb{E}[X])$ par $\sqrt{n}$ permet de laisser tendre $n$ vers l’infini et que la variance ne soit pas nulle. Particulièrement, on garanti l’existence d’une variance non-nulle, mais aussi non-infinie, c’est qui nous est utile.
 
-<aside>
-💡 On pourrait concevoir deux formes de présenter le TCL : la réelle et la pratique.
-
-$$
-\begin{align*}
-
-\text{TCL réel : }
-\lim_{n\rightarrow\infin} \mathbb{P}(-a\le\sqrt{n}(\bar{X}_n-\mathbb{E}[X]) \le a) &= \int_{-a}^a \mathcal{N}\left(0,\sigma^2\right)dx
-
-\\
-
-\text{TCL pratique : }
-\mathbb{P}(-a\le\bar{X}_n-\mathbb{E}[X] \le a) &\approx \int_{-a}^a \mathcal{N}\left(0,\frac{\sigma^2}{n}\right)dx
-
-\end{align*}
-$$
-
-Il ne faut absolument pas appliquer une limite $\lim_{n \rightarrow \infin}$ dans la formulation pratique. Il sert comme une bonne approximation à partir de $n \ge 30$, mais **il ne fait objectivement plus de sens si on laisse $n$ tendre vers l’infini !** Je l’avais fais en dessus pour expliquer le besoin d’ajouter le facteur $\sqrt{n}$.
-
-</aside>
+> [!note]
+> On pourrait concevoir deux formes de présenter le TCL : la réelle et la pratique.
+>
+> $$
+> \begin{align*}
+>
+> \text{TCL réel : }
+> \lim_{n\rightarrow\infin} \mathbb{P}(-a\le\sqrt{n}(\bar{X}_n-\mathbb{E}[X]) \le a) &= \int_{-a}^a \mathcal{N}\left(0,\sigma^2\right)dx
+>
+> \\
+>
+> \text{TCL pratique : }
+> \mathbb{P}(-a\le\bar{X}_n-\mathbb{E}[X] \le a) &\approx \int_{-a}^a \mathcal{N}\left(0,\frac{\sigma^2}{n}\right)dx
+>
+> \end{align*}
+> $$
+>
+> Il ne faut absolument pas appliquer une limite $\lim_{n \rightarrow \infin}$ dans la formulation pratique. Il sert comme une bonne approximation à partir de $n \ge 30$, mais **il ne fait objectivement plus de sens si on laisse $n$ tendre vers l’infini !** Je l’avais fais en dessus pour expliquer le besoin d’ajouter le facteur $\sqrt{n}$.

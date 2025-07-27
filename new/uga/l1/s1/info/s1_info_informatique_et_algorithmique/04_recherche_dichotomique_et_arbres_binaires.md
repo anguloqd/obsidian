@@ -47,10 +47,8 @@ public int runBinarySearchIteratively(
 
 ## Pseudo-code : recherche de présence d'un élément
 
-<aside>
-🖊️ Je l’écris en pseudo-code et non pas en Java car on devrait explorer les notions le plus compliquées : classes, objets, etc ; pour pouvoir créer un arbre et puis une fonction pour l’explorer.
-
-</aside>
+> [!note]
+> Je l’écris en pseudo-code et non pas en Java car on devrait explorer les notions le plus compliquées : classes, objets, etc ; pour pouvoir créer un arbre et puis une fonction pour l’explorer.
 
 ```java
 fonction Recherche(A,e) // prend un arbre et un élément
