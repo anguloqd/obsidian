@@ -4,16 +4,16 @@
 
 # Généralités sur les suites réelles
 
-1. Une suite réelle est une application de $\N$, ou d'une partie de $\N$, dans $\R$.
-2. L'image d'un $n ∈ \N$ se note $u_n$ et s'appelle le terme de rang $n$ de la suite.
-3. La suite est désignée par l'ensemble de ses termes via la notation $(u_n)$ ou $(u_n)_{n∈\N}$.
+1. Une suite réelle est une application de $\mathbb{N}$, ou d'une partie de $\mathbb{N}$, dans $\mathbb{R}$.
+2. L'image d'un $n ∈ \mathbb{N}$ se note $u_n$ et s'appelle le terme de rang $n$ de la suite.
+3. La suite est désignée par l'ensemble de ses termes via la notation $(u_n)$ ou $(u_n)_{n∈\mathbb{N}}$.
 
 ## Distinction entre ensemble et suite
 
 Donnons un exemple :
 
-- l'ensemble des entiers pairs, désigné par $\{2n : n ∈ \N\}$, et
-- la suite des entiers pairs, désigné par $(u_n)_{n∈\N}$, avec, pour tout $n ∈ \N, u_n = 2n$.
+- l'ensemble des entiers pairs, désigné par $\{2n : n ∈ \mathbb{N}\}$, et
+- la suite des entiers pairs, désigné par $(u_n)_{n∈\mathbb{N}}$, avec, pour tout $n ∈ \mathbb{N}, u_n = 2n$.
 
 La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $u_0 = 0, u_1 = 2, u_2 = 4$, $...$ ce que ne fait pas l'ensemble.
 
@@ -29,23 +29,23 @@ La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $
 
 ## **Axiome de récurrence**
 
-Soit $P_n$ une propriété indexée par $n ∈ \N$. Si les propriétés suivantes sont vraies : 
+Soit $P_n$ une propriété indexée par $n ∈ \mathbb{N}$. Si les propriétés suivantes sont vraies : 
 
 1. **Initialisation** : $P_0$ vraie.
-2. **Hérédité** : $∀n ∈ \N, P_n ⇒ P_{n+1}$
+2. **Hérédité** : $∀n ∈ \mathbb{N}, P_n ⇒ P_{n+1}$
 
-… alors $∀n ∈ \N, P_n$ est vraie.
+… alors $∀n ∈ \mathbb{N}, P_n$ est vraie.
 
 ## A**utres propriétés**
 
 - Une suite est majorée (resp. minorée, bornée) si et seulement si elle l'est à partir d'un certain rang.
-- Une suite $(u_n)_{n∈N}$ est bornée si, et seulement si, la suite $(|u_n|)_{n∈\N}$ est majorée.
+- Une suite $(u_n)_{n∈N}$ est bornée si, et seulement si, la suite $(|u_n|)_{n∈\mathbb{N}}$ est majorée.
 
 # **Suites classiques**
 
 ## **Suite arithmétique : $u_{n+1}=u_n+r$**
 
-Soit $r ∈ \R$. Toute suite vérifiant la relation de récurrence $u_{n+1} = u_n + r$ est appelée suite arithmétique de raison $r$. Si $(u_n)_{n∈N}$ est arithmétique de premier terme $u_0 = a$ et de raison $r$, alors son terme général est $u_n = a + nr$.
+Soit $r ∈ \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = u_n + r$ est appelée suite arithmétique de raison $r$. Si $(u_n)_{n∈N}$ est arithmétique de premier terme $u_0 = a$ et de raison $r$, alors son terme général est $u_n = a + nr$.
 
 Une suite arithmétique est entièrement déterminée (et caractérisée) par ses deux premiers termes (car $r = u_1 − u_0$).
 
@@ -61,7 +61,7 @@ $$
 
 ## **Suite géométrique : $u_{n+1}=q\times u_n$**
 
-Soit $q ∈ \R$. Toute suite vérifiant la relation de récurrence $u_{n+1} = q × u_n$ est appelée suite géométrique de raison $q$. Si $(u_n)_{n∈N}$ est géométrique de premier terme $u_0 = a$ et de raison $q$, alors son terme général est $u_n = a × q_n$.
+Soit $q ∈ \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = q × u_n$ est appelée suite géométrique de raison $q$. Si $(u_n)_{n∈N}$ est géométrique de premier terme $u_0 = a$ et de raison $q$, alors son terme général est $u_n = a × q_n$.
 
 Une suite géométrique est entièrement déterminée par ses deux premiers termes (car $q = \frac{u_1}{u_0}$ si $u_0 \ne 0$, et sinon $(u_n)$ est entièrement nulle).
 
@@ -77,7 +77,7 @@ $$
 
 ## **Suite arithmético-géométrique : $u_{n+1} = au_n + b$**
 
-Soit $a, b ∈ \R$. Toute suite vérifiant la relation de récurrence $u_{n+1} = au_n + b$ est appelée suite arithmético-géométrique.
+Soit $a, b ∈ \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = au_n + b$ est appelée suite arithmético-géométrique.
 
 - Une suite arithmético-géométrique vérifiant $u_{n+1} = au_n + b$ est arithmétique si $a = 1$, et géométrique si $b = 0$.
 - Une suite arithmético-géométrique non stationnaire est entièrement déterminée par ses trois premiers termes.
@@ -100,5 +100,5 @@ Si $a \ne 1$, le calcul du terme général d'une suite arithmético-géométriqu
     $$
     
 - Donc, $(v_n)$ est géométrique de raison $a$.
-- Par conséquent $∀n ∈ \N, v_n = v_0 \cdot a_n$ , avec $v_0 = u_0 - x = u_0 - \frac{b}{(1−a)}$
+- Par conséquent $∀n ∈ \mathbb{N}, v_n = v_0 \cdot a_n$ , avec $v_0 = u_0 - x = u_0 - \frac{b}{(1−a)}$
 Finalement, $u_n = v_n + x$.

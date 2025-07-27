@@ -57,11 +57,11 @@ De la même manière que la tête de lecture ou la bande de lecture est supposé
 On peut finalement définir formellement un automate à pile appelé $M$ comme une tuple :
 
 $$
-M=\{Q,F \sube Q,q_0\in Q, \Sigma,\Gamma,\$\in\Gamma, \Delta\}
+M=\{Q,F \subseteq Q,q_0\in Q, \Sigma,\Gamma,\$\in\Gamma, \Delta\}
 $$
 
 - $Q$ : l’ensamble d’états
-    - $F \sube Q$ : l’ensemble d’états finaux
+    - $F \subseteq Q$ : l’ensemble d’états finaux
     - $q_0 \in Q$ : l’état initial de $A$
 - $\Sigma$ : l’alphabet (un ensemble de symboles) **du ruban**
 - $\Gamma$ : l’alphabet (un ensemble de symboles) **de la pile**
@@ -239,7 +239,7 @@ La première règle est une règle hors-contexte puisque $A$ peut être réécri
 Les paramètres d’une grammaire sont $G = \{V_T, V_N, S, R\}$. Donc, pour définir ceux de l’AAP $M$, on les fixe comme suit :
 
 $$
-M=\{Q,F \sube Q,q_0\in Q, \Sigma,\Gamma,\$\in\Gamma, \Delta\}
+M=\{Q,F \subseteq Q,q_0\in Q, \Sigma,\Gamma,\$\in\Gamma, \Delta\}
 $$
 
 - $Q=\{p,q,r\}$

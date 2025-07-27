@@ -23,7 +23,7 @@ Le coefficient libre doit être forcément $0$ ! Cela implique que le vecteur nu
 Si le coefficient libre était différent de $0$, on ne parlerait pas d’un espace vectoriel mais d’un ***espace affin***, car le vecteur nul n’y est pas inclus.
 
 De cette manière, on décrit l’ensemble de points qui appartient à ce plan.
-Dans $\R^n$, une équation linéaire à $n$ variables décrit un sous-espace vectoriel de dimension $(n-1)$.
+Dans $\mathbb{R}^n$, une équation linéaire à $n$ variables décrit un sous-espace vectoriel de dimension $(n-1)$.
 
 On peut aussi décrire un même ensemble d’un hyperplan de dimension $n$ avec $n$ points ou vecteurs appartenant à l’hyperplan
 Par exemple, notons que $[1,1,1]$ et $[0,1,-1]$ vérifient l’équation cartésienne $2x-y-z=0$. Donc, ils appartiennent l’ensemble.
@@ -48,9 +48,9 @@ $$
 
 Un ensemble d’équations linéaires est dit “lié” si on peut décrire une avec une combinaison linéaire des autres. C’est le même comme les familles de vecteurs liées. Si on prend l’équation d’avant et on la multiplie toute par $2$, l’ensemble solution reste exactement le même. Donc, les deux équations $2x-y-z=0$ et $4x-2y-2z=0$ décrivent le même ensemble, ou sont essentiellement “la même équation”.
 
-De la même manière, une structure linéaire (une ligne, un plan, un hyperplan) peut être vu comme l’intersection de deux autres structures linéaires non-liées ou l’ensemble solution d’un système d’équations. Par exemple, dans $\R^3$, l’intersection de deux plans non-liées décrit une droite.
+De la même manière, une structure linéaire (une ligne, un plan, un hyperplan) peut être vu comme l’intersection de deux autres structures linéaires non-liées ou l’ensemble solution d’un système d’équations. Par exemple, dans $\mathbb{R}^3$, l’intersection de deux plans non-liées décrit une droite.
 
-Dans $\R^n$, un système de $k$ équations linéaires non-liées, chacune à $n$ variables, décrit un sous-espace vectoriel de dimension $(n-k)$. 
+Dans $\mathbb{R}^n$, un système de $k$ équations linéaires non-liées, chacune à $n$ variables, décrit un sous-espace vectoriel de dimension $(n-k)$. 
 C’est-à -dire, un ensemble $E_1, …, E_k$ non-lié implique que le chaque équation est une “pièce d’information unique” et, s’il existe une solution, c’est le vecteur nul (supposant coefficient libre égal $0$).
 
 ## Équations vectoriels d’une droite et un plan

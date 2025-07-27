@@ -53,8 +53,8 @@ $$
 L=\frac{p-Cm}{p}=\frac{1}{|\epsilon|}
 $$
 
-- Si $|\epsilon| → \infin$, donc $L → 0$, qui est le cas de concurrence parfaite.
-- Si $|\epsilon| → 0$, donc $L → \infin$, qui est le cas du monopole (ou plutôt un nombre très grande, car $\infin$ n’est pas une quantité spécifique !)
+- Si $|\epsilon| → \infty$, donc $L → 0$, qui est le cas de concurrence parfaite.
+- Si $|\epsilon| → 0$, donc $L → \infty$, qui est le cas du monopole (ou plutôt un nombre très grande, car $\infty$ n’est pas une quantité spécifique !)
 - Le pouvoir de marché d’un monopole est inversement proportionnel à l’élasticité-prix de la demande de marché.
 
 ### Equilibre du monopole et économie du bien-être
@@ -160,7 +160,7 @@ Point de départ : le prix fixé par l'entreprise installée peut être supérie
 
 Sur un marché, la fonction de demande d'un produit est donnée par la forme linéaire classique : $p(q) = b - aq$, avec $a,b>0$.
 
-L’entreprise installée produit une quantité $q_F$ à coûts constants : $Cm = CM = c$, où $c \in \R^+$.
+L’entreprise installée produit une quantité $q_F$ à coûts constants : $Cm = CM = c$, où $c \in \mathbb{R}^+$.
 
 ### Entrée de la firme rivale et prix limite
 

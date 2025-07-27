@@ -33,7 +33,7 @@ Une classification peut être faite à partir des notions d'énergie ou de puiss
 - La puissance moyenne associée $P_f$, si elle existe :
     
     $$
-    P_f=\lim_{\tau\rightarrow\infin} \frac{1}{\tau} \int_0^\tau|f(t)|^2dt=\lim_{\tau\rightarrow\infin}\frac{1}{\tau} E_f
+    P_f=\lim_{\tau\rightarrow\infty} \frac{1}{\tau} \int_0^\tau|f(t)|^2dt=\lim_{\tau\rightarrow\infty}\frac{1}{\tau} E_f
     $$
     
 
@@ -102,7 +102,7 @@ Donc, la harmonique fondamentale est juste une somme “orthogonale” d’une c
 Une fonction $f$ est périodique si :
 
 $$
-f\text{ périodique } \iff \exist T\in\R^+, \forall x\in\R, f(x)=f(x+T)
+f\text{ périodique } \iff \exist T\in\mathbb{R}^+, \forall x\in\mathbb{R}, f(x)=f(x+T)
 $$
 
 **Remarque**. Si $f$ est périodique sur 
@@ -212,7 +212,7 @@ c_n(f)=\frac{1}{T}\int_0^Tf(x)e^{-\frac{\cancel{2\pi} p}{\cancel{2\pi}}ix}dx ...
 \end{cases}
 $$
 
-Notons que est défini pour $n\in\N$. Mais à travers une propriété, on pourrait étendre cette définition à des indices $n$ négatifs avec les conjugués.
+Notons que est défini pour $n\in\mathbb{N}$. Mais à travers une propriété, on pourrait étendre cette définition à des indices $n$ négatifs avec les conjugués.
 
 $$
 c_{-n}(f)=\begin{cases}
@@ -260,7 +260,7 @@ $$
 Donc, la série de Fourier est la somme en appliquant chaque quantité d’harmonique $c_p$ sur l’harmonique $e_p$. On peut aussi parle de la “$N$-ième somme partielle de Fourier”.
 
 $$
-\underbrace{S_N(x)}_\text{somme partielle}\hspace{-8pt}=\sum_{-N}^N c_p e^{\frac{2\pi}{T}ipx} \longrightarrow_{N\rightarrow\infin} \underbrace{S_f(x)}_\text{ série}
+\underbrace{S_N(x)}_\text{somme partielle}\hspace{-8pt}=\sum_{-N}^N c_p e^{\frac{2\pi}{T}ipx} \longrightarrow_{N\rightarrow\infty} \underbrace{S_f(x)}_\text{ série}
 $$
 
 ### Définition alternative, avec harmoniques réelles
@@ -320,12 +320,12 @@ De cette formula, on verra que la série attribue la moyenne sur un point de dis
 En plus, si $f$ est $\mathcal C^1$ par morceaux et continue, on a la convergence uniforme de la série (ici on parle de la norme sup) :
 
 $$
-\lim_{N\to\infin}||S_N-f||_\infin=0 \iff\lim_{N\to\infin}\left(\sup_{x\in[0,T]} |S_N(x)-f(x)|\right)=0 
+\lim_{N\to\infty}||S_N-f||_\infty=0 \iff\lim_{N\to\infty}\left(\sup_{x\in[0,T]} |S_N(x)-f(x)|\right)=0 
 $$
 
 ### Conservation d’énergie : théorème de Bassel-Parseval
 
-Ici, on voit une autre analogie avec le théorème de Pythagore. Rappelons Pythagore dans $\R^n$ : le carré de la norme-deux d’un vecteur et la somme des carrés de ses coefficients (coordonnées) au carré.
+Ici, on voit une autre analogie avec le théorème de Pythagore. Rappelons Pythagore dans $\mathbb{R}^n$ : le carré de la norme-deux d’un vecteur et la somme des carrés de ses coefficients (coordonnées) au carré.
 
 $$
 \begin{align*}
@@ -345,12 +345,12 @@ Donc, on en déduit que norme au carre de $f$ est égal à la somme de toutes le
 
 $$
 ||S_f||^2= ||f||^2 \iff
-\underbrace{\sum_{-\infin}^\infin|c_k|^2}_{||S_f||^2} = \underbrace{\frac{1}{T}\int_0^T|f(u)|^2du}_{||f||^2}
+\underbrace{\sum_{-\infty}^\infty|c_k|^2}_{||S_f||^2} = \underbrace{\frac{1}{T}\int_0^T|f(u)|^2du}_{||f||^2}
 $$
 
 Notons donc que la somme des carrés des coefficients “reconstitue” toute la quantité de l’intégrale du carré de f sur une période, qui est l’énergie. Avec le facteur de $1/T$, c’est plutôt la puissance moyenne, mais le passage à déduire l’énergie est assez simple.
 
-Si on additionne juste une quantité fini de coefficients, de $-N$ à $N$, on obtient l’inégalité de Bessel. Elle devient égalité stricte juste dans le cas de somme de $-\infin$ à $\infin$, que c’est le cas de Parseval.
+Si on additionne juste une quantité fini de coefficients, de $-N$ à $N$, on obtient l’inégalité de Bessel. Elle devient égalité stricte juste dans le cas de somme de $-\infty$ à $\infty$, que c’est le cas de Parseval.
 
 $$
 ||S_N||^2 \le ||f||^2 \iff
@@ -367,28 +367,28 @@ $$
 
 ### Motivation et rappels
 
-Dans les séries de Fourier, le signal de base est un signal forcément périodique. S’il n’y a plus de périodicité, on peut avoir toutes les longueurs/fréquences d’ondes sur $\R$ et non plus une fréquence multiple de $1/T$.
+Dans les séries de Fourier, le signal de base est un signal forcément périodique. S’il n’y a plus de périodicité, on peut avoir toutes les longueurs/fréquences d’ondes sur $\mathbb{R}$ et non plus une fréquence multiple de $1/T$.
 
-Avant d’aborder, quelques rappels. Une fonction $f$ sur $\R$ est localement intégrable si $|f|$ est intégrable sur tout segment. Une conséquence c’est que toute fonction continue par morceaux est localement intégrable. On atteint que **$f$ est intégrable si** $f$ est localement intégrable et $\int_\R|f(x)|dx$ est fini.
+Avant d’aborder, quelques rappels. Une fonction $f$ sur $\mathbb{R}$ est localement intégrable si $|f|$ est intégrable sur tout segment. Une conséquence c’est que toute fonction continue par morceaux est localement intégrable. On atteint que **$f$ est intégrable si** $f$ est localement intégrable et $\int_\mathbb{R}|f(x)|dx$ est fini.
 
-La conséquence qui nous intéresse le plus de $f$ intégrable sur $\R$ est que donc la fonction $g(y)= f(x)e^{2\pi i x y}$ intégrable pour $y\in\R$. Le module de l’harmonique vaut $1$.
+La conséquence qui nous intéresse le plus de $f$ intégrable sur $\mathbb{R}$ est que donc la fonction $g(y)= f(x)e^{2\pi i x y}$ intégrable pour $y\in\mathbb{R}$. Le module de l’harmonique vaut $1$.
 
 Quelques exemples d’intégrabilité :
 
-- Si $f$ est intégrable sur $[a,b]$ et $f$ vaut nulle dehors $[a,b]$, $f$ est intégrable sur $\R$.
-- $f(x)=\frac{1}{1+x^2}$ est intégrable sur $\R$.
-- Si $b>0$, $f(x)=P(x)e^{-b|x|}$ est intégrable sur $\R$, où $P(x)$ est un polynôme.
-- $f(x)=P(x)e^{{-x}^2}$ est intégrable sur $\R$.
-- Si $f$ continue périodique non nulle, **elle n’est pas intégrable sur $\R$**.
-- Si $g$ intégrable et $h$ continue bornée, $gh$ est intégrable sur $\R$.
+- Si $f$ est intégrable sur $[a,b]$ et $f$ vaut nulle dehors $[a,b]$, $f$ est intégrable sur $\mathbb{R}$.
+- $f(x)=\frac{1}{1+x^2}$ est intégrable sur $\mathbb{R}$.
+- Si $b>0$, $f(x)=P(x)e^{-b|x|}$ est intégrable sur $\mathbb{R}$, où $P(x)$ est un polynôme.
+- $f(x)=P(x)e^{{-x}^2}$ est intégrable sur $\mathbb{R}$.
+- Si $f$ continue périodique non nulle, **elle n’est pas intégrable sur $\mathbb{R}$**.
+- Si $g$ intégrable et $h$ continue bornée, $gh$ est intégrable sur $\mathbb{R}$.
     - $|h| < M$, donc $|gh| \le M|g|$.
 
 ### Définition et interprétation
 
-Si le signal non-périodique $f$ est intégrable sur $\R$, on appelle transformée de Fourier de $f$ la fonction $\hat f$ définie comme :
+Si le signal non-périodique $f$ est intégrable sur $\mathbb{R}$, on appelle transformée de Fourier de $f$ la fonction $\hat f$ définie comme :
 
 $$
-\hat f (y) = \lang f, e_{1/y}\rang =\int_\R f(x)e^{-2\pi i x y} dx
+\hat f (y) = \lang f, e_{1/y}\rang =\int_\mathbb{R} f(x)e^{-2\pi i x y} dx
 $$
 
 Notons qu’ici on préfère parler directement de la fréquence de l’harmonique, $y$, plutôt que de sa période, qui serait donc $1/y$. La définition du produit hermitien est la même utilisé dans le cas de séries de Fourier.
@@ -396,7 +396,7 @@ Notons qu’ici on préfère parler directement de la fréquence de l’harmoniq
 L’interprétation est intéressante. Pour chaque $y$, $\hat f(y)$ est la quantité d’harmonique $e_{1/y}$ dans le signal $f$. Quand $y=0$, $\hat f(0)$ est la composante continue de fréquence nulle (constante) du signale, le “baseline”.
 
 $$
-\hat f(0)=\int_\R f(u)du
+\hat f(0)=\int_\mathbb{R} f(u)du
 $$
 
 Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(f) = \lang f, e_n\rang$, donc on pourrait penser que $\hat f (y)$ est le coefficient $1/y$ de Fourier. On explore ceci dans la section “théorème d’inversion”.
@@ -405,7 +405,7 @@ Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(
 
 - Toute fonction continue par morceaux et a support compact (borné) est intégrable et admet donc une transformée de Fourier.
     - Il faut cependant remarquer que la transformée de Fourier d’une telle fonction **n’est jamais a support borné**.
-- La transformée de Fourier est une application linéaire. Si $f,g$ intégrables et $\alpha,\beta \in\R$ :
+- La transformée de Fourier est une application linéaire. Si $f,g$ intégrables et $\alpha,\beta \in\mathbb{R}$ :
     
     $$
     \widehat{\alpha f+\beta g}=\alpha \hat f + \beta \hat g
@@ -418,7 +418,7 @@ Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(
 - Si $f,g$ continues par morceaux intégrables, alors
 
 $$
-\int_\R \hat f(t)g(t)dt=\int_\R f(t)\hat g(t)dt
+\int_\mathbb{R} \hat f(t)g(t)dt=\int_\mathbb{R} f(t)\hat g(t)dt
 $$
 
 - La transformée de Fourier d’une fonction translatée est comme suit. (La computation algébrique est sur les diapos)
@@ -453,15 +453,15 @@ La synthèse harmonique n’est possible que si l’on peut, a partir d’une tr
 Notons déjà que $\hat f (y)$ pourrait être vu comme le coefficient $1/y$ de Fourier. **Est-ce que l’analogie se tienne ?**
 
 $$
-\text{Série : } c_n(f) = \lang f, e_n \rang \to \lim_{N\to\infin} \sum_{n=-N}^N c_n(f) e^{\frac{2\pi}{T}inx} = f(x)
+\text{Série : } c_n(f) = \lang f, e_n \rang \to \lim_{N\to\infty} \sum_{n=-N}^N c_n(f) e^{\frac{2\pi}{T}inx} = f(x)
 \\
-\text{Transf. : } \hat f(y)= \lang f, e_{1/y}\rang \to \int_\R \hat f(y) e^{2\pi xyi}dy \space\underbrace{=}_?\space f(x)
+\text{Transf. : } \hat f(y)= \lang f, e_{1/y}\rang \to \int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy \space\underbrace{=}_?\space f(x)
 $$
 
 Déjà, notons que telle intégrale serait juste la transformée de la transformée de Fourier. En plus, si $f$ continue intégrable et $\hat f$ intégrable, donc la égalité est vérifiée. Ceci est le **théorème d’inversion**.
 
 $$
-\int_\R \hat f(y) e^{2\pi xyi}dy = \widehat {(\widehat f)}=f(-x)
+\int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy = \widehat {(\widehat f)}=f(-x)
 $$
 
 - Si $f$ et $g$ continues intégrables, $\hat f$ et $\hat g$ intégrables et égales, alors $f=g$.
@@ -469,10 +469,10 @@ $$
 Finalement, un autre théorème utile est le **théorème de Parseval**, différent de l’identité de Parseval. Si $f$ et $g$ intégrables et leurs transformées de Fourier $\hat f$ et $\hat g$ aussi, donc le produit hermitien des transformées est égal au produit hermitien des signaux.
 
 $$
-\int_\R \hat f \bar{\hat g}dx=\int_\R f\bar g dx
+\int_\mathbb{R} \hat f \bar{\hat g}dx=\int_\mathbb{R} f\bar g dx
 $$
 
-- Un corollaire est que si $g=f$, $\int_\R |\hat f|^2dx=\int_\R |f|^2dx$, càd. l’énergie de la transformée équivaut l’énergie du signal.
+- Un corollaire est que si $g=f$, $\int_\mathbb{R} |\hat f|^2dx=\int_\mathbb{R} |f|^2dx$, càd. l’énergie de la transformée équivaut l’énergie du signal.
 
 ### Questions :
 
@@ -503,20 +503,20 @@ Soit $H(y)=\hat f(y)\hat g(y)$ une fonction continue par morceaux nulle hors de 
 
 $$
 \begin{align*}
-h(x) &= \int_\R H(y)e^{2\pi i xy}dy
+h(x) &= \int_\mathbb{R} H(y)e^{2\pi i xy}dy
 \\
-&= \int_\R \left( \int_\R f(u)e^{-2\pi u y}\right) \hat g(y)e^{2\pi i xy}dy
+&= \int_\mathbb{R} \left( \int_\mathbb{R} f(u)e^{-2\pi u y}\right) \hat g(y)e^{2\pi i xy}dy
 \\
-&= \int_\R f(u) \left( \int_\R \hat g(y)e^{-2\pi i (u-x)y}dy\right )du
+&= \int_\mathbb{R} f(u) \left( \int_\mathbb{R} \hat g(y)e^{-2\pi i (u-x)y}dy\right )du
 \\
-&=\int_\R f(u)g(x-u)du
+&=\int_\mathbb{R} f(u)g(x-u)du
 \end{align*}
 $$
 
 En fait, cette dernière écriture est appelée le produit de convolution.
 
 $$
-f\star g(x) = \int_\R f(u)g(x-u)du
+f\star g(x) = \int_\mathbb{R} f(u)g(x-u)du
 $$
 
 Comme propriétés, on observe que :
@@ -529,9 +529,9 @@ Ceci est juste l’égalité précédente en utilisant le théorème d’inversi
 
 ## Rapport support-différentiation-Fourier
 
-Soit $I$ un intervalle de bornes $a,b$ qui est ouvert, semi-ouvert ou fermé. L’adhérence de $I$ est l’ensemble de points de $\R$ qui est le plus petit fermé qui contient $I$. Tout ça pour dire, l’adhérence de I est l’intervalle fermé de bornes $a$ et $b$ : $[a,b]$.
+Soit $I$ un intervalle de bornes $a,b$ qui est ouvert, semi-ouvert ou fermé. L’adhérence de $I$ est l’ensemble de points de $\mathbb{R}$ qui est le plus petit fermé qui contient $I$. Tout ça pour dire, l’adhérence de I est l’intervalle fermé de bornes $a$ et $b$ : $[a,b]$.
 
-- Si $A, B$ parties de $\R$, on note l’ensemble $“A+B”=\{a+b\in \R: a\in A, b\in B\}$.
+- Si $A, B$ parties de $\mathbb{R}$, on note l’ensemble $“A+B”=\{a+b\in \mathbb{R}: a\in A, b\in B\}$.
 - Si $f,g$ continues par morceaux à supports bornés, $f\star g$ à support borné et $\text{supp}(f\star g)\sub\text{supp}(A) + \text{supp}(B)$.
 
 Finalement, il résulte du théorème de dérivation sous le signe intégral que si $f$ est intégrable et $g$ de classe $\mathcal C^∞$ a support compact (borné), $f ⋆ g$ est de classe $\mathcal C^∞$ et

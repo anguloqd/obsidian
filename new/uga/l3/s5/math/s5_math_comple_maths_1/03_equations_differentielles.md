@@ -12,7 +12,7 @@ $$
 \begin{cases}
 x^\prime(t)=f(t,x(t))
 \\
-x(t_0)=x_0\in\R
+x(t_0)=x_0\in\mathbb{R}
 \end{cases}
 $$
 

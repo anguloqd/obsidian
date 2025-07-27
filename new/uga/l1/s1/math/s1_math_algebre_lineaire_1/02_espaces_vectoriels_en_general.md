@@ -29,7 +29,7 @@ Soit $E$ un $K$-espace vectoriel. Une partie $F$ de $E$ est appelée un sous-esp
 On en déduit deux théorèmes, dont le premier est vraiment important :
 
 1. Théorème : u**n sous-espace vectoriel est un espace vectoriel**
-2. Théorème : soit $A ∈ M_{n,p}(R)$. Soit $AX = 0$ un système d’équations linéaires homogènes à $p$ variables. Alors l’ensemble des vecteurs solutions est un sous-espace vectoriel de $\R^p$.
+2. Théorème : soit $A ∈ M_{n,p}(R)$. Soit $AX = 0$ un système d’équations linéaires homogènes à $p$ variables. Alors l’ensemble des vecteurs solutions est un sous-espace vectoriel de $\mathbb{R}^p$.
 
 > [!note]
 > **Méthodologie**. Pour répondre à une question du type “L’ensemble $F$ est-il un espace vectoriel ?“, une façon efficace de procéder est de trouver un espace vectoriel $E$ qui contient $F$, puis prouver que $F$ est un sous-espace vectoriel de $E$. Il y a seulement trois propriétés à vérifier au lieu de huit !

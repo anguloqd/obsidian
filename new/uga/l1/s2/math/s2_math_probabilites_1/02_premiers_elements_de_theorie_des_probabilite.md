@@ -38,7 +38,7 @@ L'ensemble pour lequel $A$ est faux.
 
 ## Définition et propriétés
 
-Partons des axiomes de probabilités, même si on va les condenser à l’extrême ici. Un espace de probabilité est le triplet $(\Omega, \mathcal{A}, \mathbb{P})$, où $\Omega$ est l’univers, $\mathcal{A}$ une tribu/$\sigma$-algèbre/algèbre d’événements, et $\mathbb{P}$ est une fonction $\Omega \mapsto [0,1]\in\R$ pour donner une probabilité à un événement.
+Partons des axiomes de probabilités, même si on va les condenser à l’extrême ici. Un espace de probabilité est le triplet $(\Omega, \mathcal{A}, \mathbb{P})$, où $\Omega$ est l’univers, $\mathcal{A}$ une tribu/$\sigma$-algèbre/algèbre d’événements, et $\mathbb{P}$ est une fonction $\Omega \mapsto [0,1]\in\mathbb{R}$ pour donner une probabilité à un événement.
 
 À partir de cela, on peut déterminer les probabilités des événements qui sont issus des opérations de deux événements atomiques (les résultats de l’expérience) :
 
@@ -131,7 +131,7 @@ Notons qu’on peut construire une variable aléatoire sur une autre variable al
 Il faut ne pas confondre que $Y$ est une variable aléatoire qui applique une fonction affine, **$Y$ n’est pas la fonction affine elle-même** !
 
 $$
-f:\R \mapsto \R, f(x)=2x+3
+f:\mathbb{R} \mapsto \mathbb{R}, f(x)=2x+3
 \newline
 Y = f(X)= 2X+3. \implies \Omega_Y=\{5,7,9,11,13,15\}
 $$

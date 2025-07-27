@@ -6,12 +6,12 @@
 
 ## Définition
 
-La VAN sur une suite de revenus $Z=(Z_t)_{t=0}^\infin$ est la valeur présente des revenus anticipés d’un investisseur. Elle sert pour déterminer une décision d’investissement.
+La VAN sur une suite de revenus $Z=(Z_t)_{t=0}^\infty$ est la valeur présente des revenus anticipés d’un investisseur. Elle sert pour déterminer une décision d’investissement.
 
 - Si VAN $>$ Coût initial, donc le projet est rentable.
 - Si VAN $<$ Coût initial, donc le projet n’est pas rentable.
 
-Cette statistique doit être construite à l’aide d’informations sur $Z$ et sur le taux de rendement $i=(i_t)_{t=0}^\infin$.
+Cette statistique doit être construite à l’aide d’informations sur $Z$ et sur le taux de rendement $i=(i_t)_{t=0}^\infty$.
 
 On déduit que $1$ euro au présent vaut $(1+i_0)$ dans une année. Donc, on déduit que $\frac{1}{(1+i_0)}$ euros au présent vaut $1$ euro dans une année. Ceci est une VAN simple, car on considère juste une année. Par contre, on pourrait généraliser à $n$ années ou périodes de temps d’emprunt.
 

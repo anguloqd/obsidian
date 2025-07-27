@@ -2,7 +2,7 @@
 
 # Rappel: changement de base
 
-## Préparation : de $y=f(x)$ à $\bold{Y}_{B'}=A\bold{X}_B$
+## Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
 
 Soit $E$ un espace vectoriel de dimension finie et soit $B = (e_1, e_2, \dots , e_p)$ une base de $E$. Comme annotation, si $B$ est la base canonique, on n'écrit pas un souscrit $B$ sur un vecteur, il ne faut pas mentionner la base.
 
@@ -10,7 +10,7 @@ Rappelons que tout élément $x$ de $E$ se représente comme : $x = x_1e_1 + x_2
 
 L’objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéaire. Le premier pas est de fixer $f : E \mapsto F$ et $A = \text{Mat}_{B,B'}(f)$ (la matrice qui contient l'image de la base de $E$ exprimé dans la base de $F$).
 
-Après, soit $\bold{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\bold{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\bold{Y} = A\bold{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\bold{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
+Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
 
 ## Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
 
@@ -32,7 +32,7 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 
 - $P_{B',B} = (P_{B,B'})^{-1}$
 - Prenons 3 bases : $B$, $B'$, $B''$. Donc $P_{B,B''} = P_{B,B'} \cdot P_{B',B''}$.
-- $\bold{X} = P_{B,B'} \cdot \bold{X'}$, pour $\bold{X}$ élément de $E$ exprimé en $B$ et $\bold{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
+- $\mathbf{X} = P_{B,B'} \cdot \mathbf{X'}$, pour $\mathbf{X}$ élément de $E$ exprimé en $B$ et $\mathbf{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
 
 ## Formule de changement de base
 
@@ -56,14 +56,14 @@ $$
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
 
 $$
-B\bold{Y}_{\mathcal{B}}=Q^{-1}AP\bold{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
+B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
 $$
 
-1. $P$ : On prend un vecteur $\bold{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
+1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
 3. $Q^{-1}$ : Finalement, on va exprimer le vecteur résultat de $\mathcal{B}_{F}$ à $\mathcal{B}_{F}'$.
 Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m’a posé de problèmes.
-4. $B$ : Mais, notons que tout cela serait le même que prendre $\bold{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
+4. $B$ : Mais, notons que tout cela serait le même que prendre $\mathbf{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
 
 ### Sur un même espace vectoriel $E$
 
@@ -79,7 +79,7 @@ $$
 
 Interprétation :
 
-1. $P$ : On prend un vecteur $\bold{Y}$, écrit en $\mathcal{B}'$, et on le réécrit en $\mathcal{B}$.
+1. $P$ : On prend un vecteur $\mathbf{Y}$, écrit en $\mathcal{B}'$, et on le réécrit en $\mathcal{B}$.
 2. $A$ : Après, on passe $E$ par la fonction $f$, ce qui nous laisse un résultat en $\mathcal{B}$.
 3. $P^{-1}$ : Finalement, on reprend l'image avec $B$ et on la réécrit en $\mathcal{B}'$.
 4. $B$ : Notons que tout cela serait le même si on applique la fonction nous laissant un résultat en $\mathcal{B}'$.
@@ -140,9 +140,9 @@ Un vecteur propre $v_\lambda$ associé a un valeur propre $\lambda$ est un tel v
 
 $$
 E_\lambda = \{0,1,3\} \implies \begin{cases}
-E_0 = \{k \overrightarrow{(1,1,1)},\space k \in \R \}\\
-E_1 = \{k \overrightarrow{(1,0,-1)},\space k \in \R \}\\
-E_3 = \{k\overrightarrow{(1,-2,1)},\space k \in \R \}\\
+E_0 = \{k \overrightarrow{(1,1,1)},\space k \in \mathbb{R} \}\\
+E_1 = \{k \overrightarrow{(1,0,-1)},\space k \in \mathbb{R} \}\\
+E_3 = \{k\overrightarrow{(1,-2,1)},\space k \in \mathbb{R} \}\\
 \end{cases}
 $$
 
@@ -177,10 +177,10 @@ M=
 P^{-1}
 $$
 
-**Théorème**. Si $f$ est un endomorphisme de $\R^n$ a travers la matrice $M$, les assertions suivantes sont équivalentes :
+**Théorème**. Si $f$ est un endomorphisme de $\mathbb{R}^n$ a travers la matrice $M$, les assertions suivantes sont équivalentes :
 
 - On peut trouver une base de vecteurs propres $(v_{\lambda_1}, \dots, v_{\lambda_n})$.
-- La somme directe des sous espaces propres $E_{\lambda_i}$engendre $\R^n$.
+- La somme directe des sous espaces propres $E_{\lambda_i}$engendre $\mathbb{R}^n$.
 - Dans la base de vecteurs propres $(v_{\lambda_1}, \dots, v_{\lambda_n})$, la matrice $M$ de $f$ est diagonale.
 
 **Note** : la trace est une invariant de similitude. C’est-à-dire, $\text{Tr}(M)=\text{Tr}(D)$. Ceci est utile pour déterminer des valeurs dans la diagonale de $D$ qu’on ne connaît pas.
@@ -274,7 +274,7 @@ $$
 Avant de chercher les solutions, on écrit le système sous forme matricielle comme suit :
 
 $$
-\bold{y^\prime}=A\bold{y} \iff 
+\mathbf{y^\prime}=A\mathbf{y} \iff 
 \begin{bmatrix}
 y^\prime_1 \\
 y^\prime_2
@@ -290,25 +290,25 @@ y_2
 \end{bmatrix}
 $$
 
-La solution n’est pas encore claire ici. Donc, si $A$ est diagonalisable avec $P$ comme matrice de passage, on va simplement supposer que $\bold{y}=P\bold{u}$, où $\bold{u}$ est un vecteur inconnu. La transformation suivante nous sera utile :
+La solution n’est pas encore claire ici. Donc, si $A$ est diagonalisable avec $P$ comme matrice de passage, on va simplement supposer que $\mathbf{y}=P\mathbf{u}$, où $\mathbf{u}$ est un vecteur inconnu. La transformation suivante nous sera utile :
 
 $$
-\bold{y}=P\bold{u} \implies \bold{y^\prime} = P\bold{u^\prime} \implies P^{-1}\bold{y'} = \bold{u'} \implies
+\mathbf{y}=P\mathbf{u} \implies \mathbf{y^\prime} = P\mathbf{u^\prime} \implies P^{-1}\mathbf{y'} = \mathbf{u'} \implies
 \overbrace{
-P^{-1}A\bold{y}=\bold{u'}}^{(\bold{y'}=A\bold{y})}
+P^{-1}A\mathbf{y}=\mathbf{u'}}^{(\mathbf{y'}=A\mathbf{y})}
 \\
 \text{}
 \\
 \implies
 \overbrace{
-P^{-1}AP\bold{u}=\bold{u'}}^{(\bold{y}=P\bold{u})} \implies \bold{u^\prime}=D\bold{u}
+P^{-1}AP\mathbf{u}=\mathbf{u'}}^{(\mathbf{y}=P\mathbf{u})} \implies \mathbf{u^\prime}=D\mathbf{u}
 $$
 
 Pourquoi est-elle utile ? Le système d’équations du départ est “couplé”, càd. on ne peut pas séparer $y_1$ et $y_2$ pour trouver des solutions particulières. Par contre, quand le système n’est pas couplé, il est plus facile de trouver une solution particulière.
 
-Il arrive que le système n’est pas couplé quand la matrice qui le décrit, $A$, est triangulaire. Si on voit $\bold{u^\prime}=D\bold{u}$, la matrice du système $D$ est une matrice diagonale et donc triangulaire. Donc, on peut trouver des solutions à ce système qui est plus simple et puis arriver à la solution du système de départ.
+Il arrive que le système n’est pas couplé quand la matrice qui le décrit, $A$, est triangulaire. Si on voit $\mathbf{u^\prime}=D\mathbf{u}$, la matrice du système $D$ est une matrice diagonale et donc triangulaire. Donc, on peut trouver des solutions à ce système qui est plus simple et puis arriver à la solution du système de départ.
 
-On diagonalise alors $A$, et on détermine sa matrice de passage $P$ et celle diagonalisée $D$ pour finalement déterminer $\bold{u^\prime}$:
+On diagonalise alors $A$, et on détermine sa matrice de passage $P$ et celle diagonalisée $D$ pour finalement déterminer $\mathbf{u^\prime}$:
 
 $$
 \overbrace{\begin{bmatrix}
@@ -332,7 +332,7 @@ P^{-1}
 \begin{bmatrix}
 u^\prime_1 \\
 u^\prime_2
-\end{bmatrix}}^\bold{u^\prime}
+\end{bmatrix}}^\mathbf{u^\prime}
 =
 \overbrace{
 \begin{bmatrix}
@@ -343,14 +343,14 @@ u^\prime_2
 \begin{bmatrix}
 u_1\\
 u_2
-\end{bmatrix}}^\bold{u}=
+\end{bmatrix}}^\mathbf{u}=
 \begin{bmatrix}
 -3u_1\\
 2u_2
 \end{bmatrix}
 $$
 
-Rappelons l’équation qui lie les valeurs propres d’une transformation linéaire à elle-même : $Mv=\lambda v$. Dans ce contexte, il faut penser plutôt à une fonction $y$ ou $u$ à la place d’une transformation linéaire, et particulièrement cette fonction est la dérivé d’une autre fonction : $y^\prime(v)=\lambda v$. En plus, si on ajoute la contrainte $y^\prime(0) = c, c\in\R$, alors on déduit que $y(x)=ce^{\lambda x}$.
+Rappelons l’équation qui lie les valeurs propres d’une transformation linéaire à elle-même : $Mv=\lambda v$. Dans ce contexte, il faut penser plutôt à une fonction $y$ ou $u$ à la place d’une transformation linéaire, et particulièrement cette fonction est la dérivé d’une autre fonction : $y^\prime(v)=\lambda v$. En plus, si on ajoute la contrainte $y^\prime(0) = c, c\in\mathbb{R}$, alors on déduit que $y(x)=ce^{\lambda x}$.
 
 Pensons l’interprétation de $y^\prime(v)=\lambda v$ : dériver la fonction est la même chose que l’escalader par $\lambda$. C’est presque la même chose qu’avec la transformation linéaire ! On peut donc voir, pour chaque $y_i$, leur dérivées est juste une combinaison linéaire entre elles. C’est donc un système d’équations différentiels ***linéaire***. On déduit donc $u_1$ et $u_2$ :
 
@@ -359,7 +359,7 @@ $$
 \begin{bmatrix}
 u^\prime_1 \\
 u^\prime_2
-\end{bmatrix}}^\bold{u^\prime}
+\end{bmatrix}}^\mathbf{u^\prime}
 =
 \begin{bmatrix}
 -3u_1\\
@@ -371,7 +371,7 @@ u^\prime_2
 \begin{bmatrix}
 u_1\\
 u_2
-\end{bmatrix}}^\bold{u}
+\end{bmatrix}}^\mathbf{u}
 =
 \begin{bmatrix}
 c_1e^{-3x}\\
@@ -379,14 +379,14 @@ c_2e^{2x}
 \end{bmatrix}
 $$
 
-On retourne à l’équation qui lie $\bold{y}$ et $\bold{u}$ : $\bold{y} = P \bold{u}$. Maintenant, on peut déduire $\bold{y}$ :
+On retourne à l’équation qui lie $\mathbf{y}$ et $\mathbf{u}$ : $\mathbf{y} = P \mathbf{u}$. Maintenant, on peut déduire $\mathbf{y}$ :
 
 $$
 \overbrace{
 \begin{bmatrix}
 y_1\\
 y_2
-\end{bmatrix}}^\bold{y}=
+\end{bmatrix}}^\mathbf{y}=
 \overbrace{\begin{bmatrix}
 -1&1\\
 4&1
@@ -395,7 +395,7 @@ y_2
 \begin{bmatrix}
 u_1\\
 u_2
-\end{bmatrix}}^\bold{u} =
+\end{bmatrix}}^\mathbf{u} =
 \overbrace{\begin{bmatrix}
 -1&1\\
 4&1
@@ -404,14 +404,14 @@ u_2
 \begin{bmatrix}
 c_1e^{-3x}\\
 c_2e^{2x}
-\end{bmatrix}}^\bold{u}=
+\end{bmatrix}}^\mathbf{u}=
 \begin{bmatrix}
 -c_1e^{-3x}+c_2e^{2x} \\
 4c_1e^{-3x}+c_2e^{2x}
 \end{bmatrix}
 $$
 
-Ici, on a théoriquement fini. Si jamais on a des conditions sur $y_i(0) = c, c\in\R$, on peut déterminer $c_1$ et $c_2$. Disons que $y_1(0)=1$ et $y_2(0)=6$, donc : 
+Ici, on a théoriquement fini. Si jamais on a des conditions sur $y_i(0) = c, c\in\mathbb{R}$, on peut déterminer $c_1$ et $c_2$. Disons que $y_1(0)=1$ et $y_2(0)=6$, donc : 
 
 $$
 \begin{cases}
@@ -429,7 +429,7 @@ y_2= 4e^{-3x}+2e^{2x}
 
 $$
 
-**Théorème**. Si $M$ est une matrice diagonalisable, donc la solution générale d’un système peut être exprimé comme : $\bold{y} = \sum_i^n c_ie^{\lambda_i x}\bold{v}_i$, où $\lambda_i$ est le valeur propre associé et $\bold{v}_i$ est le vecteur propre associé (ou vecteur en colonne $i$ de la matrice de passage $P$).
+**Théorème**. Si $M$ est une matrice diagonalisable, donc la solution générale d’un système peut être exprimé comme : $\mathbf{y} = \sum_i^n c_ie^{\lambda_i x}\mathbf{v}_i$, où $\lambda_i$ est le valeur propre associé et $\mathbf{v}_i$ est le vecteur propre associé (ou vecteur en colonne $i$ de la matrice de passage $P$).
 
 ## Application aux suites récurrentes
 

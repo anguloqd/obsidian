@@ -90,7 +90,7 @@ $$
 
 - Si $X\sim\mathcal{F}(d_1,d_2)$, donc $1/X \sim \mathcal{F}(d_2,d_1)$
 - Si $X\sim t(k)$, alors $X^2 \sim \mathcal{F}(1,k)$
-- Si $X\sim\mathcal{N}(0,1)$, alors $X^2\sim\mathcal{F}(1,\infin)$
+- Si $X\sim\mathcal{N}(0,1)$, alors $X^2\sim\mathcal{F}(1,\infty)$
 
 # Théorèmes limites
 
@@ -99,7 +99,7 @@ $$
 Soit $(X_n)$ une suite de variables aléatoires. On dit que $(X_n)$ converge en loi vers un certain $X$ si et seulement si…
 
 $$
-\lim_{x \rightarrow\infin}F_{X_n}(x)=F_X(x), \forall x \in \R
+\lim_{x \rightarrow\infty}F_{X_n}(x)=F_X(x), \forall x \in \mathbb{R}
 $$
 
 Où $F_{X_i}(x)$ est la fonction de répartition de la V.A. $X_i$.
@@ -109,7 +109,7 @@ Où $F_{X_i}(x)$ est la fonction de répartition de la V.A. $X_i$.
 Soit $(X_n)$ une suite de V.A. iid. qui admettent la même espérance $\mu$ et le même ecart-type $\sigma$ (déjà conséquence de iid). Alors, la moyenne empirique tend vers $\mu$ (la moyenne théorique) quand $n$ tend vers l’infini.
 
 $$
-\lim_{n\rightarrow\infin}\bar{X_n}=\lim_{n\rightarrow\infin}\frac{1}{n}\sum_{i=0}^nx_i=\mu
+\lim_{n\rightarrow\infty}\bar{X_n}=\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{i=0}^nx_i=\mu
 $$
 
 ## Théorème centrale de la limite
@@ -117,7 +117,7 @@ $$
 Soit $(X_n)$ une suite de V.A. iid. qui admettent la même espérance $\mu$ et le même ecart-type **fini $\sigma$** (déjà conséquence de iid). Alors, la moyenne de ces V.A tend vers une loi normale $\mathcal{N}(\mu,\sigma^2/n)$, mais plus formellement :
 
 $$
-\lim_{n\rightarrow\infin} \sqrt{n}(\bar{X}_n-\mu)=\mathcal{N}(0,\sigma^2)
+\lim_{n\rightarrow\infty} \sqrt{n}(\bar{X}_n-\mu)=\mathcal{N}(0,\sigma^2)
 $$
 
 ## Approximation d’une binomiale par une normale
@@ -132,5 +132,5 @@ Si l’une des ces conditions est vérifié, on peut dire que $\mathcal{B}(n,p) 
 
 ## Par rapport à $\chi^2$, Student et Fisher
 
-- Si $X\sim\mathcal{F}(d_1,d_2)$, alors $\lim_{d_2\rightarrow\infin} d_1X =\chi^2(d_1)$
-- Student converge à une normale centrée-réduite : $\lim_{k\rightarrow\infin} t(k) = \mathcal{N}(0,1)$
+- Si $X\sim\mathcal{F}(d_1,d_2)$, alors $\lim_{d_2\rightarrow\infty} d_1X =\chi^2(d_1)$
+- Student converge à une normale centrée-réduite : $\lim_{k\rightarrow\infty} t(k) = \mathcal{N}(0,1)$

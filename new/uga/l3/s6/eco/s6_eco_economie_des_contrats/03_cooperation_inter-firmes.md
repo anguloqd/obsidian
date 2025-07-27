@@ -108,7 +108,7 @@ Ceci finit dans une situation où A et B se trahissent tous le coups du jeu.
 On va utiliser le concept de la Valeur Actuelle Nette. On compare les utilités perçues en t=1, t=2, …, t=n, avec \delta, \delta^2, …, \delta^n. La VAN du profits est alors
 
 $$
-VAN(\pi) = \sum_{i=0}^\infin \delta^i\pi_i
+VAN(\pi) = \sum_{i=0}^\infty \delta^i\pi_i
 $$
 
 …

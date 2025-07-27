@@ -21,7 +21,7 @@ Une norme et une distance sont aussi des concepts qui ne sont pas représentés 
 
 ## Norme : $||x||$
 
-Une norme est toute fonction $f : x \mapsto ||x|| \in \R^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
+Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
 
 - $||\lambda x|| = |\lambda| ||x||$
 La norme est multiplicative, càd. $f(xy)=f(x)f(y)$
@@ -36,7 +36,7 @@ On peut définir une ***norme issue du produit scalaire*** : $||x|| = \sqrt{\lan
 
 ## Distance : $d(x,y)$
 
-Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \R^+$ qui vérifie ce qui suit :
+Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \mathbb{R}^+$ qui vérifie ce qui suit :
 
 - $d(x,y)=0 \iff x=y$ 
 Si la distance entre deux points est $0$, $x$ et $y$ sont à la même position
@@ -132,19 +132,19 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 4. Pour $v_n$, on l’orthogonalise p.r. à $\{v_{n-1}\}$, puis on le normalise et on finit avec $e_n$.
 5. La base orthonormée finale sera finalement donné par $\{e_1, e_2, \dots, e_n\}$.
 
-Plus mathématiquement, et soit $p_\bold{u}(\bold{v})=\frac{\lang \bold{u},\bold{v} \rang}{\lang \bold{u},\bold{u} \rang} \cdot \bold{u}$ la projection orthogonale de $\bold{v}$ sur $\bold{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
+Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\lang \mathbf{u},\mathbf{v} \rang}{\lang \mathbf{u},\mathbf{u} \rang} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
 
 $$
 \begin{align*}
-&&\bold{u}_1 = \bold{v}_1 &&\longrightarrow &&\bold{e}_1=\frac{\bold{u}_1}{||\bold{u}_1||} \\
+&&\mathbf{u}_1 = \mathbf{v}_1 &&\longrightarrow &&\mathbf{e}_1=\frac{\mathbf{u}_1}{||\mathbf{u}_1||} \\
 
-&&\bold{u}_2 = \bold{v_2} - p_{\bold{u}_1}(\bold{v}_2) &&\longrightarrow &&\bold{e}_2=\frac{\bold{u}_2}{||\bold{u}_2||} \\
+&&\mathbf{u}_2 = \mathbf{v_2} - p_{\mathbf{u}_1}(\mathbf{v}_2) &&\longrightarrow &&\mathbf{e}_2=\frac{\mathbf{u}_2}{||\mathbf{u}_2||} \\
 
-&&\bold{u}_3 = \bold{v_3} - p_{\bold{u}_1}(\bold{v}_3) - p_{\bold{u}_2}(\bold{v}_3)  &&\longrightarrow &&\bold{e}_3=\frac{\bold{u}_3}{||\bold{u}_3||} \\
+&&\mathbf{u}_3 = \mathbf{v_3} - p_{\mathbf{u}_1}(\mathbf{v}_3) - p_{\mathbf{u}_2}(\mathbf{v}_3)  &&\longrightarrow &&\mathbf{e}_3=\frac{\mathbf{u}_3}{||\mathbf{u}_3||} \\
 
 && &&\vdots \\
 
-&&\bold{u}_k = \bold{v}_k - \sum_{i=1}^{k-1} p_{\bold{u}_i}(\bold{v}_k)&&\longrightarrow &&\bold{e}_k=\frac{\bold{u}_k}{||\bold{u}_k||} \\
+&&\mathbf{u}_k = \mathbf{v}_k - \sum_{i=1}^{k-1} p_{\mathbf{u}_i}(\mathbf{v}_k)&&\longrightarrow &&\mathbf{e}_k=\frac{\mathbf{u}_k}{||\mathbf{u}_k||} \\
 
 \end{align*}
 $$

@@ -10,7 +10,7 @@ $$
 
 L’interprétation est que la probabilité que la valeur de $X$ soit à $k$ écart-types ou plus de la moyenne $\mu$ est plus petit que $\frac 1 {k^2}$. C’est un théorème assez générale, utile parce qu’il y a peu de conditions sur la loi de $X$, mais pas trop utile parce la borne supérieure $\frac 1 {k^2}$ est assez grande comme borne.
 
-- $X$ prend de valeurs dans tout $\R$.
+- $X$ prend de valeurs dans tout $\mathbb{R}$.
 - La moyenne $μ$ est finie.
 - La variance $σ$ est différent de zéro.
 - Cette inégalité est seulement utile quand $k > 1$.

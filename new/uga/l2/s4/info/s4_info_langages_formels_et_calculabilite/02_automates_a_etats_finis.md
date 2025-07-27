@@ -67,7 +67,7 @@ Une succession immédiate est une relation entre deux configurations notée “$
 
 ![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_7.png)
 
-Une succession est une relation entre deux configurations notée “$\rightarrow^*$”, comme $(q_1, w_1) \rightarrow^* (q_n, w_n)$. Elle est vérifiée si et seulement si $\forall i \in \N : 1 \le i \le n, (q_{i-1},w_{i-1}) \rightarrow (q_i,w_i)$. Intuitivement, si entre la configuration initial et la configuration final ils existent des configurations qui se succèdent immédiatement jusqu’à arriver à la configuration finale.
+Une succession est une relation entre deux configurations notée “$\rightarrow^*$”, comme $(q_1, w_1) \rightarrow^* (q_n, w_n)$. Elle est vérifiée si et seulement si $\forall i \in \mathbb{N} : 1 \le i \le n, (q_{i-1},w_{i-1}) \rightarrow (q_i,w_i)$. Intuitivement, si entre la configuration initial et la configuration final ils existent des configurations qui se succèdent immédiatement jusqu’à arriver à la configuration finale.
 
 Dans cette dernière relation, il existe le cas particulier $n=0$ définit à part, où la configuration initiale et finale sont la même, et donc on définit que $(q, w) \rightarrow^* (q,w)$. Cette dernière proposition implique que **la relation de succession (non immédiate) est réflexive** ($aRa$ vrai).
 

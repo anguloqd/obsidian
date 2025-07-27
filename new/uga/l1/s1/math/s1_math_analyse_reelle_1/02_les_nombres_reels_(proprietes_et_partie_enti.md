@@ -32,18 +32,18 @@ On dit qu'en ensemble $E$ muni d'opérations $+, ×$ et de la relation d'ordre $
 - $E$ muni de $+, ×$ et $≤$ est un corps totalement ordonné,
 - $E$ satisfait la propriété de la borne supérieure.
 
-Il existe un ensemble vérifiant les axiomes des nombres réels. Cet ensemble est noté $\R$ et appelé corps des réels.
+Il existe un ensemble vérifiant les axiomes des nombres réels. Cet ensemble est noté $\mathbb{R}$ et appelé corps des réels.
 
-# Propriétés de $\R$
+# Propriétés de $\mathbb{R}$
 
 ## Borne supérieure et “inférieure”
 
-Par définition, $\R$ possède la propriété de la borne supérieure (toute partie non vide majorée possède une borne supérieure). x est la borne supérieure de A, une partie non-vide de \R, si :
+Par définition, $\mathbb{R}$ possède la propriété de la borne supérieure (toute partie non vide majorée possède une borne supérieure). x est la borne supérieure de A, une partie non-vide de \mathbb{R}, si :
 
 - $\forall a \in A, a \le x$
 - $\forall \varepsilon > 0, \exists a \in A : a > x-\varepsilon$
 
-Par passage à l'opposé, il possède aussi la " propriété de la borne inférieure " (toute partie non vide minorée possède une borne inférieure). x est la borne inférieure de A, une partie non-vide de \R, si :
+Par passage à l'opposé, il possède aussi la " propriété de la borne inférieure " (toute partie non vide minorée possède une borne inférieure). x est la borne inférieure de A, une partie non-vide de \mathbb{R}, si :
 
 - $\forall a \in A, x \le a$
 - $\forall \varepsilon > 0, \exists a \in A, a < x + \varepsilon$
@@ -54,5 +54,5 @@ Par passage à l'opposé, il possède aussi la " propriété de la borne inféri
     
     ![image (48).png](ressources/02_les_nombres_reels_(proprietes_et_partie_enti_image_(48).png)
     
-- **Propriété d’Archimède** : pour tout $x, y ∈ \R$ avec $y > 0$, il existe $n ∈ \N$ tel que $n \cdot y > x$.
-- **Propriété de l'existence d'une partie entière** : pour tout $x ∈ \R$, il existe un unique entier $n ∈ \Z$ tel que $n ≤ x < n + 1$. Cet entier n s'appelle la partie entière de $x$, notée $E(x)$ ou $\lfloor x\rfloor$.
+- **Propriété d’Archimède** : pour tout $x, y ∈ \mathbb{R}$ avec $y > 0$, il existe $n ∈ \mathbb{N}$ tel que $n \cdot y > x$.
+- **Propriété de l'existence d'une partie entière** : pour tout $x ∈ \mathbb{R}$, il existe un unique entier $n ∈ \Z$ tel que $n ≤ x < n + 1$. Cet entier n s'appelle la partie entière de $x$, notée $E(x)$ ou $\lfloor x\rfloor$.

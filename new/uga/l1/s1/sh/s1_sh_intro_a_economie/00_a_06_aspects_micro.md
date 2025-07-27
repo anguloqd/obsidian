@@ -128,7 +128,7 @@ Le résultat de l'opération est connu sous le nom de **coefficient d'élasticit
 - Si l'élasticité $\epsilon$ est comprise entre $0$ et $1$, la demande est **inelastique**.
 - Si l'élasticité $\epsilon = 1$, la demande est **unitairement élastique**.
 - Si l'élasticité $\epsilon > 1$, la demande est **élastique**.
-- Si l'élasticité $\epsilon \rightarrow \infin$., la demande est **parfaitement élastique**.
+- Si l'élasticité $\epsilon \rightarrow \infty$., la demande est **parfaitement élastique**.
 
 ### Les recettes totales et l'élasticité-prix de la demande
 
@@ -170,7 +170,7 @@ On utilise également souvent la méthode du point milieu pour calculer rigoureu
 - Si l'élasticité $\epsilon$ est comprise entre $0$ et $1$, la offre est **inelastique**.
 - Si l'élasticité $\epsilon = 1$, la offre est **unitairement élastique**.
 - Si l'élasticité $\epsilon > 1$, la offre est **élastique**.
-- Si l'élasticité $\epsilon \rightarrow \infin$., la offre est **parfaitement élastique**.
+- Si l'élasticité $\epsilon \rightarrow \infty$., la offre est **parfaitement élastique**.
 
 Dans les courbes d'offre où la pente n'est pas constante (relation linéaire) mais réellement courbe, on peut identifier que plus le prix augmente, plus la courbe devient inélastique. Cela est dû au fait que les entreprises ont généralement une capacité maximale de production, et qu'il est clair que si le prix augmente un peu à des niveaux bas, elles peuvent augmenter leur production, mais lorsque le prix augmente à des niveaux élevés, il est plus difficile d'augmenter leur production.
 
@@ -291,7 +291,7 @@ Ce qui détermine cette répartition de la taxe dépend de l'élasticité des fo
 
 Si les biens étaient classés selon s'ils sont ***exclusifs*** (on peut empêcher quelqu'un d'utiliser ce bien) et ***rivaux dans la consommation*** (la consommation de l'un réduit la capacité de consommation d'un autre), on obtiendrait 4 catégories :
 
-![Untitled](ressources/00_a_06_aspects_micro_untitled.webp)
+![Untitled](00_a_06_aspects_micro_untitled.webp)
 
 ## Problèmes de biens publics
 

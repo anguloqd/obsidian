@@ -40,7 +40,7 @@ Un jeux simultané est un jeux où les joueurs prennent leurs stratégies au mê
 
 - L’ensemble de joueurs : $N = \{1, \dots, n\}$.
 - L’ensemble non vide des actions du joueur i : $S_i = \{a_1, \dots, a_m\}$
-- La fonction d’utilité pour le joueur $i$ asocié à chaque situation (combinaison d’actions de tous les joueurs). $u_i(S) : \underbrace{S_1 \times \dots \times S_n}_{S} \mapsto \R$.
+- La fonction d’utilité pour le joueur $i$ asocié à chaque situation (combinaison d’actions de tous les joueurs). $u_i(S) : \underbrace{S_1 \times \dots \times S_n}_{S} \mapsto \mathbb{R}$.
 
 Les concepts et vocabulaire de base sont les suivants :
 

@@ -12,7 +12,7 @@ La réalité est souvent entachée d’erreur. Cette démarche permet d’en ten
 
 ## Échantillon
 
-On considère une suite de variables aléatoires $(X_i)_{i∈\N}$ identiques et indépendantes. Un échantillon de taille $d$ est l’ensemble des variables $(X_1, \dots, X_d)$. Une réalisation de cet échantillon est l’observation $(x_1, \dots, x_d)$. On travaillera alors sous la condition $(X_1 = x_1, \dots, X_d = x_d)$.
+On considère une suite de variables aléatoires $(X_i)_{i∈\mathbb{N}}$ identiques et indépendantes. Un échantillon de taille $d$ est l’ensemble des variables $(X_1, \dots, X_d)$. Une réalisation de cet échantillon est l’observation $(x_1, \dots, x_d)$. On travaillera alors sous la condition $(X_1 = x_1, \dots, X_d = x_d)$.
 
 ## Estimation
 

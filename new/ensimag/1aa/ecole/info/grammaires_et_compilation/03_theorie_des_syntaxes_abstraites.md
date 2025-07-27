@@ -36,8 +36,8 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 >
 > Appliquer cette idée avec :
 >
-> - $D = \mathcal P(V^∗)$ pour la sémantique des $\bold{Rexp}$ (comme ensemble de mots)
-> - $D =$ ensemble des automates finis (non-déterministes avec $ϵ$-transitions) pour générer l’automate associé à une $\bold{Rexp}$. Calculer l’automate de $A_\text{dot}(A_a, A_a)$ avec vos définitions
+> - $D = \mathcal P(V^∗)$ pour la sémantique des $\mathbf{Rexp}$ (comme ensemble de mots)
+> - $D =$ ensemble des automates finis (non-déterministes avec $ϵ$-transitions) pour générer l’automate associé à une $\mathbf{Rexp}$. Calculer l’automate de $A_\text{dot}(A_a, A_a)$ avec vos définitions
 
 ![WhatsApp Image 2025-01-12 at 19.49.07.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.49.07.jpeg)
 
@@ -109,7 +109,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 > [!question] ❓
 >
-> Donner le système d’équations algébrique associé a cette signature $Σ_{TP}$ . Exprimer ce système en syntaxe BNF avec attributs : pour se ramener a un ensemble fini de constructeurs, on placera $\N\backslash{0}$ en attribut synthétisé du constructeur $var$.
+> Donner le système d’équations algébrique associé a cette signature $Σ_{TP}$ . Exprimer ce système en syntaxe BNF avec attributs : pour se ramener a un ensemble fini de constructeurs, on placera $\mathbb{N}\backslash{0}$ en attribut synthétisé du constructeur $var$.
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_8.jpg)
 

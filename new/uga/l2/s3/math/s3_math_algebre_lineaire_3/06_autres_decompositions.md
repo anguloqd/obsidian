@@ -63,9 +63,9 @@ Une matrice symétrique est une matrice $M$ telle que $M = M^T$. Une propriété
 
 Une matrice de covariance est une matrice $M$ qui contient la covariances de deux coordonnés $i,j$ d’un vecteur aléatoire (càd. un vecteur qui contient des variables aléatoires ou variables statistiques) dans le coefficient $(i,j)$ de la matrice. 
 
-Par exemple, supposons des variables statistiques d’un vin : prix $X_1$, dégrées d’alcool $X_2$ et âge $X_3$. Alors le vecteur colonne aléatoire qui leur représentent est $\bold{X} = (X_1,X_2,X_3)^T$.
+Par exemple, supposons des variables statistiques d’un vin : prix $X_1$, dégrées d’alcool $X_2$ et âge $X_3$. Alors le vecteur colonne aléatoire qui leur représentent est $\mathbf{X} = (X_1,X_2,X_3)^T$.
 
-On construit alors une matrice de covariance à partir du vecteur aléatoire $\bold{X}$ :
+On construit alors une matrice de covariance à partir du vecteur aléatoire $\mathbf{X}$ :
 
 $$
 M=
@@ -125,23 +125,23 @@ Notons que dans $D$, il aura des valeurs propres plus grands qu’autres, ce qui
 
 Il faut garder en tête que la plus de variance un vecteur garde du *dataset*, la plus d’information il en contient ! 
 
-Chaque fois qu’on prend des vins (vecteurs ligne $\bold{x}_1, \dots, \bold{x}_n$) et on prend sa combinaison linéaire avec le vecteur de plus grand $\lambda$, $\bold{w}_1$, on obtient une constante résultat $(F_1)_i$ qui est le “facteur” du vin $i$ sous $\bold{w}_1$. Supposons qu’on garde tous les facteurs $(F_1, \dots, F_n)$ comme des données dans le vecteur ligne $\bold{F}_1$ associé au vecteur propre $\bold{w}_1$, alors il en résulte que $\bold{w}_1$ est tel vecteur colonne qui maximise la variance de $\bold{F}_1$. Formellement,
+Chaque fois qu’on prend des vins (vecteurs ligne $\mathbf{x}_1, \dots, \mathbf{x}_n$) et on prend sa combinaison linéaire avec le vecteur de plus grand $\lambda$, $\mathbf{w}_1$, on obtient une constante résultat $(F_1)_i$ qui est le “facteur” du vin $i$ sous $\mathbf{w}_1$. Supposons qu’on garde tous les facteurs $(F_1, \dots, F_n)$ comme des données dans le vecteur ligne $\mathbf{F}_1$ associé au vecteur propre $\mathbf{w}_1$, alors il en résulte que $\mathbf{w}_1$ est tel vecteur colonne qui maximise la variance de $\mathbf{F}_1$. Formellement,
 
 $$
-\bold{w}_1=\argmax_{||\bold{w}||=1} \left\{ \sum_i(F_1)^2_i \right\}=\argmax_{||\bold{w}||=1} \left\{ \sum_i(\bold{x}_i \cdot \bold{w})^2 \right\}
+\mathbf{w}_1=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(F_1)^2_i \right\}=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(\mathbf{x}_i \cdot \mathbf{w})^2 \right\}
 $$
 
-On pourra prendre un autre vecteur colonne $\bold{w}_i$ et faire la même opération avec chaque vin $\bold{x}_i$, et la variance des facteurs résultats dans $\bold{F}_i$ sera plus petite que $\bold{F}_1$. De même, le vecteur propre $\bold{w}_2$ est tel qui maximise la variance et est différent de $\bold{w}_1$, et comme ça successivement.
+On pourra prendre un autre vecteur colonne $\mathbf{w}_i$ et faire la même opération avec chaque vin $\mathbf{x}_i$, et la variance des facteurs résultats dans $\mathbf{F}_i$ sera plus petite que $\mathbf{F}_1$. De même, le vecteur propre $\mathbf{w}_2$ est tel qui maximise la variance et est différent de $\mathbf{w}_1$, et comme ça successivement.
 
 Normalement avec l’ACP, on veut avoir des données originalement dans beaucoup de dimensions représentables en un nombre de dimensions qu’on puisse voir, donc normalement on garde au maximum les trois vecteurs propres qui contiennent le plus de variance totale du *dataset* ou nuage de points original.
 
 ### Étape #4 : reconstruction des données réduites
 
-Dans l’exemple du vin, on garde $\bold{w}_1$ et $\bold{w}_2$. Seulement avec eux deux, on peut reconstruire $86\%$ de la variance totale, c’est donc un sacrifice qui vaut le coup. Finalement, on détermine $F_1$ et $F_2$ de chaque vin et on graphique la nouvelle nuage en $2$ dimensions. Le résultat devrait semble quelque chose comme suit :
+Dans l’exemple du vin, on garde $\mathbf{w}_1$ et $\mathbf{w}_2$. Seulement avec eux deux, on peut reconstruire $86\%$ de la variance totale, c’est donc un sacrifice qui vaut le coup. Finalement, on détermine $F_1$ et $F_2$ de chaque vin et on graphique la nouvelle nuage en $2$ dimensions. Le résultat devrait semble quelque chose comme suit :
 
-![Il faudrait dire que les vecteurs $\bold{w}_1$ et $\bold{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled_1.png)
+![Il faudrait dire que les vecteurs $\mathbf{w}_1$ et $\mathbf{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled_1.png)
 
-Il faudrait dire que les vecteurs $\bold{w}_1$ et $\bold{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.
+Il faudrait dire que les vecteurs $\mathbf{w}_1$ et $\mathbf{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.
 
 ![Un autre exemple sorti de Wikipédia d’un *dataset* de dimension réduite*.* Notons les clairs groupassions en vert et bleu des données après la transformation.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled_2.png)
 

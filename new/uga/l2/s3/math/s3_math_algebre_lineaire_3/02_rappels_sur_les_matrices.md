@@ -10,12 +10,12 @@ $$
 \det(M)=\det(c_1,\dots,c_n)
 $$
 
-Donc, escalader **UNE SEULE** colonne multiplie **TOUT** le déterminant de la matrice originale par $\lambda$. Similairement, additionner un vecteur colonne $\bold{x}$ de constantes à une colonne de la matrice $M$ nous donne le deuxième résultat.
+Donc, escalader **UNE SEULE** colonne multiplie **TOUT** le déterminant de la matrice originale par $\lambda$. Similairement, additionner un vecteur colonne $\mathbf{x}$ de constantes à une colonne de la matrice $M$ nous donne le deuxième résultat.
 
 $$
 \det(c_1,\dots, \lambda c_i,\dots, c_n)= \lambda\det(c_1,\dots,c_n)\text{, et}
 \newline
-\det(c_1+\bold{x}, \dots, c_n) = \det(c_1,\dots,c_n)+\det(\bold{x},\dots,c_n)
+\det(c_1+\mathbf{x}, \dots, c_n) = \det(c_1,\dots,c_n)+\det(\mathbf{x},\dots,c_n)
 $$
 
 **Note** : le prof. a fait ça (factoriser un colonne) dans le 1er control, 2ème exo de diagonalisation.
@@ -23,7 +23,7 @@ $$
 On peut finalement écrire l’opération d’escalade et somme sur une même ligne de manière plus compacte comme suit :
 
 $$
-\det(c_1,\dots,\lambda c_i + \bold{x}, \dots, c_n) = \lambda\det(c_1,\dots,c_i,\dots c_n) +\det(c_1,\dots,\bold{x},\dots,c_n)
+\det(c_1,\dots,\lambda c_i + \mathbf{x}, \dots, c_n) = \lambda\det(c_1,\dots,c_i,\dots c_n) +\det(c_1,\dots,\mathbf{x},\dots,c_n)
 $$
 
 On en déduit que si $M$ est une matrice carré de taille $n$, donc $\det(\lambda M) = \lambda^n \det(M)$.

@@ -5,7 +5,7 @@
 ## Le théorème : une approximation d’une loi binomiale
 
 $$
-Z_n = \frac{X_n - np}{\sqrt{np(1-p)}} = \frac{X_n - \mu}{\sigma} \implies \left(\lim_{n\rightarrow\infin} Z_n\right)\sim\mathcal N(0,1)
+Z_n = \frac{X_n - np}{\sqrt{np(1-p)}} = \frac{X_n - \mu}{\sigma} \implies \left(\lim_{n\rightarrow\infty} Z_n\right)\sim\mathcal N(0,1)
 $$
 
 Si $X_n$ est une V.A. de ordre $n$ suivant une loi binomiale, donc $Z_n$ serait une V.A. normale de moyenne $0$ et variance $1$. On doit respecter, par contre, quelques conditions :

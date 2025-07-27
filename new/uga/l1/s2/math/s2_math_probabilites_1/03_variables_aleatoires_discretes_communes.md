@@ -50,7 +50,7 @@ $$
 
 ### Définition de variance et théorèmes
 
-Un moment est une notion sortie de la physique. Si $n \in \N$ et $X$ est une V.A. avec espérance finie, donc $\mathbb{E}[X^n]$ est le moment d’ordre $n$ de $X$. Encore plus, $\mathbb{E}[(X-\mathbb{E}[X])^n]$ est le moment *centré* d’ordre $n$ de $X$. “Centré” veut dire centré autour de la moyenne, car à chaque valeur de $X$ on soustrait la moyenne, donc l’ensemble qui en ressort a comme nouveau centre $0$.
+Un moment est une notion sortie de la physique. Si $n \in \mathbb{N}$ et $X$ est une V.A. avec espérance finie, donc $\mathbb{E}[X^n]$ est le moment d’ordre $n$ de $X$. Encore plus, $\mathbb{E}[(X-\mathbb{E}[X])^n]$ est le moment *centré* d’ordre $n$ de $X$. “Centré” veut dire centré autour de la moyenne, car à chaque valeur de $X$ on soustrait la moyenne, donc l’ensemble qui en ressort a comme nouveau centre $0$.
 
 La variance est le moment d’ordre $2$ de $X$, c’est-à,dire, la valeur espérée du carré de la somme des écarts de chaque observation par rapport à la moyenne. Intuitivement, elle est simplement une mesure de dispersion de la moyenne, exprimée en unités carrées. **La variance est toujours positive !**
 
@@ -134,7 +134,7 @@ C'est la probabilité, dans une suite de $k$ expériences, d'observer en premier
 C’est la probabilité d’observer une quantité k de événements dans une unité de temps de référence. Le paramètre $\lambda$ représente la quantité moyenne d’événements dans une unité de temps.
 
 $$
-X\sim\text{Poisson}(\lambda) \iff \mathbb P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}, \text{ où } \lambda\in[0,\infin) \text{ et } k\in\N
+X\sim\text{Poisson}(\lambda) \iff \mathbb P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}, \text{ où } \lambda\in[0,\infty) \text{ et } k\in\mathbb{N}
 $$
 
 - **Espérance** : $E[X]=λ$
@@ -151,15 +151,15 @@ Basiquement, l’entier ou les deux entiers dans l’intervalle inclus.
 **Extra**. Un calcul intéressant est la somme de des probabilités de chaque résultat possible, c’est-à-dire de chaque $k$ possible :
 
 $$
-\begin{align*}\mathbb P(X=0)+\mathbb P(X=1)+\mathbb P(X=2)+\dots &= \sum_{k=0}^\infin\mathbb P(X=k)
-\\[11pt] &=\sum_{k=0}^\infin e^{-\lambda}\frac{\lambda^k}{k!}
-\\[11pt] &= e^{-\lambda}\sum_{k=0}^\infin\frac{\lambda^k}{k!}
+\begin{align*}\mathbb P(X=0)+\mathbb P(X=1)+\mathbb P(X=2)+\dots &= \sum_{k=0}^\infty\mathbb P(X=k)
+\\[11pt] &=\sum_{k=0}^\infty e^{-\lambda}\frac{\lambda^k}{k!}
+\\[11pt] &= e^{-\lambda}\sum_{k=0}^\infty\frac{\lambda^k}{k!}
 \\[14pt] &=e^{-\lambda}(e^\lambda)
 \\[5pt] &= 1
 \end{align*}
 $$
 
-Trivial : si on somme toute les possibilités, c'est sûr qu'on arrive à $1$. **Ce qui est intéressant ce que il apparaît l'expansion de Taylor de $e^x$ dans $\sum_{k=0}^\infin\frac{\lambda^k}{k!}$, si on suppose que $x=\lambda$**.
+Trivial : si on somme toute les possibilités, c'est sûr qu'on arrive à $1$. **Ce qui est intéressant ce que il apparaît l'expansion de Taylor de $e^x$ dans $\sum_{k=0}^\infty\frac{\lambda^k}{k!}$, si on suppose que $x=\lambda$**.
 
 ### Approximation d’une loi binomiale avec la loi de Poisson
 
@@ -204,8 +204,8 @@ Il y a $10$ boules : $4$ rouges et $6$ bleues. Je fixe la taille des échantillo
 
 ### Approximer une hypergéométrique avec une binomiale
 
-Si $N\longrightarrow\infin$ et $\lim_{N\rightarrow\infin} \frac K N = p$, on peut donc établir l’approximation qui suit :
+Si $N\longrightarrow\infty$ et $\lim_{N\rightarrow\infty} \frac K N = p$, on peut donc établir l’approximation qui suit :
 
 $$
-\lim_{N\rightarrow\infin}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}
+\lim_{N\rightarrow\infty}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}
 $$

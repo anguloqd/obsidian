@@ -43,7 +43,7 @@ Continuant avec l’exemple, si on suppose un dé non-pipé, donc $\mathbb{P}(X 
 
 On peut se demander pourquoi ne pas choisir un autre $\mathcal{A}$ différent de $\mathcal{P}(\Omega)$. Pour le cas où $\Omega$ est dénombrable, on peut se contenter toujours faisant cette choix de $\mathcal{A}$.
 
-Par contre, pour le cas non dénombrable comme $\Omega = \R$, si on définissait $\mathcal{A}=\mathcal{P}(\R)$, il serait faux que choisir un sous-ensemble quelconque de $\Omega$ soit un événement. Ceci est hors du cours, mais c’est une conséquence du théorème d’Ulam.
+Par contre, pour le cas non dénombrable comme $\Omega = \mathbb{R}$, si on définissait $\mathcal{A}=\mathcal{P}(\mathbb{R})$, il serait faux que choisir un sous-ensemble quelconque de $\Omega$ soit un événement. Ceci est hors du cours, mais c’est une conséquence du théorème d’Ulam.
 
 Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}(\Omega)$  et non $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ comme dans le cas dénombrable.
 
@@ -64,7 +64,7 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 **$\sigma$-additivité d’intervalles**. Imaginons que notre espace d’événements $\mathcal A$ contient des intervalles, qu’on notera $B_n$. On en prend une famille d’intervalles et on imagine que les intervalles devient de plus en plus grandes, c’est-à-dire, le prochain intervalle contient l’actuel, ou $B_n \subset B_{n+1}$.  Donc :
 
 $$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infin} \mathbb P(B_n)
+\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} \mathbb P(B_n)
 $$
 
 En outre, et ignorant la condition d’agrandissement du prochain intervalle $B_{n+1}$, on a la propriété suivante. Elle n’est pas une égalité stricte car il se peut que les $B_n$ ne soient pas disjoints.
@@ -95,7 +95,7 @@ Ce dernier élément du triplet permet de définir un autre ensemble important :
 Dans le cadre de la statistique paramétrique, on suppose que $\mathbb F$ est en bijection avec un ensemble de paramètres $\Theta$ appartenant à un espace de dimension finie $n$. Plus simplement, chaque fonction de répartition $F$ dans $\mathbb F$ correspond à un unique paramètre $\theta$ dans $\Theta$ et vice-versa.
 
 $$
-\mathbb F = \left\{F(\cdot,\theta) : \theta\in\Theta \subset \R^n \right\}
+\mathbb F = \left\{F(\cdot,\theta) : \theta\in\Theta \subset \mathbb{R}^n \right\}
 $$
 
 Le point $\cdot$ serait éventuellement la place d’une variable cumulative $x$ de l’élément aléatoire $X$ d’intérêt (on parle, finalement, d’une fonction de répartition). La valeur $F(x,\theta)$ serait donc “la probabilité d’observer une valeur inférieur ou égale à $x$ dans notre caractéristique d’intérêt $X$—taille, poids, etc.—, sachant que les paramètres de la population sont $\theta$”.
@@ -180,13 +180,13 @@ $$
 En plus, on peut parler d’un estimateur qui est asymptotiquement sans biais si l’espérance de l’estimateur tend vers l’estimande quand n tend vers l’infini :
 
 $$
-\text{Estimateur asymptotiquement sans biais }\iff \lim_{n\rightarrow \infin}\mathbb E[\hat\theta_n]=\theta
+\text{Estimateur asymptotiquement sans biais }\iff \lim_{n\rightarrow \infty}\mathbb E[\hat\theta_n]=\theta
 $$
 
 Voyons que ce que dit l’équation précédente ce que l’espérance de l’estimateur tend vers l’estimande et non pas l’estimateur lui-même tend vers l’estimande. Par contre, ceci pourrait être le cas. On définit une suite $(\hat\theta_i)_{i\le n}$ et on dit que l’estimateur est convergente en probabilité à l’estimande si :
 
 $$
-\hat\theta_n \rightarrow \theta \text{ en probabilité} \iff \forall \varepsilon>0, \mathbb P\left(\lim_{n\rightarrow\infin}|\hat\theta_n-\theta|<\varepsilon\right)=1
+\hat\theta_n \rightarrow \theta \text{ en probabilité} \iff \forall \varepsilon>0, \mathbb P\left(\lim_{n\rightarrow\infty}|\hat\theta_n-\theta|<\varepsilon\right)=1
 $$
 
 **Théorème**. Tout estimateur sans biais, ou asymptotiquement sans biais, dont la variance tend vers $0$ quand $n$ tend vers l’infini, est convergent.
@@ -384,7 +384,7 @@ Le but est de exprimer la moyenne populationnelle $\mu$ comme une fonction du pa
 
 Il est vrai que le moment le plus utilisé en pratique est le moment d’ordre $1$, càd. la moyenne $\mu=\mathbb E[X]$, et aussi qu’il est naturel d’estimer $\mathbb E[X]$ avec $\bar X$, la moyenne empirique des $X_i$. Cela dit, on peut le faire aussi sur $\mathbb E[X^2]$ avec la moyenne empirique des $X^2_i$, en on généralise avec tous les $k$-moments de $X$, $\mathbb E[X^k]$ avec $X^k_i$.
 
-Pour avoir une meilleure notation, on note $\mu^\prime_k$ le moment d’ordre $k$ de la population, puis $m^\prime_k$ serait le moment d’ordre $k$ échantillonnale, d’où $\mu^\prime_1=\mathbb E[X]$ et $\lim_{n\rightarrow\infin} m^\prime_1 = \mathbb E[X]$, ce qu’on a dit sur le paragraphe précédent.
+Pour avoir une meilleure notation, on note $\mu^\prime_k$ le moment d’ordre $k$ de la population, puis $m^\prime_k$ serait le moment d’ordre $k$ échantillonnale, d’où $\mu^\prime_1=\mathbb E[X]$ et $\lim_{n\rightarrow\infty} m^\prime_1 = \mathbb E[X]$, ce qu’on a dit sur le paragraphe précédent.
 
 En plus, pour chaque $\mu^\prime_k$, on considère qu’il existe une fonction $\varphi_k$ qui prend tous les paramètres et qui nous retourne le moment d’ordre $k$ de la population.
 
@@ -450,10 +450,10 @@ Rappel. $S^{2}$ est la variance “qu’on ne veut pas”, la variance non corri
 On appelle l’estimateur du maximum de vraisemblance (EMV) du paramètre $\theta$, donne l’échantillon réalisé $x$, au $\beta$ tel que
 
 $$
-\theta ^*_{\bold x}\text{est EMV de }\theta\iff\theta^*_{\bold x}=\max_{\theta\in\Theta}L(\theta|\bold x)
+\theta ^*_{\mathbf{x}}\text{est EMV de }\theta\iff\theta^*_{\mathbf{x}}=\max_{\theta\in\Theta}L(\theta|\mathbf{x})
 $$
 
-Bref, on appelle EMV l’input $\theta^*$ qui maximise la fonction de vraisemblance $L$ étant donné un échantillon observé. **Notons donc, pour toute réalisation différente de l’échantillon, on aura un EMV différent aussi, donc EMV est une fonction de l’échantillon $\bold x$.** Ceci étant dit, je vais juste simplifier sa notation à $\theta^*$.
+Bref, on appelle EMV l’input $\theta^*$ qui maximise la fonction de vraisemblance $L$ étant donné un échantillon observé. **Notons donc, pour toute réalisation différente de l’échantillon, on aura un EMV différent aussi, donc EMV est une fonction de l’échantillon $\mathbf{x}$.** Ceci étant dit, je vais juste simplifier sa notation à $\theta^*$.
 
 Par contre, la définition ci-dessus ne nous garantit ni l’existence, ni l’unicité d’un tel estimateur. Pour trouver l’input $\theta$ qui maximise $L$, et supposant que $L$ est deux fois dérivable, on calcule $\theta^*$ tel que
 
@@ -495,10 +495,10 @@ Et ce qui n’est pas possible, car $\text{var}(X) >0$ par définition. Contradi
 
 ### Comportement asymptotique et conditions
 
-Soit $\{\theta^*_n\}$ une suite de $\theta^*$ qui change avec l’augmentation de $n$. Donc, les valeurs de cette suite sont telles qu’elles se distribuent de manière gaussienne quand $n \rightarrow\infin$
+Soit $\{\theta^*_n\}$ une suite de $\theta^*$ qui change avec l’augmentation de $n$. Donc, les valeurs de cette suite sont telles qu’elles se distribuent de manière gaussienne quand $n \rightarrow\infty$
 
 $$
-\lim_{n\rightarrow\infin} \sqrt{n}(\theta^*_n-\theta)\sim\mathcal N\left(0,\frac{1}{I(\theta)}\right) \iff \lim_{n\rightarrow\infin} \theta^*_n\sim\mathcal N\left(\theta,\frac{1}{nI(\theta)}\right)
+\lim_{n\rightarrow\infty} \sqrt{n}(\theta^*_n-\theta)\sim\mathcal N\left(0,\frac{1}{I(\theta)}\right) \iff \lim_{n\rightarrow\infty} \theta^*_n\sim\mathcal N\left(\theta,\frac{1}{nI(\theta)}\right)
 $$
 
 C’est qui est juste une application du théorème central de la limite, donc on cherche que $n\ge30$. On devra admettre à nouveau les conditions pour la nullité de l’espérance du score.

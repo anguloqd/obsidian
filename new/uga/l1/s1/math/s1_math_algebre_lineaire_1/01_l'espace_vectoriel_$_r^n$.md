@@ -1,4 +1,4 @@
-# 01 // l'espace vectoriel $\R^n$
+# 01 // l'espace vectoriel $\mathbb{R}^n$
 
 # Les bases, venant de l'algèbre abstraite
 
@@ -24,10 +24,10 @@ Les propriétés qui suivent découlent de la définition de la somme et multipl
     (Existence de l’inverse additif)
 - 4 propriétés du scalaire :
     - **Neutralité** : $\forall u \in E :1 \cdot u = u$
-    - **Associativité** : $\forall u \in E, \text{ où } \lambda,\mu \in \R. : λ \cdot (µ \cdot u) = (λµ) \cdot u,$
-    - **Distribution d'un scalaire** : $\forall u,v \in E, \text{ où } \lambda\in \R :λ \cdot (u + v) = λ \cdot u + λ \cdot v$
+    - **Associativité** : $\forall u \in E, \text{ où } \lambda,\mu \in \mathbb{R}. : λ \cdot (µ \cdot u) = (λµ) \cdot u,$
+    - **Distribution d'un scalaire** : $\forall u,v \in E, \text{ où } \lambda\in \mathbb{R} :λ \cdot (u + v) = λ \cdot u + λ \cdot v$
     (Distribution valide pour la droite et pour la gauche)
-    - **Distribution d'un vecteur** : $\forall u \in E, \text{ où } \lambda,\mu \in \R : (λ + µ) \cdot u = λ \cdot u + µ \cdot u$
+    - **Distribution d'un vecteur** : $\forall u \in E, \text{ où } \lambda,\mu \in \mathbb{R} : (λ + µ) \cdot u = λ \cdot u + µ \cdot u$
 
 ## Quelques extras
 
@@ -46,15 +46,15 @@ Les propriétés qui suivent découlent de la définition de la somme et multipl
 > - Les arguments des opérations doivent être finis.
 > - Elles doivent aussi contenir des identités, propriétés et axiomes dérivées des opérations.
 
-# $\R^n$ vu comme un espace vectoriel
+# $\mathbb{R}^n$ vu comme un espace vectoriel
 
 ## En dimension 1 et au-delà
 
-L’ensemble des nombres réels $\R$ est souvent représenté par une droite (penser à la droite numérique normale). C’est un espace de dimension 1.
+L’ensemble des nombres réels $\mathbb{R}$ est souvent représenté par une droite (penser à la droite numérique normale). C’est un espace de dimension 1.
 
 De même, on peut commencer à définir des tuples de nombres réels.
 
-- Le plan est formé des couples $(x_1, x_2)$ de nombres réels. Il est noté $\R^2$. C’est un espace à deux dimensions.
-- L’espace de dimension 3 est constitué des triplets de nombres réels $(x_1,x_2, x_3)$. Il est noté $\R^3$.
+- Le plan est formé des couples $(x_1, x_2)$ de nombres réels. Il est noté $\mathbb{R}^2$. C’est un espace à deux dimensions.
+- L’espace de dimension 3 est constitué des triplets de nombres réels $(x_1,x_2, x_3)$. Il est noté $\mathbb{R}^3$.
 
 Dès ici, on défini: la **somme** de deux vecteurs, le **produit** par un scalaire, le **vecteur nul** et **l'opposé** d'un vecteur.

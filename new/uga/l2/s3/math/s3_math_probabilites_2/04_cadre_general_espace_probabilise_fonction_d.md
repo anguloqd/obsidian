@@ -43,7 +43,7 @@ Continuant avec l’exemple, si on suppose un dé non-pipé, donc $\mathbb{P}(X 
 
 On peut se demander pourquoi ne pas choisir un autre $\mathcal{A}$ différent de $\mathcal{P}(\Omega)$. Pour le cas où $\Omega$ est dénombrable, on peut se contenter toujours faisant cette choix de $\mathcal{A}$.
 
-Par contre, pour le cas non dénombrable comme $\Omega = \R$, si on définissait $\mathcal{A}=\mathcal{P}(\R)$, il serait faux que choisir un sous-ensemble quelconque de $\Omega$ soit un événement. Ceci est hors du cours, mais c’est une conséquence du théorème d’Ulam.
+Par contre, pour le cas non dénombrable comme $\Omega = \mathbb{R}$, si on définissait $\mathcal{A}=\mathcal{P}(\mathbb{R})$, il serait faux que choisir un sous-ensemble quelconque de $\Omega$ soit un événement. Ceci est hors du cours, mais c’est une conséquence du théorème d’Ulam.
 
 Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}(\Omega)$  et non $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ comme dans le cas dénombrable.
 
@@ -64,7 +64,7 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 **$\sigma$-additivité d’intervalles**. Imaginons que notre espace d’événements $\mathcal A$ contient des intervalles, qu’on notera $B_n$. On en prend une famille d’intervalles et on imagine que les intervalles devient de plus en plus grandes, c’est-à-dire, le prochain intervalle contient l’actuel, ou $B_n \subset B_{n+1}$.  Donc :
 
 $$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infin} \mathbb P(B_n)
+\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} \mathbb P(B_n)
 $$
 
 En outre, et ignorant la condition d’agrandissement du prochain intervalle $B_{n+1}$, on a la propriété suivante. Elle n’est pas une égalité stricte car il se peut que les $B_n$ ne soient pas disjoints.
@@ -77,7 +77,7 @@ $$
 
 ## La probabilité accumulée jusqu’à un certain point $t$
 
-Soit $\mathbb P$ une loi de probabilité sur $\R$. On définit une fonction de répartition $F$ comme :
+Soit $\mathbb P$ une loi de probabilité sur $\mathbb{R}$. On définit une fonction de répartition $F$ comme :
 
 $$
 F_X(t) = \mathbb P(X\le t)
@@ -109,7 +109,7 @@ Pourquoi on se souci de faire remarquer tout ça ? **Parce qu’il ne faut pas p
 Pour définir une fonction de densité, on part du principe qu’on peut déterminer (ou on connaît déjà) sa fonction de répartition. Particulièrement, s’il existe une telle fonction $f_X(x)$ qui vérifie le condition suivante en bas, $f_X(x)$ est donc la fonction de densité de $\mathbb{P}$.
 
 $$
-\underbrace{F(t)}_{\mathbb P(X\le t)}=\int_{-\infin}^tf_X(x)dx
+\underbrace{F(t)}_{\mathbb P(X\le t)}=\int_{-\infty}^tf_X(x)dx
 $$
 
 **Note**. Il se peut, parfois, que la fonction de répartition existe tant que la fonction de densité non !  Une condition pour que la densité existe est $\lim_{x \longrightarrow \epsilon} \int_{-\epsilon}^{\epsilon} f(x)dx = 0$. La source de problèmes est normalement que la fonction de répartition $F$ est discontinue.
@@ -117,7 +117,7 @@ $$
 La fonction de densité a quelques similitudes avec la loi de probabilité d’une V.A. dénombrable. Particulièrement, il faut qu’elle vérifie les deux axiomes d’une loi de probabilité : quelle soit toujours positive et que la somme de probabilités soit égale à $1$.
 
 $$
-\forall x\in \R,\hspace{4pt} f_X(x)\ge0 \space\text{ et }\space\int_\Omega f_X(x)dx = 1
+\forall x\in \mathbb{R},\hspace{4pt} f_X(x)\ge0 \space\text{ et }\space\int_\Omega f_X(x)dx = 1
 $$
 
 Ici, $\Omega$ est un ensemble des valeurs que la variable aléatoire $X$ peut prendre.

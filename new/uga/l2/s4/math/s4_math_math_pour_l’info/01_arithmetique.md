@@ -4,7 +4,7 @@
 
 ## Définition
 
-Diviser un nombre naturel $A$ (strictement naturel !) par un autre naturel $B$ est de trouver $Q,R\in\N$ qui vérifient l’équation suivante :
+Diviser un nombre naturel $A$ (strictement naturel !) par un autre naturel $B$ est de trouver $Q,R\in\mathbb{N}$ qui vérifient l’équation suivante :
 
 $$
 A=BQ+R
@@ -222,7 +222,7 @@ $$
 ### Propriétés de PGCD et PPCM
 
 > [!note]
-> Notation. $a \mid b$ signifie $a$ divise $b$. C’est-à-dire, $\exists a\in \N : \exists k \in \N, a = kb$.
+> Notation. $a \mid b$ signifie $a$ divise $b$. C’est-à-dire, $\exists a\in \mathbb{N} : \exists k \in \mathbb{N}, a = kb$.
 
 - $PGCD(a,b) \times PPCM(a,b)=ab$
 - Les diviseurs communs à deux nombres sont les diviseurs de leur PGCD.
@@ -346,7 +346,7 @@ Il est immédiat de voir que si $a=nq+r$, alors $a \equiv r[n]$  ou aussi $a \eq
 
 ## Propriétés
 
-Soient $a,b,c,d \in \N$ et $n \in \N^*$. Si $a \equiv c[n]$ et $b \equiv d[n]$ (càd. ils sont des restes de $n$), les propriétés suivantes sont vraies, pour tout $p \in \N$ :
+Soient $a,b,c,d \in \mathbb{N}$ et $n \in \mathbb{N}^*$. Si $a \equiv c[n]$ et $b \equiv d[n]$ (càd. ils sont des restes de $n$), les propriétés suivantes sont vraies, pour tout $p \in \mathbb{N}$ :
 
 $$
 a+b \equiv (c+d)[n] \\
@@ -359,7 +359,7 @@ On notera aussi que si $a \equiv b[n]$, alors $a-b \equiv 0[n]$ et $n$ divise $a
 
 Ces propriétés permet de creer une algèbre de groupe cyclique de $n$, ce qu’on explique dans la section “petit théorème de Fermat”.
 
-**Théorème de l’inverse multiplicatif**. Soit $a \in \Z, n\in \N$. $x$ est l’inverse multiplicatif modulaire en $n$ de $a$ si et seulement si $ax \equiv 1[n]$. **$x$ existe si et seulement si $a$ est copremier avec $n$**.
+**Théorème de l’inverse multiplicatif**. Soit $a \in \Z, n\in \mathbb{N}$. $x$ est l’inverse multiplicatif modulaire en $n$ de $a$ si et seulement si $ax \equiv 1[n]$. **$x$ existe si et seulement si $a$ est copremier avec $n$**.
 
 [Modular multiplicative inverse](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
 
@@ -406,7 +406,7 @@ Ces agroupassions de naturels sont appelées “classes de congruences”. En pl
 $$
 \Z/n\Z = \bigcup_{k=0}^{n-1}\overline{k}_n =\left\{\overline0_n,\overline1_n,\dots,\overline{n-2}_n,\overline{n-1}_n\right\},
 
-\text{ où } \overline{k}_n=\left\{p\in\N:p \equiv k[n] \right\}
+\text{ où } \overline{k}_n=\left\{p\in\mathbb{N}:p \equiv k[n] \right\}
 
 \\
 

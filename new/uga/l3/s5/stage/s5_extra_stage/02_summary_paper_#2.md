@@ -29,7 +29,7 @@ change has occurred.
 This is a sequence of vector of dimension $d$ that contains data at time $t$. $S$ is an infinite sequence.
 
 $$
-S=\{\bold x_1, \cdots, \bold x_i, \cdots\}
+S=\{\mathbf{x}_1, \cdots, \mathbf{x}_i, \cdots\}
 $$
 
 ### Stationary time series
@@ -39,7 +39,7 @@ This is a property of a stochastic process such that observations are not depend
 Auto covariance is a variance of a random variable with itself at different points in time.
 
 $$
-\gamma(s,t)=\text{cov}(\bold X_s, \bold X_t)=\mathbb E[(\bold X_s-\mu_s)(\bold X_t-\mu_t)]
+\gamma(s,t)=\text{cov}(\mathbf{X}_s, \mathbf{X}_t)=\mathbb E[(\mathbf{X}_s-\mu_s)(\mathbf{X}_t-\mu_t)]
 $$
 
 Still, auto covariance does not depend on specific time but rather on relative time like their difference $|t_1 - t_2|$.
@@ -53,7 +53,7 @@ distribution. **An i.i.d. time series is a special case of a stationary time ser
 
 We take a subsequence from the infinite time series $S$ called $T$ of size $m$. This $T$ would contain the evolution of $X$ from a certain initial time $t$.
 
-A matrix *WM* of all possible subsequences of length $*k*$ can be built by moving a *sliding window* of size $*k*$ across $*T*$ and placing subsequence $W_{i,k}=\{\bold X_i, \bold X_{i+1}, \cdots, \bold X_{i+k-1}\}$ at the $i^{th}$ row of WM. Notice the $(i+k-1)$ index at the last element of $W$.
+A matrix *WM* of all possible subsequences of length $*k*$ can be built by moving a *sliding window* of size $*k*$ across $*T*$ and placing subsequence $W_{i,k}=\{\mathbf{X}_i, \mathbf{X}_{i+1}, \cdots, \mathbf{X}_{i+k-1}\}$ at the $i^{th}$ row of WM. Notice the $(i+k-1)$ index at the last element of $W$.
 
 $$
 T=\{1,2,3,...,10\}, \hspace{5pt}i=2 , \hspace{5pt}k=4
@@ -73,11 +73,11 @@ W_{i+n-1,k}
 =
 
 \begin{bmatrix}
-\bold X_{i} & \bold X_{i+1} & \cdots & \bold X_{i+k-1}
+\mathbf{X}_{i} & \mathbf{X}_{i+1} & \cdots & \mathbf{X}_{i+k-1}
 
 \\
 
-\bold X_{i+1} & \bold X_{i+2} & \cdots & \bold X_{i+k}
+\mathbf{X}_{i+1} & \mathbf{X}_{i+2} & \cdots & \mathbf{X}_{i+k}
 
 \\
 
@@ -85,7 +85,7 @@ W_{i+n-1,k}
 
 \\
 
-\bold X_{i+n-1} & \bold X_{i+n} & \cdots & \bold X_{i+n+k} 
+\mathbf{X}_{i+n-1} & \mathbf{X}_{i+n} & \cdots & \mathbf{X}_{i+n+k} 
 
 \end{bmatrix}
 

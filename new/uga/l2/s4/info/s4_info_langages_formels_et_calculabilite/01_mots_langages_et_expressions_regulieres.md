@@ -88,7 +88,7 @@ A = \{"A",\dots,"Z"\} \implies
 L_A^n=\bigcup_{i=0}^n W_A^n : \text{le strate de mots de taille max. } n \text{ construit à partir de l'alphabet } A
 
 \\
-\Sigma^*_A = \lim_{n \rightarrow \infin} L_A^n : \text{l'ensemble de tous les mots possibles dans } A 
+\Sigma^*_A = \lim_{n \rightarrow \infty} L_A^n : \text{l'ensemble de tous les mots possibles dans } A 
 
 $$
 
@@ -155,7 +155,7 @@ $$
 On en déduit que la définition de $L^*$ est l’union des toutes les concaténations dans un même alphabet de zéro mots, d’un mot, de deux mots, de trois mots, etc..  On a utilisé la notation $W^n_A = A^n$ pour l’ensemble de mots de longueur $n$. Il vient que la définition de $L^*_A$ est la suivante :
 
 $$
-L^*= \bigcup_{n=0}^\infin L^n=\{ \varepsilon \}\cup L\cup L^2 \cup L^3 \cup L^4 \dots, \text{ où } L^n=\underbrace{L\cdot L\cdot \space \dots \space \cdot L}_{n \text{ fois}}
+L^*= \bigcup_{n=0}^\infty L^n=\{ \varepsilon \}\cup L\cup L^2 \cup L^3 \cup L^4 \dots, \text{ où } L^n=\underbrace{L\cdot L\cdot \space \dots \space \cdot L}_{n \text{ fois}}
 $$
 
 Puisque $L$ est une partie de toutes les posibles mots dans $A$, on peut choisir $L$ comme le mots de juste une lettre dans A, c’est-à-dire, $L=W_A^1=A$. Donc, cela impliquerait que $L^*=\Sigma^*_A=A^*$. Cela dit, $L$ n’est pas limité à être $A$.

@@ -194,7 +194,7 @@ Notons que la politique budgétaire n’est pas totalement inefficace dans la me
 
 Il existent deux degrés de mobilités de capitaux : forte et faible. Une mobilité forte est une situation où la courbe BP est dessous la courbe LM après leur coupure, de manière presque horizontale. Il convient de rappeler plutôt la mobilité parfaite qui est totalement horizontale. La mobilité faible, de sa part, est quand la courbe BP est dessus la courbe LM après leur coupure, presque verticale.
 
-Mathématiquement, on parle de mobilité forte si $k \rightarrow \infin$ et mobilité faible si $k \rightarrow 0$.
+Mathématiquement, on parle de mobilité forte si $k \rightarrow \infty$ et mobilité faible si $k \rightarrow 0$.
 
 ## Régime de changes fixes
 

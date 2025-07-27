@@ -218,7 +218,7 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
 > En reformulant plus simplement :
 >
 > 1. On marque tous les sommets comme non visités.
-> 2. On donne à tous les sommets une distance provisoire : $0$ au sommet source et $\infin$ aux autres. Aussi, on marque le sommet source comme sommet courant.
+> 2. On donne à tous les sommets une distance provisoire : $0$ au sommet source et $\infty$ aux autres. Aussi, on marque le sommet source comme sommet courant.
 > 3. Pour tous les voisins non visités du sommet courant :
 > 1. On calcule la distance à travers le sommet courant (distance accumulé depuis le sommet source + la distance du passage direct).
 > 2. Si cette nouvelle distance est plus courte que la distance provisoire existante, on la remplace et on garde en tête le chemin qui la produit, sinon on garde la précédente.

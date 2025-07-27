@@ -64,9 +64,9 @@ $$
 
 - $C^k_n = C^{n-k}_n$ : la quantité de manière de sélectionner $k$ de $n$ éléments sans ordre et la même que de sélectionner les éléments restants $(n-k)$ de $n$ éléments.
 - $C^k_n = C^k_{n-1} + C^{k-1}_{n-1}$ : cette relation permet de formaliser le triangle de Pascal !
-    - Explication : pour $C^2_5$, soit $*A$* l'ensemble de $5$ éléments $A = \{a, b, c , d, e\}$ et fixons $a$.
+    - Explication : pour $C^2_5$, soit $A$ l'ensemble de $5$ éléments $A = \{a, b, c , d, e\}$ et fixons $a$.
     - **Terme $C^k_{n-1}$** : c'est la quantité de combinaisons de $2$ éléments qui ne contient pas $*a*$. $\rightarrow$ On exclu $a$ de l'ensemble $A$, donc $n$ $\rightarrow$ $(n-1)$.
-    - **Terme $C^{k-1}_{n-1}$** : c'est la quantité de combinaisons de $2$ éléments qui contient $*a*$. $\rightarrow$ Notons que on fixe $*a$* dans chaque groupe de $2$ et on seulement choisit le deuxième élément, donc $k \rightarrow k-1$ et on conserve l'ensemble sans $a$ de $(n-1)$ éléments car $a$ est déjà présent dans la duple.
+    - **Terme $C^{k-1}_{n-1}$** : c'est la quantité de combinaisons de $2$ éléments qui contient $*a*$. $\rightarrow$ Notons que on fixe $*a$* dans chaque groupe de $2$ et on seulement choisit le deuxième élément, donc $k \rightarrow k-1$ et on conserve l'ensemble sans $a$ de $(n-1)$ éléments car $a$ est déjà présent dans la tuple.
     - Les deux termes sont ceux qui permet, dans le Triangle de Pascal, de trouver le prochain terme.
     
     ![untitled](new/uga/l1/s2/math/s2_math_probabilites_1/ressources/01_analyse_combinatoire_untitled.png)

@@ -47,10 +47,10 @@ $$
 H_0:\theta=\theta_0\text{ vs. }H_1:\theta=\theta_1
 $$
 
-Un test pour $H_0$ est une règle de décision fondée sur la valeur réalisée $t\in\R$ d’une statistique $T$, appelée statistique de test, qui est un estimateur de $\theta$. La règle suit :
+Un test pour $H_0$ est une règle de décision fondée sur la valeur réalisée $t\in\mathbb{R}$ d’une statistique $T$, appelée statistique de test, qui est un estimateur de $\theta$. La règle suit :
 
-- Si $t\in A$, une partie de $\R$, donc on accepte $H_0 : \theta=\theta_0$;
-- Si $t \in \bar A$, qui est $\R\setminus A$, on rejette $H_0$ et on accepte $H_1:\theta=\theta_1$.
+- Si $t\in A$, une partie de $\mathbb{R}$, donc on accepte $H_0 : \theta=\theta_0$;
+- Si $t \in \bar A$, qui est $\mathbb{R}\setminus A$, on rejette $H_0$ et on accepte $H_1:\theta=\theta_1$.
 
 **Si ça peut nous servir, $A$ veut dire “acceptation” et particulièrement l’acceptation de la nulle $H_0$, et normalement dans le test on cherche $\bar A$ càd. rejeter $H_0$**. Le tableau ci-dessous nous montre les situations désirables et non désirables :
 
@@ -59,7 +59,7 @@ Un test pour $H_0$ est une règle de décision fondée sur la valeur réalisée 
 | $\mathcal{H}_0$ est fausse **$(P)$** | OK $(TP)$ : $1-\beta$ | Erreur de Type II $(FN)$ : $\beta$ |
 | $\mathcal{H}_0$ est vraie **$(N)$** | Erreur de Type I $(FP)$ : $\alpha$ | OK $(TN)$ : $1-\alpha$ |
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/04_tests_d’hypotheses_parametriques_untitled.png)
+![untitled](ressources/04_tests_d’hypotheses_parametriques_untitled.png)
 
 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)
 
@@ -115,7 +115,7 @@ En conclusion, **une condition naturelle pour qu’une statistique soit éligibl
 
 L’objectif sera finalement de rechercher le test le plus puissant parmi tous. Il existe un tel test dans le cas où $H_0$ et $H_1$ sont des hypothèses simples, mais cela n’est pas nécessairement vrai dans le cas où l’hypothèse alternative est multiple. Par ailleurs et en général, quand une statistique de test donne le test le plus puissant a un niveau donné, elle reste optimale à tout autre niveau.
 
-**Définition : convergence de tests**. Finalement, on peut dire que la procédure de test est *convergente* quand, pour une suite de tests $\{\tau_n\}$ de taille d’échantillon $n$, dont on peut extraire une suite de leurs puissances $\{1-\beta_n\}$, $\lim_{n\rightarrow\infin} (1-\beta_n) = 1$ ou, également, $\lim_{n\rightarrow\infin} \beta_n=0$. Donc, la puissance tend vers $1$ quand l’échantillon s’agrandit.
+**Définition : convergence de tests**. Finalement, on peut dire que la procédure de test est *convergente* quand, pour une suite de tests $\{\tau_n\}$ de taille d’échantillon $n$, dont on peut extraire une suite de leurs puissances $\{1-\beta_n\}$, $\lim_{n\rightarrow\infty} (1-\beta_n) = 1$ ou, également, $\lim_{n\rightarrow\infty} \beta_n=0$. Donc, la puissance tend vers $1$ quand l’échantillon s’agrandit.
 
 En d’autre termes, on doit avoir la garantie qu’on gagne à observer de très grands échantillons, de sorte qu’il est pratiquement sûr de détecter une hypothèse nulle $H_0$ qui serait fausse à la limite. 
 
@@ -129,13 +129,13 @@ $$
 
 Ceci est valide car $α$, $β$ et la puissance $(1 − β)$ en découlent (même si conceptuellement le choix de $α$ précède celui de $A$, mais pour $α$ fixé il y a différentes façons de choisir une région—généralement un intervalle—de probabilité $α$ sur la loi de $T$ sous $H_0$).
 
-En fait, il n’est même pas nécessaire de se référer à une statistique de test. Mettons en évidence la fonction de l’échantillon définissant la statistique $T=h(\bold x)$ et $\mathbb A$ l’ensemble des points de $\R^n$, réalisations du vecteur $\bold X$, défini par
+En fait, il n’est même pas nécessaire de se référer à une statistique de test. Mettons en évidence la fonction de l’échantillon définissant la statistique $T=h(\mathbf{x})$ et $\mathbb A$ l’ensemble des points de $\mathbb{R}^n$, réalisations du vecteur $\mathbf{X}$, défini par
 
 $$
-\mathbb A=\{\bold x:\underbrace{h(\bold x)}_t\in \bar {\mathcal C} \}
+\mathbb A=\{\mathbf{x}:\underbrace{h(\mathbf{x})}_t\in \bar {\mathcal C} \}
 $$
 
-Mais notons, $(t\in \bar {\mathcal C})$ est équivalent $(\bold X\in\mathbb A)$. Le test est donc parfaitement défini par la région d’acceptation $\mathbb A$ dans $\R^n$. D’une façon générale, un test s’identifie à une région d’acceptation dans l’espace des réalisations. Cela dit, cette vision des tests est rarement utile, et normalement on passe par une statistique $T$.
+Mais notons, $(t\in \bar {\mathcal C})$ est équivalent $(\mathbf{X}\in\mathbb A)$. Le test est donc parfaitement défini par la région d’acceptation $\mathbb A$ dans $\mathbb{R}^n$. D’une façon générale, un test s’identifie à une région d’acceptation dans l’espace des réalisations. Cela dit, cette vision des tests est rarement utile, et normalement on passe par une statistique $T$.
 
 ## Test de RV : rapport de vraisemblance simple (et multiple)
 
@@ -144,7 +144,7 @@ Mais notons, $(t\in \bar {\mathcal C})$ est équivalent $(\bold X\in\mathbb A)$.
 Dans cette section, on reste sur une hypothèse et alternatives simples. Un test de rapport de vraisemblance simple de $H_0$ vs. $H_1$ au niveau $\alpha_0$  fixé au préalable, est un test défini de la forme suivante :
 
 $$
-\tau = \left\{ T=RV=\frac{L(\theta_0|\bold x)}{L(\theta_1|\bold x)},\space  \mathcal C=\{RV: RV \le C\}\right\}
+\tau = \left\{ T=RV=\frac{L(\theta_0|\mathbf{x})}{L(\theta_1|\mathbf{x})},\space  \mathcal C=\{RV: RV \le C\}\right\}
 $$
 
 La valeur de $C$ est déterminée par le risque fixe $\alpha_0 = \mathbb P(\mathcal C|\theta=\theta_0)$, donc **il est vraiment important de fixer $\alpha=\alpha_0$ avant de calculer le rapport de vraisemblance**. Dans la pratique, $C$ est normalement plus petit que $1$, pour garantir un $\alpha$ faible.
@@ -183,30 +183,32 @@ Il y a trois théorèmes importantes conséquence de RV :
 Le test de RV est le plus puissant de tous, pour $\alpha\in ]0,1[$.
 - Le test de RV est sans biais : $1-\beta\ge\alpha$.
 Pour Neyman et Pearson, leur esprit aussi est que $\beta > \alpha$, selon le prof. Quand c’est pas le cas, on appel ceci “incohérent”.
-- Le test de RV est convergent ($n\rightarrow\infin , \beta\rightarrow0$), sous de conditions mineures.
+- Le test de RV est convergent ($n\rightarrow\infty , \beta\rightarrow0$), sous de conditions mineures.
 
 Les preuves des deux premiers théorèmes sont dans le matériel de Michel Lejeune, à partir de la page 208.
 
 ### 🔖 Extra : caractérisation d’un test
 
-S’agissant d’estimer $θ$, certaines statistiques peuvent être exclues du fait qu’elles n’utilisent pas de façon exhaustive toute l’information contenue dans l’échantillon $\bold X$. À l’inverse, on peut s’attendre à ce qu’un “bon” estimateur soit une statistique qui ne retienne que ce qui est utile de l’échantillon. Une statistique $T(\bold X)$ est donc dite exhaustive si
+S’agissant d’estimer $θ$, certaines statistiques peuvent être exclues du fait qu’elles n’utilisent pas de façon exhaustive toute l’information contenue dans l’échantillon $\mathbf{X}$. À l’inverse, on peut s’attendre à ce qu’un “bon” estimateur soit une statistique qui ne retienne que ce qui est utile de l’échantillon. Une statistique $T(\mathbf{X})$ est donc dite exhaustive si
 
 $$
-\mathbb P \Big(\bold X=\bold x\space|\space T(\bold X)=t,\theta\Big)=\mathbb P \Big(\bold X=\bold x\space|\space T(\bold X)=t\Big)
+\mathbb P \Big(\mathbf{X}=\mathbf{x}\space|\space T(\mathbf{X})=t,\theta\Big)=\mathbb P \Big(\mathbf{X}=\mathbf{x}\space|\space T(\mathbf{X})=t\Big)
+$$
 
-\\[8pt]
-
-\text{ou, alternativement, }
-I(\theta|S(\bold X))=I(\theta|\bold X). 
+ou, alternativement,
+$$
+I(\theta|S(\mathbf{X}))=I(\theta|\mathbf{X}). 
+$$
+$$
 \text{ Rappel : } 
 \\[8pt]
-I(\theta|\bold x)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)-\cancel{\mathbb E[s(\theta)]}^{\space0}\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|\bold x)d\theta
+I(\theta|\mathbf{x})=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)-\cancel{\mathbb E[s(\theta)]}^{\space0}\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|\mathbf{x})d\theta
 $$
 
 En pratique, on n’évoque pas cette égalité pour les calculs. mais on passe plutôt par le **théorème de factorisation**. On peut dire aussi que la statistique $T$ est exhaustive s’ils existent deux fonctions $g$ et $h$ mesurables telles que :
 
 $$
-f(\bold x|\theta)=g(T(\bold x)|\theta)\times h(\bold x)
+f(\mathbf{x}|\theta)=g(T(\mathbf{x})|\theta)\times h(\mathbf{x})
 $$
 
 On voit bien qu’on parle de “factorisation” parce qu’on finit par exprimer $f$ comme le produit de deux facteurs. En plus, $g$ contient information sur la statistique réalisée (et donc indirectement de l’échantillon) et le paramètre—tant que $h$ contient information juste sur l’échantillon réalisé. Tout le membre de droit est appelé “la densité conjointe” dans ce contexte, un nom qu’on utilisera souvent.
@@ -214,9 +216,9 @@ On voit bien qu’on parle de “factorisation” parce qu’on finit par exprim
 Deux propositions importantes découlent déjà de la définition d’exhaustivité :
 
 - Si $T$ est une statistique exhaustive et $T^\prime$ une statistique telle qu’on peut réécrire $T$ comme fonction de $T^\prime$, donc $T^\prime$ est exhaustive elle-même.
-- Pareillement, si c’est $T^\prime$ la statistique fonction de $T$ comme $T^\prime(\bold X)=f(T(\bold X))$ qui est exhaustive, et si $f$ est bijective, donc $T^\prime$ est aussi exhaustive.
+- Pareillement, si c’est $T^\prime$ la statistique fonction de $T$ comme $T^\prime(\mathbf{X})=f(T(\mathbf{X}))$ qui est exhaustive, et si $f$ est bijective, donc $T^\prime$ est aussi exhaustive.
 
-En plus, on peut parler de exhaustivité minimale d’une statistique $T^*$ si elle est exhaustive et si, pour tout statistique exhaustive $T$, on peut trouver une fonction $f$ telle que $T^*(\bold X)=f(T(\bold X))$. Une condition de régularité est que le domaine ou support de la densité des $\bold X$ ne dépend pas du paramètre inconnu, ce qui élimine la loi uniforme.
+En plus, on peut parler de exhaustivité minimale d’une statistique $T^*$ si elle est exhaustive et si, pour tout statistique exhaustive $T$, on peut trouver une fonction $f$ telle que $T^*(\mathbf{X})=f(T(\mathbf{X}))$. Une condition de régularité est que le domaine ou support de la densité des $\mathbf{X}$ ne dépend pas du paramètre inconnu, ce qui élimine la loi uniforme.
 
 En règle générale, une statistique exhaustive est minimale. Tout estimateur pertinent est fonction d’une statistique exhaustive minimale.
 
@@ -278,8 +280,8 @@ $$
 
 Cette structure de test est assez commune et il y a une proposition importante sur ce type de test : l’existence d’un test UPP est garantie si 
 
-- $T=t(\bold x)$ est une statistique exhaustive minimale
-- Pour toute couple $(\theta,\theta^\prime)$ tel que $\theta<\theta^\prime$, le RV $L(\theta|\bold x)/L(\theta^\prime|\bold x)$ est monotone de $T$.
+- $T=t(\mathbf{x})$ est une statistique exhaustive minimale
+- Pour toute couple $(\theta,\theta^\prime)$ tel que $\theta<\theta^\prime$, le RV $L(\theta|\mathbf{x})/L(\theta^\prime|\mathbf{x})$ est monotone de $T$.
 
 Dans ce cas, la région d’acceptation est de la forme $T<k$ ou $T>k$.
 
@@ -338,23 +340,23 @@ Par contre, cette règle ne conduit pas au test UPP-sans biais si la loi de $T$ 
 Si le RV (rapport de vraisemblance simple) était un quotient, le RVG (rapport de vraisemblance généralisé) le sera aussi. Particulièrement, le RVG est une fonction $\lambda$ telle que
 
 $$
-\lambda(\bold x)=\frac{\sup_{\theta\in\Theta_0}L(\theta|\bold x)}{\sup_{\theta\in\Theta}L(\theta|\bold x)}
+\lambda(\mathbf{x})=\frac{\sup_{\theta\in\Theta_0}L(\theta|\mathbf{x})}{\sup_{\theta\in\Theta}L(\theta|\mathbf{x})}
 $$
 
 Ainsi, on définit le test du RVG par une région de rejet de la forme
 
 $$
-\lambda(\bold x)<k\le1
+\lambda(\mathbf{x})<k\le1
 $$
 
-Il est évident que $\lambda(\bold x)$ est inférieur ou égal à $1$ pour toute réalisation $\bold x$. Notons que le dénominateur de $\lambda(\bold x)$ est juste l’estimation de maximum de vraisemblance ! Le RVG relève de la même rationalité que le RV simple. Si, pour une réalisation donnée, la vraisemblance atteint un maximum dans $H_0$ qui reste bien inférieur a son maximum absolu (dessous d’un $k$ arbitraire) dans tout l’espace paramétrique $Θ$, alors il y a lieu de douter de cette hypothèse.
+Il est évident que $\lambda(\mathbf{x})$ est inférieur ou égal à $1$ pour toute réalisation $\mathbf{x}$. Notons que le dénominateur de $\lambda(\mathbf{x})$ est juste l’estimation de maximum de vraisemblance ! Le RVG relève de la même rationalité que le RV simple. Si, pour une réalisation donnée, la vraisemblance atteint un maximum dans $H_0$ qui reste bien inférieur a son maximum absolu (dessous d’un $k$ arbitraire) dans tout l’espace paramétrique $Θ$, alors il y a lieu de douter de cette hypothèse.
 
 Il faudrait noter que, dans le cas d’hypothèse et alternative simples, le test du RVG est équivalent au test du RV simple. Explication dans le matériel de Michel Lejeune, p. 236. 
 
 Le $k$ choisit ici nous donnera notre erreur de première espèce $\alpha$. On choisit $k$ de telle manière que l’équation suivante est vraie, donc
 
 $$
-\sup_{\theta\in\Theta_0} \mathbb P(\lambda(\bold x)<k)=\alpha
+\sup_{\theta\in\Theta_0} \mathbb P(\lambda(\mathbf{x})<k)=\alpha
 $$
 
 Par contre, connaître la loi du RVG est problématique. Parfois on aura une forme simple, mais le plus normale sera de disposer une approximation asymptotique très utile.
@@ -377,10 +379,10 @@ On notera que ceci n’est pas vérifié par la loi de Gauss qui ne sépare pas 
 
 ### Approchant une région de rejet de grands échantillons
 
-Soit une famille paramètre $\{f(x|\theta) : \theta\in\Theta, \Theta\sube \R^k\}$ et $H_0$ concernant $r$ valeurs composantes de $\theta$, donc $1\le r\le k$. Supposons que les conditions sont telles que l’EMV $\theta^*$ est BAN. Donc, la statistique $\Lambda_n=\lambda(\bold X)$ est telle que
+Soit une famille paramètre $\{f(x|\theta) : \theta\in\Theta, \Theta\subseteq \mathbb{R}^k\}$ et $H_0$ concernant $r$ valeurs composantes de $\theta$, donc $1\le r\le k$. Supposons que les conditions sont telles que l’EMV $\theta^*$ est BAN. Donc, la statistique $\Lambda_n=\lambda(\mathbf{X})$ est telle que
 
 $$
-\lim_{n\rightarrow\infin}-2\ln(\Lambda_n)\sim\chi^2(r)
+\lim_{n\rightarrow\infty}-2\ln(\Lambda_n)\sim\chi^2(r)
 $$
 
 Donc, comme la région de rejet $\lambda < k$ est équivalente à $-2\ln\Lambda >k^\prime$, on rejettera à un niveau approximatif $\alpha$ si
@@ -416,9 +418,9 @@ $$
 \tau=\left\{ T=\bar X, A=\{ T : \mu_0-\frac{\sigma}{\sqrt n} z_{1-\alpha/2} < T < \mu_0+\frac{\sigma}{\sqrt n} z_{1-\alpha/2} \} \right\}
 $$
 
-Les quantiles $z$ sont à déterminer avec une table à quantiles. Notons que l’erreur de première espèce \alpha est répandu moitié-moitié des deux côtés de la courbe. Ce test est un UPP-sans biais.
+Les quantiles $z$ sont à déterminer avec une table à quantiles. Notons que l’erreur de première espèce $\alpha$ est répandu moitié-moitié des deux côtés de la courbe. Ce test est un UPP-sans biais.
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/04_tests_d’hypotheses_parametriques_untitled_1.png)
+![untitled](ressources/04_tests_d’hypotheses_parametriques_untitled_1.png)
 
 Dans le cas unilatérale, qui sont aussi UPP mais pas sans biais, on a que :
 
@@ -567,7 +569,7 @@ $$
 Alors, on a que 
 
 $$
-\lim_{n_1,n_2\rightarrow\infin} Z_{n_1,n_2} \sim \mathcal N(0,1)
+\lim_{n_1,n_2\rightarrow\infty} Z_{n_1,n_2} \sim \mathcal N(0,1)
 $$
 
 On se servira de ce fait seulement pour un test unilatéral, de la forme suivante.

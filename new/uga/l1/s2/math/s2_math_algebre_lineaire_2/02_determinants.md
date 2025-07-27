@@ -168,9 +168,7 @@ On reprend les idées de mineur et cofacteur pour présenter la méthode de calc
 
 $$
 \text{Dev. par rapport aux lignes :} \det A=\sum_{i=1}^n(-1)^{i+j}a_{ij}\det A_{ij}=\sum_{i=1}^na_{ij}C_{ij}
-
-\\[8pt]
-
+$$$$
 \text{Dev. par rapport aux colonnes :}\det A=\sum_{j=1}^n(-1)^{i+j}a_{ij}\det A_{ij}=\sum_{j=1}^na_{ij}C_{ij}
 $$
 
@@ -217,7 +215,7 @@ $$
 
 La règle de Cramer permet de calculer le vecteur solution $[x_1,\dots,x_n]^T$ à un système d’équations linéaires (ayant autant d’équations que des inconnus) en se servant du déterminant de la matrice des coefficients $A$ (et supposant que $\det A \ne 0$, sinon la règle ne marche pas).
 
-On commence par écrire le système comme $A\bold{X}=\bold{B}$.
+On commence par écrire le système comme $A\mathbf{X}=\mathbf{B}$.
 
 ![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/ressources/02_determinants_untitled_1.png)
 

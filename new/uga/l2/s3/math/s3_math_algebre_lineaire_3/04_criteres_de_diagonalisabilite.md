@@ -14,16 +14,16 @@ La **multiplicité algébrique** d’un valeur propre $\lambda$ est la quantité
 La **multiplicité géométrique** d’un valeur propre $\lambda$ est la dimension son sous-espace propre $E_\lambda$.
 Un règle plus facile aussi c’est qui mult. alg. $\alpha_\lambda$ $≠$ mult. géo. $\dim E_\lambda$, donc $M$ pas diagonalisable.
 
-**Théorème**. Soit $f$ endomorphe sur $\R^n$. Les quatre propositions suivantes sont équivalentes :
+**Théorème**. Soit $f$ endomorphe sur $\mathbb{R}^n$. Les quatre propositions suivantes sont équivalentes :
 
 - On peut trouver une base de vecteurs propres $\{e_i\}$.
 - Dans la base de vecteurs propres $\{e_i\}$, la matrice $M$ de $f$ est diagonale.
-- $\R^n=\oplus_i E_{\lambda_i}$
+- $\mathbb{R}^n=\oplus_i E_{\lambda_i}$
 - $\alpha_\lambda=\dim E_\lambda$, pour tout valeur propre $\lambda$.
 
 ## Polynôme scindé
 
-Un polynôme *scindé* est un polynôme factorisable en facteurs polynomiaux de degré $1$ sur $\R$. En plus, si chaque facteur polynomiaux de degré $1$ est unique, il est *simplement scindé*. 
+Un polynôme *scindé* est un polynôme factorisable en facteurs polynomiaux de degré $1$ sur $\mathbb{R}$. En plus, si chaque facteur polynomiaux de degré $1$ est unique, il est *simplement scindé*. 
 
 $$
 (x^2+x+1) : \text{racines non-réelles, non-scindé.}

@@ -255,7 +255,7 @@ q_2=a-p_2-dq_1
 \end{array}
 $$
 
-Il faut noter que $d\in]0,\infin[$ est le **degré de différenciation**, où $d=0$ signifie que les produits de chaque firme sont totalement différents et, plus d augmente, plus homogènes sont les produits vendus.
+Il faut noter que $d\in]0,\infty[$ est le **degré de différenciation**, où $d=0$ signifie que les produits de chaque firme sont totalement différents et, plus d augmente, plus homogènes sont les produits vendus.
 
 [https://www.desmos.com/calculator/qspaij3o72](https://www.desmos.com/calculator/qspaij3o72)
 

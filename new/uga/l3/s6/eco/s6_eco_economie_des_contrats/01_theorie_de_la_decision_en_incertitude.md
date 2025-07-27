@@ -35,17 +35,17 @@ Supposons deux loteries L_1= \{(1000€, 0.5) ; (-1000€, 0.5)\} et L_2 = \{(2�
 
 Ceci étant dit, il y a des situations problématiques si on décide de choisir la EMG comme notre critère de décision. L’une de ces situations est la paradoxe de St. Petesbourg : c’est un jeu d’une pièce équilibrée lancée jusqu’à l’obtention de l’événement “Face”. A chaque jet qui sort pile, le joeur gagne 2^n€. Donc :
 
-EMG  = \sum_{n=0}^\infin 2^{-n}2^{n} = 1+1+1… \to \infin
+EMG  = \sum_{n=0}^\infty 2^{-n}2^{n} = 1+1+1… \to \infty
 
 On dit que le prix juste pour jouer un jeu est égal à son espérance. Le problème se lève quand l’espérance est l’infini, personne n’est prête à payer une somme infinie d’argent pour jouer à ce jeu.
 
 La solution proposée par Bernoulli en 1738 serait que les joueurs maximisent plutôt l’espérance du logarithme du gain :
 
-V(J) = \sum_{n=0}^\infin 2^{-n} \log(2^{n}) = 2 \log(2)
+V(J) = \sum_{n=0}^\infty 2^{-n} \log(2^{n}) = 2 \log(2)
 
 Et, comme généralisation de la solution, les joueurs ne maximisent pas les gains monétaires bruts mais l’utilité que leur procurent ces gains : on remplace la fonction \log par une fonction U(.) croissant concave qui représente l’utilité de la richesse : 
 
-V(J) = \sum_{n=0}^\infin 2^{-n} U(2^{n})  \text{ avec } U’(.) > 0, U’’(.) < 0 
+V(J) = \sum_{n=0}^\infty 2^{-n} U(2^{n})  \text{ avec } U’(.) > 0, U’’(.) < 0 
 
 ## Prise en compte du risque
 
@@ -88,7 +88,7 @@ Le cadre générale de cette théorie est que il existe une tuple /{A, X, P, U(.
 
 ### Axiomes
 
-L’objectif de cette théorie est de, à partir d’une relation de préférence définie sur l’ensemble des actions, notée \ge^\# , construire un isomorphisme entre [A, \ge^\# ] et [\R, \ge] permettant aux agents, sur la base d’un critère, d’effectuer un choix en univers incertain.
+L’objectif de cette théorie est de, à partir d’une relation de préférence définie sur l’ensemble des actions, notée \ge^\# , construire un isomorphisme entre [A, \ge^\# ] et [\mathbb{R}, \ge] permettant aux agents, sur la base d’un critère, d’effectuer un choix en univers incertain.
 
 Pour les relations de préférence, nous avons \ge^\# pour préférence faible, >^\# pour préférence stricte et ~^\# pour l’équivalence. 
 

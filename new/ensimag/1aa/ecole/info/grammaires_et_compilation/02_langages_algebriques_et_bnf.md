@@ -27,7 +27,7 @@ $X = A^*B$, d’après le lemme d’Arden.
 Pour $i = 0$, $f^0(\empty) = \empty$. Pour $i=1, f(\empty) = \{\epsilon\}$. Pour $i=2$, $f^2(\empty) = \{ab\} \cup \{\epsilon\}$. Pour $i = 3$, $f^3(\empty] = \{\epsilon\} \cup \{ab\} \cup \{aabb\}$. 
 
 Premier résultat: $f^n(\empty) = \left\{ a^i b^i : i < n \right\}$
-Deuxième résultat: $\bigcup_{i\in\mathbb{N}} f^i (\emptyset) = \{a^n b^n : n \in \N \}$
+Deuxième résultat: $\bigcup_{i\in\mathbb{N}} f^i (\emptyset) = \{a^n b^n : n \in \mathbb{N} \}$
 
 ## Exo 2.11 et 2.13
 
@@ -197,29 +197,29 @@ $f^4(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab, aabab\} \right)$
 >
 > Montrer que les langages définis dans le TP (`Prop`, `Nnf` en notations préfixes ou infixes) sont algébriques.
 
-$\bold{Prop}$ est un ensemble défini de manière récursive. Avant de parler de Prop, on définit une function telle que $\lim f^n(\empty) = \bold{Prop}$. On peut déjà utiliser la fonction de l’exo 2.13
+$\mathbf{Prop}$ est un ensemble défini de manière récursive. Avant de parler de Prop, on définit une function telle que $\lim f^n(\empty) = \mathbf{Prop}$. On peut déjà utiliser la fonction de l’exo 2.13
 
 $$
 f(X) = \{t, f\} \cup \mathbb{N}_1 \cup \{ (u) \mid u \in X\} \cup \{-u \mid u \in X\} \cup \{uov \mid o \in \{\&, |, >\}, u, v \in X\}
 $$
 
-On peut écrire $f^1(\empty)$, $f^2(\empty)$, $f^3(\empty)$ et on pourra se convaincre que $\lim f^n(\empty) = \bold{Prop}$, ce dernier étant définit donc comme:
+On peut écrire $f^1(\empty)$, $f^2(\empty)$, $f^3(\empty)$ et on pourra se convaincre que $\lim f^n(\empty) = \mathbf{Prop}$, ce dernier étant définit donc comme:
 
 $$
-\bold{Prop} = \{t, f\} \space\cup\space \mathbb{N}_1 \space\cup\space -\bold{Prop} \space\cup\space \bold{Prop} . \{\&, |, >\}.\bold{Prop} \space\cup\space \{(\}.\bold{Prop}.\{)\}
+\mathbf{Prop} = \{t, f\} \space\cup\space \mathbb{N}_1 \space\cup\space -\mathbf{Prop} \space\cup\space \mathbf{Prop} . \{\&, |, >\}.\mathbf{Prop} \space\cup\space \{(\}.\mathbf{Prop}.\{)\}
 $$
 
-L’argument à faire pour démontrer que c’est un langage algébrique est de dire que $f$ constitue un système d’équations algébrique (à 1 équation), où le membre droit de l’équation est constitué d’opérateurs ensemblistes (union), concaténation, le mot vide (pas le cas ici en fait, mais bon) et des constantes (ici $t$, $f$, $($, $)$ et les variables représentées avec $\N_1$). Et donc que $\lim f^i(X)$ est le plus petit point fixe (assuré par un théorème vu en cours), et que c’est justement $\bold{Prop}$. Finalement, $\bold{Prop}$ est algébrique.
+L’argument à faire pour démontrer que c’est un langage algébrique est de dire que $f$ constitue un système d’équations algébrique (à 1 équation), où le membre droit de l’équation est constitué d’opérateurs ensemblistes (union), concaténation, le mot vide (pas le cas ici en fait, mais bon) et des constantes (ici $t$, $f$, $($, $)$ et les variables représentées avec $\mathbb{N}_1$). Et donc que $\lim f^i(X)$ est le plus petit point fixe (assuré par un théorème vu en cours), et que c’est justement $\mathbf{Prop}$. Finalement, $\mathbf{Prop}$ est algébrique.
 
 ---
 
-Pour $\bold{Nnf}$, l’argument est similaire. Donc, j’écris juste le système d’équations où les fonctions $f_1$, $f_2$, $f_3$ sont déjà évalués à leur limite à l’infini et donc on tombe sur les plus petits points, montrant que $\bold{Nnf}$ est un langage algébrique (la première équation étant toujours le langage algébrique d’intérêt):
+Pour $\mathbf{Nnf}$, l’argument est similaire. Donc, j’écris juste le système d’équations où les fonctions $f_1$, $f_2$, $f_3$ sont déjà évalués à leur limite à l’infini et donc on tombe sur les plus petits points, montrant que $\mathbf{Nnf}$ est un langage algébrique (la première équation étant toujours le langage algébrique d’intérêt):
 
 $$
 \begin{cases}
-\bold{Nnf}= \{t, f\} \cup \bold{Ncst} \\
-\bold{Ncst} = \bold{NNInt} \cup \{\&, \mid \}.\bold{Ncst}.\bold{Ncst} \\
-\bold{NNInt} = \N_1 \cup \{-\}.\N_1
+\mathbf{Nnf}= \{t, f\} \cup \mathbf{Ncst} \\
+\mathbf{Ncst} = \mathbf{NNInt} \cup \{\&, \mid \}.\mathbf{Ncst}.\mathbf{Ncst} \\
+\mathbf{NNInt} = \mathbb{N}_1 \cup \{-\}.\mathbb{N}_1
 \end{cases}
 $$
 

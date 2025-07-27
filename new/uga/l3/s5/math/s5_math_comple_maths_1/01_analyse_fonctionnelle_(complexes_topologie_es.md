@@ -9,7 +9,7 @@
 La forme la plus classique de représenter un nombre complexe est la suivante :
 
 $$
-a+bi\hspace{6pt}\text{où } a,b\in\R
+a+bi\hspace{6pt}\text{où } a,b\in\mathbb{R}
 $$
 
 Supposons que $z=-1+i$. Donc, sa représentation graphique est la suivante :
@@ -113,7 +113,7 @@ $$
 
 ## Racines de l’unité
 
-Soit $n ∈ \N^∗$ un entier non nul. Si $z^n = 1$, alors $z\ne 0$ et on peut donc écrire $z = re^{iθ}$. De plus,
+Soit $n ∈ \mathbb{N}^∗$ un entier non nul. Si $z^n = 1$, alors $z\ne 0$ et on peut donc écrire $z = re^{iθ}$. De plus,
 
 $$
 z^n=1\iff r=1 \text{ et } \theta=\frac{2k\pi}{n}
@@ -133,7 +133,7 @@ Si $z_0\ne 0$, pour résoudre l’équation $z^n = z_0$, on utilisera la forme e
 
 ### Rappel de norme
 
-Une norme est toute fonction $f : x \mapsto ||x|| \in \R^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
+Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
 
 - $||\lambda x|| = |\lambda| ||x||$
 La norme est multiplicative, càd. $f(xy)=f(x)f(y)$
@@ -148,7 +148,7 @@ On peut définir une ***norme issue du produit scalaire*** : $||x|| = \sqrt{\lan
 
 ### Rappel de distance
 
-Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \R^+$ qui vérifie ce qui suit :
+Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \mathbb{R}^+$ qui vérifie ce qui suit :
 
 - $d(x,y)=0 \iff x=y$ 
 Si la distance entre deux points est $0$, $x$ et $y$ sont à la même position
@@ -173,20 +173,20 @@ Malgré ça, dans la pratique une distance est issue par une norme et les distan
 
 Comme il est visible dans l’image ci-contre, un espace (ensemble) $E$ muni d’une distance $d$ constitue un espace métrique représenté par la couple $(E,d)$. Il est de même pour un espace muni d’une norme, appelé espace normé $(E, ||\cdot||)$. Cela dit, tout espace normé est un espace métrique, mais la réciproque n’est pas vrai.
 
-- Sur $\R$, la fonction valeur absolue $|x|$ est une norme. Puis, on définit une distance $|x-y|$ à partir de la valeur absolue.
+- Sur $\mathbb{R}$, la fonction valeur absolue $|x|$ est une norme. Puis, on définit une distance $|x-y|$ à partir de la valeur absolue.
 - Sur $\mathbb C$, le module d’un complexe est une norme : $\sqrt{a^2+b^2}$, puis on définit une distance du point $(a+bi)$ à $(c+di)$ comme $\sqrt{(a-c)^2+(b-d)^2}$.
 - On pourra noter que ce deux normes sont la norme-deux. On la verra ci-dessous.
 
-Soit $\bold x\in\R^n$ un point de coordonnés $(x_1, x_2, \dots, x_n)$. Donc, les normes les plus communes sont :
+Soit $\mathbf{x}\in\mathbb{R}^n$ un point de coordonnés $(x_1, x_2, \dots, x_n)$. Donc, les normes les plus communes sont :
 
-- Norme-un : $||\bold x||_1=\sum_{i=1}^n|x_i|$
+- Norme-un : $||\mathbf{x}||_1=\sum_{i=1}^n|x_i|$
 Aussi appelé la norme de Manhattan. Elle induit la norme du taxi.
-- Norme-deux : $||\bold x||_2=\left(\sum_{i=1}^n x_i^2\right)^{\frac 1 2}=\sqrt{x_1^2+\cdots+x_n^2}$.
+- Norme-deux : $||\mathbf{x}||_2=\left(\sum_{i=1}^n x_i^2\right)^{\frac 1 2}=\sqrt{x_1^2+\cdots+x_n^2}$.
 Elle induit la norme euclidienne.
-- Norme-p : $||\bold x||_p=\left(\sum_{i=1}^n |x_i|^p\right)^{\frac 1 p}=\sqrt[p]{|x_1|^p+\cdots+|x_n|^p}$
-- Norme-sup ou norme uniforme : $||\bold x||_{\infin} =\max(|x_1|, \cdots, |x_n|)$
+- Norme-p : $||\mathbf{x}||_p=\left(\sum_{i=1}^n |x_i|^p\right)^{\frac 1 p}=\sqrt[p]{|x_1|^p+\cdots+|x_n|^p}$
+- Norme-sup ou norme uniforme : $||\mathbf{x}||_{\infty} =\max(|x_1|, \cdots, |x_n|)$
 
-**On peut tout de même définir des normes pour des suites !** On suppose que l’entrée $i$ du vecteur $\bold x$ est juste la valeur de la suite en indice $i$. Par contre, la norme-sup passe de $\max$ à $\sup$, c’est-à-dire la borne supérieure de la suite.
+**On peut tout de même définir des normes pour des suites !** On suppose que l’entrée $i$ du vecteur $\mathbf{x}$ est juste la valeur de la suite en indice $i$. Par contre, la norme-sup passe de $\max$ à $\sup$, c’est-à-dire la borne supérieure de la suite.
 
 Finalement, on peut définir des normes sur les fonctions, mais on le verra plus tard.
 
@@ -200,7 +200,7 @@ $$
 \text{ Si vrai, donc } \beta^{-1}N^\prime(x)\le N(x) \le \alpha^{-1}N^\prime(x)
 $$
 
-**Théorème**. Sur $\R^n$, toutes les normes sont équivalentes. càd. elles valent le même. Ceci n’est pas vrai pour tous les espaces métriques, notamment le espace de suites avec la suite $u_n=1/n$.
+**Théorème**. Sur $\mathbb{R}^n$, toutes les normes sont équivalentes. càd. elles valent le même. Ceci n’est pas vrai pour tous les espaces métriques, notamment le espace de suites avec la suite $u_n=1/n$.
 
 ## Boules et sous-ensembles ouverts/fermés
 
@@ -216,7 +216,7 @@ $$
 \text{Boule fermée : }\bar B(x,r)=\left\{y\in E : d(x,y)\le r \right\}
 $$
 
-Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\R^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si : 
+Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\mathbb{R}^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si : 
 
 $$
 \forall a\in U, \exist r > 0: B(a,r) \sub U
@@ -230,7 +230,7 @@ On définit un ouvert à partir d’un fermé : $F$ est (sous-ensemble) fermé d
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_5.png)
 
-**Remarque**. Un ensemble peut être ni ouvert ni fermé. Sur $\R$, par exemple, $[a,b[$ est un tel exemple.
+**Remarque**. Un ensemble peut être ni ouvert ni fermé. Sur $\mathbb{R}$, par exemple, $[a,b[$ est un tel exemple.
 
 ### Propriétés
 
@@ -249,12 +249,12 @@ Voyons une liste utile de propriétés :
 **Note**. Une intersection infinie d’ouverts n’est pas nécessairement un ouvert. Par exemple :
 
 $$
-\bigcap_{n=1}^\infin \left] -\frac{1}{n}, \frac{1}{n}\right[=\{0\}
+\bigcap_{n=1}^\infty \left] -\frac{1}{n}, \frac{1}{n}\right[=\{0\}
 $$
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_6.png)
 
-**Note**. Dans $\R^n$, un ensemble $E$ fermé et **borné** (admettant un élément dont la norme est maximale) est un ensemble compact. Voyons que d’être fermé n’est pas d’être borné. Borné veut dire que ses bornes sont finies.
+**Note**. Dans $\mathbb{R}^n$, un ensemble $E$ fermé et **borné** (admettant un élément dont la norme est maximale) est un ensemble compact. Voyons que d’être fermé n’est pas d’être borné. Borné veut dire que ses bornes sont finies.
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_7.png)
 
@@ -264,10 +264,10 @@ $$
 
 En Analyse Réelle, on a déjà vu une définition de limites (de suites) et continuité. On va généraliser telles notions.
 
-Soit $(E,d)$ un espace métrique et $(x_k)_{k\in\N}$ une suite d’éléments de $E$. $(x_k)$ converge vers une limite $\ell \in E$ et on note $x_k\rightarrow \ell$ ssi. :
+Soit $(E,d)$ un espace métrique et $(x_k)_{k\in\mathbb{N}}$ une suite d’éléments de $E$. $(x_k)$ converge vers une limite $\ell \in E$ et on note $x_k\rightarrow \ell$ ssi. :
 
 $$
-\forall \varepsilon > 0, \exists n_0 \in \N, \forall k > n_0: 
+\forall \varepsilon > 0, \exists n_0 \in \mathbb{N}, \forall k > n_0: 
 \begin{cases}
 d((x_k), \ell) < \varepsilon 
 \\
@@ -287,7 +287,7 @@ $$
 \forall \varepsilon >0, \exist \delta >0 : f(B(x_0, \delta))\sub B(f(x_0), \varepsilon)
 $$
 
-De plus, si $A\sube E$, $f$ est continue sur $A$ si elle est continue en tout $a\in A$.
+De plus, si $A\subseteq E$, $f$ est continue sur $A$ si elle est continue en tout $a\in A$.
 
 **Théorème**. $f$ continue en $a$ équivaut à que toute suite $(x_k)$ convergente à $a$ implique $f(x_n)$ converge à $f(a)$. 
 
@@ -353,10 +353,10 @@ Voyons quelques produits hermitiens :
 - Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.
     
     $$
-    \lang x,y \rang = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\R^+
+    \lang x,y \rang = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
     $$
     
-- Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\R$.
+- Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\mathbb{R}$.
     
     $$
     \lang P,Q \rang = \int_0^1 P(t)\overline Q(t)dt
@@ -377,7 +377,7 @@ Avec cette définition, on peut définir un ensemble $F^\perp \in E$ de vecteurs
 - **Propriété #2** : Si $F = \text{Vect}(\{a_i\})$, donc $F^\perp = \big\{ \{x_i\} : a_1x_1 + \dots + a_n x_n = 0 \big\}$
 - **Propriété #3** : $E = F \oplus F^\perp$.
 
-On peut donc voir chaque vecteur de $E$ comme une somme d’un vecteur de $F$ et de $F^\perp$. C’est-à-dire, $x = p_F(x) + p_{F^\perp}(x)$. Donc, une projection d’un vecteur $x$ sur un ensemble  est le vecteur $x_F$, c’est-à-dire, le composant du vecteur  qui vient de l’ensemble .
+On peut donc voir chaque vecteur de $E$ comme une somme d’un vecteur de $F$ et de $F^\perp$. C’est-à-dire, $x = p_F(x) + p_{F^\perp}(x)`. Donc, une projection d’un vecteur $x$ sur un ensemble  est le vecteur $x_F$, c’est-à-dire, le composant du vecteur  qui vient de l’ensemble .
 
 **Note** : on peut voir donc $p_F(x) + p_{F^\perp}(x)$ comme la fonction identité $\text{Id}(x)$.
 
@@ -432,19 +432,19 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 4. Pour $v_n$, on l’orthogonalise p.r. à $\{v_{n-1}\}$, puis on le normalise et on finit avec $e_n$.
 5. La base orthonormée finale sera finalement donné par $\{e_1, e_2, \dots, e_n\}$.
 
-Plus mathématiquement, et soit $p_\bold{u}(\bold{v})=\frac{\lang \bold{u},\bold{v} \rang}{\lang \bold{u},\bold{u} \rang} \cdot \bold{u}$ la projection orthogonale de $\bold{v}$ sur $\bold{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
+Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\lang \mathbf{u},\mathbf{v} \rang}{\lang \mathbf{u},\mathbf{u} \rang} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
 
 $$
 \begin{align*}
-&&\bold{u}_1 = \bold{v}_1 &&\longrightarrow &&\bold{e}_1=\frac{\bold{u}_1}{||\bold{u}_1||} \\
+&&\mathbf{u}_1 = \mathbf{v}_1 &&\longrightarrow &&\mathbf{e}_1=\frac{\mathbf{u}_1}{||\mathbf{u}_1||} \\
 
-&&\bold{u}_2 = \bold{v_2} - p_{\bold{u}_1}(\bold{v}_2) &&\longrightarrow &&\bold{e}_2=\frac{\bold{u}_2}{||\bold{u}_2||} \\
+&&\mathbf{u}_2 = \mathbf{v_2} - p_{\mathbf{u}_1}(\mathbf{v}_2) &&\longrightarrow &&\mathbf{e}_2=\frac{\mathbf{u}_2}{||\mathbf{u}_2||} \\
 
-&&\bold{u}_3 = \bold{v_3} - p_{\bold{u}_1}(\bold{v}_3) - p_{\bold{u}_2}(\bold{v}_3)  &&\longrightarrow &&\bold{e}_3=\frac{\bold{u}_3}{||\bold{u}_3||} \\
+&&\mathbf{u}_3 = \mathbf{v_3} - p_{\mathbf{u}_1}(\mathbf{v}_3) - p_{\mathbf{u}_2}(\mathbf{v}_3)  &&\longrightarrow &&\mathbf{e}_3=\frac{\mathbf{u}_3}{||\mathbf{u}_3||} \\
 
 && &&\vdots \\
 
-&&\bold{u}_k = \bold{v}_k - \sum_{i=1}^{k-1} p_{\bold{u}_i}(\bold{v}_k)&&\longrightarrow &&\bold{e}_k=\frac{\bold{u}_k}{||\bold{u}_k||} \\
+&&\mathbf{u}_k = \mathbf{v}_k - \sum_{i=1}^{k-1} p_{\mathbf{u}_i}(\mathbf{v}_k)&&\longrightarrow &&\mathbf{e}_k=\frac{\mathbf{u}_k}{||\mathbf{u}_k||} \\
 
 \end{align*}
 $$
@@ -461,16 +461,16 @@ L’espace de fonctions est un espace vectoriel. La regroupement de fonctions pe
 
 Ceci n’est pas un cours de théorie de la mesure, mais les fonctions communes sont normalement dans $L^0$. À partir de $L^0$, tous les groupes à continuation y sont inclus. Par exemple :
 
-- $\mathcal C^0(J, \R)$ : l’ensemble des fonctions continues de $J$ vers $\R$
-- $\mathcal C^k(J, \R)$ : l’ensemble de fonctions continues de $J$ vers $\R$ dont la $k$-ième dérivée est continue.
-- $\mathcal C^\infin(J, \R)$ : l’ensemble de fonctions continues de $J$ vers $\R$ indéfiniment dérivables.
-- $L^\infin(J, \R)$ : l’ensemble des fonctions bornées sur $J$.
+- $\mathcal C^0(J, \mathbb{R})$ : l’ensemble des fonctions continues de $J$ vers $\mathbb{R}$
+- $\mathcal C^k(J, \mathbb{R})$ : l’ensemble de fonctions continues de $J$ vers $\mathbb{R}$ dont la $k$-ième dérivée est continue.
+- $\mathcal C^\infty(J, \mathbb{R})$ : l’ensemble de fonctions continues de $J$ vers $\mathbb{R}$ indéfiniment dérivables.
+- $L^\infty(J, \mathbb{R})$ : l’ensemble des fonctions bornées sur $J$.
 Par exemple, $\arctan(x)$, $1(x)$ ou $e^{-x^2}$.
 
-Tous ces espaces peuvent être munis de la norme $||f||_\infin = \sup |f(x)|$. Il suit que $L^\infin$ est l’ensemble des fonctions dont la norme $||\cdot||_\infin$ est finie, donc **l’ensemble des fonctions bornées.**
+Tous ces espaces peuvent être munis de la norme $||f||_\infty = \sup |f(x)|$. Il suit que $L^\infty$ est l’ensemble des fonctions dont la norme $||\cdot||_\infty$ est finie, donc **l’ensemble des fonctions bornées.**
 
 $$
-L^\infin=\left\{f\in L^0: ||f||_\infin < \infin \right\}
+L^\infty=\left\{f\in L^0: ||f||_\infty < \infty \right\}
 $$
 
 **Théorème**. Une fonction continue à support compact est bornée et atteint ses bornes.
@@ -484,7 +484,7 @@ $$
 
 \\[6pt]
 
-L^p=\left\{ f\in L^0 : ||f||_p < \infin \right\}
+L^p=\left\{ f\in L^0 : ||f||_p < \infty \right\}
 $$
 
 Et donc, on peut créer définir d’autres espaces de fonctions à partir de $L^0$, particulièrement dont l’intégrale définie est finie. $L^1$ est l’ensemble de fonctions intégrables (intégrale définie finie, contient les densités de probabilités), $L^2$ est l’ensemble des fonctions dont le carré a une intégrale finie, etc.

@@ -20,7 +20,7 @@ On arrive à ce qu’on veut.
 
 Exemple 1.3.1
 
-On pourrait applique le TCL à f_n : Soit Z_n = \frac{(f_n-p)}{\sqrt{pq/n}}. Donc Z:_n \sim \mathcal N(0,1) quand n\rightarrow\infin. On cherche un n tel que P(|Z_n| \le 0.01/\sqrt{pq/n}) \ge 0.99.
+On pourrait applique le TCL à f_n : Soit Z_n = \frac{(f_n-p)}{\sqrt{pq/n}}. Donc Z:_n \sim \mathcal N(0,1) quand n\rightarrow\infty. On cherche un n tel que P(|Z_n| \le 0.01/\sqrt{pq/n}) \ge 0.99.
 
 Ok, brouillon. P(|Z_n| \le B) = P(Z_n\le B) - P(Z_n\le -B) mais ces derniers sont les répartitions, donc on a \phi(b)-(1-\phi(b))= 2\phi(B)-1. On revient à ce qu’on faisait : 2\phi(0,01/\sqrt{pq/n})-1 \ge 0.99
 

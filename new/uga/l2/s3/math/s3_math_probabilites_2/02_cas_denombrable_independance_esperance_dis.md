@@ -71,7 +71,7 @@ Notons qu’on peut construire une variable aléatoire sur une autre variable al
 Il faut ne pas confondre que $Y$ est une variable aléatoire qui applique une fonction affine, **$Y$ n’est pas la fonction affine elle-même** !
 
 $$
-f:\R \mapsto \R, f(x)=2x+3
+f:\mathbb{R} \mapsto \mathbb{R}, f(x)=2x+3
 \newline
 Y = f(X)= 2X+3. \implies \Omega_Y=\{5,7,9,11,13,15\}
 $$
@@ -129,7 +129,7 @@ $$
 
 ### Définition de variance et théorèmes
 
-Un moment est une notion sortie de la physique. Si $n \in \N$ et $X$ est une V.A. avec espérance finie, donc $\mathbb{E}[X^n]$ est le moment d’ordre $n$ de $X$. Encore plus, $\mathbb{E}[(X-\mathbb{E}[X])^n]$ est le moment *centré* d’ordre $n$ de $X$. “Centré” veut dire centré autour de la moyenne, car à chaque valeur de $X$ on soustrait la moyenne, donc l’ensemble qui en ressort a comme nouveau centre $0$.
+Un moment est une notion sortie de la physique. Si $n \in \mathbb{N}$ et $X$ est une V.A. avec espérance finie, donc $\mathbb{E}[X^n]$ est le moment d’ordre $n$ de $X$. Encore plus, $\mathbb{E}[(X-\mathbb{E}[X])^n]$ est le moment *centré* d’ordre $n$ de $X$. “Centré” veut dire centré autour de la moyenne, car à chaque valeur de $X$ on soustrait la moyenne, donc l’ensemble qui en ressort a comme nouveau centre $0$.
 
 La variance est le moment d’ordre $2$ de $X$, c’est-à,dire, la valeur espérée du carré de la somme des écarts de chaque observation par rapport à la moyenne. Intuitivement, elle est simplement une mesure de dispersion de la moyenne, exprimée en unités carrées. **La variance est toujours positive !**
 

@@ -246,7 +246,7 @@ Dans ce cas c’est linéaire, donc $y_i = \beta_0+\beta_1x_i+u_i$.
 - $H_5$, non colinéarité: la variable explicative $x_i$ n’est pas constante pour toutes les observations.
 
 > [!note]
-> Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\bold x u] \ne 0$ donc $\text{Cov}(\bold x, u) \ne 0$.
+> Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\mathbf{x} u] \ne 0$ donc $\text{Cov}(\mathbf{x}, u) \ne 0$.
 
 Sous ces hypothèses, il découle que : 
 

@@ -146,7 +146,7 @@ Gardant en tête $\frac{m_2}{k}$, pensons à deux cas extrêmes qui sont les deu
 
 Si la pente est infinie ou BP est parfaitement inélastique, donc aucun changement de $i$ n’aura un effet sur $Y$. Plus spécifiquement, le taux d’intérêt $i$ sont sans effet sur l’équilibre extérieur et BP est une droite verticale qui represente simplement la balance de transactions courantes ($BP = BTC$). Il n’y a pas une connexion entre les marchés financiers nationaux.
 
-### Parfaite mobilité des capitaux : $k \rightarrow \infin$
+### Parfaite mobilité des capitaux : $k \rightarrow \infty$
 
 Si la pente est $0$ ou parfaitement élastique, tous les capitaux réagissent de manière infiniment grande à une variation du taux d’intérêt. Le taux d’intérêt est complètement indépendante de l’équilibre interne et du revenu national. Si on voit l’équation de $i$, elle devient $i = i_{RDM} - ê$. Le taux d’intérêt est simplement égal au taux d’intérêt international corrigé par la dépréciation ou l’appréciation éventuellement anticipée de la monnaie nationale.
 

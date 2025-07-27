@@ -116,7 +116,7 @@ $$
 
 La matrice d'application linéaire $f$ (par rapport aux bases $B$ et $B'$) est la matrice dont la $j$-ième colonne est constituée par les coordonnées du vecteur $f(e_j)$ dans la base $B^\prime=(f_i)_{1\le i\le n}$.
 
-![image (1).png](image_(1).png)
+![image (1).png](ressources/01_matrices_et_applications_lineaires_image_(1).png)
 
 En termes plus simples, c’est la matrice dont les vecteurs colonnes sont l’image par $f$ des vecteurs de la base de départ $B$, exprimée dans la base d’arrivée $B'$. On note cette matrice $\text{Mat}_{B,B'}(f)$.
 
@@ -184,7 +184,7 @@ De plus, si $f : E \mapsto F$ est bijective, alors la matrice de l’application
 
 # Changement de bases
 
-## Préparation : de $y=f(x)$ à $\bold{Y}_{B'}=A\bold{X}_B$
+## Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
 
 Soit $E$ un espace vectoriel de dimension finie et soit $B = (e_1, e_2, \dots , e_p)$ une base de $E$. Comme annotation, si $B$ est la base canonique, on n'écrit pas un souscrit $B$ sur un vecteur, il ne faut pas mentionner la base.
 
@@ -192,7 +192,7 @@ Rappelons que tout élément $x$ de $E$ se représente comme : $x = x_1e_1 + x_2
 
 L’objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéaire. Le premier pas est de fixer $f : E \mapsto F$ et $A = \text{Mat}_{B,B'}(f)$ (la matrice qui contient l'image de la base de $E$ exprimé dans la base de $F$).
 
-Après, soit $\bold{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\bold{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\bold{Y} = A\bold{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\bold{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
+Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
 
 ## Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
 
@@ -214,7 +214,7 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 
 - $P_{B',B} = (P_{B,B'})^{-1}$
 - Prenons 3 bases : $B$, $B'$, $B''$. Donc $P_{B,B''} = P_{B,B'} \cdot P_{B',B''}$.
-- $\bold{X} = P_{B,B'} \cdot \bold{X'}$, pour $\bold{X}$ élément de $E$ exprimé en $B$ et $\bold{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
+- $\mathbf{X} = P_{B,B'} \cdot \mathbf{X'}$, pour $\mathbf{X}$ élément de $E$ exprimé en $B$ et $\mathbf{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
 
 ## Formule de changement de base
 
@@ -238,14 +238,14 @@ $$
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
 
 $$
-B\bold{Y}_{\mathcal{B}}=Q^{-1}AP\bold{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
+B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
 $$
 
-1. $P$ : On prend un vecteur $\bold{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
+1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
 3. $Q^{-1}$ : Finalement, on va exprimer le vecteur résultat de $\mathcal{B}_{F}$ à $\mathcal{B}_{F}'$.
 Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m’a posé de problèmes.
-4. $B$ : Mais, notons que tout cela serait le même que prendre $\bold{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
+4. $B$ : Mais, notons que tout cela serait le même que prendre $\mathbf{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
 
 ### Sur un même espace vectoriel $E$
 
@@ -261,7 +261,7 @@ $$
 
 Interprétation :
 
-1. $P$ : On prend un vecteur $\bold{Y}$, écrit en $\mathcal{B}'$, et on le réécrit en $\mathcal{B}$.
+1. $P$ : On prend un vecteur $\mathbf{Y}$, écrit en $\mathcal{B}'$, et on le réécrit en $\mathcal{B}$.
 2. $A$ : Après, on passe $E$ par la fonction $f$, ce qui nous laisse un résultat en $\mathcal{B}$.
 3. $P^{-1}$ : Finalement, on reprend l'image avec $B$ et on la réécrit en $\mathcal{B}'$.
 4. $B$ : Notons que tout cela serait le même si on applique la fonction nous laissant un résultat en $\mathcal{B}'$.
