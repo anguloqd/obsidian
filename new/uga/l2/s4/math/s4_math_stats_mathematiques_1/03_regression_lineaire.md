@@ -1,6 +1,6 @@
 # 03 // régression linéaire
 
-[Slides de régression linéaire](slides_cours_reglin_stat1_annote_4.pdf)
+[Slides de régression linéaire](ressources/03_regression_lineaire_slides_cours_reglin_stat1_annote_4.pdf)
 
 # Régression linéaire et statistiques descriptives
 
@@ -14,11 +14,11 @@ C’est juste une manière de visualiser les couples de données $(x,y)$ dans un
 
 Le “point moyen” est défini comme lo point qui a comme coordonnés $(\bar x, \bar y)$. Il s’agit du point de gravité.
 
-![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/03_regression_lineaire/untitled.png)
+![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/03_regression_lineaire_untitled.png)
 
-![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/03_regression_lineaire/untitled_1.png)
+![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/03_regression_lineaire_untitled_1.png)
 
-![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/03_regression_lineaire/untitled_2.png)
+![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/03_regression_lineaire_untitled_2.png)
 
 Pour la suite, on s’intéresse aux échantillons/populations qui on plutôt une forme linéaire, comme celle de la première image. 
 
@@ -92,7 +92,7 @@ On va supposer quelques fait sur les erreurs $\epsilon_i$ pour avancer dans notr
 - Homoscédasticité : les termes d’erreurs sont supposés de variance constante.
 - Normalité des termes d’erreur : les termes d’erreurs suivent une loi normale, centrées (car $E(\epsilon_i) = 0$ par supposition), de variance $σ^2$.
 
-![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/03_regression_lineaire/untitled_3.png)
+![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/03_regression_lineaire_untitled_3.png)
 
 Si on part de $\epsilon_i \sim \mathcal{N}(0,\sigma^2)$, il vient donc que $Y_i\sim\mathcal{N}(\hat Y, \sigma^2_\epsilon) = \mathcal{N}(\beta_1X+\beta_0, \sigma^2_\epsilon)$ .
 
@@ -141,7 +141,7 @@ L’hypothèse nulle reste encore $H_0$ est “$\beta_1=0$”. Comme rappel, $[t
 
 La variable statistique à étudier ici est plus simple que dans le cas du test de Student et, en plus, c’est un test unilatéral, donc encore plus simple. Pour simplifier, on appelle la statistique $F=\frac{SCM}{SCE/(n-2)}$. Si $F \ge q^{\mathcal{F}(1,n-2)}_{1-\alpha}$, on rejette $H_0$ et on en déduit que $X$ explique $Y$.
 
-![Exemple d’une table d’anova](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/03_regression_lineaire/untitled_4.png)
+![Exemple d’une table d’anova](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/03_regression_lineaire_untitled_4.png)
 
 Exemple d’une table d’ANOVA
 

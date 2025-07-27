@@ -1,6 +1,6 @@
 # 01 // concepts des bases de données relationnelles
 
-[Slides d’intro au BDs](01.introduction.pdf)
+[Slides d’intro au BDs](ressources/01_concepts_des_bases_de_donnees_relationnelles_01.introduction.pdf)
 
 # Les bases de données et SGBD
 
@@ -28,11 +28,11 @@ Finalement, le SGBD remet la base de données dans l’état cohérent le plus r
 
 # Description des données
 
-![On expliquera ce modèle avec un exemple d’un contexte bancaire.](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled.png)
+![On expliquera ce modèle avec un exemple d’un contexte bancaire.](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled.png)
 
 On expliquera ce modèle avec un exemple d’un contexte bancaire.
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_1.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_1.png)
 
 ## Schéma externe : la vue individuelle
 
@@ -54,15 +54,15 @@ C’est simplement la structure de stockage de données en machine. Par exemple,
 
 Il s’agit d’un ensemble de concepts et de règles de composition de ces concepts permettant de décrire des données. Il peut être supporté par un langage de description de données (LDD) qui décrit les d’une base de données d’une manière assimilable par une machine. Par exemple :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_2.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_3.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_3.png)
 
 ## Un exemple pratique : commande de produit
 
 On fera un premier essai pour passer du document à des tables. On divises les infos en commande, client et détails comme suit :
 
-![On sépare ce document de commande dans 3 groupes de données : commande, client et détails. ](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_4.png)
+![On sépare ce document de commande dans 3 groupes de données : commande, client et détails. ](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_4.png)
 
 On sépare ce document de commande dans 3 groupes de données : commande, client et détails. 
 
@@ -70,13 +70,13 @@ Le premier problème est que il y a de données qui sont calculées à partir d�
 
 Le deuxième problème est plus important est qu’on ne peut pas reconstruire la commande initiale suite à ségrégation de données. Comment on sait que les données de clients sont liés aux donnés de commande, par exemple ? Les données ne sont pas ***liées***. On peut donc ajouter une “marque” dans chaque ensemble de données pour indiquer à qui sont liées comme suit, même si chaque ensemble sera stocké ailleurs :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_5.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_5.png)
 
 Dans cette version, on voit que le tableau commande et le tableau client sont liés par NCLI comme donnée commune, et le tableau commande est lié à travers NCOM avec le tableau détails. Le tableaux détails et client ne sont pas liés directement, mais le tableau commandes sert de pont entre les deux.
 
 Finalement, une autre amélioration est que, dans le tableau détails, il existent quelques libellés et prix qui sont répétés. On pourrait donc faire un autre tableau, un tableau produits, pour stocker ces données et supprimer les redondances :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_6.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_6.png)
 
 ## Premières conclusions
 
@@ -88,7 +88,7 @@ Finalement, une autre amélioration est que, dans le tableau détails, il existe
 - Chaque colonne d’une table décrit une propriété commune des entités.
 - Les lignes d’une table sont distinctes.
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_7.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_7.png)
 
 ### Par rapport aux identifiants…
 
@@ -97,7 +97,7 @@ Finalement, une autre amélioration est que, dans le tableau détails, il existe
     (Le deuxième tableau en est un exemple. On peut le voir comme un couple unique de données)
     - Rien n’interdit d’imposer plus d’un identifiant par table.
 
-![Notons que le colonnes rouges ont de valeurs uniques, tant que les autres ont de valeurs répétées. On sait donc de quelle ligne on parle quand on connaît son identifiant.](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_8.png)
+![Notons que le colonnes rouges ont de valeurs uniques, tant que les autres ont de valeurs répétées. On sait donc de quelle ligne on parle quand on connaît son identifiant.](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_8.png)
 
 Notons que le colonnes rouges ont de valeurs uniques, tant que les autres ont de valeurs répétées. On sait donc de quelle ligne on parle quand on connaît son identifiant.
 
@@ -114,13 +114,13 @@ une ligne dans une autre table (dite table cible) est dénommée clé étrangèr
 - Donc, une clé étrangère n’as pas à être un identifiant de l’un des tableaux (particulièrement pour le tableau référenceur).
 - Finalement, une clé étrangère (colonnes vertes ci-dessous) cible un identifiant appelé “identifiant cible” (colonnes rouges ci-dessous). La conséquence logique est que les données dans la clé étrangère doivent être un sous-ensemble de l’identifiant logique, ce dernier s’appelle “***contrainte référentielle***”.
 
-![Particulièrement, les clés étrangères sont, dans le tableau Offre, NUMF (ciblant table Fournisseur) et NUMP (ciblant table Pièce). Le tableau offre est le tableau qui sert de pont ou qui connecte lest autres deux.  ](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_9.png)
+![Particulièrement, les clés étrangères sont, dans le tableau Offre, NUMF (ciblant table Fournisseur) et NUMP (ciblant table Pièce). Le tableau offre est le tableau qui sert de pont ou qui connecte lest autres deux.  ](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_9.png)
 
 Particulièrement, les clés étrangères sont, dans le tableau Offre, NUMF (ciblant table Fournisseur) et NUMP (ciblant table Pièce). Le tableau offre est le tableau qui sert de pont ou qui connecte lest autres deux.  
 
 ### Par rapport au schéma et contenu des données…
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_10.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_10.png)
 
 - Il est nécessaire d’avoir un langage pour décrire l’ensemble de données et l’interroguer.
 - On évite de stocker les informations qui peuvent être calculées.
@@ -131,7 +131,7 @@ Particulièrement, les clés étrangères sont, dans le tableau Offre, NUMF (cib
 
 Voyons un nouveau exemple de base de données :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_11.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_11.png)
 
 **Problème**. Lorsqu’un livre existe en plusieurs exemplaires, les informations (TITRE, AUTEUR, ISBN) sont dupliquées. Cette situation viole le principe fondateur des bases de données : **tout fait pertinent du domaine d’application doit être enregistré une et une seule fois**.
 
@@ -141,7 +141,7 @@ Dans ce cas, on voit que les données dans ISBN déterminent le titre et l’aut
 
 La base de données idéelle donc serait la suivante :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_12.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_12.png)
 
 # La normalisation
 
@@ -158,7 +158,7 @@ En plus, on peut parler d’une décomposition sans perte, qui est définie comm
 
 Étudions l’exemple qui suit :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/01_concepts_des_bases_de_donnees_relationnelles/untitled_13.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/01_concepts_des_bases_de_donnees_relationnelles_untitled_13.png)
 
 La relation est le pilot (ensemble de attributs) et les attributs sont les colonnes ID (clé), NOM et AVIONS. On peut la représenter aussi comme PILOT (ID, NOM, AVIONS).
 

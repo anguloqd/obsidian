@@ -10,14 +10,14 @@
 
 ## SDK introduction
 
-![image.png](period_#1_-_kalray_university_sw/image.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image.png)
 
 You can use MPPA in direct programming in two ways:
 
 - kvx-jtag-runner: prototyping, evaluating, benchmarking.
 - OpenCL: deployment, heterogeneous applications execution.
 
-![image.png](period_#1_-_kalray_university_sw/image_1.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image_1.png)
 
 A comprehensive Neural Network offer, from standard CNN frameworks to code generation, setup & multiple CNN execution. A flexible tool, with capability to customize
 neural networks and runtime execution.
@@ -33,7 +33,7 @@ KANN is OpenCL based and can be run in parallel with other OpenCL application.
 
 ## KaNN
 
-![On MPPA processor, each layer is parallelized on all available clusters for a low latency CNN.](period_#1_-_kalray_university_sw/image_2.png)
+![On MPPA processor, each layer is parallelized on all available clusters for a low latency CNN.](ressources/period_#1_-_kalray_university_sw_image_2.png)
 
 On MPPA processor, each layer is parallelized on all available clusters for a low latency CNN.
 
@@ -55,7 +55,7 @@ But the pipeline have two main drawbacks:
 
 ## Kalray Product Offer
 
-![image.png](period_#1_-_kalray_university_sw/image_3.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image_3.png)
 
 # Tools & methods for software development at Kalray
 
@@ -78,7 +78,7 @@ Your `$HOME` directory is on a NFS (Network File System). The NFS is backed up r
 
 Please do not use the NFS for volatile data such as builds, browser cache, ccache data, etc…Please use `/work1/<login>` for those instead. `/work1` is always mapped to local disk on all Kalray machines, high speed and never backed up.
 
-![image.png](period_#1_-_kalray_university_sw/image_4.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image_4.png)
 
 ### ❗: Working remotely (SSH mainly)
 
@@ -262,11 +262,11 @@ dangulo@ws2405:~/.ssh$ ssh-copy-id -i ~/.ssh/dangulo_win jetson01
 
 ## System architecture
 
-![image.png](period_#1_-_kalray_university_sw/image_5.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image_5.png)
 
 ## Kalray Projects (ACB, ACS, ACE)
 
-![image.png](period_#1_-_kalray_university_sw/image_6.png)
+![image.png](ressources/period_#1_-_kalray_university_sw_image_6.png)
 
 ## GIT & Gerrit
 

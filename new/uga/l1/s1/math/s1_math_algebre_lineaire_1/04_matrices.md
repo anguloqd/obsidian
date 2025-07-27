@@ -89,7 +89,7 @@ $$
 
 - Soit $A ∈ M_n (K)$. La matrice $A$ est inversible si et seulement si sa forme échelonnée réduite est la matrice identité $I_n$.
     
-    ![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/04_matrices/untitled.png)
+    ![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/ressources/04_matrices_untitled.png)
     
 
 ## Matrices triangulaires
@@ -139,13 +139,13 @@ Une matrice $A$ de taille $n × n$, triangulaire, est inversible si et seulement
 
 C'est juste inverser les indices $i$ et $j$ de chaque entrée. La matrice $n \times p$ va se transformer à $p \times n$.
 
-![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/04_matrices/untitled_1.png)
+![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/ressources/04_matrices_untitled_1.png)
 
 ## **Trace d’une matrice : $\text{tr}(A)$**
 
 C'est la somme des entrées de la diagonal principale d'une matrice.
 
-![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/04_matrices/untitled_2.png)
+![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/ressources/04_matrices_untitled_2.png)
 
 ## Notion de m**atrice symétrique et antisymétrique**
 
@@ -153,4 +153,4 @@ Une matrice symétrique est une matrice $A$ telle que $A = A^T$ , et une matrice
 
 **Théorème intéressant**. Toute matrice est la somme d’une matrice symétrique et d’une matrice antisymétrique.
 
-![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/04_matrices/untitled_3.png)
+![untitled](new/uga/l1/s1/math/s1_math_algebre_lineaire_1/ressources/04_matrices_untitled_3.png)

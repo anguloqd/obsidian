@@ -30,7 +30,7 @@ Prolog en premier teste les possible solutions du haut en bas, et lit les règle
 -? papy(X,Y). % requête
 ```
 
-![Voyons que Prolog teste en premier le paire (charlie,david) pour le première appel à `pere(X,Z)`, puis il teste (henri,charlie). Quand Prolog arrive a un point où il est impossible de trouver une proposition vraie, il s’arrête, reviens en arrière au dernier point de choix (*backtrack*) en défaisant toutes les unifications ou maths faits depuis ce point, et essaie la combinaison suivante, comme ça il teste toutes les possibilités possibles.](new/uga/l2/s4/info/s4_info_programmation_logique/02_mecanisme_de_resolution/untitled.png)
+![Voyons que Prolog teste en premier le paire (charlie,david) pour le première appel à `pere(X,Z)`, puis il teste (henri,charlie). Quand Prolog arrive a un point où il est impossible de trouver une proposition vraie, il s’arrête, reviens en arrière au dernier point de choix (*backtrack*) en défaisant toutes les unifications ou maths faits depuis ce point, et essaie la combinaison suivante, comme ça il teste toutes les possibilités possibles.](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/02_mecanisme_de_resolution_untitled.png)
 
 Voyons que Prolog teste en premier le paire (charlie,david) pour le première appel à `pere(X,Z)`, puis il teste (henri,charlie). Quand Prolog arrive a un point où il est impossible de trouver une proposition vraie, il s’arrête, reviens en arrière au dernier point de choix (*backtrack*) en défaisant toutes les unifications ou maths faits depuis ce point, et essaie la combinaison suivante, comme ça il teste toutes les possibilités possibles.
 

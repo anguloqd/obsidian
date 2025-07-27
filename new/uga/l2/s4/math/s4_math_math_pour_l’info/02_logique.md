@@ -2,7 +2,7 @@
 
 # Propositions
 
-[Slides de propositions](slides_proposition_minfo_annote_final.pdf)
+[Slides de propositions](ressources/02_logique_slides_proposition_minfo_annote_final.pdf)
 
 ## Les bases
 
@@ -84,7 +84,7 @@ La magie ici c’est que la clause finale ne dépend pas ni de $p$ ni de $\lnot 
 
 # Prédicats
 
-[Slides de prédicats](sldes_prdicats_minfoannote.pdf)
+[Slides de prédicats](ressources/02_logique_sldes_prdicats_minfoannote.pdf)
 
 ## Quantificateurs
 
@@ -111,7 +111,7 @@ Pour nier des propositions communes, on trouve souvent les résultats généraux
 
 Enfin, pour nier avec succès les propositions à gauche, on utilise la stratégie à droite :
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/02_logique/untitled.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/02_logique_untitled.png)
 
 ## Skolémisation
 
@@ -131,7 +131,7 @@ Note pratique #2 : si $\forall x$ avant de $\exists y$, on fixe $y$ comme foncti
 
 # Algèbre booléenne
 
-[Slides d’algèbre booléenne](slides_bool_minfo_annote.pdf)
+[Slides d’algèbre booléenne](ressources/02_logique_slides_bool_minfo_annote.pdf)
 
 ## Définition
 
@@ -142,7 +142,7 @@ C’est juste la “numérisation” de la logique propositionnel de premier ord
 
 Ces opérations sont axiomatisés par ces lois qui doivent être vérifiées :
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/02_logique/untitled_1.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/02_logique_untitled_1.png)
 
 ## Tableau de Karnaugh
 

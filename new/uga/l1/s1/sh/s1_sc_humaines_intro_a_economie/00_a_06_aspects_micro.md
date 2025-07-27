@@ -291,7 +291,7 @@ Ce qui détermine cette répartition de la taxe dépend de l'élasticité des fo
 
 Si les biens étaient classés selon s'ils sont ***exclusifs*** (on peut empêcher quelqu'un d'utiliser ce bien) et ***rivaux dans la consommation*** (la consommation de l'un réduit la capacité de consommation d'un autre), on obtiendrait 4 catégories :
 
-![Untitled](untitled.webp)
+![Untitled](ressources/00_a_06_aspects_micro_untitled.webp)
 
 ## Problèmes de biens publics
 

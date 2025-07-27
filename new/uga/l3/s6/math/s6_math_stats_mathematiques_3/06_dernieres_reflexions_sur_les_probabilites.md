@@ -1,6 +1,6 @@
 # 06 // dernières réflexions sur les probabilités
 
-[slides Synthèse tests annote.pdf](slides_synthse_tests_annote.pdf)
+[slides Synthèse tests annote.pdf](ressources/06_dernieres_reflexions_sur_les_probabilites_slides_synthse_tests_annote.pdf)
 
 <aside>
 ❗

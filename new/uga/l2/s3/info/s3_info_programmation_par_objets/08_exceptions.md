@@ -1,6 +1,6 @@
 # 08 // exceptions
 
-[Slides de cours 8.pdf](inff3-2223-cours8.pdf)
+[Slides de cours 8.pdf](ressources/08_exceptions_inff3-2223-cours8.pdf)
 
 # Exceptions et Java
 
@@ -133,7 +133,7 @@ finally {
 
 On avait dit que toute exception est un objet. Ils existent de différents types d’exceptions, mais le type le plus basique est la classe `Throwable`.
 
-![Hiérarchie d’exceptions](new/uga/l2/s3/info/s3_info_programmation_par_objets/08_exceptions/untitled.png)
+![Hiérarchie d’exceptions](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/08_exceptions_untitled.png)
 
 Hiérarchie d’exceptions
 

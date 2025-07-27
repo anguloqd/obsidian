@@ -1,6 +1,6 @@
 # 03 //  opérateurs
 
-[Slides de cours 3.pdf](inff3-2223-cours3.pdf)
+[Slides de cours 3.pdf](ressources/03_operateurs_inff3-2223-cours3.pdf)
 
 # Commentaires
 
@@ -74,7 +74,7 @@ public class ExampleAffectation {
 // notons, "b" et "a" ne sont pas deux objets différents. ils sont deux références différentes vers le même objet.
 ```
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/03_operateurs/untitled.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/03_operateurs_untitled.png)
 
 ## Arithmétique
 

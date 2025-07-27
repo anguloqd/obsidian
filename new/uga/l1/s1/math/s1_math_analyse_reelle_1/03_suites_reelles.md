@@ -1,6 +1,6 @@
 # 03 // suites réelles
 
-[Slides des suites réelles](chap3.pdf)
+[Slides des suites réelles](ressources/03_suites_reelles_chap3.pdf)
 
 # Généralités sur les suites réelles
 
@@ -22,7 +22,7 @@ La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $
 - **Définition par terme général** : une expression de $u_n$ en fonction de $n$.
 - **Définition par récurrence** : on définit le premier terme ou les premiers termes et on explicite une dépendance du terme de rang $n$ aux termes de rang inférieurs à $n$.
     
-    ![image (41).png](image_(41).png)
+    ![image (41).png](ressources/03_suites_reelles_image_(41).png)
     
 
 # **Propriétés des suites**

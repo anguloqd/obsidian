@@ -1,6 +1,6 @@
 # 01 // éléments de probabilité
 
-[Slides de rappels de proba](slides_rappels_proba_stat1_annote_2301.pdf)
+[Slides de rappels de proba](ressources/01_elements_de_probabilite_slides_rappels_proba_stat1_annote_2301.pdf)
 
 # Rappels
 

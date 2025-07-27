@@ -1,3 +1,3 @@
 # 01 // base 2 et logique booléene
 
-[cm1.pdf](ensimag/first_year/ecole/1aa_info_architecture_des_ordinateurs/01_base_2_et_logique_booleene_0bc87c689d0d40f59d7fa454f3a8c042/cm1.pdf)
+[cm1.pdf](ressources/01_base_2_et_logique_booleene_cm1.pdf)

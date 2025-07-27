@@ -1,6 +1,6 @@
 # 01 // tests de $\chi^2$
 
-[slides chi2 stat 3 annote.pdf](slides_chi2_stat_3_annote.pdf)
+[slides chi2 stat 3 annote.pdf](ressources/01_tests_de_$_chi^2$_slides_chi2_stat_3_annote.pdf)
 
 # Tests du $χ²$
 
@@ -22,7 +22,7 @@ Introduisons les quantités suivantes :
 
 A partir du tableau de contingence, on peut retrouver la distribution de chacune des variables séparément.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/01_tests_de_$_chi^2$/image.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/01_tests_de_$_chi^2$_image.png)
 
 Les distributions de $X$ et de $Y$ sont appelées distributions marginales. Sur chaque variable, on peut calculer les indicateurs habituels (moyenne, variance, écart type si la variable est quantitative...). Ces paramètres sont qualifiés d’indicateurs marginaux.
 

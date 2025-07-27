@@ -1,8 +1,8 @@
 # 03 // techniques de programmation
 
-[Slides de techniques 1](coursprologl2_3.pdf)
+[Slides de techniques 1](ressources/03_techniques_de_programmation_coursprologl2_3.pdf)
 
-[Slides de techniques 2](coursprologl2_4.pdf)
+[Slides de techniques 2](ressources/03_techniques_de_programmation_coursprologl2_4.pdf)
 
 # Prédicat `writef/2`
 

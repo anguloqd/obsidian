@@ -6,9 +6,9 @@
 
 ## Quelles sont ces quatre crises ?
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled.png)
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_1.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_1.png)
 
 Depuis les années 1920 jusqu’au présent, on pourrait diviser l’histoire économique en quatre époques :
 
@@ -102,7 +102,7 @@ Pendant ce période, il y a eu un investissement élevé, une croissance rapide 
 
 Dans ce aspect aussi, **il faut remarquer le pouvoir des syndicats** : avec les reformes de syndicats des années 1930, et la forte demande de travail pendant la Seconde Guerre, leur pouvoir est accru. **L’un des fait plus important est l’amélioration de l’assurance chômage**. La part des syndiqués sur l’ensemble des travailleurs a atteint un pic au début des années 1950, mais elle baisserait constamment depuis.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_2.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_2.png)
 
 Des allocations chômage plus élevées ainsi que des syndicats plus puissants déplacent la courbe des salaires vers le haut. Ils penseraient que telle croissance de salaires est compatible avec la contrainte imposée par la courbe des prix. Les employeurs, pour sa part, maintiendraient $I$ à un niveau tel que $u$ reste faible. Cette conciliation avec le partage des gains issus du progrès technologique est appelé le ***consensus d’après-guerre***.
 
@@ -113,7 +113,7 @@ Ce compromis d’après-guerre entre employeurs, syndicats et pouvoirs publics o
 
 Le Royaume-Uni a commencé l’âge d’or avec une productivité supérieure, mais a été dépassé dans les 60s par France, Italie et Allemagne. Aux US et dans les pays ayant réussi leur rattrapage, les compromis d’après-guerre ont permis de créer les conditions d’un équilibre fondé sur des profits et des investissements élevés.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_3.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_3.png)
 
 ## 1973 : la fin de l’âge d’or, début de la crise de la *stagflation*
 
@@ -138,11 +138,11 @@ La courbe de Phillips ne s’appliquait pas pour un instant. L’inflation et le
 
 On s’est rendu compte, en plus, que les récessions peuvent être différentes : la Grande Dépressions était une crise de demande, tant que la stagflation était une crise d’offre (chute des profit, de l’investissement et de la croissance de la productivité).
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_4.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_4.png)
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_5.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_5.png)
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_6.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_6.png)
 
 # La grande modération et la crise financière : 1979-2015
 
@@ -191,11 +191,11 @@ La consommation en général s’est réduite avec la chute de la valeur des col
 
 Côté banques, elles sont devenues insolvables car leur actifs (propriétés acquises comme collatéraux des prêts en défaut) ont perdu leur valeur. Le crédit des banques a été réduit à cause de la hausse du risque de défaut. Comme il était plus difficile donc d’acheter une propriété, il y a eu une vente en catastrophe (*fire sales*) des propriétés, descendant trop leur prix.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/05_quatre_crises/untitled_7.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/05_quatre_crises_untitled_7.png)
 
 # Enseignements des trois époques
 
-![1682965663517_1682965647270_0_enseignements_Noise Remove-Quality Enhance_x1.jpeg](1682965663517_1682965647270_0_enseignements_noise_remove-quality_enhance_x1.jpeg)
+![1682965663517_1682965647270_0_enseignements_Noise Remove-Quality Enhance_x1.jpeg](ressources/05_quatre_crises_1682965663517_1682965647270_0_enseignements_noise_remove-quality_enhance_x1.jpeg)
 
 # Crise sanitaire actuelle : depuis 2015
 

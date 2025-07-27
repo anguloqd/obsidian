@@ -59,7 +59,7 @@ Un test pour $H_0$ est une règle de décision fondée sur la valeur réalisée 
 | $\mathcal{H}_0$ est fausse **$(P)$** | OK $(TP)$ : $1-\beta$ | Erreur de Type II $(FN)$ : $\beta$ |
 | $\mathcal{H}_0$ est vraie **$(N)$** | Erreur de Type I $(FP)$ : $\alpha$ | OK $(TN)$ : $1-\alpha$ |
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/04_tests_d’hypotheses_parametriques/untitled.png)
+![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/04_tests_d’hypotheses_parametriques_untitled.png)
 
 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)
 
@@ -422,7 +422,7 @@ $$
 
 Les quantiles $z$ sont à déterminer avec une table à quantiles. Notons que l’erreur de première espèce \alpha est répandu moitié-moitié des deux côtés de la courbe. Ce test est un UPP-sans biais.
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/04_tests_d’hypotheses_parametriques/untitled_1.png)
+![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/04_tests_d’hypotheses_parametriques_untitled_1.png)
 
 Dans le cas unilatérale, qui sont aussi UPP mais pas sans biais, on a que :
 
@@ -440,7 +440,7 @@ Analogiquement au cas précédent. La région de rejet de $H_0$ est la queue gau
     A=\{ T : z_{1-\alpha}<T\} \iff \bar A =\{ T :T<z_{1-\alpha}\}
     $$
     
-    ![Untitled](04_tests_d’hypotheses_parametriques/untitled_2.png)
+    ![Untitled](ressources/04_tests_d’hypotheses_parametriques_untitled_2.png)
     
 
 ### Test sur $\mu$, $\sigma^2$ inconnu $(t$-test$)$

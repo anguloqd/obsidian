@@ -32,7 +32,9 @@
 
 ### Les variations de prix
 
-[Untitled](untitled.csv)
+| p1 augmente                                                                                                | p1 diminue                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Acheteur définitif de bien x1: Satisfaction décroît<br>Vendeur définitif de bien x1: Satisfaction augmente | Acheteur définitif de bien x1: Satisfaction augmente<br>Vendeur définitif de bien x1: Satisfaction décroît |
 
 - Cela dit, il se peut qu'un consommateur que est vendeur d'un bien x1 devient acheteur du même bien lors d'une variation du prix, ou inversement aussi.
 - Vendeur ou acheteur " définitif " est celui qui reste vendeur ou acheteur après la variation, respectivement.

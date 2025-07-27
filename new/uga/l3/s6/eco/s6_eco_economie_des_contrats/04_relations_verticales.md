@@ -1,8 +1,8 @@
 # 04 // relations verticales
 
-[Partie 2_05_L3 MIASHS_Relations verticales_cours.pdf](partie_2_05_l3_miashs_relations_verticales_cours.pdf)
+[Partie 2_05_L3 MIASHS_Relations verticales_cours.pdf](ressources/04_relations_verticales_partie_2_05_l3_miashs_relations_verticales_cours.pdf)
 
-[06_L3 MIASHS_Eco_cont_Intégration et restrictions verticales_moodle.pdf](06_l3_miashs_eco_cont_integration_et_restrictions_verticales_moodle.pdf)
+[06_L3 MIASHS_Eco_cont_Intégration et restrictions verticales_moodle.pdf](ressources/04_relations_verticales_06_l3_miashs_eco_cont_integration_et_restrictions_verticales_moodle.pdf)
 
 # Formes de relations verticales
 
@@ -29,7 +29,7 @@ consommation, des producteurs de biens intermédiaires, ...
 intermédiaire (ou marché de gros).
 - Le marché entre les firmes aval et les consommateurs finals : le marché final (ou marché de détail).
 
-![Une relation verticale de production et de distribution.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/04_relations_verticales/untitled.png)
+![Une relation verticale de production et de distribution.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/04_relations_verticales_untitled.png)
 
 Une relation verticale de production et de distribution.
 
@@ -149,7 +149,7 @@ Le choix entre coordination par le marché et coordination dans la firme dépend
     - Fréquence
     - Spécificité des actifs
 
-![Typologie des relations verticales dans l’approche de Williamson (1985)](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/04_relations_verticales/untitled_1.png)
+![Typologie des relations verticales dans l’approche de Williamson (1985)](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/04_relations_verticales_untitled_1.png)
 
 Typologie des relations verticales dans l’approche de Williamson (1985)
 
@@ -239,7 +239,7 @@ Des estimations sur ce nouveau contrat, le prix de location moyen est passé de 
 
 ### Concurrence intramarque
 
-![Exemple d’une concurrence intramarque](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/04_relations_verticales/untitled_2.png)
+![Exemple d’une concurrence intramarque](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/04_relations_verticales_untitled_2.png)
 
 Exemple d’une concurrence intramarque
 
@@ -256,7 +256,7 @@ Sans intégration verticale, peut-on corriger une "externalité horizontale" ent
 
 ### Concurrence intermarques
 
-![Exemple de concurrence intermarques](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/04_relations_verticales/untitled_3.png)
+![Exemple de concurrence intermarques](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/04_relations_verticales_untitled_3.png)
 
 Exemple de concurrence intermarques
 

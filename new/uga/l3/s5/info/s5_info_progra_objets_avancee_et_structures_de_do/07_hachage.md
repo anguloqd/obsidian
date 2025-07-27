@@ -1,6 +1,6 @@
 # 07 // hachage
 
-[INFF5-7.pdf](inff5-7.pdf)
+[INFF5-7.pdf](ressources/07_hachage_inff5-7.pdf)
 
 # Introduction
 
@@ -17,7 +17,7 @@ Par contre, si le domaine des clefs est **trop grand**, on peut mettre en place 
 
 ## Définition
 
-![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des couples $(k_i, v_i)$. On doit déterminer quelle valeur associer à chaque cle.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/07_hachage/untitled.png)
+![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des couples $(k_i, v_i)$. On doit déterminer quelle valeur associer à chaque cle.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/07_hachage_untitled.png)
 
 D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des couples $(k_i, v_i)$. On doit déterminer quelle valeur associer à chaque clé.
 
@@ -120,7 +120,7 @@ public class DictionnaireAdressageDirect<K, V> {
 
 ## Définition
 
-![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des triplets $(k_i, v_i, e_i)$, où on détermine d’une certaine manière la valeur $v_i$ associée à chaque clé $k_i$, et le triplet “suivant” $e_i$.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/07_hachage/untitled_1.png)
+![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des triplets $(k_i, v_i, e_i)$, où on détermine d’une certaine manière la valeur $v_i$ associée à chaque clé $k_i$, et le triplet “suivant” $e_i$.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/07_hachage_untitled_1.png)
 
 D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des triplets $(k_i, v_i, e_i)$, où on détermine d’une certaine manière la valeur $v_i$ associée à chaque clé $k_i$, et le triplet “suivant” $e_i$.
 

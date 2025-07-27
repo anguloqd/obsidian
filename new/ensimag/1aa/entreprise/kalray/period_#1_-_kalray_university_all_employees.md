@@ -97,7 +97,7 @@ Usually, goals are defined and assessed every semester:
 - KALRAY RSUs need to be hold for 2 years minimum.
 - Vesting is 2/3 after 2 years and the last third the third year (see diagram below).
 
-![image.png](period_#1_-_kalray_university_all_employees/image.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image.png)
 
 # Holding a productive meeting
 
@@ -113,13 +113,13 @@ Usually, goals are defined and assessed every semester:
 
 The following is a task list for the Owner of the Meeting:
 
-![image.png](period_#1_-_kalray_university_all_employees/image_1.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_1.png)
 
 ## Meeting report content
 
 The following is what the meeting report should include, based on if it is an internal meeting or an external meeting:
 
-![image.png](period_#1_-_kalray_university_all_employees/image_2.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_2.png)
 
 ## Action list and action items
 
@@ -151,13 +151,13 @@ After the meeting:
 
 ## Timmi for managing absences
 
-![image.png](period_#1_-_kalray_university_all_employees/image_3.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_3.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_4.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_4.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_5.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_5.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_6.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_6.png)
 
 ## Other uses
 
@@ -180,7 +180,7 @@ Some definitions are:
 - **Project**: unique process, consisting of a set of coordinated and controlled activities with start and finish dates, undertaken to achieve an objective conforming to specific requirements, including the constraints of time, cost and resources.
 - **Decision points** (DP): a tollgate in the Product Life Cycle. It is the stage whereat a CFT determines the readiness of a program/project to progress to the next phase of the life cycle or to the next DP.
 
-![image.png](period_#1_-_kalray_university_all_employees/83e93b45-afa2-4b15-9a81-21e8a1aee186.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_83e93b45-afa2-4b15-9a81-21e8a1aee186.png)
 
 ## Process map
 
@@ -189,7 +189,7 @@ The following is the process map of QMS v4:
 - Shows all processes
 - Show process interfaces (input and output)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_7.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_7.png)
 
 ## Decision points and decision cards
 
@@ -210,12 +210,12 @@ The major DPs are as follows:
 
 A typical process card looks as follows:
 
-![image.png](period_#1_-_kalray_university_all_employees/image_8.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_8.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_9.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_9.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_10.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_10.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_11.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_11.png)
 
-![image.png](period_#1_-_kalray_university_all_employees/image_12.png)
+![image.png](ressources/period_#1_-_kalray_university_all_employees_image_12.png)

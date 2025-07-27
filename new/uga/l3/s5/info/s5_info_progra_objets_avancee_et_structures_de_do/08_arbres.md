@@ -1,6 +1,6 @@
 # 08 // arbres
 
-[INFF5-8.pdf](inff5-8.pdf)
+[INFF5-8.pdf](ressources/08_arbres_inff5-8.pdf)
 
 # Généralités
 
@@ -8,7 +8,7 @@
 
 On appelle généralement « arbre » en informatique ce que l’on appelle « arborescence » en théorie des graphes. Une arborescence est graphe orienté acyclique possédant une racine unique, c’est-à-dire, il existe un chemin unique de la racine vers n’importe quel sommet de l’arborescence.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled.png)
 
 Les parties d’un arbre sont comme suit :
 
@@ -29,7 +29,7 @@ Il existent deux type de parcours classiques des arbres :
     - **Postfixé** : un nœud est considéré après chacun de ses fils, récursivement.
     Comme astuce, c’est l’algorithme d’aller toujours le plus en bas et à droite, puis inverser le chemin à la fin.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_1.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_1.png)
 
 # Arbre binaire
 
@@ -40,7 +40,7 @@ Un arbre binaire est un arbre dans lequel les nœuds peuvent avoir au maximum de
 - Un arbre binaire de $n$ nœuds a au plus $(n + 1) / 2$ feuilles.
 - Un arbre binaire de $n$ nœuds a une hauteur $h$ telle que $\log_2 (n + 1) ≤ h ≤ n$.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_2.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_2.png)
 
 ## Parcours d’arbre binaire
 
@@ -48,7 +48,7 @@ Pour les arbres générales, on avait trois parcours : le parcours en largueur (
 
 On ajoute, en plus, le parcours en profondeur infixé : pour chaque nœud, on explore avant son sous-arbre gauche, puis le nœud courant, puis son sous-arbre droite.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_3.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_3.png)
 
 ## Arbre binaires remarquables
 
@@ -56,25 +56,25 @@ On ajoute, en plus, le parcours en profondeur infixé : pour chaque nœud, on ex
 
 Tous les nœuds sauf son unique feuille ont un seul fils. Il est entièrement constitué par un chemin allant de la racine vers son unique feuille. La hauteur est maximale.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_4.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_4.png)
 
 ### Arbre binaire complet
 
 Il a exactement $2^h-1$ nœuds, dont $2^{h-1}$ feuilles. Tous les niveaux sont remplis, ses nœuds non feuilles ont tous exactement $2$ fils. La hauteur de l’arbre est minimale.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_5.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_5.png)
 
 ### Arbre binaire parfait
 
 Tous les niveaux sauf éventuellement le dernier sont remplis, les feuilles du dernier niveau sont groupées à gauche.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_6.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_6.png)
 
 ### Arbre binaire homogène
 
 Il est aussi appelé arbre localement complet. Tous ses nœuds non feuilles ont exactement deux fils.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_7.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_7.png)
 
 ## Les arbres binaires en programmation
 
@@ -87,11 +87,11 @@ Les arbres binaires peuvent être représentés de différentes façons. Les deu
 
 Les nœuds sont stockés dans une structure indicée (tableau ou liste). La racine est stockée à l’indice $0$. Le fils gauche et le fils droit du nœud stocké à l’indice $i$ se trouvent respectivement à l’indice $(2i + 1)$ et $(2i + 2)$ s’ils existent. (et si le premier indice de l’arbre est 0, et non pas 1).
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_8.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_8.png)
 
 Pour un arbre binaire parfait, il n’y a pas de « trous » dans la structure indicée.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_9.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_9.png)
 
 ### Représentation chaînée (en classes) et plusieurs méthodes
 
@@ -242,7 +242,7 @@ public class Feuille<T> extends NoeudAbstrait<T> {
 
 Pour la représentation chaînée d’un arbre binaire, on peut considérer un type de nœud spécial correspondant au nœud vide.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_10.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_10.png)
 
 L’utilisation d’un type `NoeudVide` permet de s’affranchir de nombreux tests sur `null` : on s’appuie sur le polymorphisme.
 
@@ -272,7 +272,7 @@ Comme fait divers, telle inclusion d’un nœud vide simplifie le parcours infix
 
 Étant donné que le nœud vide ne porte aucune information spécifique, il peut être instance unique d’une classe « Singleton » afin d’optimiser l’utilisation de la mémoire.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_11.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_11.png)
 
 Pour s’assurer que `NoeudVide` a une instance unique, on rend son constructeur `private` et on prévoit un accesseur `static` vers l’instance unique.
 
@@ -313,9 +313,9 @@ public boolean isEmpty() {
 
 S’il existe un ordre sur les valeurs de nœud, on peut construire un arbre binaire ordonné. Dans un arbre binaire ordonné (ou arbre binaire de recherche), tout nœud est tel que sa valeur est supérieure aux valeurs portés dans son sous-arbre gauche et inférieur aux valeurs portés par son sous-arbre droit.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_12.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_12.png)
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_13.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_13.png)
 
 La recherche d’une valeur dépend uniquement de la hauteur : $\log_2(n + 1) ≤ h ≤ n$.
 
@@ -364,7 +364,7 @@ public class NoeudVide<T extends Comparable<T>> extends NoeudAbstrait<T> {
 
 On commence dès la racine et, à chaque nœud, on se demande si le nœud à ajouter et plus grand et plus petit que le nœud courant, jusqu’à arriver au bas, où on ajoute finalement le nœud à ajouter.
 
-![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_14.png)
+![untitled](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_14.png)
 
 Pour l’implémenter en code, on ajoute des lignes dans chaque des quatre classes de base.
 
@@ -406,11 +406,11 @@ La suppression est, par contre, un action un peu plus délicate. Si on veut supp
 - Si $N$ a exactement un fils, on le remplace par son fils
 - Si $N$ a exactement deux fils, on le remplace par le nœud le plus à gauche dans son sous-arbre droit. Le nœud le plus à gauche est le nœud pour lequel il prend le plus de chemins à gauche pour atteindre.
 
-![Suppression de $6$. Remplace simple.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_15.png)
+![Suppression de $6$. Remplace simple.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_15.png)
 
 Suppression de $6$. Remplace simple.
 
-![Suppression de $1$. On prend le sous-arbre droite de $1$ et, puis, on va le plus à gauche qu’on puisse jusqu’à arriver au bas, que c’est $3$ dans ce cas.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/08_arbres/untitled_16.png)
+![Suppression de $1$. On prend le sous-arbre droite de $1$ et, puis, on va le plus à gauche qu’on puisse jusqu’à arriver au bas, que c’est $3$ dans ce cas.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/08_arbres_untitled_16.png)
 
 Suppression de $1$. On prend le sous-arbre droite de $1$ et, puis, on va le plus à gauche qu’on puisse jusqu’à arriver au bas, que c’est $3$ dans ce cas.
 
@@ -481,7 +481,7 @@ Un arbre binaire équilibré est un arbre binaire ordonné dans lequel tout nœu
 
 Le temps de recherche dans un arbre binaire ordonné est proportionnel à la hauteur de l’arbre, mais dans le pire des cas (celui d’un arbre dégénéré), cette hauteur est égale au nombre de nœuds.
 
-![Untitled](untitled_17.png)
+![Untitled](ressources/08_arbres_untitled_17.png)
 
 Il faut noter que réaliser une recherche binaire sur un arbre devient plus efficace le plus la hauteur de l’arbre est optimisée. L’ajout ou la suppression de nœuds est également effectuée de façon similaire mais sont parfois suivis de ré-équilibrages. Il existe plusieurs techniques de ré-équilibrage :
 
@@ -498,23 +498,23 @@ Lorsqu’un ajout a eu lieu dans le sous-arbre gauche $(A_g)$ d’un nœud $A$ (
     2. La hauteur de $A_g$ était égale à celle de $A_d$, $A$ reste équilibré.
     3. La hauteur de $A_g$ était $1$ de plus que celle de $A_d$, un rééquilibrage est nécessaire.
 
-![Dans ces deux cas, aucun rééquilibrage est nécessaire, on considère qu’ils sont encore équilibrés.](untitled_18.png)
+![Dans ces deux cas, aucun rééquilibrage est nécessaire, on considère qu’ils sont encore équilibrés.](ressources/08_arbres_untitled_18.png)
 
 Dans ces deux cas, aucun rééquilibrage est nécessaire, on considère qu’ils sont encore équilibrés.
 
 Ce sera seulement pour le cas 2.c qu’on aura besoin d’un rééquilibrage (la différence entre les deux hauteurs des sous-arbres est plus grand que $1$). Voyons un exemple :
 
-![Untitled](untitled_19.png)
+![Untitled](ressources/08_arbres_untitled_19.png)
 
 Dans ce cas, **supposons qu’on parle d’un ajout à gauche**, on marque la racine de l’arbre $A_g$ comme $B$ . On verra deux sous-cas de 2.c :
 
-![Si $h(B_g) > h(B_d)$ après ajout, on met de côté à $B$ et $B_g$, puis on rend $B$ père de $A$ toujours en gardant $B_g$.](untitled_20.png)
+![Si $h(B_g) > h(B_d)$ après ajout, on met de côté à $B$ et $B_g$, puis on rend $B$ père de $A$ toujours en gardant $B_g$.](ressources/08_arbres_untitled_20.png)
 
 Si $h(B_g) > h(B_d)$ après ajout, on met de côté à $B$ et $B_g$, puis on rend $B$ père de $A$ toujours en gardant $B_g$.
 
 ![Si $h(B_d) > h(B_g)$, on répète la procédure faite : on prend la racine de $B_d$ comme $C$, puis on veille à que l’ajout restera dans $C_g$.
 
-Finalement, on rend $C$ la racine de $A$ de tout l’arbre et père de $A$ et $B$, $C_g$ à la place de $B_d$ et $C_d$ à la place de $A_g$.](08_arbres/untitled_21.png)
+Finalement, on rend $C$ la racine de $A$ de tout l’arbre et père de $A$ et $B$, $C_g$ à la place de $B_d$ et $C_d$ à la place de $A_g$.](ressources/08_arbres_untitled_21.png)
 
 Si $h(B_d) > h(B_g)$, on répète la procédure faite : on prend la racine de $B_d$ comme $C$, puis on veille à que l’ajout restera dans $C_g$.
 
@@ -557,7 +557,7 @@ public class Noeud<T> {
 
 On pourrait voir un arbre n-aire comme un arbre binaire, par contre, **ce sera un peu différent de l’arbre binaire qu’on a étudie**. L’arbre binaire de base a, au plus, deux fils. Ce nouveau ***arbre binaire général*** aura, au plus, deux “connections”, dont les connections peuvent être de père à fils ou de frère à frère. Voyons que c’est une généralisation du premier modèle d’arbre binaire.
 
-![Untitled](untitled_22.png)
+![Untitled](ressources/08_arbres_untitled_22.png)
 
 Le code pour un arbre $n$-aire changerait. Voici le nouveau code :
 

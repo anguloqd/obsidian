@@ -1,8 +1,8 @@
 # 04 // ANOVA
 
-[slides anova1 stat3 annote.pdf](slides_anova1_stat3_annote.pdf)
+[slides anova1 stat3 annote.pdf](ressources/04_anova_slides_anova1_stat3_annote.pdf)
 
-[slides anova 2 stat 3 annote.pdf](slides_anova_2_stat_3_annote.pdf)
+[slides anova 2 stat 3 annote.pdf](ressources/04_anova_slides_anova_2_stat_3_annote.pdf)
 
 # ANOVA à un facteur
 
@@ -286,11 +286,11 @@ Ce tableau est dérivé et est préféré pour des raisons pratiques que le tabl
 
 Ce graphe permet de distinguer les interactions lorsque les lignes se croisent.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/04_anova/image.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/04_anova_image.png)
 
 Dans ce cas particulier, lorsque les lignes sont parallèles, il n’y a pas d’effet de l’intersection. Par contre, il y a d’autres patterns qui rendent compte d’un effet de l’intersection.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/04_anova/image_1.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/04_anova_image_1.png)
 
 ## Hypothèses statistiques
 

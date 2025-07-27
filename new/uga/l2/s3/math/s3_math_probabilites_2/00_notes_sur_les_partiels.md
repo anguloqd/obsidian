@@ -30,11 +30,11 @@ f(x) \text{ impaire} &: f(x)=-f(x) \implies \int_{-a}^af(x)dx = 2\int_{0}^af(x)d
 \end{align*}
 $$
 
-![Fonction paire, notons que l’aire entre la courbe et l’axe x s’annule elle-meme.](new/uga/l2/s3/math/s3_math_probabilites_2/00_notes_sur_les_partiels/untitled.png)
+![Fonction paire, notons que l’aire entre la courbe et l’axe x s’annule elle-meme.](new/uga/l2/s3/math/s3_math_probabilites_2/ressources/00_notes_sur_les_partiels_untitled.png)
 
 Fonction paire, notons que l’aire entre la courbe et l’axe x s’annule elle-même.
 
-![Fonction impaire, notons que l’aire est symétrique autour de l’axe y. Il est utile de calculer l’aire seulement d’un côté et le multiplier par 2 pour trouver tout l’aire. ](new/uga/l2/s3/math/s3_math_probabilites_2/00_notes_sur_les_partiels/untitled_1.png)
+![Fonction impaire, notons que l’aire est symétrique autour de l’axe y. Il est utile de calculer l’aire seulement d’un côté et le multiplier par 2 pour trouver tout l’aire. ](new/uga/l2/s3/math/s3_math_probabilites_2/ressources/00_notes_sur_les_partiels_untitled_1.png)
 
 Fonction impaire, notons que l’aire est symétrique autour de l’axe y. Il est utile de calculer l’aire seulement d’un côté et le multiplier par 2 pour trouver tout l’aire. 
 
@@ -68,7 +68,7 @@ D’un côté, il semble que $(\bar{X}_n-\mathbb{E}[X])$  tend vers $0$. Au mêm
 Il existe un problème avec la deuxième : si $n \rightarrow \infin$, la variance devient $0$, et la variance comme telle n’est pas utile
 $$. Imaginons la courbe qui viendrait si la variance était $0$ : il n’existe pas de dispersion autour de la moyenne et $\bar{X}_n$ serait toujours égal à $\mathbb{E}[X]$, càd. $(\bar{X}_n-\mathbb{E}[X])$ serait toujours égal à $0$.
 
-![untitled](new/uga/l2/s3/math/s3_math_probabilites_2/05_cadre_general_theoreme_centrale_de_la_limit/untitled.png)
+![untitled](new/uga/l2/s3/math/s3_math_probabilites_2/ressources/05_cadre_general_theoreme_centrale_de_la_limit_untitled.png)
 
 $$
 F(x)=
@@ -78,7 +78,7 @@ F(x)=
 \end{cases}
 $$
 
-![untitled](new/uga/l2/s3/math/s3_math_probabilites_2/05_cadre_general_theoreme_centrale_de_la_limit/untitled_1.png)
+![untitled](new/uga/l2/s3/math/s3_math_probabilites_2/ressources/05_cadre_general_theoreme_centrale_de_la_limit_untitled_1.png)
 
 $$
 "f(x)"=

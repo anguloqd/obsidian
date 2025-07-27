@@ -1,10 +1,10 @@
 # 01 // objets et classes
 
-[INFF5-1-1.pdf](inff5-1-1.pdf)
+[INFF5-1-1.pdf](ressources/01_objets_et_classes_inff5-1-1.pdf)
 
 # Introduction des concepts de la programmation par objets
 
-![Notion d’un *objet*.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/01_objets_et_classes/untitled.png)
+![Notion d’un *objet*.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/01_objets_et_classes_untitled.png)
 
 Notion d’un *objet*.
 

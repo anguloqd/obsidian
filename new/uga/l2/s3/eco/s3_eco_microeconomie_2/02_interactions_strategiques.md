@@ -1,6 +1,6 @@
 # 02 // interactions stratégiques
 
-[Slides de partie 2.pdf](slides_partie_2_micro2.pdf)
+[Slides de partie 2.pdf](ressources/02_interactions_strategiques_slides_partie_2_micro2.pdf)
 
 # Théorie des jeux non coopératifs
 
@@ -90,7 +90,7 @@ Ils existent des définitions plus mathématiques de ces deux raffinements ici :
 
 Pensons au dilemme des prisonniers :
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled.png)
 
 Après avoir analysé, on sait que le seul équilibre de Nash est si les deux prisonniers se dénoncent, c’est un équilibre qui domine par le risque. On se demande alors si les joueurs pourrait jamais choisir une situation (pas nécessairement un équilibre !) qui soit efficient au sens de Pareto : où on ne peut pas améliorer la situation d’un joueur sans rendre pire la situation d’un autre.
 
@@ -109,7 +109,7 @@ Ici un lien utile : [https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)#:~
 
 Il n’est pas rare de trouver des jeux où il n’y a pas d’équilibres de Nash. Les jeux à somme nulles n’ont jamais d’équilibres de Nash. Donc, on a recours aux stratégies mixtes. Pour trouver la meilleure stratégie mixte, on doit associer une possibilité à chaque stratégie.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_1.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_1.png)
 
 Après, on calcules les utilités espérées de Lui et Elle étant donné qu’il va au théâtre $T$ ou au football $F$. Dans ce cas : 
 
@@ -149,11 +149,11 @@ $$
 \end{cases}
 $$
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_2.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_2.png)
 
 Les lignes rouges et bleus sont les fonctions de meilleures décisions. Leur point de coupure indiquent un équilibre de Nash mixte. Ces fonctions peuvent nous montrer aussi plusieurs équilibres, par exemple :
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_3.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_3.png)
 
 Mais notons, les équilibres à $(0,0)$ et $(1,1)$ sont décisions pures et déterministes, donc elles correspondent à d’équilibres de Nash pures.
 
@@ -180,7 +180,7 @@ Un jeu sous forme extensive représente :
 
 On utilise un arbre de jeu où, à chaque point de décision, il existe un nœud. Le premier nœud au début du jeu s’appelle le nœud de départ, et les nœuds au bas du jeu s’appellent les nœuds terminaux, chacun contenant les gains des joueurs **par ordre d’apparition dans le jeu**.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_4.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_4.png)
 
 Dans ce type de jeux, il est important de mentionner la notion d’information parfaite et imparfaite. L’information est parfaite quand chaque joueur connaît les actions précédentes de toutes les périodes de temps précédentes pour tous les joueurs.
 
@@ -188,9 +188,9 @@ Si on parle d’information imparfaite en jeux séquentiels, il faut parler de l
 
 Tout jeu sous forme extensive peut s’écrire sous forme normale si toutes les stratégies possibles de joueurs sont spécifiées de manière suffisamment exhaustive, **il faut que ce soit en information imparfaite pourque ça puisse simuler un jeux de décisions simultanées**.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_5.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_5.png)
 
-[Deriving Normal Form from Extensive Form Games.pdf](deriving_normal_form_from_extensive_form_games.pdf)
+[Deriving Normal Form from Extensive Form Games.pdf](ressources/02_interactions_strategiques_deriving_normal_form_from_extensive_form_games.pdf)
 
 ### L’équilibre de Nash parfait en sous-jeux
 
@@ -200,7 +200,7 @@ Après, on peut parler de l’induction à rebours : c’est une méthode pour t
 
 L’équilibre qui sort de cette méthode est appelé ***équilibre parfait en sous-jeu***. Formellement, est une combinaison de stratégies telle que les actions prescrites par ces stratégies constituent un équilibre de Nash dans tous les sous-jeux.
 
-![Avec l’induction à rebours, l’équilibre parfait en sous-jeu est {Dp, tl}.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_6.png)
+![Avec l’induction à rebours, l’équilibre parfait en sous-jeu est {Dp, tl}.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_6.png)
 
 Avec l’induction à rebours, l’équilibre parfait en sous-jeu est {Dp, TL}.
 
@@ -216,7 +216,7 @@ Particulièrement, une menace non-crédible est faite avec l’espoir de ne pas 
 
 Dans le graphique d’un jeu séquentiel, pour que une menace soit crédible dans un équilibre, à chaque nœud ou on peut exécuter la menace, on l’éxécute.
 
-![Le rouge est un équilibre parfait de sous-jeu, tant que le bleu est un équilibre de Nash tout court.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_7.png)
+![Le rouge est un équilibre parfait de sous-jeu, tant que le bleu est un équilibre de Nash tout court.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_7.png)
 
 Le rouge est un équilibre parfait de sous-jeu, tant que le bleu est un équilibre de Nash tout court.
 
@@ -288,15 +288,15 @@ Cet équilibre $(q_i^*,q_j^*)$ est un équilibre de Cournot-Nash. Il correspond 
 
 ### Analyse graphique
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_8.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_8.png)
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_9.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_9.png)
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_10.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_10.png)
 
 ### Représentation sous forme normale
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_11.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_11.png)
 
 Si l’équilibre de Nash trouver n’est pas celui trouvée par le système d’équation, **on a un erreur**. Il peut avoir deux sources d’erreur : erreur dans le calculs des $q$ d’equilibre, ou erreur dans le calculs des profits $\pi$.
 
@@ -329,23 +329,23 @@ Le critère de réaction de la firme leader sera le $q$ qui maximise le profit, 
 
 Pour représenter l’équilibre sur un graphique, il faudrait aussi représenter des courbes *isoprofits*. Ce sont des courbes qui représentent un même profit \pi pour toute combinaison de q_1 et q_2 qui l’atteignent.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_12.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_12.png)
 
 Plus inférieure est la position de l’isoprofit, plus grand est le profit qu’elle représente. Pour chaque niveau de production de $q_2$, on trace une ligne horizontale qui coupe quelque courbe d’isoprofit forcément dans son sommet. Ce point-là correspond à la quantité $q_1$ que le leader doit produire pour maximiser son profit.
 
 D’autre manière, pour le $q_1$ de chaque sommet d’isoprofit, il existe un $q_2$ duquel produire $q_1$ atteint le profit maximum.
 
-![Notons que le sommet est aussi où la droite tangente est constante.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_13.png)
+![Notons que le sommet est aussi où la droite tangente est constante.](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_13.png)
 
 Notons que le sommet est aussi où la droite tangente est constante.
 
 Quand le leader maximise son profit, il connaît la fonction de réaction de la firme follower. Il commencera à descendre d’isoprofit en isoprofit jusqu’à arriver à la dernière isoprofit qui touche la fonction de réaction du follower. Ce courbe-la est le profit maximum, et son point de coupure avec $R_2$ contient le $q_2$ qui maximise le profit.
 
-![**LE POINT OU $R_1 = R_2$ EST L’ÉQUILIBRE DE COURNOT. DONC $\pi^\text{Stack}_1 > \pi_1^\text{cournot}$.**](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_14.png)
+![**LE POINT OU $R_1 = R_2$ EST L’ÉQUILIBRE DE COURNOT. DONC $\pi^\text{Stack}_1 > \pi_1^\text{cournot}$.**](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_14.png)
 
 **LE POINT OU $R_1 = R_2$ EST L’ÉQUILIBRE DE COURNOT. DONC $\pi^\text{Stack}_1 > \pi_1^\text{Cournot}$.**
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_15.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_15.png)
 
 Conclusions :
 
@@ -354,7 +354,7 @@ Conclusions :
 
 ### Représentation sous forme extensive
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/02_interactions_strategiques/untitled_16.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/02_interactions_strategiques_untitled_16.png)
 
 - L’équilibre de Stackelberg est l’équilibre de Nash parfait en sous-jeu.
 

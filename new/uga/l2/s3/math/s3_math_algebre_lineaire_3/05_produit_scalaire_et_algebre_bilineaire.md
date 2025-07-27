@@ -150,6 +150,6 @@ $$
 \end{align*}
 $$
 
-![Les deux premières étapes de gram-schmidt.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/05_produit_scalaire_et_algebre_bilineaire/untitled.png)
+![Les deux premières étapes de gram-schmidt.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/05_produit_scalaire_et_algebre_bilineaire_untitled.png)
 
 Les deux premières étapes de Gram-Schmidt.

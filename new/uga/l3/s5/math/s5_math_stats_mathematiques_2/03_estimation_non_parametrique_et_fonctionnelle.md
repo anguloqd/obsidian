@@ -492,7 +492,7 @@ où il nous reste le choix de h, appelé la “fenêtre de comptage” ou “ban
 
 Pour illustrer l’objectif, supposons qu’on définit K comme une gaussienne $\mathcal N(0,2.25)$ et qu’on tire un échantillon $[-2.1,-1.3,-0.4,1.9,5.1,6.2]$. Voyons c’e que ça donne pour un histogramme $(h=2)$ et un estimateur à noyau.
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/03_estimation_non_parametrique_et_fonctionnelle/untitled.png)
+![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled.png)
 
 Notons que l’estimateur somme toutes les courbes normaux d’aire $1/6$ pour avoir finalement une courbe d’aire $1$.
 
@@ -502,7 +502,7 @@ Intuitivement, on voudrait choisir un $h$ aussi petit comme les données permett
 
 Le noyau ne doit pas forcément être une gaussienne. Il existe plusieurs choix de noyaux, chacun avec ses avantages. On appelle “support” le domaine du noyau où $K(u)\ne 0$ et, si $u$ est dehors, donc le noyau l’assigne $0$.
 
-![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/03_estimation_non_parametrique_et_fonctionnelle/untitled_1.png)
+![untitled](new/uga/l3/s5/math/s5_math_stats_mathematiques_2/ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled_1.png)
 
 - Le premier et deuxième noyau sont simples, mais seul le noyau triangulaire fournit une estimation continue de la vrai densité.
 - Le troisième a une optimalité théorique mais sans grand intérêt pratique.

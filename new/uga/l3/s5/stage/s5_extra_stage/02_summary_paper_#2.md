@@ -19,7 +19,7 @@ change has occurred.
     - Image analysis
     - Human activity analysis
     
-    ![Untitled](02_summary_paper_#2/untitled.jpeg)
+    ![Untitled](ressources/02_summary_paper_#2_untitled.jpeg)
     
 
 # Background
@@ -342,7 +342,7 @@ $$
     - Conditional random field
     - Gaussian mixture model
 
-![Untitled](02_summary_paper_#2/untitled_1.jpeg)
+![Untitled](ressources/02_summary_paper_#2_untitled_1.jpeg)
 
 - A second way to detect change is with a *binary class classifier*. The idea is to treat change point detection as a binary class problem, where all of the possible state transition (change point) sequences represents one class and all of the within-state sequences represents a second class. While only two classes need to be learned in this case, this is a much more complex learning problem if the number of possible types of transitions is large.
     - Support vector machine
@@ -357,7 +357,7 @@ We say concretely that there has been a change if the classifier’s accuracy $p
 - The difference with supervised methods is that unsupervised methods discover patterns while not having access to labeled data. They cluster and label data by exploring features in the time series.
 - The clustering take the form of segmenting the time series where the algorithm thinks there are different states, therefore a change has happened.
 
-![Untitled](02_summary_paper_#2/untitled_2.jpeg)
+![Untitled](ressources/02_summary_paper_#2_untitled_2.jpeg)
 
 ### Likelihood ratio methods
 
@@ -506,7 +506,7 @@ The method itself creates a shapelet associated with a few data points and then 
 
 The following table resumes each algorithms scalability.
 
-![Untitled](02_summary_paper_#2/untitled.png)
+![Untitled](ressources/02_summary_paper_#2_untitled.png)
 
 In general, as the dimension of the time series increases the nonparametric methods gain power in computational cost and will be less expensive than parametric methods.
 
@@ -519,7 +519,7 @@ In general, as the dimension of the time series increases the nonparametric meth
     - Non-parametric CPD methods are more robust than parametric ones because the parametric methods rely heavily on the choice of parameters. In addition, the CPD problem becomes more complex for parametric methods when the data has moderate to high dimensionality.
 - The following table summarizes all algorithm’s limitations :
 
-![Untitled](02_summary_paper_#2/untitled_1.png)
+![Untitled](ressources/02_summary_paper_#2_untitled_1.png)
 
 ## Performance evaluation
 
@@ -539,7 +539,7 @@ In general, as the dimension of the time series increases the nonparametric meth
 - A majority of the studies do not provide any comparisons, or in some cases, even measures of performance (e.g. SPLL and clustering methods).
 - The following table summarizes all algorithm’s performance, based on the datasets they were applied on.
 
-![Untitled](02_summary_paper_#2/untitled_2.png)
+![Untitled](ressources/02_summary_paper_#2_untitled_2.png)
 
 - **Supervised methods tend to be more accurate than unsupervised methods if enough training data exist and the series is stationary**.
     - If these conditions are not met, the unsupervised methods are more useful.

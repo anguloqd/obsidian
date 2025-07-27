@@ -1,6 +1,6 @@
 # 05 // automates à pile
 
-[Slides du chapitre 5](chapitre_5_compressed.pdf)
+[Slides du chapitre 5](ressources/05_automates_a_pile_chapitre_5_compressed.pdf)
 
 # Motivation
 
@@ -24,7 +24,7 @@ Pour surmonter les limitations des AEF, il semble opportun de construire une mac
 
 Un automate à pile (AAP) peut être vu comme un automate fini avec l’ajout d’une pile (ou “stack” en anglais) vers laquelle des symboles peuvent être empilés (”pushed”) ou dépilés (”popped”).
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled.png)
 
 ## La pile et ses symboles
 
@@ -72,7 +72,7 @@ $$
 
 ## Illustrations et transitions
 
-![Exemple de aap.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_1.png)
+![Exemple de aap.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_1.png)
 
 Exemple de AAP.
 
@@ -115,11 +115,11 @@ $$
 \Delta(q_1,100,XX) = (q_2,Y)
 $$
 
-![Étape 1 : point de depart](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_2.png)
+![Étape 1 : point de depart](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_2.png)
 
 Étape 1 : point de départ
 
-![Étape 2](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_3.png)
+![Étape 2](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_3.png)
 
 Étape 2
 
@@ -159,25 +159,25 @@ $$
 
 $$
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_4.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_4.png)
 
 On voit que la troisième transition sert à “finaliser” l’AAP : **on le dit de juste dépiler $\$$**, sans ne rien lire sur le ruban ni rien ajouter sur la pile. **Intuitivement, si on a dépilé le symbole initial $\$$, on a fini de lire le mot**.
 
 Reprenons un diagramme de ruban et pile pour voir les étapes :
 
-![Étape 1 : point de départ, on lit les $a$. On emploi cette transition trois fois.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_5.png)
+![Étape 1 : point de départ, on lit les $a$. On emploi cette transition trois fois.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_5.png)
 
 Étape 1 : point de départ, on lit les $a$. On emploi cette transition trois fois.
 
-![Étape 3 : on a lit tous les $b$, maintenant on finalise la lecture de l’AAP avec la transition finale.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_6.png)
+![Étape 3 : on a lit tous les $b$, maintenant on finalise la lecture de l’AAP avec la transition finale.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_6.png)
 
 Étape 3 : on a lit tous les $b$, maintenant on finalise la lecture de l’AAP avec la transition finale.
 
-![Étape 2 : on a lit tous les $a$, maintenant on lit les $b$. On emploi cette transition trois fois aussi.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_7.png)
+![Étape 2 : on a lit tous les $a$, maintenant on lit les $b$. On emploi cette transition trois fois aussi.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_7.png)
 
 Étape 2 : on a lit tous les $a$, maintenant on lit les $b$. On emploi cette transition trois fois aussi.
 
-![Étape 4 : ici l’AAP a conclu. **Ceci n’est pas une transition**, c’est juste pour montrer l’AAP eteint.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_8.png)
+![Étape 4 : ici l’AAP a conclu. **Ceci n’est pas une transition**, c’est juste pour montrer l’AAP eteint.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_8.png)
 
 Étape 4 : ici l’AAP a conclu. **Ceci n’est pas une transition**, c’est juste pour montrer l’AAP éteint.
 
@@ -211,7 +211,7 @@ $$
 
 Le langage accepté par $M$ est le langage $L(M)=\{wcw^R : w \in \{a,b\}^*\}$, où $w^R$ signifie “l’inverse de $w$”. La définition de $M$ est telle qu’elle enregistre dans la pile le sous-mot $w$ avant d’arriver au symbole $c$, et puis elle le lit à l’inverse en dépilant les symboles accumulés de $w$.
 
-![Celle-ci est la solution finale. La manière d’y arriver est décrite dessous.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/05_automates_a_pile/untitled_9.png)
+![Celle-ci est la solution finale. La manière d’y arriver est décrite dessous.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/05_automates_a_pile_untitled_9.png)
 
 Celle-ci est la solution finale. La manière d’y arriver est décrite dessous.
 

@@ -1,6 +1,6 @@
 # 05 // flux et fichiers
 
-[INFF5-5.pdf](inff5-5.pdf)
+[INFF5-5.pdf](ressources/05_flux_et_fichiers_inff5-5.pdf)
 
 # Introduction
 
@@ -32,7 +32,7 @@ Il existe une interface importante qui interagit avec les flux d’octects : l�
 
 ## Flux d’octects en lecture
 
-![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/05_flux_et_fichiers/untitled.png)
+![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/05_flux_et_fichiers_untitled.png)
 
 Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
 
@@ -174,7 +174,7 @@ try {
 
 ## Flux d’octects en écriture
 
-![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/05_flux_et_fichiers/untitled_1.png)
+![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/05_flux_et_fichiers_untitled_1.png)
 
 Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
 
@@ -291,7 +291,7 @@ try {
 
 ## Flux de caractères en lecture
 
-![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/05_flux_et_fichiers/untitled_2.png)
+![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/05_flux_et_fichiers_untitled_2.png)
 
 Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
 
@@ -370,7 +370,7 @@ retourne une ligne lue dans `this`. Une ligne est toute suite de caractères se 
 
 ## Flux de caractères en écriture
 
-![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/05_flux_et_fichiers/untitled_3.png)
+![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/05_flux_et_fichiers_untitled_3.png)
 
 Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
 

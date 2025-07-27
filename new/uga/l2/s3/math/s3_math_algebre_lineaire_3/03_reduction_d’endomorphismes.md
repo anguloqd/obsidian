@@ -505,4 +505,4 @@ Mais, en général, voir un facteur polynomial répété implique une matrice no
 
 Il est plus clair avec l’exemple du professeur fait en TD dans ce PDF.
 
-[Exo 5.3 ALG3.pdf](ex_5.3_alg3.pdf)
+[Exo 5.3 ALG3.pdf](ressources/03_reduction_d’endomorphismes_ex_5.3_alg3.pdf)

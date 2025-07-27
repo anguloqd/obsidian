@@ -1,10 +1,10 @@
 # 03 // non respect des hypothèses
 
-[Économetrie 1 - Chap. #4.1](4_chapitre4_partie41_econometrie1_202232024.pdf)
+[Économetrie 1 - Chap. #4.1](ressources/03_non_respect_des_hypotheses_4_chapitre4_partie41_econometrie1_202232024.pdf)
 
-[Économetrie 1 - Chap. #4.2](5_chapitre4_partie42_econometrie1_20232024.pdf)
+[Économetrie 1 - Chap. #4.2](ressources/03_non_respect_des_hypotheses_5_chapitre4_partie42_econometrie1_20232024.pdf)
 
-[Économetrie 1 - Chap. #4.3](6_chapitre4_partie43_econometrie1_20232024.pdf)
+[Économetrie 1 - Chap. #4.3](ressources/03_non_respect_des_hypotheses_6_chapitre4_partie43_econometrie1_20232024.pdf)
 
 # Outils importants
 
@@ -100,9 +100,9 @@ $H_2$, l’hypothèse de variable constante ou homoscédasticité, nous assure q
 
 L’hétéroscédasticité a une conséquence importante : on n’a plus de variance minimale sur les estimateurs $\hat \beta$ de $\beta$ ! $\hat \beta$ n’est donc plus un estimateur efficace. Les estimateurs $\hat \beta$ peuvent rester quand même des estimateurs **sans biais** et **convergent** si les autres hypothèses sont vérifiées.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled.png)
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_1.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_1.png)
 
 En termes rigoureux, $H_2$ n’est pas respectée quand :
 
@@ -126,9 +126,9 @@ Le plus souvent, on retrouve les problèmes d’hétéroscédasticité avec des 
 
 Une première manière d’identifier l’hétéroscédasticité c’est de voir les statistiques descriptives : voir des graphiques, mais aussi de voir des gros différence entre deux sous-échantillons de l’échantillon. **C’est une méthode informelle car nous ne savons pas si cette différence est statistiquement significative**.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_2.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_2.png)
 
-![“restaurn” est 0 si la zone n’applique pas des restrictions pour fumer dans les restaurants, et 1 sinon. “cigs” est la quantité de cigarettes fumées. Si on voit seulement les zones où restaurn=0 (un sous-échantillon), on voit que la variance est différente de si restaurn=1 (un autre sous-echantillon).](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_3.png)
+![“restaurn” est 0 si la zone n’applique pas des restrictions pour fumer dans les restaurants, et 1 sinon. “cigs” est la quantité de cigarettes fumées. Si on voit seulement les zones où restaurn=0 (un sous-échantillon), on voit que la variance est différente de si restaurn=1 (un autre sous-echantillon).](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_3.png)
 
 “restaurn” est 0 si la zone n’applique pas des restrictions pour fumer dans les restaurants, et 1 sinon. “cigs” est la quantité de cigarettes fumées. Si on voit seulement les zones où restaurn=0 (un sous-échantillon), on voit que la variance est différente de si restaurn=1 (un autre sous-échantillon).
 
@@ -184,11 +184,11 @@ $$
 \hat V(\hat \beta_{MCO})=(\bold X^T\bold X)^{-1} \hat V (\bold X^T\bold X)^{-1}, \text{ où } \hat V=\sum_{i=1}^N\hat u_i^2(X_i^TX_i)^{-1}
 $$
 
-![IC calculé avec les écart-types originaux.](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_4.png)
+![IC calculé avec les écart-types originaux.](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_4.png)
 
 IC calculé avec les écart-types originaux.
 
-![IC calculé avec les écart-types robustes.](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_5.png)
+![IC calculé avec les écart-types robustes.](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_5.png)
 
 IC calculé avec les écart-types robustes.
 
@@ -250,11 +250,11 @@ $$
 
 Dans le chapitre deux, ou a prouvé que $\hat{\bold u}^T \hat{\bold u}= \bold u ^T \bold M \bold u$**.** Donc, finalement :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_6.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_6.png)
 
 La suite est donc :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_7.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_7.png)
 
 On conclut que $\hat \sigma^2_{u,MCO}$ est biaisé.
 
@@ -268,11 +268,11 @@ $$
 
 Donc, 
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_8.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_8.png)
 
 Puis, finalement,
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_9.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_9.png)
 
 On conclut que $\hat \sigma^2_{u,MCG}$ est donc sans biais.
 
@@ -344,15 +344,15 @@ Il est intéressant d’aller voir le graphique de $\hat u_{t+1}$ vs. $\hat u_t$
 
 Un premier cas c’est quand la relation entre les perturbations adjacentes est **linéairement positive**. Dans ce cas, le graphique $\hat u_t$ vs. $t$ présente des “blocs” : quand $\hat u_t$ est positif, $\hat u_{t+1}$ est fréquemment positif aussi. Idem dans le cas négatif. Ça crée, dans l’exemple, un bloc des perturbations positifs, puis des perturbations négatives, puis positives de nouveau.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_10.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_10.png)
 
 Un deuxième cas c’est l’autocorrélation négative entre les erreurs adjacents : ici, les erreurs sont alternants. Si un erreur est positif, l’erreur suivant est fréquemment négatif, et vice-versa.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_11.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_11.png)
 
 Quand $H_2$ est respectée, l’erreur a plutôt une forme comme suit.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_12.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_12.png)
 
 ## Conséquence pour les MCO
 
@@ -388,9 +388,9 @@ Maintenant, pour la region de rejet et de non-rejet, elle prend la forme suivant
 
 Si le $DW$ tombe sur une zone de rejet de $H_0$ ou inconclusive, on passe au MCQG. On juste s’arrête si on ne rejette pas $H_0$.
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_13.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_13.png)
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/03_non_respect_des_hypotheses/untitled_14.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/03_non_respect_des_hypotheses_untitled_14.png)
 
 Le résultats de ce test sont valides sous trois conditions : la matrices des $X$ n’est pas aléatoire $(H_3)$, il n’y a pas de termes de retard dans la régression originale, et la constante original est différente de $0$.
 

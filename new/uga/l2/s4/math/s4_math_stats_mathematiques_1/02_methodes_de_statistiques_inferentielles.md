@@ -1,6 +1,6 @@
 # 02 // méthodes de statistiques inférentielles
 
-[Slides de méthodes de stats inférentielles](slides_mthodes_stat_inf_annote.pdf)
+[Slides de méthodes de stats inférentielles](ressources/02_methodes_de_statistiques_inferentielles_slides_mthodes_stat_inf_annote.pdf)
 
 # Intervalle de confiance
 

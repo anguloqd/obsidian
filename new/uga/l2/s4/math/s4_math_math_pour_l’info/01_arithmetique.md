@@ -19,7 +19,7 @@ Dessus, le nombre $Q$ est le quotient et $R$ est le reste, où $0 \le R < B$. No
 
 # Numération en base $b$
 
-[Slides de numération annotés.pdf](slides_bases_annote.pdf)
+[Slides de numération annotés.pdf](ressources/01_arithmetique_slides_bases_annote.pdf)
 
 ## Définition et notation
 
@@ -107,7 +107,7 @@ $$
 
 On va utiliser ce tableau utile pour chaque chiffre “base” d’une base vers l’autre.
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/01_arithmetique/untitled.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/01_arithmetique_untitled.png)
 
 Après, la chose à garder en tête c’est que chaque chiffre en base $16$ correspond à quatre chiffres en base $2$. Ceci rend la conversion beaucoup plus facile pour la relation spéciale entre $2$ et $16$ ($16$ est une puissance de $2$, finalement). Voyons deux exemples :
 
@@ -151,15 +151,15 @@ Les opérations élémentaires sont analogues à celles qu’on sait faire en ba
 
 “On pose une retenue quand on arrive à $p$”.
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/01_arithmetique/untitled_1.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/01_arithmetique_untitled_1.png)
 
 ### La soustraction
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/01_arithmetique/untitled_2.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/01_arithmetique_untitled_2.png)
 
 ### Le produit
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/01_arithmetique/untitled_3.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/01_arithmetique_untitled_3.png)
 
 ### La division euclidienne
 
@@ -167,7 +167,7 @@ Le prof. n’as pas donné un exemple de comment faire. Il faut juste reprende c
 
 # Arithmétique élémentaire
 
-[Slides d’arithmétique élémentaire](slides_arithmetique_minfo_annote.pdf)
+[Slides d’arithmétique élémentaire](ressources/01_arithmetique_slides_arithmetique_minfo_annote.pdf)
 
 ## Multiples et diviseur
 
@@ -338,7 +338,7 @@ Quand on injecte, on voit que c’est pour pouvoir exprimer les choses en termes
 
 # Congruences
 
-[Slides de congruence](slides_congr_minfo_annote.pdf)
+[Slides de congruence](ressources/01_arithmetique_slides_congr_minfo_annote.pdf)
 
 ## Définition
 

@@ -1,6 +1,6 @@
 # 05 // tests non paramétriques
 
-[slides non param stat 3 annote.pdf](slides_non_param_stat_3_annote.pdf)
+[slides non param stat 3 annote.pdf](ressources/05_tests_non_parametriques_slides_non_param_stat_3_annote.pdf)
 
 # Introduction
 
@@ -44,7 +44,7 @@ $$
 
 Ainsi, en utilisant $Y_4$ et $Y_9$, on obtient un intervalle de confiance à $92.40\%.$
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/05_tests_non_parametriques/image.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/05_tests_non_parametriques_image.png)
 
 Un intervalle de confiance pour le 3e quartile est donc $]4.03; 14.73[$. Pour cet exemple, les auteurs ont échantillonné une population de loi E(5). On montre facilement que la valeur théorique de ce quartile est $Q_3 = 10\ln(2) = 6.93$
 
@@ -74,7 +74,7 @@ $$
 
 On obtient donc un tableau $2×k$ et la suite se fait exactement comme s'il s'agissait d'un test d'indépendance.
 
-![Example du tableau.](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/05_tests_non_parametriques/image_1.png)
+![Example du tableau.](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/05_tests_non_parametriques_image_1.png)
 
 Example du tableau.
 

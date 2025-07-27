@@ -34,7 +34,7 @@ Oui → coopération, rentre état normal
 
 ## Le code : *graduel* (version .txt en lien pour copier-coller)
 
-[graduel ANGULO.txt](graduel_angulo.txt)
+[graduel ANGULO.txt](ressources/06_projet_prolog_algo_pour_jouer_le_dilemme_des_pr_graduel_angulo.txt)
 
 ```prolog
 % prédicat principal

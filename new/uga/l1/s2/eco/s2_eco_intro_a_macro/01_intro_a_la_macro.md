@@ -24,4 +24,7 @@
 - La théorie économique dominante à l'époque ne pouvait pas expliquer la crise.
 - La rupture théorique émerge : les deux écoles différaient sur les causes de la crise et les possibles solutions.
 
-[Untitled](untitled.csv)
+|           | Neoclassiques                                                                                                                                | Kéynesiens                                                                                                     |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Causes    | • L'offre est perturbé par des certains facteurs<br>• Le salaires sont très faibles, donc les chômeurs rejettent les possibilités de travail | • La dépression a été causée par une déclination de la demande<br>• Stigmatisation du rôle de l'investissement |
+| Solutions | • Le marché s'ajustera naturellement                                                                                                         | • Intervention de l'état pour réguler la demande                                                               |

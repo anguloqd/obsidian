@@ -1,6 +1,6 @@
 # 02 // fondamentaux 2
 
-[Slides de fondamentaux 2](corolleur_f._2022_lecture_2_introduction__la_thorie_des_jeux.pdf)
+[Slides de fondamentaux 2](ressources/02_fondamentaux_2_corolleur_f._2022_lecture_2_introduction__la_thorie_des_jeux.pdf)
 
 <aside>
 🤷‍♂️ C’est juste un rappel de théorie de jeux.

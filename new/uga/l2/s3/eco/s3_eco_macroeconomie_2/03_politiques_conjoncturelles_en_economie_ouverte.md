@@ -23,7 +23,7 @@ Si le taux de change est fixé par la banque centrale, tout déficit de BP se co
 
 ### La politique monétaire
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled.png)
 
 On part de $A$. Supposons que le gouvernement veut augmenter la production à $Y_1$, il le fait avec une politique monétaire expansionniste, on arrive à la courbe $LM_1$. Sur le marché intérieur, cette hausse de masse monétaire diminue le taux d’intérêt jusqu’à $i_1$. L’investissement $I$ augmentera suite à la baisse du taux d’intérêt et éventuellement la production $Y$. On arrive a $Y_1$.
 
@@ -67,7 +67,7 @@ La politique monétaire est impuissante à augmenter durablement le revenu d’�
 
 ### La politique budgétaire : éviction internationale
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_1.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_1.png)
 
 En revanche, en régime de changes fixes, la politique budgétaire paraît plus efficace. On part de $A$, les prochaine actions sont en premier sur la courbe IS. Une augmentation des dépense publiques nettes $G$ entraîne une augmentation de la production $Y$. Cette augmentation de revenu augmentara le taux de intérêt plus fortement que les importations, donc on aura un excédent BP et finalement on deviendra plus compétitifs grâce à l’augmentation du taux de change $e_r$. On arrive à $B$.
 
@@ -105,7 +105,7 @@ La politique monétaire discrétionnaire est inopérante dans la recherche de l�
 
 ### La politique monétaire
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_2.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_2.png)
 
 Même début que la situation avec change fixe : On part de $A$. Supposons que le gouvernement veut augmenter la production à $Y_1$, il le fait avec une politique monétaire expansionniste, on arrive à la courbe $LM_1$. Sur le marché intérieur, cette hausse de masse monétaire diminue le taux d’intérêt jusqu’à $i_1$. L’investissement $I$ augmentera suite à la baisse du taux d’intérêt et éventuellement la production $Y$. On arrive a $Y_1$ et donc à $B$, le déséquilibre de BP.
 
@@ -152,7 +152,7 @@ Note : aussi, au moment de la hausse des exportations, les importations diminuen
 
 ### La politique budgétaire : éviction par le taux de change
 
-![Le point C ici serait le point hypothétique où la banque central augmente l’offre de monnaie,, mais dans ce cas elle n’en est pas obligee.](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_3.png)
+![Le point C ici serait le point hypothétique où la banque central augmente l’offre de monnaie,, mais dans ce cas elle n’en est pas obligee.](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_3.png)
 
 Le point C ici serait le point hypothétique où la banque central augmente l’offre de monnaie,, mais dans ce cas elle n’en est pas obligée.
 
@@ -202,7 +202,7 @@ Mathématiquement, on parle de mobilité forte si $k \rightarrow \infin$ et mobi
 
 ### La politique monétaire
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_4.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_4.png)
 
 Très similaire au cas de mobilité parfaite, **que la mobilité soit forte ou faible**. Une hausse de la offre monétaire entraîne une chute du taux d’intérêt, ce qui : 
 
@@ -213,9 +213,9 @@ Finalement, on finit avec un déficit de la balance de paiements $BP$, donc le t
 
 ### La politique budgétaire, mobilité des capitaux forte et faible
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_5.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_5.png)
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_6.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_6.png)
 
 Une hausse des dépenses publiques nettes $G$ augmente la production $Y$, ce qui : 
 
@@ -257,7 +257,7 @@ L’action de l’ouverture peut se voir si, après l’intervention de la banqu
 
 ### La politique monétaire
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_7.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_7.png)
 
 Similairement à la mobilité parfaite et change flexibles, quand la politique monétaire expansionniste fait augmenter le taux de change $e_r$ (et son effet n’est pas interrompu par la banque centrale), cela stimule nos exportations $X$, ce qui augmente la production $Y$ (IS) mais aussi la balance comercial $BTC$ (BP) jusqu’à atteindre un nouveau équilibre.
 
@@ -294,9 +294,9 @@ Cet effet est toujours le même si la mobilité est forte ou faible, parce que l
 
 ### La politique budgétaire, mobilité des capitaux forte et faible
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_8.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_8.png)
 
-![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/03_politiques_conjoncturelles_en_economie_ouverte/untitled_9.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_macroeconomie_2/ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_9.png)
 
 Pour les deux cas, on commence avec le même diagramme : l’augmentation des dépenses publiques G augmente la production Y, qui augmente à la fois les importations M (un déficit de BTC) et le taux d’intérêt i (un excédent de BCA). On arrive à B.
 

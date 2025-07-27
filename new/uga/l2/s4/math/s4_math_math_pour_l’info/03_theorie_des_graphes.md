@@ -2,7 +2,7 @@
 
 # Introduction
 
-[Slides de théorie de graphes](slides_graphes_minfo_annote2.pdf)
+[Slides de théorie de graphes](ressources/03_theorie_des_graphes_slides_graphes_minfo_annote2.pdf)
 
 ## Définition intuitive et formelle d’un graphe (orienté)
 
@@ -13,7 +13,7 @@ On introduit le concept d’un graphe avec un exemple : un site internet est com
 - Depuis la page $C$, on peut accéder à la page $B$ ou rester sur $C$.
 - Quand on est sur la page $D$, on peut seulement aller sur la page $C$ et de la page $E$, on ne peut aller que sur la page $A$.
 
-![Graphique sagittal.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled.png)
+![Graphique sagittal.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled.png)
 
 Graphique sagittal.
 
@@ -29,7 +29,7 @@ Pour formaliser une certaine configuration de sommets et d’arcs d’un graphe 
 
 Pour le graphe précédent, on obtient cette matrice d’adjacence :
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_1.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_1.png)
 
 $$
 M_G=\begin{bmatrix}
@@ -64,13 +64,13 @@ $$
 
 Pour un graphe avec un seule sommet connecté à lui-même, le chemin de longueur plus courte est $0$, càd. de ne pas bouger du sommet. La chemin de ce sommet à lui-même passant par la boucle est de longueur $1$.
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_2.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_2.png)
 
 </aside>
 
 Notons déjà qu’un chemin de longueur $1$ est tout simplement un arc, qui sont notés dans la matrice d’adjancence. Deux sommets sont *adjacents* s’il sont connectés par un arc. Une propriété intéressante de telle matrice est qu’on peut en déduire les chemins de longueur $n$ générale avec l’opération $M^n$. 
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_1.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_1.png)
 
 $$
 M=\begin{bmatrix}
@@ -101,7 +101,7 @@ Il y a, par contre, de choses importantes à remarquer :
 
 La fermeture transitive est un opération qui prend un graphe et retourne un autre graphe. En particulier, s’il existe un chemin partant de $v_i$ à $v_j$ de n’importe quelle longueur, on rajoute un arc direct $(v_i,v_j)$. 
 
-![Graphe de départ à gauche, sa fermeture transitive à droite.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_3.png)
+![Graphe de départ à gauche, sa fermeture transitive à droite.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_3.png)
 
 Graphe de départ à gauche, sa fermeture transitive à droite.
 
@@ -157,11 +157,11 @@ Finalement, chaque entrée de $\tilde{M}_G$ devrait s’interpreter comme s’il
 
 En différence avec les graphes orientés, les arcs d’un graphe non-orienté pourrait être considérés bidirectionnels. Il n’est plus important la direction, mais la connexion entre deux sommet. Comme ça, on n’a plus besoin de spécifier la direction de chaque arc.
 
-![Un graphe oriente.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_4.png)
+![Un graphe oriente.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_4.png)
 
 Un graphe orienté.
 
-![Le même graphe, mais non-oriente.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_5.png)
+![Le même graphe, mais non-oriente.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_5.png)
 
 Le même graphe, mais non-orienté.
 
@@ -188,7 +188,7 @@ En d’autres termes, un arbre est un graphe non-orienté où pour toute couple 
 
 Dans l’exemple dessous, si on pars et revient à $6$ passant par $2$, on va en premier à $2$ et puis on fait exactement la sous-chaîne inverse.
 
-![Un arbre.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_6.png)
+![Un arbre.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_6.png)
 
 Un arbre.
 
@@ -202,7 +202,7 @@ Un arbre.
 
 Un graphe pondéré est un graphe dont les arcs ont des valeurs correspondants. On défini aussi la “valeur” d’un chemin de $v_i$ à $v_j$ comme la somme des valeurs de arcs qui le composent. **Le graphe pondéré peut-être orienté ou non-orienté**.
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_7.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_7.png)
 
 Par exemple, dans ce graphe pondéré :
 
@@ -238,22 +238,22 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
 
 1. Sur un graphe pondéré, orienté ou non, on se donne un sommet d’entrée (sommet source), disons $A$. On fixe la distance à lui-même à $0$.  On gardera en tête les sommets visités et les non-visités. On marque le sommet $A$ comme le sommet courant et comme sommet visité.
     
-    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_8.png)
+    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_8.png)
     
 2. Pour tous les sommets différents de la source, on marque que leur distance provisoire est infinie. On la marque sur les sommets.
     
-    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_9.png)
+    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_9.png)
     
 3. Pour chaque successeur non visité de $A$ ($B$,$D$ et $E$), on compare si la distance directe (la valeur de l’arc que les connecte) est plus petite que leur distance provisionnelle. On garde la distance la plus petite entre les deux comme la ***nouvelle* distance provisoire**.
     
-    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_10.png)
+    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_10.png)
     
 4. On marque $A$ comme sommet visité, sa distance provisoire comme distance plus courte définitive, on le rougit (c’était déjà rougit mais quand même) et on recommence sélectionnant le sommet non visité avec la distance provisoire la plus petite, dans ce cas $E$. Le voisins non visité de $E$ est juste $D$.
     1. Dans ce cas, la somme de la distance cumulée ($6$) et la distance directe ($3$) est plus petite que la distance provisoire de $D$ ($10$) $(A,E,D)=9$ est plus court que $(A,D)=10$, donc on rougit $E$ et **on le redonne une nouvelle distance provisoire**.
     2. Pour B, la distance plus courte est la distance directe. On ne les rougit pas.
     3. On marque sur les sommets successeurs directes leurs distances plus courtes et **finalement on marque les successeurs comme des sommets visités**. Leurs distances provisoires à ce moment là deviennent leurs distance plus courtes à partir du sommet source ($A$). Notons que sur $D$, la distance plus court est $9$ (passant par $E$) et non pas $10$ (passage directe).
     
-    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_11.png)
+    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_11.png)
     
 5. On répète avec tous les autres sommets non-visités jusqu’à arriver à notre sommet destination.
     1. Pour $C$, on cherche ses prédécesseurs directes qui sont aussi visités ($F$ est prédécesseur mais pas visité encore, donc on ne le considère pas). Après, on cherche le minimum à partir de ces sommets, comptant la distance depuis $A$ et ajoutant la distance directe à $C$.
@@ -266,13 +266,13 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
         2. $D$ de distance directe $9$ et distance cumulée $9$ aussi. Donc, la distance du chemin plus court de $A$ à $F$ passant par $D$ est $9+9=18$.
         3. Passer par $C$ donne un chemin plus courte. Donc, on donne à $F$ comme distance plus courte $16$, on le marque visité et on rougit le prédécesseur qui a minimisait la distance, càd $C$.
     
-    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_12.png)
+    ![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_12.png)
     
 6. Si on arrive marque visité notre sommet destination, on le rougit et on a fini l’algorithme.
 
 # Ordonnancement
 
-[Slides d’ordonnancement](slides_ordonnancement_minfo_annote.pdf)
+[Slides d’ordonnancement](ressources/03_theorie_des_graphes_slides_ordonnancement_minfo_annote.pdf)
 
 ## Dessin d’un graphe par niveaux
 
@@ -282,7 +282,7 @@ $$
 S_n = S - S_{n-1}
 $$
 
-![Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_13.png)
+![Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_13.png)
 
 Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.
 
@@ -299,7 +299,7 @@ La réalisation d’un projet passe par l’exécution de différentes tâches, 
 
 Reprenons le graphe précédente, on l’ajoute un sommet “fin” après $C$ et, à chaque arc, on ajoute un numéro qui représentera les unités de temps pour compléter la tâche et passer à la suivante.
 
-![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_14.png)
+![untitled](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_14.png)
 
 Ayant ce graphe comme base, on va s’intéresser à construire deux indicateurs :
 
@@ -351,7 +351,7 @@ $$
 
 ### Graphique final et la marge d’une tâche
 
-![Pour chaque tâche, on nota sa date au plus tôt dans la casse gauche et sa date au plus tard dans la casse droite.](new/uga/l2/s4/math/s4_math_math_pour_l’info/03_theorie_des_graphes/untitled_15.png)
+![Pour chaque tâche, on nota sa date au plus tôt dans la casse gauche et sa date au plus tard dans la casse droite.](new/uga/l2/s4/math/s4_math_math_pour_l’info/ressources/03_theorie_des_graphes_untitled_15.png)
 
 Pour chaque tâche, on nota sa date au plus tôt dans la casse gauche et sa date au plus tard dans la casse droite.
 

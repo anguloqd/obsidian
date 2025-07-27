@@ -1,6 +1,6 @@
 # 02 // régression linéaire multiple
 
-[Économétrie 1 - Chap. #2](2_chapitre2_econometrie1_20232024.pdf)
+[Économétrie 1 - Chap. #2](ressources/02_regression_lineaire_multiple_2_chapitre2_econometrie1_20232024.pdf)
 
 # Le modèle
 
@@ -263,7 +263,7 @@ $$
 
 Pour faire le passage de la première ligne à la deuxième ligne, voici quelques opérations avec dérivées, vecteur et scalaires à savoir, sorti du PDF dessous, page 12/61.
 
-[Ch3slides-multiple-linear-regression.pdf](ch3slides-multiple-linear-regression.pdf)
+[Ch3slides-multiple-linear-regression.pdf](ressources/02_regression_lineaire_multiple_ch3slides-multiple-linear-regression.pdf)
 
 Pour ce premier, notons on fait une combinaison linéaire de coefficients $\bold a$. Le résultat final de l’opération $\bold a^T \bold x$ est juste $[a_{j=1}x_{i=1}+a_{j=2}x_{i=2}+\cdots+a_{j=m}x_{i=n}]$. Si on dérive cette expression par $\bold x$ (scalaire-par-vecteur), on devrait avoir de retour le vecteur avec les coefficients, donc $\bold a$.  
 
@@ -336,17 +336,17 @@ $$
 
 Preuve que $\hat \beta$ est un estimateur sans biais de $\beta$ :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/02_regression_lineaire_multiple/untitled_1.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/02_regression_lineaire_multiple_untitled_1.png)
 
 Calcul de la variance de $\hat \beta$ :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/02_regression_lineaire_multiple/untitled_2.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/02_regression_lineaire_multiple_untitled_2.png)
 
 ## Estimation de la variance des perturbations $\sigma^2_u$
 
 Tout comme dans le cas de régression simple, $\bold u$ n’est pas observable. Donc, on estime avec $\hat {\bold u}$. Avant, on se prépare avec le calcul d’une certaine matrice $\bold M$ telle que :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/02_regression_lineaire_multiple/untitled_3.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/02_regression_lineaire_multiple_untitled_3.png)
 
 Le $T$ dans $I_T$ est le $n$ dans les dimensions $(n, k+1)$ de la matrice $\beta$. Avec cette définition de M, on peut dire que :
 
@@ -356,7 +356,7 @@ Le $T$ dans $I_T$ est le $n$ dans les dimensions $(n, k+1)$ de la matrice $\beta
 
 Finalement, on peut calculer $\hat{\bold u}$ :
 
-![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/02_regression_lineaire_multiple/untitled_4.png)
+![untitled](new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/02_regression_lineaire_multiple_untitled_4.png)
 
 Et donc, finalement :
 

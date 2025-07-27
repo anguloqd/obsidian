@@ -95,7 +95,7 @@ Prenons base $10$ et quatre chiffres.
 
 ## Passer de base $10$ à base $2$**, mais maintenant avec des réels**
 
-[Explication plus complète en anglais.pdf](ieee_float.pdf)
+[Explication plus complète en anglais.pdf](ressources/02_bases_numeriques_ieee_float.pdf)
 
 - La représentation de réels en base $2$ est composée de trois segments de chiffres :
     - Le bit du signe, celui le plus a gauche, qui sera $0$ pour le positifs et $1$ pour les négatifs.

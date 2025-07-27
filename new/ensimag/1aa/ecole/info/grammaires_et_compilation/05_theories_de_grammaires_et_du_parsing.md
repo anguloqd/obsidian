@@ -1,6 +1,6 @@
 # 05 // théories de grammaires et du parsing
 
-[chap5-4up.pdf](chap5-4up.pdf)
+[chap5-4up.pdf](ressources/05_theories_de_grammaires_et_du_parsing_chap5-4up.pdf)
 
 ## Exo 5.3
 
@@ -13,7 +13,7 @@ Appliquer cette méthode sur la BNF :
  X ::= b S | ϵ`
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
 ## Exo 5.4
 
@@ -44,16 +44,16 @@ A → a A b | ϵ
 B → b B | ϵ`
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_1.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_2.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_2.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_3.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_3.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_4.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_4.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_5.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_5.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_6.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_6.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/05_theories_de_grammaires_et_du_parsing/untitled_7.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_7.jpg)

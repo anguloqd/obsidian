@@ -1,12 +1,12 @@
 # 02 // théorie du signal
 
-[Slides : Série de Fourier.pdf](slides_srie_fourier_annote.pdf)
+[Slides : Série de Fourier.pdf](ressources/02_theorie_du_signal_slides_srie_fourier_annote.pdf)
 
-[Slides : Transformée de Fourier.pdf](slides_transforme_fourier_annote.pdf)
+[Slides : Transformée de Fourier.pdf](ressources/02_theorie_du_signal_slides_transforme_fourier_annote.pdf)
 
-[Slides : traitement de signal.pdf](slides_traitement_du_signal_annote.pdf)
+[Slides : traitement de signal.pdf](ressources/02_theorie_du_signal_slides_traitement_du_signal_annote.pdf)
 
-[Exo 3.2 cpt maths : série de Fourier à harmoniques réelles.pdf](ex_3.2_cpt_maths.pdf)
+[Exo 3.2 cpt maths : série de Fourier à harmoniques réelles.pdf](ressources/02_theorie_du_signal_ex_3.2_cpt_maths.pdf)
 
 # Introduction
 
@@ -14,9 +14,9 @@
 
 Un signal est le support physique d'une information ou d'une commande. Il se présente sous différentes formes : signal électromagnétique (signal électrique, signal magnétique, signal radioélectrique...), signal acoustique (son, échographie...), signal graphique (film...), etc.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled.png)
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_1.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_1.png)
 
 Le signal de gauche est périodique. On aura tendance à le résumer par l'observation de son évolution sur la période $T$ (série de Fourier). On ne pourra pas faire de telle restriction pour le signal de droite (transformée de Fourier).
 
@@ -45,7 +45,7 @@ Les signaux “réels” (rencontrés en pratique) sont des signaux a énergie f
 
 Voyons la prochaine courbe $x(t)=\cos(t)$ qui pourrait représenter de l’énergie, de l’intensité du son, etc. On dirait que la période de $\cos(t)$ est $2\pi$, mais on ne connaît pas exactement la direction de la répétition : si on lit de droite à gauche, on dirait que la courbe se répète aussi à chaque $-2\pi$ unités de temps ! Donc on dit que sa période est $T_0=\pm 2\pi$ unités de temps per cycle.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_2.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_2.png)
 
 En réalité, on garde juste un période à deux signes dans le cas où la signal $x(t)$ présente un seul phénomène de période $t_0$, càd. si $t_0$ est la périodicité minimale du signal, toute autre période est un multiple de $t_0$. **Si la signal n’est pas élémentaire, on garde juste $f_0$ positif**.
 
@@ -81,7 +81,7 @@ $$
 
 Notons qu’il n’est jamais nécessaire que $f(c_i)$ soit définit, juste qu’elle admet une limite sur $f(c_i)$.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_3.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_3.png)
 
 ### L’harmonique fondamentale
 
@@ -99,7 +99,7 @@ $$
 
 Donc, la harmonique fondamentale est juste une somme “orthogonale” d’une composante réelle $(\cos)$ et une composante imaginaire $(i\sin)$.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_4.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_4.png)
 
 ### Périodicité (et examples avec l’harmonique fondamentale)
 
@@ -193,7 +193,7 @@ f(x)=
 \end{cases}
 $$
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_5.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_5.png)
 
 Notons qu’elle est donc de période $2\pi$. On fixe $T=2\pi$ et on cherche les coefficients de Fourier.
 
@@ -309,7 +309,7 @@ $$
 
 La convergence de la série est la convergence des sommes partielles. La série de Fourier d’une fonction $f$ ne converge pas nécessairement, et, même lorsqu’elle converge en un point $x_0$, sa somme n’est pas toujours égale à $f(x_0)$.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_6.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_6.png)
 
 **Théorème de Dirichlet**. Soit $f$ une fonction continue par morceaux, périodique de période $T$. Si $f$ admet en tout point une dérivée à gauche et une dérivée à droite, **donc sa série de Fourier converge en tout point $x_0$**.  De plus,
 
@@ -319,7 +319,7 @@ $$
 
 De cette formula, on verra que la série attribue la moyenne sur un point de discontinuité.
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_7.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_7.png)
 
 En plus, si $f$ est $\mathcal C^1$ par morceaux et continue, on a la convergence uniforme de la série (ici on parle de la norme sup) :
 
@@ -343,7 +343,7 @@ $$
 \end{align*}
 $$
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_8.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_8.png)
 
 Donc, on en déduit que norme au carre de $f$ est égal à la somme de toutes les coefficients/coordonnées au carré. Ceci est l’**identité de Parseval**.
 
@@ -365,7 +365,7 @@ $$
 
 ## Plus besoin de la périodicité
 
-![[https://fr.wikipedia.org/wiki/Transformation_de_Fourier](untitled.gif)
+![[https://fr.wikipedia.org/wiki/Transformation_de_Fourier](ressources/02_theorie_du_signal_untitled.gif)
 
 [https://fr.wikipedia.org/wiki/Transformation_de_Fourier](https://fr.wikipedia.org/wiki/Transformation_de_Fourier)
 
@@ -495,7 +495,7 @@ $$
 
 ## Table des transformées fréquentes
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/02_theorie_du_signal/untitled_9.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/02_theorie_du_signal_untitled_9.png)
 
 # Traitement de signal
 

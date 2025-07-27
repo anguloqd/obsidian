@@ -8,9 +8,9 @@
 
 Les arbres sont une structure de données récursive en Informatique pour représenter des graphes acycliques orientés possédant une unique racine, et tous les nœuds hors-racine ont un unique parent (leur définition en maths.). Si chaque nœud de l’arbre a deux fils au plus, on parle d’un arbre binaire.
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_1.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_1.png)
 
 Un arbre binaire équilibré contenant N nœuds a une hauteur (distance racine-feuilles) d’environ $\log_2(N)$.
 
@@ -18,7 +18,7 @@ Un arbre binaire équilibré contenant N nœuds a une hauteur (distance racine-f
 
 Un arbre binaire est une liste de la forme [racine, sous-arbre gauche, sous-arbre droit].
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_2.png)
 
 ```prolog
 [8,
@@ -34,13 +34,13 @@ Un arbre binaire est une liste de la forme [racine, sous-arbre gauche, sous-arbr
 
 On peut le voir horizontalement : en premier les nœuds de niveau 0 (racine), puis ceux de niveau 1, etc.
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_3.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_3.png)
 
 ### Parcours en profondeur : version infixée
 
 On commence dès la racine, on parcourt tout le sous-arbre gauche, puis on retourne à la racine, puis tout le sous-arbre droit.
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_4.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_4.png)
 
 ```prolog
 parcoursInfixe([]).
@@ -55,7 +55,7 @@ parcoursInfixe([Racine,G,D]):-
 
 On va à gauche chaque fois que c’est possible, sinon on va a droit. On commence dès la racine, puis sous-arbre gauche, puis sous-arbre droit.
 
-![8, 3, 1, 6, 4, 7, 10, 14, 13](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_5.png)
+![8, 3, 1, 6, 4, 7, 10, 14, 13](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_5.png)
 
 8, 3, 1, 6, 4, 7, 10, 14, 13
 
@@ -72,7 +72,7 @@ parcoursPrefixe([Racine,G,D]):-
 
 C’est comme si on allait à droite à chaque fois que c’est possible, sinon à gauche, mais juste à la fin on inverse l’ordre de nœuds. Dans l’exemple qui suit, si on allait à droite chaque fois que c’est possible on obtient le chemin 8,10,14,13,3,6,7,4,1. La version postfixée est finalement ce chemin mais inversé. On parcourt sous-arbre gauche, puis sous-arbre droit, puis racine.
 
-![1, 4, 7, 6, 3, 13, 14, 10, 8](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_5.png)
+![1, 4, 7, 6, 3, 13, 14, 10, 8](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_5.png)
 
 1, 4, 7, 6, 3, 13, 14, 10, 8
 
@@ -104,7 +104,7 @@ noun --> [bat].
 verb --> [eats].
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/04_arbres_et_grammaires/untitled_6.png)
+![untitled](new/uga/l2/s4/info/s4_info_programmation_logique/ressources/04_arbres_et_grammaires_untitled_6.png)
 
 ## En Prolog
 

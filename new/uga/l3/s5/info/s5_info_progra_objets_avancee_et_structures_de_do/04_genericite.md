@@ -1,6 +1,6 @@
 # 04 // généricité
 
-[INFF5-4.pdf](inff5-4.pdf)
+[INFF5-4.pdf](ressources/04_genericite_inff5-4.pdf)
 
 # Introduction
 
@@ -392,11 +392,11 @@ Avec `?`, la méthode peut-être appliquée à une Paire dont les éléments ont
 
 On peut limiter le joker par le haut de la hiérarchie d’héritage (intérêt par les descendants) avec `extends` ou par le bas (intérêt par les ascendants) avec `super`. Voyons ces image, où **les fils pointent vers leurs père**.
 
-![Joker avec `extends` : le type paramètre est un `Point` ou plus specifique.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/04_genericite/untitled.png)
+![Joker avec `extends` : le type paramètre est un `Point` ou plus specifique.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/04_genericite_untitled.png)
 
 Joker avec `extends` : le type paramètre est un `Point` ou plus spécifique.
 
-![Joker avec `super` : le type paramètre est un `Point3D` ou plus generale.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/04_genericite/untitled_1.png)
+![Joker avec `super` : le type paramètre est un `Point3D` ou plus generale.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/04_genericite_untitled_1.png)
 
 Joker avec `super` : le type paramètre est un `Point3D` ou plus générale.
 

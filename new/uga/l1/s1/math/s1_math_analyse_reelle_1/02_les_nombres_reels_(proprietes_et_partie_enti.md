@@ -1,6 +1,6 @@
 # 02 // les nombres réels (propriétés et partie entière)
 
-[Slides des nombres réels](02_les_nombres_reels_(proprietes_et_partie_enti/chap2.pdf)
+[Slides des nombres réels](ressources/02_les_nombres_reels_(proprietes_et_partie_enti_chap2.pdf)
 
 # Bornes inférieures et supérieures
 
@@ -52,7 +52,7 @@ Par passage à l'opposé, il possède aussi la " propriété de la borne inféri
 
 - **Propriété des segments emboîtés** :
     
-    ![image (48).png](02_les_nombres_reels_(proprietes_et_partie_enti/image_(48).png)
+    ![image (48).png](ressources/02_les_nombres_reels_(proprietes_et_partie_enti_image_(48).png)
     
 - **Propriété d’Archimède** : pour tout $x, y ∈ \R$ avec $y > 0$, il existe $n ∈ \N$ tel que $n \cdot y > x$.
 - **Propriété de l'existence d'une partie entière** : pour tout $x ∈ \R$, il existe un unique entier $n ∈ \Z$ tel que $n ≤ x < n + 1$. Cet entier n s'appelle la partie entière de $x$, notée $E(x)$ ou $\lfloor x\rfloor$.

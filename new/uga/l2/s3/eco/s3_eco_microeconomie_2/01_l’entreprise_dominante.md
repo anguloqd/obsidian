@@ -1,6 +1,6 @@
 # 01 // l’entreprise dominante
 
-[Slides de partie 1](slides_partie_1_micro2_vers_et_2022.pdf)
+[Slides de partie 1](ressources/01_l’entreprise_dominante_slides_partie_1_micro2_vers_et_2022.pdf)
 
 # Le monopole
 
@@ -65,7 +65,7 @@ Une *perte sèche* ou *charge morte* (deadweight) est une quantité de transacti
 
 Dans le cas monopole, la quantité offerte $q^*$ est celle où on vérifie $Cm = Rm$. Puis, pour savoir la quantité vendue, on cherche le prix $p^*$ qui correspond à la quantité de l’équation précédente, on determine l’équilibre de monopole $(p^*, q^*)$ et finalement on est capables de calculer $\pi$.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled.png)
 
 ## Règles alternatives de gestion
 
@@ -73,19 +73,19 @@ Dans le cas monopole, la quantité offerte $q^*$ est celle où on vérifie $Cm =
 
 À la place produire la quantité $q$ qui vérifie l’équation $Cm = Rm$, on cherche $q$ tel que $Rm = 0$. Un monopole peut décider d’en faire pour maximiser ser ventes (même si cela ne maximise pas le profit !).
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_1.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_1.png)
 
 ### La tarification au coût marginal (prix “concurrentiel”)
 
 Situation où $p(q) = Cm$. EDF, GDF (anciennement Gaz de France), SNCF, Orange sont tous des monopoles naturels. Pour motives de justice sociale, l’état les oblige de tarifer au coût marginal pour limiter leur pouvoir de marché. C’est comme cela qu’on passe du monopôle naturel au monopôle institutionnel.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_2.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_2.png)
 
 ### La gestion à l’équilibre
 
 Un monopole publique est censé de couvrir ses coûts et de bénéficier au consommateurs. Donc, si jamais on trouve deux valeurs de $q$ qui satisfassent l’équation $p(q) = CM$, prendre la quantité la plus petite est paradoxale au but de bénéficier le consommateur, car y'a de consommateurs qu'on pourrait bénéficier sans rien perdre. $\pi$ doit être forcément égal à 0.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_3.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_3.png)
 
 Apparemment selon le prof., “si $Cm > CM$, tarification au $Cm$ plus bénéfique pour le surplus collectif que la gestion à equilibre”.
 
@@ -116,13 +116,13 @@ Formellement, un monopole naturel est un monopole soutenable si :
 
 Notons que, dans cette situation, on suppose que le monopole et la firme entrante ont la même courbe de coûts.
 
-![asd.png](asd.png)
+![asd.png](ressources/01_l’entreprise_dominante_asd.png)
 
 Étude de cas limite : dans la prochaine image, il existe un monopole qui produit à la coupure entre la demande et le $CTM$. Notons que le monopole peut vendre son bien à toute demandeur au-dessus du point de coupure, mais il laisse le segment entre le point de coupure et les prix $p_0$ où $CTM$ est dessous du prix de la coupure. Un entrant pourrait produire une quantité parmi elles, disons $q_0$, et proposer un prix entre $p_0$ et $p(q_m)$, ce qui le permet un profit.
 
 Ce dernier étude limite met un point sur l’importance que le point de coupure soit à gauche du minimum de la courbe de $CTM$ et pas à droite de celle-ci.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_4.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_4.png)
 
 **Tip** : différence avec gestion à l'équilibre et monopole soutenable. Le dernier utilise, au pire, le critère de gestion à l'équilibre et, EN PLUS, il faut être au minimum de la courbe CTM. À gauche du minimum est soutenable, à droite du minimum non (voir photos).
 
@@ -198,13 +198,13 @@ La firme en place peut profiter de sa présence antérieure sur le marché pour 
 
 Dans cette première situation, on voit que la firme installé peut appliquer la stratégie de monopole de maximisation de profit (vendre $q$ qui vérifie $Cm(q) = Rm(q)$), et que cela déjà suffit pour dissuader l’entrant qui voudrait appliquer la même stratégie.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_5.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_5.png)
 
 Par contre, dans cette deuxième situation, la firme installée ne peut pas appliquer la maximisation de profits, car la quantité $q_m$ lié au résultat de la stratégie ne vérifie pas les inégalités importantes pour dissuader l’entrant qui applique aussi la stratégie de maximisation de profits $Cm_e = Rm_e$. Donc, la firme installer décide de choisir arbitrairement $q_L$, et cette quantité-ci arrive à dissuader l’entrant.
 
 Remarque : car la firme installée ne peut pas appliquer la maximisation de profits, elle n’est plus un “monopole”, mais juste une entreprise dominante. 
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_6.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_6.png)
 
 ## La stratégie de prédation par le prix
 
@@ -228,9 +228,9 @@ Pour qu’elle soit effective, la prédation par le prix doit être *crédible*,
 
 Dans le graphique ci-dessous, lorsque le prix du marché est $p^*$, les consommateurs achètent une quantité $q^*$.
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_7.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_7.png)
 
-![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/01_l’entreprise_dominante/untitled_8.png)
+![untitled](new/uga/l2/s3/eco/s3_eco_microeconomie_2/ressources/01_l’entreprise_dominante_untitled_8.png)
 
 <aside>
 💡 Si on était dans une situation de prix limite et on fixe “bêtement” un prix limite tel que $p$ soit toujours dessous de la courbe de couts moyens de l’entrant, cela est plutôt prédation par le prix et non un prix limite. 

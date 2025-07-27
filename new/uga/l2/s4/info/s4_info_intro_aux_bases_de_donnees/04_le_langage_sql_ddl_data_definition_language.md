@@ -1,6 +1,6 @@
 # 04 // le langage SQL DDL : data definition language
 
-[Slides de SQL 3](05.sql3.pdf)
+[Slides de SQL 3](ressources/04_le_langage_sql_ddl_data_definition_language_05.sql3.pdf)
 
 # Création d’un schéma
 

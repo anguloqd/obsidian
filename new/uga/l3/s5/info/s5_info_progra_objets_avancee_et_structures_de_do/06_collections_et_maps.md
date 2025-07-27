@@ -1,6 +1,6 @@
 # 06 // collections et maps
 
-[INFF5-6.pdf](inff5-6.pdf)
+[INFF5-6.pdf](ressources/06_collections_et_maps_inff5-6.pdf)
 
 <aside>
 ⚠️ À connaître par cœur : les méthodes de Lists, ses méthodes héritées de Collection et Iterator et ListIterator. Les iterators sont moins importants.
@@ -16,7 +16,7 @@
 
 ## Interfaces
 
-![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `iterator<e>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled.png)
+![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `iterator<e>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/06_collections_et_maps_untitled.png)
 
 Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `Iterator<E>`.
 
@@ -166,7 +166,7 @@ retourne le dernier (le plus grand) élément de `this`. Levée d’une
 
 ## Classes prédéfinies
 
-![Maintenant, on se concentre sur les classes qui implémentent les interface ci-dessus.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_1.png)
+![Maintenant, on se concentre sur les classes qui implémentent les interface ci-dessus.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/06_collections_et_maps_untitled_1.png)
 
 Maintenant, on se concentre sur les classes qui implémentent les interface ci-dessus.
 
@@ -275,7 +275,7 @@ Elle contient deux attributs localement déclarés :
 - `transient Object[] elementData`
 - `private int size`
 
-![Voyons que `elementData` est le tableau et `size` est la taille realisee.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_2.png)
+![Voyons que `elementData` est le tableau et `size` est la taille realisee.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/06_collections_et_maps_untitled_2.png)
 
 Voyons que `elementData` est le tableau et `size` est la taille réalisée.
 
@@ -356,7 +356,7 @@ Trois attributs sont localement déclarés :
 - `transient Node<E> first`, le premier chaînon
 - `transient Node<E> last`, le dernier chaînon
 
-![Si la taille de la `LinkedList` est 4, donc on aura 4 triplets de la forme $T=\{\text{item, prev, next}\}$. Le `prev` de chaque triplet pointe vers le triplet précédent (et non pas l’item du triplet précédent !), et de même pour `next`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_3.png)
+![Si la taille de la `LinkedList` est 4, donc on aura 4 triplets de la forme $T=\{\text{item, prev, next}\}$. Le `prev` de chaque triplet pointe vers le triplet précédent (et non pas l’item du triplet précédent !), et de même pour `next`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/06_collections_et_maps_untitled_3.png)
 
 Si la taille de la `LinkedList` est 4, donc on aura 4 triplets de la forme $T=\{\text{item, prev, next}\}$. Le `prev` de chaque triplet pointe vers le triplet précédent (et non pas l’item du triplet précédent !), et de même pour `next`.
 
@@ -488,7 +488,7 @@ public int size() {
 
 # Maps : notion des dictionnaires
 
-![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `map<kv>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/06_collections_et_maps/untitled_4.png)
+![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `map<kv>`.](new/uga/l3/s5/info/s5_info_progra_objets_avancee_et_structures_de_do/ressources/06_collections_et_maps_untitled_4.png)
 
 Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `Map<K,V>`.
 

@@ -1,6 +1,6 @@
 # 02 // automates à états finis
 
-[Slides du chapitre 2](chapitre_2.pdf)
+[Slides du chapitre 2](ressources/02_automates_a_etats_finis_chapitre_2.pdf)
 
 # Automates à états finis déterministes (AEFD)
 
@@ -20,9 +20,9 @@ Mathématiquement, un automate à états finis déterministe est une tuple de ci
 
 Dans le domaine de l’informatique théorique, une automate à états finis déterministe représente une machine abstraite. Un AEFD est traditionnellement vu comme une machine à ruban :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_1.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_1.png)
 
 Quelques précisions par rapport à cette machine à ruban spécifique…
 
@@ -33,11 +33,11 @@ Quelques précisions par rapport à cette machine à ruban spécifique…
 - Pour passer au prochain symbole, en premier la machine évalue sont état actuel et le symbole actuel ($q_1=\delta(q_0, a)$), puis elle détermine le prochain état et passe au prochain symbole
 - Un mot est reconnu ou accepté si et seulement si le mot est entièrement “lu” (tout le mot est entièrement à gauche de la tête de lecture, pas un seul symbole dessous de la tête) et la machine s’arrête dans un état dit final. Dans la dernière image qui suit, on suppose que $q_2$ est l’état final dans l’exemple.
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_2.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_3.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_3.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_4.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_4.png)
 
 ## Transitions, successions et acceptation de mots
 
@@ -53,7 +53,7 @@ Notons que si on tente de lire le mot $25170462$, on arrive à l’accepter (sur
 
 Notons qu’on peut faire la même chose avec un diagramme de transition. Rigoureusement, un diagramme de transitions pour un AEFD est juste une représentation imagée de la fonction de transition de la machine.
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_5.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_5.png)
 
 **Notons qu’un tableau ou diagramme de transition ne nous indique pas le mot ou input à lire, mais seulement les règles pour le lire et s’il pourrait être accepté par l’automate.** Si jamais on a un mot ou input qui est en contradiction avec le diagramme ou tableau, on le rejète.
 
@@ -63,9 +63,9 @@ Une configuration courante est la couple $(q,w)$, où $q$ est l’état courant 
 
 Une succession immédiate est une relation entre deux configurations notée “$\rightarrow$”, comme $(q, w) \rightarrow (q\prime, w\prime)$. Elle est vraie si et seulement si $w=x\land w\prime, \space x\in \Sigma$  et $\delta(q,x)=q\prime$. Ici, $\land$ est l’opérateur de concaténation.
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_6.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_6.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_7.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_7.png)
 
 Une succession est une relation entre deux configurations notée “$\rightarrow^*$”, comme $(q_1, w_1) \rightarrow^* (q_n, w_n)$. Elle est vérifiée si et seulement si $\forall i \in \N : 1 \le i \le n, (q_{i-1},w_{i-1}) \rightarrow (q_i,w_i)$. Intuitivement, si entre la configuration initial et la configuration final ils existent des configurations qui se succèdent immédiatement jusqu’à arriver à la configuration finale.
 
@@ -83,7 +83,7 @@ Encore plus, on peut définit un langage accepté par l’AEFD $A$ à partir d�
 
 Souvent, on va plutôt travailler avec des regex au lieu de langages réguliers. On peut créer aussi un diagramme de transition avec des expressions régulières comme suit :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_8.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_8.png)
 
 Ce diagramme représente la expression régulière $a(aa^*b)^*b$, càd. les mots qui commencent avec $a$, puis au minimum une occurrence de (la regex qui commence par $a$, puis au minimum une occurrence de $a$, et finit par un $b$), et finit par un $b$. Par exemple :
 
@@ -97,7 +97,7 @@ Dans ce cas particulier, il est plus facilement commencer les boucles fermés co
 
 Voyons l’exemple plus simple du langage $\{x \cup y\}^*$, ou aussi l’expression régulière $(x+y)^*$. 
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_9.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_9.png)
 
 **Note pratique**. Il est facile à voir que le symbole $+$ peut être lu comme “ou” et la concaténation $\cdot$ comme “et”.
 
@@ -131,11 +131,11 @@ La définition de succession immédiate est aussi modifiée. $(q,w)$ est suivi d
 
 **Théorème de déterminisation des automates**. Pour tout AEFND $A$, il existe un AEFD $A^\prime$ tel que $L(A)=L(A^\prime)$. C’est-à-dire, deux automates (l’un déterministe et l’autre non-déterministe) acceptent le même langage.
 
-![Cas non-deterministe.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_10.png)
+![Cas non-deterministe.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_10.png)
 
 Cas non-deterministe.
 
-![Cas deterministe.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/02_automates_a_etats_finis/untitled_11.png)
+![Cas deterministe.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/02_automates_a_etats_finis_untitled_11.png)
 
 Cas déterministe.
 

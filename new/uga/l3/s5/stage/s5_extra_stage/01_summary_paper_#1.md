@@ -364,7 +364,7 @@ Considering the complexity of disturbances that occur in reality, a breakpoint d
     - All three methods exhibited poor detection efficiency for small disturbances (wildfires, heatwaves, cold, etc.)
     - When it comes to $RMSE_{T_t+S_t}$, DBEST had actually the lowest value than the other three methods by a small margin. This doesn’t mean that the components obtained by DBEST are accurate. This is just caused because the trend and seasonality decomposed by DBEST tend to contain many meaningless detailed fluctuations and turning points.
 
-![Untitled](01_summary_paper_#1/untitled.png)
+![Untitled](ressources/01_summary_paper_#1_untitled.png)
 
 # Conclusion
 

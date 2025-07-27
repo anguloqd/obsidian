@@ -1,6 +1,6 @@
 # 01 // mots, langages et expressions régulières
 
-[Slides du chapitre 1](chapitre_1_compressed.pdf)
+[Slides du chapitre 1](ressources/01_mots_langages_et_expressions_regulieres_chapitre_1_compressed.pdf)
 
 # Le cours : la théorie du calcul
 

@@ -1,6 +1,6 @@
 # 04 // grammaires
 
-[Slides du chapitre 4](chapitre_4_compressed.pdf)
+[Slides du chapitre 4](ressources/04_grammaires_chapitre_4_compressed.pdf)
 
 # Les grammaires
 
@@ -204,7 +204,7 @@ $$
 
 Les dérivations dans les grammaires génératives peuvent être représentées par des arbres de dérivation. Reprenant l’exemple passé, on peut construire un arbre :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled.png)
 
 La dérivation gauche correspond à la construction de l'arbre par la branche de gauche en premier, est c’est analogiquement le même pour la dérivation droite. Cependant, les deux dérivations aboutissent exactement au même arbre, **donc l'ordre d'application des règles de réécriture n’affecte pas l'ensemble des chaînes générées**.
 
@@ -220,19 +220,19 @@ Pour une grammaire hors-contexte $G$ et un mot engendré $w\in V_T^*$, il existe
 
 Pour un premier exemple, prenons comme règles : $S \Rightarrow_1 aSb, S \Rightarrow_2 \varepsilon$. Donc :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_1.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_1.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_2.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_3.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_3.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_4.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_4.png)
 
 Pour un deuxième exemple, considérons une grammaire pour de expressions arithmétiques additives sous ces règles : $E \Rightarrow_1 V, E \Rightarrow_2 E+V, V \Rightarrow_3 a|b|c$. $E$ est le départ. Donc :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_5.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_5.png)
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_6.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_6.png)
 
 Un arbre de dérivation ***complet*** est un arbre dont la racine est étiquetée avec le symbole de départ de la grammaire et toutes les feuilles ne sont étiquetées que par les symboles terminaux (il peut avoir des terminaux répétés). L’arbre de droite est **complet**, par contre celui de gauche non.
 
@@ -244,7 +244,7 @@ En plus, notons que **$E$ est un symbol récursif**. Un symbole récursif est un
 
 Si on prend un sous-arbre d’un arbre $A$ et on concatène ses feuilles, on obtient un constituant. En particulier, une sous-chaîne est un constituant de type $X$ si on peut l’engendrer en concaténant ***toutes*** (pas seulement quelques unes) les feuilles d’un arbre dont la racine est $X$.
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_7.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_7.png)
 
 De l’arbre qui engendre de la grammaire $G$ la phrase $P$ (”Le garçon qui regarde le chat boit le lait”), on peut sélectionner le sous-arbre $SV$ qui engendre la sous-phrase “regarde le chat”.
 
@@ -256,7 +256,7 @@ Certaines grammaires permettent que plusieurs arbres soient construits pour la m
 
 Par exemple, prenons une grammaire avec ces règles : $S \Rightarrow_1 aBc, S \Rightarrow_2 abC, B \Rightarrow_3 b, C \Rightarrow_4 c$. Cette grammaire permet deux arbres qui engendrent la chaîne $abc$ :
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/04_grammaires/untitled_8.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/04_grammaires_untitled_8.png)
 
 Dans de tels cas, des règles différentes sont utilisées dans les deux dérivations. Ceci est différent dans le cas de dérivations gauche et droite, où on se donne des règles avec une quantité pour chaque à les appliquer, et on change juste l’ordre d’application.
 

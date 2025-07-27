@@ -1,6 +1,6 @@
 # 07 // un pas de plus vers l’abstraction
 
-[Slides de cours 7.pdf](inff3-2223-cours7.pdf)
+[Slides de cours 7.pdf](ressources/07_un_pas_de_plus_vers_l’abstraction_inff3-2223-cours7.pdf)
 
 # Le mot-clé `final`
 

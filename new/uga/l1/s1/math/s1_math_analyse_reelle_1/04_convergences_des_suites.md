@@ -1,7 +1,6 @@
 # 04 // convergences des suites
 
-[Slides de convergences](chap4_(4).pdf)
-
+[Slides de convergences](ressources/04_convergences_des_suites_chap4_(4).pdf)
 # Limite d'une suite
 
 ## Définition et convergence
@@ -71,10 +70,7 @@ Prenons comme base une suite de termes de la suite $(u_n)$. Formellement, c'est 
 
 # Suites satisfaisant $u_{n+1} = f(u_n)$
 
-![Représentation graphique. (Comportements de suites définies par $u_0$ et $u_{n+1} = f(u_n)$)](image_(39).png)
-
-Représentation graphique. (Comportements de suites définies par $u_0$ et $u_{n+1} = f(u_n)$)
-
+![Représentation graphique. (Comportements de suites définies par $u_0$ et $u_{n+1} = f(u_n)$)](ressources/04_convergences_des_suites_image_(39).png)
 ## Application contractante
 
 Soit $I$ un intervalle fermé et borné de $\R$ et soit $f : I → I$. On dit que $f$ est *contractante* sur $I$ si :

@@ -1,6 +1,6 @@
 # 01 // théorie de la décision en incertitude
 
-[Partie I Théorie de la décision en Incertitude 2022.pdf](partie_i_thorie_de_la_dcision_en_incertitude_2022.pdf)
+[Partie I Théorie de la décision en Incertitude 2022.pdf](ressources/01_theorie_de_la_decision_en_incertitude_partie_i_thorie_de_la_dcision_en_incertitude_2022.pdf)
 
 # Le critère de maximisation de l’utilité espérée
 
@@ -61,7 +61,7 @@ V(a) = F(\mu_a, \sigma^2_a) = \alpha + \beta \mu_a - \gamma \sigma^2_a, \text{ a
 
 Notons que si on fixe une valeur constante de V(a) et on regarde les valeurs \mu et \sigma^2 comme des variables, nous avons une courbe d’indifférence.
 
-![Courbe d’indifférence pour $V(a)$ fixe](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled.png)
+![Courbe d’indifférence pour $V(a)$ fixe](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled.png)
 
 Courbe d’indifférence pour $V(a)$ fixé
 
@@ -75,7 +75,7 @@ La pente des courbes d’indifférence dépend donc du signe de \gamma : une con
 - Si \gamma < 0 : la pente est négative, la courbe est décroissante, et V(a) augmente avec le risque ; l’agent présente une “attirance au risque”.
 - Si \gamma = 0 : la pente est nulle, la courbe est constante, et V(a) est indépendante du risque ; l’agent présente une “neutralité au risque”.
 
-![](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_1.png)
+![](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled_1.png)
 
 Représentation de courbes d’indifférence selon l’attitude au risque
 (cas linéaire et non linéaire)
@@ -126,11 +126,11 @@ Ce critère propose une pondération des valeurs minimums et maximums dans chaqu
 
 Pour chaque état de la nature e_i, on regarde l’action qui maximise l’utilité. Puis, pour chaque action a_i, on calcule la différence de son utilité rapportée par rapport à l’utilité de l’action optimale dans cet état. La action à prendre est l’action qui minimise la somme des différences.
 
-![Présentation de la situation.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_2.png)
+![Présentation de la situation.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled_2.png)
 
 Présentation de la situation.
 
-![On choisit donc a_1.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_3.png)
+![On choisit donc a_1.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled_3.png)
 
 On choisit donc a_1.
 
@@ -181,7 +181,7 @@ On définit une relation “etre CRMC de…” comme “F^* est CRMC de F”, pa
 - F* et F ont la même espérance
 - Soit x_0 un point dans le domaine, donc F*(x) \ge< F(x) pour x \le x_0 et F*(x) \le F(x) pour x \ge x_0.
 
-![A un moment donné, F* est superée par f.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_5.png)
+![A un moment donné, F* est superée par f.](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled_5.png)
 
 A un moment donné, F* est superée par F.
 
@@ -194,7 +194,7 @@ Une chose à retenir c’est que un plus grand risque (au sens de R&S) implique 
 
 Cette définition du risque est en relation avec la notion de Dominance Stochastique de second ordre (DS2) : F* est DS2 à F si  [F*(t) - F(t)]dt > 0 pour tout t
 
-![L’action a* est un CRMC de a, et l’accroissement de risque implique une baisse de l’UE mesurée par la distance entre E et E*. Cette dégradation de l’UE est due à la concavité de u(.).](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_6.png)
+![L’action a* est un CRMC de a, et l’accroissement de risque implique une baisse de l’UE mesurée par la distance entre E et E*. Cette dégradation de l’UE est due à la concavité de u(.).](new/uga/l3/s6/eco/s6_eco_economie_des_contrats/ressources/01_theorie_de_la_decision_en_incertitude_untitled_6.png)
 
 L’action a* est un CRMC de a, et l’accroissement de risque implique une baisse de l’UE mesurée par la distance entre E et E*. Cette dégradation de l’UE est due à la concavité de U(.).
 

@@ -1,6 +1,6 @@
 # 01 // fondamentaux 1
 
-[Slides de fondamentaux 1](corolleur_f._2021_22_lecture_1_fondamentaux.pdf)
+[Slides de fondamentaux 1](ressources/01_fondamentaux_1_corolleur_f._2021_22_lecture_1_fondamentaux.pdf)
 
 # Concurrence et pouvoir de marché
 
@@ -14,7 +14,7 @@ Les firmes disposent de nombreux moyens pour se concurrencer sur un marché :
 
 Le pouvoir de marché, l’écart entre prix-coût marginal $\left( \frac{p - Cmg}{p} \right)$ peut être vu comme un spectre :
 
-![jjj.png](jjj.png)
+![jjj.png](ressources/01_fondamentaux_1_jjj.png)
 
 L’indice de Lerner $L$ est la capacité du monopole à fixer un $p$ supérieur à $Cmg$ : $\frac{p-Cmg}{p}$. L’indice est toujours positif ou nul, p étant le prix imposé par le monopole. Si on a $L = 2/3$, on a que $66\%$ du prix imposé est dû à sa position de monopole.
 
@@ -83,13 +83,13 @@ M+\frac{a^2}{2b}, \text{si }q > \frac{a}{b}
 \end{cases}
 $$
 
-![xd.png](xd.png)
+![xd.png](ressources/01_fondamentaux_1_xd.png)
 
 En vrai, la première partie est la partie gauche une parabole négative avant de son maximum, puis elle devient simplement une ligne constante. Lorsque $q = \frac{a}{b}$, l’individu est satisfait du bien, donc des unités supplémentaires ne changeront pas l’utilité.
 
 De cette fonction d’utilité découle une fonction de demande inv. : $p(q) = \max\{0, a-bq\}$. Notons qu’on peut donc déduire la fonction de demande réel : $q = \max \left\{ 0, \frac{a-p}{b} \right\}$. Il est évident qu’elle est une fonction de demande linéaire.
 
-![xdd.png](xdd.png)
+![xdd.png](ressources/01_fondamentaux_1_xdd.png)
 
 Notons que quand le prix est $0$ (le bien est gratuit), l’individu prend jusqu’au point de satiété. Si le prix est $a$ ou supérieur, l’individu ne voudra pas acheter du bien.
 
@@ -108,7 +108,7 @@ $$
 On pourrait visualiser cette relation comme une fonction : $\varepsilon(p) = \frac{p}{a-p}$, où $a$ est un paramètre.
 Plus le prix $p$ se rapproche de $a$, plus l’élasticité est plus grande (elle tend vers l’infini asymptotiquement).
 
-![Astuce : si on lit le premier graphique de droite `guache (à l'invers), l'utilité que correspond va de gauche à droite (le bon sens).](1.png)
+![Astuce : si on lit le premier graphique de droite `guache (à l'invers), l'utilité que correspond va de gauche à droite (le bon sens).](ressources/01_fondamentaux_1_1.png)
 
 Astuce : si on lit le premier graphique de droite `guache (à l'invers), l'utilité que correspond va de gauche à droite (le bon sens).
 
@@ -127,7 +127,7 @@ Comme on peut voir dans le graphique à droite, plus $a$ est élevé, moins fort
 
 En comparaison, il n’y a pas trop à dire sur $b$, mais on se rend compte avec le graphique suivant que un plus grand $b$ indique un plus grand groupe de consommateurs. Si le bien était gratuit ($p = 0$), donc toutes les personnes intéressées au bien l’obtiendraint. On en déduit que le $q$ qui atteint le minimum de $p(q)$ est la quantité maximum possiblement demandée.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/01_fondamentaux_1/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/01_fondamentaux_1_untitled.png)
 
 ## Pour $n$ biens
 
@@ -242,14 +242,14 @@ On part d’une fonction d’utilité de la forme $U(q_1,q_2)=v(q_1)+q_2$ et on 
 
 </aside>
 
-![2.png](2.png)
+![2.png](ressources/01_fondamentaux_1_2.png)
 
 Si on calcule le taux marginale de substitution $TmS = \frac{\partial U/\partial q_2}{\partial U/\partial q_1}=\frac{v\prime(q_1)}{1}=v\prime(q_1)$, on voit que la TmS ne dépend pas du bien 2 mais seulement du bien 1. Une telle fonction d’utilité a des implications notables :
 
 - Pour chaque niveau de préférence, la pente de $q_2$ est la même pour chaque niveau de $q_1$
 - Le bien non-linéaire est demandé toujours en quantité fixe, peu importe les prix et le revenu. L’individu voudra toujours la même quantité du bien 1. Une hausse de revenu sera consacrée entièrement à l’achat du bien linéaire.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/01_fondamentaux_1/untitled_1.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/01_fondamentaux_1_untitled_1.png)
 
 Note : Les courbes d’indifférence sont convexes mais non asymptotiques aux axes. C’est-à-dire, il peut y avoir des solutions en coin où $q_1 = 0$ ou $q_2=0$.
 
@@ -350,7 +350,7 @@ $$
 CMP(Q)=\frac{C(\lambda_1q_1,\lambda_2q_2)}{Q}
 $$
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/01_fondamentaux_1/untitled_2.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/01_fondamentaux_1_untitled_2.png)
 
 D’autre côté, on peut construire l’idée de coût de production incrémental. Pour un $q_2$ constante donné, on regarde le coût de produire $q_1$ produisant $q_2$. Avec une logique similaire, on peut parler du coût moyen de production incrémental $CMI$ ou aussi coût supplémentaire incrémental $CSI$ :
 

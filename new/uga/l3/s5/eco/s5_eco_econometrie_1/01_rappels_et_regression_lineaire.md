@@ -1,6 +1,6 @@
 # 01 // rappels et régression linéaire
 
-[Économétrie - Chap #1](1_chapitre1_econometrie1_20232024.pdf)
+[Économétrie - Chap #1](ressources/01_rappels_et_regression_lineaire_1_chapitre1_econometrie1_20232024.pdf)
 
 # Les modèles linéaires déterministes
 
@@ -123,7 +123,7 @@ $$
 
 C’est donc la valeur moyenne de $y$ pour les différents niveaux de $x$. Notons que c’est l’espérance de y et non pas la valeur exacte de $y$ ! La valeur espérée annule l’erreur, mais en réalité la variable $y$ sera affecte par l’erreur $u$ !
 
-![[new/uga/l3/s5/eco/s5_eco_econometrie_1/01_rappels_et_regression_lineaire/untitled.png]]
+![[new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/01_rappels_et_regression_lineaire_untitled.png]]
 Dispersion de la production ($Q$) et du travail ($L$), et fonction de régression de la population $\mathbb E[Q|L] = β_0 + β_1L$
 
 On se souciera d’estimer $\beta_0$ et $\beta_1$ après avec un échantillon issu de la population.
@@ -288,7 +288,7 @@ On se permet d’ajouter une hypothèse aux cinq hypothèses précédentes :
 $u_i$ est normale et ne dépend pas des variables explicatives.
 
 Tel hypothèse implique que $y|x \sim \mathcal N(\beta_0+\beta_1x_1, \sigma^2_u)$.
-![[new/uga/l3/s5/eco/s5_eco_econometrie_1/01_rappels_et_regression_lineaire/untitled_1.png]]
+![[new/uga/l3/s5/eco/s5_eco_econometrie_1/ressources/01_rappels_et_regression_lineaire_untitled_1.png]]
 
 Avec de grands échantillons, l’hypothèse de normalité n’est plus nécessaire.
 

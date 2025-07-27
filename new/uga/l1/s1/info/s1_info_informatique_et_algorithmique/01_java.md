@@ -320,7 +320,7 @@ public class Main {
 
 ## (*) Les classes
 
-![Un *objet* est une collection de de données et operations.](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/01_java/untitled.png)
+![Un *objet* est une collection de de données et operations.](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled.png)
 
 Un *objet* est une collection de de données et opérations.
 
@@ -510,7 +510,7 @@ public class Demo {
 }
 ```
 
-![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/01_java/untitled_1.png)
+![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled_1.png)
 
 ### Modificateurs
 
@@ -643,11 +643,11 @@ La méthode `.readLine()` est utilisé pour passer à la ligne suivante et garde
 
 Analogie entre parcours et lecture de fichiers texte :
 
-![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/01_java/untitled_2.png)
+![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled_2.png)
 
 Analogie entre recherche et lecture de fichiers texte :
 
-![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/01_java/untitled_3.png)
+![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled_3.png)
 
 ## **Écriture dans un fichier**
 
@@ -677,7 +677,7 @@ f = new BufferedWriter(new FileWriter ("<nom fichier>", true));
 
 ## JRE, JDK et JVM
 
-![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/01_java/untitled_4.png)
+![untitled](new/uga/l1/s1/info/s1_info_informatique_et_algorithmique/ressources/01_java_untitled_4.png)
 
 [https://www.javatpoint.com/difference-between-jdk-jre-and-jvm](https://www.javatpoint.com/difference-between-jdk-jre-and-jvm)
 

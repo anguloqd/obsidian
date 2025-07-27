@@ -1,14 +1,14 @@
 # 00 // tps
 
-[cmdes_unix_desc.pdf](cmdes_unix_desc.pdf)
+[cmdes_unix_desc.pdf](ressources/00_tps_cmdes_unix_desc.pdf)
 
-[systemes-tp1-2324.pdf](systemes-tp1-2324.pdf)
+[systemes-tp1-2324.pdf](ressources/00_tps_systemes-tp1-2324.pdf)
 
-[systemes-tp2-2223.pdf](systemes-tp2-2223.pdf)
+[systemes-tp2-2223.pdf](ressources/00_tps_systemes-tp2-2223.pdf)
 
-[systemes-tp3-1819.pdf](systemes-tp3-1819.pdf)
+[systemes-tp3-1819.pdf](ressources/00_tps_systemes-tp3-1819.pdf)
 
-[systemes-tp4-1819.pdf](systemes-tp4-1819.pdf)
+[systemes-tp4-1819.pdf](ressources/00_tps_systemes-tp4-1819.pdf)
 
 # TP1
 
@@ -346,9 +346,9 @@ int main(void)
 
 ## Méthodes de Threads et Sémaphores
 
-![untitled](new/uga/l3/s6/info/s6_info_systemes/00_tps/untitled.png)
+![untitled](new/uga/l3/s6/info/s6_info_systemes/ressources/00_tps_untitled.png)
 
-![untitled](new/uga/l3/s6/info/s6_info_systemes/00_tps/untitled_1.png)
+![untitled](new/uga/l3/s6/info/s6_info_systemes/ressources/00_tps_untitled_1.png)
 
 - Thread :
     - run() (à redéfinir)

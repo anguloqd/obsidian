@@ -1,8 +1,8 @@
 # 03 // régression linéaire
 
-[slides intro reglin stat3 annote.pdf](slides_intro_reglin_stat3_annote.pdf)
+[slides intro reglin stat3 annote.pdf](ressources/03_regression_lineaire_slides_intro_reglin_stat3_annote.pdf)
 
-[slides reglin inf annote.pdf](slides_reglin_inf_annote.pdf)
+[slides reglin inf annote.pdf](ressources/03_regression_lineaire_slides_reglin_inf_annote.pdf)
 
 # Régression linéaire - point de vue descriptif
 

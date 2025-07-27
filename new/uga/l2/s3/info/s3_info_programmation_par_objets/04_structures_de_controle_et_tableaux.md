@@ -1,6 +1,6 @@
 # 04 // structures de contrôle et tableaux
 
-[Slides de cours 4.pdf](inff3-2223-cours4.pdf)
+[Slides de cours 4.pdf](ressources/04_structures_de_controle_et_tableaux_inff3-2223-cours4.pdf)
 
 # Qu’est-ce que les structures de contrôle
 
@@ -142,7 +142,7 @@ String[] t7= new String[4];
 String[] t8=new String[] {s1,s2};
 ```
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/04_structures_de_controle_et_tableaux/untitled.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/04_structures_de_controle_et_tableaux_untitled.png)
 
 ## Manipulation des tableaux
 

@@ -1,6 +1,6 @@
 # (2) 08 // complexité
 
-[Complexite-algo_Tris.pdf](complexite-algo_tris.pdf)
+[Complexite-algo_Tris.pdf](ressources/(2)_08_complexite_complexite-algo_tris.pdf)
 
 Performance → coût temporel / spatial
 

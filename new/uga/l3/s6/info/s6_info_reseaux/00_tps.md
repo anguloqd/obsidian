@@ -33,7 +33,7 @@
 - Commande traceroute : envoie des messages ICMP et permet de connaitre la route des datagrammes. Pour chaque router entre m1 et m2, la commande enverra un message ICMP de portée 1 (ie. durée de vie ou TTL, time to live), puis cette portée augmente de 1 jusqu’à que elle ne trouve plus de routers.
     - Définition formelle : “Comme la commande ping, la commande traceroute utilise également des messages ICMP ; elle permet de connaître la route exacte empruntée par les datagrammes. traceroute envoie 3 paquets UDP avec un TTL égal à 1 puis recommence en augmentant le TTL de 1 à chaque envoi. A chaque fois que le TTL arrive à 0, le routeur renvoie un message ICMP d’erreur.”
         
-        ![untitled](new/uga/l3/s6/info/s6_info_reseaux/00_tps/untitled.png)
+        ![untitled](new/uga/l3/s6/info/s6_info_reseaux/ressources/00_tps_untitled.png)
         
         Les nuages sont des réseaux, les cercles avec des flèches sont des routers.
         
@@ -80,7 +80,7 @@ La deuxième ligne est le routage extérieur :
 
 ### TCP et HTTP
 
-![untitled](new/uga/l3/s6/info/s6_info_reseaux/00_tps/untitled_1.png)
+![untitled](new/uga/l3/s6/info/s6_info_reseaux/ressources/00_tps_untitled_1.png)
 
 - Processus netcat qui permettra de recevoir la requête d’un client HTTP
 lancé sur m2 (sans cependant y répondre):

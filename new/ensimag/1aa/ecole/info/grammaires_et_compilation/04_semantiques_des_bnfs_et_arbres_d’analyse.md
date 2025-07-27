@@ -1,6 +1,6 @@
 # 04 // sémantiques des BNFs et arbres d’analyse
 
-[chap4-4up.pdf](chap4-4up.pdf)
+[chap4-4up.pdf](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_chap4-4up.pdf)
 
 ## Exo 4.4
 
@@ -14,9 +14,9 @@ Pour chacun des mots suivants, dessiner l’ensemble de ses arbres d’analyse p
 3. `I-(I-I)`
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_1.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 
 ## Exo 4.5
 
@@ -36,7 +36,7 @@ Donner tous les arbres d’analyse du mot `abbb` pour la BNF du langage $L$ suiv
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_2.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_2.jpg)
 
 ## Exo 4.7
 
@@ -48,7 +48,7 @@ Même exercice que le précédent pour cette BNF alternative du langage $L$ :
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_3.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_3.jpg)
 
 ## Exo 4.8
 
@@ -68,7 +68,7 @@ Je l’ai pas je crois.
 
 Avec ce système d’attributs, quel arbre d’analyse associer a “`I--I-I`” pour que le résultat corresponde à la convention usuelle.
 
-![image.png](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/image.png)
+![image.png](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_image.png)
 
 </aside>
 
@@ -79,11 +79,11 @@ Avec ce système d’attributs, quel arbre d’analyse associer a “`I--I-I`”
 
 La BNF étant ambiguë, dessiner tous les arbres possibles du mot ‘`x # - x #`’, avec la propagation d’attributs.
 
-![image.png](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/image_1.png)
+![image.png](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_image_1.png)
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_4.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_4.jpg)
 
 ## Exo 4.11
 
@@ -94,7 +94,7 @@ On considère que ‘`#`’ est prioritaire sur ‘`-`’ (qui est associatif a 
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_5.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_5.jpg)
 
 ## Exo 4.12
 
@@ -107,9 +107,9 @@ Appliquer cette méthode sur les BNF suivantes. On se limitera à se convaincre 
 2. la BNF de la section 6.1 du sujet de TP.
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_6.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_6.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_7.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_7.jpg)
 
 ## Exo 4.13
 
@@ -118,8 +118,8 @@ Appliquer cette méthode sur les BNF suivantes. On se limitera à se convaincre 
 
 Trouver une BNF pour le langage $A ∪ B$. Montrer que cette BNF est ambigue.
 
-![image.png](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/image_2.png)
+![image.png](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_image_2.png)
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/04_semantiques_des_bnfs_et_arbres_d’analyse/untitled_8.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_8.jpg)

@@ -1,6 +1,6 @@
 # 03 // équations différentielles
 
-[Slides - Équations différentielles](slides_eq_diff_annote_3.pdf)
+[Slides - Équations différentielles](ressources/03_equations_differentielles_slides_eq_diff_annote_3.pdf)
 
 # Problème de Cauchy
 
@@ -32,7 +32,7 @@ x(0)=0
 \end{cases}
 $$
 
-![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/03_equations_differentielles/untitled.png)
+![untitled](new/uga/l3/s5/math/s5_math_comple_maths_1/ressources/03_equations_differentielles_untitled.png)
 
 Dans l’image précédente, juste avec la proposition $x^\prime(t)=f(t,x(t))$ et sans besoin de la condition initiale, on peut tracer le champ de directions. En intégrant, on dérive que $x(t)=t/2+C$. On pourra tracer des lignes tangentes de $x(t)$ en faisant varier le $C$. C’est finalement avec la condition initiale qu’on déduit que $C=0$.
 

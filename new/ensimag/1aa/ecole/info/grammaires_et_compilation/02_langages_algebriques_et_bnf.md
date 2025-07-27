@@ -1,6 +1,6 @@
 # 02 // langages algébriques et BNF
 
-[chap2-4up.pdf](chap2-4up.pdf)
+[chap2-4up.pdf](ressources/02_langages_algebriques_et_bnf_chap2-4up.pdf)
 
 ## Exo 2.1
 
@@ -22,7 +22,7 @@ Dessiner le diagramme de Hasse de $P(\{1, 2, 3, 4\})$.
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/02_langages_algebriques_et_bnf/untitled.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
 ## Exo 2.8
 
@@ -302,7 +302,7 @@ Le flow à suivre dans cette exercise est de savoir qu’on peut partir d’un a
 
 ![WhatsApp Image 2025-01-12 at 15.18.50(1).jpeg](whatsapp_image_2025-01-12_at_15.18.50(1).jpeg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/02_langages_algebriques_et_bnf/untitled_1.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 
 ## Exo 2.20
 

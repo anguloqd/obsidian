@@ -1,6 +1,6 @@
 # 02 // marchés financiers et anticipations
 
-[Slides des anticipations](chapitre_2_-_diapo.pdf)
+[Slides des anticipations](ressources/02_marches_financiers_et_anticipations_chapitre_2_-_diapo.pdf)
 
 # Valeur Actuelle Nette (VAN)
 
@@ -58,7 +58,7 @@ Pour les agents financier, les deux caractéristiques d’une obligation sont **
 
 Une courbe de taux est juste un graphe avec une période (à partir d’aujourd’hui) en abscisse et le taux de rendement pour les obligations en ordonné.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/02_marches_financiers_et_anticipations/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_macroeconomie_3/ressources/02_marches_financiers_et_anticipations_untitled.png)
 
 ## VAN comme critère de décision
 

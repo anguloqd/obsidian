@@ -1,8 +1,8 @@
 # 03 // le langage SQL DML : data manipulation language
 
-[Slides de SQL 1](03.sql1.pdf)
+[Slides de SQL 1](ressources/03_le_langage_sql_dml_data_manipulation_language_03.sql1.pdf)
 
-[Slides de SQL 2](04.sql2.pdf)
+[Slides de SQL 2](ressources/03_le_langage_sql_dml_data_manipulation_language_04.sql2.pdf)
 
 # Premiers aspects
 
@@ -34,7 +34,7 @@ FROM CLIENT ;
 // si on veut tout selectionner
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled.png)
 
 Si on ajoute la clause `WHERE`, on simule donc l’opération de sélection $R:C$ en algèbre relationnelle.
 
@@ -44,7 +44,7 @@ FROM CLIENT
 WHERE LOCALITE = 'Toulouse';
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_1.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_1.png)
 
 <aside>
 🚫 Problème : dans une requête monotable, ils se peuvent afficher autant de lignes qu’il y a des lignes vérifiant la condition, donc possiblement de lignes dupliquées. Pour l’éviter, on utiliser le mot clé `DISTINCT` après `SELECT`.
@@ -100,7 +100,7 @@ FROM PRODUIT
 WHERE QSTOCK > 500 ;
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_2.png)
 
 Par défaut, les colonnes du résultat prennent le nom utilisé dans la clause `SELECT`. Pour utiliser un autre nom ou alias il fait utiliser la clause `AS`.
 
@@ -110,7 +110,7 @@ FROM PRODUIT
 WHERE QSTOCK > 500 ;
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_3.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_3.png)
 
 # Les fonctions SQL
 
@@ -276,7 +276,7 @@ Il n’existe pas une syntaxe pour le produit cartésien, plutôt on utilise une
 
 On qualifie de cyclique une structure de données qui fait, directement ou indirectement, référence à elle. Il est normalement d’intérêt de faire une requête en joignant la table à elle-même, donc une auto-jointure. Par exemple :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_4.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_4.png)
 
 La table `PERSONNE` nous montre, pour chaque identifiant, son nom et l’identifiant de son responsable. On voudrait avoir plutôt, pour chaque identifiant, l’identifiant de son responsable et le nom de son responsable.
 
@@ -400,7 +400,7 @@ Le tableau résultat a pour lignes des tuples (n° client, nom, localité). Il f
 
 Pour toute cette section, on gardera comme référence cet tableau :
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_5.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_5.png)
 
 Grouper les données c’est de prendre une colonnes dont les valeurs sont répétées, et faire d’opérations agrégées avec les lignes, et de rendre uniques les lignes les valeurs répétées. Par exemple :
 
@@ -412,7 +412,7 @@ FROM CLIENT
 GROUP BY LOCALITE ;
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_6.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_6.png)
 
 On agrège les nombres de clients, on prend la moyenne de leurs comptes et on le classifie par localité (qui était la valeur répétée). 
 
@@ -425,7 +425,7 @@ GROUP BY LOCALITE
 HAVING COUNT(*) >= 3 ;
 ```
 
-![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/03_le_langage_sql_dml_data_manipulation_language/untitled_7.png)
+![untitled](new/uga/l2/s4/info/s4_info_intro_aux_bases_de_donnees/ressources/03_le_langage_sql_dml_data_manipulation_language_untitled_7.png)
 
 Il y a deux remarques à faire :
 

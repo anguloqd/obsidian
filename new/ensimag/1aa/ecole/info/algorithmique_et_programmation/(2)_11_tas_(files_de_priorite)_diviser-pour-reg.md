@@ -1,8 +1,8 @@
 # (2) 11 // tas (files de priorité), diviser-pour-régner, master theorem
 
-[Cours_ArbresGénéraux_Tas.pdf](cours_arbresgnraux_tas.pdf)
+[Cours_ArbresGénéraux_Tas.pdf](ressources/(2)_11_tas_(files_de_priorite)_diviser-pour-reg_cours_arbresgnraux_tas.pdf)
 
-[diviser_pour_regner_multiplication.pdf](revision_2425.pdf)
+[diviser_pour_regner_multiplication.pdf](ressources/(2)_11_tas_(files_de_priorite)_diviser-pour-reg_revision_2425.pdf)
 
 # Tas (files de priorité)
 

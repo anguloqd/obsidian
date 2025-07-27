@@ -1,6 +1,6 @@
 # 03 // théorie des syntaxes abstraites
 
-[chap3-4up.pdf](chap3-4up.pdf)
+[chap3-4up.pdf](ressources/03_theorie_des_syntaxes_abstraites_chap3-4up.pdf)
 
 ## Exo 3.1
 
@@ -11,7 +11,7 @@ Dessiner l’AST de l’expression régulière “$b + (a.a.(ϵ + a)^∗)$”. C
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
 ## Exo 3.2
 
@@ -24,9 +24,9 @@ Dessiner l’AST encodé par le mot “`star u dot a b a`”, en “notation nat
 
 En notation naturelle, pour chaque opération binaire, les deux mots suivants sont leurs arguments. Pareil pour les opérations unaires.
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_1.jpg)
+![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_2.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_2.jpg)
 
 ## Exo 3.3
 
@@ -50,17 +50,17 @@ Appliquer cette idée avec :
 - $D =$ ensemble des automates finis (non-déterministes avec $ϵ$-transitions) pour générer l’automate associé à une $\bold{Rexp}$. Calculer l’automate de $A_\text{dot}(A_a, A_a)$ avec vos définitions
 </aside>
 
-![WhatsApp Image 2025-01-12 at 19.49.07.jpeg](whatsapp_image_2025-01-12_at_19.49.07.jpeg)
+![WhatsApp Image 2025-01-12 at 19.49.07.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.49.07.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.53.50.jpeg](whatsapp_image_2025-01-12_at_19.53.50.jpeg)
+![WhatsApp Image 2025-01-12 at 19.53.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.53.50.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.54.32.jpeg](whatsapp_image_2025-01-12_at_19.54.32.jpeg)
+![WhatsApp Image 2025-01-12 at 19.54.32.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.54.32.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.00.jpeg](whatsapp_image_2025-01-12_at_19.55.00.jpeg)
+![WhatsApp Image 2025-01-12 at 19.55.00.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.00.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.21.jpeg](whatsapp_image_2025-01-12_at_19.55.21.jpeg)
+![WhatsApp Image 2025-01-12 at 19.55.21.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.21.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.35.jpeg](whatsapp_image_2025-01-12_at_19.55.35.jpeg)
+![WhatsApp Image 2025-01-12 at 19.55.35.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.35.jpeg)
 
 ## Exo 3.5
 
@@ -71,13 +71,13 @@ Dessiner la propagation de l’attribut sur l’AST (en notation étendue) encod
 
 </aside>
 
-![WhatsApp Image 2025-01-12 at 19.56.50.jpeg](whatsapp_image_2025-01-12_at_19.56.50.jpeg)
+![WhatsApp Image 2025-01-12 at 19.56.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.56.50.jpeg)
 
 ![WhatsApp Image 2025-01-12 at 19.56.50(1).jpeg](whatsapp_image_2025-01-12_at_19.56.50(1).jpeg)
 
 ![WhatsApp Image 2025-01-12 at 19.56.49(2).jpeg](whatsapp_image_2025-01-12_at_19.56.49(2).jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.49.jpeg](whatsapp_image_2025-01-12_at_19.56.49.jpeg)
+![WhatsApp Image 2025-01-12 at 19.56.49.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.56.49.jpeg)
 
 ![WhatsApp Image 2025-01-12 at 19.56.49(1).jpeg](whatsapp_image_2025-01-12_at_19.56.49(1).jpeg)
 
@@ -102,9 +102,9 @@ pour Q2, on prendra $h$ valant à la racine $2$, puis ensuite $3$.
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_3.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_3.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_4.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_4.jpg)
 
 ## Exo 3.7
 
@@ -118,11 +118,11 @@ Calculer le r retourné une dérivation de “`p↓1↑r` ”.
 2. Calculer la NNF attendue pour “`-(((t&1)>(-2|f))&3)`”.
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_5.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_5.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_6.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_6.jpg)
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_7.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_7.jpg)
 
 ## Exo 3.9
 
@@ -133,7 +133,7 @@ Donner le système d’équations algébrique associé a cette signature $Σ_{TP
 
 </aside>
 
-![untitled.jpg](ensimag/first_year/ecole/1aa_info_grammaires_et_compilation/03_theorie_des_syntaxes_abstraites/untitled_8.jpg)
+![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_8.jpg)
 
 ## Exo 3.10
 
@@ -144,7 +144,7 @@ Définir une signature pour NNF avec sortes Nnf et Ncst, puis la BNF associée
 
 </aside>
 
-![Untitled.jpg](untitled_9.jpg)
+![Untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_9.jpg)
 
 ## Exo 3.13
 
@@ -157,7 +157,7 @@ Pouvez-vous construire le terme sur $Σ_{AST}$ associé aux mots suivants en not
 2. `& & - & 1 - 2 | - 2 3`
 </aside>
 
-![Untitled.jpg](untitled_10.jpg)
+![Untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_10.jpg)
 
 ## Exo 3.14
 
@@ -183,4 +183,4 @@ Dessiner l’arbre des appels récursifs de `parse_rec` sur le mot “`& - & 123
 
 </aside>
 
-![Untitled.jpg](untitled_11.jpg)
+![Untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_11.jpg)

@@ -1,6 +1,6 @@
 # 02 // tests de normalité
 
-[slides normalite stat 3 annote 2.pdf](slides_normalite_stat_3_annote_2.pdf)
+[slides normalite stat 3 annote 2.pdf](ressources/02_tests_de_normalite_slides_normalite_stat_3_annote_2.pdf)
 
 # D’autres tests de normalité
 
@@ -67,13 +67,13 @@ Cela ne devrait pas changer fondamentalement les résultats.
 
 Dans le cas d'une variable quantitative dont les valeurs sont regroupées par modalités. Soient $m₁, ..., mⱼ$ les modalités de la série $x₁, ..., xₙ$ que l'on appellera quantiles observés $(qᵢ = mᵢ)$. On a alors
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image.png)
 
 ### Données continues regroupées par classes
 
 Dans le cas d'une variable quantitative dont les valeurs sont regroupées en classes de modalité :
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_1.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_1.png)
 
 ### Interprétation
 
@@ -89,30 +89,30 @@ Le test de Shapiro–Wilk reste le plus populaire des tests de normalité, par s
 
 Sous l'hypothèse nulle $H₀ = \text{"la série statistique est normalement distribuée"}$, la statistique du test $W$ est un coefficient de détermination corrigé du QQ-plot. Ainsi, $0 ≤ W ≤ 1$ et plus $W$ est élevé, plus la compatibilité avec la loi normale est crédible. La région critique, correspondant au rejet de la normalité, s'écrit : $W < W_{crit}$.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_2.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_2.png)
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_3.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_3.png)
 
 ## Exemple
 
 On observe la richesse des régions françaises en 2019.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_4.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_4.png)
 
 On souhaite observer l'ajustement à une loi normale. On trie les données dans l'ordre croissant et on donne les fréquences cumulées :
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_5.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_5.png)
 
 On calcule les quantiles théoriques d'après une loi normale $\mathcal N(30114; 7726)$.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_6.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_6.png)
 
 Voyons le nuage de points et le résultat sur R :
 
-![Nuage non rectiligne dans QQ-plot. On pense que ce n’est pas une loi normale.](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_7.png)
+![Nuage non rectiligne dans QQ-plot. On pense que ce n’est pas une loi normale.](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_7.png)
 
 Nuage non rectiligne dans QQ-plot. On pense que ce n’est pas une loi normale.
 
-![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/02_tests_de_normalite/image_8.png)
+![image.png](new/uga/l3/s6/math/s6_math_stats_mathematiques_3/ressources/02_tests_de_normalite_image_8.png)
 
 À $p < 5\%$, on rejette $H_0$, c'est-à-dire que la variable n'est pas normale (de façon significative).

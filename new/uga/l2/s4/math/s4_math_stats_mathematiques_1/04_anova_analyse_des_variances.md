@@ -1,6 +1,6 @@
 # 04 // ANOVA : analyse des variances
 
-[Slides d’ANOVA](slides_anova_1_stat1_annote.pdf)
+[Slides d’ANOVA](ressources/04_anova_analyse_des_variances_slides_anova_1_stat1_annote.pdf)
 
 # Régression linéaire pour les variables qualitatives
 
@@ -160,4 +160,4 @@ SCT=\sum_{i=1}^a\sum_{j=1}^{n_i}X^2_{i,j}-n\bar{X}^2
 SCE=\sum_{i=1}^a\sum_{j=1}^{n_i}X^2_{i,j}-\sum_{i=1}^a n_i\bar{X_i}^2
 $$
 
-![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/04_anova_analyse_des_variances/untitled.png)
+![untitled](new/uga/l2/s4/math/s4_math_stats_mathematiques_1/ressources/04_anova_analyse_des_variances_untitled.png)

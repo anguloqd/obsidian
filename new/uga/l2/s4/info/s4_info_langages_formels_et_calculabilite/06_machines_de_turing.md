@@ -1,6 +1,6 @@
 # 06 // machines de Turing
 
-[Slides du chapitre 6](chapitre_6_compressed.pdf)
+[Slides du chapitre 6](ressources/06_machines_de_turing_chapitre_6_compressed.pdf)
 
 # Définition intuitive
 
@@ -73,11 +73,11 @@ Il existe également deux notations différentes, qu’on trouve en tant qu’é
 1. $x/a$ (quadruplets) : $x$ est le symbole sous la tête de lecture, $a$ est l’action à effectuer
 2. $x/y/d$ (quintuplets) : $x$ est le symbole sous le tête de lecture, $y$ est le symbole à écrire sur la case, $d$ est le déplacement. Pour cette notation, on peut faire un déplacement sans écriture en reécrivant le même symbole, donc $x/x/d$.
 
-![Exemple avec la notation $x/a$. Cette machine ne fais que lire (aucune écriture) des ‘a’ et ‘b’ en se déplaçant à droite après chaque lecture, jusqu’à ce qu’elle rencontre un vide $\#$, où elle rentre dans l’état final et elle s’arrete.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/06_machines_de_turing/untitled.png)
+![Exemple avec la notation $x/a$. Cette machine ne fais que lire (aucune écriture) des ‘a’ et ‘b’ en se déplaçant à droite après chaque lecture, jusqu’à ce qu’elle rencontre un vide $\#$, où elle rentre dans l’état final et elle s’arrete.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/06_machines_de_turing_untitled.png)
 
 Exemple avec la notation $x/a$. Cette machine ne fais que lire (aucune écriture) des ‘a’ et ‘b’ en se déplaçant à droite après chaque lecture, jusqu’à ce qu’elle rencontre un vide $\#$, où elle rentre dans l’état final et elle s’arrête.
 
-![Exemple avec la notation $x/y/d$.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/06_machines_de_turing/untitled_1.png)
+![Exemple avec la notation $x/y/d$.](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/06_machines_de_turing_untitled_1.png)
 
 Exemple avec la notation $x/y/d$.
 
@@ -98,7 +98,7 @@ Normalement, une Machine de Turing démarre dans son état initial et exécute d
 
 ## Grammaires et automates
 
-![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/06_machines_de_turing/untitled_2.png)
+![untitled](new/uga/l2/s4/info/s4_info_langages_formels_et_calculabilite/ressources/06_machines_de_turing_untitled_2.png)
 
 # Conclusion
 

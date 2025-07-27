@@ -96,7 +96,7 @@ Cette différence ordre de magnitude nous féra penser, lors de regarder l’ord
 
 Une fois les données standardisées, on calcule la matrice de covariance des données standardisées, comme ci-dessous. On note que la diagonale ne porte que des $1$.
 
-![On reprend ici l’exemple des bouteilles de vin.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/06_autres_decompositions/untitled.png)
+![On reprend ici l’exemple des bouteilles de vin.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled.png)
 
 On reprend ici l’exemple des bouteilles de vin.
 
@@ -139,11 +139,11 @@ Normalement avec l’ACP, on veut avoir des données originalement dans beaucoup
 
 Dans l’exemple du vin, on garde $\bold{w}_1$ et $\bold{w}_2$. Seulement avec eux deux, on peut reconstruire $86\%$ de la variance totale, c’est donc un sacrifice qui vaut le coup. Finalement, on détermine $F_1$ et $F_2$ de chaque vin et on graphique la nouvelle nuage en $2$ dimensions. Le résultat devrait semble quelque chose comme suit :
 
-![Il faudrait dire que les vecteurs $\bold{w}_1$ et $\bold{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/06_autres_decompositions/untitled_1.png)
+![Il faudrait dire que les vecteurs $\bold{w}_1$ et $\bold{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled_1.png)
 
 Il faudrait dire que les vecteurs $\bold{w}_1$ et $\bold{w}_2$ font parties des lignes de meilleure régression linéaire tout au même temps qu’elle sont orthogonaux entre elles.
 
-![Un autre exemple sorti de Wikipédia d’un *dataset* de dimension réduite*.* Notons les clairs groupassions en vert et bleu des données après la transformation.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/06_autres_decompositions/untitled_2.png)
+![Un autre exemple sorti de Wikipédia d’un *dataset* de dimension réduite*.* Notons les clairs groupassions en vert et bleu des données après la transformation.](new/uga/l2/s3/math/s3_math_algebre_lineaire_3/ressources/06_autres_decompositions_untitled_2.png)
 
 Un autre exemple sorti de Wikipédia d’un *dataset* de dimension réduite*.* Notons les clairs groupassions en vert et bleu des données après la transformation.
 

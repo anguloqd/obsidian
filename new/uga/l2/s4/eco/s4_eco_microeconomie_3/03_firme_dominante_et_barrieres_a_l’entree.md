@@ -1,6 +1,6 @@
 # 03 // firme dominante et barrières à l’entrée
 
-[Slides de firme dominante](corolleur_f._2021_22_lecture_3_firmes_dominantes.pdf)
+[Slides de firme dominante](ressources/03_firme_dominante_et_barrieres_a_l’entree_corolleur_f._2021_22_lecture_3_firmes_dominantes.pdf)
 
 # Rappels de monopole, cas général
 
@@ -26,7 +26,7 @@ D’autre côté, dans la concurrence parfaite où $p^*=c$, il vient que $q^* = 
 
 **Remarque**. Notons que $q^m=\frac{q^c}{2}$.
 
-![aas.png](aas.png)
+![aas.png](ressources/03_firme_dominante_et_barrieres_a_l’entree_aas.png)
 
 Note : dans le cas de monopole, le surplus de producteur est égal au profit si et seulement si les coûts fixes sont nuls. Sinon, SP > Profit (le surplus de prod. ignores les coûts fixes).
 
@@ -75,7 +75,7 @@ Ayant dérivé deux fois, on arrive à la fonction $p\prime\prime(q)$, dont le s
 
 ## Effets de la concavité de la demande sur les surplus
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled.png)
 
 Sur une demande convexe, l’impact sur la baisse de prix est plus fort. Donc, plus une demande est concave, plus lentement descend le prix par rapport à la quantité offerte (au moins au début de la courbe, car il semble que les deux courbes concaves et convexes, ont un partie élastique (presque horizontale) et un partie inélastique (presque verticale).
 
@@ -97,12 +97,12 @@ En plus, rappelons que $q^m=\frac{q^c}{2}$ et $SC^m=\frac{SP^m}{2}$ dans le cas 
 
 Pour le cas concave (inférieur) :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_1.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_1.png)
 
 - $q^m \ge \frac{q^c}{2}$
 - $SP \ge 2SC$
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_2.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_2.png)
 
 Pour le cas convexe (supérieur) :
 
@@ -151,7 +151,7 @@ Ici, $c_i$ et $d_i$ sont des constantes et on veut déterminer pour quels $c_i$ 
 - On pose la condition $q_i > 0$ et on résout pour déterminer $c_A$ en termes des autres termes $f(c_B, d_B)$, de même pour $c_B$ en termes des autres termes $f(c_A, d_A)$.
 - On devrait arriver à un graphique de cette forme :
     
-    ![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_3.png)
+    ![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_3.png)
     
 
 La droite bleu est la fonction $c_A = f(c_B, d_B)$ et la droite rouge est la fonction $c_B = f(c_A, d_A)$. Si on est dessous une courbe, on produit la quantité qui correspond au coût representé par cette courbe, i.e. on produit $q_A$ si on est dessous la droite bleu. Si on est dessus, on ne produit pas.
@@ -251,7 +251,7 @@ Le problème de $Cm$ c’est que une hausse dans les coûts fixes serait ignoré
 
 ## Coûts sociaux d’un monopole
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_4.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_4.png)
 
 Note : au moment de la conception de ces deux concepts de perte sèche, on faisait l’hypothèse *ad hoc* sur l’élasticité de la demande égal à $1$ pour tous les secteurs (il n’était pas accesible de calculer les vraies élasticités à cet époque-là).
 
@@ -365,11 +365,11 @@ Dans la littérature, on peux classifier les barrières en deux : structurelles 
 
 Un engagement est crédible si, à chaque possibilité que la firme installée peut la jouer, il est la décision optimale pour elle de la jouer. En jeux simultanées, on parle d’une stratégie dominante. En jeux séquentiels, on parle d’un équilibre parfait en sous-jeux (EPSJ).
 
-![En jeu simultané, il n’est pas crédible que le joueur 1 va jouer “agressif”.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_5.png)
+![En jeu simultané, il n’est pas crédible que le joueur 1 va jouer “agressif”.](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_5.png)
 
 En jeu simultané, il n’est pas crédible que le joueur 1 va jouer “agressif”.
 
-![Par contre, en jeu séquentiel où joueur 1 joue en premier, il est crédible qu’il joue agressif (s’il sait bien les profits de l’autre joueur dans chaque situation).](new/uga/l2/s4/eco/s4_eco_microeconomie_3/03_firme_dominante_et_barrieres_a_l’entree/untitled_6.png)
+![Par contre, en jeu séquentiel où joueur 1 joue en premier, il est crédible qu’il joue agressif (s’il sait bien les profits de l’autre joueur dans chaque situation).](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_6.png)
 
 Par contre, en jeu séquentiel où joueur 1 joue en premier, il est crédible qu’il joue agressif (s’il sait bien les profits de l’autre joueur dans chaque situation).
 

@@ -69,7 +69,7 @@ $$
     - **Terme $C^{k-1}_{n-1}$** : c'est la quantité de combinaisons de $2$ éléments qui contient $*a*$. $\rightarrow$ Notons que on fixe $*a$* dans chaque groupe de $2$ et on seulement choisit le deuxième élément, donc $k \rightarrow k-1$ et on conserve l'ensemble sans $a$ de $(n-1)$ éléments car $a$ est déjà présent dans la duple.
     - Les deux termes sont ceux qui permet, dans le Triangle de Pascal, de trouver le prochain terme.
     
-    ![untitled](new/uga/l1/s2/math/s2_math_probabilites_1/01_analyse_combinatoire/untitled.png)
+    ![untitled](new/uga/l1/s2/math/s2_math_probabilites_1/ressources/01_analyse_combinatoire_untitled.png)
     
 
 ## Outils : Binôme de Newton et Triangle de Pascal
@@ -86,7 +86,7 @@ $$
 
 Le triangle de Pascal est juste une présentation ou sorte de dessin qui contient tous les coefficients combinatoires $C^k_n$ en $n$ lignes. Il est facile à calculer et sert pour trouver les valeurs de grands valeurs de $C^k_n$ à la main sans calculatrice. Ces coefficients sont aussi présents dans les binômes de Newton.
 
-![xd.jpg](xd.jpg)
+![xd.jpg](ressources/01_analyse_combinatoire_xd.jpg)
 
 # Formule de Stirling
 

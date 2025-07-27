@@ -12,7 +12,7 @@ a&b\\c&d
 \right)=ad-bc
 $$
 
-![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/02_determinants/untitled.png)
+![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/ressources/02_determinants_untitled.png)
 
 Petit astuce pour bien rappeler : on descend par la ligne bleue en multipliant, puis par la ligne orange en multiplient.
 
@@ -219,13 +219,13 @@ La règle de Cramer permet de calculer le vecteur solution $[x_1,\dots,x_n]^T$ �
 
 On commence par écrire le système comme $A\bold{X}=\bold{B}$.
 
-![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/02_determinants/untitled_1.png)
+![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/ressources/02_determinants_untitled_1.png)
 
-![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/02_determinants/untitled_2.png)
+![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/ressources/02_determinants_untitled_2.png)
 
 À partir de la matrice $A$, on définit la matrice $A_j$, qui est une matrice presque pareille à $A$ mais qui remplace la colonne $j$ par le vecteur colonne $B$.
 
-![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/02_determinants/untitled_3.png)
+![untitled](new/uga/l1/s2/math/s2_math_algebre_lineaire_2/ressources/02_determinants_untitled_3.png)
 
 Finalement, l’unique vecteur solution $[x_1,\dots,x_n]^T$ est donné par le calcul suivant :
 

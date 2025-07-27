@@ -1,6 +1,6 @@
 # 05 // constructeurs, packages et modificateurs d’accès
 
-[Slides de cours 5.pdf](inff3-2223-cours5.pdf)
+[Slides de cours 5.pdf](ressources/05_constructeurs_packages_et_modificateurs_d’acce_inff3-2223-cours5.pdf)
 
 # Initialisation des objets
 
@@ -166,7 +166,7 @@ class Point {
 
 ## *Encapsulation* et contrôle d'accès
 
-![Notion d’encapsulation.](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled.png)
+![Notion d’encapsulation.](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled.png)
 
 Notion d’encapsulation.
 
@@ -218,9 +218,9 @@ package fr.upmf.miashs.inff3;
 
 C’est qui signifie que dans le dossier src, il y a un dossier “fr”, puis un dossier “upmf”, puis un dossier “miashs”, puis un dossier “inff3” où il y a finalement notre fichier `UneClasse`.
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_2.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled_2.png)
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_3.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled_3.png)
 
 Par convention, les packages ne sont nommés qu’avec des lettres minuscules.
 S’il y a deux classes dans le dossier src avec le même nom, et si elles appartiennent à deux paquets différents, il faut utiliser leur noms complets pour les importer. Si elles appartiennent au même paquet, on ne peut qu’utiliser l’une des deux classes dans le même projet.
@@ -231,7 +231,7 @@ S’il y a deux classes dans le dossier src avec le même nom, et si elles appar
 
 Ils peuvent être places devant une déclaration de classe, méthode ou d’attribut (d’instance ou de classe).
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_1.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled_1.png)
 
 Principes pour choisir un modificateur :
 

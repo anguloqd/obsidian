@@ -1,6 +1,6 @@
 # 06 // la réutilisation des classes
 
-[Slides de cours 6.pdf](inff3-2223-cours6.pdf)
+[Slides de cours 6.pdf](ressources/06_la_reutilisation_des_classes_inff3-2223-cours6.pdf)
 
 # Composition, délégation et héritage
 
@@ -25,7 +25,7 @@ Réutiliser des instructions est l’un des points forts de programmer.
 - **Réutilisation de l’interface et polymorphisme** : recycler les méthodes d’une classe dans une autre sous-classe, ou on ajoute des nouvelles fonctions/méthodes.
 Le *polymorphisme* est juste le principe d’utiliser un programme sur n’importe quel sous-type d’objet ou la “forme” ou “morphisme” de l’objet original (FormeGeo).
 
-![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/01_introduction_a_la_programmation_par_objets/untitled.png)
+![untitled](new/uga/l2/s3/info/s3_info_programmation_par_objets/ressources/01_introduction_a_la_programmation_par_objets_untitled.png)
 
 ```java
 

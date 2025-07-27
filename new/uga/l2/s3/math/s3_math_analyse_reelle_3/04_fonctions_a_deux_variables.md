@@ -79,11 +79,11 @@ D=\{(x,y) : a≤x≤b, g_1(x)≤y≤g_2(x)\}
 D=\{(x,y) : c≤y≤d, h_1(y)≤x≤h_2(y)\}
 $$
 
-![Régions de type i.](new/uga/l2/s3/math/s3_math_analyse_reelle_3/04_fonctions_a_deux_variables/untitled.png)
+![Régions de type i.](new/uga/l2/s3/math/s3_math_analyse_reelle_3/ressources/04_fonctions_a_deux_variables_untitled.png)
 
 Régions de type I.
 
-![Régions de type ii.](new/uga/l2/s3/math/s3_math_analyse_reelle_3/04_fonctions_a_deux_variables/untitled_1.png)
+![Régions de type ii.](new/uga/l2/s3/math/s3_math_analyse_reelle_3/ressources/04_fonctions_a_deux_variables_untitled_1.png)
 
 Régions de type II.
 

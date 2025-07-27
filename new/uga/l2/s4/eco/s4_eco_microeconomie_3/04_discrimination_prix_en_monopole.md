@@ -1,8 +1,8 @@
 # 04 // discrimination prix en monopole
 
-[Slides de discrimination prix](corolleur_f._2020_21_lecture_4_discrimination_prix.pdf)
+[Slides de discrimination prix](ressources/04_discrimination_prix_en_monopole_corolleur_f._2020_21_lecture_4_discrimination_prix.pdf)
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled.png)
 
 # Tarification non linéaire
 
@@ -41,7 +41,7 @@ Dans la pratique, ce discrimination inclut de la différenciation. Il existe deu
 2. Un autre type de modèle est un seul bien à deux prix différents : $p_1$ et $p_2$. La quantité du bien vendu à $p_1$ serait $q_1$ et de même avec $q_2$, d’où $q=q_1+q_2$. Bref, $p_1$ serait le prix constante pour les personnes “riches” et $p_2$ pour les personnes “moins riches”.
     1. Parfois, cette stratégie de discrimination est meilleure pour le profit de la firme mais aussi pour le surplus de consommateur (et moins de perte sèche) que dans le cas où la firme applique bêtement la stratégie $q$ tel que $Rm=Cm$. 
         
-        ![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_1.png)
+        ![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_1.png)
         
 
 # Discrimination du 3ème degré
@@ -82,7 +82,7 @@ $$
 
 La commodité du modèle à coûts constants était qu’on pouvait déduire les $q_i^*$ de chaque produit par lui-même, càd. sans besoin de considérer les coûts des autres produits. Ici, ce ne plus possible. **On est forcés à résoudre un système d’équations en $q_i$ et $q_j$** pour déterminer les quantités optimales. Par exemple :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_2.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_2.png)
 
 Ici, la fonction de coût marginale n’est plus $Q=q_i+q_j$ mais $2Q=2(q_1+q_2)$, d’où $C(Q)=Q^2=(q_i+q_j)^2$ (absence de coûts fixes), et on sait que la fonction quadratique n’est pas linéaire, donc on ne peut pas traiter les cas de chaque quantité séparément.
 
@@ -109,7 +109,7 @@ $$
 
 $p^\Sigma$ n’est pas vraiment une courbe de demande, on verra à quoi elle sert après. Si on graphique les trois demandes, on obtient ce qui suit :
 
-![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_3.png)
+![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_3.png)
 
 La courbe rouge est $p^{D_1}$, la bleue est $p^{D_2}$ et la verte est $p^\Sigma$. 
 [https://www.desmos.com/calculator/a17orpj16q](https://www.desmos.com/calculator/a17orpj16q)
@@ -163,7 +163,7 @@ On note la quantité de supérieurs comme $\lambda$ et les inférieurs comme $(n
 
 On suppose aussi deux produits qu’on va offrir à tout le marché, où un produit est de meilleure qualité que l’autre, et donc plus cher. L’objectif est que les supérieurs achètent le produit *pro* et que les inférieurs achètent le produit *basique*. Chaque groupe a un prix de reserve constant pour chacun des produits.
 
-![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_4.png)
+![](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_4.png)
 
 Dans cet exemple, la firme vend deux version d’un logiciel : version pro et version basique. Le marché est de taille $120$, avec $\lambda$ chercheurs et $(120-\lambda)$ d’autres consommateurs.
 Ici sont leurs prix de reserve pour chaque version.
@@ -245,7 +245,7 @@ Possible d’acheter $B$ sans $A$, mais pas $A$ sans $B$.
 
 Supposons deux consommateurs, $A$ et $B$, et deux produits offerts par une firme, un logiciel tableur genre Excel et un logiciel de traitement de texte genre Word.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_5.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_5.png)
 
 Supposons un cas initial où la firme juste offre les deux logiciels individuellement. Le plus grand prix qu’il pourrait fixer pour chaque logiciel est le prix de reserve minimum entre les consommateurs $A$ et $B$. Donc, le logiciel tableur sera vendu à un prix de $\$70$ et le logiciel de texte à $\$25$. Pour l’achat des deux (individuellement), le prix sera donc $\$95$.
 
@@ -261,7 +261,7 @@ Ici, on considère de coûts marginaux constants $c_1$ et $c_2$, et encore deux 
 
 Le prochain graphique a $p_1$ comme abscisses et $p_2$ comme ordonnées. Pour le moment, on ne tient pas en compte les coûts.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_6.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_6.png)
 
 ### *Bundling* pur : $(A+B)$, mais pas $A$ ou $B$ individuellement
 
@@ -269,7 +269,7 @@ Si jamais la firme offre un package des deux biens, il est clair que son prix do
 
 Pour le prochain graphique, on trace une fonction linéaire : $p_B = p_1 + p_2$, où on fixe $p_B$ comme une constante et $p_1$ et $p_2$ comme des variables $x$ et $y$ resp.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_7.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_7.png)
 
 On construit la droite $p_B = p_1 + p_2$. Tous les points en dessous sont des clients dont leurs reserves ne leur mènent pas à acheter le *bundle*. Tous les points sur la courbe sont des clients intérésés par le *bundle*. Par contre, la firme ne peuvent pas vendre ni a $G$ ni a $H$, car leur reserves pour le prix du bien 2 et bien 1, resp., sont moindre que leurs coûts de fabrication, donc il ne vaut pas la peine de vendre aux client dans ces régions.
 
@@ -277,11 +277,11 @@ On construit la droite $p_B = p_1 + p_2$. Tous les points en dessous sont des cl
 
 On prend un autre graphique pareil à celui d’avant, mais on ignore les coûts et on ajoute quelques autres aires. Pour le point x sur le graphique, il s’agit d’un consommateur dont ses réservations sont $p_1<r_1$ et $r_2<p_2$, donc il achète du bien 1 sans bien 2. C’est analogue pour le consommateur du point $y$. Le consommateur du point $z$ achète les deux biens.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_8.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_8.png)
 
 En particulier, le consommateur du point z achète le bundle parce qu’il se trouve dans l’aire jaune du graphique ci-dessous, mais pas forcément quand on est sur la droite de p_B on achète le bundle ! Regardons l’aire jaune sombre, où un client qui y soit aura des reserves moindres que les prix, mais proche aux prix quand-même.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_9.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_9.png)
 
 On sait déjà qu’un consommateur va toujours acheter un *bundle* si $r_1 < p_1$ et $r_2 < p_2$. Il peut aussi acheter le bundle si l’une des réservations (disons $r_2$) est plus petite que le prix d’un des biens, par exemple $r_2 < p_2$, donc le consommateur n’achète pas individuellement le produit 2.
 
@@ -300,7 +300,7 @@ La condition pour qu’il achète le *bundle* sur le produit qui l’intéresse 
 
 Supposons un monopole qui vend bien 1 et bien 2, dont leurs coûts $Cm_1=100$ et $Cm_2=150$, et quatre type de consommateurs :
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_10.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_10.png)
 
 - Si le monopole applique tarification linéaire (bien 1 et bien 2 indépendants, pas de *bundling*) utilisant le critère d’optimisations de profit, $Cm=Rm$, les prix optimaux seront $p_1^*=250$ et $p_2^*=450$, et son profit sera de $\pi_L=\$750$.
 - S’il applique un *bundling* pur (bien 1 et bien 2, mais pas indépendents), le meilleur prix à vendre sera $p_B=\$500$ pour que tout le monde en achète. Le profit serait $\pi_P=\$1000$, supérieur à celui en tarification linéaire.
@@ -331,13 +331,13 @@ Voyons avec exemple avec des imprimantes et des cartouches. En premier temps, l�
 
 La première stratégie consiste à trouver le prix optimal des cartouches, (déjà calculé à $\$2$), puis fixer le prix de l’imprimante au surplus de consommateurs. Puisqu’on suppose qu’on ne peut pas discriminer, on le fixe au surplus le plus petit. On verra dans le graphique ci-dessous que le surplus le plus petit est celui du collège : $\$50$. Donc, on fixe $p_i^*=\$50$.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_11.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_11.png)
 
 Maintenant, supposons que la firme veut ne plus vendre l’imprimante seule mais en la liant au cartouche, en plus de vendre les cartouches tous seuls. Évidemment, la firme veut que le prix de l’imprimante qui compose le *bundle* soit inférieur que le prix de la vendre individuellement, donc moins de $\$50$.
 
 Si la firme veut toujours fixer le prix du *bundle* au surplus le plus petit, donc il faudra faire remonter le prix des cartouches par rapport au prix de cartouches individuels dans le marché concurrentiel. On suppose que la firme fixe le nouveau prix des cartouches **individuels** à $p_{c}^{**} = \$4$. Ceci a l’effet de réduire le surplus des collèges à $\$32$ et celui des universités à $\$72$.
 
-![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/04_discrimination_prix_en_monopole/untitled_12.png)
+![untitled](new/uga/l2/s4/eco/s4_eco_microeconomie_3/ressources/04_discrimination_prix_en_monopole_untitled_12.png)
 
 À l’équilibre, les universités veulent acheter $12$ cartouches pour $\$48$ et les collèges veulent $8$ cartouches pour $\$32$. Le but d’offrir le *bundle* est que le consommateurs préfèrent de l’achéter plutôt que d’acheter les cartouches tous seuls. Donc, on veut trouver le prix $p_c^B$ qui mène au consommateur d’acheter le bundle $(\$32, p_c^B)$.
 
