@@ -239,7 +239,7 @@ D’un côté, il semble que $(\bar{X}_n-\mathbb{E}[X])$  tend vers $0$. Au mêm
 Il existe un problème avec la deuxième : si $n \rightarrow \infty$, la variance devient $0$, et la variance comme telle n’est pas utile
 $$. Imaginons la courbe qui viendrait si la variance était $0$ : il n’existe pas de dispersion autour de la moyenne et $\bar{X}_n$ serait toujours égal à $\mathbb{E}[X]$, càd. $(\bar{X}_n-\mathbb{E}[X])$ serait toujours égal à $0$.
 
-![untitled](new/uga/l2/s3/math/probabilites_2/05_cadre_general_theoreme_centrale_de_la_limit/untitled.png)
+![untitled](ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled.png)
 
 $$
 F(x)=
@@ -249,7 +249,7 @@ F(x)=
 \end{cases}
 $$
 
-![untitled](new/uga/l2/s3/math/probabilites_2/05_cadre_general_theoreme_centrale_de_la_limit/untitled_1.png)
+![untitled](ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled_1.png)
 
 $$
 "f(x)"=

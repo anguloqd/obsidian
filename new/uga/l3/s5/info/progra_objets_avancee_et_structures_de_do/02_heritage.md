@@ -25,7 +25,7 @@ Réutiliser des instructions est l’un des points forts de programmer.
 - **Réutilisation de l’interface et polymorphisme** : recycler les méthodes d’une classe dans une autre sous-classe, ou on ajoute des nouvelles fonctions/méthodes.
 Le *polymorphisme* est juste le principe d’utiliser un programme sur n’importe quel sous-type d’objet ou la “forme” ou “morphisme” de l’objet original (FormeGeo).
 
-![untitled](new/uga/l2/s3/info/programmation_par_objets/01_introduction_a_la_programmation_par_objets/untitled.png)
+![untitled](ressources/01_objets_et_classes_untitled.png)
 
 ```java
 

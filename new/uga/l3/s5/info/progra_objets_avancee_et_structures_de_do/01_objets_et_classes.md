@@ -4,13 +4,16 @@
 
 # Introduction des concepts de la programmation par objets
 
-![Notion d’un *objet*.](ressources/01_objets_et_classes_untitled.png)
+![](ressources/01_objets_et_classes_untitled.png)
 
 Notion d’un *objet*.
 
+![](ressources/01_objets_et_classes_untitled_1.png)
+
+Notion d'*encapsulation*.
 ## Les *objets* et les classes
 
-![Un *objet* est une collection de de données et operations.](new/uga/l1/s1/info/informatique_et_algorithmique/01_java/untitled.png)
+![Un *objet* est une collection de de données et operations.](ressources/01_objets_et_classes_untitled.png)
 
 Un *objet* est une collection de de données et opérations.
 
@@ -200,7 +203,7 @@ public class Demo {
 }
 ```
 
-![untitled](new/uga/l1/s1/info/informatique_et_algorithmique/01_java/untitled_1.png)
+![untitled](ressources/04_genericite_untitled_1.png)
 
 ### Modificateurs
 
@@ -239,7 +242,7 @@ Réutiliser des instructions est l’un des points forts de programmer.
 - **Réutilisation de l’interface et polymorphisme** : recycler les méthodes d’une classe dans une autre sous-classe, ou on ajoute des nouvelles fonctions/méthodes.
 Le *polymorphisme* est juste le principe d’utiliser un programme sur n’importe quel sous-type d’objet ou la “forme” ou “morphisme” de l’objet original (FormeGeo).
 
-![untitled](new/uga/l2/s3/info/programmation_par_objets/01_introduction_a_la_programmation_par_objets/untitled.png)
+![untitled](ressources/01_objets_et_classes_untitled.png)
 
 ```java
 
@@ -528,7 +531,7 @@ class Point {
 
 ## *Encapsulation* et contrôle d'accès
 
-![Notion d’encapsulation.](new/uga/l2/s3/info/programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled.png)
+![Notion d’encapsulation.](ressources/01_objets_et_classes_untitled.png)
 
 Notion d’encapsulation.
 
@@ -546,7 +549,7 @@ On peut appliquer aussi les modificateurs sur les classes. Normalement on utilis
 
 Ils peuvent être places devant une déclaration de classe, méthode ou d’attribut (d’instance ou de classe).
 
-![untitled](new/uga/l2/s3/info/programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_1.png)
+![untitled](ressources/04_genericite_untitled_1.png)
 
 Principes pour choisir un modificateur :
 

@@ -1,6 +1,10 @@
 # 01 // théorie de la décision en incertitude
 
-[Partie I Théorie de la décision en Incertitude 2022.pdf](ressources/01_theorie_de_la_decision_en_incertitude_partie_i_thorie_de_la_dcision_en_incertitude_2022.pdf)
+[Partie I Théorie de la décision en Incertitude 2022.pdf](ressources/01_theorie_de_la_decision_enUne dé![Note : je pense que le point rouge "E[x_a]" devrait être plutôt "E[w_0 + x_a]"](ressources/01_theorie_de_la_decision_en_incertitude_untitled_4.png)inition plus propre de l'EC est "la compensation minimale demandée par l'agent pour ne pas prendre l'action a ou le prix maximum pour la prendre".'
+
+![Note : je pense que le point rouge "E[x_a]" devrait être plutôt "E[w_0 + x_a]"](ressources/01_theorie_de_la_decision_en_incertitude_untitled_4.png)
+
+Note : je pense que le point rouge "E[x_a]" devrait être plutôt "E[w_0 + x_a]"ote : je pense que le point rouge "E[x_a]" devrait être plutôt "E[w_0 + x_a]"](ressources/01_theorie_de_la_decision_en_incertitude_untitled_4.png)certitude_partie_i_thorie_de_la_dcision_en_incertitude_2022.pdf)
 
 # Le critère de maximisation de l’utilité espérée
 
@@ -144,7 +148,7 @@ En fait, si on cherche la moitié entre les utilités résultantes, on arrive à
 
 Une définition plus propre de l’EC est “la compensation minimale demandée par l’agent pour ne pas prendre l’action a ou le prix maximum pour la prendre”.’
 
-![Note : je pense que le point rouge “E[x_a]” devrait être plutôt “E[w_0 + x_a]”](new/uga/l3/s6/eco/economie_des_contrats/01_theorie_de_la_decision_en_incertitude/untitled_4.png)
+![Note : je pense que le point rouge “E[x_a]” devrait être plutôt “E[w_0 + x_a]”](ressources/01_theorie_de_la_decision_en_incertitude_untitled_4.png)
 
 Note : je pense que le point rouge “E[x_a]” devrait être plutôt “E[w_0 + x_a]”
 

@@ -173,9 +173,9 @@ package fr.upmf.miashs.inff3;
 
 C’est qui signifie que dans le dossier src, il y a un dossier “fr”, puis un dossier “upmf”, puis un dossier “miashs”, puis un dossier “inff3” où il y a finalement notre fichier `UneClasse`.
 
-![untitled](new/uga/l2/s3/info/programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_2.png)
+![untitled](ressources/05_flux_et_fichiers_untitled_2.png)
 
-![untitled](new/uga/l2/s3/info/programmation_par_objets/05_constructeurs_packages_et_modificateurs_d’acce/untitled_3.png)
+![untitled](ressources/05_flux_et_fichiers_untitled_3.png)
 
 Par convention, les packages ne sont nommés qu’avec des lettres minuscules.
 S’il y a deux classes dans le dossier src avec le même nom, et si elles appartiennent à deux paquets différents, il faut utiliser leur noms complets pour les importer. Si elles appartiennent au même paquet, on ne peut qu’utiliser l’une des deux classes dans le même projet.
@@ -331,7 +331,7 @@ finally {
 
 On avait dit que toute exception est un objet. Ils existent de différents types d’exceptions, mais le type le plus basique est la classe `Throwable`.
 
-![Hiérarchie d’exceptions](new/uga/l2/s3/info/programmation_par_objets/08_exceptions/untitled.png)
+![Hiérarchie d’exceptions](ressources/01_objets_et_classes_untitled.png)
 
 Hiérarchie d’exceptions
 

@@ -449,7 +449,7 @@ $$
 \end{align*}
 $$
 
-![Les deux premières étapes de gram_schmidt.](new/uga/l2/s3/math/algebre_lineaire_3/05_produit_scalaire_et_algebre_bilineaire/untitled.png)
+![Les deux premières étapes de gram_schmidt.](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled.png)
 
 Les deux premières étapes de Gram-Schmidt.
 

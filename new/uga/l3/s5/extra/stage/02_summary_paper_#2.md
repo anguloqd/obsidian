@@ -203,7 +203,7 @@ For the first two types of algorithms, we need to establish a confusion matrix o
 
 [Confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
 
-![untitled](new/uga/l3/s5/math/stats_mathematiques_2/04_tests_d’hypotheses_parametriques/untitled.png)
+![untitled](ressources/01_summary_paper_#1_untitled.png)
 
 ### Accuracy
 

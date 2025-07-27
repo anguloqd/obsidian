@@ -35,7 +35,7 @@ Pour créer un programme, on passe par quatre étapes :
 
 ## Les classes et les objets : un cas des classes
 
-![Un *objet* est une collection de de données et operations.](new/uga/l1/s1/info/informatique_et_algorithmique/01_java/untitled.png)
+![Un *objet* est une collection de de données et operations.](ressources/00_qcm_td_et_tp_untitled.png)
 
 Un *objet* est une collection de de données et opérations.
 
@@ -225,7 +225,7 @@ public class Demo {
 }
 ```
 
-![untitled](new/uga/l1/s1/info/informatique_et_algorithmique/01_java/untitled_1.png)
+![untitled](ressources/02_objets_types_primitifs_classes_untitled_1.png)
 
 ### Modificateurs
 
