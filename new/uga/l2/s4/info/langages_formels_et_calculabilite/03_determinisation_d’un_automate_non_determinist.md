@@ -1,6 +1,6 @@
 # 03 // déterminisation d’un automate non-déterministe (AEFND)
 
-[Slides du chapitre 3](ressources/03_determinisation_d’un_automate_non-determinist_chapitre_3_compressed.pdf)
+[Slides du chapitre 3](ressources/03_determinisation_d’un_automate_non_determinist_chapitre_3_compressed.pdf)
 
 # Relation entre les AEFD et AEFND
 
@@ -12,7 +12,7 @@ Dans les diagrammes de transitions pour les automates déterministes, cette cond
 
 Si on relâche le contrainte d’une seule image par couple état-symbole, on obtient une multi-fonction. Dans un diagramme de transitions, cela signifie qu'il peut y avoir plusieurs arcs avec le même symbole partant d'un même état.
 
-![Notons que, dans l’état $1$, la couple état-symbole $(1,a)$ peut correspondre à $1$ mais aussi à $2$. De même pour $(1,b)$, qui correspond à $1$ ou $3$. Cette machine est donc non-déterministe (aefnd).](ressources/03_determinisation_d’un_automate_non-determinist_untitled.png)
+![Notons que, dans l’état $1$, la couple état-symbole $(1,a)$ peut correspondre à $1$ mais aussi à $2$. De même pour $(1,b)$, qui correspond à $1$ ou $3$. Cette machine est donc non-déterministe (aefnd).](ressources/03_determinisation_d’un_automate_non_determinist_untitled.png)
 
 Notons que, dans l’état $1$, la couple état-symbole $(1,a)$ peut correspondre à $1$ mais aussi à $2$. De même pour $(1,b)$, qui correspond à $1$ ou $3$. Cette machine est donc non-déterministe (AEFND).
 
@@ -30,9 +30,9 @@ Donc, un AEFND n’est pas plus puissant qu’un AEFD, même si un AEFD a besoin
 
 L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFND est par construction de sous-ensembles. 
 
-![untitled](ressources/03_determinisation_d’un_automate_non-determinist_untitled_1.png)
+![untitled](ressources/03_determinisation_d’un_automate_non_determinist_untitled_1.png)
 
-![untitled](ressources/03_determinisation_d’un_automate_non-determinist_untitled_2.png)
+![untitled](ressources/03_determinisation_d’un_automate_non_determinist_untitled_2.png)
 
 1. On commence de l’état de départ de AEFND. Ce serait aussi l’état initial de l’AEFD.
 2. Quand on arrive a une bifurcation (correspondance multiple d’un couple état-symbole vers un état) $\delta(1,a)= 2$ ou $3$, et donc $\delta^\prime(1,a)=\{2,3\}$. On regroupe tous les états d’arrivée dans un nouveau état qui représente cet ensemble d’états. Formellement,
@@ -55,17 +55,17 @@ La $\varepsilon$-fermeture est un ensemble lié à un état : c’est l’ensemb
 
 On considère une suite de transitions $\varepsilon$ une seule transition jusqu’à que on ne peut plus enchaîner avec une autre transition $\varepsilon$ mais avec un caractère propre.
 
-![Ici, l’ensemble $E(1)$ est $\{12346\}$.](ressources/03_determinisation_d’un_automate_non-determinist_untitled_3.png)
+![Ici, l’ensemble $E(1)$ est $\{12346\}$.](ressources/03_determinisation_d’un_automate_non_determinist_untitled_3.png)
 
 Ici, l’ensemble $E(1)$ est $\{1,2,3,4,6\}$.
 
 Il est utile de calculer les $\varepsilon$-fermeture de chaque état avant d’appliquer l’algorithme de déterminisation pour composer un AEFD à partir de AEFND.
 
-![AEFND du langage $(a+b)c^*$.](ressources/03_determinisation_d’un_automate_non-determinist_untitled_4.png)
+![AEFND du langage $(a+b)c^*$.](ressources/03_determinisation_d’un_automate_non_determinist_untitled_4.png)
 
 AEFND du langage $(a+b)c^*$.
 
-![AEFD correspondant.](ressources/03_determinisation_d’un_automate_non-determinist_untitled_5.png)
+![AEFD correspondant.](ressources/03_determinisation_d’un_automate_non_determinist_untitled_5.png)
 
 AEFD correspondant.
 
@@ -97,9 +97,9 @@ Avec cela présenté, on peut formaliser l’algorithme :
 
 La minimisation des AEFD est née du besoin de simplifier des AEFD qui ont des états et transitions qui sont “pas nécessaires”.
 
-![untitled](ressources/03_determinisation_d’un_automate_non-determinist_untitled_6.png)
+![untitled](ressources/03_determinisation_d’un_automate_non_determinist_untitled_6.png)
 
-![untitled](ressources/03_determinisation_d’un_automate_non-determinist_untitled_7.png)
+![untitled](ressources/03_determinisation_d’un_automate_non_determinist_untitled_7.png)
 
 Notons que dans le cas du AEFD précédent, les états $2$ et $3$ dans $A$ “jouent le même rôle”, càd. une fois que $A$ est dans l'état $2$ ou $3$, il accepte la même chaîne suffixe ($a^*$). On dit deux états sont “**équivalents**” s’ils acceptent la même chaîne suffixe. Nous pouvons éliminer l'état $3$ sans changer le langage de $A$, en redirigeant vers $2$ les arcs menant vers $3$.
 

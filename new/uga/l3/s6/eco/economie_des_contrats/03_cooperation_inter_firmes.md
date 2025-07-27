@@ -1,8 +1,8 @@
 # 03 // coopération inter-firmes
 
-[Partie 2_03_L3 MIASHS_Collusion_moodle .pdf](ressources/03_cooperation_inter-firmes_partie_2_03_l3_miashs_collusion_moodle_.pdf)
+[Partie 2_03_L3 MIASHS_Collusion_moodle .pdf](ressources/03_cooperation_inter_firmes_partie_2_03_l3_miashs_collusion_moodle_.pdf)
 
-[Partie 2_ 04_L3 MIASHS_Partenariat_cours.pdf](ressources/03_cooperation_inter-firmes_partie_2__04_l3_miashs_partenariat_cours.pdf)
+[Partie 2_ 04_L3 MIASHS_Partenariat_cours.pdf](ressources/03_cooperation_inter_firmes_partie_2_04_l3_miashs_partenariat_cours.pdf)
 
 # Collusions et cartels
 
@@ -145,7 +145,7 @@ gagne plus de 1600 et pour lequel le profit total n’excède pas 3600
 peut, du moins en principe, être un équilibre parfait en sous-jeux
 soutenable du jeu.
 
-![Il y a trois fonctions tracées ici : \pi_1 = 1600, \pi_2 = 1600 (les droites verticales) et \pi_1 + \pi_2 = 3600. La zone enfermée sont des “améliorations parétiennes” par rapport à l’équilibre de Nash. Tout point qui s’y trouve est un équilibre possible dans le jeu infiniment repete.](ressources/03_cooperation_inter-firmes_untitled.png)
+![Il y a trois fonctions tracées ici : \pi_1 = 1600, \pi_2 = 1600 (les droites verticales) et \pi_1 + \pi_2 = 3600. La zone enfermée sont des “améliorations parétiennes” par rapport à l’équilibre de Nash. Tout point qui s’y trouve est un équilibre possible dans le jeu infiniment repete.](ressources/03_cooperation_inter_firmes_untitled.png)
 
 Il y a trois fonctions tracées ici : \pi_1 = 1600, \pi_2 = 1600 (les droites verticales) et \pi_1 + \pi_2 = 3600. La zone enfermée sont des “améliorations parétiennes” par rapport à l’équilibre de Nash. Tout point qui s’y trouve est un équilibre possible dans le jeu infiniment répété.
 

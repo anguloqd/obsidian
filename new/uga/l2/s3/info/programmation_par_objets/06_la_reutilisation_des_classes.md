@@ -1,6 +1,6 @@
 # 06 // la réutilisation des classes
 
-[Slides de cours 6.pdf](ressources/06_la_reutilisation_des_classes_inff3-2223-cours6.pdf)
+[Slides de cours 6.pdf](ressources/06_la_reutilisation_des_classes_inff3_2223_cours6.pdf)
 
 # Composition, délégation et héritage
 

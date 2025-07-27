@@ -124,7 +124,7 @@ int[] c = new int[];  // erreur !
 
 ## TD 1
 
-[https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td1.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td1.pdf)
+[https://miashs_www.u_ga.fr/~davidjer/inff3/inff3_2223_td1.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td1.pdf)
 
 Diagramme de classe de UML :
 
@@ -136,7 +136,7 @@ Nom : diagramme de classes d’UML.
 
 ## TD 2
 
-[https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td2.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td2.pdf)
+[https://miashs_www.u_ga.fr/~davidjer/inff3/inff3_2223_td2.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td2.pdf)
 
 - Exo 2 : chaque fois qu’on crée une classe et qui sera le type d’argument d’une fonction, la déclaration du type du paramètre doit être écrit avec majuscule.
 

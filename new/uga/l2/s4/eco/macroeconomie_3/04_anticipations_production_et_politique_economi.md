@@ -1,6 +1,6 @@
 # 04 // anticipations, production et politique économique
 
-[Slides de IS/LM/PC](ressources/04_anticipations_production_et_politique_economi_chapitre_4b_-_diapo.pdf)
+[Slides de IS/LM/PC](ressources/04_anticipations_production_et_politique_economi_chapitre_4b_diapo.pdf)
 
 # Le modèle IS/LM/PC
 

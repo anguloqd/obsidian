@@ -1,3 +1,3 @@
 # 00 // pdf
 
-[livre-algebre-1.pdf](ressources/00_pdf_livre-algebre-1.pdf)
+[livre_algebre_1.pdf](ressources/00_pdf_livre_algebre_1.pdf)

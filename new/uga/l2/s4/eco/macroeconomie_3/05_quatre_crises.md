@@ -1,6 +1,6 @@
 # 05 // quatre crises
 
-[Slides des quatres crises](chapitre_4c_-_diapo_(1).pdf)
+[Slides des quatres crises](chapitre_4c_diapo_(1).pdf)
 
 # Introduction
 
@@ -194,7 +194,7 @@ Côté banques, elles sont devenues insolvables car leur actifs (propriétés ac
 
 # Enseignements des trois époques
 
-![1682965663517_1682965647270_0_enseignements_Noise Remove-Quality Enhance_x1.jpeg](ressources/05_quatre_crises_1682965663517_1682965647270_0_enseignements_noise_remove-quality_enhance_x1.jpeg)
+![1682965663517_1682965647270_0_enseignements_Noise Remove_Quality Enhance_x1.jpeg](ressources/05_quatre_crises_1682965663517_1682965647270_0_enseignements_noise_remove_quality_enhance_x1.jpeg)
 
 # Crise sanitaire actuelle : depuis 2015
 

@@ -1,6 +1,6 @@
 # 02 // héritage
 
-[INFF5-2.pdf](ressources/02_heritage_inff5-2.pdf)
+[INFF5_2.pdf](ressources/02_heritage_inff5_2.pdf)
 
 # Composition, délégation et héritage
 

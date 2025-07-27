@@ -2,13 +2,13 @@
 
 [cmdes_unix_desc.pdf](ressources/00_tps_cmdes_unix_desc.pdf)
 
-[systemes-tp1-2324.pdf](ressources/00_tps_systemes-tp1-2324.pdf)
+[systemes_tp1_2324.pdf](ressources/00_tps_systemes_tp1_2324.pdf)
 
-[systemes-tp2-2223.pdf](ressources/00_tps_systemes-tp2-2223.pdf)
+[systemes_tp2_2223.pdf](ressources/00_tps_systemes_tp2_2223.pdf)
 
-[systemes-tp3-1819.pdf](ressources/00_tps_systemes-tp3-1819.pdf)
+[systemes_tp3_1819.pdf](ressources/00_tps_systemes_tp3_1819.pdf)
 
-[systemes-tp4-1819.pdf](ressources/00_tps_systemes-tp4-1819.pdf)
+[systemes_tp4_1819.pdf](ressources/00_tps_systemes_tp4_1819.pdf)
 
 # TP1
 

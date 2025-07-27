@@ -1,6 +1,6 @@
 # 03 //  opérateurs
 
-[Slides de cours 3.pdf](ressources/03_operateurs_inff3-2223-cours3.pdf)
+[Slides de cours 3.pdf](ressources/03_operateurs_inff3_2223_cours3.pdf)
 
 # Commentaires
 

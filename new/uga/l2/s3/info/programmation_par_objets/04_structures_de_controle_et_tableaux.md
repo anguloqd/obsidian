@@ -1,6 +1,6 @@
 # 04 // structures de contrôle et tableaux
 
-[Slides de cours 4.pdf](ressources/04_structures_de_controle_et_tableaux_inff3-2223-cours4.pdf)
+[Slides de cours 4.pdf](ressources/04_structures_de_controle_et_tableaux_inff3_2223_cours4.pdf)
 
 # Qu’est-ce que les structures de contrôle
 

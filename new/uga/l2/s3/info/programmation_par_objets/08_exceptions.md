@@ -1,6 +1,6 @@
 # 08 // exceptions
 
-[Slides de cours 8.pdf](ressources/08_exceptions_inff3-2223-cours8.pdf)
+[Slides de cours 8.pdf](ressources/08_exceptions_inff3_2223_cours8.pdf)
 
 # Exceptions et Java
 

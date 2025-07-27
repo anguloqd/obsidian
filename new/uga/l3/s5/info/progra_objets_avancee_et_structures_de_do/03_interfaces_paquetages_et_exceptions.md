@@ -1,6 +1,6 @@
 # 03 // interfaces, paquetages et exceptions
 
-[INFF5-3.pdf](ressources/03_interfaces_paquetages_et_exceptions_inff5-3.pdf)
+[INFF5_3.pdf](ressources/03_interfaces_paquetages_et_exceptions_inff5_3.pdf)
 
 # Interfaces
 

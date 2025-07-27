@@ -45,7 +45,7 @@ Cette courbe représente l’équilibre du marché de biens et services, $Y = C 
 
 Rappelons qu’en économie, on écrit la variable indépendante ou explicative en ordonnée, donc c’est $i$. Si $i$ augmente, donc l’ínvestissement $I$ diminue et finalement la production $Y$ diminue. Le contraire de chaque étape de cette séquence est vrai aussi. Donc il existe une relation inverse dans la courbe IS, et donc elle est décroissante.
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled.png)
 
 ### Démonstration mathématique de la relation décroissante
 
@@ -69,7 +69,7 @@ Finalement, notons que $i$ est une fonction linéaire en $Y$. La dérivée (où 
 
 La pente ici garde la même interprétation d’élasticité de la droite. Pour une pente $\frac{s}{b}$ *très* négative (ou *très* grande en valeur absolue), la production est peu sensible au changement du taux d’intérêt. Mathématiquement, cela se produit car $s$ est très élevée ou $b$ est très petit. C’est le contraire si la pente est très faible, normalement entre $0$ et $1$.
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_1.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_1.png)
 
 La position de la droite dépend du coefficient libre $\frac{DA}{b}$. Donc, une augmentation des dépenses publiques, une diminution des impôts où une augmentation des exportations déplacent la courbe vers la droite. Des variations en sens inverse de ces différentes variables déplacent la courbe $IS$ vers la gauche. Mathématiquement, la variation en $Y$ est proportionnel en $k$ de la variation de $DA$.
 
@@ -77,7 +77,7 @@ $$
 Y_2 - Y_1 = \Delta Y = k_Y\Delta DA\text{, où } k_Y\text{ constante.}
 $$
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_2.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_2.png)
 
 ## La courbe LM (Liquidity-Money)
 
@@ -113,7 +113,7 @@ La pente et la position de la droite LM gardent encore la même interprétation,
 
 Cela dit, il existe un important débat à explorer pour cette courbe, particulièrement l’elasticité-intérêt de la demande de monnaie. Ici, il est important de rappeler que la demande de monnaie pour transactions $L_1$ est prioritaire à la demande pour thésauriser $L_2$. Tout à la longueur de la courbe, on peut constater trois niveaux : 
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_3.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_3.png)
 
 1. La phase “trappe à liquidité” : augmenter les biens et services disponibles $Y$ n’entraîne pas une hausse du taux d’intérêt $i$. Le marché considère que la masse monétaire existante $O_M$ est pratiquement suffisante pour couvrir les transactions qui entraîneront les nouveaux produits, et donc elle dépend plutôt de l’activité $Y$ et pas du taux $i$. On peut le voir aussi comme s’il y avait aussi peu de masse monétaire que ce n’est pas la peine de la thésauriser (doute : et ce n’est pas la peine non plus de l’investir ? juste de faire des transaction avec ?).  
 2. La phase normale : il faudrait augmenter le taux d’intérêt $i$ pour diminuer les encaisses spéculatives $L_2$ et finalement faire augmenté l’activité $Y$. Notons qu’ici il existe effectivement des encaisse spéculatives, ce qui n’est le cas ni dans la trappe de liquidité (car la masse monétaire est très juste aux besoins de transactions) ni dans la phase classique qui suit.
@@ -140,7 +140,7 @@ Un point important d’augmenter la dépense publique serait qu’on freine l’
 
 Sur la figure ci-dessous, on augmenterait davantage la production $Y$ si le taux $i$ restait constante. Or, une plus grande production met pression à la hausse sur le taux $i$, et donc la production n’augmente pas autant comme en $Y_3$, mais jusqu’à $Y_2$.
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_4.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_4.png)
 
 ### Les conditions d’efficacité de la politique budgétaire
 
@@ -172,7 +172,7 @@ Les conditions d’efficacité sont les mêmes, que la politique soit expansionn
 
 Une politique monétaire expansionniste, càd. une augmentation de l’offre de monnaie ou masse monétaire $O_M$, déplace la courbe LM vers la droite.  C’est le cas car, sur le marché de la monnaie, une augmentation de $O_M$ provoque une baisse de $i$ avec le reste constant, ce qui incentive l’investissement privé $I$ et finalement augmentant la production $Y$. C’est l’inverse pour une politique monétaire contractionniste.
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_5.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_5.png)
 
 ### Les conditions d’efficacité de la politique monétaire
 
@@ -202,7 +202,7 @@ que l’on ne peut pas compter sur les mécanismes de marché pour conduire spon
 
 La situation keynésienne ordinaire est donc une position telle que le point $A$ sur la figure suivante : le revenu d’équilibre spontané de l’économie est $Y^*$, qui est inférieur au revenu $Y_{pe}$ qui assure le plein-emploi. On peut atteindre le plein-emploi déplaçant la courbe IS, la courbe LM ou les deux simultanément.
 
-![untitled](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_6.png)
+![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_6.png)
 
 ### Policy mix : la combinaison des politiques économiques
 
@@ -246,7 +246,7 @@ Si c’est possible, cette alternative est préférable sur chacune par elle mê
 
 Dans la logique néoclassique, le modèle IS-LM n’a guère d’utilité. En effet, si la flexibilité des prix suffit à garantir l’équilibre général, **le point d’équilibre spontané du modèle IS-LM correspond à l’équilibre de plein-emploi**, et aucun mouvement de IS ou de LM n’est souhaitable.
 
-![Si on essaie d’augmenter la masse $O_M$, la production ne pourra plus augmenter, donc ce sont les prix $P$ qui augmentent, et on revient de nouveau au lieu de depart.](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_7.png)
+![Si on essaie d’augmenter la masse $O_M$, la production ne pourra plus augmenter, donc ce sont les prix $P$ qui augmentent, et on revient de nouveau au lieu de depart.](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_7.png)
 
 Si on essaie d’augmenter la masse $O_M$, la production ne pourra plus augmenter, donc ce sont les prix $P$ qui augmentent, et on revient de nouveau au lieu de départ.
 
@@ -254,7 +254,7 @@ Si on essaie d’augmenter la masse $O_M$, la production ne pourra plus augmente
 
 Comme la politique monétaire, la politique budgétaire est finalement impuissante à modifier $Y$. En revanche, on ne revient pas au lieu de départ, mais on peut changer le taux d’intérêt $i$. 
 
-![On augmente la demande de produits au moment d’augmenter $G$. Cette hausse de demande, par contre, ne peut pas entraîner une augmentation de la quantité de produits offerts, donc on augmente plutôt le niveau de prix $P$, et on finit en $C$, avec un taux $i$ plus haut.](ressources/01_le_modele_is-lm_en_economie_fermee_untitled_8.png)
+![On augmente la demande de produits au moment d’augmenter $G$. Cette hausse de demande, par contre, ne peut pas entraîner une augmentation de la quantité de produits offerts, donc on augmente plutôt le niveau de prix $P$, et on finit en $C$, avec un taux $i$ plus haut.](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_8.png)
 
 On augmente la demande de produits au moment d’augmenter $G$. Cette hausse de demande, par contre, ne peut pas entraîner une augmentation de la quantité de produits offerts, donc on augmente plutôt le niveau de prix $P$, et on finit en $C$, avec un taux $i$ plus haut.
 

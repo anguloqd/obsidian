@@ -1,6 +1,6 @@
 # 01 // la courbe de Phillips, le chômage naturel et l’inflation
 
-[Slides de Phillips](ressources/01_la_courbe_de_phillips_le_chomage_naturel_et_l_chapitre_1_-_diapo.pdf)
+[Slides de Phillips](ressources/01_la_courbe_de_phillips_le_chomage_naturel_et_l_chapitre_1_diapo.pdf)
 
 # Introduction
 

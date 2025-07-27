@@ -1,6 +1,6 @@
 # 07 // hachage
 
-[INFF5-7.pdf](ressources/07_hachage_inff5-7.pdf)
+[INFF5_7.pdf](ressources/07_hachage_inff5_7.pdf)
 
 # Introduction
 

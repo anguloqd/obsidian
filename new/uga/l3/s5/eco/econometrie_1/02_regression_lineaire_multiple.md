@@ -252,7 +252,7 @@ $$
 
 Pour faire le passage de la première ligne à la deuxième ligne, voici quelques opérations avec dérivées, vecteurs et scalaires à savoir, sorties du PDF ci-dessous, page 12/61.
 
-[Ch3slides-multiple-linear-regression.pdf](ressources/02_regression_lineaire_multiple_ch3slides-multiple-linear-regression.pdf)
+[Ch3slides_multiple_linear_regression.pdf](ressources/02_regression_lineaire_multiple_ch3slides_multiple_linear_regression.pdf)
 
 Pour ce premier, notons qu'on fait une combinaison linéaire de coefficients $\mathbf{a}$. Le résultat final de l'opération $\mathbf{a}^T \mathbf{x}$ est juste $[a_{j=1}x_{i=1}+a_{j=2}x_{i=2}+\cdots+a_{j=m}x_{i=n}]$. Si on dérive cette expression par $\mathbf{x}$ (scalaire-par-vecteur), on devrait avoir de retour le vecteur avec les coefficients, donc $\mathbf{a}$.  
 

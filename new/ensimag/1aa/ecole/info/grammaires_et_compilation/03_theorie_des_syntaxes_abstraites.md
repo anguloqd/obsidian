@@ -1,6 +1,6 @@
 # 03 // théorie des syntaxes abstraites
 
-[chap3-4up.pdf](ressources/03_theorie_des_syntaxes_abstraites_chap3-4up.pdf)
+[chap3_4up.pdf](ressources/03_theorie_des_syntaxes_abstraites_chap3_4up.pdf)
 
 ## Exo 3.1
 
@@ -39,17 +39,17 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 > - $D = \mathcal P(V^∗)$ pour la sémantique des $\mathbf{Rexp}$ (comme ensemble de mots)
 > - $D =$ ensemble des automates finis (non-déterministes avec $ϵ$-transitions) pour générer l’automate associé à une $\mathbf{Rexp}$. Calculer l’automate de $A_\text{dot}(A_a, A_a)$ avec vos définitions
 
-![WhatsApp Image 2025-01-12 at 19.49.07.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.49.07.jpeg)
+![WhatsApp Image 2025_01_12 at 19.49.07.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.49.07.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.53.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.53.50.jpeg)
+![WhatsApp Image 2025_01_12 at 19.53.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.53.50.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.54.32.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.54.32.jpeg)
+![WhatsApp Image 2025_01_12 at 19.54.32.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.54.32.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.00.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.00.jpeg)
+![WhatsApp Image 2025_01_12 at 19.55.00.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.55.00.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.21.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.21.jpeg)
+![WhatsApp Image 2025_01_12 at 19.55.21.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.55.21.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.55.35.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.55.35.jpeg)
+![WhatsApp Image 2025_01_12 at 19.55.35.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.55.35.jpeg)
 
 ## Exo 3.5
 
@@ -57,17 +57,17 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 >
 > Dessiner la propagation de l’attribut sur l’AST (en notation étendue) encodé par le mot “`star u dot a b a`”
 
-![WhatsApp Image 2025-01-12 at 19.56.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.56.50.jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.50.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.56.50.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.50(1).jpeg](whatsapp_image_2025-01-12_at_19.56.50(1).jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.50(1).jpeg](whatsapp_image_2025_01_12_at_19.56.50(1).jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.49(2).jpeg](whatsapp_image_2025-01-12_at_19.56.49(2).jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.49(2).jpeg](whatsapp_image_2025_01_12_at_19.56.49(2).jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.49.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025-01-12_at_19.56.49.jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.49.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.56.49.jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.49(1).jpeg](whatsapp_image_2025-01-12_at_19.56.49(1).jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.49(1).jpeg](whatsapp_image_2025_01_12_at_19.56.49(1).jpeg)
 
-![WhatsApp Image 2025-01-12 at 19.56.49(3).jpeg](whatsapp_image_2025-01-12_at_19.56.49(3).jpeg)
+![WhatsApp Image 2025_01_12 at 19.56.49(3).jpeg](whatsapp_image_2025_01_12_at_19.56.49(3).jpeg)
 
 ## Exo 3.6
 

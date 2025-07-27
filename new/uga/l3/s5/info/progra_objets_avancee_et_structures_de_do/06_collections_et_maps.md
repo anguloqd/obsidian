@@ -1,6 +1,6 @@
 # 06 // collections et maps
 
-[INFF5-6.pdf](ressources/06_collections_et_maps_inff5-6.pdf)
+[INFF5_6.pdf](ressources/06_collections_et_maps_inff5_6.pdf)
 
 > [!note]
 > À connaître par cœur : les méthodes de Lists, ses méthodes héritées de Collection et Iterator et ListIterator. Les iterators sont moins importants.

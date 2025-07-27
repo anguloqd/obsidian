@@ -31,7 +31,7 @@
 
 # Objectives
 
-[Objectifs_periode_1_Daniel_angulo.pdf](ressources/period_#1_-_to-do_objectifs_periode_1_daniel_angulo-1.pdf)
+[Objectifs_periode_1_Daniel_angulo.pdf](ressources/period_#1_to_do_objectifs_periode_1_daniel_angulo_1.pdf)
 
 ## Missions
 

@@ -1,6 +1,6 @@
 # 01 // introduction à la programmation par objets
 
-[Slides de cours 1](ressources/01_introduction_a_la_programmation_par_objets_inff3-2223-cours1.pdf)
+[Slides de cours 1](ressources/01_introduction_a_la_programmation_par_objets_inff3_2223_cours1.pdf)
 
 # Programmes, langages de programmation et paradigmes
 

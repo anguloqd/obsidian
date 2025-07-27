@@ -1,6 +1,6 @@
 # 05 // constructeurs, packages et modificateurs d’accès
 
-[Slides de cours 5.pdf](ressources/05_constructeurs_packages_et_modificateurs_d’acce_inff3-2223-cours5.pdf)
+[Slides de cours 5.pdf](ressources/05_constructeurs_packages_et_modificateurs_d’acce_inff3_2223_cours5.pdf)
 
 # Initialisation des objets
 

@@ -1,6 +1,6 @@
 # 01 // objets et classes
 
-[INFF5-1-1.pdf](ressources/01_objets_et_classes_inff5-1-1.pdf)
+[INFF5_1_1.pdf](ressources/01_objets_et_classes_inff5_1_1.pdf)
 
 # Introduction des concepts de la programmation par objets
 

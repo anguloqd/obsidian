@@ -74,7 +74,7 @@ grNbTrahisons(L,N) :-
     L=[], fail;
     L=[[_c]], N=0;
     L=[[_t]], N=1;
-    not(L=[[__]]), L=[[_,B]|Reste],
+    not(L=[[_]]), L=[[_,B]|Reste],
         grNbTrahisons([[_b]], NListeCourante), grNbTrahisons(Reste, NReste),
         N is (NListeCourante + NReste).
 
@@ -83,8 +83,8 @@ grNbTrahisons(L,N) :-
 grHistDepuisMaDernCoop(L1, L2) :-
     L1 = [[c_]], L2 = [[c_]];
     L1 = [[t_]], L2 = [[]];
-    not(L1=[[__]]), L1 = [[A,B]|Reste], A=c, L2=Sol, append([[ab]],Reste,Sol);
-    not(L1=[[__]]), L1 = [[A,_]|Reste], A=t, L2=Sol, grHistDepuisMaDernCoop(Reste, Sol).
+    not(L1=[[_]]), L1 = [[A,B]|Reste], A=c, L2=Sol, append([[ab]],Reste,Sol);
+    not(L1=[[_]]), L1 = [[A,_]|Reste], A=t, L2=Sol, grHistDepuisMaDernCoop(Reste, Sol).
 
 % utilitaire : donnée une histore L,
 % retourne la quantité de trahisons N que jai fait avant ma dernière coopération

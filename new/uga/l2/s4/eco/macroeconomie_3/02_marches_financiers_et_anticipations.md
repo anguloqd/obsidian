@@ -1,6 +1,6 @@
 # 02 // marchés financiers et anticipations
 
-[Slides des anticipations](ressources/02_marches_financiers_et_anticipations_chapitre_2_-_diapo.pdf)
+[Slides des anticipations](ressources/02_marches_financiers_et_anticipations_chapitre_2_diapo.pdf)
 
 # Valeur Actuelle Nette (VAN)
 

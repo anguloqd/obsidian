@@ -1,6 +1,6 @@
 # 02 // langages algébriques et BNF
 
-[chap2-4up.pdf](ressources/02_langages_algebriques_et_bnf_chap2-4up.pdf)
+[chap2_4up.pdf](ressources/02_langages_algebriques_et_bnf_chap2_4up.pdf)
 
 ## Exo 2.1
 
@@ -264,7 +264,7 @@ On utilise une fonction de substitution $\sigma$ sur la première réponse.
 
 Le flow à suivre dans cette exercise est de savoir qu’on peut partir d’un automate fini, puis créer un système d’équations régulières, finalement en déduisant l’expression régulière qui est facilement transformable en BNF. Le dernier automate est le produit des deux premiers.
 
-![WhatsApp Image 2025-01-12 at 15.18.50(1).jpeg](whatsapp_image_2025-01-12_at_15.18.50(1).jpeg)
+![WhatsApp Image 2025_01_12 at 15.18.50(1).jpeg](whatsapp_image_2025_01_12_at_15.18.50(1).jpeg)
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 

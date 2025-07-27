@@ -8,4 +8,4 @@ On m’avait donné un polynôme caractéristique $(X-1)(X-3)(X-5)$ et de confir
 
 ## Trigonalisation
 
-Manque ! [https://cours.univ-grenoble-alpes.fr/pluginfile.php/1537519/mod_resource/content/5/Notes matrice non diagonalisable.pdf](https://cours.univ-grenoble-alpes.fr/pluginfile.php/1537519/mod_resource/content/5/Notes%20matrice%20non%20diagonalisable.pdf)
+Manque ! [https://cours.univ_grenoble_alpes.fr/pluginfile.php/1537519/mod_resource/content/5/Notes matrice non diagonalisable.pdf](https://cours.univ-grenoble-alpes.fr/pluginfile.php/1537519/mod_resource/content/5/Notes%20matrice%20non%20diagonalisable.pdf)

@@ -1,6 +1,6 @@
 # 05 // théories de grammaires et du parsing
 
-[chap5-4up.pdf](ressources/05_theories_de_grammaires_et_du_parsing_chap5-4up.pdf)
+[chap5_4up.pdf](ressources/05_theories_de_grammaires_et_du_parsing_chap5_4up.pdf)
 
 ## Exo 5.3
 

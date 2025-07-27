@@ -103,7 +103,7 @@ Cela dit, pour la construction de la droite BP sur le plan $(Y,i)$, on note seul
 
 Étudions la prochaine figure. Si on a une augmentation du revenu national $\Delta^+Y$, on augmente les importations $\Delta^+M$. On est en déséquilibre sur le point B. Pour rétablir l’équilibre, il est possible d’emprunter plus des capitaux étrangers, nécessitant une hausse du taux local $i$ par rapport au taux étranger $i_{RDM}$pour devenir plus attractif, ce qui nous mène à C. Finalement, une augmentation de $Y$ a besoin d’une augmentation du taux $i$ pour garder l’équilibre.
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled.png)
 
 ### Construction formelle de la courbe
 
@@ -138,7 +138,7 @@ que la demande d’importations $M$ est élastique au produit intérieur $Y$ (à
 
 À ce moment, il est utile d’appeler $m_2$ comme le coefficient d’ouverture commerciale et $k$ le coefficient d’ouverture financière.
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled_1.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_1.png)
 
 Gardant en tête $\frac{m_2}{k}$, pensons à deux cas extrêmes qui sont les deux courbes BP à gauche : quand la pente est 0 et quand la pente est infinie. Mathématiquement, on va juste ajuster à $k$ pour être $0$ ou infinie et représenter ces extrêmes, on laisse $m_2$ constant.
 
@@ -179,13 +179,13 @@ Les dilemmes dont on parlera seront ces situations où on doit prioriser soit le
 
 Le schéma pour expliquer la suite est le suivante. $Y_{pe}$ serait le niveau maximum de production possible. On va tracer des droites verticaux $Y_{BTC}$ qui montre le niveau où $BTC$ est en équilibre.
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled_2.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_2.png)
 
 ### Le dilemme d’un pays structurellement déficitaire
 
 Structurellement déficitaire signifie simplement qu’on importe plus de ce qu’on exporte. On voit que les importations propres dépendent du revenu national (voir éq. de $BTC$), et le problème c’est que notre propension d’importation $m_1$ est tellement forte qu’on ne peut pas augmenter $Y$ sans augmenter fortement aussi $M$.
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled_3.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_3.png)
 
 Si on produit plus de le niveau de $Y$ qui assure l’équilibre de $BTC$ ($X=M$), on devient déficitaires. On devient excédentaires si on est à gauche de la droite $BTC$.
 
@@ -195,7 +195,7 @@ Dans les zones 1 et 3 les décisions à prendre sont claires : soit on réduit l
 
 Similairement, un pays structurellement excédentaire est celui qui exporte plus de ce qu’il importe.
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled_4.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_4.png)
 
 À nouveau, les zones 1 et 3 ne présentent pas de dilemmes, seulement la zone 2. Celui-ci est le **dilemme inflation-excédent**.
 
@@ -209,7 +209,7 @@ Pas expliqué dans le cours.
 
 ### La solution apparente aux dilemmes : les changes flexibles
 
-[(Lire la page 153 !) Jacques Généreux - Économie politique - Tome 1.pdf](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_jacques_gnreux_-_conomie_politique_-_tome_1_-_conomie_descriptive_et_comptabilit_nationale.pdf)
+[(Lire la page 153 !) Jacques Généreux _ Économie politique _ Tome 1.pdf](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_jacques_gnreux_conomie_politique_tome_1_conomie_descriptive_et_comptabilit_nationale.pdf)
 
 Si la balance de paiements est déficitaire, il en résulte une demande nette de devises étrangères (celle qu’on veut avoir pour arriver à l’équilibre) qui fait monter le taux de change $e_r$ (dépréciation de notre monnaie). Le taux de change $e_r$ montera jusqu’à ce que le déficit (la demande excédentaire de devises) ait disparu, et ça arrivera à travers la stimulation des exportations grâce a nos bas prix. C’est analogue si BP est excédentaire.
 
@@ -239,4 +239,4 @@ $$
 
 C’est juste un représentation graphique qui met en évidence l’effet des inélasticités imparfaites des nos importations, et qu’**il prend du temps pour que le reste du monde se rende compte de la compétitivité acquise de nos produits** suite à une dévaluation de nos prix.  
 
-![untitled](ressources/02_le_modele_is-lm-bp_en_economie_ouverte_untitled_5.png)
+![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_5.png)

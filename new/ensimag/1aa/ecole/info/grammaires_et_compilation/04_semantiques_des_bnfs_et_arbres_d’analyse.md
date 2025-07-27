@@ -1,6 +1,6 @@
 # 04 // sémantiques des BNFs et arbres d’analyse
 
-[chap4-4up.pdf](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_chap4-4up.pdf)
+[chap4_4up.pdf](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_chap4_4up.pdf)
 
 ## Exo 4.4
 

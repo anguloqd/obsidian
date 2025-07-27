@@ -1,6 +1,6 @@
 # 02 // objets, types primitifs, classes
 
-[Slides de cours 2.pdf](ressources/02_objets_types_primitifs_classes_inff3-2223-cours2.pdf)
+[Slides de cours 2.pdf](ressources/02_objets_types_primitifs_classes_inff3_2223_cours2.pdf)
 
 # Référence et valeurs
 

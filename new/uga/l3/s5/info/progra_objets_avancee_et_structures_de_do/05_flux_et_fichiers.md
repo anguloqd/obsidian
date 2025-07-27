@@ -1,6 +1,6 @@
 # 05 // flux et fichiers
 
-[INFF5-5.pdf](ressources/05_flux_et_fichiers_inff5-5.pdf)
+[INFF5_5.pdf](ressources/05_flux_et_fichiers_inff5_5.pdf)
 
 # Introduction
 

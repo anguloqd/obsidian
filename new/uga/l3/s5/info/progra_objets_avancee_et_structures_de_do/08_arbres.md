@@ -1,6 +1,6 @@
 # 08 // arbres
 
-[INFF5-8.pdf](ressources/08_arbres_inff5-8.pdf)
+[INFF5_8.pdf](ressources/08_arbres_inff5_8.pdf)
 
 # Généralités
 

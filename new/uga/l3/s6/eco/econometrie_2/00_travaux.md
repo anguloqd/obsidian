@@ -1,6 +1,6 @@
 # 00 // travaux
 
-[00_travaux_travail_no1-2.pdf](ressources/00_travaux_travail_no1-2.pdf)
+[00_travaux_travail_no1_2.pdf](ressources/00_travaux_travail_no1_2.pdf)
 
 [00_travaux_travail_no2.pdf](ressources/00_travaux_travail_no2.pdf)
 

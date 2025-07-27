@@ -1,6 +1,6 @@
 # 04 // généricité
 
-[INFF5-4.pdf](ressources/04_genericite_inff5-4.pdf)
+[INFF5_4.pdf](ressources/04_genericite_inff5_4.pdf)
 
 # Introduction
 

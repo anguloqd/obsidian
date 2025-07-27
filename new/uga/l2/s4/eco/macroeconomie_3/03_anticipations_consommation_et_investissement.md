@@ -1,6 +1,6 @@
 # 03 // anticipations, consommation et investissement
 
-[Slides de consommation et investissement](ressources/03_anticipations_consommation_et_investissement_chapitre_3_-_diapo.pdf)
+[Slides de consommation et investissement](ressources/03_anticipations_consommation_et_investissement_chapitre_3_diapo.pdf)
 
 # La consommation : $C$
 
