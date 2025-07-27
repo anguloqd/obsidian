@@ -48,15 +48,15 @@ En 1931, des estimations indiquent que la production était 20% en dessous du pl
 
 ## La politique monétaire et l’étalon-or
 
-Pendant la période, la politique monétaire restrictive a prolongé la Grande Dépression. Les taux directeurs r évoluaient à partir de 1925, atteignant un pic de 13% en 1932, ce qui a agravé la chute de $C$ et $I$ en 1929 pendant le krach.
+Pendant la période, la politique monétaire restrictive a prolongé la Grande Dépression. Les taux directeurs r évoluaient à partir de 1925, atteignant un pic de 13% en 1932, ce qui a aggravé la chute de $C$ et $I$ en 1929 pendant le krach.
 
 Ironiquement, tant que $r$ augmentait en 1929, le taux d’intérêt $i$ a chuté. Les dépenses en bien immobiliers et biens durables ont fortement baissés.
 
-L’etalon-or était un système monétaire qui garantissait un échange fixe de $20,67 par une once d’or. Si la demande pour le dollar diminuait (les gens n’y sont pas intéressés), alors de l’or sortait du pays. Ceci était un problème pour les États-Unis, dont deux solutions serait de augmenter la compétitivité ($\nearrow(X-M)$) ou d’attirer des flux de capitaux étrangers ($\nearrow i$).
+L’etalon-or était un système monétaire qui garantissait un échange fixe de \$20,67 par une once d’or. Si la demande pour le dollar diminuait (les gens n’y sont pas intéressés), alors de l’or sortait du pays. Ceci était un problème pour les États-Unis, dont deux solutions serait de augmenter la compétitivité ($\nearrow(X-M)$) ou d’attirer des flux de capitaux étrangers ($\nearrow i$).
 
 Ils sont plutôt décidé augmenter la compétitivité, mais les décideurs publics ne voulaient pas descendre $i$ jusqu’à zéro, donc la politique monétaire a été limitée pour contrer la récession. **Rester dans le système de l’étalon-or lors d’une récession revient a se priver de la politique monétaire comme instrument de relance**.
 
-En septembre 1931, le Royaume-Uni a abandoné l’étalon-or, ce qui causerait une sortie massive d’or des États-Unis. Les investisseurs s’attendaient à ce que les Etats-Unis abandonnent ´ également ce système et dévaluent le dollar.
+En septembre 1931, le Royaume-Uni a abandonné l’étalon-or, ce qui causerait une sortie massive d’or des États-Unis. Les investisseurs s’attendaient à ce que les Etats-Unis abandonnent ´ également ce système et dévaluent le dollar.
 
 ## Changement des anticipations
 

@@ -91,11 +91,11 @@ L'interprétation est la suivante :
 
 ## Test du $χ²$ pour l'*ajustement* d'une série à une loi de probabilité
 
-> [!important] ❗
+> [!important]
 >
 > Ce test est plutôt directement expliqué avec un exemple.
 
-> [!warning] ⚠️
+> [!warning]
 >
 > Note pratique : On évite d'utiliser le test du $χ²$ si un effectif du tableau est inférieur ou égal à $5$ à cause de l'approximation avec le Théorème Central Limite.
 

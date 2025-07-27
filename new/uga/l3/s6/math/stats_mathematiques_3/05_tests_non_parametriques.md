@@ -117,7 +117,7 @@ $$
     Soit $W$ une statistique de somme de rangs. Sous l'hypothèse nulle $\mathcal{H}_0$, on a $F_X = F_Y$et les rangs $R_i$ suivent une loi uniforme :
     
     $$
-    R_i \sim \mathcal{U}(\llbracket 1, n \rrbracket), \quad \text{où } n = n_X + n_Y
+    R_i \sim \mathcal{U}([[ 1, n ]]), \quad \text{où } n = n_X + n_Y
     $$
     
     Espérance et variance des rangs :
@@ -154,9 +154,8 @@ $$
     
     $$
     \text{Var}(W) = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot \left( -\frac{n+1}{12} \right)
-    
-    \\[10pts]
-    
+    $$
+    $$
     = \frac{n_X(n+1)}{12} \left[ n - 1 - (n_X - 1) \right] = \frac{n_X n_Y (n+1)}{12}
     $$
     
@@ -224,7 +223,7 @@ R^* = \frac{ \frac{1}{n} \sum_{i=1}^n R_X(i) R_Y(i) - \left( \frac{1}{n} \sum_{i
 { \sqrt{ \left( \frac{1}{n} \sum_{i=1}^n R_X^2(i) - \left( \frac{1}{n} \sum_{i=1}^n R_X(i) \right)^2 \right)
 \left( \frac{1}{n} \sum_{i=1}^n R_Y^2(i) - \left( \frac{1}{n} \sum_{i=1}^n R_Y(i) \right)^2 \right) } }
 
-\\[10pts]
+$$$$
 
 = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \left( \sum_{i=1}^n R_X(i) \right) \left( \sum_{i=1}^n R_Y(i) \right) }
 { \sqrt{ \left( n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2 \right)
@@ -236,16 +235,16 @@ On remarque toutefois que puisque les $R_X(i)$ (et les $R_Y(i)$) ne sont qu’un
 $$
 \sum_{i=1}^n R_X(i) = \sum_{i=1}^n i = \frac{n(n+1)}{2}
 
-\\[10pts]
+$$$$
 
 \sum_{i=1}^n R_X^2(i) = \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}
 
-\\[10pts]
+$$$$
 
 n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2
 = \frac{n^2(n+1)(2n+1)}{6} - \frac{n^2(n+1)^2}{4}
 
-\\[10pts]
+$$$$
 
 = n^2(n+1) \left( \frac{2n+1}{6} - \frac{n+1}{4} \right)
 = \frac{n^2(n^2 - 1)}{12}
@@ -257,7 +256,7 @@ $$
 R^* = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \frac{n^2(n+1)^2}{4} }
 { \frac{n^2(n^2 - 1)}{12} }
 
-\\[10pts]
+$$$$
 
 = \frac{12 \sum_{i=1}^n R_X(i) R_Y(i)}{n(n^2 - 1)} - \frac{3(n+1)}{n-1}
 $$
