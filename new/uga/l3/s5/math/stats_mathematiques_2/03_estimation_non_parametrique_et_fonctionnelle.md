@@ -139,7 +139,7 @@ $$
 
 \lim_{n\rightarrow\infty}\frac{f(\kappa_p)}{\sqrt{p(1-p)}}\sqrt n(\hat\kappa_{\lfloor np\rfloor +1}-\kappa_p)\sim\mathcal N(0,1)
 
-\\[10pt]
+$$$$
 
 \text{Formulation plus pratique : } \hat\kappa_p \sim \mathcal N\left(\mu=\kappa_p,\hspace{4pt} \sigma^2=\frac{p(1-p)}{nf(\kappa_p)^2}\right) \text{si }n\text{ fini}
 $$
@@ -165,13 +165,11 @@ Une observation clé c’est que, si on choisit $\ell_1$ tel qu’il est vrai qu
 
 $$
 \mathbb P(\ell_1\le n_\text{inf} \le \ell_2) = \mathbb P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)}),
+$$
 
-\\[10pt]
+et donc
 
-\text{et donc}
-
-\\[6pt]
-
+$$
 \mathbb P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)})=\sum_{k=\ell_1}^{\ell_2} \binom{n}{k}p^k(1-p)^{n-k}
 $$
 
@@ -185,7 +183,7 @@ Il existent deux méthodes : la méthode jackknife et la méthode bootstrap. Pou
 
 ### La méthode du jackknife
 
-### → La méthode en soi
+#### La méthode en soi
 
 L’objectif ici est de créer un estimateur $\hat\theta^*$ avec moins de biais que $\hat\theta$. Par la suite, on considère que $\theta=\varphi([X_i])$ (le paramètre se déduit avec un algorithme $\varphi$ sur les $X_i$) et que $\hat\theta=\varphi([x_i])$.
 
@@ -215,7 +213,7 @@ $$
 \hat\theta^*=\frac{1}{n}\sum_j \hat\theta_{j}^*
 $$
 
-### → Créer un IC approché avec les pseudovaleurs
+#### Créer un IC approché avec les pseudovaleurs
 
 Notons que la statistique finale $\hat\theta^*$ est une moyenne. On peut estimer la variance de cette statistique comme
 
@@ -229,7 +227,7 @@ $$
 IC_{95\%}(\theta)\approx[\hat\theta^*-(t^{n-1}_{2.5\%})s_{\hat\theta^*}, \hat\theta^*+(t^{n-1}_{97.5\%})s_{\hat\theta^*}]
 $$
 
-### → L’intérêt de cette méthode
+#### L’intérêt de cette méthode
 
 > [!note]
 > La proposition importante c’est que, si le biais de $\hat\theta$ est de la forme $\frac c n$, où $c$ constante, **alors l’estimateur jackknife $\hat\theta^*$ est sans biais**. Si le biais contient au moins un terme $\frac c n$, donc $\hat\theta^*$ réduira le biais en $\frac c n$. La preuve est la proposition 8.2 du livre de Michel Lejeune, page 178.
@@ -242,7 +240,7 @@ En général, la loi étant totalement inconnue, on ne connaît pas la forme du 
 
 Outre la réduction du biais, l’intérêt du jackknife, primordial ici, est de **permettre l’estimation de l’écart-type de l’estimateur de base**, c’est-à-dire $s_{\hat\theta}$, et la possibilité de construire un intervalle de confiance approché.
 
-### → Observations finales
+#### Observations finales
 
 Il y a une proposition très importante admise sur le livre de Michel Lejeune. Soit $\hat\theta^*$ l’estimateur jackknife de $\theta$ et soit $s^2_{\hat\theta^*}$ la variance de l’estimateur jackknife. Donc,
 
@@ -263,7 +261,7 @@ En ce qui concerne l’approximation asymptotique de l’intervalle de confiance
 
 ### La méthode du bootstrap
 
-### → Préparation
+#### Préparation
 
 Juste avant de commencer, on va faire une modification importante à l’espérance $\mathbb E[X]$ ou plutôt la moyenne $\mu$ dans ce contexte :
 
@@ -279,7 +277,7 @@ Le deuxième intégrale est l’intégrale de Riemman-Stieltjes, est c’est une
 
 Finalement et d’ailleurs, on considère que “l’estimateur de maximum de vraisemblance” d’un paramètre est juste sa version empirique sur l’échantillon.
 
-### → La méthode en soi
+#### La méthode en soi
 
 On commence par observe un échantillon $\mathbf{x}=[x_i]_{1\le i\le n}$. On crée un sous-échantillon $\mathbf{x}^*$ **de la même taille** que $\mathbf{x}$ dont les valeurs sont des **tirages avec remise** de $\mathbf{x}$. Notons que le plus probable est que le nouveau sous-échantillon aura des valeurs répétés, mais cela ne pose pas des problèmes.
 
@@ -295,7 +293,7 @@ On montre que, lorsque $M$ tend vers l’infini, l’estimateur issu de cette pr
 
 En pratique, $M = 100$ fournit une approximation suffisante de cet EMV car l’écart sera alors négligeable par rapport à l’erreur d’estimation du maximum de vraisemblance lui-même.
 
-### → Première construction d’un IC pour $\theta$
+#### Première construction d’un IC pour $\theta$
 
 En supposant que $\hat\theta$ est asymptotiquement sans biais et gaussien, on peut construire un IC de $\theta$ comme suit
 
@@ -307,7 +305,7 @@ L’approximation gaussienne est fréquemment légitime, en particulier si $\hat
 
 Par contre, celle-ci n’est pas assurée pour tous les types de statistiques ou bien elle peut être trop lente pour fournir une approximation satisfaisante au vu de la taille $n$ de l’échantillon.
 
-### → Deuxième construction d’un IC pour $\theta$
+#### Deuxième construction d’un IC pour $\theta$
 
 Si on peut admettre que 
 
@@ -329,7 +327,7 @@ $$
 
 Il faudrait par contre que $M \ge 1000$ pour avoir des approximations précises.
 
-### → Observations finales
+#### Observations finales
 
 - L’approche bootstrap est appropriée dans des situations très complexes, ou il n’y aura généralement pas d’alternative, et pas uniquement dans le cadre de l’échantillonnage aléatoire simple. C’est donc un outil extrêmement précieux qui est devenu viable avec les capacités de calcul actuelles.
 - Pour des types très divers de statistiques, il a été démontré que la distribution générée par les valeurs $\hat\Theta^*=[\hat\theta^*_i]_{1\le i \le M}$ en faisant tendre $M$ vers l’infini, appelée distribution bootstrap de la statistique $\theta$, converge vers la vraie distribution de $\theta$ quand $n$ tend vers l’infini et ceci de façon rapide.
@@ -643,15 +641,16 @@ $$
 Notons que $G(x)$ est la répartition de la statistique $\sqrt{n}D_n$. La fonction $G(x)$ est vraiment puissante, du fait qu’elle ne dépend pas de la vrai répartition de départ $F(x)$, même pour $n$ fini. De ce fait, elle a été tabulée. À partir de $n = 40$, l’approximation par $G(x)$ est correcte à $10^{−2}$ près. En plus, son quantile de $95\%$ est aussi tabulé. Voyons,
 
 $$
-\mathbb P(\sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%})\simeq95\% \text{ Mais, voyons que }
+\mathbb P(\sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%})\simeq95\%
+$$
+Mais, voyons que
 
-\\[10pt]
-
+$$
 \sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%}\iff\forall x \in\mathbb{R}, \sqrt{n}|\hat F_n-F(x)|< g_{95\%}
-
-\\[8pt]
-
-\text{Finalement, } IC_{95\%}(F(x))=\left[\hat F_n(x)-\frac{g_{95\%}}{\sqrt{n}}, \hat F_n(x)+\frac{g_{95\%}}{\sqrt{n}}\right]
+$$
+Finalement,
+$$
+IC_{95\%}(F(x))=\left[\hat F_n(x)-\frac{g_{95\%}}{\sqrt{n}}, \hat F_n(x)+\frac{g_{95\%}}{\sqrt{n}}\right]
 $$
 
 En plus, pour la fonction $G(x)$ on peut faire une simplification : si $x>0.8$ et $n=40$, $G(x)$ vaut presque juste $1-2e^{-2{x}^2}$. Étant donné qu’on s’intéresse quand $x=0.95$, $G(x)\approx 1.36$.

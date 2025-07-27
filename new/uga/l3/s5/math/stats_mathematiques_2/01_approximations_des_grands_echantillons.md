@@ -136,13 +136,10 @@ Parfois, on trouve plutôt la différence avec le signe que la différence en va
 
 $$
 0 \le \lim_{n \rightarrow \infty} \mathbb{P} \left(\bar{X}_n -\mathbb{E}[X_i]\ge \epsilon\right), \text{ par définition des probabilités.}
-
-\\[06pt]
+$$$$
 
 \text{En plus, }\lim_{n \rightarrow \infty} \mathbb{P} \left(\bar{X}_n -\mathbb{E}[X_i] \ge \epsilon \right)  \le \underbrace{\lim_{n \rightarrow \infty} \mathbb{P} \left(\left|\bar{X}_n -\mathbb{E}[X_i] \right| \ge \epsilon \right)}_0
-
-\\[02pt]
-
+$$$$
 \text{Finalement, } 0 \le \underbrace{\lim_{n \rightarrow \infty} \mathbb{P} \left(\bar{X}_n -\mathbb{E}[X_i]\ge \epsilon\right)}_0 \le 0.
 $$
 
@@ -209,77 +206,23 @@ Quand $n$ tend vers l’infini, $\left(\lim_{n\rightarrow \infty} Z_n \right) = 
 - $np \ge 10$.
 - $n(1-p) \ge 10$.
 
-## Formulation plus pratique du TLC et sa relation avec la LGN
+## Formulations pratiques du TCL
 
-Soit $\bar{X}_n$ la moyenne empirique de $n$ V.A. iid. Donc :
+### Version asymptotique (exacte)
 
-- Loi des Grands Nombres : tant que $n \rightarrow \infty$, la distance entre $\bar{X}_n$ et $\mathbb{E}[X]$ devient plus petite que tout nombre réel $a>0$ avec probabilité $1$.
-- Théorème Centrale de la Limite : tant que $n \rightarrow \infty$, la V.A. $\bar{X}_n$ converge en loi vers $\mathcal{N}(0, \frac{\sigma^2}{n})$.
-
-Il faut laisser clair une chose : la moyenne empirique toujours va converger vers la moyenne théorique. Toujours. On peut réécrire les deux théorèmes comme suite, $a > 0$ :
-
+Pour $n$ grand, la variable normalisée suit exactement une loi normale :
 $$
-\begin{align*}
-
-\text{LGN :} & \lim_{n\rightarrow\infty} \mathbb{P}(-a\le\bar{X}_n-\mathbb{E}[X] \le a) = 1
-
-\\
-
-\text{TCL :} & \lim_{n\rightarrow\infty} \mathbb{P}(-a\le\bar{X}_n-\mathbb{E}[X] \le a) = \int_{-a}^a \mathcal{N}\left(0,\frac{\sigma^2}{n}\right)dx \space (*)
-
-\end{align*}
-
-\\
-\\[8pt]
-(*): \text{cette dernière formulation du TCL est incorrecte ! voir note dessous.}
+\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)
 $$
 
-D’un côté, il semble que $(\bar{X}_n-\mathbb{E}[X])$  tend vers $0$. Au même temps, il semble que c’est égale à l’intégrale. Donc, lequel des deux ? La première.
+### Version approximative (pratique)
 
-Il existe un problème avec la deuxième : si $n \rightarrow \infty$, la variance devient $0$, et la variance comme telle n’est pas utile
-$$. Imaginons la courbe qui viendrait si la variance était $0$ : il n’existe pas de dispersion autour de la moyenne et $\bar{X}_n$ serait toujours égal à $\mathbb{E}[X]$, càd. $(\bar{X}_n-\mathbb{E}[X])$ serait toujours égal à $0$.
-
-![untitled](ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled.png)
-
+Pour $n$ suffisamment grand (typiquement $n \geq 30$), on peut approximer :
 $$
-F(x)=
-\begin{cases}
-0, x < 0 \\
-1, x \ge 0
-\end{cases}
+\bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
 $$
 
-![untitled](ressources/03_estimation_non_parametrique_et_fonctionnelle_untitled_1.png)
+**Important** : Cette approximation est valide pour $n$ fini mais grand. Il ne faut **jamais** appliquer $\lim_{n \rightarrow \infty}$ à cette formulation car elle deviendrait dégénérée.
 
-$$
-"f(x)"=
-\begin{cases}
-1, x=0 \\
-0, x \ne 0
-\end{cases}
-$$
-
-Il est correct de construire une fonction de répartition qui représenterait la fonction de répartition de $(\bar{X}_n-\mathbb{E}[X])$. En fait, une variable aléatoire avec telle fonction de répartition est appelée une **variable aléatoire dégénérée**.
-
-Par contre, il n’est pas possible de construire une densité, car il devrait avoir une aire sous la courbe égale à $1$ quand $x=0$, mais ce n’est pas possible, car le “rectangle” sous $f(x)$ n’as pas de ampleur, donc son aire est toujours $0$.
-
-Le choix de multiplier $(\bar{X}_n-\mathbb{E}[X])$ par $\sqrt{n}$ permet de laisser tendre $n$ vers l’infini et que la variance ne soit pas nulle. Particulièrement, on garanti l’existence d’une variance non-nulle, mais aussi non-infinie, c’est qui nous est utile.
-
-> [!note]
-> On pourrait concevoir deux formes de présenter le TCL : la réelle et la pratique.
->
-> $$
-> \begin{align*}
->
-> \text{TCL réel : }
-> \lim_{n\rightarrow\infty} \mathbb{P}(-a\le\sqrt{n}(\bar{X}_n-\mathbb{E}[X]) \le a) &= \int_{-a}^a \mathcal{N}\left(0,\sigma^2\right)dx
->
-> \\
->
-> \text{TCL pratique : }
-> \mathbb{P}(-a\le\bar{X}_n-\mathbb{E}[X] \le a) &\approx \int_{-a}^a \mathcal{N}\left(0,\frac{\sigma^2}{n}\right)dx
->
-> \end{align*}
-> $$
->
-> Il ne faut absolument pas appliquer une limite $\lim_{n \rightarrow \infty}$ dans la formulation pratique. Il sert comme une bonne approximation à partir de $n \ge 30$, mais **il ne fait objectivement plus de sens si on laisse $n$ tendre vers l’infini !** Je l’avais fais en dessus pour expliquer le besoin d’ajouter le facteur $\sqrt{n}$.
+> [!warning]
+> Si on laisse $n$ tendre vers l'infini dans la version pratique, la variance serait $0$ mais la variance ne peut pas être $0$ par définition ! On aurait pas une vraie densité mais une mesure de Dirac.

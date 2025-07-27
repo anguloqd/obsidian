@@ -35,7 +35,7 @@ Ces tests sont relativement puissants et, ce qui est notable, le restent pour de
 
 ## Le QQ-plot
 
-> [!tip] 💡
+> [!tip]
 >
 > Idée : deux distributions sont égales si touts leurs quantiles sont égaux.
 >

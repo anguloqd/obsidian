@@ -425,21 +425,14 @@ Les quantiles $z$ sont à déterminer avec une table à quantiles. Notons que l�
 Dans le cas unilatérale, qui sont aussi UPP mais pas sans biais, on a que :
 
 - $H_0 : \mu \le \mu_0\text{ vs. }H_1 : \mu > \mu_0$
-On suppose que $\mu = \mu_0$ (qui maximise risque de première espèce), puis la région de rejet est juste du côte droite de la gaussienne standard. Ceci se reflète dans la région d’acceptation et, surtout, la région de rejet (non-acceptation) :
-    
-    $$
+On suppose que $\mu = \mu_0$ (qui maximise risque de première espèce), puis la région de rejet est juste du côte droite de la gaussienne standard. Ceci se reflète dans la région d’acceptation et, surtout, la région de rejet (non-acceptation) :  $$
     A=\{ T : T <z_{1-\alpha}\} \iff \bar A =\{ T : z_{1-\alpha } < T\}
     $$
-    
 - $H_0 : \mu \ge \mu_0\text{ vs. }H_1 : \mu < \mu_0$
-Analogiquement au cas précédent. La région de rejet de $H_0$ est la queue gauche de la gaussienne normale standard.
-    
-    $$
+Analogiquement au cas précédent. La région de rejet de $H_0$ est la queue gauche de la gaussienne normale standard.   $$
     A=\{ T : z_{1-\alpha}<T\} \iff \bar A =\{ T :T<z_{1-\alpha}\}
     $$
-    
     ![Untitled](ressources/04_tests_d’hypotheses_parametriques_untitled_2.png)
-    
 
 ### Test sur $\mu$, $\sigma^2$ inconnu $(t$-test$)$
 
@@ -464,7 +457,7 @@ Dans le cas des tests unilatéraux, on définit $A$ comme suit :
 $$
 H_0 : \mu \le \mu_0 \longrightarrow A=\{ T : T <t^{(n-1)}_{1-\alpha }\} \iff \bar A =\{ T : t^{(n-1)}_{1-\alpha } \le T\}
 
-\\
+$$$$
 
 H_0 : \mu \ge \mu_0 \longrightarrow A=\{ T : t^{(n-1)}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le t^{(n-1)}_{1-\alpha }\}
 $$
@@ -482,7 +475,7 @@ Notre test devient donc, pour le cas bilatéral :
 $$
 \tau=\left\{T=\frac{(n-1)S^2}{\sigma^2_0}, A =\{T: -{\chi^2}^{(n-1)}_{1-\alpha/2}<T< {\chi^2}^{(n-1)}_{1-\alpha/2} \} \right\}
 
-\\[8pt]
+$$$$
 
 H_0:\sigma^2=\sigma^2_0\text{ vs. }H_1:\sigma^2\ne\sigma^2_0
 $$
@@ -501,11 +494,7 @@ Dans ce cas, on pourrait faire ça mais cela nous laisse avec un test qui n’es
 Pour le cas unilatéral, on a un test UPP-sans biais comme suit :
 
 $$
-H_0 : \sigma \le \sigma_0 \longrightarrow A=\{ T : T <{\chi^2}^{(n-1)}_{1-\alpha }\} \iff \bar A =\{ T : {\chi^2}^{(n-1)}_{1-\alpha } \le T\}
-
-\\
-
-H_0 : \sigma \ge \sigma_0 \longrightarrow A=\{ T : {\chi^2}^{(n-1)}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le {\chi^2}^{(n-1)}_{1-\alpha }\}
+H_0 : \sigma \le \sigma_0 \longrightarrow A=\{ T : T <{\chi^2}^{(n-1)}_{1-\alpha }\} \iff \bar A =\{ T : {\chi^2}^{(n-1)}_{1-\alpha } \le T\}$$$$H_0 : \sigma \ge \sigma_0 \longrightarrow A=\{ T : {\chi^2}^{(n-1)}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le {\chi^2}^{(n-1)}_{1-\alpha }\}
 $$
 
 À titre de curiosité, si la moyenne $\mu$ était connue, on utiliserait le fait suivant, les développement étant analogue aux précédents.
@@ -550,9 +539,7 @@ Puis, on donne la version unilatérale du test en termes de la région d’accep
 
 $$
 H_0 : \mu_1 \le \mu_2 \longrightarrow A=\{ T : T <t^{(n_1+n_2-2)}_{1-\alpha }\} \iff \bar A =\{ T : t^{(n_1+n_2-2)}_{1-\alpha } \le T\}
-
-\\
-
+$$$$
 H_0 : \mu_1 \ge \mu_2 \longrightarrow A=\{ T : t^{(n_1+n_2-2)}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le t^{(n_1+n_2-2)}_{1-\alpha }\}
 $$
 
@@ -641,7 +628,7 @@ $$
 
 \right\}
 
-\\[8pt]
+$$$$
 
 H_0 : p=p_0\text{ vs. } H_1:p\ne p_0
 $$

@@ -104,7 +104,7 @@ $$
 **Important** : Cette approximation est valide pour $n$ fini mais grand. Il ne faut **jamais** appliquer $\lim_{n \rightarrow \infty}$ à cette formulation car elle deviendrait dégénérée.
 
 > [!warning]
-> Si on laisse $n$ tendre vers l'infini dans la version pratique, la variance serait $0$ mais la variance ne peut pas être $0$ par définition ! On aurait pas une vraie densité mais une mesure de dirac.
+> Si on laisse $n$ tendre vers l'infini dans la version pratique, la variance serait $0$ mais la variance ne peut pas être $0$ par définition ! On aurait pas une vraie densité mais une mesure de Dirac.
 
 ## Relation entre LGN et TCL
 

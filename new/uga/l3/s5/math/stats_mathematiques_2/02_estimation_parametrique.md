@@ -12,7 +12,7 @@ Une $\sigma$-algèbre ou tribu sur un ensemble $\Omega$ est un ensemble $\mathca
 
 Appliquant les lois de De Morgan avec les propriétés 2 et 3, on arrive a la stabilité par l’intersection dénombrable, car $\left( \bigcup_{i≥1} A_i \right)^c = \bigcap_{i≥1} A_i^c$.
 
-Les deux $\sigma$-algèbres les plus basiques et extrêmes sur $\Omega$ sont $\{\empty, \Omega\}$ et $\mathcal P (\Omega)$. Toute autre $\sigma$-algèbre reste sur ces deux extrêmes.
+Les deux $\sigma$-algèbres les plus basiques et extrêmes sur $\Omega$ sont $\{\emptyset, \Omega\}$ et $\mathcal P (\Omega)$. Toute autre $\sigma$-algèbre reste sur ces deux extrêmes.
 
 ### Propositions
 
@@ -55,7 +55,7 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 
 ### Propriétés basiques
 
-- $\mathbb P (\empty) = 0$.
+- $\mathbb P (\emptyset) = 0$.
 - $\mathbb P (A^c) = 1 - \mathbb P (A)$.
 - Additivité simple : $\mathbb P \left( \bigcup_{i=1}^n A_i \right) = \sum_{i=1}^n \mathbb P (A_i)$. Il faut que les $A_i$ soient disjoints.
 
@@ -280,9 +280,9 @@ $$
 
 $$
 I(\theta)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|x)d\theta 
-\\[7pt]
-\text{ou, de manière équivalente, }
-\\[7pt]
+$$
+ou, de manière équivalente,
+$$
 I(\theta)=\mathbb E\left[\left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2f(x|\theta)dx
 $$
 
@@ -360,7 +360,7 @@ $$
 
 ## Méthodes de construction d’un estimateur
 
-> [!important] ❗
+> [!important]
 >
 > Phrase du prof: la méthode de construction de l’estimateur ne garantit pas sa qualité !
 
@@ -429,7 +429,7 @@ $$
 \hat{\mathbb E}[X^2] = \frac{1}{n}\sum_{i=1}^n X_i^2=\hat{\mu^2} + \hat{\sigma^2}
 \end{cases}
 
-\\[10pts]
+$$$$
 
 \text{Finalement, }
 \begin{cases}
@@ -565,7 +565,7 @@ Par contre, cette supposition n’est pas réaliste. On y retournera après.
     &\mathbb P \left(\bar X -1.96\frac{\sigma}{\sqrt n} \le \mu\le\bar X+1.96\frac{\sigma}{\sqrt n}\right)
     &\text{Isolation de }\mu
     \end{align*}
-    \\[10pt]
+    $$$$
     
     \mathbb P \left(\bar X -1.96\sigma_{\bar X} \le \mu\le\bar X+1.96\sigma_{\bar X}\right)=0.95, \text{ où } \sigma_{\bar X}=\frac{\sigma}{\sqrt n}
     $$
