@@ -193,7 +193,7 @@ Finalement, on peut définir des normes sur les fonctions, mais on le verra plus
 **Théorème**. Deux normes $N$ et $N^\prime$ sont équivalentes si la proposition suivante est vérifié. Cette relation est symétrique : si $N$ équivalente à $N^\prime$, donc $N^\prime$ équivalente à $N$.
 
 $$
-\exist \alpha, \beta > 0, \forall x\in E:\alpha N(x)\le N^\prime(x) \le \beta N(x)
+\exists \alpha, \beta > 0, \forall x\in E:\alpha N(x)\le N^\prime(x) \le \beta N(x)
 
 \\
 
@@ -211,7 +211,7 @@ Une boule est la généralisation d’un cercle pour tous les espaces métriques
 $$
 \text{Boule ouverte : }B(x,r)=\left\{y\in E : d(x,y)<r \right\}
 
-\\
+$$$$
 
 \text{Boule fermée : }\bar B(x,r)=\left\{y\in E : d(x,y)\le r \right\}
 $$
@@ -219,7 +219,7 @@ $$
 Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\mathbb{R}^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si : 
 
 $$
-\forall a\in U, \exist r > 0: B(a,r) \sub U
+\forall a\in U, \exists r > 0: B(a,r) \subset U
 $$
 
 Ceci veut dire qu’on peut prendre un point du sous-ensemble $U$ et qu’on peut faire une boule centré sur $a$ et de rayon arbitrairement petit tel que toute la boule est incluse dans $U$, qui est lui-même inclut en $E$. Il est possible donc de couvrir tout $U$ avec des boules de différentes tailles. **L’ouvert ne contient pas de frontières**.
@@ -238,7 +238,7 @@ Voyons une liste utile de propriétés :
 
 - Toute boule ouverte est un ouvert.
 - Toute boule fermée est un fermé.
-- $\empty$ et $E$ sont, à la fois, ouverts et fermés.
+- $\emptyset$ et $E$ sont, à la fois, ouverts et fermés.
 - Toute réunion d’ouverts est un ouvert. (Complémentaires #1)
 - Toute intersection de fermés est un fermé. (Complémentaires #1)
 - Toute intersection **finie** d’ouverts est un ouvert. (Complémentaires #2)
@@ -284,7 +284,7 @@ Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble)
 Soit $(E,d)$, $(E^\prime, d^\prime)$ deux espaces métriques et $f$ une application $E\rightarrow E^\prime$. $f$ est continue en un point $x_0\in E$ si :
 
 $$
-\forall \varepsilon >0, \exist \delta >0 : f(B(x_0, \delta))\sub B(f(x_0), \varepsilon)
+\forall \varepsilon >0, \exists \delta >0 : f(B(x_0, \delta))\subset B(f(x_0), \varepsilon)
 $$
 
 De plus, si $A\subseteq E$, $f$ est continue sur $A$ si elle est continue en tout $a\in A$.
@@ -306,11 +306,9 @@ Si $L$ est le plus petit réel strictement positif vérifiant l’inégalité, o
 Quelques propriétés :
 
 - Une fonction lipschitzienne est une fonction continue : si la suite $(x_k)$ converge vers $a$ donc :
-    
-    $$
+  $$
     d^\prime(f(x_k),f(a))\le L d(x_k,a)\longrightarrow 0 \implies d^\prime(f(x_k),f(a))\longrightarrow 0
     $$
-    
     La réciproque est fausse, $f(x)=x^2$ comme exemple.
     
 - Si $f$ est lpz. pour tout compact (fermé et borné) de $E$, donc $f$ est localement lpz : c’est le cas de $f(x)=x^2$ aussi.
@@ -338,30 +336,26 @@ $\langle x+ \lambda x', y \rangle = \langle x,y \rangle + \lambda\langle x',y \r
 - Symétrie : $\langle x,y \rangle = \langle y,x \rangle$
 - Définition positive : $\langle x,x \rangle \ge 0$ et  $\langle x,x \rangle = 0 \implies x = 0$.
 
-Un propriété exigé en plus, pour un produit hermitien, est que $\lang x,y \rang = \overline{\lang y, x \rang}$, où la barre est le conjugué.
+Un propriété exigé en plus, pour un produit hermitien, est que $\langle x,y \rangle = \overline{\langle y, x \rangle}$, où la barre est le conjugué.
 
 Un espace vectoriel muni de la norme issue d’un produit scalaire est dit “espace de Hilbert”. Similairement, un “$\mathbb C$-espace vectoriel” (les scalaires sont complexes) muni d’un produit hermitien est un espace de Hermite.
 
 Il existe deux inégalités notables pour un espace hilbertien ou hermitien :
 
-- Inégalité de Schwarz : $|\lang x,y \rang| \le ||x|| ||y||$
+- Inégalité de Schwarz : $|\langle x,y \rangle| \le ||x|| ||y||$
 L’égalité est vérifié si $x$ et $y$ sont colinéaires.
-- Inégalité triangulaire : $\sqrt{\lang x+y, x+y \rang} \le ||x|| + ||y||$
+- Inégalité triangulaire : $\sqrt{\langle x+y, x+y \rangle} \le ||x|| + ||y||$
 
 Voyons quelques produits hermitiens :
 
-- Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.
-    
+- Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.    
+  $$
+    \langle x,y \rangle = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
     $$
-    \lang x,y \rang = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
-    $$
-    
 - Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\mathbb{R}$.
-    
+  $$
+    \langle P,Q \rangle = \int_0^1 P(t)\overline Q(t)dt
     $$
-    \lang P,Q \rang = \int_0^1 P(t)\overline Q(t)dt
-    $$
-    
 
 ## Orthogonalité, projections et orthonormalité
 
@@ -377,7 +371,7 @@ Avec cette définition, on peut définir un ensemble $F^\perp \in E$ de vecteurs
 - **Propriété #2** : Si $F = \text{Vect}(\{a_i\})$, donc $F^\perp = \big\{ \{x_i\} : a_1x_1 + \dots + a_n x_n = 0 \big\}$
 - **Propriété #3** : $E = F \oplus F^\perp$.
 
-On peut donc voir chaque vecteur de $E$ comme une somme d’un vecteur de $F$ et de $F^\perp$. C’est-à-dire, $x = p_F(x) + p_{F^\perp}(x)`. Donc, une projection d’un vecteur $x$ sur un ensemble  est le vecteur $x_F$, c’est-à-dire, le composant du vecteur  qui vient de l’ensemble .
+On peut donc voir chaque vecteur de $E$ comme une somme d’un vecteur de $F$ et de $F^\perp$. C’est-à-dire, $x = p_F(x) + p_{F^\perp}(x)$. Donc, une projection d’un vecteur $x$ sur un ensemble  est le vecteur $x_F$, c’est-à-dire, le composant du vecteur  qui vient de l’ensemble .
 
 **Note** : on peut voir donc $p_F(x) + p_{F^\perp}(x)$ comme la fonction identité $\text{Id}(x)$.
 
@@ -392,10 +386,12 @@ Une première note importante à faire c’est que, si $F_1\in E$ tel que $F_1=\
 
 $$
 p_{F_1}(u)=\langle u, e_1 \rangle e_1 
-\\
+$$$$
 \text{D'où, } u = \text{Id}(u)=p_{F_1}(u)+\dots+p_{F_n}(u)=\langle u,e_1\rangle e_1 +\dots+ \langle u,e_n \rangle e_n
-\\
-\text{Et, appliquant Pythagore, }||u||^2=\langle u,e_1 \rangle^2 + \dots + \langle u,e_n \rangle^2
+$$
+Et, appliquant Pythagore,
+$$
+||u||^2=\langle u,e_1 \rangle^2 + \dots + \langle u,e_n \rangle^2
 $$
 
 Pour tout ce qui précède, il est vital que la norme de $||e_i|| = 1$. Sinon, la règle générale est :
@@ -411,7 +407,7 @@ Sur l’espace vectoriel $E$ de dimension $n$, soit $F$ un sous-espace de base o
 **Théorème**. La projection orthogonale de $u\in E$ sur $F$ est :
 
 $$
-p_F(u)= \langle u, e_1\rang e_1 + \dots + \lang u, e_n \rang e_n=\sum_{i=1}^n \lang u, e_i \rang e_i
+p_F(u)= \langle u, e_1\rangle e_1 + \dots + \langle u, e_n \rangle e_n=\sum_{i=1}^n \langle u, e_i \rangle e_i
 $$
 
 La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur $u$ est le point qui minimise la distance de $u$ à $v$. C’est-à-dire : $||u-p_F(u)||=\inf \{ ||u-v||,  v\in F\}$.
@@ -422,7 +418,7 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 > Théorème. Si $\{v_i\}$ est famille libre, donc il existe une unique $\{e_i\}$ orthonormée telle que :
 >
 > 1. $\{e_i\}$ engendre le même espace que $\{v_i\}$, donc $\text{Vect}(\{e_i\})=\text{Vect}(\{v_i\})$
-> 2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\lang v_i, e_j \rang > 0, \forall i,j \le n$.
+> 2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\langle v_i, e_j \rangle > 0, \forall i,j \le n$.
 
 À partir d’une famille libre de vecteurs $\{v_i\} \in E$, on peut construire une base orthonormée $\{e_i\}$ avec ce procédé de Gram-Schmidt. La logique est la suivante :
 
@@ -432,7 +428,7 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 4. Pour $v_n$, on l’orthogonalise p.r. à $\{v_{n-1}\}$, puis on le normalise et on finit avec $e_n$.
 5. La base orthonormée finale sera finalement donné par $\{e_1, e_2, \dots, e_n\}$.
 
-Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\lang \mathbf{u},\mathbf{v} \rang}{\lang \mathbf{u},\mathbf{u} \rang} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
+Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\langle \mathbf{u},\mathbf{v} \rangle}{\langle \mathbf{u},\mathbf{u} \rangle} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
 
 $$
 \begin{align*}
@@ -492,7 +488,7 @@ Et donc, on peut créer définir d’autres espaces de fonctions à partir de $L
 **Théorème**. L’ensemble $L^2$ muni de la norme $||\cdot||_2$ est un espace hilbertien (resp. hermitien) dont la norme découle du produit scalaire :
 
 $$
-\lang f,g \rang =
+\langle f,g \rangle =
 \begin{cases}
 \int f(u)g(u)du,\text{ si espace hilbertien,}
 \\

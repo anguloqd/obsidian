@@ -135,7 +135,7 @@ Les termes d’un polynôme sans coefficients sont $x^k+x^{k-1}+\cdots+x+1$, ave
 À partir de l’espace des fonctions continues par morceaux T-périodiques, on peut définir un produit hermitien d’intérêt.
 
 $$
-\lang f,g\rang\in E^2=\frac{1}{T}\int_0^Tf(u)\bar g (u)du
+\langle f,g\rangle\in E^2=\frac{1}{T}\int_0^Tf(u)\bar g (u)du
 $$
 
 Les harmoniques élémentaires (ou “harmoniques fondamentales”) pour reconstituer un signal $T$ périodique sont donnés par la famille suivante :
@@ -150,7 +150,7 @@ $$
 On admet que ce qui suit (la manipulation algébrique est dans les slides) :
 
 $$
-\lang e^{\frac{2\pi k}{T} i p}, e^{\frac{2\pi k}{T} i q}\rang=
+\langle e^{\frac{2\pi k}{T} i p}, e^{\frac{2\pi k}{T} i q}\rangle=
 \begin{cases}
 1, \text{ si }p=q
 \\
@@ -169,7 +169,7 @@ Si on prend des couples dans $(e_k)$, on voit que $p\ne q$ toujours, et donc $(e
 À ce stade, on voudrait décomposer une fonction de $E(T)$ comme une somme de signaux élémentaires de $(e_k)$. On cherche donc les coefficients de cette combinaison linéaire, appelés les coefficients de Fourier. On se sert du produit hermitien définit précédemment. 
 
 $$
-c_p(f)=\lang f, e_p\rang=\frac{1}{T}\int_0^Tf(x)e^{-\frac{2\pi p}{T}ix}dx
+c_p(f)=\langle f, e_p\rangle=\frac{1}{T}\int_0^Tf(x)e^{-\frac{2\pi p}{T}ix}dx
 $$
 
 Le conjugué de $e_p$ se voit dans le signe négatif dans l’exposant, ce qui reflète le nombre complexe représenté sur l’axe des abscisses.
@@ -254,7 +254,7 @@ $$
 Rappelons de la définition de coefficients de Fourier qu’ils sont la “quantité” de la harmonique fondamentale d’ordre $p$ dans $f$.
 
 $$
-c_p(f)=\lang f, e_p\rang
+c_p(f)=\langle f, e_p\rangle
 $$
 
 Donc, la série de Fourier est la somme en appliquant chaque quantité d’harmonique $c_p$ sur l’harmonique $e_p$. On peut aussi parle de la “$N$-ième somme partielle de Fourier”.
@@ -331,11 +331,11 @@ $$
 \begin{align*}
 ||v||^2&=\sum_{i=1}^n||P_{\text{vect}(e_i)}(v)||^2
 \\
-&=\sum_{i=1}^n || \lang v, e_i \rang e_i ||^2
+&=\sum_{i=1}^n || \langle v, e_i \rangle e_i ||^2
 \\
-&= \sum_{i=1}^n |\lang v, e_i \rang^2 \cancel{||e_i||^2}^{\hspace{4pt}=1}
+&= \sum_{i=1}^n |\langle v, e_i \rangle^2 \cancel{||e_i||^2}^{\hspace{4pt}=1}
 \\
-&=\sum_{i=1}^n |\lang v, e_i\rang|^2
+&=\sum_{i=1}^n |\langle v, e_i\rangle|^2
 \end{align*}
 $$
 
@@ -388,7 +388,7 @@ Quelques exemples d’intégrabilité :
 Si le signal non-périodique $f$ est intégrable sur $\mathbb{R}$, on appelle transformée de Fourier de $f$ la fonction $\hat f$ définie comme :
 
 $$
-\hat f (y) = \lang f, e_{1/y}\rang =\int_\mathbb{R} f(x)e^{-2\pi i x y} dx
+\hat f (y) = \langle f, e_{1/y}\rangle =\int_\mathbb{R} f(x)e^{-2\pi i x y} dx
 $$
 
 Notons qu’ici on préfère parler directement de la fréquence de l’harmonique, $y$, plutôt que de sa période, qui serait donc $1/y$. La définition du produit hermitien est la même utilisé dans le cas de séries de Fourier.
@@ -399,7 +399,7 @@ $$
 \hat f(0)=\int_\mathbb{R} f(u)du
 $$
 
-Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(f) = \lang f, e_n\rang$, donc on pourrait penser que $\hat f (y)$ est le coefficient $1/y$ de Fourier. On explore ceci dans la section “théorème d’inversion”.
+Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(f) = \langle f, e_n\rangle$, donc on pourrait penser que $\hat f (y)$ est le coefficient $1/y$ de Fourier. On explore ceci dans la section “théorème d’inversion”.
 
 ### Propriétés et théorèmes
 
@@ -453,9 +453,9 @@ La synthèse harmonique n’est possible que si l’on peut, a partir d’une tr
 Notons déjà que $\hat f (y)$ pourrait être vu comme le coefficient $1/y$ de Fourier. **Est-ce que l’analogie se tienne ?**
 
 $$
-\text{Série : } c_n(f) = \lang f, e_n \rang \to \lim_{N\to\infty} \sum_{n=-N}^N c_n(f) e^{\frac{2\pi}{T}inx} = f(x)
+\text{Série : } c_n(f) = \langle f, e_n \rangle \to \lim_{N\to\infty} \sum_{n=-N}^N c_n(f) e^{\frac{2\pi}{T}inx} = f(x)
 \\
-\text{Transf. : } \hat f(y)= \lang f, e_{1/y}\rang \to \int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy \space\underbrace{=}_?\space f(x)
+\text{Transf. : } \hat f(y)= \langle f, e_{1/y}\rangle \to \int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy \space\underbrace{=}_?\space f(x)
 $$
 
 Déjà, notons que telle intégrale serait juste la transformée de la transformée de Fourier. En plus, si $f$ continue intégrable et $\hat f$ intégrable, donc la égalité est vérifiée. Ceci est le **théorème d’inversion**.

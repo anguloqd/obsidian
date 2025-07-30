@@ -407,7 +407,7 @@ Le test, en version bilatérale, est comme suit
 $$
 \tau=\left\{T=\frac{\bar X-\mu_0}{\sigma/\sqrt n} , A =\{T: -z_{1-\alpha/2}<T< z_{1-\alpha/2} \} \right\}
 
-\\[8pt]
+$$$$
 
 H_0:\mu=\mu_0\text{ vs. }H_1:\mu\ne\mu_0
 $$

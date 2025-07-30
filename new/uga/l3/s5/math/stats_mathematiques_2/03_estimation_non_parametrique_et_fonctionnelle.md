@@ -141,7 +141,7 @@ $$
 
 $$$$
 
-\text{Formulation plus pratique : } \hat\kappa_p \sim \mathcal N\left(\mu=\kappa_p,\hspace{4pt} \sigma^2=\frac{p(1-p)}{nf(\kappa_p)^2}\right) \text{si }n\text{ fini}
+\text{Formulation plus pratique : } \hat\kappa_p \sim \mathcal N\left(\mu=\kappa_p,\hspace{4pt} \sigma^2=\frac{p(1-p)}{nf(\kappa_p)^2}\right) \text{ si }n\text{ fini}
 $$
 
 Ceci nous permet de conclure que la quantile empirique $\hat\kappa_p$ est asymptotiquement sans biais et converge en moyenne quadratique vers sont estimande $\kappa_p$ puisque sa variance tend vers $0$ (on peut aussi montrer qu’elle converge presque sûrement).
@@ -427,7 +427,7 @@ $n → ∞$, $h → 0$, $nh → ∞$—restent nécessaires pour assurer d’aut
 
 ### Par rapport à l’EQM de $\hat f$ (erreur quadratique moyenne)
 
-Si f est deux fois dérivable, donc pour tout $x$ on a que
+Si $f$ est deux fois dérivable, donc pour tout $x$ on a que
 
 $$
 \text{EQM}(\hat f_n(x))= \frac{h^2}{12}(f^\prime(x))^2+\frac{f(x)}{nh}+o(h^2)+o(\frac{1}{nh})
@@ -621,7 +621,7 @@ $$
 
 ### Construire un intervalle de confiance pour chaque valeur $F(x)$
 
-Avant, on voudrait montrer la convergence uniforme de $\hat F$ vers $F$. Ce théorème est celui de Glivenko-Cantelli, qui no dit que la différence entre la répartition réelle et son estimateur tend vers 0 si on augmente la taille de l’échantillon.
+Avant, on voudrait montrer la convergence uniforme de $\hat F$ vers $F$. Ce théorème est celui de Glivenko-Cantelli, qui on dit que la différence entre la répartition réelle et son estimateur tend vers $0$ si on augmente la taille de l’échantillon.
 
 $$
 \lim_{n\rightarrow\infty}\left(\sup_{x\in\mathbb{R}}|\hat F_n(x)-F(x)|\right)=^\text{p.s.}0

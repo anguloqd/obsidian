@@ -23,7 +23,6 @@ La condition $x(t_0) = x_0$ est dite “donnée de Cauchy” ou “condition ini
 **Définition #1**. On appelle champs de directions ou champs de tangentes de l’équation $x^\prime(t) = f(t, x(t))$ l’ensemble des vecteurs de pente $f(t, x(t))$ dans le plan $(t, x)$. Ces vecteurs sont tangents aux trajectoires des solutions de l’´equation.
 
 **Exemple #1**.
-
 $$
 \begin{cases}
 x^\prime(t)=t
@@ -68,21 +67,13 @@ Notons donc que, du fait que on peut réécrire $y^\prime$ de telle manière, un
 
 La stratégie de résolution d’une équation différentielle comme telle est de :
 
-1. Déterminer **toutes** les solutions de l’équation homogène $y^\prime+a(t)y(t)=0$. Ceci est equivalent à 
+1. Déterminer **toutes** les solutions de l’équation homogène $y^\prime+a(t)y(t)=0$. Ceci est equivalent à
+   $$y^\prime+a(t)y(t)=0 \iff y^\prime_0=-a(t)y_0(t)$$
+2. Trouver **une** solution de l’équation complète $y^\prime+a(t)y(t)=f(t)$. Ceci est réécrit aussi comme     
+	$$y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)$$
     
-    $$
-    y^\prime+a(t)y(t)=0 \iff y^\prime_0=-a(t)y_0(t)
-    $$
-    
-2. Trouver **une** solution de l’équation complète $y^\prime+a(t)y(t)=f(t)$. Ceci est réécrit aussi comme 
-    
-    $$
-    y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)
-    $$
-    
-3. La solution générale sera $y=y_0+y_*$. Si on dérive les deux membres de cette dernière équation, on devrait trouver l’équation du départ.
-    
-    $$
+3. La solution générale sera $y=y_0+y_*$. Si on dérive les deux membres de cette dernière équation, on devrait trouver l’équation du départ.   
+   $$
     \begin{align*}
     y^\prime & =y_0^\prime+y_*^\prime \\
     & =-a(t) y_0(t)+f(t)-a(t) y_0(t) \\
@@ -92,7 +83,6 @@ La stratégie de résolution d’une équation différentielle comme telle est d
     \\[6pt]
     y^{\prime}+a(t) y(t) =f(t)
     $$
-    
 
 ## Résolution de l’équation homogène
 
@@ -136,18 +126,16 @@ y^\prime+2y=t^2+3t
 $$
 
 On commence par la solution de l’équation homogène : $y_0 = Ce^{-2t}$. On fait de même pour la solution particulière de l’équation particulière : $y_* = C(t)e^{-2t}$. Ayant ce dernier, on dérive $y_*$ :
-
 $$
 \begin{align*}
 y_*^{\prime}(t) & =C^{\prime}(t) e^{-2 t}-2 C(t) e^{-2 t} \\
 & =e^{-2 t}\left(C^{\prime}(t)-2 C(t)\right)
 \end{align*}
 
-\\[7pt]
-
+$$$$
 \text{On revient à l'équation : } y_*^{\prime}+2 y=t^2-3 t
 
-\\[10pt]
+$$$$
 
 \begin{align*}
 
@@ -160,7 +148,7 @@ e^{-2 t} C^{\prime}(t) & =t^2-3 t \\
 C^{\prime}(t) & =\left(t^2-3 t\right) e^{2 t}
 \end{align*}
 
-\\[7pt]
+$$$$
 
 C(t)=\int\left(t^2-3 t\right) e^{2 t} d t=\frac{e^{2t}}{2}(t^2-4t+2)
 $$
@@ -258,7 +246,6 @@ $$
 Côte particulière, notons que $c(x) = P(x)e^{\beta x}=e^x$ d’où $P(x)=1$ et $\beta=1$. Notons que tel $\beta$ est solution de l’équation caractéristique $E_\mathcal C : x^2-3x+2 = 0$.
 
 Grâce à ce dernier, la solution particulière est donc de la forme $Q(x)e^x$ avec $d°(Q(x)) = 0+1=1$. C’est à dire, la solution particulière est donc $y_*=(ax + b)e^x$, où :
-
 $$
 \begin{align*}
 y'(x) &= (a + ax + b)e^x = (ax + a + b)e^x, \\
@@ -277,8 +264,7 @@ $$
 \end{align*}
 $$
 
-Notons que, quand on veut résoudre pour $a$, on n’a pas de condition sur $b$. La valeur de 
-$$$a$ est $-1$ peu importe la valeur de $b$. Pour nous simplifier la vie, on dit donc que $b=0$, mais en réalité $b$ pourrait prendre n’importe quelle valeur arbitraire.
+Notons que, quand on veut résoudre pour $a$, on n’a pas de condition sur $b$. La valeur de $a$ est $-1$ peu importe la valeur de $b$. Pour nous simplifier la vie, on dit donc que $b=0$, mais en réalité $b$ pourrait prendre n’importe quelle valeur arbitraire.
 
 Ainsi, la solution particulière est donnée par
 

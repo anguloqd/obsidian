@@ -102,14 +102,14 @@ $$
 
 **Théorème**. Soit $E$ un espace (hilbertien ou hermitien) de dimension $n$ muni d’un produit scalaire/hermitien. Donc, il existe dans $E$ des bases orthonormées.
 
-## Projection orthogonale : $p_F(u)=\sum_{i=1}^n \lang u, e_i \rang e_i$
+## Projection orthogonale : $p_F(u)=\sum_{i=1}^n \langle u, e_i \rangle e_i$
 
 Sur l’espace vectoriel $E$ de dimension $n$, soit $F$ un sous-espace de base orthonormé $\{e_1\}$.
 
 **Théorème**. La projection orthogonale de $u\in E$ sur $F$ est :
 
 $$
-p_F(u)= \langle u, e_1\rang e_1 + \dots + \lang u, e_n \rang e_n=\sum_{i=1}^n \lang u, e_i \rang e_i
+p_F(u)= \langle u, e_1\rangle e_1 + \dots + \langle u, e_n \rangle e_n=\sum_{i=1}^n \langle u, e_i \rangle e_i
 $$
 
 La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur $u$ est le point qui minimise la distance de $u$ à $v$. C’est-à-dire : $||u-p_F(u)||=\inf \{ ||u-v||,  v\in F\}$.
@@ -122,7 +122,7 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 > Théorème. Si $\{v_i\}$ est famille libre, donc il existe une unique $\{e_i\}$ orthonormée telle que :
 >
 > 1. $\{e_i\}$ engendre le même espace que $\{v_i\}$, donc $\text{Vect}(\{e_i\})=\text{Vect}(\{v_i\})$
-> 2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\lang v_i, e_j \rang > 0, \forall i,j \le n$.
+> 2. Les produits scalaires entre deux vecteurs de $\{e_i\}$ et $\{v_i\}$ resp. sont strict. positifs. C’est-à-dire, $\langle v_i, e_j \rangle > 0, \forall i,j \le n$.
 
 À partir d’une famille libre de vecteurs $\{v_i\} \in E$, on peut construire une base orthonormée $\{e_i\}$ avec ce procédé de Gram-Schmidt. La logique est la suivante :
 
@@ -132,7 +132,7 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 4. Pour $v_n$, on l’orthogonalise p.r. à $\{v_{n-1}\}$, puis on le normalise et on finit avec $e_n$.
 5. La base orthonormée finale sera finalement donné par $\{e_1, e_2, \dots, e_n\}$.
 
-Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\lang \mathbf{u},\mathbf{v} \rang}{\lang \mathbf{u},\mathbf{u} \rang} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
+Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\langle \mathbf{u},\mathbf{v} \rangle}{\langle \mathbf{u},\mathbf{u} \rangle} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
 
 $$
 \begin{align*}

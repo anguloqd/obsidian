@@ -422,10 +422,10 @@ These methods use the notion of subspaces to identify changes in data. This appr
     \hat\Sigma=\frac 1 n \sum_{\ell=1}^n(k(X_\ell,.)-\hat\mu)\otimes(k(X_\ell,.)-\hat\mu)
     $$
     
-    Here, $(u\otimes v)_f=\lang v,f \rang_{ℋ}u$. We compute de Kernel Fisher Discriminant Ratio between two samples as follows :
+    Here, $(u\otimes v)_f=\langle v,f \rangle_{ℋ}u$. We compute de Kernel Fisher Discriminant Ratio between two samples as follows :
     
     $$
-    KFDR(X_1^{\text{length }n_1},X_2^{\text{length }n_2})=\frac{n_1n_2}{n_1+n_2}\lang\hat\mu_2-\hat\mu_1,(\hat\Sigma_w+\gamma I)^{-1}(\hat\mu_2-\hat\mu_1)\rang_ℋ
+    KFDR(X_1^{\text{length }n_1},X_2^{\text{length }n_2})=\frac{n_1n_2}{n_1+n_2}\langle\hat\mu_2-\hat\mu_1,(\hat\Sigma_w+\gamma I)^{-1}(\hat\mu_2-\hat\mu_1)\rangle_ℋ
     $$
     
     Where $\gamma$ is a regularization parameter and
