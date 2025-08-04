@@ -1,0 +1,3 @@
+# 03 // endogénéité et variables instrumentales
+
+[03_endogeneite_et_variables_instrumentales_l3_endogeneite_et_vis.pdf](ressources/03_endogeneite_et_variables_instrumentales_l3_endogeneite_et_vis.pdf)

@@ -1,0 +1,81 @@
+---
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+# Loi géométrique
+
+### Définition 
+
+La loi géométrique est une loi de probabilité discrète qui modélise le nombre d'essais nécessaires pour obtenir le premier succès dans une suite d'épreuves indépendantes. Chaque épreuve possède seulement deux résultats possibles : succès (probabilité $p$) ou échec (probabilité $1-p$). La variable aléatoire représente le nombre d'épreuves nécessaires pour obtenir le premier succès.
+
+#### Loi de probabilité
+
+Soit $0 < p \leq 1$. La variable aléatoire à valeurs entières $X$ suit la loi géométrique de paramètre $p$ si
+
+$$
+{\rm Prob}(X = k) = p (1 - p)^{k-1}  \,, \quad k = 1, 2, \dots
+$$
+
+#### Propriétés
+
+* Supposons que $X$ décrit le temps d'attente de la réalisation d'un événement de probabilité $p$ (succès) dans une répétition d'épreuves indépendantes. Alors, $X$ suit la loi géométrique de paramètre $p$ et le temps moyen d'attente de la réalisation de l'événement de probabilité $p$ est 
+
+$$
+\mathbb{E}[X] = \frac{1}p \, .
+$$
+
+
+
+
+### Exercice 1
+
+* Supposons que $X$ suit la loi géométrique de paramètre $p$. Justifier que
+
+$$
+{\rm Prob}(X > k) = (1 - p)^k \, , \quad k \geq 0 \, .
+$$
+
+Prouver mathématiquement ce résultat à l'aide d'une démonstration par récurrence. On pourra utiliser le fait que 
+
+$$
+{\rm Prob}(X = k)  =  {\rm Prob}(X > k - 1)  - {\rm Prob}(X > k) \,  .
+$$
+
+* Les fusées shadok décollent avec une probabilité $p$ égale à un sur un million. Les lancers sont supposés indépendants. Calculer numériquement la probabilité pour qu'aucune fusée shadok ne décolle lors du premier million de lancers ?  (arrondir à 3 décimales)
+
+```{r}
+chatgpt_dis_moi_tout <- NULL 
+```
+
+* En moyenne, on s'attend à ce que combien de fusées Shadok décollent lors du premier million de lancers ?  
+
+```{r}
+# réfléchit deux secondes avant d'utiliser un outil sans gloire
+# unglorious_moustarde <- NULL
+```
+
+* Soit $Y$ une variable de loi de Poisson de paramètre $\lambda = 1$. Calculer numériquement la probabilité Prob$(Y = 0)$ (arrondir à 3 décimales). Expliquer pourquoi le résultat est similaire à celui obtenu dans une question précédente. 
+
+```{r}
+# help(dpois) si tu n'as pas la mémoire de Poisson
+# ou d'autres moyens moins honorables
+```
+
+
+### Exercice 2 si on a le temps
+
+* Supposons que $X$ suit la loi géométrique de paramètre $p$. Justifier sans calcul que 
+
+$$
+\mathbb{E}[X | X > 1] =  1 + \mathbb{E}[X].
+$$
+
+* En déduire que 
+
+$$
+\mathbb{E}[X] =  p + \mathbb{E}[X] \times (1 - p)
+$$
+et retrouver la formule de l'espérance (ainsi, nous n'aurons pas calculé de somme infinie).
