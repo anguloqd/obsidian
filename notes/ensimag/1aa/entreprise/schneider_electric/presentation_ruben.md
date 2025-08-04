@@ -33,9 +33,12 @@ CB110: developpé par SE, sans fil, facile à utiliser (juste connecter)?
 
 ---
 
-ressor de rappelle casse: on veut fiare de la maintenance predictive pour éviter ça.
-on veut in lien claire entre la EE et la vibration ! mais coté client on veut juste savoir l'état de sante du produit.
+ressort de rappelle casse: on veut faire de la maintenance predictive pour éviter ça.
+(ceci n'était pas le but de la recherche, mais maintenant le projet de ruben se focaliser vers cette casse de ressort)
+
+on veut un lien claire entre la EE et la vibration ! mais coté client on veut juste savoir l'état de sante du produit.
 
 cycle de vie fini: grenade pert de la EE.
 défaut: un truc auquel on s'attend pas.
+
 
