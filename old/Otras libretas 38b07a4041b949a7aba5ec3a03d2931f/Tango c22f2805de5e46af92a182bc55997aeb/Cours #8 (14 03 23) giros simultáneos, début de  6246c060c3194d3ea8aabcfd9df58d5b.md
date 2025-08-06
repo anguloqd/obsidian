@@ -1,1 +1,0 @@
-# Cours #8 (14/03/23) : giros simultáneos, début de coréographie
