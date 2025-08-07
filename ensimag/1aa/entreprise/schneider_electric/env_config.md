@@ -15,3 +15,18 @@
     - pandas (et fastparquet pour .parq, ne pas installer pyarrow !), matplotlib, seaborn
 
 -   Configurer proxy dans git : `git config http.proxy http://gateway.schneider.zscaler.net:80/`
+
+-   Configurer Git LFS:
+    ```
+    sudo apt update
+    sudo apt install git-lfs
+    git lfs install
+    git lfs track "*.pptx"
+    git add .gitattributes
+    git rm --cached "ensimag/1aa/entreprise/schneider_electric/ressources/Data_Gov+Quick_LIMS_Intro.pptx"
+    git add "ensimag/1aa/entreprise/schneider_electric/ressources/Data_Gov+Quick_LIMS_Intro.pptx"
+    git commit -m "use git lfs for pptx files"
+    git config lfs.https://github.com/anguloqd/obsidian.git/info/lfs.locksverify false
+    git config lfs.locksverify false
+    git push
+    ```
