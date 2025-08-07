@@ -1,9 +1,11 @@
 {
   "cssTheme": "",
   "showRibbon": false,
-  "interfaceFontFamily": "",
+  "interfaceFontFamily": "JetBrains Mono NL",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "center"
-  ]
+  ],
+  "textFontFamily": "JetBrains Mono NL",
+  "baseFontSizeAction": true
 }
