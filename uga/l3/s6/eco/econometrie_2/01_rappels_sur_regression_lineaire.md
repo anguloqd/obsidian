@@ -2,443 +2,118 @@
 
 [01_rappels_sur_regression_lineaire_l1_regressionlineaire_intro_1.pdf](ressources/01_rappels_sur_regression_lineaire_l1_regressionlineaire_intro_1.pdf)
 
-## Deux exemples d'effets causaux difficiles à identifier
+## Introduction au problème d'identification
 
-### Identification des paramètres d'un modèle
+L'identification des paramètres d'un modèle économétrique constitue un défi fondamental dans l'analyse causale. Cette problématique émerge lorsque nous cherchons à estimer l'effet causal d'une variable explicative sur une variable dépendante, mais que les données observées ne permettent pas de distinguer clairement cette relation causale des simples corrélations statistiques.
 
-Variables explicatives exogènes, variables explicatives endogènes, modèle de régression
+Le problème central réside dans la distinction entre variables explicatives exogènes et endogènes. Une variable exogène est déterminée indépendamment du phénomène étudié, tandis qu'une variable endogène est influencée par les mêmes facteurs non observés qui affectent la variable dépendante. Cette distinction est cruciale car elle détermine si les méthodes de régression standard peuvent produire des estimations fiables des effets causaux.
 
-### Le problème de l'identification, covariances et paramètres
+### Le cadre théorique
 
-Les concepts présentés à partir des exemples sont présentés dans le cas général
+Dans un modèle de régression linéaire standard de la forme $y_i = \alpha_0 + b_0 \tilde{x}_i + u_i$ avec $E[u_i] \equiv 0$, l'identification du paramètre $b_0$ dépend entièrement de la nature de la relation entre la variable explicative $\tilde{x}_i$ et le terme d'erreur $u_i$. Le terme d'erreur contient tous les facteurs non observés qui influencent la variable dépendante mais ne sont pas explicitement modélisés.
 
-## Formation et salaire
+L'estimateur des moindres carrés ordinaires (MCO) ne converge vers la vraie valeur du paramètre $b_0$ que si la covariance entre la variable explicative et le terme d'erreur est nulle : $\text{Cov}(\tilde{x}_i, u_i) = 0$. Cette condition, appelée exogénéité, garantit que la variable explicative n'est pas corrélée avec les facteurs non observés qui affectent la variable dépendante.
 
-On analyse ici un problème « emblématique » (qui a valu le prix Nobel à Heckman en 2000), sous une forme un peu caricaturale.
+## L'effet de la formation sur le salaire
 
-**Objectif.** On veut estimer l'effet moyen, en termes de salaire, d'une formation BAC+5 par rapport à un BAC seul. On veut l'effet causal moyen de la formation BAC+5 :
+### Contexte et objectifs
 
-$$x_i \tilde{} \rightarrow y_i$$
+L'estimation de l'effet causal de l'éducation supérieure sur les salaires représente un problème emblématique en économétrie du travail, ayant valu le prix Nobel à James Heckman en 2000. L'objectif consiste à mesurer l'effet moyen d'une formation BAC+5 par rapport à un BAC seul sur les revenus salariaux, soit l'effet causal $\tilde{x}_i \rightarrow y_i$ où $\tilde{x}_i$ représente le niveau de formation et $y_i$ le salaire.
 
-effet d'acquis de connaissances sur le salaire
+Cette mesure constitue un indicateur de l'efficacité économique de l'enseignement supérieur. Cependant, l'estimation directe de cet effet à partir d'un échantillon de jeunes salariés avec différents niveaux de formation pose des défis méthodologiques considérables.
 
-C'est une mesure de l'efficacité « économique » du BAC+5.
+### Le problème d'identification
 
-**Les données.** Un grand échantillon ($i = 1,...,N$) de jeunes salariés avec le « BAC » ($\tilde{x_i} = 0$) et avec « BAC+5 » ($\tilde{x_i} = 1$). On dispose de leurs salaires, $y_i$, 10 ans après leur BAC. Ces salariés ont tous le même âge, sexe, …
+Dans le modèle $y_i = \alpha_0 + b_0 \tilde{x}_i + u_i$, le terme d'erreur $u_i$ inclut tous les facteurs non observés qui influencent le salaire : les aptitudes individuelles, la motivation, les opportunités, les réseaux sociaux, et autres caractéristiques personnelles. Le problème surgit car ces mêmes facteurs non observés influencent également la décision de poursuivre des études supérieures.
 
-### Examen théorique de la question posée
+Un individu doté d'aptitudes supérieures à la moyenne aura tendance à la fois à poursuivre des études BAC+5 et à obtenir un salaire élevé, indépendamment de l'effet causal de la formation. Cette double influence génère une corrélation positive entre $\tilde{x}_i$ et $u_i$, violant la condition d'exogénéité nécessaire à l'identification.
 
-Une manière simple de poser le problème consiste à écrire le modèle :
+La covariance $\text{Cov}(\tilde{x}_i, y_i) = V(\tilde{x}_i) b_0 + \text{Cov}(\tilde{x}_i, u_i)$ révèle que la corrélation observée entre formation et salaire contient deux composantes : l'effet causal recherché $b_0$ et un biais de sélection $\text{Cov}(\tilde{x}_i, u_i)$ qui ne peut être séparé sans information supplémentaire.
 
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
+### Implications méthodologiques
 
-On a alors :
-- Salaire d'un « BAC » ($\tilde{x_i} = 0$) : $\alpha_0 + u_i$
-- Salaire moyen d'un « BAC » ($\tilde{x_i} = 0$) : $\alpha_0$
-- Salaire d'un « BAC+5 » ($\tilde{x_i} = 1$) : $\alpha_0 + b_0 + u_i$
-- Salaire moyen d'un « BAC+5 » ($\tilde{x_i} = 1$) : $\alpha_0 + b_0$
-- Effet BAC+5 / BAC : $b_0$
+L'estimateur MCO $\hat{b}_{MCO}^N$ converge vers $b_0 + V(\tilde{x}_i)^{-1} \text{Cov}(\tilde{x}_i, u_i)$ plutôt que vers le vrai paramètre $b_0$. Le biais $V(\tilde{x}_i)^{-1} \text{Cov}(\tilde{x}_i, u_i)$ ne peut être estimé puisque le terme d'erreur $u_i$ n'est pas observable. Cette situation illustre un problème d'identification fondamental : les données disponibles ne contiennent pas suffisamment d'information pour séparer l'effet causal de la corrélation spurieuse.
 
-Reste maintenant à estimer $b_0$, mais avant ça il faut savoir si $b_0$ est :
-« Estimable » avec les données disponibles ⇔ identifiable
+La résolution de ce problème nécessite l'introduction d'information supplémentaire, soit par l'utilisation d'instruments (variables qui affectent la formation mais pas directement le salaire), soit par des techniques de contrôle pour les variables omises, soit par l'exploitation de variations quasi-expérimentales.
 
-### Examen de l'identification des paramètres du modèle
+## L'équilibre proie-prédateur
 
-$$\mathbf{a_0} \equiv (\alpha_0, b_0)$$
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
+### Le modèle écologique
 
-On va en fait montrer ici que $\mathbf{a_0} \equiv (\alpha_0, b_0)$ est identifiable avec les données disponibles, i.e. les $(y_i, \tilde{x_i})$ avec $i = 1,...,N$, si et seulement si $\text{Cov}[\tilde{x_i}; u_i] = 0$.
+L'analyse des écosystèmes proie-prédateur illustre un autre type de problème d'identification, celui de la simultanéité. L'objectif consiste à estimer le nombre de proies nécessaire à la survie d'un prédateur dans un écosystème en équilibre, soit le paramètre $b_0^{-1}$ dans le modèle $y_i = \alpha_0 + b_0 \tilde{x}_i + u_i$ où $y_i$ représente le nombre de prédateurs et $\tilde{x}_i$ le nombre de proies dans l'écosystème $i$.
 
-L'intuition sous-jacente est simple :
+### Le problème de simultanéité
 
-1. Le seul estimateur de $\mathbf{a_0} \equiv (\alpha_0, b_0)$ qu'on sache estimer à partir des données disponibles est l'estimateur des MCO.
-2. L'estimateur des MCO de $\mathbf{a_0} \equiv (\alpha_0, b_0)$ est biaisé si $\text{Cov}[\tilde{x_i}; u_i] \neq 0$.
-3. On ne peut estimer $\text{Cov}[\tilde{x_i}; u_i]$ puisque les $u_i$ ne sont pas observés.
+Contrairement à l'exemple précédent où l'endogénéité résultait de facteurs omis, ici elle provient d'une causalité bidirectionnelle. Le nombre de proies détermine le nombre de prédateurs par un effet "nourriture disponible", mais simultanément, le nombre de prédateurs influence le nombre de proies par un effet "élimination par la chasse".
 
-On montrera ensuite que, dans le cas de l'effet de « BAC+5 » sur le salaire, on a vraisemblablement $\text{Cov}[\tilde{x_i}; u_i] > 0$.
+Cette détermination simultanée crée une corrélation négative entre $\tilde{x}_i$ et $u_i$ : un excès temporaire de prédateurs (contenu dans $u_i$) réduit le nombre de proies observé. La relation $\text{Cov}(\tilde{x}_i, u_i) < 0$ invalide l'hypothèse d'exogénéité et rend le paramètre $b_0$ non identifiable par les méthodes de régression standard.
 
-### L'estimateur des MCO
+Ce problème de simultanéité se retrouve fréquemment en économétrie, notamment dans l'analyse des marchés où prix et quantités se déterminent conjointement par l'équilibre de l'offre et de la demande.
 
-L'estimateur des MCO de $\mathbf{a_0}$, $\hat{\mathbf{a}}_{MCO}^N$, ne converge pas vers $\mathbf{a_0}$ si $\text{Cov}[\tilde{x_i}; u_i] \neq 0$
+## Formalisation générale du problème d'identification
 
-Avec $\mathbf{a_0} \equiv (\alpha_0, b_0)$ et $\mathbf{x_i} \equiv (1, \tilde{x_i})$, on écrit ici le modèle sous la forme générale « compacte » :
+### Cadre théorique
 
-$$y_i = \mathbf{x_i'} \mathbf{a_0} + u_i \text{ avec } E[u_i] \equiv 0$$
+Dans le modèle linéaire général $y_i = \mathbf{x}_i' \mathbf{a}_0 + u_i = \alpha_0 + \mathbf{\tilde{x}}_i' \mathbf{b}_0 + u_i$ avec $E[u_i] \equiv 0$, l'identification des paramètres repose sur l'estimation des covariances entre les variables observées. La covariance fondamentale s'écrit :
 
-L'estimateur des MCO de $\mathbf{a_0}$ est donné par (voir le cours de régression) :
+$$\text{Cov}(y_i, \mathbf{\tilde{x}}_i) = V(\mathbf{\tilde{x}}_i) \mathbf{b}_0 + \text{Cov}(u_i, \mathbf{\tilde{x}}_i)$$
 
-$$\hat{\mathbf{a}}_{MCO}^N \equiv (\mathbf{X'X})^{-1} \mathbf{X'y}$$
+Cette équation révèle que les covariances observables mélangent les paramètres d'intérêt $\mathbf{b}_0$ avec les covariances non observables entre variables explicatives et terme d'erreur.
 
-avec :
+### Conditions d'identification
 
-$$\mathbf{y} \equiv \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_N \end{pmatrix}_{N \times 1}$$
+L'identification complète du vecteur de paramètres $\mathbf{a}_0 \equiv (\alpha_0, \mathbf{b}_0)$ requiert que toutes les variables explicatives soient exogènes, c'est-à-dire $\text{Cov}(u_i, \mathbf{\tilde{x}}_i) = \mathbf{0}$. Dans ce cas idéal, l'estimateur MCO converge vers les vraies valeurs des paramètres et constitue un modèle de régression proprement dit.
 
-et
+Inversement, si certaines variables explicatives sont endogènes ($\text{Cov}(\tilde{x}_{i,k}, u_i) \neq 0$ pour au moins un $k$), alors les paramètres ne sont plus identifiables par les méthodes standard. Cette situation nécessite des approches méthodologiques sophistiquées pour restaurer l'identification.
 
-$$\mathbf{X} \equiv \begin{pmatrix} \mathbf{x_1'} \\ \mathbf{x_2'} \\ \vdots \\ \mathbf{x_N'} \end{pmatrix} = \begin{pmatrix} x_{1,1} & x_{2,1} & \cdots & x_{K,1} \\ x_{1,2} & x_{2,2} & \cdots & x_{K,2} \\ \vdots & \vdots & \ddots & \vdots \\ x_{1,N} & x_{2,N} & \cdots & x_{K,N} \end{pmatrix}_{N \times K}$$
+### Définitions formelles
 
-Nous écrirons ici l'estimateur des MCO sous la forme :
+Une variable explicative $\tilde{x}_i$ est qualifiée d'**exogène** si $\text{Cov}(\tilde{x}_i, u_i) = 0$, garantissant que son effet peut être estimé de manière non biaisée. À l'inverse, elle est **endogène** si cette covariance est non nulle, créant un biais dans l'estimation.
 
-$$\hat{\mathbf{a}}_{MCO}^N = \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} y_i$$
+Un **modèle de régression** est défini comme un modèle linéaire où toutes les variables explicatives sont exogènes, autorisant l'utilisation des méthodes de régression pour l'estimation des paramètres. Cette définition souligne que la validité d'une régression dépend fondamentalement des propriétés statistiques des données, non de la seule forme fonctionnelle du modèle.
 
-en utilisant :
+## Convergence et propriétés asymptotiques
 
-$$\mathbf{X'X} = \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'}$$ et $$\mathbf{X'y} = \sum_{i=1}^{N} \mathbf{x_i} y_i$$
+### Analyse de la convergence
 
-et en multipliant par $\frac{1}{N}$ les deux $\sum_{i=1}^{N} ...$
+La démonstration formelle du problème d'identification repose sur l'analyse de la convergence de l'estimateur MCO. En utilisant la représentation $\hat{\mathbf{a}}_{MCO}^N = \mathbf{a}_0 + \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x}_i \mathbf{x}_i' \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x}_i u_i$, la loi des grands nombres implique que :
 
-Cette écriture est « lourde » mais facilite l'analyse de la convergence de $\hat{\mathbf{a}}_{MCO}^N$ puisqu'on utilise la LGN.
+$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a}_0 + E[\mathbf{x}_i \mathbf{x}_i']^{-1} E[\mathbf{x}_i u_i]$$
 
-On veut ici montrer que :
+Le terme $E[\mathbf{x}_i u_i]$ détermine la présence ou l'absence de biais asymptotique. Si ce terme est nul (exogénéité), l'estimateur converge vers la vraie valeur. Sinon, il converge vers une valeur biaisée, révélant l'impossibilité d'identifier les vrais paramètres.
 
-$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0} \text{ si } \text{Cov}[\tilde{x_i}; u_i] = 0$$
+### Techniques d'estimation avancées
 
-et :
+Trois procédures fondamentales sous-tendent l'estimation économétrique moderne. La première concerne l'estimation d'espérances mathématiques par leurs contreparties empiriques, exploitant la loi des grands nombres : $\frac{1}{N} \sum_{i=1}^{N} \mathbf{W}_i \xrightarrow{p} E[\mathbf{W}_i]$.
 
-$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0} + \boldsymbol{\beta} \text{ avec } \boldsymbol{\beta} \neq \mathbf{0} \text{ si } \text{Cov}[\tilde{x_i}; u_i] \neq 0$$
+La seconde généralise cette approche aux fonctions paramétrées : si $\hat{\boldsymbol{\beta}}_N \xrightarrow{p} \boldsymbol{\beta}_0$, alors $\frac{1}{N} \sum_{i=1}^{N} g(\mathbf{w}_i, \hat{\boldsymbol{\beta}}_N) \xrightarrow{p} E[g(\mathbf{w}_i, \boldsymbol{\beta}_0)]$.
 
-> **Remarque.** Pour tous les estimateurs de cette partie : $\hat{\mathbf{a}}^N = \mathbf{a_0} + \frac{1}{N} \sum_{i=1}^{N} ...$
+La troisième exploite la continuité des transformations : si les estimateurs des composantes convergent, alors l'estimateur de toute fonction continue de ces composantes converge également vers la fonction des vraies valeurs.
 
-Le modèle de $y_i$ nous donne que $y_i = \mathbf{x_i'} \mathbf{a_0} + u_i$, on a donc :
+## Comparaison avec les données expérimentales
 
-$$\hat{\mathbf{a}}_{MCO}^N = \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} (\mathbf{x_i'} \mathbf{a_0} + u_i)$$
+### L'avantage expérimental
 
-Après développement, on obtient :
+Les données expérimentales, couramment utilisées en médecine pour évaluer l'efficacité des traitements, résolvent naturellement le problème d'identification. L'assignation aléatoire des sujets aux groupes traitement et contrôle garantit que $\text{Cov}(\tilde{x}_i, u_i) = 0$ par construction, puisque le statut de traitement devient indépendant de tous les facteurs non observés.
 
-$$\hat{\mathbf{a}}_{MCO}^N = \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \mathbf{a_0} + \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} u_i$$
+Cette randomisation permet l'utilisation directe des méthodes de régression ou même de simples comparaisons de moyennes pour identifier l'effet causal. L'expérience est précisément conçue pour simplifier l'analyse causale en éliminant les sources potentielles de biais.
 
-et après simplifications :
+### Limitations dans les sciences sociales
 
-$$\hat{\mathbf{a}}_{MCO}^N = \mathbf{a_0} + \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} u_i$$
+En économie et sciences sociales, les données sont généralement observationnelles plutôt qu'expérimentales. Les individus choisissent leurs niveaux d'éducation, leur participation au marché du travail, leurs décisions de consommation selon leurs préférences et contraintes personnelles. Cette auto-sélection crée systématiquement des corrélations entre les décisions observées et les caractéristiques non observées.
 
-car :
+L'impossibilité pratique, éthique ou financière de mener des expérimentations contrôlées dans de nombreux domaines économiques nécessite le développement de techniques sophistiquées pour traiter l'endogénéité. Ces méthodes tentent de reproduire les conditions expérimentales idéales à partir de données observationnelles, exploitant des sources de variation quasi-expérimentale ou des restrictions d'identification théoriques.
 
-$$\left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \mathbf{a_0} = \mathbf{a_0}$$
+## Perspectives et extensions
 
-> **Remarque.** Pour tous les estimateurs de cette partie : $\hat{\mathbf{a}}^N = \mathbf{a_0} + \frac{1}{N} \sum_{i=1}^{N} u_i ...$
+### Hétérogénéité des effets
 
-L'estimateur des MCO est convergent pour $\mathbf{a_0}$, i.e. $\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0}$, si :
+Le modèle linéaire standard $y_i = \alpha_0 + b_0 \tilde{x}_i + u_i$ suppose implicitement que l'effet de la variable explicative est homogène dans la population, mesuré par le paramètre fixe $b_0$. En pratique, les effets peuvent varier selon les individus, motivant l'utilisation de modèles à paramètres aléatoires de la forme $y_i = \alpha_i + b_i \tilde{x}_i + u_i$.
 
-$$\left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} u_i \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{0}$$
+Cette extension reconnaît que l'effet de l'éducation sur le salaire peut différer selon les aptitudes, motivations, ou circonstances individuelles. L'analyse et l'estimation de tels modèles, qui constituent l'objectif d'extensions avancées du cours, requièrent des techniques statistiques plus sophistiquées mais offrent une représentation plus réaliste des phénomènes étudiés.
 
-On sait, par la loi LGN, que :
+### Solutions au problème d'identification
 
-$$\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \xrightarrow{p}_{N \rightarrow +\infty} E[\mathbf{x_i} \mathbf{x_i'}]$$ 
+Le problème d'identification étant fondamentalement un déficit d'information, sa résolution nécessite l'apport d'informations supplémentaires au modèle. Plusieurs stratégies peuvent être employées : l'utilisation de variables instrumentales qui affectent la variable explicative endogène sans influencer directement la variable dépendante, l'exploitation de discontinuités dans les règles d'attribution, ou l'utilisation de données de panel permettant le contrôle des effets fixes individuels.
 
-et 
-
-$$\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} u_i \xrightarrow{p}_{N \rightarrow +\infty} E[\mathbf{x_i} u_i]$$
-
-En combinant ces résultats on obtient :
-
-$$\left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} \mathbf{x_i'} \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x_i} u_i \xrightarrow{p}_{N \rightarrow +\infty} E[\mathbf{x_i} \mathbf{x_i'}]^{-1} \times E[\mathbf{x_i} u_i] = E[\mathbf{x_i} \mathbf{x_i'}]^{-1} \times \text{Cov}[\tilde{x_i}; u_i]$$
-
-Finalement on obtient :
-
-$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0} + E[\mathbf{x_i} \mathbf{x_i'}]^{-1} \text{Cov}[\tilde{x_i}; u_i]$$
-
-et donc :
-
-$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0} \text{ si } \text{Cov}[\tilde{x_i}; u_i] = 0$$
-
-et :
-
-$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a_0} + \boldsymbol{\beta} \text{ avec } \boldsymbol{\beta} \neq \mathbf{0} \text{ si } \text{Cov}[\tilde{x_i}; u_i] \neq 0$$
-
-Puisque $\hat{\mathbf{a}}_{MCO}^N$ est le seul estimateur de $\mathbf{a_0}$ qu'on sache calculer à partir des données disponibles on a :
-
-$\mathbf{a_0}$ n'est identifiable à partir des $(y_i, \tilde{x_i})$ que si $\text{Cov}[\tilde{x_i}; u_i] = 0$.
-
-### Approche alternative
-
-On peut retrouver le problème lié à $\text{Cov}[\tilde{x_i}; u_i] \neq 0$ à partir de calculs simples.
-
-Avec $E[u_i] \equiv 0$ et $y_i = \alpha_0 + b_0 \tilde{x_i} + u_i$, on a :
-
-$$E[y_i] = \alpha_0 + b_0 E[\tilde{x_i}]$$
-
-et donc :
-
-$$\alpha_0 = E[y_i] - b_0 E[\tilde{x_i}]$$
-
-Les termes $E[y_i]$ et $E[\tilde{x_i}]$ sont estimables, i.e. identifiables, puisque par la LGN on a :
-
-$$\bar{y}_N \equiv \frac{1}{N} \sum_{i=1}^{N} y_i \xrightarrow{p}_{N \rightarrow +\infty} E[y_i]$$
-et 
-$$\bar{\tilde{x}}_N \equiv \frac{1}{N} \sum_{i=1}^{N} \tilde{x_i} \xrightarrow{p}_{N \rightarrow +\infty} E[\tilde{x_i}]$$
-
-Donc $\alpha_0$ est identifiable si $b_0$ est identifiable.
-
-Reste donc à savoir si on peut estimer $b_0$ à partir des données disponibles.
-
-Dans le modèle :
-
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
-
-$b_0$ représente l'effet causal de $\tilde{x_i}$ vers $y_i$.
-
-On sait estimer simplement la covariance entre $\tilde{x_i}$ et $y_i$ :
-
-$$\frac{1}{N} \sum_{i=1}^{N} (\tilde{x_i} - \bar{\tilde{x}}_N)(y_i - \bar{y}_N) \xrightarrow{p}_{N \rightarrow +\infty} \text{Cov}[\tilde{x_i}; y_i]$$
-
-Par application des propriétés des covariances on a :
-
-$$\text{Cov}[\tilde{x_i}; y_i] = \text{Cov}[\tilde{x_i}; \alpha_0] + \text{Cov}[\tilde{x_i}; 1 \times \tilde{x_i}] + b_0 \text{Cov}[\tilde{x_i}; u_i]$$
-
-c'est-à-dire :
-
-$$\text{Cov}[\tilde{x_i}; y_i] = V[\tilde{x_i}] b_0 + \text{Cov}[\tilde{x_i}; u_i]$$
-
-Une covariance mesure une corrélation, i.e. c'est un concept « symétrique », c'est une mesure (très) imparfaite d'une relation causale
-
-L'équation $\text{Cov}[\tilde{x_i}; y_i] = V[\tilde{x_i}] b_0 + \text{Cov}[\tilde{x_i}; u_i]$ donne :
-
-$$V[\tilde{x_i}]^{-1} \text{Cov}[\tilde{x_i}; y_i] = b_0 + V[\tilde{x_i}]^{-1} \text{Cov}[\tilde{x_i}; u_i]$$
-
-Or on sait que :
-
-$$\hat{b}_{MCO}^N = \frac{\sum_{i=1}^{N} (\tilde{x_i} - \bar{\tilde{x}}_N)(y_i - \bar{y}_N)}{\sum_{i=1}^{N} (\tilde{x_i} - \bar{\tilde{x}}_N)^2} \xrightarrow{p}_{N \rightarrow +\infty} V[\tilde{x_i}]^{-1} \text{Cov}[\tilde{x_i}; y_i]$$
-
-ce qui donne ici :
-
-$$\hat{b}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} b_0 + V[\tilde{x_i}]^{-1} \text{Cov}[\tilde{x_i}; u_i]$$
-
-On pourrait éventuellement corriger le biais $V[\tilde{x_i}]^{-1} \text{Cov}[\tilde{x_i}; u_i]$ si on pouvait calculer un estimateur de $\text{Cov}[\tilde{x_i}; u_i]$ (on sait estimer $V[\tilde{x_i}]^{-1}$) mais :
-
-**On ne peut estimer $\text{Cov}[\tilde{x_i}; u_i]$ puisque $u_i$ n'est pas observé**
-
-### Résumé et définitions
-
-Pour résumer. On vient de montrer que $\mathbf{a_0}$ n'est identifiable à partir des $(y_i, \tilde{x_i})$ que si $\text{Cov}[\tilde{x_i}; u_i] = 0$.
-
-Ceci nous amène à introduire des définitions importantes :
-
-**Définition.** Si $\text{Cov}[\tilde{x_i}; u_i] = 0$ alors $\tilde{x_i}$ est *exogène* dans le modèle (linéaire) considéré.
-
-**Définition.** Le modèle :
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
-
-est un modèle de régression (linéaire simple) si $\text{Cov}[\tilde{x_i}; u_i] = 0$.
-
-**Interprétation.** C'est un modèle dont « on a le droit d'estimer les paramètres par les méthodes de régression » (car ces méthodes reposent sur des estimateurs, MC, convergents dans ce cas).
-
-**Définition.** Si $\text{Cov}[\tilde{x_i}; u_i] \neq 0$ alors $\tilde{x_i}$ est *endogène* dans le modèle considéré.
-
-On a un problème d'identification si $\tilde{x_i}$ est endogène dans $y_i = \alpha_0 + b_0 \tilde{x_i} + u_i$.
-
-L'endogénéité des variables explicatives un problème très fréquent en économétrie.
-
-### Retour à l'exemple « BAC+5 »
-
-La question de l'identification de l'effet « BAC+5 » se résume ici de la manière suivante : L'hypothèse $\text{Cov}[\tilde{x_i}; u_i] = 0$ est-elle valide ?
-
-On a de bonnes raisons de penser que ce n'est pas le cas ici.
-
-Le terme d'erreur $u_i$ est une variable inobservée, l'examen de cette question doit d'abord être « théorique ». Il s'agit d'examiner le contenu de $u_i$ et ses liens avec $\tilde{x_i}$, ce qui repose sur l'analyse du PGD de $(y_i, \tilde{x_i})$
-
-Dans le modèle $y_i = \alpha_0 + b_0 \tilde{x_i} + u_i$ le terme d'erreur $u_i$ contient les effets de tout ce qui détermine $y_i$ et qui n'est pas représenté par $\alpha_0 + b_0 \tilde{x_i}$.
-
-Ici $y_i = \text{salaire}_i$ et $\tilde{x_i} = \text{bac+5}_i$ :
-
-- $u_i$ contient les effets de la chance (santé, opportunités, …), des aptitudes et des autres « caractéristiques » non mesurées … de i ($y_i$ résulte du choix de i et de son employeur, s'il en a)
-
-et :
-
-- $\tilde{x_i}$ dépend, en partie, des aptitudes (et des autres caractéristiques non mesurées) de i car $\tilde{x_i}$ résulte d'un choix ± contraint de i.
-
-Si j est un individu avec « des aptitudes » au-delà de la moyenne alors :
-
-- $u_j$ est relativement élevé
-
-et :
-
-- l'individu j est certainement un BAC+5, i.e. $P[\tilde{x_j} = 1]$ est élévée.
-
-Selon toute vraisemblance, on a donc $\text{Cov}[\tilde{x_i}; u_i] > 0$ et dans :
-
-$$\text{Cov}[\tilde{x_i}; y_i] = V[\tilde{x_i}] b_0 + \text{Cov}[\tilde{x_i}; u_i] > V[\tilde{x_i}] b_0$$
-
-la quantité $\text{Cov}[\tilde{x_i}; u_i]$ ne peut être estimée, et donc $b_0$ ne peut être estimé à partir des données disponibles, $b_0$ n'est pas identifiable ici.
-
-**Solutions.** Soit on abandonne, soit on améliore notre modèle de $y_i$ pour tenir compte de ce que $\text{Cov}[\tilde{x_i}; u_i] > 0$, i.e. on apporte de l'information supplémentaire à notre modèle, relative à $\text{Cov}[\tilde{x_i}; u_i]$.
-
-En résumé, dans un modèle de la forme :
-
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
-
-tel que $\text{Cov}[\tilde{x_i}; u_i] \neq 0$ le paramètre $\mathbf{a_0} \equiv (\alpha_0, b_0)$ n'est pas identifiable.
-
-Résoudre ce problème suppose un apport d'information permettant de gérer le fait que $\text{Cov}[\tilde{x_i}; u_i] \neq 0$ :
-
-**Problème d'identification = Déficit d'information.**
-
-C'est ce qu'on va apprendre à faire dans cette partie du cours.
-
-Dans l'exemple « BAC+5 » le problème d'identification = endogénéité de $\tilde{x_i}$
-
-C'est un problème très fréquent en économétrie.
-
-Dans l'exemple considéré, l'endogénéité de $\tilde{x_i}$ est essentiellement liée à une variable explicative « omise », l'aptitude (pour les études et la « carrière »).
-
-> **Remarque. Données expérimentales versus données « réelles »**
-> 
-> Pour évaluer l'effet d'un traitement en médecine, on fait un groupe de patients « placebo » ($\tilde{x_i} = 0$) et un groupe de patients « traités » ($\tilde{x_i} = 1$), puis on mesure et on compare leur état de santé $y_i$.
-> 
-> La répartition aléatoire des patients dans les groupes « placebo » et « traités » garantit que dans le modèle :
-> $$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
-> on a :
-> $$\text{Cov}[\tilde{x_i}; u_i] = 0$$
-> 
-> **Alternative :** On considère que les $\tilde{x_i}$ sont fixes et que seul $u_i$ est aléatoire.
-> 
-> Ce modèle est un modèle de régression dont on peut estimer les paramètres par les MCO, voire par simple comparaison de moyennes.
-> 
-> L'expérience a été construite pour ça : pour simplifier l'analyse des effets causaux.
-
-> **Remarque. Modèle linéaire et effets hétérogènes**
-> 
-> Pour l'analyse statistique des effets de « BAC+5 », on a posé le modèle :
-> $y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$
-> 
-> Ce modèle suppose en fait que l'effet de « BAC+5 » est homogène pour tous individus, il est mesuré par le paramètre « fixe » $b_0$.
-> 
-> En pratique, on pose plutôt le modèle suivant :
-> $y_i = \alpha_i + b_i \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$
-> 
-> i.e., un modèles à paramètres aléatoires, $b_i$ et $\alpha_i \equiv \alpha_0 + u_i$.
-> 
-> L'analyse et l'estimation de tels modèles est l'objectif de la Partie C du cours.
-
-## Equilibre proie-prédateur
-
-On analyse ici un problème non économique, celui de la mesure du nombre de proies nécessaire à chaque prédateur dans un écosystème en l'équilibre.
-
-**Objectif.** On veut estimer le nombre de proies nécessaire à la vie d'un prédateur dans un écosystème en équilibre. L'effet causal est que les proies permettent la survie des prédateurs par un effet « nourriture ».
-
-**Les données.** Un échantillon ($i = 1,...,N$) d'écosystèmes, et on a mesuré pour chacun d'entre eux le nombre de proies ($\tilde{x_i}$) et de prédateurs ($y_i$).
-
-Une manière simple de poser le problème consiste à poser le modèle :
-
-$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$
-
-et $\alpha_0 \simeq 0$ si les écosystèmes sont à l'équilibre « en moyenne ». Le nombre de proies nécessaires à chaque prédateur est $b_0^{-1}$ à l'équilibre.
-
-Avec l'exemple précédent on a vu que $\mathbf{a_0} \equiv (\alpha_0, b_0)$ est identifiable à partir des $(y_i, \tilde{x_i})$ uniquement, si $\text{Cov}[\tilde{x_i}; u_i] = 0$ (c'est une condition nécessaire).
-
-La condition $\text{Cov}[\tilde{x_i}; u_i] = 0$ est-elle une hypothèse valide ?
-
-Il y a de fortes chances que non. Les nombres de proies et de prédateurs se déterminent « simultanément », l'écosystème cherchant toujours à retourner à l'équilibre par ajustement simultané des nombres de proies et prédateurs :
-
-- le nombre de proies détermine le nombre de prédateur selon un effet « nourriture disponible » : $\tilde{x_i} \rightarrow y_i$
-
-mais on a également :
-
-- le nombre de prédateurs détermine le nombre de proies, selon un effet « élimination par la chasse » : $y_i \rightarrow \tilde{x_i}$.
-
-Cette analyse du PGD des $(y_i, \tilde{x_i})$ montre que si $y_i$ est fonction de $\tilde{x_i}$, $\tilde{x_i}$ est également fonction de $y_i$, i.e $\tilde{x_i}$ et $y_i$ se déterminent « simultanément ».
-
-Dans le modèle :
-
-$$y_i = \alpha_0 + b_0 \tilde{x_i} + u_i \text{ avec } E[u_i] \equiv 0$$
-
-$\tilde{x_i}$ étant fonction de $y_i$, elle est également fonction de $u_i$ avec ici :
-
-$$\text{Cov}[\tilde{x_i}; u_i] < 0$$
-
-un excès de prédateurs ($u_i$) diminuant le nombre de proies ($\tilde{x_i}$).
-
-**Conclusion.** $\tilde{x_i}$ est endogène dans le modèle considéré, et $\mathbf{a_0} \equiv (\alpha_0, b_0)$ n'est pas identifiable à partir des seules données considérées.
-
-On retrouve ce problème d'endogénéité, dit problème de simultanéité, en économétrie, par exemple pour l'analyse de fonctionnement de marchés dans lesquels les prix et les quantités échangées se déterminent conjointement, dans le cadre de l'équilibre de marché.
-
-## Le problème de l'identification, covariances et paramètres
-
-On considère ici le modèle linéaire sous sa forme générale :
-
-$$y_i = \mathbf{x_i'} \mathbf{a_0} + u_i = \alpha_0 + \mathbf{\tilde{x_i'}} \mathbf{b_0} + u_i \text{ avec } E[u_i] \equiv 0$$
-
-Si $\mathbf{b_0}$ est identifiable, i.e. peut être estimé à partir des données, alors la constante $\alpha_0$ est identifiable par :
-
-$$\alpha_0 = E[y_i] - E[\mathbf{\tilde{x_i'}}] \mathbf{b_0}$$
-
-Pour identifier $\mathbf{b_0}$ on ne sait estimer que des covariances.
-
-Ici la covariance pertinente est :
-
-$$\text{Cov}[y_i; \mathbf{\tilde{x_i}}] = \text{Cov}[\alpha_0; \mathbf{\tilde{x_i}}] + \text{Cov}[\mathbf{\tilde{x_i'}} \mathbf{b_0}; \mathbf{\tilde{x_i}}] + \text{Cov}[u_i; \mathbf{\tilde{x_i}}] = V[\mathbf{\tilde{x_i}}] \mathbf{b_0} + \text{Cov}[u_i; \mathbf{\tilde{x_i}}]$$
-
-$$\text{Cov}[y_i; \mathbf{\tilde{x_i}}] = V[\mathbf{\tilde{x_i}}] \mathbf{a_0} + \text{Cov}[u_i; \mathbf{\tilde{x_i}}]$$
-
-Deux cas sont à considérer :
-
-1. **Toutes les variables explicatives du modèle sont exogènes**, i.e. on a :$$\text{Cov}[u_i; \mathbf{\tilde{x_i}}] = \mathbf{0}$$Alors $\mathbf{b_0}$, et donc $\mathbf{a_0} \equiv (\alpha_0, \mathbf{b_0})$, est identifiable (sous certaines conditions). L'estimateur des MCO de $\mathbf{b_0}$ est convergent.
-
-2. **Certaines variables explicatives du modèle sont endogènes**, i.e. on a :	   $$\text{Cov}[u_i; \mathbf{\tilde{x_i}}] \neq \mathbf{0} \Leftrightarrow \text{Il existe } k \in \{2,...,K\} \text{ tel que } \text{Cov}[\tilde{x_{i,k}}; u_i] \neq 0$$Alors $\mathbf{b_0}$, et donc $\mathbf{a_0} \equiv (\alpha_0, \mathbf{b_0})$, n'est pas identifiable. L'estimateur des MCO de $\mathbf{a_0}$ n'est pas convergent en général.
-
-A partir du chapitre 3 nous apprendrons à gérer le cas 2, ce qui suppose une bonne compréhension du cas 1 examiné en détail dans le chapitre suivant.
-
-## Remarques importantes
-
-On a utilisé des résultats/techniques fréquemment employés par la suite.
-
-### Procédure 1. Estimation d'une espérance mathématique
-
-Si on veut estimer l'espérance mathématique commune des matrices $\mathbf{W_i}$, $\mathbf{M_0} \equiv E[\mathbf{W_i}]$, à partir d'un (grand) échantillon d'observations de ces variables, il suffit d'utiliser la contre-partie empirique de $E[\mathbf{W_i}]$, i.e. la moyenne des $\mathbf{W_i}$, $\frac{1}{N} \sum_{i=1}^{N} \mathbf{W_i}$.
-
-En effet, la LGN (sous certaines conditions de régularité) donne que :
-
-$\mathbf{W_N} \equiv \frac{1}{N} \sum_{i=1}^{N} \mathbf{W_i} \xrightarrow{p}_{N \rightarrow +\infty} E[\mathbf{W_i}] = \mathbf{M_0}$
-
-i.e. que $\mathbf{W_N} \equiv \frac{1}{N} \sum_{i=1}^{N} \mathbf{W_i}$ est un estimateur convergent de $\mathbf{M_0} \equiv E[\mathbf{W_i}]$.
-
-### Procédure 2. Estimation de l'espérance mathématique d'une fonction paramétrée
-
-Si on veut estimer l'espérance mathématique commune des $g(\mathbf{w_i}, \boldsymbol{\beta_0})$, $E[g(\mathbf{w_i}, \boldsymbol{\beta_0})]$, à partir d'un (grand) échantillon d'observations des $\mathbf{w_i}$ et d'un estimateur convergent de $\boldsymbol{\beta_0}$, $\hat{\boldsymbol{\beta_N}} \xrightarrow{p}_{N \rightarrow +\infty} \boldsymbol{\beta_0}$, il suffit d'utiliser la contre-partie empirique de $E[g(\mathbf{w_i}, \boldsymbol{\beta_0})]$, i.e. la moyenne des $g(\mathbf{w_i}, \boldsymbol{\beta_0})$ en remplaçant $\boldsymbol{\beta_0}$ par son estimateur convergent, $\hat{\boldsymbol{\beta_N}}$.
-
-En effet, une variante de LGN, donne que (sous certaines conditions de régularité):
-
-$\frac{1}{N} \sum_{i=1}^{N} g(\mathbf{w_i}, \hat{\boldsymbol{\beta_N}}) \xrightarrow{p}_{N \rightarrow +\infty} E[g(\mathbf{w_i}, \boldsymbol{\beta_0})]$
-
-i.e. que $\frac{1}{N} \sum_{i=1}^{N} g(\mathbf{w_i}, \hat{\boldsymbol{\beta_N}})$ est un estimateur convergent de $E[g(\mathbf{w_i}, \boldsymbol{\beta_0})]$.
-
-### Procédure 3. Estimation d'une fonction de paramètres estimables
-
-On veut estimer $\mathbf{H_0} \equiv H(\mathbf{B_0}, \boldsymbol{\Gamma_0}^{-1})$ dont on sait que $H(\mathbf{B}, \mathbf{G})$ est une fonction continue en les éléments de $\mathbf{B}$ et $\mathbf{G}$ sur le domaine de définition des éléments de $\mathbf{B_0}$ et $\boldsymbol{\Gamma_0}^{-1}$.
-
-Si on dispose d'un estimateur convergent de chacun des termes $\mathbf{B_0}$ et $\boldsymbol{\Gamma_0}$, $\hat{\mathbf{B_N}} \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{B_0}$ et $\hat{\boldsymbol{\Gamma_N}} \xrightarrow{p}_{N \rightarrow +\infty} \boldsymbol{\Gamma_0}$, alors les propriétés de la convergence en probabilité donne que :
-
-$\hat{\mathbf{H_N}} \equiv H(\hat{\mathbf{B_N}}, \hat{\boldsymbol{\Gamma_N}}^{-1}) \xrightarrow{p}_{N \rightarrow +\infty} H(\mathbf{B_0}, \boldsymbol{\Gamma_0}^{-1}) \equiv \mathbf{H_0}$
-
-sachant que l'estimateur $\hat{\mathbf{H_N}}$ existe avec une probabilité approchant 1.
-
-Ce dernier résultat indique que $\hat{\boldsymbol{\Gamma_N}}$ peut ne pas être inversible, et donc $\hat{\mathbf{H_N}}$ peut ne pas exister, mais la probabilité que cela arrive devient nulle si $N \rightarrow +\infty$.
-
-Ces techniques proviennent des résultats suivants, qui sont utilisés :
-
-(i) pour analyser la convergence d'estimateurs
-
-et :
-
-(ii) pour construire des estimateurs (avec les techniques données ci-avant).
-
-### Propriété 8. Loi (faible) des Grands Nombres d'une fonction paramétrée
-
-Soient (i) $\{\mathbf{w_i} ; i = 1,2,...\}$ une suite de vecteurs aléatoires de $\mathbb{R}^W$ tels que les $\mathbf{w_i}$ sont iid pour $i = 1,2,...$ et (ii) $\boldsymbol{\beta_0}$ un vecteur de réels. On a (sous certaines conditions de régularité) :
-
-$\frac{1}{N} \sum_{i=1}^{N} g(\mathbf{w_i}, \hat{\boldsymbol{\beta_N}}) \xrightarrow{p}_{N \rightarrow +\infty} E[g(\mathbf{w_i}, \boldsymbol{\beta_0})] \text{ si } \hat{\boldsymbol{\beta_N}} \xrightarrow{p}_{N \rightarrow +\infty} \boldsymbol{\beta_0}$
-
-### Propriété 9. Inversion d'une suite de matrices convergeant en probabilité
-
-Soit $\{\mathbf{M_N} ; N = 1,2,...\}$ une suite de matrices aléatoires telle que $\mathbf{M_N} \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{M_0}$ et $\mathbf{M_0}$ est inversible. On alors :
-
-(i) la matrice $(\mathbf{M_N})^{-1}$ existe avec une probabilité approchant 1
-
-et :
-
-(ii) $(\mathbf{M_N})^{-1} \xrightarrow{p}_{N \rightarrow +\infty} (\mathbf{M_0})^{-1}$.
-
-### Propriété 10. Transformation continue d'une suite convergeant en probabilité
-
-Soient $\{\mathbf{w_N} ; N = 1,2,...\}$ une suite de vecteurs aléatoires et $H(\mathbf{w})$ une fonction continue en $\mathbf{w}$ sur le domaine des $\mathbf{w_N}$. On alors :
-
-$\mathbf{w_N} \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{w_0} \Rightarrow H(\mathbf{w_N}) \xrightarrow{p}_{N \rightarrow +\infty} H(\mathbf{w_0})$
+Chacune de ces approches repose sur des hypothèses d'identification spécifiques qui doivent être soigneusement justifiées selon le contexte d'application. Le choix de la méthode appropriée dépend de la nature du problème d'endogénéité et des données disponibles, soulignant l'importance d'une compréhension approfondie des mécanismes générateurs des données dans l'analyse économétrique.
