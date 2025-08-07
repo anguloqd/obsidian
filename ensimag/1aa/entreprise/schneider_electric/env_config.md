@@ -11,5 +11,7 @@
     -   python3-virtualenv
     -   virtualenv
 
--   Installer avec pip : pip install --proxy http://gateway.schneider.zscaler.net:80/ <pkg>
+-   Installer avec pip : `pip install --proxy http://gateway.schneider.zscaler.net:80/ <pkg>`
     - pandas (et fastparquet pour .parq, ne pas installer pyarrow !), matplotlib, seaborn
+
+-   Configurer proxy dans git : `git config http.proxy http://gateway.schneider.zscaler.net:80/`
