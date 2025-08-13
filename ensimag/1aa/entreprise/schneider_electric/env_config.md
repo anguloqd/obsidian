@@ -16,7 +16,7 @@
 
 -   Configurer proxy dans git : `git config http.proxy http://gateway.schneider.zscaler.net:80/`
 
--   Configurer Git LFS:
+-   Configurer Git LFS :
     ```
     sudo apt update
     sudo apt install git-lfs
@@ -30,3 +30,9 @@
     git config lfs.locksverify false
     git push
     ```
+
+- Configurer Copilot : deux pages à suivre. La premère est https://confluence.se.com/spaces/DXT/pages/479635159/Github+Copilot-+Getting+Started, puis elle pointe vers une deuxième page : https://confluence.se.com/spaces/DXT/pages/297784534/GitHub+Proxy+SetUp+for+the+Github+copilot
+    - Dans la section "Steps to obtain a license", click dans le lien "**Create a ticket** as a Github Issue...", le titre de telle page étant "Developer Experience Application Issue".
+    - Puis fait click dans le lien "To raise a License request related to applications under Developer Experience please click **Here**". Le titre de la nouvelle page devrait être "R&D Application License Change Request". Là tu peux faire la demande.
+
+- Configure accès à GitHub Schneider Electric : un owner doit donner accès.
