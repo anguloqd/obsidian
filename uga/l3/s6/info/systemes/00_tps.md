@@ -1,240 +1,355 @@
 # 00 // tps
 
 [cmdes_unix_desc.pdf](ressources/00_tps_cmdes_unix_desc.pdf)
-
 [systemes_tp1_2324.pdf](ressources/00_tps_systemes_tp1_2324.pdf)
-
 [systemes_tp2_2223.pdf](ressources/00_tps_systemes_tp2_2223.pdf)
-
 [systemes_tp3_1819.pdf](ressources/00_tps_systemes_tp3_1819.pdf)
-
 [systemes_tp4_1819.pdf](ressources/00_tps_systemes_tp4_1819.pdf)
 
-# TP1
+# Travaux pratiques - Systèmes d'exploitation
 
-## **Gestion de fichiers et de répertoires**
+## TP1 - Gestion de fichiers et commandes Unix
 
-- Créer un répertoire : `mkdir bin`
-- Copier le répertoire : `cp -r /media/commun/shell .` ou `scp -pr votrelogin@miashs-dc.u-ga.fr:/media/commun/shell .`
-- Se placer dans le répertoire shell ou noms : `cd shell` ou `cd noms`
-- Remonter au répertoire shell : `cd ..`
-- Revenir au répertoire de travail par défaut : `cd ~`, `cd`, `cd $HOME`
-- Supprimer tous les fichiers du répertoire `shell/noms` : `rm -r ./shell/noms/*`
-- Supprimer le répertoire `shell/noms` : `rmdir ./shell/noms`
+### Gestion de fichiers et répertoires
 
-## **Manipulation de fichiers**
+La manipulation des fichiers et répertoires sous Unix s'effectue par un ensemble de commandes fondamentales permettant la création, la copie, le déplacement et la suppression d'éléments du système de fichiers.
 
-- Afficher le contenu du fichier bravo.c : `cat bravo.c`
-- Afficher le contenu des fichiers m1 et m2 : `cat m1 m2`
-- Créer une copie du fichier m1 : `cat m1 > m1bis`
-- Créer un fichier toto : `cat > toto` (Terminer le texte par Ctrl-D.)
-- Afficher le contenu du fichier bravo.c en caractères : `od -c bravo.c`
-- Afficher le contenu du fichier bravo.c en hexadécimal : `od -x bravo.c`
-- Lancer l’exécution de bravo en redirigeant la sortie standard : `./bravo > out`
-- Ajouter la sortie de bravo à out : `./bravo >> out`
-- Rediriger la sortie erreur de ls sur un fichier err : `ls titi 2> err`
-- Rediriger la sortie standard : `ls titi * > out`
+**Création et navigation dans les répertoires :**
+- `mkdir bin` : création d'un répertoire nommé "bin"
+- `cp -r /media/commun/shell .` : copie récursive d'un répertoire avec préservation de l'arborescence
+- `scp -pr login@server:/path .` : copie sécurisée via SSH avec préservation des permissions
+- `cd shell`, `cd noms` : changement vers un répertoire spécifié
+- `cd ..` : remontée vers le répertoire parent
+- `cd ~`, `cd`, `cd $HOME` : retour au répertoire personnel
 
-## **Liste des fichiers**
+**Suppression d'éléments :**
+- `rm -r ./shell/noms/*` : suppression récursive de tous les fichiers d'un répertoire
+- `rmdir ./shell/noms` : suppression d'un répertoire vide
 
-- Vérifier si les fichiers sont vides : `ls -l noms`
-- Afficher tous les fichiers se terminant par .c : `ls *.c`
-- Afficher tous les fichiers commençant par ‘a’ ou ‘g’ : `ls [ag]*` ou `ls a* g*`
-- Afficher tous les fichiers commençant par ‘a’ et se terminant par 1 : `ls a*1`
-- Afficher tous les fichiers avec exactement 3 caractères : `ls ???`
-- Afficher le contenu du répertoire de travail : `ls ~` ou `ls $HOME`
+### Manipulation de fichiers
 
-## **Compilation et exécution**
+Les opérations sur les fichiers incluent l'affichage de contenu, la création de copies et la redirection des flux d'entrée/sortie.
 
-- Compiler le programme C : `cc bravo.c` puis lancer l’exécution : `./a.out`
-- Compiler avec l’option -o : `cc bravo.c -o bravo` puis lancer l’exécution : `./bravo`
-- Compiler et exécuter boucle.c : `cc boucle.c -o boucle` puis `./boucle`
+**Affichage et création :**
+- `cat bravo.c` : affichage du contenu d'un fichier
+- `cat m1 m2` : concaténation et affichage de plusieurs fichiers
+- `cat m1 > m1bis` : création d'une copie par redirection de sortie
+- `cat > toto` : création interactive d'un fichier (terminaison par Ctrl-D)
 
-## **Environnement et processus**
+**Analyse du contenu :**
+- `od -c bravo.c` : affichage en représentation caractère
+- `od -x bravo.c` : affichage en représentation hexadécimale
 
-- Afficher l’environnement : `env` (affiche les variables d’environnement globales), `set` (affiche les variables locales et globales)
-- Modifier le prompt : `export PS1="Votre nouveau prompt > "`
-- Ajouter une commande à la fin du fichier `~/.bashrc` : `echo 'echo -e "\\nBonjour\\n"' >> ~/.bashrc`
-- Afficher la liste des processus actifs : `ps` ou `ps -ef` ou `ps -fU $LOGNAME`
-- Ouvrir un nouveau terminal en arrière-plan : `xterm -T nouveau &`
-- Arrêter un processus : `kill -KILL <PIDduProcessus>`
-- Se connecter à un serveur distant : `ssh votrelogin@miashs-dc.u-ga.fr`
+**Redirections :**
+- `./bravo > out` : redirection de la sortie standard vers un fichier
+- `./bravo >> out` : ajout à un fichier existant
+- `ls titi 2> err` : redirection de la sortie d'erreur
+- `ls titi * > out` : redirection de la sortie standard avec expansion de motifs
 
-## **Autres**
+### Listing et filtrage de fichiers
 
-- Afficher la date et l’heure actuelles : `date`
-- Afficher la liste des utilisateurs actuellement connectés : `who`
-- Compter le nombre de lignes, de mots et de caractères dans les fichiers : `wc`
-- Ouvrir un fichier dans un éditeur de texte (nano ou gedit) : `nano essai` ou `gedit essai`
-- Rendre un fichier exécutable : `chmod +x essai`
-- Ajouter un répertoire à la variable d’environnement PATH : `export PATH=$PATH:/chemin/vers/le/repertoire`
-- Modifier des variables d’environnement à chaque ouverture de terminal : Éditer le fichier `~/.bashrc`
-- Supprimer des fichiers : `rm fichier`
-- Déplacer ou renommer des fichiers : `mv fichier1 fichier2` ou `mv fichier /chemin/vers/repertoire/`
-- Créer un nouveau fichier vide : `touch toto`
+Les commandes de listing permettent d'explorer le contenu des répertoires avec des critères de filtrage sophistiqués utilisant les métacaractères du shell.
 
-# TP2
+**Commandes de base :**
+- `ls -l noms` : listing détaillé avec informations sur la taille
+- `ls *.c` : affichage des fichiers avec extension .c
+- `ls [ag]*`, `ls a* g*` : fichiers commençant par 'a' ou 'g'
+- `ls a*1` : fichiers commençant par 'a' et se terminant par '1'
+- `ls ???` : fichiers avec exactement trois caractères
+- `ls ~`, `ls $HOME` : contenu du répertoire personnel
 
-…
+### Compilation et exécution
 
-# TP3
+Le processus de compilation transforme le code source en programme exécutable.
 
-## Fonctions
+**Méthodes de compilation :**
+- `cc bravo.c` suivi de `./a.out` : compilation avec nom par défaut
+- `cc bravo.c -o bravo` suivi de `./bravo` : compilation avec nom spécifié
+- `cc boucle.c -o boucle` suivi de `./boucle` : exemple avec un autre programme
+
+### Environnement et processus
+
+La gestion de l'environnement système et des processus constitue un aspect fondamental de l'administration Unix.
+
+**Variables d'environnement :**
+- `env` : affichage des variables globales
+- `set` : affichage des variables locales et globales
+- `export PS1="Nouveau prompt > "` : modification du prompt
+- `echo 'echo -e "\\nBonjour\\n"' >> ~/.bashrc` : ajout de commandes au démarrage
+
+**Gestion des processus :**
+- `ps`, `ps -ef`, `ps -fU $LOGNAME` : liste des processus actifs
+- `xterm -T nouveau &` : ouverture d'un terminal en arrière-plan
+- `kill -KILL <PID>` : arrêt forcé d'un processus
+- `ssh login@server` : connexion à un serveur distant
+
+### Commandes utilitaires
+
+**Informations système :**
+- `date` : affichage de la date et heure
+- `who` : liste des utilisateurs connectés
+- `wc` : comptage de lignes, mots et caractères
+
+**Édition et permissions :**
+- `nano essai`, `gedit essai` : ouverture dans un éditeur de texte
+- `chmod +x essai` : attribution des droits d'exécution
+- `export PATH=$PATH:/nouveau/chemin` : ajout d'un répertoire au PATH
+
+**Opérations sur fichiers :**
+- `rm fichier` : suppression de fichiers
+- `mv fichier1 fichier2` : déplacement ou renommage
+- `touch toto` : création d'un fichier vide
+
+## TP2 - Langage de commande Shell
+
+### Scripts shell fondamentaux
+
+Un script shell constitue un programme permettant d'automatiser des tâches répétitives telles que l'administration système ou les sauvegardes. Ces fichiers texte, généralement sans extension ou avec l'extension `.sh` ou `.bash`, contiennent des commandes identiques à celles exécutées en ligne de commande, enrichies de structures de contrôle.
+
+### Exécution des scripts
+
+L'exécution d'un script s'effectue par la commande `bash nomfichier` dans un terminal. L'interprète traite les commandes séquentiellement selon leur ordre d'apparition. Si le fichier possède les droits d'exécution et se trouve dans un répertoire défini par la variable PATH, il suffit de taper son nom pour l'exécuter.
+
+### Variables et paramètres
+
+Les scripts peuvent être paramétrés grâce aux variables positionnelles `$1`, `$2`, ... `$9`. Plusieurs variables spéciales facilitent la gestion des paramètres :
+- `$#` : nombre de paramètres passés au script
+- `$*` : ensemble de tous les paramètres
+- `$1` : premier paramètre
+
+### Test des paramètres d'exécution
+
+Le script `testparam` illustre la gestion basique des paramètres :
+
+```bash
+#!/bin/bash
+if test $# -eq 0
+then
+    echo "Pas de parametre"
+elif [ "$1" = "-h" ]
+then
+    echo "usage : testparm parametres"
+else
+    echo "Les parametres sont : $*"
+fi
+```
+
+Ce script vérifie l'absence de paramètres avec `$# -eq 0` et teste la présence de l'option d'aide `-h` avec `[ $1 = "-h" ]`.
+
+### Test d'existence de fichiers
+
+Le script `testfic` démontre la vérification d'existence de fichiers et répertoires :
+
+```bash
+#!/bin/bash
+if test $# -eq 0 -o "$1" = "-h"; then
+    echo "usage : testfic nomfichier"
+elif [ -f $1 ] ; then
+    echo "le fichier $1 existe"
+elif [ -d $1 ] ; then
+    echo "le repertoire $1 existe"
+else
+    echo $1 est absent !
+fi
+```
+
+Les tests utilisent :
+- `[ -f $1 ]` : vérification d'existence d'un fichier
+- `[ -d $1 ]` : vérification d'existence d'un répertoire
+- `-o` : opérateur logique OU
+
+### Commande de sauvegarde
+
+La commande `sauver` automatise la sauvegarde de fichiers dans un répertoire dédié. Elle crée le répertoire `sauvegarde` s'il n'existe pas et affiche des messages d'erreur appropriés pour les répertoires ou fichiers absents.
+
+### Gestion des dates
+
+Le script `datedujour` affiche la date sous une forme lisible : "Nous sommes le Xeme jour du Yeme mois de l'annee Z", en éliminant les zéros non significatifs et en gérant l'affichage "1er" pour le premier jour.
+
+### Manipulation de chaînes de caractères
+
+L'extraction de sous-chaînes utilise la syntaxe `${nomvar:d:lg}` où :
+- `nomvar` : nom de la variable
+- `d` : indice de début (0 pour le premier caractère)
+- `lg` : longueur de la sous-chaîne
+
+Exemple : si `nomvar=tralala`, alors `${nomvar:1:3}` retourne "ral".
+
+### Calculs et algorithmes
+
+#### Commande maximum
+
+La commande `maximum` calcule et affiche le maximum d'une liste d'entiers. Elle utilise une boucle pour parcourir tous les paramètres et maintient la valeur maximale dans la variable `maxi`.
+
+#### Commande categorie
+
+La commande `categorie` détermine la catégorie d'âge d'un athlète selon son année de naissance, conformément aux règles d'athlétisme 2016/2017 :
+
+| Catégorie | Année de naissance | Catégorie | Année de naissance |
+|-----------|-------------------|-----------|-------------------|
+| Masters | 1976 et avant | Minimes | 2001 et 2002 |
+| Seniors | 1977 à 1993 | Benjamins | 2003 et 2004 |
+| Espoirs | 1994 à 1996 | Poussins | 2005 et 2006 |
+| Juniors | 1997 et 1998 | École d'Athlétisme | 2007 à 2009 |
+| Cadets | 1999 et 2000 | Baby Athlé | 2010 et après |
+
+#### Commande afficherresultat
+
+Cette commande combine les fonctionnalités précédentes pour afficher la catégorie et le meilleur lancé d'un athlète. Elle accepte six paramètres : prénom, nom, date de naissance (format j-m-aaaa) et trois essais.
+
+### Traitement de fichiers avec awk
+
+La commande `calculerresultats` traite un fichier d'athlètes au format CSV avec séparateur deux-points. Le fichier `athletes.txt` contient :
+
+```
+#Fichiers des athletes
+#Nom:Prenom:dateNaissance:essai1:essai2:essai3
+Galle:Martin:12-2-1991:94:87:93
+Honnete:Marie:14-9-1982:82:91:93
+Pleur:Jean:13-3-1976:93:79:72
+```
+
+L'outil `awk` facilite le traitement de fichiers structurés :
+- Syntaxe : `awk [-Fseparateur] [-v variable] [-f fichier_commandes] [programme] fichier`
+- Exemple : `awk -F: 'NR>2{print $2" "$1}' athletes.txt`
+- Variables : `NR` (numéro de ligne), `$1` (première colonne), `$NF` (dernière colonne)
+
+La variable `IFS=$'\n'` peut être définie pour utiliser le caractère de fin de ligne comme séparateur dans les boucles shell.
+
+## TP3 - Processus en C
+
+### Fonctions système fondamentales
+
+#### Fonction sleep
 
 ```c
 #include <unistd.h>
 unsigned int sleep(unsigned int s)
+```
 
-sleep(5);  /* s'utilise comme ça */
+La fonction `sleep(5)` suspend l'exécution du processus pendant 5 secondes.
 
----
+#### Fonction fork
 
+```c
 #include <unistd.h>
 pid_t fork();
+```
 
-pid_t ident;    /* s'utilise comme ça */
-ident = fork(); /* pour le pere c'est le pid du fils,
-								pour le fils c'est 0 car il n'a pas de fils */
+La fonction `fork()` crée un processus fils identique au processus père. Elle retourne :
+- Le PID du fils dans le processus père
+- 0 dans le processus fils
+- -1 en cas d'erreur
 
-pid_t getpid();  /* pid du procesus actuel */
-pid_t getppid(); /* pid du processus père */
+Les fonctions `getpid()` et `getppid()` retournent respectivement le PID du processus actuel et de son père.
 
----
+#### Fonction exit
 
+```c
 #include <stdlib.h>
 void exit(int status)
+```
 
-/* Le processus appelant met fin à son exécution.
-Un appel exit(status) est équivalent à un return
-status dans la fonction main d’un programme C.
-L’entier status est un code de terminaison et est
-rendu au processus père si celui-ci attend la fin
-de son fils (voir wait) */
+La fonction `exit()` termine l'exécution du processus appelant. Le paramètre `status` constitue le code de terminaison transmis au processus père. Les constantes `EXIT_SUCCESS` et `EXIT_FAILURE` définissent les codes standards de réussite et d'échec.
 
-exit(EXIT_SUCCESS);
-exit(EXIT_FAILURE);
+#### Fonction wait
 
----
-
+```c
 #include <sys/types.h>
 #include <sys/wait.h>
-pid_t wait(int *stat loc)
+pid_t wait(int *stat_loc)
+```
 
-/* Cette fonction permet à un processus d’attendre
-la mort d’un de ses fils. Si le processus n’a pas eu
-de fils, ou si tous les fils sont morts au moment de
-l’appel de wait, la fonction rend -1.
-Si un fils est déjà mort, la fonction rend le numéro
-d’identification de ce fils. Sinon le processus est
-bloqué jusqu’au décès d’un fils (le premier qui meurt)
-et rend son numéro (cette attente n’est donc pas 
-sélective). */
+Cette fonction permet à un processus d'attendre la terminaison d'un de ses fils. Elle retourne :
+- -1 si le processus n'a pas de fils ou si tous sont terminés
+- Le PID du fils terminé sinon
 
-wait(NULL) /* attend la mort d'un fils et retourne son pid */
+L'appel `wait(NULL)` ignore le statut de terminaison, tandis que `wait(&status)` le récupère.
 
-int status;
-wait(&status); /* retourne plutot un entier décrivant un status */
+#### Fonction execlp
 
----
-
+```c
 #include <unistd.h>
 int execlp(char *arg0, char *arg1, ..., char *argn, NULL)
-
-/* Un processus peut lancer un programme exécutable
-qui se trouve dans un fichier sur disque en utilisant
-un des appels système exec(). Le code du programme
-sur disque remplace le code du processus en cours
-et donc un appel à exec() ne retourne jamais, sauf en
-cas d’erreur où il retourne -1 et positionne la variable
-système errno */
-
-/* La syntaxe est normalement execlp("programme", arg1, arg2, ..., NULL).
-Par convention, arg1 est aussi le même nom du programme, puis
-les autres paramètres sont passés. La liste est delimitée par NULL
-pour marquer la  */
-
-execlp("ls", "ls", "*.c", NULL) /*exécute la commande "ls"
-																passant l'argument "*.c"
-																pour trouver tous les fichiers
-																avec l'extension ".c"*/
-
-execlp("ps", "ps", "-l", NULL); /*exécute la commande "ps"
-																passant l'argument "-l"
-																pour lister les processus*/
-
-																 
-execlp("xterm", "xterm", NULL); /* exécute la commande "xterm"
-																sans passer d'arguments */
 ```
 
-## Deux fils, démo basique
+Cette fonction remplace le code du processus courant par un programme exécutable. Elle ne retourne jamais en cas de succès, seulement en cas d'erreur (-1).
 
-```bash
-#include <stdio.h>		/* Pour perror */
-#include <stdlib.h>		/* Pour exit */
-#include <unistd.h>		/* Pour fork, getpid, getppid, sleep */
-#include <sys/types.h>		/* Pour pid_t (fork, getpid, getppid) */
-#include <sys/wait.h>		/* Pour wait */
+Exemples d'utilisation :
+- `execlp("ls", "ls", "*.c", NULL)` : exécute la commande ls avec l'argument *.c
+- `execlp("ps", "ps", "-l", NULL)` : exécute ps avec l'option -l
+- `execlp("xterm", "xterm", NULL)` : lance un terminal
+
+### Exemple pratique : deux processus fils
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main(void)
 {
-  pid_t ident1;
-  ident1 = fork();
-  
-  if (ident1 == -1)
-  {
-    perror("fork");
-    return EXIT_FAILURE;
-  }
-
-  printf("Cette ligne sera affichée deux fois\n");
-  
-  if (ident1 == 0)
-  {
-    /* Code exécuté uniquement par le fils */
-    sleep(8);
-    printf("Je suis le fils 1, ident %d, pid %d, ppid %d.\n", ident1, getpid(), getppid());
-    exit(EXIT_SUCCESS);
-  }
-  
-  else
-  {
-    /* Code exécuté uniquement par le pere */
-    pid_t ident2;
-    ident2 = fork();
+    pid_t ident1;
+    ident1 = fork();
     
-    if (ident2 == -1)
+    if (ident1 == -1)
     {
-      perror("fork");
-      return EXIT_FAILURE;
+        perror("fork");
+        return EXIT_FAILURE;
     }
 
-    if (ident2 == 0)
+    printf("Cette ligne sera affichée deux fois\n");
+    
+    if (ident1 == 0)
     {
-      sleep(3);
-      printf("Je suis le fils 2, ident %d, pid %d, ppid %d.\n", ident2, getpid(), getppid());
-      exit(EXIT_SUCCESS);
+        /* Code du fils 1 */
+        sleep(8);
+        printf("Je suis le fils 1, ident %d, pid %d, ppid %d.\n", 
+               ident1, getpid(), getppid());
+        exit(EXIT_SUCCESS);
     }
-
     else
     {
-    	pid_t child_pid;
-		
-			child_pid = wait(NULL);
-			printf("Le premier fils en mourir est : %d", child_pid);
-    	
-    	child_pid = wait(NULL);
-			printf("Le deuxieme fils en mourir est : %d", child_pid);
-    }
-  }
+        /* Code du père */
+        pid_t ident2;
+        ident2 = fork();
+        
+        if (ident2 == -1)
+        {
+            perror("fork");
+            return EXIT_FAILURE;
+        }
 
-  return EXIT_SUCCESS;
+        if (ident2 == 0)
+        {
+            /* Code du fils 2 */
+            sleep(3);
+            printf("Je suis le fils 2, ident %d, pid %d, ppid %d.\n", 
+                   ident2, getpid(), getppid());
+            exit(EXIT_SUCCESS);
+        }
+        else
+        {
+            /* Attente des fils par le père */
+            pid_t child_pid;
+            
+            child_pid = wait(NULL);
+            printf("Le premier fils en mourir est : %d\n", child_pid);
+            
+            child_pid = wait(NULL);
+            printf("Le deuxième fils en mourir est : %d\n", child_pid);
+        }
+    }
+
+    return EXIT_SUCCESS;
 }
 ```
 
-## Deux fils, exécution d’une commande Unix
+### Exécution de commandes Unix
 
-Voici le cas de `execlp`:
+L'exemple suivant illustre l'utilisation d'`execlp` pour lancer la commande `ps -l` :
 
 ```c
 #include <stdio.h>
@@ -245,147 +360,63 @@ Voici le cas de `execlp`:
 
 int main(void)
 {
-  pid_t pid;
+    pid_t pid;
 
-  pid = fork();
-  if (pid == -1)
-  {
-    perror("fork");
-    return EXIT_FAILURE;
-  }
-
-  if (pid == 0)
-  {
-    /* Code exécuté uniquement par le fils */
-    printf("Je suis le fils, pid %d, ppid %d.\n", getpid(), getppid());
-
-    /* Lancez la commande 'ps -l' */
-    execlp("ps", "ps", "-l", NULL);
-
-    /* Si execlp retourne, c'est qu'il y a eu une erreur */
-    perror("execlp");
-    exit(EXIT_FAILURE);
-  }
-  else
-  {
-    /* Code exécuté uniquement par le père */
-    printf("Je suis le père, pid %d, en attente de la fin de mon fils %d.\n", getpid(), pid);
-    wait(NULL);
-    printf("Mon fils a terminé.\n");
-  }
-
-  return EXIT_SUCCESS;
-}
-```
-
-Voici le cas de `xterm` :
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-
-int main(void)
-{
-  pid_t ident1;
-
-  ident1 = fork();
-  if (ident1 == -1)
-  {
-    perror("fork");
-    return EXIT_FAILURE;
-  }
-
-  if (ident1 == 0)
-  {
-    /* Code exécuté uniquement par le fils 1 */
-    execlp("xterm", "xterm", NULL);
-    perror("execlp"); /* Si on arrive ici, c'est qu'il y a eu une erreur */
-    exit(EXIT_FAILURE);
-  }
-  else
-  {
-    /* Code exécuté uniquement par le père */
-    pid_t ident2;
-
-    ident2 = fork();
-    if (ident2 == -1)
+    pid = fork();
+    if (pid == -1)
     {
-      perror("fork");
-      return EXIT_FAILURE;
+        perror("fork");
+        return EXIT_FAILURE;
     }
 
-    if (ident2 == 0)
+    if (pid == 0)
     {
-      /* Code exécuté uniquement par le fils 2 */
-      execlp("xterm", "xterm", NULL);
-      perror("execlp"); /* Si on arrive ici, c'est qu'il y a eu une erreur */
-      exit(EXIT_FAILURE);
+        /* Code du fils */
+        printf("Je suis le fils, pid %d, ppid %d.\n", getpid(), getppid());
+        
+        /* Lancement de ps -l */
+        execlp("ps", "ps", "-l", NULL);
+        
+        /* Si on arrive ici, il y a eu une erreur */
+        perror("execlp");
+        exit(EXIT_FAILURE);
     }
     else
     {
-      /* Code exécuté uniquement par le père */
-      pid_t child_pid;
-      
-      child_pid = wait(NULL);
-      printf("Le premier fils en mourir est : %d\n", child_pid);
-      
-      child_pid = wait(NULL);
-      printf("Le deuxieme fils en mourir est : %d\n", child_pid);
+        /* Code du père */
+        printf("Je suis le père, pid %d, en attente de mon fils %d.\n", 
+               getpid(), pid);
+        wait(NULL);
+        printf("Mon fils a terminé.\n");
     }
-  }
 
-  return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
-
 ```
 
-# TP4
+## TP4 - Threads et sémaphores en Java
 
-## Méthodes de Threads et Sémaphores
+### Méthodes des threads Java
 
-![untitled](ressources/00_tps_untitled.png)
+Les threads Java disposent de plusieurs méthodes pour contrôler leur exécution et leur synchronisation :
 
-![untitled](ressources/00_tps_untitled_1.png)
+**Méthodes d'instance :**
+- `run()` : méthode à redéfinir contenant le code du thread
+- `start()` : démarre l'exécution du thread
+- `join()` : bloque le thread appelant jusqu'à la terminaison du thread cible
+- `wait()`, `wait(long millisec)` : met le thread en attente
+- `notify()`, `notifyAll()` : réveil des threads en attente
 
-- Thread :
-    - run() (à redéfinir)
-    - start()
-    - wait(), wait(long milisec)
-    - notify()
-    - notifyAll()
-    - join() : comme t1.join(), bloque le thread appelant (t2) tant que t1 n’est pas terminé. Bien sur, t1.join() se trouve dans le run() de t2.
-    - Static, sleep(long milisec)
-    - Static, currentThread() : retourne le thread courant
-    - Static, yield() : le thread t passe son tour pour être exécuté
+**Méthodes statiques :**
+- `Thread.sleep(long millisec)` : endort le thread courant
+- `Thread.currentThread()` : retourne une référence au thread courant
+- `Thread.yield()` : cède le tour d'exécution
 
-## Sémaphores, exo #1
+### Synchronisation avec sémaphores
 
-> [!note]
-> Q4. “Utiliser votre implémentation de la classe Semaphore pour compléter les classes Main, ThreadA, ThreadB et ThreadC fournies. Les classes ThreadA, ThreadB et ThreadC sont des threads qui ont pour but d’afficher respectivement cinq ‘A’, cinq ‘B’ et cinq ‘C’. Il s’agit de synchroniser les threads de sorte que l’affichage corresponde à : ABCABCABCABCABC.“
-
-Quelques choses à remarquer :
-
-- Il y a trois sémaphores pour trois threads, **un pour chaque, et non pas un sémaphore pour tous**.
-- Quand un sémaphore se relâche, il permet de continuer à l’un d’autres utilisateurs **du même sémaphore**, et non pas des autres.
-
-Voyons la définition de Sémaphore :
+#### Implémentation basique d'un sémaphore
 
 ```java
-public class Main {
-    public static void main(String args[]) {
-        Semaphore mutexA = new Semaphore(1);
-        Semaphore mutexB = new Semaphore(0);
-        Semaphore mutexC = new Semaphore(0);
-
-        new ThreadA(mutexA, mutexB).start();
-        new ThreadB(mutexB, mutexC).start();
-        new ThreadC(mutexC, mutexA).start();
-    }
-}
-
 class Semaphore {
     private int permits;
 
@@ -407,12 +438,25 @@ class Semaphore {
 }
 ```
 
-Exemple de définition d’un thread pour nos objectifs : (les autres threads, `threadB` et `threadC` étant différents)
+#### Exemple de synchronisation ABC
+
+Le défi consiste à synchroniser trois threads pour afficher la séquence "ABCABCABCABCABC". La solution utilise trois sémaphores, un pour chaque thread :
 
 ```java
+public class Main {
+    public static void main(String args[]) {
+        Semaphore mutexA = new Semaphore(1);  // A peut commencer
+        Semaphore mutexB = new Semaphore(0);  // B attend
+        Semaphore mutexC = new Semaphore(0);  // C attend
+
+        new ThreadA(mutexA, mutexB).start();
+        new ThreadB(mutexB, mutexC).start();
+        new ThreadC(mutexC, mutexA).start();
+    }
+}
+
 class ThreadA extends Thread {
-    Semaphore mutexA;
-    Semaphore mutexB;
+    Semaphore mutexA, mutexB;
     
     public ThreadA(Semaphore mutexA, Semaphore mutexB) {
         this.mutexA = mutexA;
@@ -420,12 +464,11 @@ class ThreadA extends Thread {
     }
         
     public void run() {
-        
         for (int i = 0; i < 5; i++) {
             try {
-                mutexA.acquire();
+                mutexA.acquire();  // Attendre son tour
                 System.out.print("A");
-                mutexB.release();
+                mutexB.release();  // Autoriser B
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -434,12 +477,9 @@ class ThreadA extends Thread {
 }
 ```
 
-## `CarPark` : synchronisation sans sémaphores
+### Exemple CarPark : synchronisation par moniteurs
 
-Quelques choses à remarquer :
-
-- Mettre le mot clé `synchronized` dans la signature d’une fonction permet d’accéder à des fonctions comme `wait()`, `notify()`, `notifyAll()`, etc. Pas besoin de faire `synchronized(o){…}` sur un objet.
-- `wait()` doit toujours être dans un try-catch, et c’est mieux qu’il soir dans un `while(cond){...}` que dans un `if(cond){...}`
+#### Version avec wait/notify
 
 ```java
 public class CarPark {
@@ -452,51 +492,29 @@ public class CarPark {
     public synchronized void arrive() {
         System.out.println(Thread.currentThread().getName() + " essaye d'arriver");
         
-        while (capacity == 0) { // Si il n'y a pas de places disponibles dans le parking...
+        while (capacity == 0) {
              System.out.println(Thread.currentThread().getName() + " attend...");
              try {
-                 wait(); // La voiture se met en attente jusqu'à ce qu'une place se libère.
+                 wait();
              } catch (InterruptedException e) {}
         }
         
-        capacity--; // Une place est prise.
-        System.out.println(Thread.currentThread().getName() + " entre dans le parking [il reste " + capacity + " place(s)]");
+        capacity--;
+        System.out.println(Thread.currentThread().getName() + 
+                          " entre dans le parking [il reste " + capacity + " place(s)]");
     }
     
     public synchronized void depart() {
-        System.out.println(Thread.currentThread().getName()
-            + " repart");
-            
+        System.out.println(Thread.currentThread().getName() + " repart");
         capacity++;
-        notify(); // Verifier : Cette voiture libère une place pour une autre voiture
-    }
-    
-    public static void main(String args[]) { // Commente ce code
-        CarPark carpark = new CarPark(4);
-        Random r = new Random();
-        
-        for (int i=0; i<100; i++) {
-            
-            try {
-            Thread.sleep(r.nextInt(5) * 1000);
-            } catch (InterruptedException e) {}
-            
-            new Thread(new Cars("voiture"+i, carpark)).start();
-        }
+        notify();
     }
 }
 ```
 
-## `CarPark` : sémaphores, exo #2
-
-- Deux manières d’utiliser les threads et surtout la méthode start() pour paralléliser :
-    - On crée une classe qui hérite de Thread, puis on redéfinit la méthode run() qui sera appelée lors de l’appel **start() sur le thread**;
-    - On crée une classe qui implémente l’interface runnable, et on redéfinit sa méthode run. Finalement, on utilise l’instance de classe pour initialiser un Thread et **on appelle start() sur le thread**.
-    - La capacité est remplacé par un sémaphore. C’est comme si le jetons du sémaphore déterminent la capacité.
-- Cette implémentation ne contrôle pas quel voiture rentre après une place se libère.
+#### Version avec sémaphores Java
 
 ```java
-import java.util.Random;
 import java.util.concurrent.Semaphore;
 
 public class CarPark {
@@ -510,8 +528,10 @@ public class CarPark {
         System.out.println(Thread.currentThread().getName() + " essaye d'arriver");
         
         try {
-            places.acquire(); // La voiture tente de prendre une place.
-            System.out.println(Thread.currentThread().getName() + " entre dans le parking [il reste " + places.availablePermits() + " place(s)]");
+            places.acquire();
+            System.out.println(Thread.currentThread().getName() + 
+                              " entre dans le parking [il reste " + 
+                              places.availablePermits() + " place(s)]");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -519,20 +539,19 @@ public class CarPark {
     
     public void depart() {
         System.out.println(Thread.currentThread().getName() + " repart");
-        places.release(); // La voiture libère une place.
-    }
-    
-    public static void main(String args[]) {
-        CarPark carpark = new CarPark(4);
-        Random r = new Random();
-        
-        for (int i=0; i<100; i++) {
-            try {
-                Thread.sleep(r.nextInt(5) * 1000);
-            } catch (InterruptedException e) {}
-            
-            new Thread(new Cars("voiture"+i, carpark)).start();
-        }
+        places.release();
     }
 }
 ```
+
+### Bonnes pratiques
+
+**Gestion des threads :**
+- Utiliser `synchronized` dans la signature d'une méthode pour accéder aux méthodes `wait()`, `notify()`, `notifyAll()`
+- Placer `wait()` dans un bloc try-catch et préférer une boucle `while` à un simple `if`
+- Les sémaphores Java offrent des méthodes comme `tryAcquire()` pour les acquisitions non bloquantes
+
+**Création de threads :**
+- Deux approches : hériter de `Thread` ou implémenter `Runnable`
+- Toujours appeler `start()` sur l'objet thread, jamais directement `run()`
+- La méthode `availablePermits()` des sémaphores Java permet de connaître le nombre de jetons disponibles
