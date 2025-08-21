@@ -80,12 +80,12 @@ X_{2,1}, X_{2,2}, \cdots, X_{2,n_2}
 \\
 \vdots
 \\
-X_{a,1}, X_{a,2}, \cdots, X_{a,n_a}
+X_{m,1}, X_{m,2}, \cdots, X_{m,n_m}
 $$
 
 ### Le test de Fisher
 
-L'hypothèse à tester est $H_0$ : "$\mu_1 = \mu_2 = \cdots = \mu_a = \mu'$".
+L'hypothèse à tester est $H_0$ : "$\mu_1 = \mu_2 = \cdots = \mu_m = \mu'$".
 
 On observe que :
 
@@ -96,26 +96,26 @@ $$
 dont la variance est $\sigma^2/n_i$. Par conséquent :
 
 $$
-\sum_{i=1}^{a} n_i(\bar{X}_i - \bar{X})^2 / \sigma^2 = SCM/\sigma^2 \sim \chi^2(a-1)
+\sum_{i=1}^{m} n_i(\bar{X}_i - \bar{X})^2 / \sigma^2 = SCM/\sigma^2 \sim \chi^2(m-1)
 $$
 
 On pose :
 
 $$
-SCE = \sum_{i=1}^{a} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}_i)^2
+SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}_i)^2
 $$
 
-Puisque $\sum_{i=1}^{a} (n_i - 1) = n - a$, on estime $\sigma^2$ par $SCE/(n-a)$ et :
-$SCE/\sigma^2 \sim \chi^2(n-a)$, la variable du test est donc :
+Puisque $\sum_{i=1}^{m} (n_i - 1) = n - m$, on estime $\sigma^2$ par $SCE/(n-m)$ et :
+$SCE/\sigma^2 \sim \chi^2(n-m)$, la variable du test est donc :
 
 $$
-F = \frac{SCM/(a-1)}{SCE/(n-a)} \sim F_{a-1,n-a}
+F = \frac{SCM/(m-1)}{SCE/(n-m)} \sim F_{m-1,n-m}
 $$
 
 Nous rejetons $H_0$ au seuil $\alpha$ si :
 
 $$
-F = \frac{CMM}{CME} = \frac{SCM/(a-1)}{SCE/(n-a)} \geq q^{F_{a-1,n-a}}_{1-\alpha}
+F = \frac{CMM}{CME} = \frac{SCM/(m-1)}{SCE/(n-m)} \geq q^{F_{m-1,n-m}}_{1-\alpha}
 $$
 
 où $q$ est le quantile d'ordre $1-\alpha$ de la dite loi.
@@ -127,7 +127,7 @@ Remarquons que nous rejetons $H_0$ seulement si $F$ est trop grand et non si $F$
 Posons de plus :
 
 $$
-SCT = \sum_{i=1}^{a} \sum_{j=1}^{n_i} (X_{ij} - \bar{X})^2
+SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X})^2
 $$
 
 pour la dispersion totale. On peut aisément établir l'équation de la variance suivante :
@@ -145,12 +145,12 @@ Où :
 Les résultats d'une analyse de variance sont habituellement présentés sous la forme d'un tableau comme le suivant :
 
 | Source | Somme des carrés | Degrés de liberté | Moyenne des carrés | $F$ |
-| --- | --- | --- | --- | --- |
+| ------ | --------------- | ----------------- | ------------------ | --- |
 | Modèle | $SCM = \sum_{i=1}^{m} n_i\bar{X}_i^2 - n\bar{X}^2$ | $m-1$ | $\frac{SCM}{m-1}$ | $F = \frac{CMM}{CME}$ |
-| Erreur | $SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - n\bar{X}^2$ | $n-m$ | $\frac{SCE}{n-m}$ |  |
-| Total | $SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - \sum_{i=1}^{m} n_i\bar{X}_i^2$ | $m-1$ | $\frac{SCT}{n-1}$ |  |
+| Erreur | $SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - \sum_{i=1}^{m} n_i\bar{X}_i^2$ | $n-m$ | $\frac{SCE}{n-m}$ | |
+| Total | $SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - n\bar{X}^2$ | $n-1$ | $\frac{SCT}{n-1}$ | |
 
-### Contrastes (rejet de l’hypothèse d’égalité des moyennes)
+### Contrastes (rejet de l'hypothèse d'égalité des moyennes)
 
 La table d'analyse de variance nous permet de tester l'hypothèse que les moyennes des populations sont toutes égales. Dans la plupart des cas, le rejet de l'hypothèse soulève de nouvelles questions : si les moyennes ne sont pas toutes égales, où sont les différences? Nous étudions ici le cas où l'expérimentateur a formulé certaines questions (formulé certaines hypothèses) à priori.
 
@@ -181,7 +181,7 @@ Où,
 c'est l'hypothèse qu'en moyenne, les minéraux n'ont pas d'effet. Plus généralement, supposons qu'on veuille tester une hypothèse de la forme :
 
 $$
-H_0 = "\varphi = \sum_{i=1}^{a} \lambda_i \mu_i = 0"
+H_0 = "\varphi = \sum_{i=1}^{m} \lambda_i \mu_i = 0"
 $$
 
 où $\lambda_i$ sont des constantes données. la fonction linéaire $\varphi = \sum_i \lambda_i \mu_i$ sera estimée par
@@ -209,18 +209,14 @@ E\hat{\varphi} = E\left[\sum_i \lambda_i \bar{X}_i\right] = \sum_i \lambda_i E\b
 $$
 
 $$
-⁍
+Var(\hat{\varphi}) = Var\left(\sum_i \lambda_i \bar{X}_i\right) = \sum_i \lambda_i^2 Var(\bar{X}_i) = \sigma^2 \sum_i \frac{\lambda_i^2}{n_i}
 $$
 
 avec les $\bar X_i$ indépendants.
 
-Donc, sous $H_0$, $\frac{\hat{\varphi}}{\sigma\sqrt{\sum_i \frac{\lambda_i^2}{n_i}}} \sim \mathcal{N}(0,1)$ et $\sigma^2$ est estimé par $\sqrt{\frac{SCE}{n-a}}$.
+Donc, sous $H_0$, $\frac{\hat{\varphi}}{\sigma\sqrt{\sum_i \frac{\lambda_i^2}{n_i}}} \sim \mathcal{N}(0,1)$ et $\sigma^2$ est estimé par $\sqrt{\frac{SCE}{n-m}}$.
 
-$$
-⁍
-$$
-
-Donc $\frac{{\hat{\varphi}}/{\sigma\sqrt{\frac{\sum \lambda_i^2}{n_i}}}}{{\sqrt{\frac{(n-a)}{n-a}\frac{SCE/n-a}{\sigma^2}}}} \sim t_{n-a}$, qui simplifie à $\frac{\hat{\varphi}}{\sqrt{\frac{SCE}{n-a}}\sqrt{\sum_i \frac{\lambda_i^2}{n_i}}} \sim t_{n-a}$. À comparer au quantile théorique de $t_{n-a}$
+Donc $\frac{{\hat{\varphi}}/{\sigma\sqrt{\frac{\sum \lambda_i^2}{n_i}}}}{{\sqrt{\frac{(n-m)}{n-m}\frac{SCE/n-m}{\sigma^2}}}} \sim t_{n-m}$, qui simplifie à $\frac{\hat{\varphi}}{\sqrt{\frac{SCE}{n-m}}\sqrt{\sum_i \frac{\lambda_i^2}{n_i}}} \sim t_{n-m}$. À comparer au quantile théorique de $t_{n-m}$
 
 # ANOVA à deux facteurs
 
@@ -230,23 +226,13 @@ La généralisation de l'ANOVA à une voie à des plans d'expérience plus compl
 
 Le loyer moyen dans une grande ville française, en fonction de deux facteurs : date de construction $A$ et nombre de pièces $B$ est donné par :
 
-|  | $A = 1$
-$< 1981$ | $A = 2$
-
-$1981-1990$ | $A = 3$
-$1991-2001$ | $A = 4$
-$> 2001$ |
+| | $A = 1$ $< 1981$ | $A = 2$ $1981-1990$ | $A = 3$ $1991-2001$ | $A = 4$ $> 2001$ |
 | --- | --- | --- | --- | --- |
-| $B = 1$
-$1$ pièce | 509 | 503 | 521 | 795 |
-| $B = 2$
-$2$ pièces | 596 | 661 | 814 | 1138 |
-| $B = 3$
-$3$ pièces | 684 | 791 | 1071 | 1503 |
-| $B = 4$
-$4$ pièces | 808 | 960 | 1259 | 1741 |
-| $B = 5$
-$5$ pièces | 1075 | 1216 | 1604 | 2131 |
+| $B = 1$ $1$ pièce | 509 | 503 | 521 | 795 |
+| $B = 2$ $2$ pièces | 596 | 661 | 814 | 1138 |
+| $B = 3$ $3$ pièces | 684 | 791 | 1071 | 1503 |
+| $B = 4$ $4$ pièces | 808 | 960 | 1259 | 1741 |
+| $B = 5$ $5$ pièces | 1075 | 1216 | 1604 | 2131 |
 
 L'analyse d'un tel jeu de données à pour objectif d'expliquer et de quantifier l'influence des deux facteurs sur la variable réponse (le loyer). Le plan d'expérience employé est complet, en ce sens que, pour chaque combinaison des deux facteurs, on dispose d'une observation.
 
@@ -264,8 +250,8 @@ Les deux premiers seront les effets principaux.
 
 La population est notée $P$, $X$ est la variable d'intérêt de moyenne globale $μ$. On étudie le rôle de deux facteurs $A$ et $B$, le facteur $A$ ayant $p$ modalités $(A_1, · · ·, A_p)$, le facteur $B$ ayant $q$ modalités $(B_1, · · ·, B_q)$.
 
-- Les facteurs $A$ et $B$ définissent $p × q$ sous population P_{ij}, sur laquelle la sous-variable X_{ij} de X prend les observations x_{i,j,k} (pour k ≤n_{ij}) et a pour moyenne μ_{ij}.
-- On note P_i. les individus correspondants à A = A_i, la sous variable X_i. de X est observée par la concaténation sur j des x_{i,j,k}. La variable X_i. a pour moyenne μ_i. et effectif n_i. = $\sum_{j=1}^{q} n_{ij}$
+- Les facteurs $A$ et $B$ définissent $p × q$ sous population $P_{ij}$, sur laquelle la sous-variable $X_{ij}$ de $X$ prend les observations x_{i,j,k}$ (pour $k ≤n_{ij}$) et a pour moyenne $μ_{ij}$.
+- On note $P_i$. les individus correspondants à $A = A_i$, la sous variable $X_i$. de $X$ est observée par la concaténation sur $j$ des $x_{i,j,k}$. La variable $X_i$. a pour moyenne $μ_i$. et effectif $n_i = \sum_{j=1}^{q} n_{ij}$.
 - On note $P_{\circ,j}$ les individus correspondants à $B = B_j$, la sous variable $X_{\circ,j}$ de $X$ est observée par la concaténation sur $j$ des $x_{i,j,k}$. La variable $X_j$ a pour moyenne $μ_{\circ,j}$ et effectif $n_{j,\circ} = \sum_{i=1}^{p} n_{ij}$
 
 On suppose que dans chaque sous-population $P_{ij}$, les observations $x_{i,j,k}$ forme un échantillon $E_{ij}$.
@@ -276,11 +262,11 @@ Note. Pour simplifier l'exposé, dans tout ce qui suit, on considère que le pla
 
 Ce tableau est dérivé et est préféré pour des raisons pratiques que le tableau de données original.
 
-| **Aspiration (X) / Carburant (Y)** | **Atmo**                 | **Turbo**                | **Total**                |
-| ---------------------------------- | ------------------------ | ------------------------ | ------------------------ |
-| **Diesel**                         | $\bar X_{1,1}=58.1$      | $\bar X_{1,2}=98.6$      | $\bar X_{1,\circ}=78.35$ |
-| **Essence**                        | $\bar X_{2,1}=101.6$     | $\bar X_{2,2}=138.4$     | $\bar X_{2,\circ}=120$   |
-| **Total**                          | $\bar X_{\circ,1}=79.85$ | $\bar X_{\circ,2}=118.5$ | $\bar X = 112.1$         |
+| **Aspiration (X) / Carburant (Y)** | **Atmo** | **Turbo** | **Total** |
+| ---------------------------------- | -------- | --------- | --------- |
+| **Diesel** | $\bar X_{1,1}=58.1$ | $\bar X_{1,2}=98.6$ | $\bar X_{1,\circ}=78.35$ |
+| **Essence** | $\bar X_{2,1}=101.6$ | $\bar X_{2,2}=138.4$ | $\bar X_{2,\circ}=120$ |
+| **Total** | $\bar X_{\circ,1}=79.85$ | $\bar X_{\circ,2}=118.5$ | $\bar X = 112.1$ |
 
 ## Graphique des intersections
 
@@ -319,8 +305,8 @@ $$
 Où les termes sont :
 
 - $SCT = \sum (x_{ijk} -\bar{X})^2$
-- $SCM_A = nq \sum_{i=1}^p (\bar{X}_{i,\circ} -\bar{X})^2$
-- $*SCM_B = np \sum_{j=1}^q (\bar{X}_{\circ,j} -\bar{X})^2*$
+- $SCM_A = \frac{1}{q} \sum_{i=1}^p (\bar{X}_{i,\circ} -\bar{X})^2$
+- $*SCM_B = \frac{1}{p} \sum_{j=1}^q (\bar{X}_{\circ,j} -\bar{X})^2*$
 - $*SCE = \sum (x_{ijk} - \bar{X}_{ij})^2*$
 - $*SCM_{AB} = SCT - SCM_A -SCM_B - SCE*$
 
@@ -338,4 +324,4 @@ Voici les rapports de carrés moyens pour construire les statistiques de Fisher 
 - Effet de $B$ : $F_B = \frac{CMM_B}{CME}$
 - Effet de l'interaction de $A$ et de $B$ : $F_{AB} = \frac{CMM_{AB}}{CME}$
 
-Ces quantités suivent une loi de Fischer, les degrés de libertés sont lus dans les dénominateurs des carrés moyens associés.
+Ces quantités suivent une loi de fisher, les degrés de libertés sont lus dans les dénominateurs des carrés moyens associés.

@@ -338,7 +338,7 @@ Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de l
     \hat{\beta}_1 = \sum_{i=1}^n a_i (\beta_1 X_i + \beta_0 + \varepsilon_i)
     $$
     
-    Il suit des égalités sur les sommes des a_i que
+    Il suit des égalités sur les sommes des $a_i$ que
     
     $$
     \hat{\beta}_1 = \beta_1 + \sum_{i=1}^n a_i \varepsilon_i
@@ -381,7 +381,6 @@ Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de l
     $$
     s^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
     $$
-    
 
 ## Tests sur la pente de la droite
 
@@ -392,7 +391,7 @@ Pour faire simple, les tests $F$ de Fischer et $t$ de Student testent l'hypothè
 Notons l'hypothèse nulle
 
 $$
-H_0 = "\beta_1 = 0"
+H_0 = \text{"}\beta_1 = 0\text{"}
 $$
 
 autrement formulée, $H₀$ est équivalente à "$X$ n'explique pas $Y$". L'estimation de $β₁$ dans le théorème précédent, montre que
@@ -476,8 +475,7 @@ Pour prendre une décision :
 
 Le test de Fisher teste l'effet de l'ensemble des variables explicatives sur la variable réponse. Ainsi, on saura si la variable réponse est expliquée par les variables explicatives. On appelle cela une ANalyse de la (Of) VAriance.
 
-L'hypothèse nulle du test est $H₀ = "\text{Les variables } X_i \text{ n'ont pas d'effet, dans leur globalité, sur la variable réponse}" = "\text{la variance de l'erreur est très forte face à la variance expliquée par le modèle}"$.
-
+L'hypothèse nulle du test est $$H₀ = \text{"Les variables } X_i \text{ n'ont pas d'effet, dans leur globalité, sur la variable réponse"} \\ = \text{"la variance de l'erreur est très forte face à la variance expliquée par le modèle"}$$
 Pour prendre une décision :
 
 - Si la p-value est inférieure au un niveau $α$ choisi (en général $0.05$), alors on rejette l'hypothèse nulle et on considère que les variable $X_i$ ont un effet global sur la variable réponse.
