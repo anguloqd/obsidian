@@ -30,3 +30,9 @@ Lorsque le client save le fichier, il est gardé dans un autre dir: "Station de 
 INFO IMPORTANT: NUMERO PLATEFORME E.G. CC2_2025_052. C le nombre de l'essai dans le logiciel CC.
 
 Après au debut du spec, qqun vient reviser que tout est en ordre, puis click sur "valider la demande d'essai", puis on remplit les "informations testeur" dans la fiche
+
+---
+
+JSON Keys :
+
+Confidentiality, Equipments, Laboratory, Object_ID, Origin_Of_Need, ParentSpec_Id, Project_Or_Activity_Name, Samples, Standards, TestCategory, Testers, TestSpec_ID, TestStartDate, Test_Parameters, Title, XmlType
