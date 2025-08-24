@@ -7,17 +7,17 @@
 Soit $E$ un $\mathbb{K}$-espace vectoriel et soit $\{v_1 , . . . , v_p\}$ une famille finie de vecteurs de $E$. Le rang de la famille $\{v_1 , . . . , v_p\}$ est la dimension du sous-espace vectoriel $\text{Vect}(v_1, . . . , v_p)$ engendré par les vecteurs $\{v_1 , . . . , v_p\}$. Autrement dit : $\text{rg}(v_1, . . . , v_p) = \text{dim } \text{Vect}(v_1, . . . , v_p)$.
 
 - **Propositions importantes**  :
-    - $0 \le \text{rg}(v_1, . . . , v_p) \le  p$, où $p$ est nombre d’éléments dans la famille
+    - $0 \le \text{rg}(v_1, . . . , v_p) \le  p$, où $p$ est nombre d'éléments dans la famille
     - $\text{rg}(v_1, . . . , v_p) \le \text{dim }E$, si $E$ de dimension finie.
 - Remarques :
-    - Le rang d’une famille vaut $0$ si et seulement si tous les vecteurs sont nuls.
-    - Le rang d’une famille $\{v_1, . . . , v_p\}$ vaut p si et seulement si la famille $\{v_1, . . . , v_p\}$ est libre.
+    - Le rang d'une famille vaut $0$ si et seulement si tous les vecteurs sont nuls.
+    - Le rang d'une famille $\{v_1, . . . , v_p\}$ vaut p si et seulement si la famille $\{v_1, . . . , v_p\}$ est libre.
 
 ## Rang d'une matrice
 
-On définit le rang d’une matrice comme étant le rang de ses vecteurs colonnes. C’est-à-dire, la dimension de l’espace engendré des vecteurs colonnes de la matrice.
+On définit le rang d'une matrice comme étant le rang de ses vecteurs colonnes. C'est-à-dire, la dimension de l'espace engendré des vecteurs colonnes de la matrice.
 
-Une matrice intéressante par rapport à son rang est une **matrice échelonnée**. On dit qu’une matrice est échelonnée par rapport aux colonnes si le nombre de zéros commençant une colonne croît strictement colonne après colonne, jusqu’à ce qu’il ne reste plus que des zéros. Autrement dit, la matrice transposée est échelonnée par rapport aux lignes. Par exemple :
+Une matrice intéressante par rapport à son rang est une **matrice échelonnée**. On dit qu'une matrice est échelonnée par rapport aux colonnes si le nombre de zéros commençant une colonne croît strictement colonne après colonne, jusqu'à ce qu'il ne reste plus que des zéros. Autrement dit, la matrice transposée est échelonnée par rapport aux lignes. Par exemple :
 
 $$
 \begin{bmatrix}
@@ -30,17 +30,17 @@ $$
 \end{bmatrix}
 $$
 
-Ici, les $∗$ désignent des coefficients quelconques (nuls ou non), et les $+$ des coefficients strictement non nuls. Le rang d’une matrice échelonnée par colonnes est égal au nombre de colonnes non nulles.
+Ici, les $∗$ désignent des coefficients quelconques (nuls ou non), et les $+$ des coefficients strictement non nuls. Le rang d'une matrice échelonnée par colonnes est égal au nombre de colonnes non nulles.
 
 ## Opérations conservant le rang
 
 Telles opérations sont les opérations élémentaires :
 
 1. **Escalade** : $C_i ← λC_i$ avec $λ \ne 0$. On peut multiplier une colonne par un scalaire non nul.
-2. **Somme escaladée** : $C_i ← C_i + λC_j$ avec $λ ∈ K$ (et $j \ne i$). On peut ajouter à la colonne $C_i$ un multiple d’une autre colonne $C_j$.
+2. **Somme escaladée** : $C_i ← C_i + λC_j$ avec $λ ∈ K$ (et $j \ne i$). On peut ajouter à la colonne $C_i$ un multiple d'une autre colonne $C_j$.
 3. **Échange** : $C_i ↔ C_j$. On peut échanger deux colonnes.
 
-Plus généralement, on peut dire que l’opération $C_i ← C_i + ∑_{i \ne j} λ_jC_j$ conserve le rang de la matrice. L’espace vectoriel engendré par les vecteurs colonnes est conservé par ces opérations.
+Plus généralement, on peut dire que l'opération $C_i ← C_i + ∑_{i \ne j} λ_jC_j$ conserve le rang de la matrice. L'espace vectoriel engendré par les vecteurs colonnes est conservé par ces opérations.
 
 ## Rang, matrices inversibles et transposées
 
@@ -52,7 +52,7 @@ Par rapport aux matrices transposées, on a que $\text{rg}A = \text{rg}(A^T)$. C
 
 ## Construction et *caractérisation*
 
-Une application linéaire crée une correspondance entre les vecteurs d'un espace $A$ à un autre espace $B$. C’est juste une fonction.
+Une application linéaire crée une correspondance entre les vecteurs d'un espace $A$ à un autre espace $B$. C'est juste une fonction.
 
 Supposons que $A$ n'a que deux vecteurs, $\{v_1, v_2\}$ et le même pour $B$, $\{w_1, w_2\}$. Donc, il existe une **unique application linéaire** pour chaque possible manière unique de faire des correspondances entre les vecteurs de $A$ et $B$. Et donc, il existe une unique matrice qui décrit une unique application linéaire, il y a bijection.
 
@@ -79,7 +79,7 @@ Deux notes pratiques :
 
 ### Rangs et applications
 
-Normalement, on parle de rang d'une famille de vecteurs comme la dimension de l'espace engendré de ce famille. C’est-à-dire, $\text{rg}(\{v_1, . . . , v_p\}) = \text{dim } \text{Vect}(\{v_1, . . . , v_p\})$.
+Normalement, on parle de rang d'une famille de vecteurs comme la dimension de l'espace engendré de ce famille. C'est-à-dire, $\text{rg}(\{v_1, . . . , v_p\}) = \text{dim } \text{Vect}(\{v_1, . . . , v_p\})$.
 
 Quand on parle du *rang d'une A.L*., on parle du rang de la image de $f$, qui est un sous-ensemble de l'ensemble d'arrivée ou codomaine. Notons que la famille de vecteurs composée de l'image de la base du départ engendre toute l'image de $f$. Donc, $\text{rg}(f) = \text{dim } \text{Im}(f) = \text{dim } \text{Vect}(\{f(e_1), . . . , f(e_n)\})$.
 
@@ -93,7 +93,7 @@ Dans la pratique, cette formule sert à déterminer la dimension du noyau connai
 
 ## Application linéaire entre $E$ et $F$ de même dimension
 
-Soit $f : E \mapsto F$ un isomorphisme (fonction bijective et linéaire) d’espaces vectoriels. Si $E$ (respectivement $F$) est de dimension finie, alors $F$ (respectivement $E$) est aussi de dimension finie et on a $\text{dim }E = \text{dim }F$.
+Soit $f : E \mapsto F$ un isomorphisme (fonction bijective et linéaire) d'espaces vectoriels. Si $E$ (respectivement $F$) est de dimension finie, alors $F$ (respectivement $E$) est aussi de dimension finie et on a $\text{dim }E = \text{dim }F$.
 
 - Une autre reformulation c'est : si $\text{dim }E = \text{dim }F$ et si $f$ est injective ou surjective.
 
@@ -105,7 +105,7 @@ Soit $f : E \mapsto F$ un isomorphisme (fonction bijective et linéaire) d’esp
 
 Mais, notons que finalement cette famille appartient à l'ensemble d'arrivée, $F$. Donc, on peut exprimer les images de la base de départ avec la base d'arrivée de manière ***unique***.
 
-Dans la prochaine équation, on exprime l’image d’un vecteur $e_j$ de la base $B$, avec la base d’arrivé $B^\prime=(f_i)_{1\le i\le n}$ :
+Dans la prochaine équation, on exprime l'image d'un vecteur $e_j$ de la base $B$, avec la base d'arrivé $B^\prime=(f_i)_{1\le i\le n}$ :
 
 $$
 f(e_j)=a_{1,j}f_1+a_{2,j}f_2+\dots+a_{n,j}f_n=\begin{bmatrix}a_{1,j}\\a_{2,j}\\\vdots\\a_{n,j}\end{bmatrix}_{B^\prime}
@@ -116,9 +116,20 @@ $$
 
 La matrice d'application linéaire $f$ (par rapport aux bases $B$ et $B'$) est la matrice dont la $j$-ième colonne est constituée par les coordonnées du vecteur $f(e_j)$ dans la base $B^\prime=(f_i)_{1\le i\le n}$.
 
-![image (1).png](ressources/01_matrices_et_applications_lineaires_image_(1).png)
+$$
+\text{Mat}_{B,B'}(f) = \begin{bmatrix}
+| & | & & | \\
+f(e_1)_{B'} & f(e_2)_{B'} & \cdots & f(e_n)_{B'} \\
+| & | & & |
+\end{bmatrix} = \begin{bmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+\end{bmatrix}
+$$
 
-En termes plus simples, c’est la matrice dont les vecteurs colonnes sont l’image par $f$ des vecteurs de la base de départ $B$, exprimée dans la base d’arrivée $B'$. On note cette matrice $\text{Mat}_{B,B'}(f)$.
+En termes plus simples, c'est la matrice dont les vecteurs colonnes sont l'image par $f$ des vecteurs de la base de départ $B$, exprimée dans la base d'arrivée $B'$. On note cette matrice $\text{Mat}_{B,B'}(f)$.
 
 Deux remarques à faire :
 
@@ -138,7 +149,7 @@ Aussi, et **la propriété la plus importante** : $\text{Mat}_{B,B'}(g \circ f) 
 
 ## Deux cas particuliers : endomorphismes et isomorphismes
 
-### Matrice d’un endomorphisme : $E \mapsto E$
+### Matrice d'un endomorphisme : $E \mapsto E$
 
 > [!note]
 > Avant d'aborder les A.L. plus connus exprimés en forme matricielle, un point sur la notation :
@@ -176,11 +187,11 @@ Une symétrie central est une homothétie avec $λ = -1$.
 
 ### Matrice d'un isomorphisme : $f$ bijective et linéaire
 
-$f$ est bijective (et donc isomorphe, parce que l’espace d’applications linéaires et un espace vectoriel et donc vérifie la propriété de linéarité) si et seulement si la matrice $\text{Mat}_{B, B’}(f)$ est inversible.
+$f$ est bijective (et donc isomorphe, parce que l'espace d'applications linéaires et un espace vectoriel et donc vérifie la propriété de linéarité) si et seulement si la matrice $\text{Mat}_{B, B'}(f)$ est inversible.
 
 - Bijectivité $\iff$ Inversibilité.
 
-De plus, si $f : E \mapsto F$ est bijective, alors la matrice de l’application linéaire $f^{−1} : F \mapsto E$ est la matrice $(\text{Mat}_{B,B'}(f))^{-1}$. Pour le déduire, par l’équivalence composition/multiplication, on observe facilement que $\text{Mat}_{B,B'}(f^{-1}) = (\text{Mat}_{B,B'}(f))^{-1}$.
+De plus, si $f : E \mapsto F$ est bijective, alors la matrice de l'application linéaire $f^{−1} : F \mapsto E$ est la matrice $(\text{Mat}_{B,B'}(f))^{-1}$. Pour le déduire, par l'équivalence composition/multiplication, on observe facilement que $\text{Mat}_{B,B'}(f^{-1}) = (\text{Mat}_{B,B'}(f))^{-1}$.
 
 # Changement de bases
 
@@ -190,20 +201,20 @@ Soit $E$ un espace vectoriel de dimension finie et soit $B = (e_1, e_2, \dots , 
 
 Rappelons que tout élément $x$ de $E$ se représente comme : $x = x_1e_1 + x_2e_2 + \dots + x_pe_p$. On dit que le vecteur colonne $\{x_1, x_2,\dots, x_p\}_B^T$ contient les coordonnées de $x$ sous la base $B$ de $E$.
 
-L’objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéaire. Le premier pas est de fixer $f : E \mapsto F$ et $A = \text{Mat}_{B,B'}(f)$ (la matrice qui contient l'image de la base de $E$ exprimé dans la base de $F$).
+L'objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéaire. Le premier pas est de fixer $f : E \mapsto F$ et $A = \text{Mat}_{B,B'}(f)$ (la matrice qui contient l'image de la base de $E$ exprimé dans la base de $F$).
 
-Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
+Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de "$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l'algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l'équivalence d'appliquer une fonction. Multiplier est d'appliquer une fonction.
 
 ## Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
 
 Soit $E$ un espace vectoriel de dimension finie $n$. On sait que toutes les bases de $E$ ont $n$ éléments. Fixons deux bases du même ensemble $E$ : $B$ et $B'$.
 
-La **matrice de passage** $P_{B,B'}$ est la matrice qui exprime les vecteurs de $B'$ en termes de l'ancienne base $B$. C’est le concept le plus important du changement de base.
+La **matrice de passage** $P_{B,B'}$ est la matrice qui exprime les vecteurs de $B'$ en termes de l'ancienne base $B$. C'est le concept le plus important du changement de base.
 
-Si on multiplie un vecteur à la droite de $P_{B,B’}$, il se "traduit" de $B'$ à $B$. L'arrivée est toujours la base $B$ avec laquelle on s'exprime actuellement. On la note aussi $\text{Mat}_B(B')$.
+Si on multiplie un vecteur à la droite de $P_{B,B'}$, il se "traduit" de $B'$ à $B$. L'arrivée est toujours la base $B$ avec laquelle on s'exprime actuellement. On la note aussi $\text{Mat}_B(B')$.
 
 > [!note]
-> Quelques notes par rapport à $P_{B,B’}$ :
+> Quelques notes par rapport à $P_{B,B'}$ :
 >
 > - Puisqu'on reste dans un même espace vectoriel $E$, on peut noter $\text{Mat}_{B',B}(\text{id}(E))$.
 > - Ici, $\text{id}(E)$ est une fonction de $E \mapsto E$ qui laisse un vecteur inchangé. La seule chose qui change donc c'est l'expression de l'image de la base $B'$ exprimés en termes de la base $B$.
@@ -223,7 +234,7 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \mapsto F$. Elle montre l'image de la base de départ dans la base d'arrivée. Une **matrice de passage** exprime un nouvelle base en terme d'une ancienne base toujours d'un même ensemble $E$. Il est très important de comprendre la différence entre les deux !
 
 > [!note]
-> Aide : la notation $\text{Mat}_{1,2}$ se lit “de $1$ à $2$” tant que $P_{1,2}$ se lit “à $1$ de $2$”. $\text{Mat}$ se lit dans “le bon ordre”, càd. de gauche à droite ; et $P$ dans l’ordre inverse.
+> Aide : la notation $\text{Mat}_{1,2}$ se lit "de $1$ à $2$" tant que $P_{1,2}$ se lit "à $1$ de $2$". $\text{Mat}$ se lit dans "le bon ordre", càd. de gauche à droite ; et $P$ dans l'ordre inverse.
 
 La formule de changement de base est la suivante :
 
@@ -244,7 +255,7 @@ $$
 1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
 3. $Q^{-1}$ : Finalement, on va exprimer le vecteur résultat de $\mathcal{B}_{F}$ à $\mathcal{B}_{F}'$.
-Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m’a posé de problèmes.
+Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m'a posé de problèmes.
 4. $B$ : Mais, notons que tout cela serait le même que prendre $\mathbf{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
 
 ### Sur un même espace vectoriel $E$
@@ -268,6 +279,6 @@ Interprétation :
 
 ### Matrices semblables
 
-On dit que la matrice $B$ est semblable à la matrice $A$ s’il existe une matrice inversible $P ∈ M_n(K)$ telle que $B = P^{−1}AP$. Deux matrices semblables représentent le même endomorphisme, mais exprimé dans des bases différentes.
+On dit que la matrice $B$ est semblable à la matrice $A$ s'il existe une matrice inversible $P ∈ M_n(K)$ telle que $B = P^{−1}AP$. Deux matrices semblables représentent le même endomorphisme, mais exprimé dans des bases différentes.
 
 - La relation "être semblable" est réflexive, symétrique et transitive.
