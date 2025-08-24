@@ -12,7 +12,6 @@
 ## La distribution $\chi^2(n)$ et $H_0$
 
 C'est un test statistique très important pour aider à déterminer si deux variables sont indépendantes ou non. Il prend comme statistique $\chi^2(n)$, qui est une somme des carrés de $n$ variables normales standard iid :
-
 $$
 \chi^2(n)=\sum_{i=1}^nX_i^2,\hspace{4pt}\text{où }X_i\sim\mathcal{N}(0,1)
 $$
