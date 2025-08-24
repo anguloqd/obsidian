@@ -1,18 +1,18 @@
-# 04 // structures de contrôle et tableaux
+## 04 // structures de contrôle et tableaux
 
 [Slides de cours 4.pdf](ressources/04_structures_de_controle_et_tableaux_inff3_2223_cours4.pdf)
 
-# Qu’est-ce que les structures de contrôle
+## Qu’est-ce que les structures de contrôle
 
-## Motivation
+### Motivation
 
 Un programme n'est généralement pas limité à une séquence linéaire d'instructions car, au cours de son processus, il peut bifurquer, répéter du code ou contourner des sections.
 
 Compte tenue, les structures de contrôle sont les blocs qui **analysent les variables et choisissent les directions** dans lesquelles aller en fonction de paramètres donnés.
 
-# Les structures conditionnelles
+## Les structures conditionnelles
 
-## `If`-`else`
+### `If`-`else`
 
 Elles exécutent un bloc de code si une telle condition est vérifiée.
 
@@ -42,9 +42,9 @@ else {
 }
 ```
 
-# Les structures itératives (boucles)
+## Les structures itératives (boucles)
 
-## Boucle `while` et `do`-`while`
+### Boucle `while` et `do`-`while`
 
 Elles exécutent un bloc de code répétitivement jusqu’à une condition ne soit plus vérifiée.
 
@@ -64,7 +64,7 @@ do {
 } while (expression_booleenne);
 ```
 
-## Boucle `for`
+### Boucle `for`
 
 1. Elle exécute l’initialisation avant la première itération
 2. Ensuite elle vérifie la condition
@@ -77,9 +77,9 @@ for ( intialisation ; condition ; étape ) {
 }
 ```
 
-# Les branchements inconditionnels
+## Les branchements inconditionnels
 
-## `break` et `continue`, utiles pour les boucles
+### `break` et `continue`, utiles pour les boucles
 
 Ils sont des instructions qui permettent de contrôler l’exécution d’une boucle.
 
@@ -88,9 +88,9 @@ Ils sont des instructions qui permettent de contrôler l’exécution d’une bo
 
 Les instructions peuvent utiliser aussi des *labels* ou étiquettes. Mais il faut les éviter dans le cours le plus possible !
 
-# Les structures de sélection
+## Les structures de sélection
 
-## `switch`
+### `switch`
 
 Elle permet de sélectionner des instructions à exécuter en fonction de la valeur d'une expression.
 
@@ -108,9 +108,9 @@ switch (expression) {
 }
 ```
 
-# Les tableaux
+## Les tableaux
 
-## Définition
+### Définition
 
 Un tableau est une collection indicée d'objets ou de primitives appelés *éléments du tableau*. Les éléments d'un tableau ont tous le même type. Une référence de tableau est déclarée en utilisant le nom du type suivi de `[]` : `int[] monTableau;`.
 
@@ -130,7 +130,7 @@ int[] ty = new int[] {1,1.0,2.1}; // erreur de compilation : la valeur 1.0 est d
 double[] tx = new double[] {1,1.0,2.1}; // ok. les ints sont passés à doubles
 ```
 
-## Tableaux et allocation mémoire
+### Tableaux et allocation mémoire
 
 Chaque “casse” du tableau contient soit `null`, soit une référence vers l’objet dans le tas. **L’objet contenu n’est pas dans la casse du tableau**, mais “au même niveau” dans le tas. Souvent, quand un objet “contient” un autre, ce qui contient c’est plutôt une référence ver l’objet contenu, **à exception si l’objet contenu est de type simple, dans ce cas il est vraiment “contenu” dans une casse sur le tas**.
 
@@ -144,7 +144,7 @@ String[] t8=new String[] {s1,s2};
 
 ![untitled](ressources/04_structures_de_controle_et_tableaux_untitled.png)
 
-## Manipulation des tableaux
+### Manipulation des tableaux
 
 On peut accéder aux éléments d'un tableau en donnant leur indice (position dans le tableau). Le 1er élément est `t[0]`, est le n-ème élément est `t[n-1]`.
 
@@ -152,7 +152,7 @@ Tout tableau possède un attribut donnant sa taille : `t.length`. **Il n’est p
 
 Accéder à un élément hors des limite lève une exception : `ArrayIndexOutOfBoundsException`
 
-### Boucle for-each
+#### Boucle for-each
 
 Forme succincte du `for` pour le parcours de tableaux (ou autres collections). Ne permet que l'accès en lecture, c’est-à-dire, on ne peut pas modifier les valeurs du tableau.
 
@@ -163,7 +163,7 @@ double[] tab = new double[]{1,2,3};
 }
 ```
 
-## Tableaux multidimensionnels
+### Tableaux multidimensionnels
 
 Ce sont des tableaux de tableaux, i.e. un tableau dont les éléments sont des tableaux. Le nombre de dimensions n’est pas limité.
 
@@ -185,9 +185,10 @@ int[][] matrice = new int[][]{ {1,2,3} , {1,2,3} } ;
 
 Note : **tous les tableaux de tableaux doivent être du même type**. Si on veut avoirs des types différents, on devra faire un tableau de type `Object[]`, qui est la classe la plus générale.
 
-## Utilitaires sur les tableaux
+### Utilitaires sur les tableaux
 
 La classe `java.util.Arrays` fournit de nombreuses procédures utilitaires. Il faut l’importer.
+
 Le package `Arrays` ne contient que de méthodes pour les tableaux utilitaires, il ne faut pas l’instancier.
 
 ```java
@@ -200,13 +201,13 @@ int[][] tab = new int[][]{ {1,2,3} , {3,4,5} };
 System.out.println(Arrays.deepToString(tab)); // cas tableau 2 dimensions ou plus. si on essaie avec un tableu 1d, erreur !
 ```
 
-### Egalité de tableaux
+#### Egalité de tableaux
 
 Rappel que l'opérateur `==` appliqué à deux variables de type tableau retourne l'égalité des références. Dans ce cas, et différent des `Strings`, la méthode `.equals()` fait la même chose que `==` !
 
 Donc, pour comparer leur contenu, `Arrays.equals()` pour un tableau de 1 dimension, et `Arrays.deepEquals()` pour 2 ou plus de dimensions. Il faut que les deux tableaux ont la même taille. Les références sont comparées via `.equals()` et les valeurs via `==`.
 
-### Remplir un tableau
+#### Remplir un tableau
 
 On peut remplir les casses d’un tableau avec une valeur ou une référence donnée.
 
@@ -221,7 +222,7 @@ Arrays.fill(leTableau, 1, 5, 99);
 System.out.println(Arrays.toString(leTableau));
 ```
 
-### Trier et chercher
+#### Trier et chercher
 
 Pour trier un tableau, `Arrays.sort(monTableau)`. Les éléments doivent être comparables par cardinalité (nombres) ou ordre alphabétique (`String` ou `char`).
 
@@ -248,7 +249,7 @@ else {
 }
 ```
 
-### Créer une copie d'un tableau
+#### Créer une copie d'un tableau
 
 On utilise la méthode `.copyOf()` ou `.copyOfRange()`.
 

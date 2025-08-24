@@ -1,8 +1,8 @@
-# 04 // sémantiques des BNFs et arbres d’analyse
+## 04 // sémantiques des BNFs et arbres d’analyse
 
 [chap4_4up.pdf](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_chap4_4up.pdf)
 
-## Exo 4.4
+### Exo 4.4
 
 > [!question] ❓
 >
@@ -16,13 +16,13 @@
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled_1.jpg)
 
-## Exo 4.5
+### Exo 4.5
 
 > [!question] ❓
 >
 > Donner tous les arbres d’analyse du mot `abbb` pour la BNF du langage $L$ suivante: `L ::= a L b | L b | ε`
 
-## Exo 4.6
+### Exo 4.6
 
 > [!question] ❓
 >
@@ -30,7 +30,7 @@
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_2.jpg)
 
-## Exo 4.7
+### Exo 4.7
 
 > [!question] ❓
 >
@@ -39,7 +39,7 @@
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_3.jpg)
 
-## Exo 4.8
+### Exo 4.8
 
 > [!question] ❓
 >
@@ -47,7 +47,7 @@
 
 Je l’ai pas je crois.
 
-## Exo 4.9
+### Exo 4.9
 
 > [!question] ❓
 >
@@ -55,7 +55,7 @@ Je l’ai pas je crois.
 >
 > ![image.png](ressources/04_semantiques_des_bnfs_et_arbres_d’analyse_image.png)
 
-## Exo 4.10
+### Exo 4.10
 
 > [!question] ❓
 >
@@ -65,7 +65,7 @@ Je l’ai pas je crois.
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_4.jpg)
 
-## Exo 4.11
+### Exo 4.11
 
 > [!question] ❓
 >
@@ -73,7 +73,7 @@ Je l’ai pas je crois.
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_5.jpg)
 
-## Exo 4.12
+### Exo 4.12
 
 > [!question] ❓
 >
@@ -86,7 +86,7 @@ Je l’ai pas je crois.
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_7.jpg)
 
-## Exo 4.13
+### Exo 4.13
 
 > [!question] ❓
 >

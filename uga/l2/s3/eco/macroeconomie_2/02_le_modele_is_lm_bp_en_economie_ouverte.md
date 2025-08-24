@@ -1,18 +1,18 @@
-# 02 // le modèle is-lm-bp en économie ouverte
+## 02 // le modèle is-lm-bp en économie ouverte
 
-# Passage à l’économie ouverte
+## Passage à l’économie ouverte
 
-## Introduction de la courbe BP
+### Introduction de la courbe BP
 
 Dans une économie ouverte, il faut ajouter une nouvelle condition d’équilibre : l’équilibre de la balance des paiements, qui sera représentée par une courbe BP venant s’ajouter aux courbes IS (marché des biens) et LM (marché monétaire).
 
-Notons que l’équilibre de la balance des paiements signifie qu’il n’y a ni entrées ni sorties nettes de devises et que le marché des changes est donc en équilibre. La courbe BP représente donc simultanément l’équilibre de la balance des paiements et du marché des changes. 
+Notons que l’équilibre de la balance des paiements signifie qu’il n’y a ni entrées ni sorties nettes de devises et que le marché des changes est donc en équilibre. La courbe BP représente donc simultanément l’équilibre de la balance des paiements et du marché des changes.
 
-# La construction du modèle
+## La construction du modèle
 
-## Incidence de l’ouverture extérieure sur IS et LM
+### Incidence de l’ouverture extérieure sur IS et LM
 
-### Incidence sur la courbe IS
+#### Incidence sur la courbe IS
 
 La courbe IS représente le marché des biens. Si on considère les exportations et importations, l’équation d’équilibre de offre et demande des produits est :
 
@@ -53,7 +53,7 @@ Comparons le terme $\frac{s_f}{b}Y$ avec $\frac{s_o+m_2}{b}Y$, qui sont les deux
 
 Finalement, si la compétitivité augmente $e_r$, on augmente les importations et diminue les exportations. (?)
 
-### Incidence sur la courbe LM
+#### Incidence sur la courbe LM
 
 Reprenons la définition originale de la courbe LM, où $g>0$ est élasticité-revenu de $O_M$ et $h<0$ est élasticité-intérêt de $O_M$ (**elle est croissante !!!**) :
 
@@ -61,7 +61,7 @@ $$
 i = \frac{O_M/P}{h} - \frac{g}{h}Y
 $$
 
-Sur la définition de masse monétaire réelle, notons qu’on peut décomposer le terme de masse monétaire $O_M$ comme suit. CINT est le crédit interne, RES sont les réserves de change. 
+Sur la définition de masse monétaire réelle, notons qu’on peut décomposer le terme de masse monétaire $O_M$ comme suit. CINT est le crédit interne, RES sont les réserves de change.
 
 $$
 \frac{O_M}{P} = \frac{CINT+RES}{P}
@@ -77,9 +77,9 @@ Notons que $BCA > 0$ si $K_\text{entrants} > K_\text{sortants}$. C’est à dire
 
 La prof. n’explicite pas la nouvelle équation pour la droite LM, mais en réalité $BCA$ est inclut comme un terme composant à effet direct dans $O_M$. Donc, $BCA$ a un effet : si $BCA > 0$, donc il existe une variation positive sur la masse monétaire $\Delta^+O_M$ et la droite LM se déplace à droite. Inversement pour $BCA < 0$.
 
-## Construction de la courbe BP
+### Construction de la courbe BP
 
-### Construction logique de la courbe
+#### Construction logique de la courbe
 
 La condition d’équilibre de la balance des paiements est la suivante, où $BTC$ fonction de $Y$ et $BCA$ fonction de $i$.
 
@@ -105,7 +105,7 @@ Cela dit, pour la construction de la droite BP sur le plan $(Y,i)$, on note seul
 
 ![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled.png)
 
-### Construction formelle de la courbe
+#### Construction formelle de la courbe
 
 La condition d’équilibre de la courbe BP est $BTC + BCA = 0$. On fait quelque remplacements et on arrive donc à ce qui suit. $ê$ est le taux de change anticipé.
 
@@ -129,11 +129,12 @@ On se rend compte que la pente de la fonction $i(Y)$ serait $\frac{m_2}{k}$, ce 
 L’élasticité-prix de la demande veut dire plutôt l’elasticité-prix de la quantité demandée.
 Elle serait effectivement $\frac{\Delta\% Q}{\Delta\% P}$, avec la var. ind. en dénominateur.
 
-## Interprétation et déplacement de la courbe BP
+### Interprétation et déplacement de la courbe BP
 
-### Interprétation de la pente de BP
+#### Interprétation de la pente de BP
 
 La pente de BP ($\frac{m_2}{k}$) et l’effet sur le taux d’intérêt sont d’autant plus forts
+
 que la demande d’importations $M$ est élastique au produit intérieur $Y$ (à travers de $m_2$) et que l’offre de capitaux $BCA$ est inélastique au taux d’intérêt $i$ (à travers de $k$).
 
 À ce moment, il est utile d’appeler $m_2$ comme le coefficient d’ouverture commerciale et $k$ le coefficient d’ouverture financière.
@@ -142,17 +143,17 @@ que la demande d’importations $M$ est élastique au produit intérieur $Y$ (à
 
 Gardant en tête $\frac{m_2}{k}$, pensons à deux cas extrêmes qui sont les deux courbes BP à gauche : quand la pente est 0 et quand la pente est infinie. Mathématiquement, on va juste ajuster à $k$ pour être $0$ ou infinie et représenter ces extrêmes, on laisse $m_2$ constant.
 
-### Absence de mouvements de capitaux : $k \rightarrow 0$
+#### Absence de mouvements de capitaux : $k \rightarrow 0$
 
 Si la pente est infinie ou BP est parfaitement inélastique, donc aucun changement de $i$ n’aura un effet sur $Y$. Plus spécifiquement, le taux d’intérêt $i$ sont sans effet sur l’équilibre extérieur et BP est une droite verticale qui represente simplement la balance de transactions courantes ($BP = BTC$). Il n’y a pas une connexion entre les marchés financiers nationaux.
 
-### Parfaite mobilité des capitaux : $k \rightarrow \infty$
+#### Parfaite mobilité des capitaux : $k \rightarrow \infty$
 
 Si la pente est $0$ ou parfaitement élastique, tous les capitaux réagissent de manière infiniment grande à une variation du taux d’intérêt. Le taux d’intérêt est complètement indépendante de l’équilibre interne et du revenu national. Si on voit l’équation de $i$, elle devient $i = i_{RDM} - ê$. Le taux d’intérêt est simplement égal au taux d’intérêt international corrigé par la dépréciation ou l’appréciation éventuellement anticipée de la monnaie nationale.
 
-Ce taux est un quantité fixe $i^*$ dont il est impossible de s’écarter : si on a un taux plus grand, tous les capitaux viendront au pays car il est plus attractif ; et si on a un taux plus petit, tous les capitaux vont fuir car ce n’est plus rentable. 
+Ce taux est un quantité fixe $i^*$ dont il est impossible de s’écarter : si on a un taux plus grand, tous les capitaux viendront au pays car il est plus attractif ; et si on a un taux plus petit, tous les capitaux vont fuir car ce n’est plus rentable.
 
-### Interprétation de la position de BP
+#### Interprétation de la position de BP
 
 Les variables qui pourrait réalistiquement être forcés à changer sont le revenu étranger $Y_{RDM}$. le taux de change réel $e_r = \frac{eP_{RDM}}{P}$ ($e$ taux de change nominal), taux de change étranger $i_{RDM}$ et taux de change anticipé $ê$.
 
@@ -165,23 +166,23 @@ Les variables qui pourrait réalistiquement être forcés à changer sont le rev
 
 Chaque fois on veut évaluer l’effet d’un changement de ces facteurs sur BP, **il faut absolument toujours retourner à l’équation $BTC+BCA=0$** et partir de là pour déterminer les effets.
 
-# Dilemmes de politique économique
+## Dilemmes de politique économique
 
-## La contradiction entre équilibre interne et équilibre externe
+### La contradiction entre équilibre interne et équilibre externe
 
-### Les différents cas de figure dans le modèle IS-LM-BP
+#### Les différents cas de figure dans le modèle IS-LM-BP
 
 Rappels : $BTC = X-M= (x_1 e_r+x_2 Y_{RDM})-(m_1 e_r + m_2 Y)$ et “l’équilibre extérieur” signifie $BP = BTC + BCA = 0$. L’équilibre de BTC sera donc $X=M$.
 
 À partir d’ici, on aura une préférence pour parler de $BTC$ au lieu de $BP$, car la balance de paiements est trompeuse. Pour donne une courte explication, elle cache l’endettement extérieur, ce qui n’est pas le cas avec $BTC$. **L’objectif d’équilibre externe est donc souvent formulé en termes de balance des transactions courantes**.
 
-Les dilemmes dont on parlera seront ces situations où on doit prioriser soit les objectifs internes (augmenter $Y$ jusqu’à plein-emploi, même si on n’a pas un équilibre de $BTC$) soit les objectifs externes (diminuer $Y$ jusqu’à l’équilibre de $BTC$, même si on n’a pas un équilibre dans le marché de biens).  
+Les dilemmes dont on parlera seront ces situations où on doit prioriser soit les objectifs internes (augmenter $Y$ jusqu’à plein-emploi, même si on n’a pas un équilibre de $BTC$) soit les objectifs externes (diminuer $Y$ jusqu’à l’équilibre de $BTC$, même si on n’a pas un équilibre dans le marché de biens).
 
 Le schéma pour expliquer la suite est le suivante. $Y_{pe}$ serait le niveau maximum de production possible. On va tracer des droites verticaux $Y_{BTC}$ qui montre le niveau où $BTC$ est en équilibre.
 
 ![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_2.png)
 
-### Le dilemme d’un pays structurellement déficitaire
+#### Le dilemme d’un pays structurellement déficitaire
 
 Structurellement déficitaire signifie simplement qu’on importe plus de ce qu’on exporte. On voit que les importations propres dépendent du revenu national (voir éq. de $BTC$), et le problème c’est que notre propension d’importation $m_1$ est tellement forte qu’on ne peut pas augmenter $Y$ sans augmenter fortement aussi $M$.
 
@@ -191,7 +192,7 @@ Si on produit plus de le niveau de $Y$ qui assure l’équilibre de $BTC$ ($X=M$
 
 Dans les zones 1 et 3 les décisions à prendre sont claires : soit on réduit le sous-emploi et l’excedent au même temps, ou l’inflation et le déficit au même temps. En zone 2, il n’y a pas exactement une réponse correcte, car ils existent d’avantages et désavantages de faire augmenter ou diminuer $Y$. Celui-ci est le **dilemme sous-emploi-déficit**.
 
-### Le dilemme d’un pays structurellement excédentaire
+#### Le dilemme d’un pays structurellement excédentaire
 
 Similairement, un pays structurellement excédentaire est celui qui exporte plus de ce qu’il importe.
 
@@ -201,13 +202,13 @@ Similairement, un pays structurellement excédentaire est celui qui exporte plus
 
 Il y a des raisons pour que le déficit se développe plutôt dans les pays qui luttent en priorité contre le chômage (étant struct. déficitaires), et que l’excédent apparaissent dans les pays qui s’attaquent en priorité à l’inflation (étant struct. excédentaires) : les premiers tolèrent plus d’inflation et stimulent davantage l’activité que les seconds; la compétitivité-prix est donc moindre et la demande d’importations plus forte chez les premiers que chez les seconds; les premiers ont tendance au déficit, et les seconds à l’excédent.
 
-## L’arbitrage délicat entre changes fixes et changes flexibles
+### L’arbitrage délicat entre changes fixes et changes flexibles
 
-### La fixité de change, responsables des dilemmes
+#### La fixité de change, responsables des dilemmes
 
 Pas expliqué dans le cours.
 
-### La solution apparente aux dilemmes : les changes flexibles
+#### La solution apparente aux dilemmes : les changes flexibles
 
 [(Lire la page 153 !) Jacques Généreux _ Économie politique _ Tome 1.pdf](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_jacques_gnreux_conomie_politique_tome_1_conomie_descriptive_et_comptabilit_nationale.pdf)
 
@@ -215,7 +216,7 @@ Si la balance de paiements est déficitaire, il en résulte une demande nette de
 
 Par contre, on trouve une période du temps où on a un déficit sans augmentation des exportations, ou l’analogue pour l’excédent. Cela arrive simplement parce que les importations et exportations ne sont pas parfaitement élastiques au taux de change $e_r$, et le pays extérieur prend du temps pour se rendre compte que nos prix sont plus attractif et il dégage en importation de nos produits.
 
-### Conditions de Marshall-Lerner
+#### Conditions de Marshall-Lerner
 
 Avant, on notait $(X - M)$ comme le montant en monnaie des exportations nettes. On va redéfinir la notation : $P_X$ comme le niveau de prix des exportations qu’on effectue, $P_M$ comme le niveau de prix des importations, et $X$ et $M$ seront simplement le volume ou quantité de exportations et importations, respectivement.
 
@@ -235,8 +236,8 @@ $$
 e_X+e_M>1+e_M \left( \frac{M-X}{X} \right)
 $$
 
-### La courbe en J
+#### La courbe en J
 
-C’est juste un représentation graphique qui met en évidence l’effet des inélasticités imparfaites des nos importations, et qu’**il prend du temps pour que le reste du monde se rende compte de la compétitivité acquise de nos produits** suite à une dévaluation de nos prix.  
+C’est juste un représentation graphique qui met en évidence l’effet des inélasticités imparfaites des nos importations, et qu’**il prend du temps pour que le reste du monde se rende compte de la compétitivité acquise de nos produits** suite à une dévaluation de nos prix.
 
 ![untitled](ressources/02_le_modele_is_lm_bp_en_economie_ouverte_untitled_5.png)

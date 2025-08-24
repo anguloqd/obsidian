@@ -1,19 +1,21 @@
-# 01 // l’entreprise dominante
+## 01 // l’entreprise dominante
 
 [Slides de partie 1](ressources/01_l’entreprise_dominante_slides_partie_1_micro2_vers_et_2022.pdf)
 
-# Le monopole
+## Le monopole
 
 La définition la plus basique d’un monopole est celle firme qui est le seule producteur dans un marché. On pourrait mentionner ici que la firme propose un prix plus haut au prix concurrentiel.
 
-## La maximisation du profit
+### La maximisation du profit
 
-### Tarification du monopole
+#### Tarification du monopole
 
 Rappelons que la fonction de demande est une correspondance de la quantité demandé en fonction du prix. Par habitude, on exprime plutôt la fonction de demande inverse, $p(q) = aq + b$, avec $a<0$ et $b>0$.
 
 D’ailleurs, le profit du monopole s’écrit : $\pi = RT(q) - CT(q)$.
+
 RT est la recette totale ou revenu totale, et CT est le coût totale.
+
 Si on analyse le terme RT, on sait que $RT(q) = p(q) \times q$. C’est la quantité de produit vendus fois leur prix.
 
 **Note** : dans la concurrence parfaite, $RT(q) = p^* \times q$. Ici, $p^*$ est une constante, est le $p$ de l’intersection de l’offre et la demande, ce qui est différent de $p(q)$. Par contre, dans le monopole, on utilise effectivement toute la courbe de demande $p(q)$ dans la recette totale.
@@ -27,6 +29,7 @@ En outre, ils existent d’autres indicateurs basées sur la recette :
 - Pour le monopole, la recette marginale est toujours inférieure à la recette moyenne (pas le cas dans concurrence parfaite).
 
 Finalement, il existe une relation entre $Rm$, $p$ et la elasticité-prix $\epsilon$.
+
 Sachant que la condition de maximisation de profit c’est $Rm = Cm$, on obtient avec un peu d’algèbre…
 
 $$
@@ -44,9 +47,10 @@ $$
 \underbrace{\frac{p-Cm}{p}}_{\text{Taux de marge}}=\underbrace{\frac{1}{|\epsilon|}}_\text{Élasticité inverse}
 $$
 
-### Pouvoir de marché du monopole
+#### Pouvoir de marché du monopole
 
 Le pouvoir de marché est la capacité d’une firme à proposer un prix supérieur à son coût marginal. L’intensité du pouvoir de marché est mesurée par la règle de
+
 l’élasticité inverse ou règle du mark-up qui définit de fait l’indice de Lerner :
 
 $$
@@ -57,7 +61,7 @@ $$
 - Si $|\epsilon| → 0$, donc $L → \infty$, qui est le cas du monopole (ou plutôt un nombre très grande, car $\infty$ n’est pas une quantité spécifique !)
 - Le pouvoir de marché d’un monopole est inversement proportionnel à l’élasticité-prix de la demande de marché.
 
-### Equilibre du monopole et économie du bien-être
+#### Equilibre du monopole et économie du bien-être
 
 Une *perte sèche* ou *charge morte* (deadweight) est une quantité de transactions qui n’est pas faite qui serait faite s’il y avait un équilibre concurrentiel, c’est-à-dire, s’il avait une offre tel que $p(q)_D = Cm$ . (à gauche c’est le prix demandé). Notons que dans l’équilibre concurrentiel (ou il y a plain d’entreprises), $P = Cm$, tant que en équilibre de monopôle, $P > Cm$.
 
@@ -65,21 +69,21 @@ Dans le cas monopole, la quantité offerte $q^*$ est celle où on vérifie $Cm =
 
 ![untitled](ressources/01_l’entreprise_dominante_untitled.png)
 
-## Règles alternatives de gestion
+### Règles alternatives de gestion
 
-### Maximisation du chiffre d’affaires
+#### Maximisation du chiffre d’affaires
 
 À la place produire la quantité $q$ qui vérifie l’équation $Cm = Rm$, on cherche $q$ tel que $Rm = 0$. Un monopole peut décider d’en faire pour maximiser ser ventes (même si cela ne maximise pas le profit !).
 
 ![untitled](ressources/01_l’entreprise_dominante_untitled_1.png)
 
-### La tarification au coût marginal (prix “concurrentiel”)
+#### La tarification au coût marginal (prix “concurrentiel”)
 
 Situation où $p(q) = Cm$. EDF, GDF (anciennement Gaz de France), SNCF, Orange sont tous des monopoles naturels. Pour motives de justice sociale, l’état les oblige de tarifer au coût marginal pour limiter leur pouvoir de marché. C’est comme cela qu’on passe du monopôle naturel au monopôle institutionnel.
 
 ![untitled](ressources/01_l’entreprise_dominante_untitled_2.png)
 
-### La gestion à l’équilibre
+#### La gestion à l’équilibre
 
 Un monopole publique est censé de couvrir ses coûts et de bénéficier au consommateurs. Donc, si jamais on trouve deux valeurs de $q$ qui satisfassent l’équation $p(q) = CM$, prendre la quantité la plus petite est paradoxale au but de bénéficier le consommateur, car y'a de consommateurs qu'on pourrait bénéficier sans rien perdre. $\pi$ doit être forcément égal à 0.
 
@@ -87,9 +91,9 @@ Un monopole publique est censé de couvrir ses coûts et de bénéficier au cons
 
 Apparemment selon le prof., “si $Cm > CM$, tarification au $Cm$ plus bénéfique pour le surplus collectif que la gestion à equilibre”.
 
-## Monopole naturel et monopole soutenable
+### Monopole naturel et monopole soutenable
 
-### Le monopole naturel
+#### Le monopole naturel
 
 Il existe une définition économique et une autre mathématique de “monopole naturel”.
 
@@ -100,7 +104,7 @@ Une conséquence de cette définition est qu’une condition suffisante pour avo
 
 **Attention**. Voyons le cas des activités multi-produits : **la propriété de rendements d’échelle croissants ne constitue ni une condition suffisante ni nécessaire de la sous-additivité des coûts**. De là l’importance des *économies de gamme*.
 
-### Du monopole naturel au monopole soutenable
+#### Du monopole naturel au monopole soutenable
 
 Pour chercher à se prémunir de l’entrée de nouveaux concurrents, le monopole naturel doit être *soutenable*. Un monopole est soutenable si et seulement s’il exerce une combinaison prix-quantité “soutenable”.
 
@@ -124,11 +128,11 @@ Ce dernier étude limite met un point sur l’importance que le point de coupure
 
 **Tip** : différence avec gestion à l'équilibre et monopole soutenable. Le dernier utilise, au pire, le critère de gestion à l'équilibre et, EN PLUS, il faut être au minimum de la courbe CTM. À gauche du minimum est soutenable, à droite du minimum non (voir photos).
 
-# Entreprise dominante et dissuasion à l’entrée
+## Entreprise dominante et dissuasion à l’entrée
 
-## La stratégie du prix limite
+### La stratégie du prix limite
 
-### Définition et hypothèses de base
+#### Définition et hypothèses de base
 
 La notion de comportement stratégique est la base de la théorie des jeux, et c’est que les décisions des agentes sont interdépendantes. On peut le voir comme “je sais que mes actions auront des conséquences sur les autres”.
 
@@ -152,17 +156,17 @@ Côte hypothèses, on a 4 premières hypothèses de “sens commun”, et on ajo
 5. Sylos-Labini : la firme en place maintient le niveau de production initial en période 2.
 6. Sylos-Labini : l'entrant potentiel anticipe une absence de réaction de la firme installée à la suite de son entrée.
 
-### Situation #1 : Avantage absolu de coût et économies d’échelle
+#### Situation #1 : Avantage absolu de coût et économies d’échelle
 
 Point de départ : le prix fixé par l'entreprise installée peut être supérieur au coût moyen de l'entrant potentiel, et **dissuader malgré tout l'entrée**. C’est ça l’avantage absolu de coût.
 
-### Conditions initiaux
+#### Conditions initiaux
 
 Sur un marché, la fonction de demande d'un produit est donnée par la forme linéaire classique : $p(q) = b - aq$, avec $a,b>0$.
 
 L’entreprise installée produit une quantité $q_F$ à coûts constants : $Cm = CM = c$, où $c \in \mathbb{R}^+$.
 
-### Entrée de la firme rivale et prix limite
+#### Entrée de la firme rivale et prix limite
 
 Une firme désire entrer sur le marché pour produire une quantité $q_e$ à un coût $c_e$, avec $c_e > c$, afin de respecter l'existence de l'avantage absolu de coût. À quel niveau la firme installée peut-elle fixer son prix pour rendre l'entrée non profitable ?
 
@@ -188,7 +192,7 @@ $$
 c_F + aq_e < p_F < c_e +aq_e
 $$
 
-### Situation #2 : Avantage lié à des économies d’échelle
+#### Situation #2 : Avantage lié à des économies d’échelle
 
 Point de départ : la firme installée et l’entrant potentiel disposent de la même technologie, c’est à dire possèdent une structure de coûts identique.
 
@@ -200,13 +204,13 @@ Dans cette première situation, on voit que la firme installé peut appliquer la
 
 Par contre, dans cette deuxième situation, la firme installée ne peut pas appliquer la maximisation de profits, car la quantité $q_m$ lié au résultat de la stratégie ne vérifie pas les inégalités importantes pour dissuader l’entrant qui applique aussi la stratégie de maximisation de profits $Cm_e = Rm_e$. Donc, la firme installer décide de choisir arbitrairement $q_L$, et cette quantité-ci arrive à dissuader l’entrant.
 
-Remarque : car la firme installée ne peut pas appliquer la maximisation de profits, elle n’est plus un “monopole”, mais juste une entreprise dominante. 
+Remarque : car la firme installée ne peut pas appliquer la maximisation de profits, elle n’est plus un “monopole”, mais juste une entreprise dominante.
 
 ![untitled](ressources/01_l’entreprise_dominante_untitled_6.png)
 
-## La stratégie de prédation par le prix
+### La stratégie de prédation par le prix
 
-### Définition et conditions
+#### Définition et conditions
 
 La stratégie de prédation par le prix est une stratégie qui s’agit de fixer un prix suffisamment bas pour une période suffisamment longue pour :
 
@@ -214,11 +218,12 @@ La stratégie de prédation par le prix est une stratégie qui s’agit de fixer
 - soir pour dissuader une partie ou la totalité de la concurrence potentielle.
 
 Une fois que les concurrents ont abandonné le marché ou que les entrées potentielles
+
 sont évitées, le prédateur pourra alors augmenter ses prix de façon significative.
 
-Pour qu’elle soit effective, la prédation par le prix doit être *crédible*, pour les concurrents actuels et les potentiels. Notons que le prix prédateur à deux fonctions simultanées : pour les concurrents potentiels, le prix prédateur est une *signal* de ce que les arriverait s’ils rentrent au marché. Au même temps, le prix prédateur permet d’eliminer la concurrence actuelle.  
+Pour qu’elle soit effective, la prédation par le prix doit être *crédible*, pour les concurrents actuels et les potentiels. Notons que le prix prédateur à deux fonctions simultanées : pour les concurrents potentiels, le prix prédateur est une *signal* de ce que les arriverait s’ils rentrent au marché. Au même temps, le prix prédateur permet d’eliminer la concurrence actuelle.
 
-### Hypothèses de base
+#### Hypothèses de base
 
 1. L'entreprise prédatrice dispose de moyens financiers suffisants.
 2. Deux entreprises ayant une structure de coût identique se partagent le marché.
@@ -235,15 +240,15 @@ Dans le graphique ci-dessous, lorsque le prix du marché est $p^*$, les consomma
 >
 > Le fait de fixer le prix comme ça pourrait entraîner des pertes, et s’il y a de pertes ce n’est plus un prix limite, car **le prix limite ne peut pas entraîner des pertes**.
 
-## Limites et crédibilité de ces stratégies
+### Limites et crédibilité de ces stratégies
 
-### Limites d’une stratégie de prédation
+#### Limites d’une stratégie de prédation
 
 - S’il n’ya pas de barrières d’entrée, la petite entreprise peut facilement sortir du marché et revenir quand le monopole tente de remonter grandement le prix.
 - Problèmes de crédibilité devants les concurrents potentiels : ils ne croient pas que la firme installée puisse entraîner ses grandes pertes juste pour éviter l’entrée d’autres concurrents.
 - Le rachat d’une entreprise petite de la part d’autre entreprise qui était dehors le marché et n’a pas donc subi les pertes du prix de prédation, ce qui le rend finalement facile pour sauter les barrieres d’entrées. Ici on n’a pas diminuer la concurrence par un membre, mais remplacé un concurrent par une autre extérieur.
 - Une petite entreprise est plus resiliente de ce que la firme installée anticipait et entraîne des grandes pertes qui durent beaucoup dans le temps pour l’entreprise dominante.
 
-### Critique du modèle traditionnel de prix limite
+#### Critique du modèle traditionnel de prix limite
 
 Dans le modèle de prix limite, on suppose que l’entrant va appliquer le stratégie de maximisation de profits $Cm=Rm$, et fixer une quantité et prix qui s’en déduisent. Il pourrait aussi appliquer une autre couple $(p,q)$ avec une autre stratégie, ce qui mérite donc plus d’évaluation.

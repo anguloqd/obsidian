@@ -1,10 +1,10 @@
-# 04 // ANOVA : analyse des variances
+## 04 // ANOVA : analyse des variances
 
 [Slides d’ANOVA](ressources/04_anova_analyse_des_variances_slides_anova_1_stat1_annote.pdf)
 
-# Régression linéaire pour les variables qualitatives
+## Régression linéaire pour les variables qualitatives
 
-## Le passage de $X$ à $\xi$
+### Le passage de $X$ à $\xi$
 
 Reprenons notre modèle de régression linéaire :
 
@@ -16,7 +16,7 @@ Dans la littérature statistique, on va trouver souvent la variable explicative 
 
 On trouve, par contre, un problème : une régression linéaire ne fait plus de sens quand $\xi$ est une qualité et non pas une qualité, et non plus le produit $\beta_1\xi$. On donnera une valeur quantitative à $\xi$ représentant une qualité.
 
-## Facteur à deux modalités
+### Facteur à deux modalités
 
 Par exemple, supposons qu’on mène un étude scientifique où on veut observer la différence d’un caractéristique de patients quand ils prennent un traitement expérimental vs. un placébo. L’échantillon qui prend le traitement et noté $n_1$, et $n_2$ pour ceux prenant le placébo.
 
@@ -34,7 +34,7 @@ Le but de l’analyse de variance ou ANOVA est de savoir si, en fait, la moyenne
 
 Quand c’est seulement deux échantillons, et donc deux moyennes $\bar{X}_1$ et $\bar{X}_2$, l’objectif devient $\mathcal{H}_0: \bar{X}_1 - \bar{X}_2 = 0$. Pour un statistique qui prend la forme de la différence de deux moyennes échantillonnales, on peut utiliser la variable $t$ de Student : $t=\frac{\bar{X}_1 - \bar{X}_2}{S_{\bar{X}_1 - \bar{X}_2}}$.
 
-## Facteur à $n$ modalités
+### Facteur à $n$ modalités
 
 Rien empêche qu’on puisse généraliser à $n$ échantillons. L’hypothèse nulle $\mathcal{H}_0$ devient donc :
 
@@ -113,9 +113,9 @@ $$
 \end{align*}
 $$
 
-$SCE$ signifiant ici somme des carrés des erreurs. Comme on veut estimer le paramètre réel $\sigma^2_\epsilon$ et l’expression finale de dépend des observations et statistiques des observations, $\frac{SCE}{n-a}$ sert comme un estimateur de $\sigma^2_\epsilon$. 
+$SCE$ signifiant ici somme des carrés des erreurs. Comme on veut estimer le paramètre réel $\sigma^2_\epsilon$ et l’expression finale de dépend des observations et statistiques des observations, $\frac{SCE}{n-a}$ sert comme un estimateur de $\sigma^2_\epsilon$.
 
-### Mettant tout ensemble
+#### Mettant tout ensemble
 
 Observons ce qu’on a :
 
@@ -132,7 +132,7 @@ $$
 
 où $q$ est le quantile d’ordre $(1-\alpha)$ de la loi, càd la valeur seuil de $F$ pour qu’on puisse rejeter l’hypothèse.
 
-## Revue de l’équation de la variance
+### Revue de l’équation de la variance
 
 Pour la dispersion totale, posons de plus la “somme de carré totale” pour la dispersion totale :
 

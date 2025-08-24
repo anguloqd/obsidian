@@ -1,10 +1,11 @@
-# aci
+## aci
 
 pas besoin de branche dirty si tu ne modifies pas ton code de aci/dangulo/main
 
 rebuild avec jenkins pour relancer les tests d’aci
 
 si commit de “updated submodules” dans kaf : git reset —hard vers un sha1 précedent
+
 (ceci se provoque quand tu fais un pull rebase de kmz avant de kaf)
 
 pour effacer une branche : git push origin :<branch-a-effacer>

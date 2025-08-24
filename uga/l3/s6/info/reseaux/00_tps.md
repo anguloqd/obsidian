@@ -1,18 +1,24 @@
-# 00 // tps
+## 00 // tps
 
-## Documents de TP
+### Documents de TP
 
 [00_tps_tp_ip1.pdf](ressources/00_tps_tp_ip1.pdf)
+
 [00_tps_tp_ip2.pdf](ressources/00_tps_tp_ip2.pdf)
+
 [00_tps_tp_ip3.pdf](ressources/00_tps_tp_ip3.pdf)
+
 [00_tps_tp_routage1.pdf](ressources/00_tps_tp_routage1.pdf)
+
 [00_tps_tp_routage2.pdf](ressources/00_tps_tp_routage2.pdf)
+
 [00_tps_routage2_form.pdf](ressources/00_tps_routage2_form.pdf)
+
 [00_tps_tp_firewall.pdf](ressources/00_tps_tp_firewall.pdf)
 
-## TP1 - Introduction au protocole IP
+### TP1 - Introduction au protocole IP
 
-### Adresses et identificateurs réseau
+#### Adresses et identificateurs réseau
 
 - `ifconfig` pour trouver :
     - adresse Ethernet (MAC)
@@ -23,14 +29,14 @@
 - Pour changer d'adresse IP :
     - `ifconfig eth0 adresse_ip netmask 255.255.255.0 up`
 
-### Adressage dans TCP/IP
+#### Adressage dans TCP/IP
 
 - Chaque machine identifiée par une adresse IP (32 bits, notation décimale pointée) : `192.168.20.25`
 - Chaque carte réseau dispose d'une adresse MAC (48 bits, notation hexadécimale) : `00:11:11:80:FB:3C`
 - Protocole ARP fait la correspondance IP ↔ MAC
 - DNS associe noms symboliques aux adresses IP : `miashs-www.u-ga.fr` ↔ `129.88.230.12`
 
-### Protocole ICMP et commande ping
+#### Protocole ICMP et commande ping
 
 - ICMP gère les erreurs au niveau IP
 - `ping` utilise deux types de messages ICMP :
@@ -38,7 +44,7 @@
     - Type 0 : echo reply (réponse d'écho)
 - Informations fournies : machine active/inactive, temps de propagation, pertes de paquets
 
-### VLAN : sous-réseaux virtuels
+#### VLAN : sous-réseaux virtuels
 
 VLAN : sous-réseau d'un réseau local. Peut isoler les communications de deux machines qui appartiennent à deux VLAN différents
 
@@ -53,7 +59,7 @@ VLAN : sous-réseau d'un réseau local. Peut isoler les communications de deux m
     - `port/setvlan 1 100` pour affecter les ports des machines. Dans ce cas, affecte la machine connectée dans le port `1` dans la VLAN `100`
     - `vlan/print`
 
-### Capture de trames avec Wireshark
+#### Capture de trames avec Wireshark
 
 - Trois zones d'interface :
     - Liste des paquets capturés (synthèse)
@@ -61,21 +67,23 @@ VLAN : sous-réseau d'un réseau local. Peut isoler les communications de deux m
     - Affichage hexadécimal et ASCII
 - Filtres d'affichage pour analyser le trafic spécifique
 
-## TP2 - Protocoles avancés
+### TP2 - Protocoles avancés
 
-### Résolution de noms sans DNS
+#### Résolution de noms sans DNS
 
 Noms de machines symboliques sans passer par les DNS :
+
 - Modifier `/etc/hosts/` avec un éditeur de texte. La syntaxe est :
     `<IP> <NOM1> <NOM2> … <NOM_FINAL>`
 
-### Fragmentation IP et MTU
+#### Fragmentation IP et MTU
 
 Ping de taille paramétrable : `ping ip -s size`
+
 - MTU : limite de taille de paquets. Si un message ICMP atteint cette taille, il se fragmente.
 - Pour modifier MTU : `ifconfig eth0 mtu 1000`
 
-### Commande traceroute
+#### Commande traceroute
 
 Commande traceroute : envoie des messages ICMP et permet de connaitre la route des datagrammes. Pour chaque router entre m1 et m2, la commande enverra un message ICMP de portée 1 (ie. durée de vie ou TTL, time to live), puis cette portée augmente de 1 jusqu'à que elle ne trouve plus de routers.
 
@@ -85,15 +93,16 @@ Définition formelle : "Comme la commande ping, la commande traceroute utilise �
 
 Les nuages sont des réseaux, les cercles avec des flèches sont des routers.
 
-### Protocole ARP (Address Resolution Protocol)
+#### Protocole ARP (Address Resolution Protocol)
 
 ARP : address resolution protocol. C'est une table de correspondance adresse IP avec adresse MAC. `arp -n`.
 
 La table montre la correspondance IP-MAC d'une machine si et seulement si :
+
 - On a fait `ping` à telle machine au moins une fois
 - La machine fait partie du réseau local (à travers un hub H1, et tel hub à une passerelle G1).
 
-#### Fonctionnement d'ARP
+##### Fonctionnement d'ARP
 
 1. Hôte A veut communiquer avec hôte B (connaît IP de B)
 2. A envoie requête ARP en broadcast : "Qui a l'IP X ? Répondez à mon IP Y"
@@ -102,9 +111,9 @@ La table montre la correspondance IP-MAC d'une machine si et seulement si :
 5. A met à jour sa table cache ARP
 6. Les entrées expirent après temporisation
 
-### Protocoles de transport et applications
+#### Protocoles de transport et applications
 
-#### Notion de ports
+##### Notion de ports
 
 - Ports 0-1023 : ports réservés (services standards)
     - SMTP : port 25
@@ -114,16 +123,17 @@ La table montre la correspondance IP-MAC d'une machine si et seulement si :
 - Ports > 1024 : ports utilisateurs
 - Correspondance nom/numéro dans `/etc/services`
 
-#### Analyse DNS (protocole UDP)
+##### Analyse DNS (protocole UDP)
 
 Filtres de capture :
+
 - Sur m12 se mettre à l'écoute de messages UDP avec :
     `tcpdump -i any 'udp and port 53'`. Attention, c'est `tcpdump`, pas `tcp` !
 - On peut le faire plus simplement avec Wireshark en écrivant comme filtre "ùdp". On peut faire de même avec "tcp".
 
-## TP3 - DHCP et TCP
+### TP3 - DHCP et TCP
 
-### DHCP (Dynamic Host Configuration Protocol)
+#### DHCP (Dynamic Host Configuration Protocol)
 
 DHCP : protocole d'assignation d'adresse IP d'une machine dans un réseau local. Il est différent de l'affectation statique. On commence avec :
 
@@ -137,7 +147,7 @@ Activer les interfaces réseau des m2 et m3 avec les commandes : `ifup eth0`. La
 
 La procédure donnera une adresse IP différente si l'adresse MAC de la carte réseau de la machine est différente. Si on change manuellement l'adresse MAC avec `ifconfig eth0 hw ether 02:03:04:05:06:07`, on aura un résultat différent.
 
-#### Effet sur le routage
+##### Effet sur le routage
 
 Important. Le fait d'affecter une IP dynamiquement est que la machine garde aussi l'adresse de la passerelle dans son tableau de routage. Si m2 fait `route -n` :
 
@@ -148,12 +158,14 @@ Destination   Gateway      Genmask        Flag   Metric   Ref   Use   Iface
 ```
 
 La première ligne est le routage du réseau local :
+
 - Cette ligne indique que pour atteindre le réseau `192.168.2.0`, les paquets doivent être envoyés directement (pas de passerelle, donc `0.0.0.0`) via l'interface `eth0`.
 
 La deuxième ligne est le routage extérieur :
+
 - Cette ligne est la route par défaut. Elle indique que tous les paquets destinés à des réseaux pour lesquels il n'y a pas de route spécifique doivent être envoyés à la passerelle `192.168.2.2` via l'interface `eth0`.
 
-### TCP et HTTP
+#### TCP et HTTP
 
 ![untitled](ressources/00_tps_untitled_1.png)
 
@@ -165,7 +177,7 @@ La deuxième ligne est le routage extérieur :
 - Initier une connexion HTTP depuis m2 vers m1 :
     - `lynx http://192.168.2.254`
 
-#### Analyse des sessions TCP
+##### Analyse des sessions TCP
 
 - Poignées de main : SYN, SYN-ACK, ACK (début)
 - Fermeture : FIN-ACK, FIN-ACK, ACK
@@ -173,9 +185,9 @@ La deuxième ligne est le routage extérieur :
 - Flow Graph pour visualiser les échanges
 - Mécanisme de retransmission en cas de perte
 
-## TP Routage 1 - Configuration basique
+### TP Routage 1 - Configuration basique
 
-### Rappels sur le routage
+#### Rappels sur le routage
 
 - Deux machines sur le même segment communiquent directement (ARP)
 - Pour atteindre un autre réseau : informations de routage (statiques/dynamiques)
@@ -184,7 +196,7 @@ La deuxième ligne est le routage extérieur :
     - Adresses des réseaux distants autorisés
     - Entrée par défaut
 
-#### Algorithme de routage
+##### Algorithme de routage
 
 ```
 si (@IP_dest & masque == mon@IP & masque)
@@ -193,9 +205,9 @@ sinon
     envoi_indirect(datagramme, @IP_dest, routeur(@IP_dest & masque))
 ```
 
-### Commandes de routage
+#### Commandes de routage
 
-#### Configuration d'interfaces
+##### Configuration d'interfaces
 
 ```bash
 # Afficher toutes les interfaces
@@ -205,7 +217,7 @@ ifconfig
 ifconfig eth0 192.168.10.1 netmask 255.255.255.0 up
 ```
 
-#### Gestion des tables de routage
+##### Gestion des tables de routage
 
 ```bash
 # Afficher la table de routage
@@ -224,9 +236,10 @@ route del -net 192.168.10.0 netmask 255.255.255.0
 route del default
 ```
 
-### Étapes de configuration
+#### Étapes de configuration
 
-#### Étape 1 : Configuration de base
+##### Étape 1 : Configuration de base
+
 - 4 hôtes (m1, m2, m3, m4) dans 4 réseaux :
     - N1 : 192.168.10.0
     - N2 : 192.168.110.0
@@ -235,33 +248,36 @@ route del default
 - 2 routeurs R1 et R2
 - Convention d'adressage : première IP pour hôte, dernière pour routeur
 
-#### Étape 2 : Interconnexion des routeurs
+##### Étape 2 : Interconnexion des routeurs
+
 - Réseau inter-routeurs : 192.168.200.0
 - R1 : 192.168.200.1
 - R2 : 192.168.200.2
 - Configuration des tables pour communication complète
 
-#### Étapes 3-4 : Extension et optimisation
+##### Étapes 3-4 : Extension et optimisation
+
 - Ajout de 4 hôtes supplémentaires (m5-m8)
 - Nouveaux réseaux N5-N8
 - Routeurs R3 et R4
 - Vérification avec `traceroute -n`
 
-## TP Routage 2 - Routage avancé et sous-réseaux
+### TP Routage 2 - Routage avancé et sous-réseaux
 
-### Découpage en sous-réseaux
+#### Découpage en sous-réseaux
 
 Objectif : découper le réseau 192.168.20.0 en trois sous-réseaux
 
-#### Contraintes du découpage
+##### Contraintes du découpage
+
 - m1 (192.168.20.1) dans N1-1
 - N1-1 : max 30 hôtes
-- N1-2 : max 120 hôtes  
+- N1-2 : max 120 hôtes
 - N1-3 : max 60 hôtes
 - N2 : 172.20.0.0
 - Utilisation possible du sous-réseau 0
 
-#### Calcul des sous-réseaux
+##### Calcul des sous-réseaux
 
 | Sous-réseau | Hôtes requis | Bits hôtes | Masque | Adresse réseau |
 |-------------|--------------|------------|---------|----------------|
@@ -270,7 +286,7 @@ Objectif : découper le réseau 192.168.20.0 en trois sous-réseaux
 | N1-3 | 60 | 6 (/26) | 255.255.255.192 | 192.168.20.64/26 |
 | N2 | - | - | 255.255.0.0 | 172.20.0.0/16 |
 
-#### Plages d'adresses disponibles
+##### Plages d'adresses disponibles
 
 | Sous-réseau | Adresse début | Adresse fin | Broadcast |
 |-------------|---------------|-------------|-----------|
@@ -279,21 +295,24 @@ Objectif : découper le réseau 192.168.20.0 en trois sous-réseaux
 | N1-3 | 192.168.20.65 | 192.168.20.126 | 192.168.20.127 |
 | N2 | 172.20.0.1 | 172.20.255.254 | 172.20.255.255 |
 
-### Configuration des tables de routage
+#### Configuration des tables de routage
 
-#### Stations clientes
+##### Stations clientes
+
 - Configuration minimale : réseaux directs + route par défaut
 - Test de connectivité avec `ping`
 - Optimisation des chemins avec `traceroute`
 
-#### Routeurs
+##### Routeurs
+
 - Routes spécifiques vers chaque sous-réseau
 - Possibilité d'utiliser une route par défaut
 - Impact de la suppression de routes
 
-### Résolution de noms
+#### Résolution de noms
 
 Configuration du fichier `/etc/hosts` sur chaque machine :
+
 ```
 192.168.20.1 m1
 192.168.20.129 m2
@@ -302,23 +321,24 @@ Configuration du fichier `/etc/hosts` sur chaque machine :
 
 Test avec noms symboliques dans les commandes `ping` et affichage de `route` sans option `-n`.
 
-## TP Firewall - Sécurité réseau
+### TP Firewall - Sécurité réseau
 
-### Concepts de base
+#### Concepts de base
 
-#### IP Masquerading (camouflage IP)
+##### IP Masquerading (camouflage IP)
+
 - Les réseaux privés (RFC 1918) ne sont pas routables sur Internet :
     - 10.*.*.*
-    - 172.16.*.*  
+    - 172.16.*.*
     - 192.168.*.*
 - Le masquerading réécrit les paquets pour qu'ils semblent provenir de la passerelle
 - Réécrit ensuite les réponses pour la destination originale
 
-#### iptables et netfilter
+##### iptables et netfilter
 
 Programme `iptables` manipule les règles de filtrage du noyau Linux.
 
-##### Tables et chaînes
+###### Tables et chaînes
 
 **Table NAT (Network Address Translation) :**
 - PREROUTING
@@ -326,17 +346,19 @@ Programme `iptables` manipule les règles de filtrage du noyau Linux.
 
 **Table FILTER (par défaut) :**
 - INPUT : paquets destinés au firewall
-- OUTPUT : paquets émis par le firewall  
+- OUTPUT : paquets émis par le firewall
 - FORWARD : paquets routés
 
-##### Politiques de filtrage
+###### Politiques de filtrage
+
 - ACCEPT : paquets acceptés
 - DROP : paquets refusés sans notification
 - REJECT : paquets refusés avec notification
 
-### Commandes iptables essentielles
+#### Commandes iptables essentielles
 
-#### Gestion des chaînes
+##### Gestion des chaînes
+
 ```bash
 # Créer une chaîne utilisateur
 iptables –N test
@@ -355,7 +377,8 @@ iptables -nL  # format numérique
 iptables -F
 ```
 
-#### Manipulation des règles
+##### Manipulation des règles
+
 ```bash
 # Ajouter une règle
 iptables –A INPUT –s 0/0 –j DENY
@@ -370,11 +393,11 @@ iptables –D INPUT 1
 iptables –D INPUT –s 127.0.0.1 –p icmp –j DENY
 ```
 
-#### Spécification des critères
+##### Spécification des critères
 
 **Adresses :**
 - Nom complet : `prevert.upmf-grenoble.fr`
-- Adresse IP : `195.221.42.159`  
+- Adresse IP : `195.221.42.159`
 - Réseau : `195.221.42.0/24`
 - Toute adresse : `0.0.0.0/0` ou `0/0`
 
@@ -385,6 +408,7 @@ iptables –D INPUT –s 127.0.0.1 –p icmp –j DENY
 - RELATED : connexion liée
 
 **Protocoles et ports :**
+
 ```bash
 # Protocole
 -p tcp/udp/icmp
@@ -399,19 +423,20 @@ iptables –D INPUT –s 127.0.0.1 –p icmp –j DENY
 ! -p tcp
 ```
 
-### Configuration pratique
+#### Configuration pratique
 
-#### Étape 1 : Configuration de base
+##### Étape 1 : Configuration de base
 
 **Réseau privé :** 192.168.40.0/24
 - m1 : 192.168.40.1 (client)
 - proxy : 192.168.40.254 (firewall, 2 interfaces)
 
-**Réseau public :** 195.83.80.0/24  
+**Réseau public :** 195.83.80.0/24
 - proxy : 195.83.80.254
 - www : 195.83.80.10
 
 **Sur le firewall :**
+
 ```bash
 # Activer le routage
 echo 1 > /proc/sys/net/ipv4/ip_forward
@@ -427,9 +452,10 @@ iptables -A POSTROUTING -t nat -j MASQUERADE
 iptables -A FORWARD -s 192.168.40.0/24 -j ACCEPT
 ```
 
-#### Étape 2 : Filtrage simple
+##### Étape 2 : Filtrage simple
 
 Création d'une chaîne pour journalisation :
+
 ```bash
 # Créer chaîne LOG_DROP
 iptables –N LOG_DROP
@@ -443,15 +469,17 @@ iptables –A INPUT –p icmp –s 127.0.0.1 –j LOG_DROP
 tail –f /var/log/messages
 ```
 
-#### Étape 3 : Filtrage HTTP
+##### Étape 3 : Filtrage HTTP
 
 Bloquer les connexions HTTP (port 80) :
+
 ```bash
 iptables -A FORWARD -p tcp --sport 80 -m state --state ESTABLISHED -j LOG_DROP
 iptables -A FORWARD -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j LOG_DROP
 ```
 
 **Approche inverse - tout interdire sauf HTTP :**
+
 ```bash
 # Politique restrictive
 iptables -P FORWARD DROP
@@ -468,13 +496,14 @@ iptables -A FORWARD -p tcp -s 192.168.40.0/24 -d 0/0 --dport 80 -m state --state
 ```
 
 **Extension pour SSH :**
+
 ```bash
 # Autoriser SSH sortant
 iptables -A FORWARD -p tcp -s 192.168.40.0/24 -d 0/0 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -p tcp -s 0/0 -d 192.168.40.0/24 --sport 22 -m state --state ESTABLISHED -j ACCEPT
 ```
 
-### Tests et validation
+#### Tests et validation
 
 - Vérification avec `ping`, `epiphany`, `nslookup`
 - Test de connectivité : `ssh miashs-dc.u-ga.fr`

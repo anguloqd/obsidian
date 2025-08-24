@@ -1,4 +1,4 @@
-# 99 // le pdf
+## 99 // le pdf
 
 [Cours alg 3.pdf](ressources/99_le_pdf_cours_alg_3.pdf)
 

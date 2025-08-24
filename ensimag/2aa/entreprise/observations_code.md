@@ -9,12 +9,14 @@
 
 -   df.loc[] permet de selectionner une ou plusieurs cellules dans un df en specifiant des labels de rows/columns ou des
     booleans arrays. Example :
+
     ```
     mask = df['id_produit'] == i
     df.loc[mask, 'color'] = 'red'
     ```
 
 -   pd.cut() est utile pour prendre la colonne d'un df et de mettre ses valeurs dans des bins discrets.
+
     ```
     pd.cut(
         df.loc[mask, 'phase1_temps_de_fermeture'],

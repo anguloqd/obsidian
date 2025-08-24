@@ -1,8 +1,8 @@
-# 02 // premiers éléments de théorie des probabilités
+## 02 // premiers éléments de théorie des probabilités
 
-# Les bases
+## Les bases
 
-## Les événements : $\omega \in \Omega$
+### Les événements : $\omega \in \Omega$
 
 Soit $\Omega$ l’univers d’événements, càd., l’ensemble de tous le possibles résultats d’une expérience aléatoire. Un événement est un sous-ensemble de l’univers $\Omega$.
 
@@ -15,7 +15,7 @@ Selon sa définition, un événement reçoit une classification d'événements :
 - **Événement complémentaire** : si on fixe un événement $E$ avec un probabilité $p$, donc l'événement "non E", noté comme $\neg E$, a une probabilité $(1-p)$.
 - **Événement élémentaire** : événements qui se réalisent pour une seule issue de l’expérience. Exemple : pile ou face, pour construire des suites de pile ou faces.
 
-## Algèbre d’événements : $\mathcal A = \{S,O\}$
+### Algèbre d’événements : $\mathcal A = \{S,O\}$
 
 Pour rappel, une *algèbre* est une duple $\{S,O\}$ avec $S$ un ensemble d’éléments et $O$ un ensemble d’opérations applicables à $S$ de sorte que leur résultat reste encore dans $S$. Cette propriété s’appelle la *fermeture* ou *stabilité* de $S$ par rapport aux opérations de $O$, et est nécessaire dans la définition d’une algèbre..
 
@@ -34,9 +34,9 @@ L'ensemble pour lequel $A$ est faux.
 - **Événements complémentaires** : si $A \cup B = \Omega$.
     - Note. Dans la définition de l’algèbre $\mathcal{A}$, on peut définir l’ensemble d’événements qui contient tous les événements $\Omega$, o bien juste un partie d’eux $S\subset \Omega$.
 
-# Les probabilités des événements
+## Les probabilités des événements
 
-## Définition et propriétés
+### Définition et propriétés
 
 Partons des axiomes de probabilités, même si on va les condenser à l’extrême ici. Un espace de probabilité est le triplet $(\Omega, \mathcal{A}, \mathbb{P})$, où $\Omega$ est l’univers, $\mathcal{A}$ une tribu/$\sigma$-algèbre/algèbre d’événements, et $\mathbb{P}$ est une fonction $\Omega \mapsto [0,1]\in\mathbb{R}$ pour donner une probabilité à un événement.
 
@@ -46,7 +46,7 @@ Partons des axiomes de probabilités, même si on va les condenser à l’extrê
 - $\mathbb P(\neg A) = 1 - \mathbb P(A)$
 - $\mathbb P(A \cup B) \le \mathbb P(A) + \mathbb P(B)$
 
-## Probabilité conditionnelle
+### Probabilité conditionnelle
 
 La probabilité conditionnelle de $B$ donné $A$, notée comme $\mathbb P(B|A)$, nous mène à réduire notre vision de $B$ à partir de tout l’univers jusqu’à la partie de l’univers où un certain événement $A$ s’est produit. La définition mathématique est comme suit :
 
@@ -60,9 +60,9 @@ $$
 \mathbb P(A|B) = \frac{\mathbb P(B|A)\mathbb P(A)}{\mathbb P(B)}
 $$
 
-# Indépendance
+## Indépendance
 
-## Notion et événements indépendants
+### Notion et événements indépendants
 
 La définition d’indépendance est alors :
 
@@ -70,7 +70,7 @@ $$
 A,B \text{ sont indépendants} \iff \mathbb P(A \cap B) = \mathbb P(A) \mathbb P(B) 
 $$
 
-Notons que si $A$ est indépendant de $B$, $B$ est aussi indépendant de $A$. 
+Notons que si $A$ est indépendant de $B$, $B$ est aussi indépendant de $A$.
 
 La formulation plus général (si les événements sont indépendants ou dépendants) est alors :
 
@@ -86,7 +86,7 @@ $$
 \{A_1,\dots,A_n\} \text{ sont indépendants entre eux} \iff \mathbb P \left( \bigcap_{i=1}^n A_i \right) = \prod_{i=1}^n\mathbb P(A_i)
 $$
 
-## Variables aléatoires indépendantes
+### Variables aléatoires indépendantes
 
 De même, on peut définir V.A qui gardent cette idée d’indépendance. L’univers $\Omega$, dans ce cas, contient toutes le possibles couples valeurs que $X_1$ et $X_2$ pourraient prendre. Si $X_1$ est une pièce et $X_2$ un dé, donc :
 
@@ -124,7 +124,7 @@ $$
 \mathbb P \left( \bigcap_{i=1}^nX_i \right)= \prod_{i=1}^n\mathbb P(X_i )
 $$
 
-## V.A comme des fonctions d’autres V.A et leur indépendance
+### V.A comme des fonctions d’autres V.A et leur indépendance
 
 Notons qu’on peut construire une variable aléatoire sur une autre variable aléatoire. Prenons $X$ comme le résultat d’un dé et définissons $Y = 2X+3$. $Y$ est simplement une fonction affine définie sur le résultat du dé. Si le dé montre $4$, on le multiple par $2$ et on somme $3$, $Y$ serait donc $11$.
 
@@ -136,7 +136,7 @@ f:\mathbb{R} \mapsto \mathbb{R}, f(x)=2x+3
 Y = f(X)= 2X+3. \implies \Omega_Y=\{5,7,9,11,13,15\}
 $$
 
-Avec cela dit, si une famille de V.A sont indépendantes, définir des variables aléatoires sur les V.A indépendantes de bases restent bien sûr indépendantes entre elles. 
+Avec cela dit, si une famille de V.A sont indépendantes, définir des variables aléatoires sur les V.A indépendantes de bases restent bien sûr indépendantes entre elles.
 
 $$
 \{ X_1,\dots,X_n \} \text{ V.A indépendantes,  }

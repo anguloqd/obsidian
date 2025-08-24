@@ -1,4 +1,4 @@
-# Period #2 - kann-models-zoo in kaf
+## Period #2 - kann-models-zoo in kaf
 
 ```bash
 # In kaf folder, with Quentin

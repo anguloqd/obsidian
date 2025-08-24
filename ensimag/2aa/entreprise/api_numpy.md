@@ -1,5 +1,6 @@
-# Guide API de NumPy
-## Création de tableaux
+## Guide API de NumPy
+
+### Création de tableaux
 
 ```python
 # Création de base
@@ -29,7 +30,7 @@ np.copy(array)
 np.array(data, dtype=np.float32)
 ```
 
-## Propriétés et inspection des tableaux
+### Propriétés et inspection des tableaux
 
 ```python
 arr.shape
@@ -45,7 +46,7 @@ isinstance(arr, np.ndarray)
 np.isscalar(value)
 ```
 
-## Indexation et découpage
+### Indexation et découpage
 
 ```python
 # Indexation de base
@@ -67,7 +68,7 @@ arr[1:3, 2:5]
 arr[[0, 2], [1, 3]]  # éléments aux positions (0,1) et (2,3)
 ```
 
-## Manipulation de tableaux
+### Manipulation de tableaux
 
 ```python
 # Redimensionnement
@@ -94,7 +95,7 @@ np.swapaxes(arr, axis1, axis2)
 np.moveaxis(arr, source, destination)
 ```
 
-## Opérations mathématiques
+### Opérations mathématiques
 
 ```python
 # Opérations élément par élément
@@ -125,7 +126,7 @@ np.ceil(arr)
 np.trunc(arr)
 ```
 
-## Fonctions d'agrégation
+### Fonctions d'agrégation
 
 ```python
 # Statistiques de base
@@ -153,7 +154,7 @@ np.cummax(arr, axis=None)
 np.cummin(arr, axis=None)
 ```
 
-## Algèbre linéaire (np.linalg)
+### Algèbre linéaire (np.linalg)
 
 ```python
 # Opérations matricielles
@@ -181,7 +182,7 @@ np.linalg.solve(A, b)  # résout Ax = b
 np.linalg.lstsq(A, b)  # solution des moindres carrés
 ```
 
-## Recherche et tri de tableaux
+### Recherche et tri de tableaux
 
 ```python
 # Tri
@@ -205,7 +206,7 @@ np.setdiff1d(arr1, arr2)
 np.in1d(arr1, arr2)
 ```
 
-## Diffusion et fonctions universelles
+### Diffusion et fonctions universelles
 
 ```python
 # Compréhension des règles de diffusion
@@ -222,7 +223,7 @@ np.any(arr, axis=1)
 np.all(arr, axis=1)
 ```
 
-## Mémoire et performance
+### Mémoire et performance
 
 ```python
 # Vues vs copies
@@ -243,7 +244,7 @@ np.complex64, np.complex128
 arr.astype(np.float32)
 ```
 
-## Modèles courants de LeetCode
+### Modèles courants de LeetCode
 
 ```python
 # Maximum de fenêtre glissante
@@ -274,7 +275,7 @@ def two_sum_indices(arr, target):
     return []
 ```
 
-## Techniques avancées
+### Techniques avancées
 
 ```python
 # Tableaux structurés

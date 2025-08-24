@@ -1,7 +1,8 @@
-# 04 // convergences des suites
+## 04 // convergences des suites
 
 [Slides de convergences](ressources/04_convergences_des_suites_chap4_(4).pdf)
-# Limite d'une suite
+
+## Limite d'une suite
 
 ### Définition et convergence
 
@@ -29,8 +30,10 @@ On dit qu'une suite $(u_n)$ est **convergente** si elle admet une limite $\ell \
 - Soit $(u_n)$ une suite et soit $\ell \in \mathbb{R}$ :
     - S'il existe une suite $(v_n)$ convergeant vers $0$ et si $\forall n \in \mathbb{N}, |u_n - \ell| \leq v_n$, alors $(u_n)$ converge vers $\ell$.
 - Toute suite convergente est bornée.
+
   >[!warning] Attention
   >Être bornée n'implique pas être convergente
+
 - Soit $(u_n)$ une suite bornée (non nécessairement convergente), et soit $(v_n)$ une suite convergeant vers $0$ :
     - Alors $(u_n \cdot v_n)$ converge vers $0$.
 

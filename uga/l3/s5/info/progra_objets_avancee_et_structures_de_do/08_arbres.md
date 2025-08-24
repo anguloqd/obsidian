@@ -1,10 +1,10 @@
-# 08 // arbres
+## 08 // arbres
 
 [INFF5_8.pdf](ressources/08_arbres_inff5_8.pdf)
 
-# Généralités
+## Généralités
 
-## Définition et parties d’un arbre
+### Définition et parties d’un arbre
 
 On appelle généralement « arbre » en informatique ce que l’on appelle « arborescence » en théorie des graphes. Une arborescence est graphe orienté acyclique possédant une racine unique, c’est-à-dire, il existe un chemin unique de la racine vers n’importe quel sommet de l’arborescence.
 
@@ -18,7 +18,7 @@ Les parties d’un arbre sont comme suit :
 - La « hauteur » (ou profondeur) d’un arbre est la longueur du plus long chemin menant de la racine à l’une de ses feuilles.
 - Chaque « fils » (ou successeur) d’un nœud non feuille engendre un « sous-arbre » ayant pour racine ce fils.
 
-## Parcours d’arbre
+### Parcours d’arbre
 
 Il existent deux type de parcours classiques des arbres :
 
@@ -31,9 +31,9 @@ Il existent deux type de parcours classiques des arbres :
 
 ![untitled](ressources/08_arbres_untitled_1.png)
 
-# Arbre binaire
+## Arbre binaire
 
-## Définition et propriétés
+### Définition et propriétés
 
 Un arbre binaire est un arbre dans lequel les nœuds peuvent avoir au maximum deux fils. Ils vérifient deux propriétés remarquables :
 
@@ -42,7 +42,7 @@ Un arbre binaire est un arbre dans lequel les nœuds peuvent avoir au maximum de
 
 ![untitled](ressources/08_arbres_untitled_2.png)
 
-## Parcours d’arbre binaire
+### Parcours d’arbre binaire
 
 Pour les arbres générales, on avait trois parcours : le parcours en largueur (on visite chaque niveau en entier, puis le suivant), le parcours préfixé et le parcours postfixé.
 
@@ -50,40 +50,40 @@ On ajoute, en plus, le parcours en profondeur infixé : pour chaque nœud, on ex
 
 ![untitled](ressources/08_arbres_untitled_3.png)
 
-## Arbre binaires remarquables
+### Arbre binaires remarquables
 
-### Arbre binaire dégénéré
+#### Arbre binaire dégénéré
 
 Tous les nœuds sauf son unique feuille ont un seul fils. Il est entièrement constitué par un chemin allant de la racine vers son unique feuille. La hauteur est maximale.
 
 ![untitled](ressources/08_arbres_untitled_4.png)
 
-### Arbre binaire complet
+#### Arbre binaire complet
 
 Il a exactement $2^h-1$ nœuds, dont $2^{h-1}$ feuilles. Tous les niveaux sont remplis, ses nœuds non feuilles ont tous exactement $2$ fils. La hauteur de l’arbre est minimale.
 
 ![untitled](ressources/08_arbres_untitled_5.png)
 
-### Arbre binaire parfait
+#### Arbre binaire parfait
 
 Tous les niveaux sauf éventuellement le dernier sont remplis, les feuilles du dernier niveau sont groupées à gauche.
 
 ![untitled](ressources/08_arbres_untitled_6.png)
 
-### Arbre binaire homogène
+#### Arbre binaire homogène
 
 Il est aussi appelé arbre localement complet. Tous ses nœuds non feuilles ont exactement deux fils.
 
 ![untitled](ressources/08_arbres_untitled_7.png)
 
-## Les arbres binaires en programmation
+### Les arbres binaires en programmation
 
 Les arbres binaires peuvent être représentés de différentes façons. Les deux les plus courantes sont :
 
 - La représentation contigüe : bien adaptée aux arbres complets ou parfaits.
 - La représentation chaînée : adaptée à tous les types d’arbres.
 
-### Représentation contigüe
+#### Représentation contigüe
 
 Les nœuds sont stockés dans une structure indicée (tableau ou liste). La racine est stockée à l’indice $0$. Le fils gauche et le fils droit du nœud stocké à l’indice $i$ se trouvent respectivement à l’indice $(2i + 1)$ et $(2i + 2)$ s’ils existent. (et si le premier indice de l’arbre est 0, et non pas 1).
 
@@ -93,7 +93,7 @@ Pour un arbre binaire parfait, il n’y a pas de « trous » dans la structure i
 
 ![untitled](ressources/08_arbres_untitled_9.png)
 
-### Représentation chaînée (en classes) et plusieurs méthodes
+#### Représentation chaînée (en classes) et plusieurs méthodes
 
 Chaque nœud est représenté par au moins trois attributs : un pour la valeur (« étiquette ») et deux autres pour les fils gauche et droit.
 
@@ -212,7 +212,7 @@ public class Noeud<T> {
 }
 ```
 
-### Représentation chaînée : cas des arbres homogènes
+#### Représentation chaînée : cas des arbres homogènes
 
 Si l’arbre représenté est un arbre homogène, on peut définir une classe pour distinguer les feuilles.
 
@@ -238,7 +238,7 @@ public class Feuille<T> extends NoeudAbstrait<T> {
 }
 ```
 
-### Représentation chaînée : arbre binaire étendu
+#### Représentation chaînée : arbre binaire étendu
 
 Pour la représentation chaînée d’un arbre binaire, on peut considérer un type de nœud spécial correspondant au nœud vide.
 
@@ -307,9 +307,9 @@ public boolean isEmpty() {
 }
 ```
 
-# Arbre binaire ordonné ou de recherche
+## Arbre binaire ordonné ou de recherche
 
-## Des noeuds ayant des valeurs
+### Des noeuds ayant des valeurs
 
 S’il existe un ordre sur les valeurs de nœud, on peut construire un arbre binaire ordonné. Dans un arbre binaire ordonné (ou arbre binaire de recherche), tout nœud est tel que sa valeur est supérieure aux valeurs portés dans son sous-arbre gauche et inférieur aux valeurs portés par son sous-arbre droit.
 
@@ -319,9 +319,9 @@ S’il existe un ordre sur les valeurs de nœud, on peut construire un arbre bin
 
 La recherche d’une valeur dépend uniquement de la hauteur : $\log_2(n + 1) ≤ h ≤ n$.
 
-## Modifications d’un arbre et son code
+### Modifications d’un arbre et son code
 
-### Code de l’arbre et les noeuds
+#### Code de l’arbre et les noeuds
 
 On écrit nos classes de base en premier :
 
@@ -360,7 +360,7 @@ public class NoeudVide<T extends Comparable<T>> extends NoeudAbstrait<T> {
 }
 ```
 
-### L’ajout
+#### L’ajout
 
 On commence dès la racine et, à chaque nœud, on se demande si le nœud à ajouter et plus grand et plus petit que le nœud courant, jusqu’à arriver au bas, où on ajoute finalement le nœud à ajouter.
 
@@ -398,7 +398,7 @@ public class NoeudVide<T extends Comparable<T>> extends NoeudAbstrait<T> {
 }
 ```
 
-### La suppression
+#### La suppression
 
 La suppression est, par contre, un action un peu plus délicate. Si on veut supprimer le nœud $N$, il existe trois cas :
 
@@ -473,9 +473,9 @@ public class Noeud<T extends Comparable<T>> extends NoeudAbstrait<T> {
 }
 ```
 
-# Arbre binaire équilibré
+## Arbre binaire équilibré
 
-## Une définition rigoureuse
+### Une définition rigoureuse
 
 Un arbre binaire équilibré est un arbre binaire ordonné dans lequel tout nœud admet pour ses deux sous-arbres engendrés une différence de hauteur au plus égale à un petit nombre $ε$ : $|h_g-h_d| \le \varepsilon$. **Souvent, on fixe $\varepsilon = 1$**.
 
@@ -488,7 +488,7 @@ Il faut noter que réaliser une recherche binaire sur un arbre devient plus effi
 - Arbres AVL (Adelson, Velskij, et Landis),
 - Arbres rouge-noir (ou arbres bicolores).
 
-## Rééquilibrage AVL
+### Rééquilibrage AVL
 
 Lorsqu’un ajout a eu lieu dans le sous-arbre gauche $(A_g)$ d’un nœud $A$ (précédemment équilibré), plusieurs cas peuvent se poser :
 
@@ -526,9 +526,9 @@ Les opérations d’ajout et de suppression consistent essentiellement à déter
 
 Comme astuce, on peut ajouter à la représentation d’un nœud un attribut correspondant à la différence (soit $-1$, $0$, ou $1$) entre la hauteur de son sous-arbre gauche engendré et celle de son sous-arbre droit engendré pour plus d’efficacité.
 
-# Arbre $n$-aire
+## Arbre $n$-aire
 
-## Définition
+### Définition
 
 Un arbre $n$-aire est un arbre dans lequel les nœuds peuvent avoir jusqu’à n fils. On le représente généralement en utilisant l’une des deux techniques suivantes :
 
@@ -537,7 +537,7 @@ Un arbre $n$-aire est un arbre dans lequel les nœuds peuvent avoir jusqu’à n
 
 Optionnellement, on peut aussi référencer le nœud père d’un nœud (qu’il s’agisse d’un arbre binaire ou d’un arbre n-aire).
 
-## Implémentation et équivalence à arbre binaire
+### Implémentation et équivalence à arbre binaire
 
 Chaque nœud est représenté par au moins deux attributs : attributs pour la valeur (« étiquette ») et attributs pour la liste de ses fils.
 

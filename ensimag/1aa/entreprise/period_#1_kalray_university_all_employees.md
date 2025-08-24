@@ -1,4 +1,4 @@
-# Period #1 - Kalray University, All Employees
+## Period #1 - Kalray University, All Employees
 
 > [!tip] 💡
 >
@@ -6,13 +6,14 @@
 >
 > [https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1](https://kalrayinc.sharepoint.com/:x:/r/sites/KALRAY/_layouts/15/Doc.aspx?sourcedoc=%7B59F39E6D-45CB-4394-A2E5-8BF9DB430E05%7D&file=2024%20Self-learning%20tracking.xlsx&action=default&mobileredirect=true&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1730280159940&web=1)
 
-# Compensation
+## Compensation
 
 [https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=xEJ6KQ&CID=eeda9868%2D7a13%2D49b1%2D8b1c%2Dcdf15f252ffb&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&OR=Teams%2DHL&CT=1730280214063&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA5MTIyMTMxOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FAll%20employees&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b](https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=xEJ6KQ&CID=eeda9868%2D7a13%2D49b1%2D8b1c%2Dcdf15f252ffb&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&OR=Teams%2DHL&CT=1730280214063&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA5MTIyMTMxOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FAll%20employees&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b)
 
-## 2023 annual pay raise
+### 2023 annual pay raise
 
 This year, the budget validated by the Board for the whole group is 5% of the total payroll,
+
 including salary catch-ups, promotions, and contract modifications with "RTT". In addition, we had a “RSU Plan”.
 
 The process was as follows:
@@ -33,7 +34,7 @@ The guidelines Ingrid sent were as follows:
 organization)
 ▪ Junior employees
 
-## 2024 annual pay raise
+### 2024 annual pay raise
 
 This year, the budget validated by the Board for the whole group is 3,5% of the total payroll for individual pay rise, and 0,5% of the total payroll for salary catch-ups and promotions. In addition, we had a “RSU Plan”.
 
@@ -58,7 +59,7 @@ These figures represent averages, indicating that individual outcomes may vary. 
 - No pay rise for employees hired in 2024 or who have already received a pay rise in H1 2024, except special cases to be justified by managers
 - No pay rise for employees whose performance is far below expectations
 
-## Compensation package at Kalray
+### Compensation package at Kalray
 
 The following is a list of definitions of terms commonly used when talking about compensations:
 
@@ -85,9 +86,9 @@ Usually, goals are defined and assessed every semester:
 - no later than July for S2 goals
 - In some specific cases, they can be defined quarterly (example: bonus for sales) or annually (example : sales commissions)
 
-# Free shares
+## Free shares
 
-## Definitions and how it works
+### Definitions and how it works
 
 - RSUs (**Restricted Stock Units**) are a type of equity compensation where the company grants an employee a certain number of shares of stock, but the shares are restricted until they **vest. Restricted** means that the employee is "restricted" from selling or transferring the shares.
 - How they work: RSUs typically vest over a period of time, such as 3-4 years, and the employee receives the shares of stock once they are fully vested.
@@ -96,9 +97,9 @@ Usually, goals are defined and assessed every semester:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image.png)
 
-# Holding a productive meeting
+## Holding a productive meeting
 
-## Definitions
+### Definitions
 
 - Meetings can be “internal meetings” (only Kalray employees and subcontractors) or “external meetings” (involving at least one non Kalray employee person).
 - Definitions:
@@ -106,19 +107,19 @@ Usually, goals are defined and assessed every semester:
     - Meeting Minute or Report: ****a summary of the meeting.
     - Meeting Owner: the person who is in charge of the meeting. Usually, the owner is the one who has initiated the meeting request.
 
-## Tasks list for the Meeting Owner
+### Tasks list for the Meeting Owner
 
 The following is a task list for the Owner of the Meeting:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image_1.png)
 
-## Meeting report content
+### Meeting report content
 
 The following is what the meeting report should include, based on if it is an internal meeting or an external meeting:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image_2.png)
 
-## Action list and action items
+### Action list and action items
 
 Regarding the action list and the action items, a well-written action item contains enough information to clearly understand what has to be done, when and by who (rather than just serving as an anchor to then remember what needs to be done) even a few days later.
 
@@ -128,7 +129,7 @@ Regarding the action list and the action items, a well-written action item conta
 - **Make it clear if an action item has to be achieved before/for another action item:** *Ex.: “Must be achieved before Robert meets Roger (action #5)…”*
 - **If it is necessary for a clear understanding, add a comment that gives the reason why the action item is established:** *Ex.: “Context: Roger forgot to get something last week…”*
 
-## Finishing the meeting
+### Finishing the meeting
 
 Before the close of the meeting:
 
@@ -144,9 +145,9 @@ After the meeting:
 - Report and distribute to everyone who attended the meeting or who received an action or any important stakeholder.
 - **Optional:** have the owner of the actions in the TO list and the others in the CC list of the meeting report email.
 
-# Lucca
+## Lucca
 
-## Timmi for managing absences
+### Timmi for managing absences
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image_3.png)
 
@@ -156,15 +157,15 @@ After the meeting:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image_6.png)
 
-## Other uses
+### Other uses
 
 **Timmi for time reporting**: currently does not apply to me.
 
 **Cleemy**: platform for managing expense claims. Not applicable for now.
 
-# Quality manual presentation
+## Quality manual presentation
 
-## Definitions
+### Definitions
 
 QMS stands for Quality Management System:
 
@@ -179,7 +180,7 @@ Some definitions are:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_83e93b45_afa2_4b15_9a81_21e8a1aee186.png)
 
-## Process map
+### Process map
 
 The following is the process map of QMS v4:
 
@@ -188,7 +189,7 @@ The following is the process map of QMS v4:
 
 ![image.png](ressources/period_#1_kalray_university_all_employees_image_7.png)
 
-## Decision points and decision cards
+### Decision points and decision cards
 
 The major DPs are as follows:
 

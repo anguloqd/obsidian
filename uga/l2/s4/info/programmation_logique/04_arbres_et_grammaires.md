@@ -1,10 +1,10 @@
-# 04 // arbres et grammaires
+## 04 // arbres et grammaires
 
 [Slides d’arbres et grammaires](coursprologl2_5_(4).pdf)
 
-# Arbres
+## Arbres
 
-## Définition en Informatique
+### Définition en Informatique
 
 Les arbres sont une structure de données récursive en Informatique pour représenter des graphes acycliques orientés possédant une unique racine, et tous les nœuds hors-racine ont un unique parent (leur définition en maths.). Si chaque nœud de l’arbre a deux fils au plus, on parle d’un arbre binaire.
 
@@ -14,7 +14,7 @@ Les arbres sont une structure de données récursive en Informatique pour repré
 
 Un arbre binaire équilibré contenant N nœuds a une hauteur (distance racine-feuilles) d’environ $\log_2(N)$.
 
-## En Prolog
+### En Prolog
 
 Un arbre binaire est une liste de la forme [racine, sous-arbre gauche, sous-arbre droit].
 
@@ -30,13 +30,13 @@ Un arbre binaire est une liste de la forme [racine, sous-arbre gauche, sous-arbr
 			[13,[],[]],[]]]]
 ```
 
-### Parcours en largeur
+#### Parcours en largeur
 
 On peut le voir horizontalement : en premier les nœuds de niveau 0 (racine), puis ceux de niveau 1, etc.
 
 ![untitled](ressources/04_arbres_et_grammaires_untitled_3.png)
 
-### Parcours en profondeur : version infixée
+#### Parcours en profondeur : version infixée
 
 On commence dès la racine, on parcourt tout le sous-arbre gauche, puis on retourne à la racine, puis tout le sous-arbre droit.
 
@@ -51,7 +51,7 @@ parcoursInfixe([Racine,G,D]):-
 	parcoursInfixe(D).
 ```
 
-### Parcours en profondeur : version préfixée
+#### Parcours en profondeur : version préfixée
 
 On va à gauche chaque fois que c’est possible, sinon on va a droit. On commence dès la racine, puis sous-arbre gauche, puis sous-arbre droit.
 
@@ -68,7 +68,7 @@ parcoursPrefixe([Racine,G,D]):-
 	parcoursPrefixe(D).
 ```
 
-### Parcours en profondeur : version postfixée
+#### Parcours en profondeur : version postfixée
 
 C’est comme si on allait à droite à chaque fois que c’est possible, sinon à gauche, mais juste à la fin on inverse l’ordre de nœuds. Dans l’exemple qui suit, si on allait à droite chaque fois que c’est possible on obtient le chemin 8,10,14,13,3,6,7,4,1. La version postfixée est finalement ce chemin mais inversé. On parcourt sous-arbre gauche, puis sous-arbre droit, puis racine.
 
@@ -85,9 +85,9 @@ parcoursPostfixe([Racine,G,D]):-
 	writef("%t ",[Racine])
 ```
 
-# Grammaires
+## Grammaires
 
-## Définition
+### Définition
 
 La DCG (*definite clause grammar* en anglais) est une manière d’exprimer la grammaire d’un langage naturel ou formel. Elle s’appelle clause de grammaire définie car elle représente une grammaire comme un ensemble de clause définies en logique de premier ordre.
 
@@ -106,7 +106,7 @@ verb --> [eats].
 
 ![untitled](ressources/04_arbres_et_grammaires_untitled_6.png)
 
-## En Prolog
+### En Prolog
 
 On montre un autre exemple avec une phrase de verbe “regarde” au milieu de “Pierre” et “Marie”.
 

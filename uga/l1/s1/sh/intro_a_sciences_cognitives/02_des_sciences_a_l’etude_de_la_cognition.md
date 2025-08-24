@@ -1,12 +1,12 @@
-# 02 // des sciences à l’étude de la cognition
+## 02 // des sciences à l’étude de la cognition
 
-# Vous avez dit… cognition ?
+## Vous avez dit… cognition ?
 
 - **Cognition** : réf. à l'activité du sujet qui connaît (qui sait).
 - **Connaissance** : réf. au produit des activités du sujet.
 - La cognition, ainsi définie, ne suppose pas la conscience.
 
-## Des représentations mentales
+### Des représentations mentales
 
 - Elles peuvent êtres physiques ou purement psychologiques.
 - Les représentations sont des modèles construits de l'environnement, utilisé comme sources d'info et planification des conduites.
@@ -14,14 +14,14 @@
 - Le terme de ***représentation*** désigne donc des contenus mentaux qui, au sens strict, correspondent à des états transitoires de l'information en cours de traitement.
 - A l'issue de ce traitement, ces contenus mentaux sont conservés en mémoire, de façon permanente, sous la forme de ***connaissances***.
 
-## Des mécanismes de traitement de l'information
+### Des mécanismes de traitement de l'information
 
 - La cognition "concerne tous les processus par lesquels l'input sensoriel est transformé, réduit, élaboré, stocké, retrouvé et utilisé".
 - Pour les sciences cognitives, la pensée est étroitement associée au traitement de l'information et plus particulièrement, par le biais du langage, au traitement des symboles.
 - Le concept de ***calculabilité*** devient ainsi un concept central de toute théorie cognitive.
 - Si penser = raisonner = calculer, on peut envisager le traitement de l'information comme un ensemble d'opérations portant sur la représentation interne de l'information.
 
-## Un système complexe et universel
+### Un système complexe et universel
 
 - Les processus périphériques traitent l'info. avant de son entrée dans la MDT.
 - Les représentations mentales dans la MDT sont **finalisées**, c'est-à-dire qu'elles s'inscrivent dans la poursuite d'un objectif particulier et prennent en compte les exigences ponctuelles ou générales de la tâche.
@@ -29,7 +29,7 @@
 - Cela suggère l'existence de processus de contrôle en charge de gérer et de répartir (allouer) les ressources attentionnelles du système.
 - La **métacognition** fait fondamentalement référence au concept de conscience. Elle étudie en effet, en première approximation, la manière dont un état de conscience de ses propres processus cognitifs est déclenché chez un individu.
 
-## **Une activité finalisée**
+### **Une activité finalisée**
 
 - **Modèle TOTE** : test operate, test exit.
     - Le test retourne une réponse au stimulus si une condition est remplie.
@@ -48,7 +48,7 @@
 - **On est tous égaux**. Si bien le libre arbitre nous donne une illusion de liberté pour faire n'importe quoi, ce n'est pas réelle. Nos actions sont initiées par nos processus mentaux inconscients avant d'être conscients de nos actions, et cela ne varie pas. Le système cognitif est universel.
 - Nous sommes équipés d'un « sens de l'équité », une disposition biologique à respecter les autres.
 
-## **Une structure évolutive**
+### **Une structure évolutive**
 
 - Chaque être humain est **le produit de deux histoires** s'inscrivant dans des gammes de temps très différentes :
     - **Ontogenèse** : qui se mesure en heures, en jours, en mois ou en années et l'histoire de l'évolution des espèces dont il est le descendant
@@ -65,7 +65,7 @@
 - **Habituation** : lorsqu'on présente un stimulus de manière répétée, l'ampleur de la réponse tend à diminuer avec les présentations.
     - Ce phénomène est clairement adaptatif : progressivement un stimulus connu n'a plus valeur de signal, et il n'est plus nécessaire d'y réagir.
 
-## **La constitution d'un champ pluridisciplinaire**
+### **La constitution d'un champ pluridisciplinaire**
 
 - Par sciences cognitives, il faut entendre **l'étude de l'intelligence**, notamment de l'intelligence humaine, de sa structure formelle à son substratum biologique, en passant par sa modélisation, jusqu'à ses expressions psychologiques, linguistiques et anthropologiques.
     - L'IA ne participe en réalité au domaine que de manière fragmentaire et dispersée.

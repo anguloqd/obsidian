@@ -1,16 +1,20 @@
-# 00 // tps
+## 00 // tps
 
 [cmdes_unix_desc.pdf](ressources/00_tps_cmdes_unix_desc.pdf)
+
 [systemes_tp1_2324.pdf](ressources/00_tps_systemes_tp1_2324.pdf)
+
 [systemes_tp2_2223.pdf](ressources/00_tps_systemes_tp2_2223.pdf)
+
 [systemes_tp3_1819.pdf](ressources/00_tps_systemes_tp3_1819.pdf)
+
 [systemes_tp4_1819.pdf](ressources/00_tps_systemes_tp4_1819.pdf)
 
-# Travaux pratiques - Systèmes d'exploitation
+## Travaux pratiques - Systèmes d'exploitation
 
-## TP1 - Gestion de fichiers et commandes Unix
+### TP1 - Gestion de fichiers et commandes Unix
 
-### Gestion de fichiers et répertoires
+#### Gestion de fichiers et répertoires
 
 La manipulation des fichiers et répertoires sous Unix s'effectue par un ensemble de commandes fondamentales permettant la création, la copie, le déplacement et la suppression d'éléments du système de fichiers.
 
@@ -26,7 +30,7 @@ La manipulation des fichiers et répertoires sous Unix s'effectue par un ensembl
 - `rm -r ./shell/noms/*` : suppression récursive de tous les fichiers d'un répertoire
 - `rmdir ./shell/noms` : suppression d'un répertoire vide
 
-### Manipulation de fichiers
+#### Manipulation de fichiers
 
 Les opérations sur les fichiers incluent l'affichage de contenu, la création de copies et la redirection des flux d'entrée/sortie.
 
@@ -46,7 +50,7 @@ Les opérations sur les fichiers incluent l'affichage de contenu, la création d
 - `ls titi 2> err` : redirection de la sortie d'erreur
 - `ls titi * > out` : redirection de la sortie standard avec expansion de motifs
 
-### Listing et filtrage de fichiers
+#### Listing et filtrage de fichiers
 
 Les commandes de listing permettent d'explorer le contenu des répertoires avec des critères de filtrage sophistiqués utilisant les métacaractères du shell.
 
@@ -58,7 +62,7 @@ Les commandes de listing permettent d'explorer le contenu des répertoires avec 
 - `ls ???` : fichiers avec exactement trois caractères
 - `ls ~`, `ls $HOME` : contenu du répertoire personnel
 
-### Compilation et exécution
+#### Compilation et exécution
 
 Le processus de compilation transforme le code source en programme exécutable.
 
@@ -67,7 +71,7 @@ Le processus de compilation transforme le code source en programme exécutable.
 - `cc bravo.c -o bravo` suivi de `./bravo` : compilation avec nom spécifié
 - `cc boucle.c -o boucle` suivi de `./boucle` : exemple avec un autre programme
 
-### Environnement et processus
+#### Environnement et processus
 
 La gestion de l'environnement système et des processus constitue un aspect fondamental de l'administration Unix.
 
@@ -83,7 +87,7 @@ La gestion de l'environnement système et des processus constitue un aspect fond
 - `kill -KILL <PID>` : arrêt forcé d'un processus
 - `ssh login@server` : connexion à un serveur distant
 
-### Commandes utilitaires
+#### Commandes utilitaires
 
 **Informations système :**
 - `date` : affichage de la date et heure
@@ -100,24 +104,25 @@ La gestion de l'environnement système et des processus constitue un aspect fond
 - `mv fichier1 fichier2` : déplacement ou renommage
 - `touch toto` : création d'un fichier vide
 
-## TP2 - Langage de commande Shell
+### TP2 - Langage de commande Shell
 
-### Scripts shell fondamentaux
+#### Scripts shell fondamentaux
 
 Un script shell constitue un programme permettant d'automatiser des tâches répétitives telles que l'administration système ou les sauvegardes. Ces fichiers texte, généralement sans extension ou avec l'extension `.sh` ou `.bash`, contiennent des commandes identiques à celles exécutées en ligne de commande, enrichies de structures de contrôle.
 
-### Exécution des scripts
+#### Exécution des scripts
 
 L'exécution d'un script s'effectue par la commande `bash nomfichier` dans un terminal. L'interprète traite les commandes séquentiellement selon leur ordre d'apparition. Si le fichier possède les droits d'exécution et se trouve dans un répertoire défini par la variable PATH, il suffit de taper son nom pour l'exécuter.
 
-### Variables et paramètres
+#### Variables et paramètres
 
-Les scripts peuvent être paramétrés grâce aux variables positionnelles `$1`, `$2`, ... `$9`. Plusieurs variables spéciales facilitent la gestion des paramètres :
+Les scripts peuvent être paramétrés grâce aux variables positionnelles `$1`, `$2`, … `$9`. Plusieurs variables spéciales facilitent la gestion des paramètres :
+
 - `$#` : nombre de paramètres passés au script
 - `$*` : ensemble de tous les paramètres
 - `$1` : premier paramètre
 
-### Test des paramètres d'exécution
+#### Test des paramètres d'exécution
 
 Le script `testparam` illustre la gestion basique des paramètres :
 
@@ -136,7 +141,7 @@ fi
 
 Ce script vérifie l'absence de paramètres avec `$# -eq 0` et teste la présence de l'option d'aide `-h` avec `[ $1 = "-h" ]`.
 
-### Test d'existence de fichiers
+#### Test d'existence de fichiers
 
 Le script `testfic` démontre la vérification d'existence de fichiers et répertoires :
 
@@ -154,34 +159,36 @@ fi
 ```
 
 Les tests utilisent :
+
 - `[ -f $1 ]` : vérification d'existence d'un fichier
 - `[ -d $1 ]` : vérification d'existence d'un répertoire
 - `-o` : opérateur logique OU
 
-### Commande de sauvegarde
+#### Commande de sauvegarde
 
 La commande `sauver` automatise la sauvegarde de fichiers dans un répertoire dédié. Elle crée le répertoire `sauvegarde` s'il n'existe pas et affiche des messages d'erreur appropriés pour les répertoires ou fichiers absents.
 
-### Gestion des dates
+#### Gestion des dates
 
 Le script `datedujour` affiche la date sous une forme lisible : "Nous sommes le Xeme jour du Yeme mois de l'annee Z", en éliminant les zéros non significatifs et en gérant l'affichage "1er" pour le premier jour.
 
-### Manipulation de chaînes de caractères
+#### Manipulation de chaînes de caractères
 
 L'extraction de sous-chaînes utilise la syntaxe `${nomvar:d:lg}` où :
+
 - `nomvar` : nom de la variable
 - `d` : indice de début (0 pour le premier caractère)
 - `lg` : longueur de la sous-chaîne
 
 Exemple : si `nomvar=tralala`, alors `${nomvar:1:3}` retourne "ral".
 
-### Calculs et algorithmes
+#### Calculs et algorithmes
 
-#### Commande maximum
+##### Commande maximum
 
 La commande `maximum` calcule et affiche le maximum d'une liste d'entiers. Elle utilise une boucle pour parcourir tous les paramètres et maintient la valeur maximale dans la variable `maxi`.
 
-#### Commande categorie
+##### Commande categorie
 
 La commande `categorie` détermine la catégorie d'âge d'un athlète selon son année de naissance, conformément aux règles d'athlétisme 2016/2017 :
 
@@ -193,11 +200,11 @@ La commande `categorie` détermine la catégorie d'âge d'un athlète selon son 
 | Juniors | 1997 et 1998 | École d'Athlétisme | 2007 à 2009 |
 | Cadets | 1999 et 2000 | Baby Athlé | 2010 et après |
 
-#### Commande afficherresultat
+##### Commande afficherresultat
 
 Cette commande combine les fonctionnalités précédentes pour afficher la catégorie et le meilleur lancé d'un athlète. Elle accepte six paramètres : prénom, nom, date de naissance (format j-m-aaaa) et trois essais.
 
-### Traitement de fichiers avec awk
+#### Traitement de fichiers avec awk
 
 La commande `calculerresultats` traite un fichier d'athlètes au format CSV avec séparateur deux-points. Le fichier `athletes.txt` contient :
 
@@ -210,17 +217,18 @@ Pleur:Jean:13-3-1976:93:79:72
 ```
 
 L'outil `awk` facilite le traitement de fichiers structurés :
+
 - Syntaxe : `awk [-Fseparateur] [-v variable] [-f fichier_commandes] [programme] fichier`
 - Exemple : `awk -F: 'NR>2{print $2" "$1}' athletes.txt`
 - Variables : `NR` (numéro de ligne), `$1` (première colonne), `$NF` (dernière colonne)
 
 La variable `IFS=$'\n'` peut être définie pour utiliser le caractère de fin de ligne comme séparateur dans les boucles shell.
 
-## TP3 - Processus en C
+### TP3 - Processus en C
 
-### Fonctions système fondamentales
+#### Fonctions système fondamentales
 
-#### Fonction sleep
+##### Fonction sleep
 
 ```c
 #include <unistd.h>
@@ -229,7 +237,7 @@ unsigned int sleep(unsigned int s)
 
 La fonction `sleep(5)` suspend l'exécution du processus pendant 5 secondes.
 
-#### Fonction fork
+##### Fonction fork
 
 ```c
 #include <unistd.h>
@@ -237,13 +245,14 @@ pid_t fork();
 ```
 
 La fonction `fork()` crée un processus fils identique au processus père. Elle retourne :
+
 - Le PID du fils dans le processus père
 - 0 dans le processus fils
 - -1 en cas d'erreur
 
 Les fonctions `getpid()` et `getppid()` retournent respectivement le PID du processus actuel et de son père.
 
-#### Fonction exit
+##### Fonction exit
 
 ```c
 #include <stdlib.h>
@@ -252,7 +261,7 @@ void exit(int status)
 
 La fonction `exit()` termine l'exécution du processus appelant. Le paramètre `status` constitue le code de terminaison transmis au processus père. Les constantes `EXIT_SUCCESS` et `EXIT_FAILURE` définissent les codes standards de réussite et d'échec.
 
-#### Fonction wait
+##### Fonction wait
 
 ```c
 #include <sys/types.h>
@@ -261,12 +270,13 @@ pid_t wait(int *stat_loc)
 ```
 
 Cette fonction permet à un processus d'attendre la terminaison d'un de ses fils. Elle retourne :
+
 - -1 si le processus n'a pas de fils ou si tous sont terminés
 - Le PID du fils terminé sinon
 
 L'appel `wait(NULL)` ignore le statut de terminaison, tandis que `wait(&status)` le récupère.
 
-#### Fonction execlp
+##### Fonction execlp
 
 ```c
 #include <unistd.h>
@@ -276,11 +286,12 @@ int execlp(char *arg0, char *arg1, ..., char *argn, NULL)
 Cette fonction remplace le code du processus courant par un programme exécutable. Elle ne retourne jamais en cas de succès, seulement en cas d'erreur (-1).
 
 Exemples d'utilisation :
+
 - `execlp("ls", "ls", "*.c", NULL)` : exécute la commande ls avec l'argument *.c
 - `execlp("ps", "ps", "-l", NULL)` : exécute ps avec l'option -l
 - `execlp("xterm", "xterm", NULL)` : lance un terminal
 
-### Exemple pratique : deux processus fils
+#### Exemple pratique : deux processus fils
 
 ```c
 #include <stdio.h>
@@ -347,7 +358,7 @@ int main(void)
 }
 ```
 
-### Exécution de commandes Unix
+#### Exécution de commandes Unix
 
 L'exemple suivant illustre l'utilisation d'`execlp` pour lancer la commande `ps -l` :
 
@@ -394,9 +405,9 @@ int main(void)
 }
 ```
 
-## TP4 - Threads et sémaphores en Java
+### TP4 - Threads et sémaphores en Java
 
-### Méthodes des threads Java
+#### Méthodes des threads Java
 
 Les threads Java disposent de plusieurs méthodes pour contrôler leur exécution et leur synchronisation :
 
@@ -412,9 +423,9 @@ Les threads Java disposent de plusieurs méthodes pour contrôler leur exécutio
 - `Thread.currentThread()` : retourne une référence au thread courant
 - `Thread.yield()` : cède le tour d'exécution
 
-### Synchronisation avec sémaphores
+#### Synchronisation avec sémaphores
 
-#### Implémentation basique d'un sémaphore
+##### Implémentation basique d'un sémaphore
 
 ```java
 class Semaphore {
@@ -438,7 +449,7 @@ class Semaphore {
 }
 ```
 
-#### Exemple de synchronisation ABC
+##### Exemple de synchronisation ABC
 
 Le défi consiste à synchroniser trois threads pour afficher la séquence "ABCABCABCABCABC". La solution utilise trois sémaphores, un pour chaque thread :
 
@@ -477,9 +488,9 @@ class ThreadA extends Thread {
 }
 ```
 
-### Exemple CarPark : synchronisation par moniteurs
+#### Exemple CarPark : synchronisation par moniteurs
 
-#### Version avec wait/notify
+##### Version avec wait/notify
 
 ```java
 public class CarPark {
@@ -512,7 +523,7 @@ public class CarPark {
 }
 ```
 
-#### Version avec sémaphores Java
+##### Version avec sémaphores Java
 
 ```java
 import java.util.concurrent.Semaphore;
@@ -544,7 +555,7 @@ public class CarPark {
 }
 ```
 
-### Bonnes pratiques
+#### Bonnes pratiques
 
 **Gestion des threads :**
 - Utiliser `synchronized` dans la signature d'une méthode pour accéder aux méthodes `wait()`, `notify()`, `notifyAll()`

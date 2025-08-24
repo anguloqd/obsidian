@@ -1,8 +1,8 @@
-# 02 // langages algébriques et BNF
+## 02 // langages algébriques et BNF
 
 [chap2_4up.pdf](ressources/02_langages_algebriques_et_bnf_chap2_4up.pdf)
 
-## Exo 2.1
+### Exo 2.1
 
 > [!question] ❓
 >
@@ -10,7 +10,7 @@
 
 $X = A^*B$, d’après le lemme d’Arden.
 
-## Exo 2.2
+### Exo 2.2
 
 > [!question] ❓
 >
@@ -18,18 +18,19 @@ $X = A^*B$, d’après le lemme d’Arden.
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
-## Exo 2.8
+### Exo 2.8
 
 > [!question] ❓
 >
 > Soit $f : X \rightarrow \{a\}.X.\{b\} \cup \{\epsilon\}$ (pour $X \subseteq \{a, b\}^*$). Que vaut $f^i(\emptyset)$ pour $i \in \mathbb{N}$ ? Que vaut $\bigcup_{i\in\mathbb{N}} f^i (\emptyset)$ ?
 
-Pour $i = 0$, $f^0(\empty) = \empty$. Pour $i=1, f(\empty) = \{\epsilon\}$. Pour $i=2$, $f^2(\empty) = \{ab\} \cup \{\epsilon\}$. Pour $i = 3$, $f^3(\empty] = \{\epsilon\} \cup \{ab\} \cup \{aabb\}$. 
+Pour $i = 0$, $f^0(\empty) = \empty$. Pour $i=1, f(\empty) = \{\epsilon\}$. Pour $i=2$, $f^2(\empty) = \{ab\} \cup \{\epsilon\}$. Pour $i = 3$, $f^3(\empty] = \{\epsilon\} \cup \{ab\} \cup \{aabb\}$.
 
 Premier résultat: $f^n(\empty) = \left\{ a^i b^i : i < n \right\}$
+
 Deuxième résultat: $\bigcup_{i\in\mathbb{N}} f^i (\emptyset) = \{a^n b^n : n \in \mathbb{N} \}$
 
-## Exo 2.11 et 2.13
+### Exo 2.11 et 2.13
 
 > [!question] ❓
 >
@@ -52,6 +53,7 @@ L_{\text{préfixe}} = \lim_{h \to +\infty} f^h(\emptyset)
 $$
 
 Définition de $f$ :
+
 Soit $X \subseteq V^*$, $f(X)$ est défini comme l'ensemble des mots construits selon les règles suivantes :
 
 1. Tout mot de longueur 1 correspondant à une constante propositionnelle ($t, f$) ou un entier ($n \in \mathbb{N}_1$) est dans $f(X)$ :
@@ -82,7 +84,7 @@ $$
 ⁍
 $$
 
-## Exo 2.14 et 2.15
+### Exo 2.14 et 2.15
 
 > [!tip] 💡
 >
@@ -134,7 +136,7 @@ $g\left(\lim_{i \to +\infty} f^i_1(\emptyset)\right) = \lim_{i \to +\infty} f^i_
 **Conclusion :**
 En appliquant le lemme de commutation, on a redémontré que $A^*.B = \lim_{i \to +\infty} f^i_2(\emptyset)$.
 
-## Exo 2.16
+### Exo 2.16
 
 > [!question] ❓
 >
@@ -156,13 +158,16 @@ $f^1(\emptyset, \emptyset) = \left( \{b\}, \emptyset \right)$
 $f^2(\emptyset, \emptyset) = f(f^1(\emptyset, \emptyset)) = f(\{b\}, \emptyset)$
 
 Pour $X_1 = \{b\}$ et $X_2 = \emptyset$ :
+
 $f(\{b\}, \emptyset) = \left( \{b\} \cup \emptyset.\emptyset, \{a\}.\{b\} \right)$
+
 $f^2(\emptyset, \emptyset) = \left( \{b\}, \{ab\} \right)$
 
 **Calcul de** $f^3(\emptyset, \emptyset)$ **:**
 $f^3(\emptyset, \emptyset) = f(f^2(\emptyset, \emptyset)) = f(\{b\}, \{ab\})$
 
 Pour $X_1 = \{b\}$ et $X_2 = \{ab\}$ :
+
 $f(\{b\}, \{ab\}) = \left( \{b\} \cup \{ab\}.\{ab\}, \{a\}.\{b\} \right)$
 
 Calculons chaque terme :
@@ -177,7 +182,9 @@ $f^3(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab\} \right)$
 $f^4(\emptyset, \emptyset) = f(f^3(\emptyset, \emptyset)) = f(\{b, abab\}, \{ab\})$
 
 Pour $X_1 = \{b, abab\}$ et $X_2 = \{ab\}$ :
+
 $f(\{b, abab\}, \{ab\}) = \left( \{b\} \cup \{ab\}.\{ab\}, \{a\}.\{b, abab\} \right)$
+
 Calculons chaque terme :
 
 - $\{ab\}.\{ab\} = \{abab\}$
@@ -191,7 +198,7 @@ $f^4(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab, aabab\} \right)$
 **Conclusion :**
 $f^4(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab, aabab\} \right)$
 
-## Exo 2.17
+### Exo 2.17
 
 > [!question] ❓
 >
@@ -223,21 +230,21 @@ $$
 \end{cases}
 $$
 
-## Exo 2.18
+### Exo 2.18
 
 > [!question] ❓
 >
 > Pour $V = \{a, b, c\}$, donner une BNF pour chacun des langages suivants.
 
 1. $\{a^nb^n | n \in \mathbb{N}\} \to$  `L ::= a L b | ε`
-2. $\{a^nb^p | n \geq p \geq 0\} \to$ 
+2. $\{a^nb^p | n \geq p \geq 0\} \to$
 `A ::= BC` , `B ::= aB | ε`, `C ::= a C b | ε`.
-Une autre solution pourrait être `L ::= aL | aLb | ε` 
+Une autre solution pourrait être `L ::= aL | aLb | ε`
 3. $\{a^nb^p | n \neq p\} \to$
 `A ::= aA | B, B ::= a B b | ε`
 4. $\{a^nb^p | 2p \geq n \geq p\} \to$
-On utilise une fonction de substitution $\sigma$ sur la première réponse. 
-    
+On utilise une fonction de substitution $\sigma$ sur la première réponse.
+
     $$
     \sigma:\begin{cases}
      a \to a|aa = A \\
@@ -247,7 +254,9 @@ On utilise une fonction de substitution $\sigma$ sur la première réponse.
     \\[10pt]
     
     \sigma(L_1) = \sigma(aL_1b\mid \epsilon) = \sigma(a).\sigma(L_1).\sigma(b)\mid \sigma(\epsilon) = A.\sigma(L_1).b \mid \epsilon
-    $$
+
+$$
+
     
     D’où, `L ::= A.L.b | ε`, `A ::= aa|a`
     

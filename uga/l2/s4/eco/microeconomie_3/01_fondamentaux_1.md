@@ -1,10 +1,10 @@
-# 01 // fondamentaux 1
+## 01 // fondamentaux 1
 
 [Slides de fondamentaux 1](ressources/01_fondamentaux_1_corolleur_f._2021_22_lecture_1_fondamentaux.pdf)
 
-# Concurrence et pouvoir de marché
+## Concurrence et pouvoir de marché
 
-## Moyens de concurrence et la mesure du pouvoir de marché
+### Moyens de concurrence et la mesure du pouvoir de marché
 
 Les firmes disposent de nombreux moyens pour se concurrencer sur un marché :
 
@@ -22,7 +22,7 @@ L’indice de Lerner $L$ est la capacité du monopole à fixer un $p$ supérieur
 
 Note. Le taux de marge est plutôt $\frac{p-Cmg}{Cmg}$.
 
-# Fonction de demande
+## Fonction de demande
 
 ### Rappel : construisant la demande à partir des préférences
 
@@ -34,6 +34,7 @@ Ici, on parle particulièrement de la fonction de demande marshallienne, càd. c
 Les quantités choisies $q_1,q_2$ sont celles que satisfont la contrainte budgétaire, mais aussi simultanément la condition equi-marginale qui découle de la fonction d’utilité : $\frac{Um_1}{p_1} = \frac{Um_2}{p_2}$. On fait donc un systèmes d’équations avec ces deux conditions.
 
 Normalement, l’un des biens est la monnaie $M = q_2$, donc son prix devient unitaire $(p_2 = 1)$.
+
 À partir de là, on laisse $p_2,q_2,R,C,\alpha$ et $\beta$ tous constants. On fait varier $p_1$ et on voit son effet sur le $q_1$ optimal choisi (solution du système d’équations). Pour chaque $p$ on déduit son $q$ optimal correspondant et finalement comme ça on construit la demande de l’individu. Cette relation est normalement inverse, ce qui implique que le bien $1$ est un bien normal.
 
 ### Construisant la demande pour $G$ biens
@@ -66,7 +67,7 @@ p_G=\frac{\partial U}{\partial {q_G}}=Um_G \\
 \end{cases}
 $$
 
-Avec la condition budgétaire et equi-marginale on peut déduire le panier optimal. Dans ce panier, on demande $q_g = D_g(p_1, \dots, p_G)$. 
+Avec la condition budgétaire et equi-marginale on peut déduire le panier optimal. Dans ce panier, on demande $q_g = D_g(p_1, \dots, p_G)$.
 
 ## Pour un seul bien
 
@@ -106,6 +107,7 @@ $$
 ### Paramètre $a$ : coefficient de position et utilité marginale maximale
 
 On pourrait visualiser cette relation comme une fonction : $\varepsilon(p) = \frac{p}{a-p}$, où $a$ est un paramètre.
+
 Plus le prix $p$ se rapproche de $a$, plus l’élasticité est plus grande (elle tend vers l’infini asymptotiquement).
 
 ![Astuce : si on lit le premier graphique de droite `guache (à l'invers), l'utilité que correspond va de gauche à droite (le bon sens).](ressources/01_fondamentaux_1_1.png)
@@ -270,7 +272,7 @@ Si $\varepsilon_{ij} > 0$, on parle des biens substituables, et complémentaires
 
 Les élasticités varient avec le temps dont les consommateurs disposent pour réagir à un changement de prix. **En termes généraux, les élasticités sont plus fortes à long terme qu’à court terme** : il prend du temps pour changer des habitudes, il se peut qu’il y ait pas de substituts actuellement, etc.
 
-Cela dit, c’est le contraire pour les biens durables : les agents diffèrent le remplacement du bien durable, comme une voiture, jusqu’à qu’ils ont vu une offre convaincante à court terme ou jusqu’à qu’ils ne peuvent plus différer le rachat du bien durable au long terme. 
+Cela dit, c’est le contraire pour les biens durables : les agents diffèrent le remplacement du bien durable, comme une voiture, jusqu’à qu’ils ont vu une offre convaincante à court terme ou jusqu’à qu’ils ne peuvent plus différer le rachat du bien durable au long terme.
 
 ### Élasticités au point moyen
 
@@ -282,9 +284,9 @@ $$
 
 Cette méthode est utile aussi si on ne connaît que deux points de la courbe de demande.
 
-# Technologie et coûts
+## Technologie et coûts
 
-## Fonction de production et concepts associés
+### Fonction de production et concepts associés
 
 Rappel : une firme rationnelle cherche à maximiser sa fonction de profit, où $f$ ici est l’output total utilisant $x_1$ unités de input $1$ et $x_2$ unités de input $2$.
 
@@ -298,7 +300,7 @@ $$
 \text{CPO : } \frac{\partial\pi}{\partial x_i}=0 \implies p\frac{\partial f(x_1^*,x_2^*)}{\partial x_i}=w_i
 $$
 
-## Fonction de coûts (un bien) et concepts associés
+### Fonction de coûts (un bien) et concepts associés
 
 La fonction de coût est construite de manière analogue à la fonction de demande : on cherche chaque combinaison optimale d’inputs pour une quantité $y$ à produire, de la même manière qu’on cherche la plus grande utilité obtenable pour une contrainte budgétaire $R$.
 
@@ -317,16 +319,15 @@ $$
 \frac{Pm_1}{Pm_2}=\frac{w_1}{w_2} \\
 y=f(x_1,x_2)
 \end{cases}, \text{ où } Pm_i=\frac{\partial f}{\partial x_i}
-
 $$
 
 **Note #1**. $Pm_1/Pm_2$ est appelé le taux de substitution technique ou TST.
 
 **Note #2**. la fonction de production $f(x_1,x_2)$ n’est pas explicitée car elle peut prendre une forme Cobb-Douglas, une forme linéaire (substituts) ou une forme en L ou de Leontief avec la fonction $\min$ (compléments).
 
-## Fonction de coûts ($n$ biens) et concepts associés
+### Fonction de coûts ($n$ biens) et concepts associés
 
-### Coût moyen de proportion
+#### Coût moyen de proportion
 
 La plupart de firmes ne sont pas mono-produits, mas multi-produits. Le fait de passer à une firme qui produit deux biens change notre analyse :
 
@@ -356,9 +357,9 @@ CI(q_1|q_2) = C(q_1,q_2)-C(0,q_2)
 CSI(q_2|q_2)=\frac{C(q_1,q_2)-C(0,q_2)}{q_1}
 $$
 
-### Économies d’échelle (avec $n$ biens) et d’apprentissage
+#### Économies d’échelle (avec $n$ biens) et d’apprentissage
 
-### Trois définitions d’économies d’échelle
+#### Trois définitions d’économies d’échelle
 
 Dans le cas mono-produit, on disait qu’**on avait des économies d’échelle si le coût moyen est décroissant en fonction de la quantité produite**. On dira le même dans le cas d’une firme multi-produit pour un niveau fixe de $q_2$ (mais pas pour tout niveau de prod. de $q_2$ !)
 
@@ -376,7 +377,7 @@ Il existe deux autres définitions équivalentes des économies d’echelle, don
 
 - Rendements croissants : on a une économie d’echelle pour tout niveau de production $(q_1,q_2)$, on vérifie que $C(\lambda q_1, \lambda q_2) < \lambda C(q_1,q_2)$.
 - Indice d’économies d’échelle multi-produits : c’est un indicateur $S$ dont on peut déduire s’il s’agit d’une économie d’échelle ou non. Si $S > 1$, on a des économie d’échelle, et si $S < 1$ on a des dés-économies d’échelles.
-    
+
     $$
     \text{Mono-produit : }
     S=\frac{CM(q)}{Cmg(q)}=\frac{C(q)}{q \cdot Cmg(q)}
@@ -386,8 +387,9 @@ Il existe deux autres définitions équivalentes des économies d’echelle, don
     \\
     
     \text{Multi-produit : } S=\frac{C(q_1,q_2,\dots,q_n)}{q_1Cmg_1 + q_2Cmg_2+\dots + q_nCmg_n}
-    $$
-    
+
+$$
+
 
 Toutes les trois définitions sont mathématiquement équivalentes : si l’une est vraie, les autres deux sont aussi vraies, et de même si l’une est fausse.
 
@@ -399,7 +401,9 @@ Toutes les trois définitions sont mathématiquement équivalentes : si l’une 
 Ayant défini le coût moyen incrémentale $CMI$ (aussi appelé à coût supplémentaire moyen), on peut aussi définir les “économies d’échelles spécifiques”, que c’est une réécriture de l’indice d’économie d’échelles mono-produit mais remplaçant le $CM(q)$ pour le $CMI(q_i|q_j)=CMI_i$.
 
 $$
+
 S=\frac{CM(q)}{Cmg(q)} \longrightarrow ESP_i=\frac{CSM_i}{Cm_i}
+
 $$
 
 L’interprétation de $ESP_i$ reste la même de celle de $S$ pour le cas mono-produit.
@@ -423,7 +427,9 @@ La définition mathématique des économies de gammes est la suivante :
 Une autre méthode pour vérifier une situation des économies de gammes, sans passer par la définition, c’est d’utiliser l’indice des économies de gammes $EG$, similaire à l’idée de l’indice d’économies d’échelle.
 
 $$
+
 EG=\frac{C(q_1,0)+C(0,q_2)-C(q_1,q_2)}{C(q_1,q_2)}
+
 $$
 
 Intuitivement, cet indice montre la différence de cout total résultant de la production séparée de biens (proportionnel au coût conjoint).
@@ -440,41 +446,57 @@ Pour rappel, la sous-additivité de coûts est la condition $C(q)<C(q_1)+C(q_2),
 Exemple #1 :
 
 $$
+
 C(q_1,q_2)=q_1+q_2+(q_1q_2)^{1/3}
 
 \\
+
 \text{}
+
 \\
 
 \text{Échelle mais pas de gamme : }
+
 \\
+
 C(\lambda q_1,\lambda q_2) < \lambda C(q_1,q_2), \text{ mais }
+
 \\
+
 C(q_1,q_2) \nless C(q_1,0)+C(0,q_2)
 
 \\
 
 \implies C \text{ non sous-additive.}
+
 $$
 
 Exemple #2 :
 
 $$
+
 C(q_1,q_2)=q_1^{1/4}+q_2^{1/4}-(q_1q_2)^{1/4}
 
 \\
+
 \text{}
+
 \\
 
 \text{Échelle et gamme : }
+
 \\
+
 C(\lambda q_1,\lambda q_2) < \lambda C(q_1,q_2), \text{ et }
+
 \\
+
 C(q_1,q_2)< C(q_1,0)+C(0,q_2)
 
 \\
 
 \implies C \text{ sous-additive.}
+
 $$
 
 Les conditions nécessaires et suffisantes pour avoir sous-additivité globale de la fonction de coût multi-produits sont plus complexes que pour le cas mono-produit.

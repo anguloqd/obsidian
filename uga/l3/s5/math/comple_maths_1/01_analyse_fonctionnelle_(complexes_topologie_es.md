@@ -1,10 +1,10 @@
-# 01 // analyse fonctionnelle (complexes, topologie, espaces)
+## 01 // analyse fonctionnelle (complexes, topologie, espaces)
 
 [Slides annotés #1 : analyse fonctionnelle.pdf](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_slides_analyse_fonctionnelle_annote.pdf)
 
-# Nombres complexes
+## Nombres complexes
 
-## Forme algébrique et module
+### Forme algébrique et module
 
 La forme la plus classique de représenter un nombre complexe est la suivante :
 
@@ -22,7 +22,7 @@ $$
 |z|=\sqrt{a^2+b^2}
 $$
 
-## Forme trigonométrique
+### Forme trigonométrique
 
 La forme trigonométrique d’un nombre complexe $z$ nécessite la conception du cercle trigonométrique : un cercle de rayon $1$ centré sur l’origine. Si on trace une ligne de l’origine à $z$, on pourrait déterminer tout $z$ à partir de son module et les radians $\theta$ jusqu’au point d’intersection de telle ligne avec cercle unitaire. **Ce $\theta$ est appelé l’*argument ou phase***.
 
@@ -40,7 +40,7 @@ z=|z|(\cos\theta+i\sin\theta)
 \tilde z=\cos\theta+i\sin\theta
 $$
 
-## Propriétés élémentaires
+### Propriétés élémentaires
 
 Toutes les propriétés qui suivent, si on mentionne $\arg(z)$, l’image $\arg(z)$ est modulo $2\pi$.
 
@@ -50,7 +50,7 @@ Toutes les propriétés qui suivent, si on mentionne $\arg(z)$, l’image $\arg(
 - $|1/z|=1/|z|$ et $\arg(1/z)=-\arg(z)$
 - $|z/z^\prime|=|z|/|z^\prime|$ et $\arg(z/z^\prime)=\arg(z)-\arg(z^\prime)$
 
-## Notation exponentielle
+### Notation exponentielle
 
 Rappelons que :
 
@@ -111,7 +111,7 @@ e^{-ix}=\cos x-i\sin x
 \end{cases}
 $$
 
-## Racines de l’unité
+### Racines de l’unité
 
 Soit $n ∈ \mathbb{N}^∗$ un entier non nul. Si $z^n = 1$, alors $z\ne 0$ et on peut donc écrire $z = re^{iθ}$. De plus,
 
@@ -127,11 +127,11 @@ $$
 
 Si $z_0\ne 0$, pour résoudre l’équation $z^n = z_0$, on utilisera la forme exponentielle.
 
-# Espace métrique
+## Espace métrique
 
-## Topologie et normes
+### Topologie et normes
 
-### Rappel de norme
+#### Rappel de norme
 
 Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
 
@@ -139,18 +139,18 @@ Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitiv
 La norme est multiplicative, càd. $f(xy)=f(x)f(y)$
 - $||x+y|| \le ||x|| + ||y||$
 Inégalité triangulaire
-- $||x|| = 0 \implies x = 0$ 
+- $||x|| = 0 \implies x = 0$
 Si la longueur ou magnitude d’un élément est $0$, donc il est le vecteur nul
 
 On peut définir une ***norme issue du produit scalaire*** : $||x|| = \sqrt{\langle x,x \rangle}$, ce qui nous donne la norme euclidienne, la norme la plus populaire (la ligne diagonale entre deux points). Cela dit, on peut avoir des normes qui ne sont pas issues ou définies à partir du produit scalaire.
 
 **Théorème : Inégalité de Cauchy-Schwarz**. $|\langle x,y \rangle| \le \sqrt{||x||}\sqrt{||y||}$. Cette inégalité devient une égalité stricte en valeur absolue si et seulement si $x$ et $y$ sont colinéaires entre eux.
 
-### Rappel de distance
+#### Rappel de distance
 
 Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \mathbb{R}^+$ qui vérifie ce qui suit :
 
-- $d(x,y)=0 \iff x=y$ 
+- $d(x,y)=0 \iff x=y$
 Si la distance entre deux points est $0$, $x$ et $y$ sont à la même position
 - $d(x,y)=d(y,x)$
 La distance de $x$ à $y$ est la même de $y$ à $x$, on appelle ceci *symétrie*
@@ -167,7 +167,7 @@ Similairement, on peut définir une distance issue d’une norme : $d(x,y)=||x-y
 
 Malgré ça, dans la pratique une distance est issue par une norme et les distances “inusuelles” sont juste utilisés pour induire un concept. Par exemple, $d_2$ donne un exemple d’un espace métrique incomplet.
 
-### Espaces normés et espaces métriques
+#### Espaces normés et espaces métriques
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_3.png)
 
@@ -202,26 +202,25 @@ $$
 
 **Théorème**. Sur $\mathbb{R}^n$, toutes les normes sont équivalentes. càd. elles valent le même. Ceci n’est pas vrai pour tous les espaces métriques, notamment le espace de suites avec la suite $u_n=1/n$.
 
-## Boules et sous-ensembles ouverts/fermés
+### Boules et sous-ensembles ouverts/fermés
 
-### Premières définitions
+#### Premières définitions
 
 Une boule est la généralisation d’un cercle pour tous les espaces métriques. Pour la définir, on a besoin d’un espace métrique, un centre $x\in E$ et d’un rayon $r>0$ :
 
 $$
 \text{Boule ouverte : }B(x,r)=\left\{y\in E : d(x,y)<r \right\}
-
 $$$$
 
 \text{Boule fermée : }\bar B(x,r)=\left\{y\in E : d(x,y)\le r \right\}
-$$
 
+$$
 Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\mathbb{R}^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si : 
-
 $$
+
 \forall a\in U, \exists r > 0: B(a,r) \subset U
-$$
 
+$$
 Ceci veut dire qu’on peut prendre un point du sous-ensemble $U$ et qu’on peut faire une boule centré sur $a$ et de rayon arbitrairement petit tel que toute la boule est incluse dans $U$, qui est lui-même inclut en $E$. Il est possible donc de couvrir tout $U$ avec des boules de différentes tailles. **L’ouvert ne contient pas de frontières**.
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_4.png)
@@ -247,11 +246,11 @@ Voyons une liste utile de propriétés :
 - Un fermé est un fermé pour toute norme équivalente.
 
 **Note**. Une intersection infinie d’ouverts n’est pas nécessairement un ouvert. Par exemple :
-
 $$
+
 \bigcap_{n=1}^\infty \left] -\frac{1}{n}, \frac{1}{n}\right[=\{0\}
-$$
 
+$$
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_6.png)
 
 **Note**. Dans $\mathbb{R}^n$, un ensemble $E$ fermé et **borné** (admettant un élément dont la norme est maximale) est un ensemble compact. Voyons que d’être fermé n’est pas d’être borné. Borné veut dire que ses bornes sont finies.
@@ -265,16 +264,21 @@ $$
 En Analyse Réelle, on a déjà vu une définition de limites (de suites) et continuité. On va généraliser telles notions.
 
 Soit $(E,d)$ un espace métrique et $(x_k)_{k\in\mathbb{N}}$ une suite d’éléments de $E$. $(x_k)$ converge vers une limite $\ell \in E$ et on note $x_k\rightarrow \ell$ ssi. :
-
 $$
-\forall \varepsilon > 0, \exists n_0 \in \mathbb{N}, \forall k > n_0: 
+
+\forall \varepsilon > 0, \exists n_0 \in \mathbb{N}, \forall k > n_0:
+
 \begin{cases}
-d((x_k), \ell) < \varepsilon 
-\\
-x_k\in B(\ell, \varepsilon)
-\end{cases}
-$$
 
+d((x_k), \ell) < \varepsilon
+
+\\
+
+x_k\in B(\ell, \varepsilon)
+
+\end{cases}
+
+$$
 Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble) fermé d’une manière qui n’est pas juste le complémentaire d’un ouvert. $F$ est un fermé de $E$ si, pour toute suite $(x_k)$ d’éléments de $F$ qui converge vers $\ell$, on a que $\ell\in F$. Ceci aide trivialement à atteindre les bornes. 
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_8.png)
@@ -282,11 +286,11 @@ Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble)
 ### Continuité avec des boules
 
 Soit $(E,d)$, $(E^\prime, d^\prime)$ deux espaces métriques et $f$ une application $E\rightarrow E^\prime$. $f$ est continue en un point $x_0\in E$ si :
-
 $$
+
 \forall \varepsilon >0, \exists \delta >0 : f(B(x_0, \delta))\subset B(f(x_0), \varepsilon)
-$$
 
+$$
 De plus, si $A\subseteq E$, $f$ est continue sur $A$ si elle est continue en tout $a\in A$.
 
 **Théorème**. $f$ continue en $a$ équivaut à que toute suite $(x_k)$ convergente à $a$ implique $f(x_n)$ converge à $f(a)$. 
@@ -296,32 +300,36 @@ De plus, si $A\subseteq E$, $f$ est continue sur $A$ si elle est continue en tou
 Une fonction lipschitziennes (aussi fonctions lpz.) est une fonction avec à peine un peu plus de restrictions que la continuité.
 
 Soit $(E,d)$, $(E^\prime, d^\prime)$ deux espaces métriques et $f$ une application $E\rightarrow E^\prime$. $f$ est $L$-lipschitzienne, où $L>0$, si :
-
 $$
+
 \forall x,y \in E: d^\prime(f(x),f(y))\le L d(x,y)
-$$
 
+$$
 Si $L$ est le plus petit réel strictement positif vérifiant l’inégalité, on dit que $L$ est la constante de Lipschitz de $f$.
 
 Quelques propriétés :
 
 - Une fonction lipschitzienne est une fonction continue : si la suite $(x_k)$ converge vers $a$ donc :
-  $$
+  
+$$
+
     d^\prime(f(x_k),f(a))\le L d(x_k,a)\longrightarrow 0 \implies d^\prime(f(x_k),f(a))\longrightarrow 0
     $$
     La réciproque est fausse, $f(x)=x^2$ comme exemple.
     
 - Si $f$ est lpz. pour tout compact (fermé et borné) de $E$, donc $f$ est localement lpz : c’est le cas de $f(x)=x^2$ aussi.
-    
+
+
     ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_9.png)
+
     
 - Si une application $L$-lipschitzienne a une constante de Lipschitz $L<1$, l’application est contractante. Ceci permet l’existence d’un point fixe.
 - Si $E$ est un espace métrique complet, $f : E\rightarrow E$ et $f$ est une application contractante, donc il existe un point fixe $x^*$ tel que $f(x^*)=x^*$. De plus, toute suite  de la forme $x_{n+1}=f(x_n)$ converge vers $x^*$.
     - Espace complet : dont toute suite de Cauchy converge. Dans la pratique, nos espaces sont complets. “Il faut aller chercher un monstre de fonction pour que l’espace ne soit pas complet”.
 
-# Espaces hilbertiens et hermitiens
+## Espaces hilbertiens et hermitiens
 
-## Produit scalaire et hermitien
+### Produit scalaire et hermitien
 
 Sincèrement, la seule différence importante du produit scalaire avec le produit hermitien est que le résultat du produit scalaire est réel et celui de l’hermitien est complexe. Comme rappel :
 
@@ -348,14 +356,20 @@ L’égalité est vérifié si $x$ et $y$ sont colinéaires.
 
 Voyons quelques produits hermitiens :
 
-- Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.    
-  $$
+- Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.
+
+ $$
     \langle x,y \rangle = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
-    $$
+
+$$
+
 - Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\mathbb{R}$.
   $$
+
     \langle P,Q \rangle = \int_0^1 P(t)\overline Q(t)dt
-    $$
+    
+
+$$
 
 ## Orthogonalité, projections et orthonormalité
 
@@ -385,7 +399,9 @@ Soit $B=\{e_i\}$ une base de $E$. Elle est orthonormée si :
 Une première note importante à faire c’est que, si $F_1\in E$ tel que $F_1=\text{Vect}(e_1)$, donc
 
 $$
-p_{F_1}(u)=\langle u, e_1 \rangle e_1 
+
+p_{F_1}(u)=\langle u, e_1 \rangle e_1
+
 $$$$
 \text{D'où, } u = \text{Id}(u)=p_{F_1}(u)+\dots+p_{F_n}(u)=\langle u,e_1\rangle e_1 +\dots+ \langle u,e_n \rangle e_n
 $$
@@ -393,23 +409,18 @@ Et, appliquant Pythagore,
 $$
 ||u||^2=\langle u,e_1 \rangle^2 + \dots + \langle u,e_n \rangle^2
 $$
-
 Pour tout ce qui précède, il est vital que la norme de $||e_i|| = 1$. Sinon, la règle générale est :
-
 $$
 p_F(u)=\frac{\langle u,v \rangle}{||v||^2}v
 $$
-
 **Théorème**. Soit $E$ un espace (hilbertien ou hermitien) de dimension $n$ muni d’un produit scalaire/hermitien. Donc, il existe dans $E$ des bases orthonormées.
 
 Sur l’espace vectoriel $E$ de dimension $n$, soit $F$ un sous-espace de base orthonormé $\{e_1\}$.
 
 **Théorème**. La projection orthogonale de $u\in E$ sur $F$ est :
-
 $$
 p_F(u)= \langle u, e_1\rangle e_1 + \dots + \langle u, e_n \rangle e_n=\sum_{i=1}^n \langle u, e_i \rangle e_i
 $$
-
 La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur $u$ est le point qui minimise la distance de $u$ à $v$. C’est-à-dire : $||u-p_F(u)||=\inf \{ ||u-v||,  v\in F\}$.
 
 ### Orthonormalisation : procédé de Gram-Schmidt
@@ -429,7 +440,6 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 5. La base orthonormée finale sera finalement donné par $\{e_1, e_2, \dots, e_n\}$.
 
 Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\langle \mathbf{u},\mathbf{v} \rangle}{\langle \mathbf{u},\mathbf{u} \rangle} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
-
 $$
 \begin{align*}
 &&\mathbf{u}_1 = \mathbf{v}_1 &&\longrightarrow &&\mathbf{e}_1=\frac{\mathbf{u}_1}{||\mathbf{u}_1||} \\
@@ -444,7 +454,6 @@ $$
 
 \end{align*}
 $$
-
 ![Les deux premières étapes de gram_schmidt.](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled.png)
 
 Les deux premières étapes de Gram-Schmidt.
@@ -464,17 +473,14 @@ Ceci n’est pas un cours de théorie de la mesure, mais les fonctions communes 
 Par exemple, $\arctan(x)$, $1(x)$ ou $e^{-x^2}$.
 
 Tous ces espaces peuvent être munis de la norme $||f||_\infty = \sup |f(x)|$. Il suit que $L^\infty$ est l’ensemble des fonctions dont la norme $||\cdot||_\infty$ est finie, donc **l’ensemble des fonctions bornées.**
-
 $$
 L^\infty=\left\{f\in L^0: ||f||_\infty < \infty \right\}
 $$
-
 **Théorème**. Une fonction continue à support compact est bornée et atteint ses bornes.
 
 ## Normes sur les fonctions
 
 Pour $p\ge 1$, on peut définir une norme-p pour une fonctions comme suit :
-
 $$
 ||f||_p=\left(\int_a^b |f(t)|^pdt \right)^{1/p}
 
@@ -482,11 +488,9 @@ $$
 
 L^p=\left\{ f\in L^0 : ||f||_p < \infty \right\}
 $$
-
 Et donc, on peut créer définir d’autres espaces de fonctions à partir de $L^0$, particulièrement dont l’intégrale définie est finie. $L^1$ est l’ensemble de fonctions intégrables (intégrale définie finie, contient les densités de probabilités), $L^2$ est l’ensemble des fonctions dont le carré a une intégrale finie, etc.
 
 **Théorème**. L’ensemble $L^2$ muni de la norme $||\cdot||_2$ est un espace hilbertien (resp. hermitien) dont la norme découle du produit scalaire :
-
 $$
 \langle f,g \rangle =
 \begin{cases}

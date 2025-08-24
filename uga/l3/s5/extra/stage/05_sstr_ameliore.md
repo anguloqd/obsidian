@@ -1,12 +1,12 @@
-# 04 // sstr amelioré
+## 04 // sstr amelioré
 
-# Proposition d'amélioration de SSTR
+## Proposition d'amélioration de SSTR
 
 Ceci est une proposition pour une API plus propre et professionnelle.
 
-## API
+### API
 
-### Classes de Configuration
+#### Classes de Configuration
 
 ```python
 from dataclasses import dataclass, field
@@ -105,7 +105,7 @@ class NoiseConfig:
             raise ValueError("distribution doit être 'normal' ou 'uniform'")
 ```
 
-### Interface Principale Refactorisée
+#### Interface Principale Refactorisée
 
 ```python
 import numpy as np
@@ -365,7 +365,7 @@ class SyntheticTimeSeries:
         return cls(time_config, trend_config, season_config, noise_config)
 ```
 
-### Générateurs de Composantes Refactorisés
+#### Générateurs de Composantes Refactorisés
 
 ```python
 class ComponentGenerator:
@@ -491,7 +491,7 @@ class NoiseComponent:
         self.config = config
 ```
 
-## Démo avec la Nouvelle Interface
+### Démo avec la Nouvelle Interface
 
 ```python
 import numpy as np

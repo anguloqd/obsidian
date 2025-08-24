@@ -1,8 +1,8 @@
-# 00 // notes sur les partiels
+## 00 // notes sur les partiels
 
-# Contrôles de l'année passée
+## Contrôles de l'année passée
 
-## Évaluation d'une intégrale suite à IPP
+### Évaluation d'une intégrale suite à IPP
 
 **Erreur fréquente** : Lors de l'intégration par parties d'une intégrale définie, l'évaluation aux bornes s'applique à **toute** l'expression $uv - \int v \, du$, pas seulement à l'intégrale restante.
 
@@ -20,16 +20,18 @@ $$
 2. Évaluer **toute** l'expression aux bornes
 3. Continuer avec les intégrales restantes si nécessaire
 
-## Intégration des fonctions paires et impaires
+### Intégration des fonctions paires et impaires
 
 Pour les intégrales définies sur des intervalles symétriques $[-a, a]$ :
 
 **Fonction paire** : $f(-x) = f(x)$
+
 $$
 \int_{-a}^a f(x) \, dx = 2\int_0^a f(x) \, dx
 $$
 
 **Fonction impaire** : $f(-x) = -f(x)$
+
 $$
 \int_{-a}^a f(x) \, dx = 0
 $$
@@ -42,46 +44,52 @@ $$
 - $\cos(x)$, $x^2$, $|x|$ sont paires
 - $\sin(x)$, $x^3$, $x$ sont impaires
 
-## Relation entre LGN et TCL
+### Relation entre LGN et TCL
 
 Soit $\bar{X}_n$ la moyenne empirique de $n$ V.A. iid avec $\mathbb{E}[X_i] = \mu$ et $\text{Var}(X_i) = \sigma^2 < \infty$.
 
 **Loi des Grands Nombres (LGN)** : Convergence de la moyenne vers l'espérance
+
 $$
 \lim_{n\rightarrow\infty} \mathbb{P}(|\bar{X}_n - \mu| \leq \epsilon) = 1, \quad \forall \epsilon > 0
 $$
 
 **Théorème Central de la Limite (TCL)** : Vitesse de convergence et distribution limite
+
 $$
 \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)
 $$
 
-### Formulations équivalentes
+#### Formulations équivalentes
 
 **LGN** (convergence en probabilité) :
+
 $$
 \bar{X}_n \stackrel{P}{\rightarrow} \mu
 $$
 
 **TCL** (convergence en loi de la version normalisée) :
+
 $$
 \sqrt{n}(\bar{X}_n - \mu) \stackrel{d}{\rightarrow} \mathcal{N}(0, \sigma^2)
 $$
 
-### Approximation pratique du TCL
+#### Approximation pratique du TCL
 
 Pour $n$ suffisamment grand (règle empirique : $n \geq 30$) :
+
 $$
 \bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
 $$
 
 **Attention** : Cette approximation est valide pour $n$ fini mais grand. Si $n \rightarrow \infty$, la variance tend vers $0$ et on retrouve la convergence de la LGN.
 
-### Variables aléatoires dégénérées
+#### Variables aléatoires dégénérées
 
 Quand $n \rightarrow \infty$, la distribution de $(\bar{X}_n - \mu)$ devient **dégénérée** (concentrée en $0$).
 
 **Fonction de répartition limite** :
+
 $$
 F(x) = \begin{cases}
 0, & x < 0 \\
@@ -99,23 +107,24 @@ Cette fonction correspond à la **mesure de Dirac** $\delta_0$.
 **Pourquoi la normalisation $\sqrt{n}$ ?**
 
 La normalisation par $\sqrt{n}$ dans le TCL permet :
+
 1. D'obtenir une limite non dégénérée
 2. De révéler la vitesse de convergence : $O(1/\sqrt{n})$
 3. De maintenir une variance finie et non nulle dans la limite
 
 > [!important] **Point clé**
-> 
+>
 > La LGN et le TCL décrivent le même phénomène à des échelles différentes :
 > - **LGN** : $\bar{X}_n \approx \mu$ (convergence de la moyenne)
 > - **TCL** : $\bar{X}_n - \mu \approx \mathcal{N}(0, \sigma^2/n)$ (distribution des fluctuations)
 
-# CC1
+## CC1
 
-## Question 1.a : Test d'Alembert
+### Question 1.a : Test d'Alembert
 
 Si le test d'Alembert $\lim_{n\rightarrow\infty} \left|\frac{u_{n+1}}{u_n}\right|$ ne converge pas ou converge vers $1$, le test est **inconclusif**. Il faut alors utiliser d'autres critères (Cauchy, comparaison, etc.).
 
-## Question 2.a : Ré-indexation de séries
+### Question 2.a : Ré-indexation de séries
 
 Pour simplifier une série, on peut **ré-indexer** en changeant la variable de sommation :
 
@@ -128,11 +137,12 @@ $$
 - Utiliser les propriétés d'exponentielles/factorielles
 - Reconnaître des séries de Taylor connues
 
-## Question 2.e : Séries de Taylor avec termes alternés
+### Question 2.e : Séries de Taylor avec termes alternés
 
 **Attention** : Certaines séries ont des termes alternés même si la série de Taylor de base n'est pas alternée.
 
 **Exemple** :
+
 $$
 e^x = \sum_{k=0}^\infty \frac{x^k}{k!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
 $$
@@ -148,9 +158,9 @@ $$
 - $\cos(x) = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}$
 - $(1+x)^{\alpha} = \sum_{k=0}^\infty \binom{\alpha}{k} x^k$ pour $|x| < 1$
 
-# CC2
+## CC2
 
-## Conseil pratique
+### Conseil pratique
 
 **Vitesse d'intégration** : Travailler l'efficacité dans le calcul d'intégrales. Mémoriser les primitives usuelles et maîtriser les techniques :
 

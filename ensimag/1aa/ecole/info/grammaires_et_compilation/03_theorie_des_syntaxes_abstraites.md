@@ -1,8 +1,8 @@
-# 03 // théorie des syntaxes abstraites
+## 03 // théorie des syntaxes abstraites
 
 [chap3_4up.pdf](ressources/03_theorie_des_syntaxes_abstraites_chap3_4up.pdf)
 
-## Exo 3.1
+### Exo 3.1
 
 > [!question] ❓
 >
@@ -10,7 +10,7 @@
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
-## Exo 3.2
+### Exo 3.2
 
 > [!question] ❓
 >
@@ -22,15 +22,15 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_2.jpg)
 
-## Exo 3.3
+### Exo 3.3
 
 > [!question] ❓
 >
 > Donner une BNF qui définit cette notation préfixe d’AST (la notation étendue de Rexp dans l’exo précédent).
 
-`Rexp ::= void | epsilon | a | b | star.Rexp | u.Rexp.Rexp | dot.Rexp.Rexp` 
+`Rexp ::= void | epsilon | a | b | star.Rexp | u.Rexp.Rexp | dot.Rexp.Rexp`
 
-## Exo 3.4
+### Exo 3.4
 
 > [!question] ❓
 >
@@ -51,7 +51,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![WhatsApp Image 2025_01_12 at 19.55.35.jpeg](ressources/03_theorie_des_syntaxes_abstraites_whatsapp_image_2025_01_12_at_19.55.35.jpeg)
 
-## Exo 3.5
+### Exo 3.5
 
 > [!question] ❓
 >
@@ -69,7 +69,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![WhatsApp Image 2025_01_12 at 19.56.49(3).jpeg](whatsapp_image_2025_01_12_at_19.56.49(3).jpeg)
 
-## Exo 3.6
+### Exo 3.6
 
 > [!question] ❓
 >
@@ -89,7 +89,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_4.jpg)
 
-## Exo 3.7
+### Exo 3.7
 
 > [!question] ❓
 >
@@ -105,7 +105,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_7.jpg)
 
-## Exo 3.9
+### Exo 3.9
 
 > [!question] ❓
 >
@@ -113,7 +113,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_8.jpg)
 
-## Exo 3.10
+### Exo 3.10
 
 > [!question] ❓
 >
@@ -121,7 +121,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![Untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_9.jpg)
 
-## Exo 3.13
+### Exo 3.13
 
 > [!question] ❓
 >
@@ -132,7 +132,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 ![Untitled.jpg](ressources/03_theorie_des_syntaxes_abstraites_untitled_10.jpg)
 
-## Exo 3.14
+### Exo 3.14
 
 > [!question] ❓
 >
@@ -143,7 +143,7 @@ En notation naturelle, pour chaque opération binaire, les deux mots suivants so
 
 (J’ai pas pris des photos ?)
 
-## Exo 3.15 et 3.16
+### Exo 3.15 et 3.16
 
 > [!question] ❓
 >

@@ -1,4 +1,4 @@
-# 01 // introduction à R
+## 01 // introduction à R
 
 [cm1.pdf](ressources/01_introduction_a_r_cm1.pdf)
 

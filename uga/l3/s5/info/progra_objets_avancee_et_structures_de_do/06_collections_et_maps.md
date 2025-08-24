@@ -1,4 +1,4 @@
-# 06 // collections et maps
+## 06 // collections et maps
 
 [INFF5_6.pdf](ressources/06_collections_et_maps_inff5_6.pdf)
 
@@ -8,15 +8,15 @@
 > [!note]
 > Par rapport au dernier TD, il faut determiner quelle type de liste est meilleure à utiliser : LinkedList ou ArrayList.
 
-# Collections : listes et plus
+## Collections : listes et plus
 
-## Interfaces
+### Interfaces
 
 ![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `iterator<e>`.](ressources/06_collections_et_maps_untitled.png)
 
 Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `Iterator<E>`.
 
-### Interface `Iterator<E>`
+#### Interface `Iterator<E>`
 
 Un `Iterator` est un objet permettant d’effectuer un parcours des éléments d’une `Collection`. Ces méthodes sont comme suit :
 
@@ -27,7 +27,7 @@ retourne le prochain élément dans le parcours. Lève une `NoSuchElementExcepti
 - `void remove()`
 supprime le dernier élément retourné par `next()`. Lève une `IllegalStateException` si la méthode `next()` n’a jamais été appelée ou s’il y a déjà eu un `remove()` depuis le dernier `next()`. Méthode « optionnelle » : levée possible d’une `UnsupportedOperationException`.
 
-### Interface `ListIterator` **(!)**
+#### Interface `ListIterator` **(!)**
 
 Un `ListIterator` est un `Iterator` permettant de parcourir une `List`. Le parcours avant-arrière est possible, de même que la possibilité d’obtenir des indices.
 
@@ -51,7 +51,7 @@ remplace par e dans la liste parcourue le dernier élément retourné par `next(
 - `void add(E e)`
 insère `e` dans la liste parcourue juste l’avant l’élément d’indice `nextIndex()` s’il existe, et juste après l’élément d’indice `previousIndex()` s’il existe. Si la liste est vide `e` devient son unique élément. Méthode « optionnelle ».
 
-### Interface `Iterable`
+#### Interface `Iterable`
 
 Un `Iterable` est un objet que l’on peut parcourir à l’aide d’un `Iterator`. Elle contient une méthode :
 
@@ -60,7 +60,7 @@ retourne un `Iterator` permettant de parcourir `this`.
 
 Un parcours total sur un `Iterable` (et aussi sur les tableaux) peut être réalisé grâce à un boucle `for`. En fait, le mot clé `for` va planter si on l’utilise avec un objet qui n’est pas `Iterable`.
 
-### Interface `Collection` **(!)**
+#### Interface `Collection` **(!)**
 
 Une Collection est un objet pouvant contenir plusieurs éléments. Elle contient quelques méthodes générales (`iterator()` est hérité d’`Iterable`) :
 
@@ -98,7 +98,7 @@ retourne un tableau contenant tous les éléments de `this`. Le tableau retourn�
 - `<T> T[] toArray(T[] tab)`
 si `tab` a une taille suffisante, retourne `tab` après y avoir rangé (en début de tableau) tous les éléments de `this`. Si `tab` n’a pas une taille suffisante, retourne un tableau du même type que `tab` contenant exactement tous les éléments de `this`. Lève une `ArrayStoreException` si `E` est incompatible avec `T`. Lève une `NullPointerException` si `tab` vaut `null`.
 
-### Interface `List` **(!)**
+#### Interface `List` **(!)**
 
 Une `List` est une `Collection` permettant l’accès indicé à ses éléments. Elle contient des méthodes générales additionnelles (`List` hérite de `Collection`) :
 
@@ -127,7 +127,7 @@ retourne l’indice du premier élément de `this` équivalent à `obj`, ou -1 s
 - `int lastIndexOf(Object obj)`
 retourne l’indice du dernier élément de `this` équivalent à `obj`, ou -1 si aucun élément de `this` est équivalent à `obj`.
 
-### Interface `Set` **(!)**
+#### Interface `Set` **(!)**
 
 Un `Set` est une `Collection` dans laquelle l’unicité des éléments est garantie.
 
@@ -137,7 +137,7 @@ Un `Set` est une `Collection` dans laquelle l’unicité des éléments est gara
 - Attention aux objets mutables utilisés comme éléments.
 - Pas d’autres méthodes que celles héritées de `Collection`.
 
-### Interface `SortedSet` **(!)**
+#### Interface `SortedSet` **(!)**
 
 Un `SortedSet` est un `Set` qui garantit que le parcours de ses éléments se fait dans l’ordre de ceux-ci. L’ordre des éléments est déterminé à la création du `SortedSet` :
 
@@ -160,13 +160,13 @@ retourne le premier (le plus petit) élément de `this`. Levée d’une `NoSuchE
 retourne le dernier (le plus grand) élément de `this`. Levée d’une
 `NoSuchElementException` si `this` est vide.
 
-## Classes prédéfinies
+### Classes prédéfinies
 
 ![Maintenant, on se concentre sur les classes qui implémentent les interface ci-dessus.](ressources/06_collections_et_maps_untitled_1.png)
 
 Maintenant, on se concentre sur les classes qui implémentent les interface ci-dessus.
 
-### Classe abstraite `AbstractCollection`
+#### Classe abstraite `AbstractCollection`
 
 Classe abstraite racine de la hiérarchie d’héritage des collections, implémente `Collection<E>`. Elle n’a aucun attribut localement déclaré.
 
@@ -193,18 +193,17 @@ Cela dit, elle implémente par défaut toutes les autres méthodes imposées par
 - `public Object[] toArray()`
 - `public <T> T[] toArray(T[] t)`
 - La méthode `add(E e)` est laissée optionnelle
-    
+
     ```java
     public boolean add(E e) {
     	throw new UnsupportedOperationException();
     }
     ```
-    
 
 Finalement, elle définit les méthodes suivantes :
 
 - `remove(Object obj)`
-    
+
     ```java
     public boolean remove(Object obj) {
     	Iterator<E> it = iterator();
@@ -224,9 +223,9 @@ Finalement, elle définit les méthodes suivantes :
     	return false;
     }
     ```
-    
+
 - `addAll(Collection<? extends E> c)`
-    
+
     ```java
     public boolean addAll(Collection<? extends E> c) {
     	boolean modified = false;
@@ -236,9 +235,8 @@ Finalement, elle définit les méthodes suivantes :
     	return modified;
     }
     ```
-    
 
-### Classe abstraite `AbstractList`
+#### Classe abstraite `AbstractList`
 
 Cette classe hérite d’`AbstractCollection<E>`, propose une implémentation de `List<E>` basique pouvant convenir à une structure sous-jacente à accès indicée (e.g. un tableau).
 
@@ -259,9 +257,10 @@ Les méthodes laissées abstraites :
 
 Finalement, deux classes imbriquées `Itr` et `ListItr` proposent des implémentations d’`Iterator` et `ListIterator`.
 
-### Classe `ArrayList` **(!)**
+#### Classe `ArrayList` **(!)**
 
 Hérite d’`AbstractList<E>`, propose une implémentation de `List<E>` basée sur un tableau
+
 et réalise aussi les interfaces `RandomAccess`, `Cloneable` et `java.io.Serializable`.
 
 Le tableau est agrandi automatiquement si besoin (technique du buffer).
@@ -335,14 +334,14 @@ private void trimToSize() { // simplifiée
 }
 ```
 
-### Classe abstraite `AbstractSequentialList`
+#### Classe abstraite `AbstractSequentialList`
 
 Hérite d’`AbstractList<E>`, propose une implémentation de `List<E>` basique pouvant convenir à une structure sous-jacente à accès séquentiel. Elle n’a pas d’attribut localement déclaré.
 
 - Elle contient quelques méthodes redéfinies pour fonctionner grâce à un `ListIterator` plutôt qu’un accès indicé.
 - La méthode `size()` est héritée abstraite, la méthode `listIterator(int i)` est redéfinie abstraite, la méthode `get(int i)` est définie.
 
-### Classe `LinkedList` **(!)**
+#### Classe `LinkedList` **(!)**
 
 Hérite d’`AbstractSequentialList<E>`, propose une implémentation de `List<E>` basée sur un double chaînage circulaire, et réalise aussi les interfaces `RandomAccess`, `Cloneable` et `java.io.Serializable`. Elle contient deux classes imbriquées : `ListItr` pour fournir les `ListIterator`, et la privée `Node<E>` pour définir les chaînons.
 
@@ -415,7 +414,7 @@ ajoute `e` au début de `this`.
 - `private void addLast(E e)`
 ajoute `e` à la fin de `this`.
 
-### Classe abstraite `AbstractSet`
+#### Classe abstraite `AbstractSet`
 
 Hérite d’`AbstractCollection<E>` et propose une implémentation minimale de `Set<E>`. Elle n’a pas d’attribut localement déclaré. Seules les méthodes suivantes sont redéfinies :
 
@@ -423,7 +422,7 @@ Hérite d’`AbstractCollection<E>` et propose une implémentation minimale de `
 - `public int hashCode()`
 - `public boolean removeAll(Collection<?> c)`
 
-### Classe `HashSet` **(!)**
+#### Classe `HashSet` **(!)**
 
 Hérite d’`AbstractSet<E>` et propose une implémentation de `Set<E>` basée sur une `HashMap<E, Object>`, et réalise les interfaces `Cloneable` et `java.io.Serializable`.
 
@@ -452,9 +451,10 @@ public int size() {
 }
 ```
 
-### Classe `TreeSet` **(!)**
+#### Classe `TreeSet` **(!)**
 
 Hérite d’`AbstractSet<E>` et propose une implémentation de `SortedSet<E>` basée sur une
+
 `TreeMap<E, Object>`, et réalise les interfaces `Cloneable` et `java.io.Serializable`.
 
 Elle contient un attribut localement déclaré :
@@ -482,15 +482,15 @@ public int size() {
 }
 ```
 
-# Maps : notion des dictionnaires
+## Maps : notion des dictionnaires
 
 ![Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `map<kv>`.](ressources/06_collections_et_maps_untitled_4.png)
 
 Les flèches pointe une classe ou interface à son parent. Les bleues sont des interfaces, les blanches sont des classes. Voyons que tout commence avec l’interface `Map<K,V>`.
 
-## Interfaces et classes prédéfinies
+### Interfaces et classes prédéfinies
 
-### Interface `Map` **(!)**
+#### Interface `Map` **(!)**
 
 Une `Map` (parfois appelée table d’association ou encore dictionnaire) est un objet pouvant regrouper des associations clef-valeur.  A l’instar d’un « dictionnaire » pour un langage naturel, la recherche d’une clef (un « mot ») est optimisée, mais pas la recherche d’une valeur (une « définition »).
 
@@ -536,7 +536,7 @@ retourne une vue `Collection` des valeurs présentes dans `this`.
 - `Set<Map.Entry<K, V>> entrySet()`
 retourne une vue `Set` des associations présentes dans `this`.
 
-### Interface `Map.Entry` **(!)**
+#### Interface `Map.Entry` **(!)**
 
 C’est une interface imbriquée dans `Map` pour représenter les associations, avec les méthodes suivantes :
 
@@ -547,7 +547,7 @@ retourne la valeur de l’association.
 - `V setValue(V v)`
 remplace la valeur de l’association par `v` et retourne la valeur remplacée.
 
-### Interface `SortedMap` **(!)**
+#### Interface `SortedMap` **(!)**
 
 Une `SortedMap` est une `Map` dans la laquelle les associations sont ordonnées (l’ordre est bien sûr défini sur les clefs).
 
@@ -572,7 +572,7 @@ retourne la première (la plus petite) clef de `this`. Levée d’une `NoSuchEle
 - `K lastKey()`
 retourne la dernière (la plus grande) clef de `this`. Levée d’une `NoSuchElementException` si `this` est vide.
 
-### Classe abstraite `AbstractMap`
+#### Classe abstraite `AbstractMap`
 
 Classe abstraite racine de la hiérarchie d’héritage des `Map`, implémente `Map<K, V>`. Elle fournit une implémentation de base pour une `Map`. Aucun choix n’est fixé pour le stockage des associations : les recherches de clefs ne sont donc pas optimisées.
 
@@ -608,7 +608,7 @@ public V put(K k, V v) {
 
 Les autres méthodes de modification (`clear()`, `remove(Object k)`, `putAll(K k, V v)`) reposent toutes sur l’utilisation de `entrySet()`.
 
-### Classe `HashMap` **(!)**
+#### Classe `HashMap` **(!)**
 
 Hérite d’`AbstractMap<K, V>`, propose une implémentation de `Map<K, V>` basée sur une table de hachage et réalise aussi les interfaces `Cloneable` et `java.io.Serializable`. La table de hachage est automatiquement agrandie si besoin.
 
@@ -662,9 +662,10 @@ static class Node<K, V> implements Map.Entry<K, V> {
 }
 ```
 
-### Classe `TreeMap` **(!)**
+#### Classe `TreeMap` **(!)**
 
 Hérite d’`AbstractMap<K, V>`, propose une implémentation de `SortedMap<K, V>` (plus spécifiquement `NavigableMap<K, V>` depuis Java 1.6) basée sur un arbre binaire ordonné
+
 équilibré et réalise aussi les interfaces `Cloneable` et `java.io.Serializable`. Elle contient de nombreuses classes imbriquées dont `Entry<K, V>` qui implémente `Map.Entry<K, V>`.
 
 Elle contient quatre attributs localement déclarés :

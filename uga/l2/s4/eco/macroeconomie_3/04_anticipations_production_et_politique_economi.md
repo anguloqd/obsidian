@@ -1,12 +1,12 @@
-# 04 // anticipations, production et politique économique
+## 04 // anticipations, production et politique économique
 
 [Slides de IS/LM/PC](ressources/04_anticipations_production_et_politique_economi_chapitre_4b_diapo.pdf)
 
-# Le modèle IS/LM/PC
+## Le modèle IS/LM/PC
 
-## Différences avec IS/LM
+### Différences avec IS/LM
 
-On voudrait introduire la courbe de Phillips dans le modèle IS/LM, d’où l’ajout de PC. On s’intérésse au passage du court au moyen terme, ce qui permet d’étudier les effets macroéconomique d’un choc ou d’une politique. 
+On voudrait introduire la courbe de Phillips dans le modèle IS/LM, d’où l’ajout de PC. On s’intérésse au passage du court au moyen terme, ce qui permet d’étudier les effets macroéconomique d’un choc ou d’une politique.
 
 L’offre à court terme est donné par l’équation suivant :
 
@@ -16,7 +16,7 @@ $$
 
 La différence avec le traditionnel IS/LM est l’inclusion de la prime de risque $x$ dans l’intérêt $r$ (en fait, c’est plutôt le taux directeur réel). Tel intérêt est donné pas LM horizontale, càd LM est la courbe $r=\bar{r}$, une constante.
 
-## Emploi et production potentiels : $N_n$ et $Y_n$
+### Emploi et production potentiels : $N_n$ et $Y_n$
 
 À la fin du chapitre 1, on avait introduit une forme finale de la relation inflation-chômage :
 
@@ -61,19 +61,19 @@ $$
 
 D’où on déduit que $\pi_t$ augmente quand $Y > Y_n$. En général, l’inflation a une relation en même sens que la production.
 
-# Dynamique et équilibre de moyen terme
+## Dynamique et équilibre de moyen terme
 
-## Taux d’intérêt réel ou neutre : $r_n$
+### Taux d’intérêt réel ou neutre : $r_n$
 
 On vient de voir que l’inflation $\pi$ augmente si la production actuelle $Y_t$ est plus grande que la production en plein emploi $Y_n$. Ceci est un effet à court terme.
 
 À moyen terme, les agents réagissent à la hausse de $\pi$. Particulièrement, la Banque Centrale augmente le taux d’intérêt $r$, ce qui diminue la production actuelle. Le point où le taux d’intérêt $r$ a augmenté de sorte que la production actuelle à diminue jusqu’à $Y_t=Y_n$, on appelle ce point le taux d’intérêt naturel ou neutre $r_n$.
 
-# La nouvelle courbe IS
+## La nouvelle courbe IS
 
 ![untitled](ressources/04_anticipations_production_et_politique_economi_untitled.png)
 
-## L’inclusion des anticipations : $A$
+### L’inclusion des anticipations : $A$
 
 On propose une écriture des anticipation tout simplement comme $A=C+I$. Ceci implique que $A$ est une fonction qui prend comme variables indépendantes la production $Y$, les taxes $T$, les taux d’intérêt $r$ et la prime de risque, $x$ (laquelle on suppose constante pour toute les périodes).
 
@@ -93,13 +93,13 @@ On fait remarquer au passage que les anticipations diminuent l’élasticité de
 - Pour sa part, $I$ va augmenter peu si la baisse de $r$ est vu comme transitoire.
 - Bref, si on a une production $Y$ qui baisse un peu mais qu’on pense que elle augmentera au futur ($Y^e > Y$), donc la consommation $C$ se réduit très peu, car la baisse de $Y$ est vue comme transitoire.
 
-# Politique monétaire et anticipations
+## Politique monétaire et anticipations
 
-## Exemple : économie en crise
+### Exemple : économie en crise
 
 Supposons une économie en crise, où la Banque Centrale voudrait baisser $r$. Si les anticipations sont fixes et non accordes à un $r$ diminué, donc l’effet sera pauvre. Par contra, si les anticipations s’ajustent avec la baisse de r, donc la politique monétaire sera effective et $Y\nearrow$. Bref, l’effectivité des politique monétaires dépendront aussi des anticipations accordes.
 
-## Exemple : déficit budgétaire
+### Exemple : déficit budgétaire
 
 Supposons une économie ou l’état souhait de réduire son déficit. Quelle que soit la mesure prise contre le déficit ($G\searrow$ ou $T\nearrow$), l’effet sera le même :
 

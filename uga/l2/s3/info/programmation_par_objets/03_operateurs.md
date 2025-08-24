@@ -1,10 +1,10 @@
-# 03 //  opérateurs
+## 03 //  opérateurs
 
 [Slides de cours 3.pdf](ressources/03_operateurs_inff3_2223_cours3.pdf)
 
-# Commentaires
+## Commentaires
 
-## Trois types de commentaires
+### Trois types de commentaires
 
 Ils existent 3 syntaxes pour les commentaires :
 
@@ -26,9 +26,9 @@ Ceci deviendra un page html	sur le dossier "doc"
 
 Pour mieux explorer le commentaire Javadoc, aller au [TP1](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-tp1.pdf) et aussi ce [lien](https://www.jmdoudoux.fr/java/dej/chap-javadoc.htm).
 
-# Opérateurs
+## Opérateurs
 
-## Affichage
+### Affichage
 
 On a deux commandes pour afficher des donnés sur la console, `println()` et `print()`. Ils sont des méthodes de la classe `System.out`.
 
@@ -40,9 +40,10 @@ System.out.println(true);
 
 Ils sont définies les deux pour plusieurs types d’arguments.
 
-## Affectation
+### Affectation
 
 Affecter c’est l’action de garder d’associer une valeur avec une référence.
+
 L’opérateur d’affectation est `=`.
 
 La affectation est triviale quand on garde des types primitifs dans une variable.
@@ -76,7 +77,7 @@ public class ExampleAffectation {
 
 ![untitled](ressources/03_operateurs_untitled.png)
 
-## Arithmétique
+### Arithmétique
 
 Rien de nouveau là. Ils existent les 4 opérations arithmétiques fondamentaux (somme, soustraction, multiplication, division) et l’opérateur modulo (`%`).
 
@@ -112,7 +113,7 @@ i = 1;
 j= i--; // j vaut 1, i vaut 0;
 ```
 
-## Relations mathématiques et booléens
+### Relations mathématiques et booléens
 
 Ils évaluent un relation entre les opérandes et retournent un booléen. Retourne `true` si la relation entre opérande est satisfaite, et `false` sinon. On inclut tous les opérateur de comparaison des maths.
 
@@ -135,7 +136,7 @@ false
 true
 ```
 
-## Logique
+### Logique
 
 Les opérateurs logiques sont ceux fondamentaux de la mathématique : et (`&&`), ou (`||`) et non (`!`). Ils retournent `true` ou `false` qualifiant la relation entre les opérandes.
 
@@ -144,7 +145,7 @@ Les opérateurs logiques sont ceux fondamentaux de la mathématique : et (`&&`),
 - Si on a “`(a&&b)`” et a est faux, donc on n’évalue même pas b, on retourne `false`.
 - Si on a “`(a||b)`” et a est vrai, donc on n’évalue même pas b, on retourne `true`.
 
-## Représentation binaire
+### Représentation binaire
 
 | OPÉRATEUR | DESCRIPTION | EXEMPLE | RÉSULTAT |
 | --- | --- | --- | --- |
@@ -156,11 +157,12 @@ Les opérateurs logiques sont ceux fondamentaux de la mathématique : et (`&&`),
 | >> | Décalage à droite | 5>>1 | 2 |
 | >>> | Décalage à droite non signé |  |  |
 
-## Concaténation
+### Concaténation
 
 L’opérateur `+` peut aussi être utilisé pour concaténer des strings, s’il détecte au moins un string entre ses deux opérandes.
 
 Les chaînes sont immuables. Quand on concatène deux chaînes, alors une autre
+
 instance de chaîne est créée.
 
 ```java

@@ -1,6 +1,6 @@
-# 00 //  notes sur le contenu
+## 00 //  notes sur le contenu
 
-## #2 : les nombres réels
+### #2 : les nombres réels
 
 - Définir N en termes de ε :
     - Max() ou Min()
@@ -9,13 +9,13 @@
     - Fonction par branches
     - etc.
 
-## #3 : suites réelles
+### #3 : suites réelles
 
 - Multiplier par l'expression conjuguée.
     - Même si l'expression avec racine est dans le numérateur !
-- Rappel que tu peux fixer ton $N$ dépendant si ton minorant/majorant ("... pour tout $m$ réel") est positif ou négatif (disjonction de cas). Ça simplifie la vie.
+- Rappel que tu peux fixer ton $N$ dépendant si ton minorant/majorant ("… pour tout $m$ réel") est positif ou négatif (disjonction de cas). Ça simplifie la vie.
 
-## #4 : convergence des suites
+### #4 : convergence des suites
 
 - **RÉPOND EXACTEMENT CE QU'ON TE DEMANDE !**
 - Preuve directe : manipulation algébrique -> tautologie.
@@ -27,7 +27,7 @@
 - Preuve de la contraposée.
 - Preuve par l'absurde.
 - Limites :
-    - "Par somme", "par quotient", "par différence", "par composition"...
+    - "Par somme", "par quotient", "par différence", "par composition"…
     - Factorise des termines qui n'existent pas dans les racines.
     - Pour les suites récurrentes :
         - Définir grand $N$ est inutile. Il faut plutôt utiliser le fait que c'est une suite croissante/décroissante, construire $u_{n+1}$, ou d'autres infos.

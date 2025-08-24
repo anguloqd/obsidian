@@ -1,16 +1,16 @@
-# 11 // classification ascendant hiérarchique
+## 11 // classification ascendant hiérarchique
 
 [lecture_hac.pdf](ressources/11_classification_ascendant_hierarchique_lecture_hac.pdf)
 
-# Classification ascendante hiérarchique
+## Classification ascendante hiérarchique
 
-## Introduction au clustering hiérarchique
+### Introduction au clustering hiérarchique
 
-### Définition du clustering hiérarchique
+#### Définition du clustering hiérarchique
 
 Le clustering hiérarchique constitue une méthode de classification qui vise à construire une hiérarchie de clusters, organisant les données selon une structure arborescente de clusters imbriqués. Cette approche diffère fondamentalement des méthodes de partitionnement comme k-means en produisant une représentation multi-échelle des groupements naturels présents dans les données.
 
-### Approches méthodologiques
+#### Approches méthodologiques
 
 Deux stratégies principales caractérisent le clustering hiérarchique, chacune procédant selon une logique inverse :
 
@@ -18,71 +18,83 @@ L'**approche ascendante (agglomérative)** débute avec chaque observation const
 
 L'**approche descendante (divisive)** commence avec l'ensemble des observations dans un unique cluster global, puis effectue des divisions récursives en descendant la hiérarchie. Cette stratégie requiert un critère pour déterminer quand subdiviser les clusters existants.
 
-## Critères de liaison entre clusters
+### Critères de liaison entre clusters
 
-### Fondements théoriques
+#### Fondements théoriques
 
 La construction d'une hiérarchie de clusters nécessite deux composants essentiels : une mesure de dissimilarité entre observations individuelles et une mesure de dissimilarité entre ensembles d'observations. Cette seconde mesure, appelée critère de liaison, détermine la manière dont les distances entre clusters sont calculées.
 
-### Définition du critère de liaison
+#### Définition du critère de liaison
 
 Un critère de liaison constitue une fonction des distances pairwise entre observations, permettant de mesurer la dissimilarité entre ensemble de points. Le choix de ce critère influence profondément la forme et la qualité des clusters obtenus.
 
-### Critère de liaison de Ward
+#### Critère de liaison de Ward
 
 Le critère de Ward minimise la somme des différences quadratiques à l'intérieur de tous les clusters. Il mesure l'augmentation de variance qui résulterait de la fusion de deux clusters donnés.
 
 Formellement, pour deux clusters A et B, le critère de Ward se calcule :
 
-$$W(A,B) = \sum_{x \in A \cup B} ||x - \mu_{A \cup B}||^2 - \sum_{x \in A} ||x - \mu_A||^2 - \sum_{x \in B} ||x - \mu_B||^2$$
+$$
+W(A,B) = \sum_{x \in A \cup B} ||x - \mu_{A \cup B}||^2 - \sum_{x \in A} ||x - \mu_A||^2 - \sum_{x \in B} ||x - \mu_B||^2
+$$
 
 Cette formule peut être simplifiée sous la forme :
 
-$$W(A,B) = \frac{|A| \times |B|}{|A \cup B|} ||\mu_A - \mu_B||^2$$
+$$
+W(A,B) = \frac{|A| \times |B|}{|A \cup B|} ||\mu_A - \mu_B||^2
+$$
 
 où $\mu_A$ et $\mu_B$ représentent respectivement les centroïdes des clusters A et B.
 
-### Critère de liaison complète
+#### Critère de liaison complète
 
 La liaison complète minimise la distance maximale entre observations de paires de clusters. Cette approche conservatrice tend à produire des clusters compacts et de taille similaire.
 
 Étant donnée une mesure de dissimilarité d et deux ensembles A et B :
 
-$$C(A,B) = \max_{a \in A, b \in B} d(a,b)$$
+$$
+C(A,B) = \max_{a \in A, b \in B} d(a,b)
+$$
 
 Cette méthode garantit que tous les points d'un cluster sont relativement proches les uns des autres, mais peut être sensible aux valeurs aberrantes.
 
-### Critère de liaison simple
+#### Critère de liaison simple
 
 La liaison simple minimise la distance entre les observations les plus proches de paires de clusters. Cette approche permissive peut produire des clusters de forme allongée.
 
-$$S(A,B) = \min_{a \in A, b \in B} d(a,b)$$
+$$
+S(A,B) = \min_{a \in A, b \in B} d(a,b)
+$$
 
 Cette méthode favorise la formation de chaînes d'observations et peut être sensible au phénomène de chaînage (chaining effect) où des clusters s'étendent de manière artificielle.
 
-### Critère de liaison moyenne
+#### Critère de liaison moyenne
 
 La liaison moyenne minimise la moyenne des distances entre toutes les observations de paires de clusters, offrant un compromis entre les approches simple et complète.
 
-$$A(A,B) = \frac{1}{|A| \times |B|} \sum_{a \in A} \sum_{b \in B} d(a,b)$$
+$$
+A(A,B) = \frac{1}{|A| \times |B|} \sum_{a \in A} \sum_{b \in B} d(a,b)
+$$
 
 Cette méthode considère l'ensemble des relations entre points des deux clusters, produisant généralement des résultats équilibrés.
 
-### Exemple d'application des critères
+#### Exemple d'application des critères
 
 Considérons deux ensembles de vecteurs dans $\mathbb{R}^2$ avec la distance de Manhattan :
+
 - A = {[1,2], [2,3], [4,5]}
 - B = {[3,1], [4,5], [1,5]}
 
 L'application des différents critères de liaison révèle leurs caractéristiques distinctives :
+
 - Ward nécessite le calcul des centroïdes et de l'augmentation de variance
 - Complete identifie la paire de points la plus éloignée entre les deux ensembles
 - Simple trouve la paire de points la plus proche
 - Average calcule la moyenne de toutes les distances pairwise
 
-## Algorithme de clustering agglomératif
+### Algorithme de clustering agglomératif
 
-### Description de l'algorithme
+#### Description de l'algorithme
 
 L'algorithme de clustering agglomératif procède selon une logique itérative simple mais efficace. Pour un critère de liaison L et une mesure de dissimilarité d sélectionnés :
 
@@ -92,7 +104,7 @@ L'algorithme de clustering agglomératif procède selon une logique itérative s
 
 L'assignation finale des clusters s'effectue en coupant l'algorithme à une valeur sélectionnée du critère de liaison, déterminant ainsi le niveau de granularité souhaité.
 
-### Exemple pratique
+#### Exemple pratique
 
 L'application de l'algorithme avec le critère de liaison simple et la distance de Manhattan sur le jeu de données suivant illustre le processus :
 
@@ -105,13 +117,13 @@ L'application de l'algorithme avec le critère de liaison simple et la distance 
 
 L'algorithme calcule progressivement les distances entre tous les clusters, identifie les fusions optimales, et construit la hiérarchie complète. Différentes valeurs de seuil permettent d'obtenir différents nombres de clusters finaux.
 
-## Dendrogrammes et interprétation
+### Dendrogrammes et interprétation
 
-### Définition et utilisation des dendrogrammes
+#### Définition et utilisation des dendrogrammes
 
 Un dendrogramme constitue un diagramme arborescent représentant graphiquement la hiérarchie de clusters et leurs critères de liaison respectifs. Cette visualisation offre une représentation intuitive du processus de clustering et facilite l'analyse des résultats.
 
-### Avantages interprétatifs des dendrogrammes
+#### Avantages interprétatifs des dendrogrammes
 
 Les dendrogrammes fournissent plusieurs avantages pour l'interprétation des résultats :
 
@@ -121,13 +133,13 @@ La **sélection flexible du nombre de clusters** s'effectue en définissant un s
 
 La **compréhension de la structure hiérarchique** révèle les relations d'inclusion entre clusters et met en évidence les sous-groupes naturels présents dans les données.
 
-## Sélection du nombre optimal de clusters
+### Sélection du nombre optimal de clusters
 
-### Défis de la sélection
+#### Défis de la sélection
 
 La détermination du nombre optimal de clusters demeure un défi fondamental du clustering hiérarchique. Cette problématique nécessite une approche multifacette combinant analyse visuelle et critères quantitatifs.
 
-### Approches de sélection
+#### Approches de sélection
 
 Plusieurs stratégies facilitent la sélection du nombre de clusters :
 
@@ -137,9 +149,9 @@ L'**évaluation des scores de qualité** en fonction du nombre de clusters offre
 
 La **validation par domaine d'expertise** reste essentielle pour confirmer que les clusters identifiés correspondent à des groupes significatifs dans le contexte applicatif.
 
-## Avantages et limitations
+### Avantages et limitations
 
-### Avantages du clustering hiérarchique
+#### Avantages du clustering hiérarchique
 
 Le clustering hiérarchique présente plusieurs atouts distinctifs :
 
@@ -149,7 +161,7 @@ L'**efficacité computationnelle pour l'exploration** permet de changer le nombr
 
 La **révélation de structures multi-échelles** offre une compréhension approfondie de l'organisation des données à différents niveaux de granularité.
 
-### Limitations de l'approche
+#### Limitations de l'approche
 
 Plusieurs contraintes limitent l'applicabilité du clustering hiérarchique :
 
@@ -159,6 +171,6 @@ La **sensibilité au critère de liaison** peut produire des résultats très di
 
 La **complexité computationnelle** peut devenir prohibitive pour de très grandes bases de données, limitant l'applicabilité pratique de la méthode.
 
-## Conclusion
+### Conclusion
 
 La classification ascendante hiérarchique constitue un outil puissant pour l'exploration et la compréhension de structures complexes dans les données. Sa capacité à révéler des organisations multi-échelles et sa facilité d'interprétation en font une méthode de choix pour de nombreuses applications. La maîtrise des différents critères de liaison et l'analyse appropriée des dendrogrammes permettent d'exploiter pleinement le potentiel de cette approche pour révéler les patterns cachés dans les données.

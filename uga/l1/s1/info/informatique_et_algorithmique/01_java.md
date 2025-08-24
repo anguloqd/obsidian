@@ -1,8 +1,8 @@
-# 01 // java
+## 01 // java
 
-# Premiers éléments de programmation Java
+## Premiers éléments de programmation Java
 
-## Lecture
+### Lecture
 
 En premier, on doit importer le `Scanner` pour lire les entrées de l'utilisateur. Après, on crée un nouveau `Scanner`.
 
@@ -33,11 +33,12 @@ s.nextShort();
 s.nextLine().charAt(0); // astuce pour prendre un type char de l'utilisateur
 ```
 
-Conseil : il est mieux de créer des différents `Scanner` dépendant des la quantité de type de variables qu’on va lire. Un `Scanner` qui lit deux type primitives différents peut causer d’erreurs, il m’est déjà arrivé ! 
+Conseil : il est mieux de créer des différents `Scanner` dépendant des la quantité de type de variables qu’on va lire. Un `Scanner` qui lit deux type primitives différents peut causer d’erreurs, il m’est déjà arrivé !
 
-## Les variables
+### Les variables
 
 Elles sont des “boîtes“ pour garder des valeurs dans la RAM du PC.
+
 Le format des valeurs sont les types primitives, qui sont les formes les plus basiques d’information pour créer des structures de données. Ils sont :
 
 - `String` (avec majuscule, sinon erreur !),
@@ -64,10 +65,12 @@ res = a / (int) b;
 ```
 
 Le cast, dans ce cas, est le `(int)` juste à droite de l'affectation.
+
 Notons que, si b n’était pas transformé à un `int`, on aurait un erreur, car res doit être défini par l’opération de deux entiers.
+
 En plus, `int` arrondit vers le bas.
 
-## Les tests
+### Les tests
 
 Java utilise les conditions logiques communes des maths. Particulièrement, `<`, `<=`, `>`, `<=`, `==` et `!=`. **Pour comparer des `string`, on utilise la méthode `.equals()`.**
 
@@ -86,9 +89,10 @@ if (condition1) {
 }
 ```
 
-### (\*) `switch`, `break` et `default`
+#### (\*) `switch`, `break` et `default`
 
 Le mot clef `switch` rends plus simple l’écriture et lecture des opérations qui auraient besoins d’`if` imbriqués.
+
 Optionnellement, il y a deux autres mots clefs qui vont avec `switch`:
 
 - `break` est utilisé pour n’évaluer plus l’expression et sortir du conditionnel.
@@ -107,13 +111,14 @@ switch(expression) {
     // bloc à exécuter si expression != x et expression != y
 ```
 
-## Les itérations
+### Les itérations
 
 Les itérations ou “loops” en anglais sont des exécutions répétitives d’un bloc de code sous une condition vérifiée.
 
-### `while`
+#### `while`
 
 `while` est le loop le plus simple en Java.
+
 Un bloc de code sera répété jusqu’à qu’une condition ne soit plus vérifiée.
 
 ```java
@@ -122,7 +127,7 @@ while (condition) {
 }
 ```
 
-Une variante est le loop `do/while`, qui exécutera le code une fois, puis exécutera de nouveau le code tant que la condition soit vérifiée. 
+Une variante est le loop `do/while`, qui exécutera le code une fois, puis exécutera de nouveau le code tant que la condition soit vérifiée.
 
 ```java
 do {
@@ -131,9 +136,9 @@ do {
 while (condition);
 ```
 
-### `for`
+#### `for`
 
-`for` est un loop avec une syntaxe plus simple, à condition qu’on sache combien de fois on va itérer. Il faudra une variable indice i, une condition sur ce variable indice et son incrémentation. 
+`for` est un loop avec une syntaxe plus simple, à condition qu’on sache combien de fois on va itérer. Il faudra une variable indice i, une condition sur ce variable indice et son incrémentation.
 
 ```java
 for (int i = 0; condition sur i; i++) {
@@ -149,7 +154,7 @@ for (type nomVariable : nomListe) {
 }
 ```
 
-### (\*) `break` et `continue` dans les loops
+#### (\*) `break` et `continue` dans les loops
 
 C’est possible aussi d’utiliser `break` et `continue` dans les loops. `continue` arrêt l’exécution d’un bloc de code et passe à la suivante itération. `break` arrête le loop complètement et en sort. On peut les utiliser avec les deux `while` et `for`.
 
@@ -174,7 +179,7 @@ while (i < 10) {
 }
 ```
 
-## Les méthodes (fonctions)
+### Les méthodes (fonctions)
 
 Le nom formel d’une fonction en Java c’est une *méthode* ou method. Une méthode c’est une fonction forcément défini dans une `class`. On verra après qu’est-ce qu’une `class`.
 
@@ -197,13 +202,13 @@ Les paramètres effectifs—c’est à dire, la valeur spécifique qui prend les
 
 Il est aussi possible de définir une méthode et de l’utiliser dans la définition d’une autre méthode.
 
-### Fonctions utiles
+#### Fonctions utiles
 
 - `Math.Random()` : retourne un nombre entre 0 et 1. C’est une fonction sans paramètres.
 - `Math.sqrt(x)` : retourne la racine carrée de x. Elle a un paramètre de type double. Comme il n’y a pas de perte d’information à transformer un int, un short, etc. en double, il n’est pas nécessaire d’utiliser un cast si le paramètre est entier ou float, la conversion se faisant automatiquement par Java.
 - `Math.pow(x,y)` : retourne x^y . Attention à l’ordre des paramètres.
 
-### (\*) Surcharge de méthodes
+#### (\*) Surcharge de méthodes
 
 Il est possible de définir deux méthodes avec le même nom. Normalement, c’est fait quand les deux méthodes font des actions similaires, est c’est plus convenant de les avoir sous un même nom.
 
@@ -242,9 +247,9 @@ public static void main(String[] args) {
 
 ```
 
-Notons que Java peut faire la différence entre les deux fonctions à partir des types des variables. 
+Notons que Java peut faire la différence entre les deux fonctions à partir des types des variables.
 
-### (\*) Portée des variables
+#### (\*) Portée des variables
 
 Quand une variable est définie, sa valeur est accessible **seulement dans la région ou elle à été définie**. Cette région est appelée la portée de la variable, et elle est marquée par l’aire entre deux accolades `{}`.
 
@@ -276,7 +281,7 @@ public class Main {
 
 Un bloc de code (avec `{}`) peut exister par si seul ou accompagné des mots clés comme `if`, `while` et `for`. Dans le cas de `for`, les variables dans les parenthèses du `for` font aussi partie de code, même s’ils sont avant de l’ouverture des accolades.
 
-### (\*) Définition récursive d’une méthode
+#### (\*) Définition récursive d’une méthode
 
 Une méthode définie par récursion est une fonction qui s’appelle elle même dans sa définition. Une définition par récursion a besoin de deux éléments:
 
@@ -318,7 +323,7 @@ public class Main {
 // finalement, sum(3) = 7.
 ```
 
-## (\*) Les classes
+### (\*) Les classes
 
 ![Un *objet* est une collection de de données et operations.](ressources/01_java_untitled.png)
 
@@ -357,7 +362,7 @@ public class Programme {
 // notons que "monObj" est un objet de type "Programme"
 ```
 
-Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier. 
+Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier.
 
 ```java
 // fichier "Variables.java"
@@ -380,7 +385,7 @@ class Programme {
 // retourne 5
 ```
 
-### L’état : ensemble des attributs des classes
+#### L’état : ensemble des attributs des classes
 
 Une fois un objet a hérité des attributs, on peut les modifier comme suite :
 
@@ -435,7 +440,7 @@ public int Methode {
 // retourne 0
 ```
 
-### L’interface : ensemble des méthodes des classes
+#### L’interface : ensemble des méthodes des classes
 
 Déjà, chaque fois qu’on appelle une classe, on doit écrire le nom de la méthode suivi des parenthèses `()`.
 
@@ -474,11 +479,11 @@ public class Principale {
 
 La méthode `main` est considérée la méthode la plus importante. En bref, elle est le corps principal du code, ce que fait le programme, utilisant d’autres méthodes et variables définies hors du `main`. Un programme java ne peut pas marcher si le `main` n’existe pas. Elle est toujours exécutée lors de l’exécution du programme.
 
-### Constructeurs
+#### Constructeurs
 
 Le constructeur est une méthode spéciale. Elle est utilisée pour “initialiser” des objets, c’est à dire, pour créer un objet et qu’il hérite des attributs et méthodes. On l’appelle chaque fois qu’on utilise l’opérateur `new` dans le `main`.
 
-Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas. 
+Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas.
 
 Ils existent deux manières d’utiliser un constructeur : par défaut et paramétrisé. Le constructeur par défaut agit de la même manière que comme si on ne le déclare pas. Le constructeur paramétrisé prend un paramètre pour fixer la valeur d’un attribut de l’objet.
 
@@ -512,7 +517,7 @@ public class Demo {
 
 ![untitled](ressources/01_java_untitled_1.png)
 
-### Modificateurs
+#### Modificateurs
 
 Les modificateurs sont des mots clés qui accompagnent les classes, attributs et méthodes dans leurs déclarations. Souvent, ils spécifient la capacité d’être accédés par d’autres classes, mais ils peuvent aussi spécifier d’autres fonctionnalités.
 
@@ -541,9 +546,9 @@ On les classifie par rapport à ses fonctionnalités: modificateurs d’accès e
         - `synchronized` : les méthodes peuvent seulement être accédés par un fil à la fois.
         - `volatile` : la valeur d’un attribut n’est pas gardé localement dans un fil de la mémoire, et est toujours lit dès la mémoire principale.
 
-# Parcours et recherche dans les listes et tableaux
+## Parcours et recherche dans les listes et tableaux
 
-## Les tableaux
+### Les tableaux
 
 Un tableaux peut être vu comme une “liste de liste”. Les listes en Java sont appelées *Arrays*. Avant, voyons la liste simple. La syntaxe utilisé est la suivante :
 
@@ -571,7 +576,7 @@ Finalement, on utilise deux fois les crochets `[][]` pour définir un tableau. O
 float[][] tab = new float [20][30];
 ```
 
-## Schéma général de parcours
+### Schéma général de parcours
 
 Un parcours est une procédure de traitement de données. On passe par chaque élément d’une séquence ou liste et applique une opération sur chaque élément de la liste jusqu’à arriver à la fin.
 
@@ -596,7 +601,7 @@ else {
 }
 ```
 
-## Schéma général de recherche
+### Schéma général de recherche
 
 Pareil au parcours, une recherche est une procédure de traitement. La différence est que on s’arrête idéellement quand on trouve un élément désiré, ou si on arrive à la fin de la séquence ou liste sans trouver à celui-ci.
 
@@ -618,18 +623,19 @@ else { // sinon, élément désiré non trouvé dans la liste
 
 ```
 
-## Éléments communs entre parcours et recherche
+### Éléments communs entre parcours et recherche
 
 - ElémentCourant représente l’élément courant de la séquence.
 - FindeSéquence représente l’expression logique qui caractérise la fin de la séquence.
 - Initialisation représente la partie algorithmique consistant à se positionner sur le premier élément de la séquence.
 - Avancer représente la partie algorithmique consistant à passer de l’élément courant au l’élément suivant.
 
-# Les fichiers texte
+## Les fichiers texte
 
-## Lecture dans un fichier
+### Lecture dans un fichier
 
-La lecture d’un fichier se fait en définissant une variable de type `BufferedReader`. 
+La lecture d’un fichier se fait en définissant une variable de type `BufferedReader`.
+
 On doit lire le fichier texte ligne par ligne, donc, elle est déjà pareil au algo. de parcours.
 
 Il y a deux conditions pour lire des fichiers :
@@ -649,7 +655,7 @@ Analogie entre recherche et lecture de fichiers texte :
 
 ![untitled](ressources/01_java_untitled_3.png)
 
-## **Écriture dans un fichier**
+### **Écriture dans un fichier**
 
 Ici, on doit créer une variable de type `BufferedWriter`. Voici le schéma général d’écriture dans un fichier :
 

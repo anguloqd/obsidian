@@ -1,10 +1,10 @@
-# (2) 11 // tas (files de priorité), diviser-pour-régner, master theorem
+## (2) 11 // tas (files de priorité), diviser-pour-régner, master theorem
 
 [Cours_ArbresGénéraux_Tas.pdf](ressources/(2)_11_tas_(files_de_priorite)_diviser-pour-reg_cours_arbresgnraux_tas.pdf)
 
 [diviser_pour_regner_multiplication.pdf](ressources/(2)_11_tas_(files_de_priorite)_diviser-pour-reg_revision_2425.pdf)
 
-# Tas (files de priorité)
+## Tas (files de priorité)
 
 Tas: arbre binaire qui a un ordre vertical plutôt qu’horizontale. Les parents sont toujours plus grands ou plus petits que ses deux enfants.
 
@@ -94,15 +94,15 @@ def trier_tas(t):
 		entasser(t,1);
 ```
 
-# Diviser-pour-régner
+## Diviser-pour-régner
 
 Il y a deux algorithmes: `m2n1` et `m2n2`. A voir sur fiches.
 
-# *Master theorem*
+## *Master theorem*
 
 [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms))
 
-## Algorithme de `m2n2`
+### Algorithme de `m2n2`
 
 ```python
 def multiplication_karatsuba(X, Y, n):
@@ -135,7 +135,7 @@ def multiplication_karatsuba(X, Y, n):
     return (ac * (10 ** n)) + (ad_plus_bc * diviseur) + bd
 ```
 
-## Algorithme de Tri Fusion
+### Algorithme de Tri Fusion
 
 Le temps pour un arbre de taille $n$, pour le tri fusion, c’est $T(n) = 2T(n//2) + O(n)$.
 
@@ -144,7 +144,8 @@ Si on reprend la forme du master theorem,
 - On identifie que facilement $a=2$, $b=2$. Puis on voit que le $f(n)$ du MT correspond à $O(n)$, d’où $c=1$ (et la variable auxiliaire $k=0$ pour faire disparaître le $\log$).
 - On peut calculer que $c_\text{crit} = \log_b(a) = \log_2(2) = 1$.
 - On compare avec $c$ : on voit que $c_\text{crit} = c$, d’où ça correspond au cas #2 du MT, et la forme serré du temps de tri fusion correspond donc à :
-    
+
     $$
     T(n) = O\left(n^{c_\text{crit}} \cdot \log_2(n)^{k+1}\right) = O\left(n^1 \cdot \log_2(n)^{0+1}\right)=O\left(n\log_2(n)\right)
-    $$
+
+$$

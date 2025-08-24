@@ -1,8 +1,8 @@
-# 04 // matrices
+## 04 // matrices
 
-# Opérations basiques entre deux matrices
+## Opérations basiques entre deux matrices
 
-## Addition de matrices
+### Addition de matrices
 
 L'addition de matrices se fait entrée par entrée. Pour deux matrices $A$ et $B$ de même taille $m \times n$, on a :
 
@@ -11,6 +11,7 @@ $$
 $$
 
 **Exemple :**
+
 $$
 \begin{pmatrix}
 1 & 2 \\
@@ -30,7 +31,7 @@ $$
 - Élément neutre : $A + 0 = A$ (où $0$ est la matrice nulle)
 - Élément opposé : $A + (-A) = 0$
 
-## Multiplication de matrices
+### Multiplication de matrices
 
 Le produit matriciel $AB$ n'est défini que si le nombre de colonnes de $A$ égale le nombre de lignes de $B$. Si $A$ est de taille $m \times p$ et $B$ de taille $p \times n$, alors $AB$ est de taille $m \times n$ et :
 
@@ -39,6 +40,7 @@ $$
 $$
 
 **Exemple :**
+
 $$
 \begin{pmatrix}
 1 & 2 \\
@@ -68,7 +70,7 @@ Propriétés :
 - Distributivité : $A(B + C) = AB + AC \text{ et } (B + C)A = BA+ CA$.
 - $A \cdot 0 = 0 \text{ et } 0 \cdot A = 0$.
 
-## Multiplication par un scalaire
+### Multiplication par un scalaire
 
 Pour une matrice $A$ et un scalaire $\lambda \in \mathbb{K}$, la multiplication scalaire est définie par :
 
@@ -82,9 +84,9 @@ $$
 - $\lambda(\mu A) = (\lambda \mu)A$
 - $(\lambda A)B = A(\lambda B) = \lambda(AB)$
 
-# **Formule du binôme**
+## **Formule du binôme**
 
-## Lorsque $AB=BA$…
+### Lorsque $AB=BA$…
 
 Comme la multiplication n'est pas commutative, les identités binomiales usuelles sont fausses. En particulier, $(A + B)^2$ ne vaut en général pas $A^2 + 2AB + B^2$, mais on sait seulement que $(A+B)^2 = A^2 + AB + BA+ B^2$.
 
@@ -101,9 +103,9 @@ Dans la pratique, l'une des deux matrices est souvent la matrice identité qui c
 - $(A - I)^2 = A^2 - 2A + I$
 - $A^n = (A + I - I)^n$ peut être développé si nécessaire
 
-# **Inverse d'une matrice**
+## **Inverse d'une matrice**
 
-## $A^{-1}$ telle que $A A^{-1}=I$
+### $A^{-1}$ telle que $A A^{-1}=I$
 
 Une matrice carrée $A$ est inversible (ou régulière) s'il existe une matrice $A^{-1}$ telle que :
 
@@ -122,7 +124,7 @@ Plus généralement, quand $A$ est inversible, pour tout $p ∈ \mathbb{N}$, on 
 - $(AB)^{-1} = B^{-1}A^{-1}$ (attention à l'ordre !)
 - $(\lambda A)^{-1} = \frac{1}{\lambda}A^{-1}$ pour $\lambda \neq 0$
 
-**Simplification par une matrice inversible.** Soient $A$ et $B$ deux matrices de $M_n(\mathbb{K})$ et $C$ une matrice inversible de $M_n(\mathbb{K})$. Alors l'égalité $AC = BC$ implique l'égalité $A = B$ (on multiplie par la droite par $C^{-1}$ aux deux côtés). 
+**Simplification par une matrice inversible.** Soient $A$ et $B$ deux matrices de $M_n(\mathbb{K})$ et $C$ une matrice inversible de $M_n(\mathbb{K})$. Alors l'égalité $AC = BC$ implique l'égalité $A = B$ (on multiplie par la droite par $C^{-1}$ aux deux côtés).
 
 - Pour les matrices 2x2, la formule est :
 
@@ -134,11 +136,12 @@ Le déterminant $ad - bc$ doit être non nul pour que l'inverse existe.
 
 - Pour toute autre matrice, utilise la méthode de Gauss-Jordan.
 
-## Méthode de Gauss-Jordan pour calculer l'inverse
+### Méthode de Gauss-Jordan pour calculer l'inverse
 
 Pour calculer $A^{-1}$, on forme la matrice augmentée $(A | I)$ et on applique les opérations élémentaires sur les lignes jusqu'à obtenir $(I | A^{-1})$.
 
 **Exemple :**
+
 $$
 \begin{pmatrix}
 2 & 1 & | & 1 & 0 \\
@@ -151,16 +154,16 @@ $$
 
 Donc $\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}$.
 
-# **Types de matrices**
+## **Types de matrices**
 
 Avant de les présenter, on devrait connaître l'équivalence par lignes. Deux matrices $A$ et $B$ sont dites ***équivalentes par lignes*** si l'une peut être obtenue à partir de l'autre par une suite d'opérations élémentaires sur les lignes. On note $A ∼ B$.
 
-- Les **opérations élémentaires** sont : 
+- Les **opérations élémentaires** sont :
   1. Multiplier une ligne par un scalaire non nul
-  2. Ajouter un multiple d'une ligne à une autre ligne  
+  2. Ajouter un multiple d'une ligne à une autre ligne
   3. Échanger deux lignes
 
-## Matrices échelonnées
+### Matrices échelonnées
 
 **Matrices échelonnées** : le nombre de zéros commençant une ligne croît strictement ligne par ligne jusqu'à ce qu'il ne reste plus que des zéros (si c'est le cas, mais il peut se passer qu'il n'y ait pas de lignes purement des zéros). Par exemple :
 
@@ -196,9 +199,9 @@ $$
 	- Corollaire. Les assertions suivantes sont équivalentes :
 		- La matrice $A$ est inversible
 		- Le système linéaire $AX = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$ a une unique solution $X = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$
-		- Pour tout second membre $B$, le système linéaire $AX = B$ a une unique solution $X$.    
+		- Pour tout second membre $B$, le système linéaire $AX = B$ a une unique solution $X$.
 
-## Matrices triangulaires
+### Matrices triangulaires
 
 Les **matrices triangulaires supérieures** sont celles dont les coefficients strictement au-dessous de la diagonale sont $0$. La définition est analogue pour les matrices triangulaires inférieures, juste que dans ce cas-ci les coefficients au-dessus de la diagonale principale sont nuls.
 
@@ -253,9 +256,10 @@ $$
 
 Une matrice $A$ de taille $n × n$, triangulaire, est inversible si et seulement si ses éléments diagonaux sont tous non nuls.
 
-## Autres types de matrices importantes
+### Autres types de matrices importantes
 
 **Matrice identité :** $I_n$ est la matrice diagonale avec des $1$ sur la diagonale :
+
 $$
 I_3 = \begin{pmatrix}
 1 & 0 & 0 \\
@@ -268,13 +272,14 @@ $$
 
 **Matrice élémentaire :** Matrice obtenue en appliquant une seule opération élémentaire à la matrice identité.
 
-# Opérations d'une seule matrice
+## Opérations d'une seule matrice
 
-## Transposition : $A^T$
+### Transposition : $A^T$
 
 C'est juste inverser les indices $i$ et $j$ de chaque entrée : $(A^T)_{ij} = A_{ji}$. Une matrice $n \times p$ va se transformer en $p \times n$.
 
 **Exemple :**
+
 $$
 \begin{pmatrix}
 1 & 2 & 3 \\
@@ -295,7 +300,7 @@ $$
 
 **Noter bien l'inversion :** $(AB)^T = B^T A^T$, comme pour $(AB)^{-1} = B^{-1} A^{-1}$.
 
-## Trace d'une matrice : $\text{tr}(A)$
+### Trace d'une matrice : $\text{tr}(A)$
 
 C'est la somme des entrées de la diagonale principale d'une matrice carrée :
 
@@ -304,6 +309,7 @@ $$
 $$
 
 **Exemple :**
+
 $$
 \text{tr}\begin{pmatrix}
 1 & 2 & 3 \\
@@ -320,7 +326,7 @@ $$
 
 La propriété 4 est particulièrement importante : la trace est invariante par permutation cyclique des matrices dans un produit.
 
-## Notion de matrice symétrique et antisymétrique
+### Notion de matrice symétrique et antisymétrique
 
 Une matrice **symétrique** est une matrice $A$ telle que $A = A^T$, et une matrice **antisymétrique** est telle que $A^T = -A$. Les deux (symétriques et antisymétriques) sont forcément carrées.
 

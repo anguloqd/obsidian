@@ -1,16 +1,16 @@
-# 02 // protocole IP
+## 02 // protocole IP
 
 [02_protocole_ip_2_le_protocole_ip.pdf](ressources/02_protocole_ip_2_le_protocole_ip.pdf)
 
-# Le protocole IP
+## Le protocole IP
 
-## Introduction à TCP/IP
+### Introduction à TCP/IP
 
 Le protocole TCP/IP constitue l'épine dorsale des communications réseau modernes. Au sens strict, TCP/IP désigne un ensemble de deux protocoles complémentaires : IP (Internet Protocol), qui opère au niveau 3 (réseau) du modèle OSI, et TCP (Transmission Control Protocol), qui fonctionne au niveau 4 (transport). Dans la pratique, cette appellation recouvre une famille complète de protocoles interconnectés, formant ce qu'on appelle une pile de protocoles.
 
 L'adoption quasi universelle de TCP/IP s'explique par sa capacité à unifier les communications, que ce soit sur des réseaux locaux (LAN) ou sur l'Internet global. Cette technologie trouve ses racines dans les recherches menées par le DARPA (Defense Advanced Research Projects Agency) dès la fin des années 1960.
 
-### Contexte historique
+#### Contexte historique
 
 En 1969, le projet ARPAnet (Advanced Research Projects Agency Network) concrétise les premières expérimentations en reliant quatre sites informatiques. Cette initiative marque le début d'une révolution technologique qui transformera radicalement les communications mondiales.
 
@@ -24,17 +24,17 @@ Depuis 1990, l'Europe connaît une explosion de l'utilisation d'IP dans le secte
 - **L'attrait commercial de l'Internet** : l'Internet repose entièrement sur les protocoles et services TCP/IP
 - **La prolifération des outils de gestion** : le protocole SNMP (Simple Network Management Protocol) devient la référence en matière de gestion de réseau
 
-## Architecture TCP/IP
+### Architecture TCP/IP
 
 Les protocoles TCP/IP s'organisent selon une architecture à quatre couches, souvent désignée sous le nom de modèle DoD (Department of Defense), en référence à ses origines militaires américaines.
 
-### Couche accès réseau
+#### Couche accès réseau
 
 Cette couche la plus basse gère la connexion physique avec les infrastructures matérielles : câbles, circuits d'interfaces électriques (transceivers), cartes réseau et protocoles d'accès au support physique. Elle intègre généralement les fonctionnalités des couches physique et liaison de données du modèle OSI.
 
 Les utilisateurs interagissent rarement directement avec cette couche, car TCP/IP masque volontairement ces aspects techniques. Dans les systèmes Unix, ces protocoles apparaissent sous forme de pilotes de périphériques (drivers) et de programmes associés.
 
-### Couche Internet
+#### Couche Internet
 
 La couche Internet fournit l'adressage logique nécessaire aux interfaces physiques. Le protocole IP (Internet Protocol) constitue l'implémentation de référence de cette couche dans le modèle DoD.
 
@@ -42,7 +42,7 @@ Cette couche établit la correspondance entre adresses logiques et adresses phys
 
 La fonction de routage des datagrammes entre hôtes distants relève également de cette couche, qui sert d'interface aux couches supérieures du modèle.
 
-### Couche transport hôte à hôte
+#### Couche transport hôte à hôte
 
 Cette couche définit les connexions entre hôtes du réseau. Le modèle DoD comprend deux protocoles principaux :
 
@@ -50,7 +50,7 @@ Cette couche définit les connexions entre hôtes du réseau. Le modèle DoD com
 
 **UDP (User Datagram Protocol)** offre un service de transmission plus simple, sans garantie de fiabilité, adapté aux applications qui n'exigent pas les fonctionnalités avancées de TCP.
 
-### Couche application
+#### Couche application
 
 La couche application couronne l'architecture TCP/IP en permettant aux logiciels d'utiliser les services des protocoles de transport. Les protocoles d'application se divisent en deux catégories :
 
@@ -64,11 +64,12 @@ La couche application couronne l'architecture TCP/IP en permettant aux logiciels
 - RIP (Routing Information Protocol) : gestion du routage
 - NFS (Network File System) : partage de fichiers entre machines
 
-## Comparaison avec le modèle OSI
+### Comparaison avec le modèle OSI
 
 Comme dans le modèle OSI, les données transitent de haut en bas lors de l'émission et de bas en haut lors de la réception. Chaque couche ajoute ses propres informations de contrôle sous forme d'en-têtes pour garantir une transmission correcte.
 
 Les terminologies diffèrent entre les deux modèles. Le modèle OSI utilise le terme PDU (Protocol Data Unit) pour décrire les données de chaque couche. Le modèle DoD emploie une nomenclature spécifique :
+
 - Messages et flots au niveau application
 - Segments et paquets au niveau transport
 - Datagrammes au niveau Internet
@@ -88,15 +89,16 @@ Le multiplexage/démultiplexage permet à plusieurs protocoles de couches supér
 
 Lorsque la couche IP reçoit un paquet Ethernet, elle identifie les paquets TCP ou UDP grâce à un champ de 8 bits dans l'en-tête IP.
 
-## Fonctions du protocole IP
+### Fonctions du protocole IP
 
 Le protocole Internet (RFC 791) fournit le service de transmission de paquets fondamental sur lequel reposent tous les réseaux TCP/IP. Tous les protocoles des couches adjacentes utilisent IP pour transmettre leurs données, faisant de ce protocole le point de passage obligé de toutes les communications TCP/IP.
 
 IP fonctionne au-dessus de diverses technologies réseau : Ethernet, Token-Ring, FDDI, ATM, démontrant sa polyvalence et son indépendance vis-à-vis du matériel sous-jacent.
 
-### Fonctions principales
+#### Fonctions principales
 
 Les fonctions essentielles d'IP comprennent :
+
 - La définition du format des datagrammes
 - L'établissement du plan d'adressage Internet
 - L'interface entre les couches accès réseau et transport
@@ -109,7 +111,7 @@ Le réseau IP emploie la méthode "Best Effort" (meilleur effort), garantissant 
 
 Les protocoles de couches supérieures peuvent spécifier des paramètres de qualité de service (QoS). La couche IP tente alors de faire correspondre ces exigences avec les services fournis par le matériel réseau sous-jacent.
 
-### Format du datagramme
+#### Format du datagramme
 
 Le datagramme IP comprend un en-tête IP suivi des données provenant des protocoles supérieurs.
 
@@ -143,13 +145,13 @@ Le champ Time To Live (TTL) représente la durée de vie maximale du datagramme 
 
 L'adresse de destination (32 bits) identifie le réseau et l'hôte destinataires. Si cette adresse correspond au réseau local, le paquet est transmis directement ; sinon, il est envoyé vers une passerelle pour routage.
 
-### Routage des datagrammes
+#### Routage des datagrammes
 
 Les passerelles Internet, plus précisément appelées routeurs IP, acheminent les paquets entre réseaux en utilisant le protocole Internet. La terminologie TCP/IP traditionnelle distingue deux types d'équipements réseau : les passerelles, qui transmettent les paquets entre réseaux, et les hôtes, qui ne le font pas.
 
 Une machine multiconnectée (connectée à plusieurs réseaux) peut transmettre des paquets et fonctionne alors comme une passerelle.
 
-### Fragmentation des datagrammes
+#### Fragmentation des datagrammes
 
 Lorsqu'une passerelle interconnecte des réseaux physiques différents, la division des datagrammes peut s'avérer nécessaire. Chaque type de réseau définit une unité de transfert maximale (MTU), correspondant à la taille maximale des paquets transmissibles.
 
@@ -164,26 +166,28 @@ Lorsqu'une passerelle interconnecte des réseaux physiques différents, la divis
 Si un datagramme dépasse la MTU du réseau de destination, la fragmentation divise le datagramme en fragments plus petits. Chaque fragment conserve le format d'un datagramme normal.
 
 Le deuxième mot de l'en-tête contient les informations de fragmentation :
+
 - Le champ Identification indique le datagramme d'origine
 - Le champ Fragment Offset (multiple de 8 octets) précise la position du fragment
 - Le bit More Fragments (MF) dans le champ Flags indique s'il reste des fragments (MF=1) ou si c'est le dernier (MF=0)
 
 Le réassemblage s'effectue uniquement par l'hôte de destination, jamais par les routeurs intermédiaires.
 
-### Transmission vers la couche transport
+#### Transmission vers la couche transport
 
 Le champ Protocol identifie le protocole de couche supérieure destinataire des données IP, permettant le multiplexage/démultiplexage vers les protocoles appropriés.
 
 Valeurs courantes :
+
 - TCP : 6
-- UDP : 17  
+- UDP : 17
 - ICMP : 1
 
 Sous Unix, ces valeurs sont stockées dans le fichier `/etc/protocols`.
 
-## Adressage IP
+### Adressage IP
 
-### L'adresse IP
+#### L'adresse IP
 
 TCP/IP offre une vision logique du réseau, indépendante de la technologie matérielle sous-jacente. Les nœuds du réseau sont identifiés par une adresse logique de 32 bits : l'adresse IP (IPv4).
 
@@ -205,7 +209,7 @@ Les classes A, B et C étaient destinées aux adresses d'hôtes, la classe D à 
 - **Classe B** : 14 bits de réseau, 16 bits d'hôte (milliers de réseaux, milliers d'hôtes par réseau)
 - **Classe C** : 21 bits de réseau, 8 bits d'hôte (millions de réseaux, moins de 254 hôtes par réseau)
 
-### CIDR et adressage sans classe
+#### CIDR et adressage sans classe
 
 La notion de classes d'adresses est devenue obsolète avec l'introduction du CIDR (Classless Internet Domain Routing) en 1993 (RFC 1518 et 1519). Ce système permet l'utilisation de masques arbitraires appliqués à n'importe quelle adresse, organisant le regroupement géographique des adresses pour optimiser les tables de routage.
 
@@ -216,7 +220,7 @@ Les adresses IP s'expriment en notation décimale pointée (quatre nombres déci
 192.168.200.254/24             (notation CIDR)
 ```
 
-### Adresses IP spéciales
+#### Adresses IP spéciales
 
 Plusieurs adresses IP ont des significations particulières :
 
@@ -226,7 +230,7 @@ Plusieurs adresses IP ont des significations particulières :
 - **Adresse nulle** : 0.0.0.0 (utilisée lors de la détermination d'adresse IP ou comme route par défaut)
 - **Adresse de bouclage** : 127.x.x.x (renvoi vers l'application locale, généralement 127.0.0.1)
 
-### Types de transmission
+#### Types de transmission
 
 **Unicast** : transmission vers une adresse IP individuelle, utilisée pour la communication entre deux nœuds.
 
@@ -236,22 +240,24 @@ Plusieurs adresses IP ont des significations particulières :
 
 Pour que la multidiffusion fonctionne, les hôtes doivent pouvoir rejoindre et quitter dynamiquement les groupes. Cette fonctionnalité n'est pas disponible dans les anciennes implémentations d'IP.
 
-### Attribution des adresses IP
+#### Attribution des adresses IP
 
 Pour les réseaux connectés à Internet, l'obtention d'un identifiant de réseau unique est obligatoire. L'IANA (Internet Address Network Authority) constitue l'autorité suprême, ayant délégué la zone européenne au RIPE NCC (Réseaux IP Européens - Network Coordination Centre).
 
 Pour réduire les besoins en nouvelles adresses, la RFC 1918 définit des plages d'adresses privées :
+
 - Classe A : 10.0.0.0 à 10.255.255.255
-- Classe B : 172.16.0.0 à 172.31.255.255  
+- Classe B : 172.16.0.0 à 172.31.255.255
 - Classe C : 192.168.0.0 à 192.168.255.255
 
 Ces adresses, destinées aux réseaux privés, nécessitent des mécanismes de translation (NAT) pour accéder à Internet.
 
-### Sous-réseaux
+#### Sous-réseaux
 
 Le sous-adressage (subnetting) divise une plage d'adresses en sous-réseaux IP grâce à un masque de sous-réseau. Ce masque étend la partie réseau en empruntant des bits à la partie hôte.
 
 Règles du masque :
+
 - Bit à 1 : bit de réseau
 - Bit à 0 : bit d'hôte
 
@@ -259,13 +265,14 @@ Le sous-réseau n'est reconnu qu'localement. Depuis Internet, l'adresse reste in
 
 La RFC 950 déconseille l'utilisation de sous-réseaux dont tous les bits sont à 0 ou à 1 pour éviter les ambiguïtés.
 
-### Sur-réseaux (supernets)
+#### Sur-réseaux (supernets)
 
 Le sur-adressage, conçu en 1985, consiste à regrouper plusieurs adresses de classe C pour créer une classe virtuelle intermédiaire entre les classes B et C.
 
 Cette technique, principalement destinée aux fournisseurs d'accès Internet (FAI), utilise le CIDR pour résumer un bloc d'adresses en une seule entrée de table de routage : (adresse de base, masque de sur-réseau).
 
 Exemple :
+
 ```
 Bloc : (192.55.16.0, 255.255.240.0)
 Notation CIDR : 192.55.16.0/20
@@ -273,13 +280,14 @@ Notation CIDR : 192.55.16.0/20
 
 Ce bloc contient 16 adresses de classe C (2^4 = 16), déterminées par les 4 bits variables du masque.
 
-### Protocoles de résolution d'adresse
+#### Protocoles de résolution d'adresse
 
-#### ARP (Address Resolution Protocol)
+##### ARP (Address Resolution Protocol)
 
 ARP établit la correspondance dynamique entre adresses IP (32 bits) et adresses MAC physiques nécessaires à la transmission sur les réseaux de couche 2.
 
 Processus ARP :
+
 1. L'hôte A envoie une requête ARP en diffusion contenant son adresse IP/MAC et l'IP de B
 2. Seul l'hôte B répond en incluant son adresse MAC
 3. A met à jour son cache ARP avec cette information
@@ -287,19 +295,19 @@ Processus ARP :
 
 Le paquet ARP utilise la valeur EtherType 0x806. Le protocole suppose que le réseau physique supporte la diffusion.
 
-#### RARP (Reverse ARP)
+##### RARP (Reverse ARP)
 
 RARP permet aux stations sans disque d'obtenir leur adresse IP auprès d'un serveur distant. Le client diffuse une requête RARP (EtherType 0x8035) et accepte la première réponse reçue.
 
 Le serveur RARP maintient une table des adresses IP indexée par les adresses matérielles. Contrairement à ARP, RARP nécessite généralement un processus dédié (démon) sur le serveur.
 
-## Le protocole ICMP
+### Le protocole ICMP
 
 ICMP (Internet Control Message Protocol, RFC 792) constitue une partie intégrante d'IP, gérant le contrôle, la détection d'erreurs et la transmission d'informations pour TCP/IP.
 
 Toutes les implémentations IP peuvent générer des messages ICMP, encapsulés dans des datagrammes IP (champ Protocol = 1). Les messages ICMP ne génèrent jamais de réponses (sauf echo request) pour éviter les cascades de messages.
 
-### Types de messages ICMP
+#### Types de messages ICMP
 
 **Contrôle de flux** : message de congestion envoyé à la source pour suspendre temporairement l'envoi de datagrammes.
 
@@ -307,12 +315,12 @@ Toutes les implémentations IP peuvent générer des messages ICMP, encapsulés 
 
 **Redirection de route** : indique à un hôte d'utiliser une passerelle différente, plus appropriée.
 
-**Vérification d'hôtes distants** : 
+**Vérification d'hôtes distants** :
 - Echo request (type 8) et echo reply (type 0) permettent de tester la connectivité
 - La commande `ping` utilise ces messages et mesure la latence
 - La commande `traceroute` utilise des paquets UDP avec TTL croissant pour découvrir la route
 
-## IPv6
+### IPv6
 
 IPv6 succède à IPv4 en conservant ses meilleures fonctionnalités tout en corrigeant ses limitations. Les principales améliorations incluent :
 

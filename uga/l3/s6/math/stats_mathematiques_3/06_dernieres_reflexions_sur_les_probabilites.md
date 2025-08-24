@@ -1,4 +1,4 @@
-# 06 // dernières réflexions sur les probabilités
+## 06 // dernières réflexions sur les probabilités
 
 [slides Synthèse tests annote.pdf](ressources/06_dernieres_reflexions_sur_les_probabilites_slides_synthse_tests_annote.pdf)
 
@@ -6,23 +6,23 @@
 >
 > Cet exposé suit les lignes de la thèse de doctorat de Jacques POITEVINEAU, *Méthodologie de l'analyse des données expérimentales : Étude de la pratique des tests statistiques chez les chercheurs en psychologie, approches normative, prescriptive et descriptive*, soutenue le 11 mars 1998.
 
-# Les grandes interprétations de la probabilité
+## Les grandes interprétations de la probabilité
 
 Si la probabilité en tant qu'objet mathématique est clairement définie par un système d'axiomes, son interprétation est diverse et l'on distingue trois grandes conceptions.
 
-## La conception objectiviste ou fréquentiste
+### La conception objectiviste ou fréquentiste
 
 Dans cette conception qui remonte à Venn et Von Mises, la probabilité de réalisation d'un événement est définie comme la limite de sa fréquence d'apparition quand le nombre d'épreuves (répétitions) tend vers l'infini. De ce point de vue, la probabilité d'un événement singulier n'a pas de sens.
 
-## La conception logiciste
+### La conception logiciste
 
 Dans ce cadre, la probabilité exprime le degré de vérité d'une proposition incertaine. La logique classique en est un cas particulier où toute proposition ne peut être que vrai ou fausse. C'est une conception normative : le calcul de la probabilité d'un énoncé ne dépend pas des opinions de celui qui effectue le calcul. Le premier exposé systématique de cette conception est dû à Keynes.
 
-## La conception subjectiviste
+### La conception subjectiviste
 
 Elle est très proche de la conception précédente. Cette fois la probabilité est conçue comme une mesure du degré d'incertitude d'un individu rationnel à l'égard d'un énoncé. Par individu rationnel il faut entendre un individu qui appliquerait rigoureusement les lois du calcul des probabilités. Cette conception n'est donc plus normative dans le sens où chaque individu est libre d'attribuer à un événement la probabilité qu'il souhaite. Simplement, deux individus qui attribuent une même probabilité à un certain événement et qui sont ensuite confrontés aux mêmes données le concernant doivent réviser leur probabilité initiale de la même manière.
 
-## Exemple illustratif
+### Exemple illustratif
 
 Il n'est peut être pas inutile de prendre un exemple pour illustrer les différences de conception de la probabilité. Considérons l'expérience qui consiste à tirer au hasard une carte dans un jeu de $52$ cartes, à ne pas la regarder, et à se demander si cette carte est l'as de cœur. Si cette expérience est répétée indéfiniment, la fréquence de tirage de l'as de coeur tendra vers $1/52$.
 
@@ -30,11 +30,11 @@ Pour le fréquentiste, c'est tout ce que peut signifier "la probabilité de tire
 
 Pour le logiciste, l'essence même de la probabilité est bien de caractériser l'incertitude sur ce tirage, qu'il égale à cette fréquence limite de $1/52$.
 
-# La théorie de Fisher
+## La théorie de Fisher
 
 Elle s'inscrit dans la lignée des travaux de Yule et de Karl Pearson. Fisher cristallise, en quelque sorte, les notions et les pratiques jusque là en vigueur, et les développe, tout en leur conférant le statut de méthode d'inférence incontournable. C'est en 1925 que paraît la première édition de **Statistical Methods for Research Workers**, puis en 1935 celle de **The Design of Experiments** qui connaissent un succès considérable.
 
-## Mise en œuvre
+### Mise en œuvre
 
 Une seule hypothèse est mise à l'épreuve. Elle est appelée hypothèse nulle, dans le sens de "to be nullified"; c'est-à-dire à réfuter, et non nécessairement, comme on le trouve écrit dans certains manuels, d'une valeur de zéro pour le paramètre testé, même si c'est le cas le plus fréquent. En général l'hypothèse nulle sera la négation de l'hypothèse à laquelle le chercheur s'intéresse réellement.
 
@@ -45,7 +45,7 @@ Le résultat de la procédure de test est :
 
 Il n'y a, par conséquent, qu'une seule possibilité d'erreur : rejeter l'hypothèse nulle alors qu'elle est vraie.
 
-## Une extension du raisonnement par l'absurde
+### Une extension du raisonnement par l'absurde
 
 Le raisonnement sous-jacent correspond à une extension probabiliste du raisonnement par l'absurde, où, pour démontrer la fausseté d'une proposition $A$, on procède ainsi :
 
@@ -60,19 +60,19 @@ Cela devient, dans le cas du test de l'hypothèse nulle :
 - Posons comme principe supplémentaire que ce qui se produit effectivement (ce qui est observé) n'est pas rare.
 - Nous sommes alors en présence d'une contradiction, et nous sommes conduits à rejeter l'hypothèse nulle, la considérant comme fausse (par application de *modus tollens*).
 
-# La théorie de Neyman et Pearson
+## La théorie de Neyman et Pearson
 
 C'est en 1928 et 1933 que paraissent leurs articles fondateurs. Bien que s'inspirant, au départ, des travaux de Fisher, leur approche participe davantage d'une théorie statistique de la décision et ils ne la présentent pas, au contraire de Fisher, comme le fondement d'une nouvelle logique inductive.
 
 Pour eux, il s'agit bien moins de pouvoir conclure sur la véracité d'une hypothèse que d'adopter, à son égard, un comportement rationnel selon un critère de contrôle des erreurs de décision.
 
-## Mise en œuvre
+### Mise en œuvre
 
 Comme chez Fisher il s'agit de mettre à l'épreuve une hypothèse particulière, qu'ils notent $H_0$. Cependant cette hypothèse est envisagée d'un point de vue plutôt opposé à celui de Fisher. En effet, alors que chez ce dernier l'hypothèse effectivement testée est la négation de l'hypothèse d'intérêt, Neyman et Pearson précisent que $H_0$ est l'hypothèse à laquelle on s'intéresse particulièrement, et qu'elle est souvent celle qui semble la plus probable a priori.
 
 Mais cette fois $H_0$ n'est plus suffisante pour construire le test. Il convient de prendre également en compte les hypothèses alternatives admissibles, notées $H_i$, et qu'on suppose toujours pouvoir être définies.
 
-## Procédure de test
+### Procédure de test
 
 On doit décider entre :
 
@@ -82,7 +82,7 @@ On doit décider entre :
 
 Il peut être utile de rappeler que "rejeter" ou "accepter" signifient pour eux "choisir telle ou telle action" et non pas croire ou non (ou plus ou moins) en l'hypothèse.
 
-## Quantification des erreurs
+### Quantification des erreurs
 
 Il y a donc deux possibilités d'erreurs, quand une décision est prise :
 
@@ -97,7 +97,7 @@ L'enjeu d'accepter $H_0$ devient alors clair puisque toutes les probabilités d'
 
 Toutes choses égales par ailleurs, les risques $α$ et $β$ varient en sens inverse : diminuer l'un fait augmenter l'autre. La puissance dépend du risque $α$, de la valeur du paramètre sous l'hypothèse alternative, et de la taille $N$ de l'échantillon. En particulier, les autres termes étant fixés, la puissance augmente avec $N$.
 
-## Probabilités d'erreur
+### Probabilités d'erreur
 
 - **Définition.** Considérons le cas où seule une hypothèse alternative $H_1$ est considérée face à $H_0$.
 - On appelle risque de première espèce $α$
@@ -118,7 +118,7 @@ où $X$ est la statistique du test et $C$ la zone de rejet (région critique). L
 
 Dans le cadre général, on appelle risque de deuxième espèce $β_i$ associée à $H_i$, $β_i = P(\text{accepter }H_0|H_i)$.
 
-## Exemple
+### Exemple
 
 Soit $X$ une variable aléatoire discrète. On veut confronter les deux hypothèses suivantes
 
@@ -147,9 +147,9 @@ $$
 
 En utilisant ce test, on a donc 1 chance sur 3 de se tromper si $H_0$ est vraie et 7 chances sur 16 de se tromper si c'est $H_1$ qui est vraie.
 
-# Le cadre fréquentiste
+## Le cadre fréquentiste
 
-## $\alpha$ et $\beta$ comme des fréquences
+### $\alpha$ et $\beta$ comme des fréquences
 
 Bien qu'il soit habituel de classer les deux approches précédentes dans le cadre d'une conception fréquentiste de la probabilité, c'est-à-dire où celle-ci est exclusivement définie comme la limite d'une fréquence, ce qualificatif s'applique surtout à la théorie de Neyman et Pearson. À ce propos, Rouanet (1997) parle de "fréquentiste modéré" pour Fisher et de "fréquentistes radicaux" pour Neyman et Pearson.
 
@@ -157,39 +157,39 @@ En effet, $α$ et $β$ prennent leur sens seulement quand on envisage que le che
 
 D'ailleurs, Neyman introduit explicitement cette conception fréquentiste de la probabilité dans ses ouvrages de 1950 et 1952.
 
-# Un amalgame des deux théories
+## Un amalgame des deux théories
 
-## Comment elle sont mélangées
+### Comment elle sont mélangées
 
 Le plus souvent les chercheurs, et même les statisticiens, ne distinguent pas clairement les deux théories, mais utilisent divers amalgames. Par exemple, les chercheurs se basent le plus souvent sur le seuil observé $p$ (Fisher), mais ils font aussi appel, occasionnellement, à la notion de risque de deuxième espèce et/ou de puissance (Neyman et Pearson). Ou bien les deux risques, de première et deuxième espèces, sont mis en avant (Neyman et Pearson), ou même la référence à Neyman et Pearson est explicite, mais le choix de $H_0$ se fait par négation de l'hypothèse d'intérêt, et sans considération aucune de l'importance relative des risques d'erreur, ce qui relève de l'approche fishérienne. Nous avancerons même l'opinion qu'il n'existe pas, dans la pratique, de "purs" neymaniens dans la mesure où nous n'avons jamais vu appliqué à des données réelles un test répondant au principe méthodologique de Neyman mentionné plus haut.
 
 Enfin, nous évoquerons encore les interprétations des résultats du test qui hors du cadre des théories fréquentistes.
 
-# Critiques et abus des tests
+## Critiques et abus des tests
 
-## Bis repetita
+### Bis repetita
 
 La théorie de Neyman et Pearson conçoit la procédure de test sur le long terme, comme ces auteurs l'ont bien précisé. Donner un sens fréquentiste à la probabilité $α$ requiert de considérer une répétition à l'infini de tests identiques (les hypothèses, $α$, $N$ et la région critique doivent rester inchangés), ce qui implique que le résultat d'un test particulier, c'est-à-dire la décision prise, ne doit pas jouer sur la construction des autres tests, ne doit pas modifier les expériences futures (dans le cadre d'un même problème, bien sûr).
 
-Dans le domaine du contrôle de qualité, auquel se réfèrent souvent Neyman et Pearson, on peut facilement imaginer la situation suivante. Dans une usine une machine produit un très grand nombre de pièces. Chaque jour un échantillon de pièces est prélevé, examiné, et l'on décide sur la base d'un test statistique d'accepter la production journalière ou de la rejeter et de réparer la machine. Réparer la machine est bien sûr coûteux pour l'entreprise (coût de la réparation auquel s'ajoute celui relatif à la perte de production), de même que la livraison de lots défectueux (entraînant remboursement ou remplacement). La même procédure est répétée chaque jour, et peu importe finalement, du point de vue de l'entreprise, qu'un jour particulier la décision soit erronée ou correcte; ce qui compte c'est qu'à la longue (sur un an, dix ans,...) les risques soient contrôlés.
+Dans le domaine du contrôle de qualité, auquel se réfèrent souvent Neyman et Pearson, on peut facilement imaginer la situation suivante. Dans une usine une machine produit un très grand nombre de pièces. Chaque jour un échantillon de pièces est prélevé, examiné, et l'on décide sur la base d'un test statistique d'accepter la production journalière ou de la rejeter et de réparer la machine. Réparer la machine est bien sûr coûteux pour l'entreprise (coût de la réparation auquel s'ajoute celui relatif à la perte de production), de même que la livraison de lots défectueux (entraînant remboursement ou remplacement). La même procédure est répétée chaque jour, et peu importe finalement, du point de vue de l'entreprise, qu'un jour particulier la décision soit erronée ou correcte; ce qui compte c'est qu'à la longue (sur un an, dix ans,…) les risques soient contrôlés.
 
 On est bien loin de la situation dans la recherche scientifique où, même si le critère de reproductibilité est fondamental, une expérience n'est pratiquement jamais répétée à l'identique un très grand nombre de fois (surtout par un même chercheur).
 
 Même en se plaçant sur le terrain (apparemment) favorable de l'exemple précédent des lots de pièces manufacturées, un problème se pose. Si le test réalisé se révèle non significatif, l'hypothèse nulle correspondant au bon fonctionnement de la machine sera acceptée (même provisoirement), rien ne sera modifié et le processus pourra se perpétuer. Mais si l'on observe un résultat significatif, il est alors évident que cela va entraîner des modifications, à savoir la mise au rebut du lot produit et la réparation de la machine (il serait évidemment absurde de laisser la machine en l'état : si le test est réalisé c'est bien pour détecter ce cas). Or cette modification de la machine signifie, du point de vue du modèle statistique, un changement de la valeur du paramètre considéré.
 
-## De l'arbitraire
+### De l'arbitraire
 
-### Zone de rejet
+#### Zone de rejet
 
 Dans la théorie de Fisher, puisqu'il n'existe pas d'erreur de type II, donc pas de risque $β$ à minimiser, aucune justification formelle n'existe quant au choix de la région de rejet de l'hypothèse nulle. Dès lors, comme le remarque Rozeboom (1960), on pourrait tout aussi bien la choisir au centre de la distribution d'échantillonnage. La pratique qui consiste à choisir comme région de rejet l'extrémité de la distribution d'échantillonnage, bien que raisonnable, est donc arbitraire.
 
-### La valeur du seuil
+#### La valeur du seuil
 
 Dans les deux théories le choix de la valeur du seuil de référence, qui marque la frontière entre significatif et non significatif, est aussi éminemment arbitraire ou subjectif et introduire des fonctions de coûts des erreurs ne fait que déplacer le problème (Rozeboom, 1960; Camilleri, 1962; Winer, 1971, p. 14; Skipper et al., 1967, par exemple).
 
 Cela est encore plus sensible dans la théorie de Neyman et Pearson puisque les conclusions pourront être diamétralement opposées selon que l'on se trouve en deçà ou au delà du seuil de référence (à partir de mêmes données, deux chercheurs pourraient prendre des décisions différentes sur la base de risques $α$ différents); alors que dans le cadre fishérien, dans la mesure où un résultat non significatif n'amène qu'à suspendre le jugement, il n'y aura pas de véritable contradiction.
 
-## Conditionnement Observations/Données
+### Conditionnement Observations/Données
 
 Le raisonnement manque de naturel, il est contre-intuitif. On calcule une probabilité correspondant à l'événement observé, conditionnellement à une hypothèse sur le paramètre d'intérêt
 
@@ -203,31 +203,31 @@ $$
 P(\text{Hypothèse}|\text{Données})
 $$
 
-## Discontinu ou continu ?
+### Discontinu ou continu ?
 
 Le passage d'un résultat significatif à un résultat non significatif est discontinu alors que la statistique de test est continue (Rozeboom, 1960). Ceci explique les discussions sur le choix de la valeur du seuil de signification $α$ : ce choix n'aurait pas tant d'importance s'il n'y avait intériorisation, de la part des chercheurs, de la différence entre $0.05$ et $0.06$ comme différence entre le "vrai" et le "faux", la "réussite" et l'"échec".
 
 Skipper et al. (1967) évoquent même la joie ou l'horreur du chercheur selon que "son" $F$ atteint $0.05$ ou ne donne que $0.06$. Ils regrettent particulièrement à ce propos que le choix du seuil se fasse, presque toujours, sans considération de la nature et du type de l'étude (contrairement à ce que préconisaient Fisher). Ce problème est également lié à celui portant sur l'alternative décision/jugement : une décision a un caractère discontinu, tandis que l'évolution d'un niveau de confiance en une hypothèse apparaît plutôt comme continu.
 
-## Le statut de l'hypothèse de recherche
+### Le statut de l'hypothèse de recherche
 
 Les problèmes soulevés par les tests sont particulièrement bien illustrés par la question du statut de l'hypothèse de recherche, celle à laquelle le chercheur s'intéresse réellement, et qu'il espère confirmer : doit-on identifier l'hypothèse de recherche à l'hypothèse nulle ou à l'hypothèse alternative ?
 
 Souvent, le choix est limité par le fait que l'hypothèse nulle doit être ponctuelle pour permettre les calculs.
 
-## La question de l'intensité de l'effet
+### La question de l'intensité de l'effet
 
 Le test ne dit rien quant à l'intensité, l'importance de l'effet parent (cf., par exemple, O'Brien et Shapiro, 1968; Rouanet et al., 1976). Un résultat significatif n'est qu'une indication de l'existence de l'effet supposé; un résultat non significatif un constat d'ignorance selon Fisher. Aller plus loin sur la seule base du test renvoie à l'erreur d'assimiler significativité statistique et importance de l'effet. Or, presque tous les auteurs reconnaissent que la question de l'intensité de l'effet est essentielle.
 
-## Significativité statistique et significativité substantielle
+### Significativité statistique et significativité substantielle
 
 La troisième erreur est de confondre la significativité statistique avec la significativité substantielle (substantive significance). C'est considérer que plus un résultat est significatif, plus il est scientifiquement intéressant, et/ou que plus l'effet correspondant dans la population parente est grand (substantive importance).
 
-# Quelques éléments de solutions
+## Quelques éléments de solutions
 
-## La mesure de l'effet
+### La mesure de l'effet
 
-Prenons le test du $χ^2$... En statistiques, on ne peut que "quantifier la distance à l'indépendance" par la statistique du $χ^2$,
+Prenons le test du $χ^2$… En statistiques, on ne peut que "quantifier la distance à l'indépendance" par la statistique du $χ^2$,
 
 $$
 D_χ² = n ∑ⱼ₌₁ᴶ ∑ₖ₌₁ᴷ (fⱼₖ - f_{ⱼ•} f_{•ₖ})²/(f_{ⱼ•} f_{•ₖ})
@@ -235,7 +235,7 @@ $$
 
 où $J$ et $K$ sont le nombre de modalités de chacune des deux variables considérées.
 
-### Coefficients $φ$ et $C$
+#### Coefficients $φ$ et $C$
 
 Les coefficients $φ$ et $C$ découlent de la statistique du $χ^2$ par les formules
 
@@ -249,7 +249,7 @@ $$
 
 En réalité ces deux coefficients sont une variante l'un de l'autre. L'avantage de $C$ est qu'il est compris entre $0$ et $1$, alors que ce n'est pas le cas pour le $φ$. Plus ces indicateurs sont proche de zéro, plus il y a indépendance entre les deux variables $X$ et $Y$ étudiées.
 
-### $V$ de Cramér
+#### $V$ de Cramér
 
 Comme pour le coefficient $φ$, plus le $V$ de Cramér est proche de zéro, plus il y a indépendance entre les deux variables $X$ et $Y$ étudiées. Il vaut $1$ en cas de complète dépendance.
 
@@ -261,9 +261,9 @@ $$
 
 où $n$ est l'effectif total de la population, $c$ est le nombre de colonnes (nombre de modalités de $Y$) et $l$ le nombre de lignes (modalités de $X$).
 
-### Interprétation
+#### Interprétation
 
-L'interprétation des coefficients $φ$ et $V$ est empirique et dépend du domaine d'application (sciences économiques, sciences humaines, médecine...). On peut considérer le tableau suivant pour l'interprétation (tout en vérifiant les valeurs frontières d'usage dans chaque domaine).
+L'interprétation des coefficients $φ$ et $V$ est empirique et dépend du domaine d'application (sciences économiques, sciences humaines, médecine…). On peut considérer le tableau suivant pour l'interprétation (tout en vérifiant les valeurs frontières d'usage dans chaque domaine).
 
 | Valeur de $V$ de Cramér | Intensité de la relation entre les variables |
 | --- | --- |
@@ -272,38 +272,38 @@ L'interprétation des coefficients $φ$ et $V$ est empirique et dépend du domai
 | entre $0.20$ et $0.30$ | Relation moyenne |
 | au dessus de $0.30$ | Relation forte |
 
-## Régression linéaire et indicateurs en part de variance expliquée
+### Régression linéaire et indicateurs en part de variance expliquée
 
 Dans le cadre des régressions linéaires, on citera bien entendu les coefficients de corrélation linéaire $r$, de détermination $R^2$ ou encore d'amélioration $a = 1 - \sqrt{1 - R^2}$ dont l'interprétation est la suivante :
 
 - Existence d'une corrélation linéaire si $a > 0.5$,
 - Corrélation linéaire faible si $a < 0.5$
 
-## Les intervalles de confiance
+### Les intervalles de confiance
 
-### Les mêmes critiques que les tests de signification
+#### Les mêmes critiques que les tests de signification
 
 La correspondance avec le test (neyman-pearsonien) a pour conséquence que la plupart des critiques développées contre ce dernier s'appliquent autant à l'intervalle de confiance : manque de naturel, recours à la notion de répétition à l'infini, caractère décisionnel, rôle des valeurs non observées (en énonçant que 95% des intervalles possibles contiennent le paramètre, on fait référence à des intervalles qui ne sont pas observés), etc.
 
-### Des conclusions surprenantes
+#### Des conclusions surprenantes
 
 Il est des cas où l'intervalle de confiance amène à des conclusions qui peuvent sembler surprenantes. Par exemples, il est possible de trouver une borne négative pour un paramètre positif, telle une variance.
 
-### Est-ce le bon intervalle ?
+#### Est-ce le bon intervalle ?
 
 L'intervalle de confiance est souvent centré sur une valeur observée d'une valeur théorique non atteignable, ce qui peut amener au décalage de cet intervalle.
 
-## L'approche Bayésienne
+### L'approche Bayésienne
 
 L'approche bayésienne constitue une alternative fondamentale aux méthodes fréquentistes précédemment exposées. Elle s'inscrit dans une conception subjectiviste de la probabilité et propose un cadre conceptuel radicalement différent pour l'inférence statistique.
 
-### Fondements conceptuels
+#### Fondements conceptuels
 
 Dans le paradigme bayésien, l'incertitude sur les paramètres est quantifiée par des distributions de probabilité. Contrairement à l'approche fréquentiste où les paramètres sont considérés comme fixes mais inconnus, l'approche bayésienne traite les paramètres comme des variables aléatoires dotées de distributions a priori.
 
 Cette conception résout naturellement le problème du conditionnement précédement. Au lieu de calculer $P(\text{Données}|\text{Hypothèse})$ comme dans les tests classiques, l'approche bayésienne s'intéresse directement à $P(\text{Hypothèse}|\text{Données})$, ce qui correspond davantage à l'intuition du chercheur.
 
-### Le théorème de Bayes et l'inférence
+#### Le théorème de Bayes et l'inférence
 
 Le théorème de Bayes constitue le fondement mathématique de cette approche :
 
@@ -320,7 +320,7 @@ où :
 
 Cette formule permet de réviser nos croyances initiales (distribution a priori) à la lumière des données observées pour obtenir des croyances révisées (distribution a posteriori).
 
-### Avantages de l'approche bayésienne
+#### Avantages de l'approche bayésienne
 
 L'approche bayésienne présente plusieurs avantages conceptuels par rapport aux méthodes fréquentistes :
 
@@ -330,7 +330,7 @@ L'approche bayésienne présente plusieurs avantages conceptuels par rapport aux
 
 **Absence de paradoxes décisionnels** : L'approche évite les problèmes liés au caractère discontinu des tests de signification évoqués précédement.. L'incertitude est représentée de manière continue par les distributions de probabilité.
 
-### Limites et difficultés
+#### Limites et difficultés
 
 Cependant, l'approche bayésienne soulève ses propres défis :
 
@@ -340,11 +340,11 @@ Cependant, l'approche bayésienne soulève ses propres défis :
 
 **Formation et habitudes** : L'interprétation bayésienne requiert un changement conceptuel important pour les chercheurs formés dans le paradigme fréquentiste.
 
-## Les méta-analyses
+### Les méta-analyses
 
 Les méta-analyses représentent une approche statistique visant à synthétiser quantitativement les résultats de plusieurs études indépendantes portant sur une même question de recherche. Elles constituent un outil fondamental de la recherche contemporaine, particulièrement dans les domaines médicaux et psychologiques.
 
-### Principes et objectifs
+#### Principes et objectifs
 
 Une méta-analyse cherche à estimer un effet global à partir des résultats de k études indépendantes. Cette approche présente plusieurs avantages :
 
@@ -354,7 +354,7 @@ Une méta-analyse cherche à estimer un effet global à partir des résultats de
 
 **Généralisation des résultats** : en incluant des études menées dans des contextes variés, la méta-analyse améliore la validité externe des conclusions.
 
-### Défis méthodologiques
+#### Défis méthodologiques
 
 Cependant, la méta-analyse soulève des difficultés méthodologiques importantes :
 
@@ -365,7 +365,7 @@ Cependant, la méta-analyse soulève des difficultés méthodologiques important
     - **Méthode de Fisher** : la méthode classique de Fisher combine les p-values via la statistique $-2∑\ln(p_i)$, mais cette approche assume l'indépendance des études et l'homogénéité des effets.
 - **Biais de publication** : le biais de publication (publication bias) constitue une menace majeure pour la validité des méta-analyses. Les études montrant des effets significatifs sont plus susceptibles d'être publiées, créant une distorsion systématique dans la littérature disponible.
 
-### Méthodes de combinaison
+#### Méthodes de combinaison
 
 Plusieurs approches ont été développées pour combiner les résultats d'études multiples :
 
@@ -375,7 +375,7 @@ Plusieurs approches ont été développées pour combiner les résultats d'étud
 
 **Approches bayésiennes** : l'approche bayésienne offre un cadre naturel pour la méta-analyse en permettant d'incorporer l'incertitude sur l'hétérogénéité entre études et de fournir des distributions a posteriori sur les paramètres d'intérêt.
 
-### Recommandations pratiques
+#### Recommandations pratiques
 
 Pour conduire une méta-analyse rigoureuse, plusieurs précautions méthodologiques s'imposent :
 

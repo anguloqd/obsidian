@@ -1,14 +1,14 @@
-# 04 // recherche dichotomique et arbres binaires
+## 04 // recherche dichotomique et arbres binaires
 
-# Recherche dichotomique
+## Recherche dichotomique
 
-## Définition
+### Définition
 
 - Algorithme de recherche pour trouver la position d'un élément dans un tableau trié.
 - Le principe est le suivant : comparer l'élément avec la valeur de la case au milieu du tableau ; si les valeurs sont égales, la tâche est accomplie, sinon on recommence dans **la moitié du tableau pertinente**.
 - On répète ce processus jusqu'à arriver à l'élément désiré.
 
-## En Java
+### En Java
 
 ```java
 public int runBinarySearchIteratively(
@@ -30,9 +30,9 @@ public int runBinarySearchIteratively(
 }
 ```
 
-## Arbre binaire
+### Arbre binaire
 
-## Définition
+### Définition
 
 - **Arbre binaire** : structure de données qui peut se représenter sous la forme d'une *hiérarchie* dont chaque élément est appelé nœud, le nœud initial étant appelé racine.
     - Chaque noeud a, au plus, deux éléments (droit et gauche).
@@ -45,7 +45,7 @@ public int runBinarySearchIteratively(
     - ABR équilibré : tous les chemins de la racine aux feuilles ont la même longueur.
     - ABR dégénéré : chacun de ses nœuds a au plus un fils.
 
-## Pseudo-code : recherche de présence d'un élément
+### Pseudo-code : recherche de présence d'un élément
 
 > [!note]
 > Je l’écris en pseudo-code et non pas en Java car on devrait explorer les notions le plus compliquées : classes, objets, etc ; pour pouvoir créer un arbre et puis une fonction pour l’explorer.

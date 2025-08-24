@@ -1,21 +1,22 @@
-# 07 // hachage
+## 07 // hachage
 
 [INFF5_7.pdf](ressources/07_hachage_inff5_7.pdf)
 
-# Introduction
+## Introduction
 
-## Accélérer la recherche de clefs
+### Accélérer la recherche de clefs
 
 Afin d’accélérer la recherche de clefs dans un dictionnaire (une `Map` en Java), une idée simple est d’utiliser un tableau pour stocker les associations clef-valeur.
 
 Si le domaine des clefs (l’ensemble des valeurs possibles pour une clef) est **suffisamment petit**, on peut mettre en place de l’adressage direct : il suffit de disposer d’une fonction qui nous donne pour
+
 chaque clef un indice unique dans le tableau. On peut alors vérifier la présence d’une clef dans le tableau par un simple accès indicé.
 
 Par contre, si le domaine des clefs est **trop grand**, on peut mettre en place une technique de hachage et stocker les associations clef-valeur dans une table hachée.
 
-# Dictionnaire à adressage direct
+## Dictionnaire à adressage direct
 
-## Définition
+### Définition
 
 ![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des couples $(k_i, v_i)$. On doit déterminer quelle valeur associer à chaque cle.](ressources/07_hachage_untitled.png)
 
@@ -25,7 +26,7 @@ Les associations clef-valeur sont stockées dans une **table** à adressage dire
 
 On doit disposer d’une **fonction d’adressage** qui garantit l’unicité des adresses : deux clefs différentes doivent obligatoirement avoir des adresses différentes.
 
-## Code
+### Code
 
 Un exemple de code pour un dictionnaire à adressage direct serait comme suit :
 
@@ -116,9 +117,9 @@ public class DictionnaireAdressageDirect<K, V> {
 }
 ```
 
-# Dictionnaire haché
+## Dictionnaire haché
 
-## Définition
+### Définition
 
 ![D’un domaine de clés $K$, on crée une table dont les éléments sont de classe `Entree<K,V>`, qui représente des triplets $(k_i, v_i, e_i)$, où on détermine d’une certaine manière la valeur $v_i$ associée à chaque clé $k_i$, et le triplet “suivant” $e_i$.](ressources/07_hachage_untitled_1.png)
 
@@ -128,7 +129,7 @@ Les associations clef-valeur sont stockées dans une table hachée. Le domaine d
 
 On se repose sur une **fonction de hachage** qui ne garantit pas l’unicité des adresses : deux clefs différentes peuvent avoir la même adresse donnée par la fonction de hachage. On peut gérer les collisions (inévitables en théorie) par chaînage des entrées.
 
-## Paramètres
+### Paramètres
 
 Un dictionnaire haché a des paramètres :
 
@@ -140,7 +141,7 @@ On appelle facteur de charge le rapport *nombre d’éléments - capacité* : $F
     - si $F$ est trop petit, on risque de faire des re-hachages trop fréquents,
     - si $F$ est trop grand, on risque d’avoir trop de collisions.
 
-## Code
+### Code
 
 Un exemple de code pour un dictionnaire à adressage direct serait comme suit :
 

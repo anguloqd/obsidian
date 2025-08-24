@@ -1,10 +1,10 @@
-# 01 // introduction à la programmation par objets
+## 01 // introduction à la programmation par objets
 
 [Slides de cours 1](ressources/01_introduction_a_la_programmation_par_objets_inff3_2223_cours1.pdf)
 
-# Programmes, langages de programmation et paradigmes
+## Programmes, langages de programmation et paradigmes
 
-## Types de programmation et ses étapes
+### Types de programmation et ses étapes
 
 Un ***programme informatique*** est une séquence d'instructions qui spécifie étape par étape les opérations à effectuer pour obtenir un résultat.
 
@@ -31,9 +31,9 @@ Pour créer un programme, on passe par quatre étapes :
 
 **Extra** : l’ordinateur est composé de processeur et mémoire. le processeur exécute le programme, la mémoire stocke les données.
 
-# Introduction des concepts de la programmation par objets
+## Introduction des concepts de la programmation par objets
 
-## Les classes et les objets : un cas des classes
+### Les classes et les objets : un cas des classes
 
 ![Un *objet* est une collection de de données et operations.](ressources/00_qcm_td_et_tp_untitled.png)
 
@@ -72,7 +72,7 @@ public class Programme {
 // notons que "monObj" est un objet de type "Programme"
 ```
 
-Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier. 
+Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier.
 
 ```java
 // fichier "Variables.java"
@@ -95,7 +95,7 @@ class Programme {
 // retourne 5
 ```
 
-### L’état : ensemble des attributs des classes
+#### L’état : ensemble des attributs des classes
 
 Une fois un objet a hérité des attributs, on peut les modifier comme suite :
 
@@ -150,7 +150,7 @@ public int Methode {
 // retourne 0
 ```
 
-### L’interface : ensemble des méthodes des classes
+#### L’interface : ensemble des méthodes des classes
 
 Déjà, chaque fois qu’on appelle une classe, on doit écrire le nom de la méthode suivi des parenthèses `()`.
 
@@ -189,11 +189,11 @@ public class Principale {
 
 La méthode `main` est considérée la méthode la plus importante. En bref, elle est le corps principal du code, ce que fait le programme, utilisant d’autres méthodes et variables définies hors du `main`. Un programme java ne peut pas marcher si le `main` n’existe pas. Elle est toujours exécutée lors de l’exécution du programme.
 
-### Constructeurs
+#### Constructeurs
 
 Le constructeur est une méthode spéciale. Elle est utilisée pour “initialiser” des objets, c’est à dire, pour créer un objet et qu’il hérite des attributs et méthodes. On l’appelle chaque fois qu’on utilise l’opérateur `new` dans le `main`.
 
-Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas. 
+Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas.
 
 Ils existent deux manières d’utiliser un constructeur : par défaut et paramétrisé. Le constructeur par défaut agit de la même manière que comme si on ne le déclare pas. Le constructeur paramétrisé prend un paramètre pour fixer la valeur d’un attribut de l’objet.
 
@@ -227,7 +227,7 @@ public class Demo {
 
 ![untitled](ressources/02_objets_types_primitifs_classes_untitled_1.png)
 
-### Modificateurs
+#### Modificateurs
 
 Les modificateurs sont des mots clés qui accompagnent les classes, attributs et méthodes dans leurs déclarations. Souvent, ils spécifient la capacité d’être accédés par d’autres classes, mais ils peuvent aussi spécifier d’autres fonctionnalités.
 
@@ -256,7 +256,7 @@ On les classifie par rapport à ses fonctionnalités: modificateurs d’accès e
         - `synchronized` : les méthodes peuvent seulement être accédés par un fil à la fois.
         - `volatile` : la valeur d’un attribut n’est pas gardé localement dans un fil de la mémoire, et est toujours lit dès la mémoire principale.
 
-## Réutilisation de classes et sous-classes
+### Réutilisation de classes et sous-classes
 
 Réutiliser des instructions est l’un des points forts de programmer.
 
@@ -277,13 +277,14 @@ void dessineEtAfficheAire(FormeGeo f) {
 ```
 
 Une sous-classe, c’est effectivement une classe dans une autre. Précisément, c’est une classe qui ***hérite*** les attributs et méthodes d’une autre classe, comme ça il n’y a pas besoin de les redéfinir.
-Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”. 
 
-## Composition et héritage sur Java
+Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”.
+
+### Composition et héritage sur Java
 
 **La hiérarchie de classe peut-être de composition ou de héritage**. La composition définit une classe comme la somme de ses parties (”loosely coupled”, car changer la superclasse n’est pas un fait délicat), tant que l’héritage dérive une classe d’une autre (”tightly coupled”, car changer la superclasse peut causer des problèmes).
 
-Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc. 
+Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc.
 
 ```java
 public class ExempleComposition {
@@ -389,36 +390,43 @@ public class Main {
 // L'animal a fait un son
 ```
 
-# Cycle de vie des variables et stratégies de la gestion de mémoire
+## Cycle de vie des variables et stratégies de la gestion de mémoire
 
-## Allocation statique
+### Allocation statique
 
 Se fait avant de l’exécution (à la compilation).
+
 Au lancement du programme, le système réserve tout l’espace dont le programme aura besoin.
+
 Il n’y a pas d’allocation de mémoire supplémentaire pendant l’exécution.
+
 La mémoire est libérée à la fin du programme.
 
 Elle va bien et vite  si on sait exactement la quantité de mémoire dont on aura besoin, sinon il se peut que l’espace alloué soit pas suffisant.
 
-## Allocation dynamique sur la pile
+### Allocation dynamique sur la pile
 
 Seulement la mémoire nécessaire à une procédure (ou fonction) est allouée lors de son exécution.
+
 Les variables définies dans la procédure (bloc de code) sont allouées lors de l’entrée et libérées automatiquement à la sortie.
 
-## Allocation dynamique sur le tas, utilisé par Java
+### Allocation dynamique sur le tas, utilisé par Java
 
 La mémoire est allouée et désallouée au besoin au fur et à mesure du programme dans un pool de mémoire
+
 C'est plus flexible, car on a pas besoin de savoir le # d’objets, leur type, etc.
+
 A besoin de plus de ressources et de temps pour allouer de la mémoire.
+
 Le programmeur doit libérer de la mémoire par un objet qui n’est plus utilisé (automatique avec le ramasse-miettes).
 
 Java utilise principalement une **allocation dynamique sur le tas** pour les objets et dispose d'un ramasse-miette (Garbage Collector). Le programmeur n'a pas à se soucier de la libération de la mémoire.
 
 À chaque fois que le programmeur veut créer un objet, il utilise le mot clé `new` pour allouer la mémoire.
 
-# Traitement des erreurs
+## Traitement des erreurs
 
-## “Si le programme plante, alors on prend une autre action”
+### “Si le programme plante, alors on prend une autre action”
 
 L'exécution d'un programme peut générer des “erreurs”, comme division par 0 ou mémoire insuffisante.
 

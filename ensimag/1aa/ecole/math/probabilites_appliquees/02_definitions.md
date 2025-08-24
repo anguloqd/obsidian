@@ -1,4 +1,4 @@
-# 02 // définitions
+## 02 // définitions
 
 [CTD_2.pdf](ressources/02_definitions_ctd_2.pdf)
 

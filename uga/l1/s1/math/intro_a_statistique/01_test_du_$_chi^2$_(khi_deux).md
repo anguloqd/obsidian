@@ -1,17 +1,18 @@
-# 01 // test du $\chi^2$ (khi-deux)
+## 01 // test du $\chi^2$ (khi-deux)
 
-# Le test
+## Le test
 
-## Principes d’un test statistique
+### Principes d’un test statistique
 
 - Généralement, il existe deux principes pour créer une statistique pour le test d'hypothèses :
     - Elle mesure l’extrémité de notre résultat, $H_0$ étant vrai
     - Elle suit une distribution de probabilité connue.
     - Ces propriétés nous permettent de trouver une région critique bien définie pour rejeter l'hypothèse nulle.
 
-## La distribution $\chi^2(n)$ et $H_0$
+### La distribution $\chi^2(n)$ et $H_0$
 
 C'est un test statistique très important pour aider à déterminer si deux variables sont indépendantes ou non. Il prend comme statistique $\chi^2(n)$, qui est une somme des carrés de $n$ variables normales standard iid :
+
 $$
 \chi^2(n)=\sum_{i=1}^nX_i^2,\hspace{4pt}\text{où }X_i\sim\mathcal{N}(0,1)
 $$
@@ -22,7 +23,7 @@ Pour rejeter $H_0$, on doit être capable de dire que la valeur de $\chi^2(n)$ o
 
 **Attention**. Le rejet de $H_0$ n’implique pas forcément une relation de causalité.
 
-## Extra : **$V$ de Cramér**
+### Extra : **$V$ de Cramér**
 
 Une fois on a notre valeur de $\chi^2(n)$, on pourrait l’utiliser pour créer un autre indicateur : la $V$ de Cramér. L'indicateur va de $0$ a $1$ et désigne le niveau de dépendance de deux variables.
 

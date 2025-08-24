@@ -1,14 +1,14 @@
-# Period #1 - Kalray University, SW
+## Period #1 - Kalray University, SW
 
 [https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=5ZxLYN&CID=f8fbb2d1%2D5b66%2D4bfa%2D89cf%2D1c2cf75bd216&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FSW&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b](https://kalrayinc.sharepoint.com/sites/KALRAY/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=5ZxLYN&CID=f8fbb2d1%2D5b66%2D4bfa%2D89cf%2D1c2cf75bd216&FolderCTID=0x01200036A3007A2388314190E8A96E76235C37&id=%2Fsites%2FKALRAY%2FShared%20Documents%2FGeneral%2FKALRAY%20UNIVERSITY%2FLearning%20Material%2FSW&viewid=53d3044c%2Dd08b%2D4c86%2Db2dc%2D1a88300aaf9b)
 
-# FLOSS - SW Licensing
+## FLOSS - SW Licensing
 
-## …
+### …
 
-# Getting Started with Kalray Technologies
+## Getting Started with Kalray Technologies
 
-## SDK introduction
+### SDK introduction
 
 ![image.png](ressources/period_#1_kalray_university_sw_image.png)
 
@@ -20,6 +20,7 @@ You can use MPPA in direct programming in two ways:
 ![image.png](ressources/period_#1_kalray_university_sw_image_1.png)
 
 A comprehensive Neural Network offer, from standard CNN frameworks to code generation, setup & multiple CNN execution. A flexible tool, with capability to customize
+
 neural networks and runtime execution.
 
 - Fast execution of pre-trained Neural Network
@@ -31,7 +32,7 @@ neural networks and runtime execution.
 
 KANN is OpenCL based and can be run in parallel with other OpenCL application.
 
-## KaNN
+### KaNN
 
 ![On MPPA processor, each layer is parallelized on all available clusters for a low latency CNN.](ressources/period_#1_kalray_university_sw_image_2.png)
 
@@ -53,26 +54,26 @@ But the pipeline have two main drawbacks:
 - Increase the latency
 - Cause unbalanced loads
 
-## Kalray Product Offer
+### Kalray Product Offer
 
 ![image.png](ressources/period_#1_kalray_university_sw_image_3.png)
 
-# Tools & methods for software development at Kalray
+## Tools & methods for software development at Kalray
 
-## Working environments
+### Working environments
 
-### OS
+#### OS
 
 Linux is the main (and only) OS for software development in Kalray. For software, the “standard” linux distribution are ubuntu22.04 for CV2 and ubuntu18.04 for CV1 (for now). There is also limited support for redhat8, mainly because HW tools are only available on redhat.
 
 - You are a sudoer for apt commands on your workstation
 - If you have a powerful workstation you can work locally and build locally. If it’s not the case there are compute servers and Kalray devices allocated by team.
 
-Linux and Windows workstations are under 2 separate networks. Marketing, training, planning tasks, etc... are mainly performed on windows.
+Linux and Windows workstations are under 2 separate networks. Marketing, training, planning tasks, etc… are mainly performed on windows.
 
 (Note: laptops should use WIFI, or must be plugged on windows network, regardless their OS)
 
-### Filesystems
+#### Filesystems
 
 Your `$HOME` directory is on a NFS (Network File System). The NFS is backed up regularly.
 
@@ -80,7 +81,7 @@ Please do not use the NFS for volatile data such as builds, browser cache, ccach
 
 ![image.png](ressources/period_#1_kalray_university_sw_image_4.png)
 
-### ❗: Working remotely (SSH mainly)
+#### ❗: Working remotely (SSH mainly)
 
 `.ssh/config`
 
@@ -257,17 +258,17 @@ dangulo@ws2405:~/.ssh$ ssh-copy-id -i ~/.ssh/dangulo_win jetson01
 # and check to make sure that only the key(s) you wanted were added.
 ```
 
-## System architecture
+### System architecture
 
 ![image.png](ressources/period_#1_kalray_university_sw_image_5.png)
 
-## Kalray Projects (ACB, ACS, ACE)
+### Kalray Projects (ACB, ACS, ACE)
 
 ![image.png](ressources/period_#1_kalray_university_sw_image_6.png)
 
-## GIT & Gerrit
+### GIT & Gerrit
 
-### Gerrit
+#### Gerrit
 
 All projects in Kalray are managed by **gerrit**.
 
@@ -297,7 +298,7 @@ $ kerrit [--reviewer login …]
 # iterate…
 ```
 
-### Git branches conventions
+#### Git branches conventions
 
 Regarding ACB conventions…
 
@@ -335,11 +336,12 @@ Your branches may be deleted as well:
 - `*.from.*` branches are deleted after 6 month
 
 A good practice is to run `git remote update --prune` from time to time.
+
 Note: scripts on charge of this deletion are in SigmaCToolchainScripts: remove*branches-rec
 
-## Good practices
+### Good practices
 
-### Commit conventions
+#### Commit conventions
 
 Commit title on the first line (line 1). It should be short and describe what the commit does (How ?). If the project contains many components, you can put the component name followed by a column at the beginning of the line.
 
@@ -362,15 +364,15 @@ without breaking the legacy functionality.
 Ref TICKET-XXXX
 ```
 
-## Metabuild and Build.rb
+### Metabuild and Build.rb
 
 …
 
-## **Git repos, rev_files and KalrayEnvs**
+### **Git repos, rev_files and KalrayEnvs**
 
-## **Jenkins**
+### **Jenkins**
 
-## **Toolchain Documentation**
+### **Toolchain Documentation**
 
 Toolchain documentation is available at [https://docs.kalray.eu](https://docs.kalray.eu/) (internal web site).
 

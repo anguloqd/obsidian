@@ -1,8 +1,8 @@
-# 03 // variables aléatoires discrètes communes
+## 03 // variables aléatoires discrètes communes
 
-# Paramètres descriptifs d’une distribution discrète
+## Paramètres descriptifs d’une distribution discrète
 
-## Mode
+### Mode
 
 C'est tout simplement la valeur la plus fréquente dans la population.
 
@@ -14,9 +14,9 @@ Ceci implique qu’une population de la forme $\{x,x,\dots,x\}$ n’a pas de mod
 
 **Note pratique**. Il est possible d'avoir plus d'une mode si elles ont la même fréquence.
 
-## Espérance : $\mathbb E[X]$
+### Espérance : $\mathbb E[X]$
 
-### Définition
+#### Définition
 
 Mathématiquement, c’est la moyenne pondérée des résultats de la V.A $X$. Intuitivement, c'est la moyenne des résultats qu'on observerait si on pouvait répéter l’expérience une infinité de fois. Elle seulement existe si la série $\sum (x \cdot \mathbb P(X=x)$ est absolument convergente, sinon on dit que $X$ ne possède pas une espérance.
 
@@ -24,7 +24,7 @@ $$
 \mathbb{E}(X) = \sum_{x \in \Omega_X} (x\cdot \mathbb P(X=x))
 $$
 
-### Propriétés
+#### Propriétés
 
 **Linéarité de l’espérance**. L’espérance de la somme est la somme des espérances, même si elles sont dépendantes.
 
@@ -46,9 +46,9 @@ $$
 \mathbb{E}[\overbrace{f(X)}^Y] = \sum_{x\in\Omega_X} (\overbrace{f(X)}^Y\cdot \mathbb P(X=x) )
 $$
 
-## Variance et écart-type : $\text{Var}(X)\text{ et }\sigma$
+### Variance et écart-type : $\text{Var}(X)\text{ et }\sigma$
 
-### Définition de variance et théorèmes
+#### Définition de variance et théorèmes
 
 Un moment est une notion sortie de la physique. Si $n \in \mathbb{N}$ et $X$ est une V.A. avec espérance finie, donc $\mathbb{E}[X^n]$ est le moment d’ordre $n$ de $X$. Encore plus, $\mathbb{E}[(X-\mathbb{E}[X])^n]$ est le moment *centré* d’ordre $n$ de $X$. “Centré” veut dire centré autour de la moyenne, car à chaque valeur de $X$ on soustrait la moyenne, donc l’ensemble qui en ressort a comme nouveau centre $0$.
 
@@ -62,13 +62,13 @@ $$
 Cette relation rend plus confortable le calcul de la variance.
 - **Inégalité de Cauchy-Schwarz**. $|\mathbb{E}(XY)| \le \sqrt{\mathbb{E}[X^2]\mathbb{E}[Y^2]}$
 
-### L’écart type
+#### L’écart type
 
 La racine carré de la variance est connue comme l’écart-type, noté comme $\sigma = \sqrt{\text{Var}(X)}$. Elle est exprimé en unités de la V.A., tant que la variance est en unités carrées.
 
-# Variables discrètes les plus communes
+## Variables discrètes les plus communes
 
-## Loi discrète uniforme : $U(a,b)$
+### Loi discrète uniforme : $U(a,b)$
 
 > [!note]
 > Aide : la somme des entiers dans l’intervalle $[a,b]$ inclus est $\frac{n(a+b)}{2}$, où $n=(b-a+1)$ est la quantité d’entiers dans l’intervalle.
@@ -84,7 +84,7 @@ C'est une distribution telle que toutes les valeurs possibles de $X$ ont la mêm
 - **Variance** : $\text{Var}(X)=(b-a)(\frac{a+b}{2})^2=(b-a)\mathbb E[X]^2$
 - **Mode** : la mode est égale à chaque élément.
 
-## Loi de Bernoulli ou variable indicatrice : $\text{Bernoulli}(p)$
+### Loi de Bernoulli ou variable indicatrice : $\text{Bernoulli}(p)$
 
 $$
 X\sim\text{Bernoulli}(p) \iff \mathbb P (X=x) =
@@ -106,7 +106,7 @@ C'est une variable aléatoire $X$ que seulement prend deux valeurs : $0$ et $1$.
 
 \end{cases}$. Elle n’est pas définie si $p=\frac{1}{2}$.
 
-## Loi binomiale : $\mathcal B(n,p)$
+### Loi binomiale : $\mathcal B(n,p)$
 
 $$
 X\sim\mathcal B(n,p) \iff \mathbb P(X=k)=C^k_np^k(1-p)^{n-k}
@@ -118,7 +118,7 @@ C'est la probabilité, avec remise, dans une suite de $n$ essais de Bernoulli id
 - **Variance** : $\text{Var}(X) = np(1-p)$.
 - Notons aussi que $\mathcal{B}(1,p)=\text{Bernoulli}(p)$
 
-## Loi géométrique : $\text{Geo}(p)$
+### Loi géométrique : $\text{Geo}(p)$
 
 $$
 X\sim\text{Geo}(p)\iff\mathbb P(X=k)=(1-p)^{k-1}p
@@ -129,7 +129,7 @@ C'est la probabilité, dans une suite de $k$ expériences, d'observer en premier
 - **Espérance** : $\mathbb E[X] = \frac{1}{p}$.
 - **Variance** : $\text{Var}(X)=\frac{(1-p)}{p^2}$.
 
-## Loi de Poisson : $\text{Poisson}(\lambda)\text{ ou }\mathcal P(\lambda)$
+### Loi de Poisson : $\text{Poisson}(\lambda)\text{ ou }\mathcal P(\lambda)$
 
 C’est la probabilité d’observer une quantité k de événements dans une unité de temps de référence. Le paramètre $\lambda$ représente la quantité moyenne d’événements dans une unité de temps.
 
@@ -142,21 +142,29 @@ $$
 - **Mode** : $M=n$, où $n \in [λ-1, λ]$
 Basiquement, l’entier ou les deux entiers dans l’intervalle inclus.
 - Identité utile pour des calculs par récurrence :
-    
+
     $$
     \mathbb P(X=k+1)=\mathbb P(X=k)\frac{\lambda}{k+1}
-    $$
-    
+
+$$
+
 
 **Extra**. Un calcul intéressant est la somme de des probabilités de chaque résultat possible, c’est-à-dire de chaque $k$ possible :
 
 $$
+
 \begin{align*}\mathbb P(X=0)+\mathbb P(X=1)+\mathbb P(X=2)+\dots &= \sum_{k=0}^\infty\mathbb P(X=k)
+
 \\[11pt] &=\sum_{k=0}^\infty e^{-\lambda}\frac{\lambda^k}{k!}
+
 \\[11pt] &= e^{-\lambda}\sum_{k=0}^\infty\frac{\lambda^k}{k!}
+
 \\[14pt] &=e^{-\lambda}(e^\lambda)
+
 \\[5pt] &= 1
+
 \end{align*}
+
 $$
 
 Trivial : si on somme toute les possibilités, c'est sûr qu'on arrive à $1$. **Ce qui est intéressant ce que il apparaît l'expansion de Taylor de $e^x$ dans $\sum_{k=0}^\infty\frac{\lambda^k}{k!}$, si on suppose que $x=\lambda$**.
@@ -172,13 +180,17 @@ On peut approximer une loi binomiale avec une loi de Poisson si et seulement si 
 Dans ce cas, on pose $λ = np$ et on a finalement ce qui suit :
 
 $$
+
 \mathcal B(n,p) \approx \text{Poisson}(np), \text{ ou } \mathbb P(X_\mathcal{B}=k)\approx\mathbb P(X_\mathcal{P}=k)=e^{-np}\frac{(np)^k}{k!}
+
 $$
 
 ## Loi hypergéométrique : $\text{Hypergeo}(N,K,n)$
 
 $$
+
 X\sim\text{Hypergeo}(N,K,n) \iff \mathbb P(X=k)=\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}
+
 $$
 
 C'est la probabilité, sans remise, de tirer $k$ succès (de $K$ possibles) et $(n-k)$ échecs (de $(N-K)$ possibles) d'un échantillon de taille $n$ d'une population de taille $N$.
@@ -207,5 +219,7 @@ Il y a $10$ boules : $4$ rouges et $6$ bleues. Je fixe la taille des échantillo
 Si $N\longrightarrow\infty$ et $\lim_{N\rightarrow\infty} \frac K N = p$, on peut donc établir l’approximation qui suit :
 
 $$
+
 \lim_{N\rightarrow\infty}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}
+
 $$

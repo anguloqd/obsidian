@@ -1,10 +1,10 @@
-# 01 // rappels et régression linéaire
+## 01 // rappels et régression linéaire
 
 [Économétrie - Chap #1](ressources/01_rappels_et_regression_lineaire_1_chapitre1_econometrie1_20232024.pdf)
 
-# Les modèles linéaires déterministes
+## Les modèles linéaires déterministes
 
-## Exemple d’une fonction de production
+### Exemple d’une fonction de production
 
 Prenons une fonction Cobb-Douglas, où $Q$ le niveau de production (endogène), A la technologie et K le capital (exogènes).
 
@@ -44,7 +44,7 @@ $$
 
 On peut voir que $b_0$ est donc “le log du niveau de production commun à toutes les observations, mais qui n’est expliqué ni par le travail, ni par le capital". Comment revenir au niveau de production ?
 
-## Familles de formes fonctionnelles
+### Familles de formes fonctionnelles
 
 Notons que les facteurs peuvent être en forme normale, appelé juste forme “niveau”, ou bien en forme log. Ici, $y$ est la production $Q$ et $x_i$ sont les facteurs comme $L$ ou $K$. Voyons :
 
@@ -72,9 +72,9 @@ Notons que les facteurs peuvent être en forme normale, appelé juste forme “n
 
 La question sur comment choisir la forme fonctionnelle adaptée dépend de la nature de chaque variable, ses graphiques et les statistique de relation entre les variables (covariance, corrélation).
 
-# Modèles linéaires aléatoires
+## Modèles linéaires aléatoires
 
-## Équations
+### Équations
 
 Le modèle générale de régression linéaire est le suivant, avec $k$ l’indices des facteurs, $i$ l’indice de la firme ou individu en question et $u$ est le “terme de perturbation”, càd. l’erreur ou facteurs inobservés.
 
@@ -88,7 +88,7 @@ $$
 y_i=\beta_0+\beta_1x_{1i}+u_i
 $$
 
-## L’erreur $u_i$ et l’espérance de $y$
+### L’erreur $u_i$ et l’espérance de $y$
 
 Cette perturbation traduit principalement:
 
@@ -122,11 +122,12 @@ $$
 C’est donc la valeur moyenne de $y$ pour les différents niveaux de $x$. Notons que c’est l’espérance de y et non pas la valeur exacte de $y$ ! La valeur espérée annule l’erreur, mais en réalité la variable $y$ sera affecte par l’erreur $u$ !
 
 ![[ressources/01_rappels_et_regression_lineaire_untitled.png]]
+
 Dispersion de la production ($Q$) et du travail ($L$), et fonction de régression de la population $\mathbb E[Q|L] = β_0 + β_1L$
 
 On se souciera d’estimer $\beta_0$ et $\beta_1$ après avec un échantillon issu de la population.
 
-## Dérivation de l’estimateur des MCO
+### Dérivation de l’estimateur des MCO
 
 Des hypothèses précédentes, on peut déduire ce qui suit :
 
@@ -144,12 +145,10 @@ On voudra estimer $\beta_0$ et $\beta_1$ sous contrainte de minimiser la somme d
 
 $$
 \tag{1}\frac{1}n{}\sum_{i=1}^n(y_i-\hat\beta_0-\hat\beta_1x_i)=0
-
 $$
 
 $$
 \tag{2}\frac{1}n{}\sum_{i=1}^nx_i(y_i-\hat\beta_0-\hat\beta_1x_i)=0
-
 $$
 
 Notons que l’équation $(1)$ équivaut ce qui suit :
@@ -196,9 +195,9 @@ On dit que $\hat\beta_0$ et $\hat\beta_1$ minimisent la somme des carrés des r�
 
 Notons que $\hat\beta_0$ et $\hat\beta_1$ changent en fonction de l’échantillon donné !
 
-# Propriétés des MCO
+## Propriétés des MCO
 
-## L’erreur $u_i$ et le résidu $\hat u_i$
+### L’erreur $u_i$ et le résidu $\hat u_i$
 
 Étant donné qu’on ne connaît pas toute la population pour en calculer la meilleure droite, on se contentera d’estimer $\beta_0$ et $\beta_1$ avec $\hat\beta_0$ et $\hat\beta_1$. Aussi, on va se contenter d’estimer $u_i$, le résidu de l’observation $i$ par rapport à la vraie droite $(\beta_0, \beta_1)$. Son estimateur sera $\hat u_i$. Quelques faits :
 
@@ -208,7 +207,7 @@ Ceci est naturel. La proposition à gauche vient de $\mathbb E[u]=0$ qu’on met
 - Le point moyen $(\bar x, \bar y)$ est toujours sur la droite de régression.
 Ceci est visible dans la définition de $\beta_0 = \bar y - \beta_1 \bar x$ et isolant $\bar y$.
 
-## Analyse de la variance et $R^2$
+### Analyse de la variance et $R^2$
 
 La populaire équation de la variance, qui décompose la variance comme la somme de deux termes, est la suivante :
 
@@ -232,9 +231,9 @@ $$
 - $R^2 = 0$ : les variations entre les $\bar y_i$ ne capturent quasiment rien de la variation observée entre les $y_i$.
 - Remarque : un faible $R^2$ n’implique pas forcément que la régression des MCO ne sert à rien, mais que d’autres “problèmes” peuvent expliquer ce résultat.
 
-# Espérance et variance
+## Espérance et variance
 
-## Les cinq hypothèses fondamentales
+### Les cinq hypothèses fondamentales
 
 Par la suite, on va supposer les cinq hypothèses ”fondamentales” qui suivent :
 
@@ -248,13 +247,15 @@ Dans ce cas c’est linéaire, donc $y_i = \beta_0+\beta_1x_i+u_i$.
 > [!note]
 > Les estimateurs $\hat \beta_0$ et $\hat \beta_1$ peuvent être biaisés. La source normalement vient du non respect du modèle spécifie (utiliser $\ln x$ quand ça devrait être $x$, ou vice-versa) ou de H3 : $\mathbb E [\mathbf{x} u] \ne 0$ donc $\text{Cov}(\mathbf{x}, u) \ne 0$.
 
-Sous ces hypothèses, il découle que : 
+Sous ces hypothèses, il découle que :
 
 - Les estimateurs $\hat β_0$ et $\hat β_1$ des MCO sont **sans biais et a variance minimale**, aussi appelés les estimateurs de Gauss-Markov**.** Donc :
-    
+
     $$
     \mathbb E[\hat\beta_0]=\beta_0 \text{\hspace{8pt}et\hspace{8pt}}\mathbb E[\hat\beta_1]=\beta_1 
-    $$
+
+$$
+
     
 - Les variances sont les suivantes, mais il nous manque un paramètre $\sigma^2_u$.
     
@@ -264,15 +265,17 @@ Sous ces hypothèses, il découle que :
     \text{\hspace{8pt}et\hspace{8pt}}
     
     \text{Var}(\beta_0)=\frac{\sigma^2_u}{n}\frac{\sum_{i=1}^Nx_i^2}{\sum_{i=1}^N(x_i-\bar x)^2}
-    $$
     
+$$
+
 - Si on prend la variances des résidus, ce serait un estimateur biaisé de $\sigma^2_u$.
 Néanmoins, Il existe un estimateur sans biais de $\sigma^2_u$, où $k$ le nombre de var. explicatives. Dans ce cas, $k=1$.
-    
+
     $$
     \hat\sigma^2_u=\frac{\sum_{i=1}^n\hat u_i^2}{N-(k+1)} \implies \mathbb E[\hat\sigma^2_u]=\sigma^2_u
-    $$
-    
+
+$$
+
 
 # Inférence
 
@@ -306,21 +309,27 @@ Ceci n’est plus le cas quand on considère le cas général (càd. peu importe
 ### Cas bilatéral
 
 $$
+
 \tau=\left\{T=\frac{\hat\beta_k-\cancel{\mathbb E[\hat\beta_k]}}{\hat\sigma_{\hat\beta_k}}^{\space = \beta_k=0}\hspace{-20pt}, A =\{T: -t^{(n-(k+1))}_{1-\alpha/2}<T< t^{(n-(k+1))}_{1-\alpha/2} \} \right\}
 
 \\[8pt]
 
 H_0:\beta_k=0\text{ vs. }H_1:\beta_k\ne0
+
 $$
 
 De même, on pourrait isoler $\hat\beta_k$ dans l’inégalité pour obtenir ce qui suit :
 
 $$
+
 \tau=\left\{ T=\hat\beta_k, A=\{ T : 0-\hat\sigma_{\beta_k} t^{(n-(k+1))}_{1-\alpha/2} < T < 0+\hat\sigma_{\beta_k}t^{(n-(k+1))}_{1-\alpha/2} \} \right\}
+
 $$
 
 $$
+
 \text{Rejeter si : }|T| \le t^{(n-(k+1))}_{1-\alpha/2 }, \text{ accepter sinon.}
+
 $$
 
 ### Cas unilatéral
@@ -328,17 +337,21 @@ $$
 Dans le cas des tests unilatéraux, on définit $A$ comme suit :
 
 $$
+
 H_0 : \beta_k \le 0 \longrightarrow A=\{ T : T <t^{(n-(k+1))}_{1-\alpha }\} \iff \bar A =\{ T : t^{(n-(k+1))}_{1-\alpha } \le T\}
 
 \\
 
 H_0 : \beta_k \ge 0 \longrightarrow A=\{ T : t^{(n-(k+1))}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le t^{(n-(k+1))}_{1-\alpha }\}
+
 $$
 
 La prof. veut qu’on explicite la règle de decision, qui est dans la définition de $\bar A$.
 
 $$
+
 \text{Rejeter si : }|T| \le t^{(n-(k+1))}_{1-\alpha }, \text{ accepter sinon.}
+
 $$
 
 ## Significativité globale du modèle $(F$-test$)$
@@ -346,21 +359,27 @@ $$
 Ce test s’appuie sur la statistique de Fisher :
 
 $$
+
 F=\frac{SCE/k}{SCR/\big(n-(k+1)\big)}=\frac{R^2/k}{(1-R^2)/\big(n-(k+1)\big)}\sim \mathcal F(v_1,v_2)
+
 $$
 
 Les valeurs de la loi de Fisher ont déjà été calculés dans une table. Le test prend donc la forme qui suit, et la nulle affirme que la relation entre $y$ et chacune des variables explicatives $x_i$ est nulle. 
 
 $$
+
 \tau=\left\{ F \text{ comme statistique}, A=\{F: F<f^{(v_1,v_2)}_{1-\alpha}\} \right\}
 
 \\[6pt]
 
 H_0 : \forall i \le k,  \beta_i=0 \text{ vs. } H_1 : \exist i\le k, \beta_i\ne 0
+
 $$
 
 Normalement, le test de Student et le test de Fisher nous mène toujours à la même conclusion. Il semble que, dans ce cours, on fera de tests de Fisher seulement unilatéraux.
 
 $$
+
 \text{Rejeter si : }F\ge f^{(v_1,v_2)}_{1-\alpha}, \text{ accepter sinon.}
+
 $$

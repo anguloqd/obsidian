@@ -1,6 +1,6 @@
-# 01 // intro à la macro
+## 01 // intro à la macro
 
-## Définition de la macroéconomie
+### Définition de la macroéconomie
 
 - Étude de l'interaction parmi les agrégats de l'économie
 - Les agents économiques sont regroupés en catégories homogènes, notamment sur la base de leur activité (consommateurs, épargnants, investisseurs)
@@ -11,19 +11,21 @@
 
 Au début de l'économie, il n'existaient que deux écoles :
 
-### (Néo)classicisme
+#### (Néo)classicisme
+
 - S'appuie sur la microéconomie
 - Comportements individuels et rationnels guidés par le prix
 - Marchés interdépendants
 - Le niveau d'activité est celui où l'équilibre se trouve
 - La flexibilité des prix est cruciale pour ses hypothèses
 
-### Keynésianisme
+#### Keynésianisme
+
 - Analyse globale sans faire détour à l'analyse des individus
 - L'hypothèse de flexibilité des prix est remise en cause au profit d'une hypothèse de rigidité des prix
 - Les quantités des biens en transactions sont donc celles ajustées au prix fixe
 
-## La révolution keynésienne
+### La révolution keynésienne
 
 - Les théories macroéconomiques ont besoin de la validation empirique
 - Elles sont aussi utilisées pour "éclairer" les politiques économiques

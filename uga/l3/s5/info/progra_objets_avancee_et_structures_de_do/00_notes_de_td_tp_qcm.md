@@ -1,8 +1,8 @@
-# 00 // notes de td/tp/qcm
+## 00 // notes de td/tp/qcm
 
-# TD
+## TD
 
-## TD1
+### TD1
 
 - Les critères de correction d’un algorithme sont les suivants : être correcte (faire ce qu’il est censé de faire), être lisible/compréhensible et être efficace (l’efficacité de la mémoire est prioritaire sur l’efficacité de temps/complexité algorithmique).
 - Toutes les instances de classe sont visibles entre elles toujours. Donc, une instance de classe `C` peut accéder aux attributs `private` de l’autre instance sans problème.
@@ -10,9 +10,9 @@
 - Avec les buffers, n’oublies pas d’actualiser la taille effective !
 - Fais attention aux hypothèses simplificatrices que tu fais. Toujours pense au cas le plus général des arguments quand tu désignes des méthodes.
 
-# TP
+## TP
 
-## TP1
+### TP1
 
 - Il peut avoir un seul `public class` dans un fichier, que c’est aussi le nom du fichier `.java`.
 - Il y a des classes dont on peut appeler leurs méthodes sans besoin d’une instance d’elles.
@@ -23,9 +23,9 @@ Un exemple est la class `Math` ou `Integer` qui ont des méthodes `public static
     2. Garder `obj` dans une variable `x` et **le caster au passage** !!!!!!!!
     3. Compare le contenu de l’instance courante et l’`obj` d’intérêt (qui est désormais gardé dans une variable `x` de même type)
 
-# QCM
+## QCM
 
-## QCM #1 : 02/10
+### QCM #1 : 02/10
 
 - Possible de faire `string x = null;`, pourquoi j’ai trouvé un erreur ? On peut pas faire des nulls avec des types simples, mais j’avais eu une autre erreur sans les types simples je crois !
 - On déclare un attribut d’instance {`int i`;} d’une classe `C`. Si le constructeur fait `C(int a){int i = a;}` ce `int i` est une variable locale, pas un attribut. II faudrait faire `{i=a;}` et non pas `{int i = a;}`. **Mettre le type de variable avant implique qu’on définit une nouvelle variable**.
@@ -35,9 +35,9 @@ Un exemple est la class `Math` ou `Integer` qui ont des méthodes `public static
 - Cast quand on passe un paramètre ? Pas inclus mais je me rappelle plus.
 - Apprendre quand y’a un erreur d’exécution et erreur de compilation !
 
-## Erreurs de compilation et exécution
+### Erreurs de compilation et exécution
 
-### Compilation
+#### Compilation
 
 - Erreurs de syntaxe
 - Erreurs de type
@@ -46,7 +46,7 @@ Ici c’est l’erreur quand on affecte un objet de type incompatible à la vari
 Variables non déclarées
 - Appeler une méthode qui n’existe pas
 
-### Exécution
+#### Exécution
 
 - NullPointerException (j’ai déjà raté une question parce que je pensais que c’était un erreur de compilation)
 - ArrayIndexOutOfBoundsException
@@ -55,7 +55,7 @@ Variables non déclarées
 **LE `CAST` ET LE `INSTANCEOF` SONT SEULEMENT POSSIBLES EN RELATION D’HÉRITAGE!**
 - IllegalArgumentException
 
-## QCM #2 : 16/10
+### QCM #2 : 16/10
 
 - Un exo confusant
 - Une classe qui contient une méthode abstraite est forcément abstraite et doit être forcément déclarée abstraite
@@ -65,7 +65,7 @@ Variables non déclarées
 - Piège instanceOf() à la place de instanceof.
 - On lève jamais une exception avec .equals() même si le instanceof à l’intérieur. (La définition de equals retourne false s’il y a un erreur avec instanceof, par exemple si les deux classes à comparer n’ont pas une relation d’héritage)
 
-## QCM #3 : 06/11
+### QCM #3 : 06/11
 
 - C c = null; faire c instanceof C est false. instanceof utilise le type réel de l’objet et non pas le type déclaré (de référence).
 - A a = new C(); Le type déclaré est le type assumé par le compilateur, celui avant du nom de la variable. Ici, c’est le type A.

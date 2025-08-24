@@ -1,6 +1,6 @@
-# Guide API de Matplotlib
+## Guide API de Matplotlib
 
-## Configuration de base
+### Configuration de base
 
 ```python
 import matplotlib.pyplot as plt
@@ -14,9 +14,9 @@ mpl.rcParams['font.size'] = 12
 mpl.rcParams['axes.grid'] = True
 ```
 
-## Création de figures et axes
+### Création de figures et axes
 
-### Interface pyplot (procédurale)
+#### Interface pyplot (procédurale)
 
 ```python
 # Figure simple
@@ -39,7 +39,7 @@ axes[1, 0].bar(x, y3)
 axes[1, 1].hist(data)
 ```
 
-### Interface orientée objet (recommandée)
+#### Interface orientée objet (recommandée)
 
 ```python
 # Figure et axes
@@ -59,9 +59,9 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5),
                                gridspec_kw={'width_ratios': [2, 1]})
 ```
 
-## Types de graphiques essentiels
+### Types de graphiques essentiels
 
-### Graphiques en ligne
+#### Graphiques en ligne
 
 ```python
 # Graphique simple
@@ -82,7 +82,7 @@ for i, data in enumerate(datasets):
 ax.legend()
 ```
 
-### Nuages de points
+#### Nuages de points
 
 ```python
 # Scatter plot basique
@@ -97,7 +97,7 @@ for i, txt in enumerate(labels):
     ax.annotate(txt, (x[i], y[i]), xytext=(5, 5), textcoords='offset points')
 ```
 
-### Graphiques en barres
+#### Graphiques en barres
 
 ```python
 # Barres verticales
@@ -119,7 +119,7 @@ ax.bar(categories, values1, label='Partie 1')
 ax.bar(categories, values2, bottom=values1, label='Partie 2')
 ```
 
-### Histogrammes
+#### Histogrammes
 
 ```python
 # Histogramme simple
@@ -136,7 +136,7 @@ plt.colorbar()
 n, bins, patches = ax.hist(data, bins=30)
 ```
 
-### Boîtes à moustaches
+#### Boîtes à moustaches
 
 ```python
 # Boxplot simple
@@ -151,9 +151,9 @@ for patch in bp['boxes']:
     patch.set_facecolor('lightblue')
 ```
 
-## Personnalisation avancée
+### Personnalisation avancée
 
-### Axes et échelles
+#### Axes et échelles
 
 ```python
 # Limites des axes
@@ -177,7 +177,7 @@ ax2.plot(x, y2, 'r-')
 ax2.set_ylabel('Axe Y secondaire', color='r')
 ```
 
-### Couleurs et styles
+#### Couleurs et styles
 
 ```python
 # Palettes de couleurs
@@ -194,7 +194,7 @@ plt.style.use('seaborn-v0_8')
 plt.style.use('dark_background')
 ```
 
-### Annotations et texte
+#### Annotations et texte
 
 ```python
 # Texte simple
@@ -212,9 +212,9 @@ ax.text(0.5, 0.5, r'$\alpha = \beta^2 + \gamma$', transform=ax.transAxes,
 ax.legend(loc='upper right', frameon=True, shadow=True, ncol=2)
 ```
 
-## Graphiques spécialisés
+### Graphiques spécialisés
 
-### Cartes de chaleur
+#### Cartes de chaleur
 
 ```python
 # Heatmap avec imshow
@@ -227,7 +227,7 @@ for i in range(len(matrix)):
         text = ax.text(j, i, matrix[i, j], ha="center", va="center", color="w")
 ```
 
-### Graphiques polaires
+#### Graphiques polaires
 
 ```python
 # Configuration polaire
@@ -241,7 +241,7 @@ ax.set_xticks(theta)
 ax.set_xticklabels(categories)
 ```
 
-### Graphiques 3D
+#### Graphiques 3D
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D
@@ -261,9 +261,9 @@ ax.scatter(x, y, z, c=colors, s=50)
 ax.plot(x, y, z, label='courbe 3D')
 ```
 
-## Gestion des figures
+### Gestion des figures
 
-### Sauvegarde
+#### Sauvegarde
 
 ```python
 # Formats multiples
@@ -278,7 +278,7 @@ plt.savefig('graph.png', transparent=True, facecolor='none')
 plt.savefig('graph.png', dpi=600, bbox_inches='tight', pad_inches=0.1)
 ```
 
-### Mise en page
+#### Mise en page
 
 ```python
 # Ajustement automatique
@@ -299,9 +299,9 @@ ax4 = plt.subplot(gs[-1, 0])   # coin inférieur gauche
 ax5 = plt.subplot(gs[-1, -2])  # avant-dernière colonne, dernière ligne
 ```
 
-## Animation
+### Animation
 
-### Animation simple
+#### Animation simple
 
 ```python
 from matplotlib.animation import FuncAnimation
@@ -328,9 +328,9 @@ ani.save('animation.gif', writer='pillow')
 ani.save('animation.mp4', writer='ffmpeg')
 ```
 
-## Interactivité
+### Interactivité
 
-### Widgets
+#### Widgets
 
 ```python
 from matplotlib.widgets import Slider, Button
@@ -352,7 +352,7 @@ def update(val):
 slider.on_changed(update)
 ```
 
-### Événements
+#### Événements
 
 ```python
 # Détection de clics
@@ -371,9 +371,9 @@ def onhover(event):
 fig.canvas.mpl_connect('motion_notify_event', onhover)
 ```
 
-## Optimisation et performance
+### Optimisation et performance
 
-### Graphiques performants
+#### Graphiques performants
 
 ```python
 # Pour de grandes quantités de données
@@ -390,7 +390,7 @@ lc = LineCollection(lines, colors=colors)
 ax.add_collection(lc)
 ```
 
-### Mémoire et ressources
+#### Mémoire et ressources
 
 ```python
 # Nettoyage de figures
@@ -402,7 +402,7 @@ fig.clear()
 ax.clear()
 ```
 
-## Modèles courants de LeetCode
+### Modèles courants de LeetCode
 
 ```python
 # Visualisation de séries temporelles

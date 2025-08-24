@@ -1,10 +1,10 @@
-# 03 // anticipations, consommation et investissement
+## 03 // anticipations, consommation et investissement
 
 [Slides de consommation et investissement](ressources/03_anticipations_consommation_et_investissement_chapitre_3_diapo.pdf)
 
-# La consommation : $C$
+## La consommation : $C$
 
-## Théorie du consommateur prévoyant
+### Théorie du consommateur prévoyant
 
 Le consommateur fixe sa consommation comme une partie totale de sa richesse actuelle $W$(patrimoine, actifs+pasifs) mais aussi comme la VAN des revenus futurs. Supposons que, dans l’année ou période $t$, les revenus bruts perçus sont $Y_t$ et les taxes sont $T_t$. On déduit que le revenu net de la période $t$ est $(Y_t-T_t)$.
 
@@ -17,17 +17,17 @@ Une deuxième version considère que la consommation actuelle dépend de la rich
 - Pour $W$, les valeurs des actifs et passifs dans le futur sont des estimations.
 - Pour le capital humain, il dépend des estimations du revenu futur, des impôts futurs mais aussi de taux d’intérêt futurs. Cette dernière implique que la consommation peut changer même si le revenu reste le même (dans le cas où les taux d’intérêt changent).
 
-# L’investissement : $I$
+## L’investissement : $I$
 
 Si la consommation dépend de la richesse et des revenus nets, l’investissement dépend du taux d’intérêt réel et de la demande courante. Particulièrement, si la VAN d’un projet d’investissement est plus grande que le coût du projet, c’est un projet rentable.
 
-## Estimation de la durée de vie du capital physique
+### Estimation de la durée de vie du capital physique
 
 Supposons que l’investissement évalué est une machine, comme une voiture. La plupart des machines peuvent durer virtuellement autant qu’on le souhaite, mais à un coût de plus en plus élevé.
 
 On actualise la valeur de la machine chaque année ou période à travers un taux de dépréciation $\delta$. En période initiale, la valeur d’une machine est x. L’année prochaine, la machine perd $\delta\%$ de son valeur, donc la valeur est $x \times (1-\delta)$. L’année qui suit, la valeur est $x \times (1-\delta)^2$, etc.
 
-## Calcul de la VAN du profit
+### Calcul de la VAN du profit
 
 Tel investissement (capital physique, dans ce cas) génère de profits. Pour la profit de chaque année $t$, on le note $\Pi_t^e$. On parle de profit réels, pas de profits nominaux. On calcule alors la VAN réelle pour chaque profit réel futur :
 
@@ -37,7 +37,7 @@ $$
 
 **Doute** : pourquoi on déprécie le profit et non pas les valeurs des machines ?
 
-## Décision d’investissement
+### Décision d’investissement
 
 On retourne à l’investissement. On déduit qu’elle dépend positivement de la VAN des profits et négativement des taux d’intérêts réels $r_t$ et du prix de l’investissement $P$.
 
@@ -47,9 +47,9 @@ $$
 
 Finalement, cela serait l’investissement d’un seul (une seule machine). On pourrait le généraliser à $n$ investissements.
 
-# Profits courants et anticipés
+## Profits courants et anticipés
 
-## Leur liens avec l’investissement
+### Leur liens avec l’investissement
 
 Les entreprises peuvent s’attendre à ce que le profit courant prédise généralement bien le profit futur. En fait, l’investissement $I$ est plus affecté par le profits courants que ceux futurs.
 
@@ -61,13 +61,13 @@ Le profit dépend finalement des ventes et du stock de capital. On se donne une 
 
 On va admettre aussi que $\Pi$ baisse lors des récessions et croît en période d’expansion. Si on s’était dit que les profits futurs dépend des profits courants, et que l’investissement dépends des deux, donc on établit un lien positif entre production courante et investissement.
 
-# Comparaison : consommation et investissement
+## Comparaison : consommation et investissement
 
-## Similitudes
+### Similitudes
 
 **Permanence de variation du pouvoir** : pour les firmes, moins une variation des ventes est considérée comme durable, moins elle influe sur les anticipations de profits et donc sur les décisions d’investissement. C’est analogue pour les consommateurs, leurs variations de revenus et leurs choix de consommation.
 
-## Différences
+### Différences
 
 La théorie du consommateur implique que, devant une hausse de leur revenu qu’ils jugent permanente, les consommateurs réagissent en augmentant leur consommation au plus d’un même montant, et cette augmentation de la consommation présente réduit la consommation future. **L’aumentation de la consommation présente est inférieur ou égale à la var. de revenu**.
 

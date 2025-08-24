@@ -1,4 +1,4 @@
-# (2) 09 // structure chaînées en java, algo récursifs
+## (2) 09 // structure chaînées en java, algo récursifs
 
 Pile d’appels : mécanisme intégré aux langage pour permettre la récursivité. “Empilement de l’environnement”.
 
@@ -70,7 +70,7 @@ def construct(coins, target):
    return construct_rec(target, 0)
 ```
 
-# Arbres
+## Arbres
 
 Arbre: graphe connexe sans cycle.
 
@@ -112,7 +112,7 @@ Pour la représentation contigüe, on stock l’arbre dans un tableau de sorte q
 
 Pour les arbres k-aires, les fils de i sont k*i + 1, k*i + 2, …, k*i + k. Pour le père de i, c’est floor((i-1)/k).
 
-## Parcours
+### Parcours
 
 On a des types de parcours : préfixe, infixe, post-fixe.
 

@@ -1,18 +1,18 @@
-# 05 // tests non paramétriques
+## 05 // tests non paramétriques
 
 [slides non param stat 3 annote.pdf](ressources/05_tests_non_parametriques_slides_non_param_stat_3_annote.pdf)
 
-# Introduction
+## Introduction
 
-## Définition
+### Définition
 
 Un test est dit non-paramétrique s'il peut être appliqué quelle que soit la distribution des observations. Puisque la distribution (normale ? exponentielle ? uniforme ? autre ?) n'est pas spécifiée, on n'a aucun paramètre à estimer. On ne fait **aucune hypothèse sur les distributions, on les considère continues et c’est tout !**
 
 Il existe une multitude de méthodes et de tests non paramétriques, certains plutôt grossiers, d'autres beaucoup plus raffinés, qui permettent de tester plusieurs types d'hypothèses (équidistribution de deux échantillons, symétrie d'une distribution, indépendance, etc.) En voici quelques illustrations.
 
-# Intervalles sur les quantiles
+## Intervalles sur les quantiles
 
-## Rappels
+### Rappels
 
 Rappelons la notion de quantile. Soit $X$ une variable aléatoire de type continu dont la densité est f$(x)$ et dont la fonction de répartition est $F(X)$. Soit $p$ une proportion strictement entre $0$ et $1$.
 
@@ -22,7 +22,7 @@ $$
 P(X \leq \xi_p) = F(\xi_p) = p
 $$
 
-## Encadrage binomiale
+### Encadrage binomiale
 
 Pour commencer, si $X_1, \cdots, X_n$ sont des observations, on les ordonne par ordre croissant, comme $Y_1 ≤ Y_2 ≤ … ≤ Y_{n-1} ≤ Y_n$, où $Y_i = X_{(n)}$, cette dernière appelée la statistique d’ordre $n$.
 
@@ -34,7 +34,7 @@ $$
 P(Y_i < \xi_p < Y_j) = \sum_{k=i}^{j-1} \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}
 $$
 
-## Exemple
+### Exemple
 
 On veut un intervalle de confiance pour le troisième quartile en observant un échantillon de taille $10$. On a
 
@@ -48,9 +48,9 @@ Ainsi, en utilisant $Y_4$ et $Y_9$, on obtient un intervalle de confiance à $92
 
 Un intervalle de confiance pour le 3e quartile est donc $]4.03; 14.73[$. Pour cet exemple, les auteurs ont échantillonné une population de loi E(5). On montre facilement que la valeur théorique de ce quartile est $Q_3 = 10\ln(2) = 6.93$
 
-# Test d’équidistribution de deux échantillons
+## Test d’équidistribution de deux échantillons
 
-## Test du $χ²$... encore !
+### Test du $χ²$… encore !
 
 Nous avons beaucoup parlé du test du $\chi^2$ en début de semestre ainsi qu'en début de formation tant pour tester l'adéquation d'une série observée à une série théorique que pour tester l'indépendance (qui revient à comparer une loi jointe observée à une loi jointe produit des marges).
 
@@ -78,7 +78,7 @@ On obtient donc un tableau $2×k$ et la suite se fait exactement comme s'il s'ag
 
 Example du tableau.
 
-## Le test de Wilcoxon
+### Le test de Wilcoxon
 
 Ce test qui suit est l’équivalent de l’ANOVA non paramétrique pour un facteur à deux modalités. Pour plus de deux modalités, le test s’appelle Kruskall-Wallis.
 
@@ -88,15 +88,15 @@ $$
 H_0 : F_X = F_Y
 $$
 
-### Le tri
+#### Le tri
 
 Pour appliquer le test de Wilcoxon, on ordonne (disons, de la plus petite à la plus grande) l'ensemble des $n = n_X + n_Y$ observations.
 
 On obtient alors un mot formé de $n_X + n_Y$ lettres ($n_X$ fois la lettre $\text X$ et $n_Y$ fois la lettre $\text Y$).
 
-**Exemple**. Si $X = (17.1, 14.5, 20.3, 8.3)$ et $Y = (5.2, 10.3, 12.4)$, on obtient le mot $\text{YXYXXXX}$ (la plus petite des $7$ observations est un $Y$, la deuxième est un $\text X$, ..., les $3$ plus grandes sont des $\text X$).
+**Exemple**. Si $X = (17.1, 14.5, 20.3, 8.3)$ et $Y = (5.2, 10.3, 12.4)$, on obtient le mot $\text{YXYXXXX}$ (la plus petite des $7$ observations est un $Y$, la deuxième est un $\text X$, …, les $3$ plus grandes sont des $\text X$).
 
-### La variable
+#### La variable
 
 La variable du test de Wilcoxon est
 
@@ -113,24 +113,30 @@ W \overset{d}{\longrightarrow} \mathcal{N} \left( n_X \cdot \frac{n+1}{2}, \; \s
 $$
 
 - Dérivation de la loi
-    
+
+
     Soit $W$ une statistique de somme de rangs. Sous l'hypothèse nulle $\mathcal{H}_0$, on a $F_X = F_Y$et les rangs $R_i$ suivent une loi uniforme :
-    
+
     $$
     R_i \sim \mathcal{U}([[ 1, n ]]), \quad \text{où } n = n_X + n_Y
-    $$
+
+$$
+
     
     Espérance et variance des rangs :
     
     $$
     \mathbb{E}[R_i] = \frac{n+1}{2}, \quad \text{Var}(R_i) = \frac{n^2 - 1}{12}
-    $$
     
+$$
+
     On a :
     
     $$
     \mathbb{E}[W] = \mathbb{E} \left[ \sum_{i=1}^{n_X} R_i \right] = \sum_{i=1}^{n_X} \mathbb{E}[R_i] = n_X \cdot \frac{n+1}{2}
-    $$
+    
+
+$$
     
     Attention : les $R_i$ ne sont pas indépendants.
     
@@ -140,36 +146,46 @@ $$
     \text{Var}(W) = \text{Var} \left( \sum_{i=1}^{n_X} R_i \right) = \sum_{i=1}^{n_X} \text{Var}(R_i) + \sum_{\substack{i,j=1 \\ i \ne j}}^{n_X} \text{Cov}(R_i, R_j)
     \\
     = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot C
-    $$
     
+$$
+
     où $C$ est une constante (covariance entre deux rangs distincts).
     
     Supposons qu’il n’y ait pas de $Y$, donc $n_X = n$ : tous les $X$ sont en tête, donc la variance est nulle :
     
     $$
     \frac{n(n^2 - 1)}{12} + n(n - 1) \cdot C = 0 \Rightarrow C = -\frac{n+1}{12}
-    $$
+    
+
+$$
     
     On remplace $C$ dans la variance générale :
     
     $$
     \text{Var}(W) = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot \left( -\frac{n+1}{12} \right)
-    $$
+    
+$$
+
     $$
     = \frac{n_X(n+1)}{12} \left[ n - 1 - (n_X - 1) \right] = \frac{n_X n_Y (n+1)}{12}
-    $$
+    
+
+$$
     
     On a donc :
     
     $$
     W = \sum_{i=1}^{n_X} R_i, \quad \mathbb{E}[W] = n_X \cdot \frac{n+1}{2}, \quad \text{Var}(W) = \frac{n_X n_Y (n+1)}{12}
-    $$
     
+$$
+
     Si $n_X$ est grand, on applique le théorème central limite (version sans indépendance) :
     
     $$
     W \overset{d}{\longrightarrow} \mathcal{N} \left( n_X \cdot \frac{n+1}{2}, \; \sqrt{ \frac{n_X n_Y (n+1)}{12} } \right)
-    $$
+    
+
+$$
     
 
 ### Conclusion du test
@@ -177,13 +193,17 @@ $$
 L'hypothèse $H_0$ sera donc rejetée au seuil α si
 
 $$
+
 \left|\frac{W - \frac{n_X(n+1)}{2}}{\sqrt{\frac{n_X n_Y (n+1)}{12}}}\right| > q_{\alpha/2}
+
 $$
 
 où $q_{\alpha/2}$ est le quantile théorique de la loi normale $\mathcal N(0;1)$ :
 
 $$
+
 P(N(0;1) > q_{\alpha/2}) = \frac{\alpha}{2}
+
 $$
 
 Remarque : Le test de Wilcoxon est excellent pour détecter les différences de position (médiane, moyenne). Pour détecter les différences de dispersion, il ne vaut pas grand chose.
@@ -213,14 +233,19 @@ L’idée est qu’**on ne fait plus la corrélation sur les observations de X e
 Le coefficient de corrélation de rangs est
 
 $$
+
 R^* = \text{corr}(R_X, R_Y)
+
 $$
 
 Et se calcule par la formule :
 
 $$
+
 R^* = \frac{ \frac{1}{n} \sum_{i=1}^n R_X(i) R_Y(i) - \left( \frac{1}{n} \sum_{i=1}^n R_X(i) \right) \left( \frac{1}{n} \sum_{i=1}^n R_Y(i) \right) }
+
 { \sqrt{ \left( \frac{1}{n} \sum_{i=1}^n R_X^2(i) - \left( \frac{1}{n} \sum_{i=1}^n R_X(i) \right)^2 \right)
+
 \left( \frac{1}{n} \sum_{i=1}^n R_Y^2(i) - \left( \frac{1}{n} \sum_{i=1}^n R_Y(i) \right)^2 \right) } }
 
 $$$$
@@ -229,9 +254,7 @@ $$$$
 { \sqrt{ \left( n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2 \right)
 \left( n \sum_{i=1}^n R_Y^2(i) - \left( \sum_{i=1}^n R_Y(i) \right)^2 \right) } }
 $$
-
 On remarque toutefois que puisque les $R_X(i)$ (et les $R_Y(i)$) ne sont qu’une permutation des entiers de $1$ à $n$, on a :
-
 $$
 \sum_{i=1}^n R_X(i) = \sum_{i=1}^n i = \frac{n(n+1)}{2}
 
@@ -247,61 +270,51 @@ n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2
 $$$$
 
 = n^2(n+1) \left( \frac{2n+1}{6} - \frac{n+1}{4} \right)
+
 = \frac{n^2(n^2 - 1)}{12}
+
 $$
 
 Le coefficient de corrélation de rangs devient donc :
 
 $$
+
 R^* = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \frac{n^2(n+1)^2}{4} }
+
 { \frac{n^2(n^2 - 1)}{12} }
 
 $$$$
 
 = \frac{12 \sum_{i=1}^n R_X(i) R_Y(i)}{n(n^2 - 1)} - \frac{3(n+1)}{n-1}
 $$
-
 Posant $S^* = \sum_{i=1}^n R_X(i) R_Y(i)$, on observe que $R^*$ est fonction linéaire de $S^*$. Noter que :
-
 $$
 R^* = a S^* + b \quad \text{où} \quad
 a = \frac{12}{n(n^2 - 1)} \quad \text{et} \quad b = -\frac{3(n+1)}{n-1}
 $$
-
 Il suffit donc de connaître la distribution de $S^*$ pour connaître celle de $R^*$. En fait, on a
-
 $$
 E[R^*|H_0] = aE[S^*|H_0] + b
 $$
-
 et
-
 $$
 \text{Var}[R^*|H_0] = a^2 \text{Var}[S^*|H_0]
 $$
-
 En cette fin de chapitre, on se passera du détail des calculs. Si $H_0$ est vraie, et si $n$ est grand, la statistique $S^*$ suivra approximativement (TCL) une loi normale
-
 $$
 N\left(\frac{n^2(n+1)^2}{4}; \sqrt{\frac{n^2(n+1)(n^2-1)}{144}}\right)
 $$
-
 On en déduit alors que $R^*$ suit une loi normale (bien plus jolie)
-
 $$
 N\left(0, \sqrt{\frac{1}{n-1}}\right)
 $$
-
 ## Conclusion du test
 
 L'hypothèse $H_0$ sera donc rejetée au seuil α si
-
 $$
 |R^*| > q_{\alpha/2} \sqrt{\frac{1}{n-1}}
 $$
-
 où $q_{\alpha/2}$ est le quantile théorique de la loi normale N(0;1) :
-
 $$
 P(N(0;1) > q_{\alpha/2}) = \frac{\alpha}{2}
 $$

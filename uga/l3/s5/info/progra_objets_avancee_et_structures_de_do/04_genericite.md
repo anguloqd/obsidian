@@ -1,10 +1,10 @@
-# 04 // généricité
+## 04 // généricité
 
 [INFF5_4.pdf](ressources/04_genericite_inff5_4.pdf)
 
-# Introduction
+## Introduction
 
-## Définition et motivation
+### Définition et motivation
 
 Il s’agit d’un mécanisme qui permet la définition de programmes paramétrés par des types.
 
@@ -54,26 +54,27 @@ Paire p2 = new Paire(1, 2);
 L’avantage ici c’est qu’on peut créer des paires de tout : `string`, `int`, etc. Par contre, il y aura deux inconvénients :
 
 1. Trans-typage obligatoire pour récupérer une valeur.
-    
+
     ```java
     String s = (String)p1.getPremier();
     int i = (Integer)p2.getSecond();
     ```
-    
+
 2. Erreurs de trans-typage détectés à l'exécution et non à la compilation.
-    
+
     ```java
     String s = (String)p2.getPremier(); // ClassCastException
     String s = "" + p2.getPremier(); // ceci marche mais ça appelle le "toString()"
     																 // du int mais ce n'est pas dans le espirit.
     ```
-    
+
     Ici, il faudrait dire que **le cast/trans-typage ne change vraiment pas le type d’un objet, on change juste la manière que le compilateur voit l’objet**. **Le cast est seulement possible entre deux classes qui ont une relation d’héritage**, donc pas de “frères” ou “cousins”. C’est pour ça qu’on ne peut pas caster un `int` à un `String`.
+
     
 
-# Classe paramétrée
+## Classe paramétrée
 
-## Définition et solution aux inconvenants précédents
+### Définition et solution aux inconvenants précédents
 
 On propose une autre définition de la classe Paire, avec un type passé comme paramètre :
 
@@ -109,7 +110,7 @@ int i = p2.getSecond();
 String s = p2.getPremier();
 ```
 
-## Prendre plus d’un type !
+### Prendre plus d’un type !
 
 Effectivement, on pourrait aussi prendre deux types comme paramètres :
 
@@ -132,9 +133,9 @@ public class Paire<T, U> {
 }
 ```
 
-# Méthode générique
+## Méthode générique
 
-## Le type paramètre n’est pas spécifié, mais *inféré*
+### Le type paramètre n’est pas spécifié, mais *inféré*
 
 Gardons en tête la classe Paire qui prend juste un type paramètre `T`. On va créer une classe qui contient deux méthodes comme suit :
 
@@ -167,9 +168,9 @@ Number n = X.choix(new Integer(2), new Double(3.14159));
 
 On voit qu’on a le premier objet de type `Integer` et le deuxième de type `Double`. On pourrait se dire qu’ils n’ont pas le même typage, mais en fait il doit forcément exister un type qu’ils partagent : le type `Objet`. **Après, Java infère et assigne le type le plus précis qui est à la fois super-type de `Integer` et de `Double` (qui est en fait le type `Number` et pas `Object`)**.
 
-# Limites pour les types paramètres
+## Limites pour les types paramètres
 
-## Le paramètre `T` peut hériter un type pour le *limiter*
+### Le paramètre `T` peut hériter un type pour le *limiter*
 
 On va créer une méthode dans la classe Paire pour voir le problème :
 
@@ -217,9 +218,9 @@ public class Paire<T extends A & Comparable> {
 }
 ```
 
-# Effacement
+## Effacement
 
-## Un type a une forme brut et une forme paramétrée
+### Un type a une forme brut et une forme paramétrée
 
 Quand une classe est paramétrée, elle est compilée en un type « brut » qui est le seul existant à l’exécution des programmes. Les paramètres de type sont « effacés » . En conséquence :
 
@@ -320,9 +321,9 @@ p1=p2;
 p2=p1;
 ```
 
-# Généricité et héritage
+## Généricité et héritage
 
-## `Paire<T>` est incompatible à l’assignation avec `Paire<U>`
+### `Paire<T>` est incompatible à l’assignation avec `Paire<U>`
 
 En plus, examinons le suivant programme qui est intéressant :
 
@@ -351,7 +352,7 @@ pp = pp3;
 
 Selon le prof, l’explication est trop compliquée, il vaut mieux de ne pas chercher la raison.
 
-## Joker
+### Joker
 
 Le joker `?` peut nous aider dans le dernier code. Voyons une autre méthode :
 
@@ -406,7 +407,7 @@ Dans la première ligne, on voudrait penser que `Paire<Point>` est un père de `
 
 `Object` est père de `Point` qui est père de `Point3D`, mais `Paire<Object>` n’est pas père de `Paire<Point>` qui n’est pas non plus père de `Paire<Point3D>`. “Pas d’héritage sur l’horizontale !”.
 
-# Takeaways
+## Takeaways
 
 Prenons l’exemple : (1) `public <T> void affiche(Paire<T> p)` et (2) `public static <T> T choix(T a, T b)`.
 
@@ -416,7 +417,7 @@ Prenons l’exemple : (1) `public <T> void affiche(Paire<T> p)` et (2) `public s
     - On pourrait voir `Paire<T>` comme `Paire<T extends Object>`.
     - Tout occurrence de `T` dans le corps de classe est remplacé par la classe qu’elle étend.
     - `instanceof` juste voit les types qui restent à l’exécution.
-- `Paire(Point3D)` n’est pas fils de `Paire(Point)`. 
+- `Paire(Point3D)` n’est pas fils de `Paire(Point)`.
 Donc, méthodes pour le dernier ne marchent pas pour le premier. Ni vice-versa.
 Assigner `pp3` à `pp` pose un problème aussi ! (`incompatible types`)
 - Le joker `?` s’utilise dans les méthodes.

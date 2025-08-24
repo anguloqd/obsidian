@@ -1,9 +1,8 @@
-# 06 // projet prolog : algo. pour jouer le dilemme des prisonniers
+## 06 // projet prolog : algo. pour jouer le dilemme des prisonniers
 
-## Expliquant *graduel*
+### Expliquant *graduel*
 
 > Graduel joue “coopération” toujours au premier coup. Après, il continue à joue “coopération” jusqu’à ce qu’il est trahi pour la $n$-ième fois, dans ce cas il punira avec $n$ “trahisons” consécutives, puis il se relâchera avec deux coopérations consécutives inconditionnelles. Le nombre de trahisons dans les punissions augmente “graduellement”, d’où son nom.
-> 
 
 > [!note]
 > L’algorithme de graduel se décrit en trois états : normal, punir et relax. En état normal, graduelle attend une trahison pour punir, sinon il continue à coopérer. En état punir, il commence un suite consécutive de trahisons ($n$ trahisons s’il a été trahi pour la $n$-ième fois). En état relax, il “pardonne” a son adversaire avec deux coopérations consécutives, puis il revient en état normal.
@@ -31,7 +30,7 @@
 > 2. J’ai relâché (cooperé) aussi le coup précédant ?
 > Oui → coopération, rentre en état “normal”
 
-## Le code : *graduel* (version .txt en lien pour copier-coller)
+### Le code : *graduel* (version .txt en lien pour copier-coller)
 
 [graduel ANGULO.txt](ressources/06_projet_prolog_algo_pour_jouer_le_dilemme_des_pr_graduel_angulo.txt)
 

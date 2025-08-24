@@ -1,15 +1,23 @@
-# (2) 07 // introduction à Java
+## (2) 07 // introduction à Java
 
 Histoire:
 
 | Binaire
+
 Assambleur |  |
+
 | --- | --- |
+
 | Cobol / Fortran | Impếratif |
+
 | Basic | (Entre les deux) |
+
 | Smalltalk | Procédural |
+
 | C / Pascal | Procédural |
+
 | C++ | Objet |
+
 | Java | Objet |
 
 Tout est objet.

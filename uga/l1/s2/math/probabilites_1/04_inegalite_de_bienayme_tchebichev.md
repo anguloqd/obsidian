@@ -1,8 +1,8 @@
-# 04 // inégalité de bienaymé-tchebichev
+## 04 // inégalité de bienaymé-tchebichev
 
-# Inégalité de Bienaymé-Tchebichev
+## Inégalité de Bienaymé-Tchebichev
 
-## L’inégalité : une borne supérieure utile sur une V.A $X$
+### L’inégalité : une borne supérieure utile sur une V.A $X$
 
 $$
 P(|X - \mu| \ge k\sigma) \le \frac{1}{k^2}
@@ -15,7 +15,7 @@ L’interprétation est que la probabilité que la valeur de $X$ soit à $k$ éc
 - La variance $σ$ est différent de zéro.
 - Cette inégalité est seulement utile quand $k > 1$.
 
-## Le raisonnement
+### Le raisonnement
 
 La probabilité que la valeur de $X$ soit éloignée de la moyenne $\mu$ devient de plus en plus petit.
 

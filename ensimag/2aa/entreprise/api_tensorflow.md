@@ -1,7 +1,8 @@
-# Guide API de TensorFlow
-## Opérations TensorFlow de base
+## Guide API de TensorFlow
 
-### Création et manipulation de tenseurs
+### Opérations TensorFlow de base
+
+#### Création et manipulation de tenseurs
 
 ```python
 import tensorflow as tf
@@ -28,7 +29,7 @@ tf.rank(tensor)  # nombre de dimensions
 tf.size(tensor)  # éléments totaux
 ```
 
-### Opérations sur les tenseurs
+#### Opérations sur les tenseurs
 
 ```python
 # Opérations arithmétiques
@@ -70,9 +71,9 @@ tf.squeeze(tensor)
 tf.tile(tensor, multiples)
 ```
 
-## API Séquentielle de Keras
+### API Séquentielle de Keras
 
-### Création de modèles
+#### Création de modèles
 
 ```python
 from tensorflow.keras.models import Sequential
@@ -94,7 +95,7 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 ```
 
-### Compilation de modèles
+#### Compilation de modèles
 
 ```python
 # Compilation de base
@@ -112,7 +113,7 @@ model.compile(
 )
 ```
 
-### Entraînement de modèles
+#### Entraînement de modèles
 
 ```python
 # Entraînement de base
@@ -143,9 +144,9 @@ history = model.fit(
 )
 ```
 
-## API Fonctionnelle de Keras
+### API Fonctionnelle de Keras
 
-### Création de modèles
+#### Création de modèles
 
 ```python
 from tensorflow.keras.layers import Input
@@ -176,9 +177,9 @@ output = Dense(1, activation='sigmoid')(merged)
 model = Model(inputs=[input1, input2], outputs=output)
 ```
 
-## Couches de base
+### Couches de base
 
-### Couches Denses
+#### Couches Denses
 
 ```python
 from tensorflow.keras.layers import Dense
@@ -197,7 +198,7 @@ Dense(64, activation='relu',
       bias_initializer='zeros')
 ```
 
-### Couches Convolutionnelles
+#### Couches Convolutionnelles
 
 ```python
 from tensorflow.keras.layers import Conv2D, Conv1D, MaxPooling2D, AveragePooling2D
@@ -217,7 +218,7 @@ tf.keras.layers.GlobalMaxPooling2D()
 tf.keras.layers.GlobalAveragePooling2D()
 ```
 
-### Couches Récurrentes
+#### Couches Récurrentes
 
 ```python
 from tensorflow.keras.layers import LSTM, GRU, SimpleRNN
@@ -239,7 +240,7 @@ model = Sequential([
 ])
 ```
 
-### Normalisation et Régularisation
+#### Normalisation et Régularisation
 
 ```python
 from tensorflow.keras.layers import BatchNormalization, LayerNormalization, Dropout
@@ -257,9 +258,9 @@ Dropout(rate=0.5)
 tf.keras.layers.SpatialDropout2D(rate=0.2)
 ```
 
-## Architectures avancées
+### Architectures avancées
 
-### Apprentissage par transfert
+#### Apprentissage par transfert
 
 ```python
 # Charger modèle pré-entraîné
@@ -287,7 +288,7 @@ for layer in base_model.layers[:-4]:
     layer.trainable = False
 ```
 
-### Couches personnalisées
+#### Couches personnalisées
 
 ```python
 class CustomLayer(tf.keras.layers.Layer):
@@ -317,7 +318,7 @@ model = Sequential([
 ])
 ```
 
-### Mécanismes d'attention
+#### Mécanismes d'attention
 
 ```python
 from tensorflow.keras.layers import MultiHeadAttention, LayerNormalization
@@ -344,9 +345,9 @@ class TransformerBlock(tf.keras.layers.Layer):
         return self.layernorm2(out1 + ffn_output)
 ```
 
-## Pipeline de Données (tf.data)
+### Pipeline de Données (tf.data)
 
-### Création de jeux de données
+#### Création de jeux de données
 
 ```python
 # Depuis tenseurs
@@ -369,7 +370,7 @@ dataset = tf.data.Dataset.from_generator(
 dataset = tf.data.Dataset.list_files('path/to/images/*.jpg')
 ```
 
-### Transformations de jeux de données
+#### Transformations de jeux de données
 
 ```python
 # Fonction map
@@ -396,9 +397,9 @@ def augment_image(image, label):
 train_dataset = train_dataset.map(augment_image)
 ```
 
-## Évaluation et prédiction de modèles
+### Évaluation et prédiction de modèles
 
-### Évaluation
+#### Évaluation
 
 ```python
 # Évaluer sur données test
@@ -416,7 +417,7 @@ predictions = model.predict(X_test)
 predicted_classes = tf.argmax(predictions, axis=1)
 ```
 
-### Callbacks
+#### Callbacks
 
 ```python
 from tensorflow.keras.callbacks import *
@@ -452,7 +453,7 @@ class CustomCallback(tf.keras.callbacks.Callback):
             self.model.stop_training = True
 ```
 
-## Optimiseurs
+### Optimiseurs
 
 ```python
 from tensorflow.keras.optimizers import Adam, SGD, RMSprop, Adagrad
@@ -476,7 +477,7 @@ def scheduler(epoch, lr):
 lr_callback = tf.keras.callbacks.LearningRateScheduler(scheduler)
 ```
 
-## Fonctions de perte
+### Fonctions de perte
 
 ```python
 from tensorflow.keras.losses import *
@@ -498,7 +499,7 @@ def custom_loss(y_true, y_pred):
 model.compile(optimizer='adam', loss=custom_loss)
 ```
 
-## Métriques
+### Métriques
 
 ```python
 from tensorflow.keras.metrics import *
@@ -531,7 +532,7 @@ class CustomMetric(tf.keras.metrics.Metric):
         return self.total / self.count
 ```
 
-## Sauvegarde et chargement de modèles
+### Sauvegarde et chargement de modèles
 
 ```python
 # Sauvegarder modèle entier
@@ -551,9 +552,9 @@ with open('model_architecture.json', 'w') as json_file:
     json_file.write(model_json)
 ```
 
-## Techniques d'entraînement avancées
+### Techniques d'entraînement avancées
 
-### Entraînement en précision mixte
+#### Entraînement en précision mixte
 
 ```python
 # Activer précision mixte
@@ -567,7 +568,7 @@ model = Sequential([
 ])
 ```
 
-### Gradient tape (entraînement personnalisé)
+#### Gradient tape (entraînement personnalisé)
 
 ```python
 @tf.function
@@ -588,7 +589,7 @@ for epoch in range(epochs):
         loss = train_step(x_batch, y_batch)
 ```
 
-## Modèles courants de LeetCode
+### Modèles courants de LeetCode
 
 ```python
 # Modèle de classification binaire

@@ -1,10 +1,10 @@
-# 00 // TPs
+## 00 // TPs
 
-# TP1
+## TP1
 
 [17:22:19] Error while executing SQL query on database 'le_grand_bazard (1)': near ")": syntax error → Error escribiendo un nombre de una columna (columna no encontrada) o olvidaste importar la tabla de la columna
 
-## #1
+### #1
 
 Donner les noms et couleurs de tous les produits.
 
@@ -15,7 +15,7 @@ SELECT DISTINCT NOMP, COULEUR
 FROM PRODUIT
 ```
 
-## #2
+### #2
 
 Donner les noms et quantités en stock des produits de couleur rouge.
 
@@ -27,9 +27,10 @@ FROM PRODUIT
 WHERE COULEUR = "rouge"
 ```
 
-## #3
+### #3
 
 Donner les numéros de vente, le nom du client, la quantité vendue pour les ventes du
+
 produit de nom « torchon », réalisées avant le 12/09/87 ;
 
 R = (VENTE(NOMP=’*torchon*’, DATEV < '1987-09-12') $\bowtie$ PRODUIT)[NVEN,NOMC,QTV]
@@ -40,7 +41,7 @@ FROM VENTE, PRODUIT
 WHERE (NPRV=NPRO) AND NOMP='torchon' AND DATEV < '1987-09-12'
 ```
 
-## #4
+### #4
 
 Donner les noms des clients ayant acheté au moins un produit de couleur verte ;
 
@@ -52,7 +53,7 @@ FROM VENTE, PRODUIT
 WHERE (NPRV=NPRO) AND COULEUR='vert'
 ```
 
-## #5
+### #5
 
 Donner les noms des fournisseurs qui sont également des clients ;
 
@@ -64,9 +65,10 @@ FROM VENTE, ACHAT
 WHERE NOMF=NOMC
 ```
 
-## #6
+### #6
 
 Donner les noms des fournisseurs qui fournissent les produits de couleur bleu et dont la
+
 quantité en stock (actuellement) est inférieur à 100
 
 R = (ACHAT(COULEUR=’bleu’, QTP<100) $\bowtie$ PRODUIT)[NOMF]
@@ -77,7 +79,7 @@ FROM ACHAT, PRODUIT
 WHERE NPRA=NPRO AND COULEUR='bleu' AND QTP<100
 ```
 
-## #7
+### #7
 
 Donner le nom des fournisseurs avec lesquels aucune commande de produit n’a été réalisée depuis le 30/06/87 ;
 
@@ -95,9 +97,10 @@ WHERE NOMF NOT IN (SELECT DISTINCT NOMF
 
 // mmm, il semble que DISTINCT est comme un quant. existentiel
 
-## #8
+### #8
 
 Donner pour chaque produit, les noms des fournisseurs du produit et les noms des clients
+
 l’ayant acheté ;
 
 $R$ = (ACHAT $\bowtie$ PRODUIT $\bowtie$ VENTE)[NOMP,NOMF,NOMC]
@@ -108,7 +111,7 @@ FROM PRODUIT, ACHAT, VENTE
 WHERE NPRO=NPRA AND NPRO=NPRV
 ```
 
-## #9
+### #9
 
 Donner les noms des clients ayant acheté au moins une fois de tous les produits (actuellement) disponibles !!! (les produits une fois vendus peuvent être non-disponibles actuellement);
 
@@ -134,7 +137,7 @@ WHERE NOMC NOT IN (SELECT DISTINCT A.NOMC
 // eso significa que ellos compraron todas los prod. actmnt. dispo
 ```
 
-## #10
+### #10
 
 Donner les noms des fournisseurs qui fournissent tous les produits ;
 
@@ -156,13 +159,13 @@ WHERE NOMF NOT IN
 // un peu la même idée qu'avant
 ```
 
-## #11
+### #11
 
 Donner, pour chaque couleur, le nombre de produits de cette couleur ;
 
 Pas d’expression en algèbre relationnelle.
 
-Somme de quantités individuelles ou juste la “version” de chaque article ? 
+Somme de quantités individuelles ou juste la “version” de chaque article ?
 
 ```sql
 SELECT COULEUR, COUNT(COULEUR)
@@ -172,7 +175,7 @@ GROUP BY COULEUR
 // on utilise souvent GROUP BY avec les fonction agrégatives comme COUNT
 ```
 
-## #12
+### #12
 
 Donner le nom et le nombre des produits vendus lors de la plus grosse vente.
 
@@ -197,13 +200,13 @@ WHERE DATEV = (SELECT DATEV
 // un produit cartesien !
 ```
 
-Partie : Travaux Pratique. Pour chacune des requêtes précédentes donner les lignes résultats obtenues. La base de données est téléchargeable sur le page du cours. Le fichier s’appelle « le grand [bazard.bd](http://bazard.bd/) ». 
+Partie : Travaux Pratique. Pour chacune des requêtes précédentes donner les lignes résultats obtenues. La base de données est téléchargeable sur le page du cours. Le fichier s’appelle « le grand [bazard.bd](http://bazard.bd/) ».
 
-# TP2
+## TP2
 
 file:///C:/Users/Daniel/Downloads/tp02.pdf
 
-## #1
+### #1
 
 Donner le nom de tous les employés.
 
@@ -212,7 +215,7 @@ SELECT ENAME
 FROM EMP;
 ```
 
-## #2
+### #2
 
 Donner le nom et la date d’embauche des employés du département 20
 
@@ -222,7 +225,7 @@ FROM EMP
 WHERE DEPTNO='20';
 ```
 
-## #3
+### #3
 
 Donner tous les salaires perçus par les employés de l’entreprise.
 
@@ -231,7 +234,7 @@ SELECT DISTINCT SAL
 FROM EMP;
 ```
 
-## #4
+### #4
 
 Donner le nom et le numéro du département des employés travaillant à Dallas.
 
@@ -243,9 +246,10 @@ FROM EMP E, DEPT D
 WHERE (E.DEPTNO = D.DEPTNO) AND LOC='DALLAS';
 ```
 
-## #5
+### #5
 
 Donner le nom et le salaire des employés dont le nom commence par un ’M’ et dont le
+
 salaire est supérieur à 1290$.
 
 ```sql
@@ -254,7 +258,7 @@ FROM EMP
 WHERE SAL > 1290 AND ENAME LIKE 'M%';
 ```
 
-## #6
+### #6
 
 Donner les départements employant des CLERK, SALESMAN **et** des ANALYST.
 
@@ -286,7 +290,7 @@ AND (DEPTNO, 'ANALYST') IN (SELECT DEPTNO, JOB FROM subq)
 
 Parece ser que IN no toma tablas nombradas en la misma query
 
-## #7
+### #7
 
 Donner le nom des chefs dont les employés perçoivent des commissions.
 
@@ -300,9 +304,10 @@ FROM EMP A, EMP B
 WHERE A.MGR = B.EMPNO AND A.COMM > 0;
 ```
 
-## #8
+### #8
 
 Donner le nom et le salaire des employés des départements de Chicago et Dallas dont le
+
 salaire est supérieur à 1000$.
 
 [09:55:23] Error while executing SQL query on database 'les_employes': near ")": syntax error
@@ -317,7 +322,7 @@ FROM EMP E, DEPT D
 WHERE E.DEPTNO = D.DEPTNO AND LOC IN ('CHICAGO', 'DALLAS') AND SAL > 1000
 ```
 
-## #9
+### #9
 
 Donner le nom des employés qui gagnent plus que leur chef.
 
@@ -329,7 +334,7 @@ FROM EMP A, EMP B
 WHERE A.MGR = B.EMPNO AND A.SAL > B.SAL
 ```
 
-## #10
+### #10
 
 Donner la hiérarchie de l’entreprise. ORDER BY et tableau SALGRADE, on associe un grand salaire a une grande niveau dans la hiérarchie
 
@@ -369,7 +374,7 @@ SELECT * FROM NIV4
 ORDER BY NIVEAU
 ```
 
-## #11
+### #11
 
 Donner le nombre d’employés par niveau de hiérarchie.
 
@@ -405,11 +410,11 @@ UNION
 SELECT NIVEAU, COUNT(*) FROM NIV4
 ```
 
-## #12
+### #12
 
 Donner la moyenne des salaires par niveau de hiérarchie.
 
-Noter qu’on ajouter SAL aux colonnes de chaque tableau des niveaux 
+Noter qu’on ajouter SAL aux colonnes de chaque tableau des niveaux
 
 ```sql
 WITH
@@ -443,11 +448,12 @@ UNION
 SELECT NIVEAU, AVG(SAL) FROM NIV4
 ```
 
-# TP3
+## TP3
 
 (Les requêtes commencent de la question 5)
 
 Q6 : Donner le nom des clients qui ne visitent **aucun** monument.
+
 ”Aucun” monument = tous les clients - clients qui visitent au moins un monument
 
 **TOUS = AUCUN (NOT(EGALITE))+ AU MOINS UN (EGALITE SIMPLE)**

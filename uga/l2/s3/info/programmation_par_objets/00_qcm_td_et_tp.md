@@ -1,8 +1,8 @@
-# 00 // QCM, TD et TP
+## 00 // QCM, TD et TP
 
-# QCM
+## QCM
 
-## QCM 1
+### QCM 1
 
 composition de classes aussi possible !
 
@@ -12,7 +12,7 @@ tout objet a un type, mais n’est pas un type.
 
 ATTENTION AU LANGAGE !
 
-## QCM 2
+### QCM 2
 
 Déclaration de “`static` int i” vs juste “int i” dans une classe et l’impact lors de l’affectation d’une instance
 
@@ -25,7 +25,7 @@ int i = 2
 
 byte b = (byte) b,
 
-## QCM 3
+### QCM 3
 
 Supposons :
 
@@ -39,15 +39,16 @@ Même si les valeurs de types simples (dans ce cas, int) sont alloués sur le ta
 
 En plus, COMMANTAIRES WIKIDOOOOCCC. ils commencent avec /** mais finissent avec */
 
-## QCM 5
+### QCM 5
 
-Supposons un constructeur qui prend deux `doubles` en paramètres. Si on passe deux `int` (et s’il n’existe pas un constr. qui prend deux int), les `int` passés en paramètres seront castés. 
+Supposons un constructeur qui prend deux `doubles` en paramètres. Si on passe deux `int` (et s’il n’existe pas un constr. qui prend deux int), les `int` passés en paramètres seront castés.
 
 Autre question : on peut aussi initialiser des attributs dans les constructeurs. **Notons que “initialiser” veut dire de les donner finalement une valeur, pas de “*déclarer”* leur existence, qui est différent** !
 
-## QCM 6
+### QCM 6
 
 #1 : sous-classse avec constrct. vide → appele construc. de la super-classe par défaut.
+
 S’il n’existe pas (on définit d’autres construct. différents de celui par défaut et du coup le constrct. défaut n’existe plus) on va planter !
 
 En plus, super(z) doit être en première instruction !!
@@ -83,9 +84,9 @@ Il peut aider cette questionnaire :
 
 #3 : private (méthode) ne peut pas être redéfini dans les sous-classes.
 
-#4 : ce n’est pas surcharge s’il n’ya extends (héritage) !! 
+#4 : ce n’est pas surcharge s’il n’ya extends (héritage) !!
 
-## QCM 7
+### QCM 7
 
 **Liaison dynamique** : elle est seulement possible si le type de la référence est super-classe du type de l’objet. Si c’est pas le cas, on a erreur de compilation !
 
@@ -97,15 +98,15 @@ A x = new B(); // ok. aucun souci. type ref super-classe de type objet.
 B x = new A(); // erreur, type ref. est sous-classe de type objet.
 ```
 
-**Classes `final`** : elle sont immodifiables termes de classes, mais leurs instances sont effectivement modifiables ! (leurs attributs, par exemple, tant qu’ils soient pas `final` eux-mêmes)**. Il est utile de rappeler que sont immodifiables en termes de classes et qu’elle sont pas héritables (étendables)**, mais qu’elles peuvent hériter ! 
+**Classes `final`** : elle sont immodifiables termes de classes, mais leurs instances sont effectivement modifiables ! (leurs attributs, par exemple, tant qu’ils soient pas `final` eux-mêmes)**. Il est utile de rappeler que sont immodifiables en termes de classes et qu’elle sont pas héritables (étendables)**, mais qu’elles peuvent hériter !
 
 **Attributs `final`** : les attributs `final` ne sont pas modifiables après leur initialisation. Cela dit, tout objet prend un valeur par défaut s’il est seulement déclaré sans initialiser. Cette valeur par défaut n’est pas une initialisation, donc on peut la modifier seulement une fois avec **l’initialisation DANS LE CONSTRUCTEUR**, et puis elle reste immodifiable.
 
-**Classes et méthodes `abstract`** : une classe abstraite peut contenir une méthode non-abstraite ! Mais le contraire est faux ! Aussi, definir le corps d’une méthode abstract n’est pas possible. 
+**Classes et méthodes `abstract`** : une classe abstraite peut contenir une méthode non-abstraite ! Mais le contraire est faux ! Aussi, definir le corps d’une méthode abstract n’est pas possible.
 
 **Similitude de `final` et `abstract`** : une classe finale/abstraite peut contenir une méthode qui ne l’est pas. Seulement dans le cas `final`, la méthode est implicitement `final` aussi !
 
-## QCM 8
+### QCM 8
 
 Tu ne peux pas laisser une méthode implémentée d’une interface sans finir dans une classe. Rappel : une classe propre (non-abstraite) doit avoir des méthodes finalisées, donc définir celles qui viennent des classes abstraites et des interfaces !
 
@@ -120,9 +121,9 @@ int[] c = new int[];  // erreur !
 											// on a besoins forcément d'un nombre dans les crochets
 ```
 
-# TD
+## TD
 
-## TD 1
+### TD 1
 
 [https://miashs_www.u_ga.fr/~davidjer/inff3/inff3_2223_td1.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td1.pdf)
 
@@ -131,10 +132,12 @@ Diagramme de classe de UML :
 ![](ressources/00_qcm_td_et_tp_untitled.png)
 
 « une voiture est composée d'un moteur et de plusieurs roues » (*=plusieurs).
+
 « une roue est associée une et une seule voiture ».
+
 Nom : diagramme de classes d’UML.
 
-## TD 2
+### TD 2
 
 [https://miashs_www.u_ga.fr/~davidjer/inff3/inff3_2223_td2.pdf](https://miashs-www.u-ga.fr/~davidjer/inff3/inff3-2223-td2.pdf)
 
@@ -153,7 +156,7 @@ void sAjouter(Temp t){ // OK.
 ```
 
 - Exo 3 : si on change dans un bloc de code la valeur d’une variable (non-attribut) extérieur à lui, on la change pour TOUT le programme `main`. On ne la change pas dans les classes, par contre.
-    
+
     ```java
     public class Portee {
     	public static void main(String[] args) {
@@ -175,7 +178,6 @@ void sAjouter(Temp t){ // OK.
     	}
     }
     ```
-    
 
 TD2 : REVISE DANS LE PHOTOS. CHAQUE FOIS ON APPELLE UNE FONCTION, ON RENTRE DANS LE CONTEXTE DE LA CLASS:
 
@@ -187,4 +189,4 @@ L’analogie d’une variable globale dans java est de utiliser static dans la s
 
 la seule class d’un fichier qui peut avoir le mot cle public est la classe principal qui contient le main !!!!!!!! on peut pas mettre le mot cle public par toute les classes.
 
-# TP
+## TP

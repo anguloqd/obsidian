@@ -1,8 +1,8 @@
-# 05 // produit scalaire et algèbre bilinéaire
+## 05 // produit scalaire et algèbre bilinéaire
 
-# Définitions
+## Définitions
 
-## Produit scalaire : ce n’est pas que le produit matriciel
+### Produit scalaire : ce n’est pas que le produit matriciel
 
 Le produit scalaire n’est pas seulement le produit matriciel. En réalité, un produit scalaire est une opération d’une famille d’opération qui satisfait quelques propriétés :
 
@@ -15,11 +15,11 @@ $\langle x+ \lambda x', y \rangle = \langle x,y \rangle + \lambda\langle x',y \r
 - Symétrie : $\langle x,y \rangle = \langle y,x \rangle$
 - Définition positive : $\langle x,x \rangle \ge 0$ et  $\langle x,x \rangle = 0 \implies x = 0$.
 
-# Norme et distance issues
+## Norme et distance issues
 
 Une norme et une distance sont aussi des concepts qui ne sont pas représentés par une seule fonction, mais par une famille de fonctions qui vérifie quelques propriétés.
 
-## Norme : $||x||$
+### Norme : $||x||$
 
 Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitivement capture une “distance” d’un point à partir de l’origine. Elle doit vérifier les conditions suivantes :
 
@@ -27,18 +27,18 @@ Une norme est toute fonction $f : x \mapsto ||x|| \in \mathbb{R}^+$ qui intuitiv
 La norme est multiplicative, càd. $f(xy)=f(x)f(y)$
 - $||x+y|| \le ||x|| + ||y||$
 Inégalité triangulaire
-- $||x|| = 0 \implies x = 0$ 
+- $||x|| = 0 \implies x = 0$
 Si la longueur ou magnitude d’un élément est $0$, donc il est le vecteur nul
 
 On peut définir une ***norme issue du produit scalaire*** : $||x|| = \sqrt{\langle x,x \rangle}$, ce qui nous donne la norme euclidienne, la norme la plus populaire (la ligne diagonale entre deux points). Cela dit, on peut avoir des normes qui ne sont pas issues ou définies à partir du produit scalaire.
 
 **Théorème : Inégalité de Cauchy-Schwarz**. $|\langle x,y \rangle| \le \sqrt{||x||}\sqrt{||y||}$. Cette inégalité devient une égalité stricte en valeur absolue si et seulement si $x$ et $y$ sont colinéaires entre eux.
 
-## Distance : $d(x,y)$
+### Distance : $d(x,y)$
 
 Une distance entre deux points est toute fonction $f : (x,y) \mapsto d(x,y) \in \mathbb{R}^+$ qui vérifie ce qui suit :
 
-- $d(x,y)=0 \iff x=y$ 
+- $d(x,y)=0 \iff x=y$
 Si la distance entre deux points est $0$, $x$ et $y$ sont à la même position
 - $d(x,y)=d(y,x)$
 La distance de $x$ à $y$ est la même de $y$ à $x$, on appelle ceci *symétrie*
@@ -55,15 +55,15 @@ Similairement, on peut définir une distance issue d’une norme : $d(x,y)=||x-y
 
 Malgré ça, dans la pratique une distance est issue par une norme et les distances “inusuelles” sont juste utilisés pour induire un concept. Par exemple, $d_2$ donne un exemple d’un espace métrique incomplet.
 
-# Orthogonalité
+## Orthogonalité
 
-## Définition et théorème de Pythagore généralisé
+### Définition et théorème de Pythagore généralisé
 
 On dit que deux vecteurs $x$ et $y$ sont **orthogonaux** si et seulement si $\langle x,y \rangle = 0$.
 
 **Théorème de Pythagore**. Deux vecteurs $x$ et $y$ sont orthogonaux si et seulement si |$|x+y||^2=||x||^2+||y||^2$. De manière générale, une famille de vecteurs $\{x_i\}$ est orthogonale deux à deux si et seulement si $||x_1+ \dots+ x_n||^2 = ||x_1||^2 + \dots + ||x_n||^2$.
 
-## Un ensemble $F^\perp$ orthogonal à un autre $F$
+### Un ensemble $F^\perp$ orthogonal à un autre $F$
 
 Avec cette définition, on peut définir un ensemble $F^\perp \in E$ de vecteurs orthogonal à un autre ensemble $F\in E$ de vecteurs tel que $F^\perp = \{y\in E : \langle x,y \rangle = 0, \forall x \in F \}$. C’est-à-dire, chaque vecteur de $F^\perp$ est orthogonal à tous les vecteurs de $F$.
 
@@ -75,9 +75,9 @@ On peut donc voir chaque vecteur de $E$ comme une somme d’un vecteur de $F$ et
 
 **Note** : on peut voir donc $p_F(x) + p_{F^\perp}(x)$ comme la fonction identité $\text{Id}(x)$.
 
-# Bases orthonormées
+## Bases orthonormées
 
-## Définition
+### Définition
 
 Soit $B=\{e_i\}$ une base de $E$. Elle est orthonormée si :
 
@@ -102,7 +102,7 @@ $$
 
 **Théorème**. Soit $E$ un espace (hilbertien ou hermitien) de dimension $n$ muni d’un produit scalaire/hermitien. Donc, il existe dans $E$ des bases orthonormées.
 
-## Projection orthogonale : $p_F(u)=\sum_{i=1}^n \langle u, e_i \rangle e_i$
+### Projection orthogonale : $p_F(u)=\sum_{i=1}^n \langle u, e_i \rangle e_i$
 
 Sur l’espace vectoriel $E$ de dimension $n$, soit $F$ un sous-espace de base orthonormé $\{e_1\}$.
 
@@ -114,9 +114,9 @@ $$
 
 La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur $u$ est le point qui minimise la distance de $u$ à $v$. C’est-à-dire : $||u-p_F(u)||=\inf \{ ||u-v||,  v\in F\}$.
 
-# Orthonormalisation : procédé de Gram-Schmidt
+## Orthonormalisation : procédé de Gram-Schmidt
 
-## L’algorithme et le théorème qui le garantit
+### L’algorithme et le théorème qui le garantit
 
 > [!note]
 > Théorème. Si $\{v_i\}$ est famille libre, donc il existe une unique $\{e_i\}$ orthonormée telle que :

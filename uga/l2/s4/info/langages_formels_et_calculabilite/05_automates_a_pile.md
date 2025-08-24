@@ -1,10 +1,10 @@
-# 05 // automates à pile
+## 05 // automates à pile
 
 [Slides du chapitre 5](ressources/05_automates_a_pile_chapitre_5_compressed.pdf)
 
-# Motivation
+## Motivation
 
-## Limitations des automates finis
+### Limitations des automates finis
 
 Ils existent des certains langages que les automates finis ne peuvent pas accepter, en raison de leur manque de mémoire. Ceci signifie qu'ils ne peuvent pas être utilisés pour analyser les langages, tels que les langages de programmation, qui peuvent avoir des structures emboitées sur une profondeur arbitraire.
 
@@ -20,19 +20,19 @@ Etant donnée une séquence de parenthèses ouvrantes (gauches), il n'y a donc a
 
 Pour surmonter les limitations des AEF, il semble opportun de construire une machine avec une forme de mémoire qui permettrait de “se souvenir” des parties de chaîne ou de mot déjà lues. **Voilà la motivation d’ajouter une pile aux automates**.
 
-# Automate à pile
+## Automate à pile
 
 Un automate à pile (AAP) peut être vu comme un automate fini avec l’ajout d’une pile (ou “stack” en anglais) vers laquelle des symboles peuvent être empilés (”pushed”) ou dépilés (”popped”).
 
 ![untitled](ressources/05_automates_a_pile_untitled.png)
 
-## La pile et ses symboles
+### La pile et ses symboles
 
 Par rapport à la pile, la machine peut seulement empiler des symboles sur le haut de la pile et les lire à partir du haut de la pile – c.à.d. elle n'a accès à aucune autre partie que le haut de la pile. **C’est comme une boîte de Pringles** : pour atteindre le troisième symbole à partir du haut, les deux symboles du dessus doivent être dépilés d'abord.
 
 Les symboles de la pile forment un ensemble fini de symboles $\Gamma$ qui peut inclure tout l’alphabet de la machine, mais aussi de symboles uniques à la pile qui marchent comme de **marqueurs internes**. Un symbole spécial peut être utilisé pour marquer le fond de la pile (quand il est dépilé, on sait alors que la pile est vide). On adoptera le symbole $\$$.
 
-## Les transitions
+### Les transitions
 
 Pour les AEF, les transitions dépendent de l’état actuel $q$ et du symbole actuellement lu $s$, et il passe un nouveau état $q^\prime$. Donc, pour les AEF, les transitions sont une fonction comme suit :
 
@@ -52,7 +52,7 @@ De la même manière que la tête de lecture ou la bande de lecture est supposé
 
 **Note #2** : dans les AAP, le symbole empilé, le symbole dépilé, et le symbole lu sur la bande, peuvent être $\varepsilon$. Ceci permet à la machine de changer d'état sans lire de symbole ou altérer sa pile.
 
-## Définition mathématique d’un AAP
+### Définition mathématique d’un AAP
 
 On peut finalement définir formellement un automate à pile appelé $M$ comme une tuple :
 
@@ -68,9 +68,9 @@ $$
     - $\$ \in \Gamma$ : le symbole initial de la pile
 - $\Delta$ : la (multi-)fonction de transition de la forme $\Delta(q, r, p) = (\{q^\prime, p^\prime\}_{{}_{i}})$
 
-# Diagramme de transitions pour les AAP
+## Diagramme de transitions pour les AAP
 
-## Illustrations et transitions
+### Illustrations et transitions
 
 ![Exemple de aap.](ressources/05_automates_a_pile_untitled_1.png)
 
@@ -82,7 +82,7 @@ En différence avec les diagramme de transitions des AEF, les arcs des AAP ont d
 - $y$ est le symbole dépilé
 - $z$ est le symbole empilé
 
-## Transition $\Delta$ en fonction de mots au lieu de symboles
+### Transition $\Delta$ en fonction de mots au lieu de symboles
 
 Par rapport à la fonction de transition $\Delta$, on la définir aussi pas en fonction de symboles, mais plutôt en fonction de mots :
 
@@ -96,7 +96,7 @@ $$
 
 Telle transition se lit comme suit : “si dans l’état $q$, l’automate lit le mot $u$ sur le ruban (de gauche à droite) et si le mot $\alpha$ figure en haut de la pile (de haut en bas), alors l’automate passe dans l’état $q^\prime$ : le mot $u$ a été lu et $\alpha$ est remplacé par $\beta$ en haut de la pile”.
 
-### Implications et cas particuliers
+#### Implications et cas particuliers
 
 Avec cette définition de $\Delta$ en fonction de mots, il y a quelques implications à remarquer à ce qui concerne la chaîne vide $\varepsilon$. Reprenons la forme $\Delta(q, u, \alpha) = (q^\prime, \beta)$ :
 
@@ -107,7 +107,7 @@ Ici, **on n’a rien empilé**.
 - Si $\alpha = \varepsilon$ et $\beta = \varepsilon$, alors la pile est inchangée.
 - Si $u = \varepsilon$, le changement d’état et la modification de la pile se font sans mouvement de la tête ou du ruban. **Ceci ne signifie pas qu’on lit une case en blanc !** Une case en blanc n’est pas la même qu’un mot vide, un mot vide ne contient pas de symboles tant que le blanc est lui-même un symbole.
 
-### Exemple
+#### Exemple
 
 Voyons la transition (formellement, la correspondance de $\Delta$) suivante :
 
@@ -123,7 +123,7 @@ $$
 
 Étape 2
 
-## Configurations : $(q, u, \sigma)$
+### Configurations : $(q, u, \sigma)$
 
 Une configuration est juste un triplet de la forme $(q,u, \sigma)$ où $q$ est un état, $u$ est le mot de $\Sigma^*$restant à lire et $\sigma$ est un mot de $\Gamma^*$ contenu dans la pile .
 
@@ -141,7 +141,7 @@ $$
 
 Un cas particulier de la configuration terminale est $(q, \varepsilon, \varepsilon)$, où l’automate est acceptant du mot et sur une pile vide. Ceci est équivalent à l’$\varepsilon$-transition des AEF.
 
-## Exemple
+### Exemple
 
 Supposons un langage $L = \{a^nb^n : n \ge 1\}$. On veut tracer un diagramme de transitions d’un AAP $M$ qui accepte tous les mots de ce langage.
 
@@ -156,7 +156,6 @@ $$
 \\
 \text{C. initiale}: (q,aaabbb,\$)\\
 \text{C. finale}: (q, \varepsilon, \varepsilon)
-
 $$
 
 ![untitled](ressources/05_automates_a_pile_untitled_4.png)
@@ -181,17 +180,17 @@ Reprenons un diagramme de ruban et pile pour voir les étapes :
 
 Étape 4 : ici l’AAP a conclu. **Ceci n’est pas une transition**, c’est juste pour montrer l’AAP éteint.
 
-# AAP et langages
+## AAP et langages
 
-## Similitudes entre l’AAP et l’AEF
+### Similitudes entre l’AAP et l’AEF
 
-Tout pareil que l’AEF, l’AAP accepte une chaîne s’il peut lire tout un mot et arrivant à une configuration finale à partir d’une configuration initiale. 
+Tout pareil que l’AEF, l’AAP accepte une chaîne s’il peut lire tout un mot et arrivant à une configuration finale à partir d’une configuration initiale.
 
 Si $M$ est un AAP, on note $L(M)$ le langage accepté par $M$, càd. l’ensemble des chaînes acceptés par $M$. En plus, si les transitions de l’APP données par la fonction $\Delta$ sont toutes de la forme $\Delta(q,u,\varepsilon)=(q^\prime, \varepsilon)$, **$M$ simule un AEF, car elle n’utilise pas la pile !**
 
 Ce dernier fait signifie que tous les langages acceptés par les AEF—les langages réguliers—sont aussi des langages acceptés par les AAP. La réciproque n’est pas vrai : au tout début du chapitre on a mentionné un exemple de langage accepté par un AAP mais pas par un AEF.
 
-### Exemple
+#### Exemple
 
 On se donne un $M$ avec les paramètres suivants :
 
@@ -215,9 +214,9 @@ Le langage accepté par $M$ est le langage $L(M)=\{wcw^R : w \in \{a,b\}^*\}$, o
 
 Celle-ci est la solution finale. La manière d’y arriver est décrite dessous.
 
-## AAP et grammaires hors-contextes
+### AAP et grammaires hors-contextes
 
-### Rappel et explication du terme “contexte”
+#### Rappel et explication du terme “contexte”
 
 > [!note]
 > **Rappel**. Dans une grammaire hors-contexte (GHC), la partie gauche d'une règle de grammaire est un non-terminal et la partie droite peut consister en tout nombre de terminaux ou non-terminaux, dans n'importe quel ordre.
@@ -234,7 +233,7 @@ La première règle est une règle hors-contexte puisque $A$ peut être réécri
 
 **Théorème**. Les langages générés par les grammaires hors-contexte sont **exactement** les langages acceptés par les automates à piles.
 
-### Algorithme : définir les paramètres de l’AAP à partir des ceux de la GHC
+#### Algorithme : définir les paramètres de l’AAP à partir des ceux de la GHC
 
 Les paramètres d’une grammaire sont $G = \{V_T, V_N, S, R\}$. Donc, pour définir ceux de l’AAP $M$, on les fixe comme suit :
 
@@ -250,32 +249,38 @@ $$
 - $F=\{r\}$
 - $\Delta$ sera la fonction de transition dérivé des règles de la grammaire.
 
-### Algorithme : dériver $\Delta$ de l’AAP à partir de $R$ de la GHC
+#### Algorithme : dériver $\Delta$ de l’AAP à partir de $R$ de la GHC
 
 L’algorithme pour créer un AAP à partir d’une GHC est comme suit :
 
 1. D'abord, il marque le fond de la pile avec $\$$.
 2. Ensuite, il empile $S$, le symbole de départ de la grammaire, sur la pile et entre dans l'état $q$.
-    
+
     $$
     \Delta(p,\varepsilon,\varepsilon) = (q,S)
-    $$
+
+$$
+
     
 3. Si $\$$ n’est pas encore revenu sur le dessus de la pile, donc :
     1. Soit l'automate dépile un non-terminal $A$ du haut de la pile et le remplace par la partie droite d'une règle de réécriture (de la forme $A \Rightarrow\varphi$) pour ce non-terminal.
         
         $$
         \Delta(q,\varepsilon,A)=(q,\varphi)
-        $$
         
+$$
+
     2. Soit l'automate dépile un terminal du haut de la pile pendant qu'il lit le même terminal sur l’entrée.
         
         $$
         \Delta(q,x,x)=(q,\varepsilon)
-        $$
+        
+
+$$
         
 4. Quand $\$$ revient en haut de la pile, l'automate se déplace dans son état d'acceptation/final.
     
     $$
     \Delta(q, \varepsilon,\$)=(r,\varepsilon)
-    $$
+    
+$$

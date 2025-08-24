@@ -1,8 +1,8 @@
-# 04 // cadre général : espace probabilisé, fonction de répartition et de densité
+## 04 // cadre général : espace probabilisé, fonction de répartition et de densité
 
-# Espace probabilisé
+## Espace probabilisé
 
-## Préparation : $\sigma$-algèbre
+### Préparation : $\sigma$-algèbre
 
 Une $\sigma$-algèbre ou tribu sur un ensemble $\Omega$ est un ensemble $\mathcal{A} \subset \mathcal P(\Omega)$ qui vérifie les trois propriétés suivantes. Notons que $A$ est un sous-ensemble de $\mathcal A$.
 
@@ -14,7 +14,7 @@ Appliquant les lois de De Morgan avec les propriétés 2 et 3, on arrive a la st
 
 Les deux $\sigma$-algèbres les plus basiques et extrêmes sur $\Omega$ sont $\{\empty, \Omega\}$ et $\mathcal P (\Omega)$. Toute autre $\sigma$-algèbre reste sur ces deux extrêmes.
 
-### Propositions
+#### Propositions
 
 **Lemme**. L’intersection de deux $\sigma$-algèbres est un $\sigma$-algèbre sur $\Omega$.
 
@@ -22,7 +22,7 @@ Soit $C \in \mathcal P(\Omega)$. Il existe une plus petite $\sigma$-algèbre sur
 
 En langage naturel, $C$ est un événement, et on cherche la plus petite $\sigma$-algèbre sur les résultats qui contient l’événement.
 
-## Définition des espaces probabilisés : $\{\Omega, \mathcal A, \mathbb P\}$
+### Définition des espaces probabilisés : $\{\Omega, \mathcal A, \mathbb P\}$
 
 Pour toute la suite, on ne se limite pas à juste parler de V.A. entières mais aussi de V.A. réelles. Pour cela, il faut présenter les axiomes de la manière suivante, et en l’accompagnant d’un exemple avec un dé.
 
@@ -32,6 +32,7 @@ Un espace probabilisé est un concept mathématique pour modeler une expérience
 - $\mathcal{A}$ : une tribu, $\sigma$-algèbre ou simplement l’ensemble d’*événements*. Chaque membre de cet ensemble est formellement un “événement”, **qui est différent des “résultats”** de $\Omega$. Normalement, on prend comme $\mathcal{A}$ l’ensemble des parties de $\Omega$, c’est-à-dire $\mathcal{P}(\Omega)$.
 
 Par exemple, un événement peut être simplement que le dé montre $2$, dans ce cas $\{2\} \in \mathcal{A}$, mais aussi que le dé montre un nombre pair, donc $\{2,4,6\} \in \mathcal{A}$.
+
 - $\mathbb{P}$ : la loi de probabilités ou mesure de probabilité, qui est une fonction qui associe une probabilité à chaque événement—formellement $\mathcal{A} \mapsto [0,1]$— et qui vérifie $\mathbb{P}(X\in\Omega)$ = 1 et $\mathbb P \left( \bigcup_{i≥1} A_i \right) = \sum_{i≥1} \mathbb{P}(A_i)$, supposons que les A_i sont 2-à-2 disjoints. Ceci implique que la fonction ou application $\mathbb P$ est $\sigma$-additive.
 
 Continuant avec l’exemple, si on suppose un dé non-pipé, donc $\mathbb{P}(X \in \{2\})=\frac{1}{6}$ et $\mathbb{P}(X \text{ pair}) = \mathbb{P}(X \in \{2,4,6\}) = \frac{1}{2}$.
@@ -47,19 +48,19 @@ Par contre, pour le cas non dénombrable comme $\Omega = \mathbb{R}$, si on déf
 
 Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}(\Omega)$  et non $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ comme dans le cas dénombrable.
 
-## Propriétés des probabilités
+### Propriétés des probabilités
 
 > [!note]
 > Pour simplicité de notation, on note simplement $\mathbb P(a\in A) = \mathbb P(A)$.
 > $a$ est une variable d’intérêt dont on parle souvent, donc ce n’est pas nécessaire de la mentionner tout le temps. $A$ peut être un ensemble ou un intervalle.
 
-### Propriétés basiques
+#### Propriétés basiques
 
 - $\mathbb P (\empty) = 0$.
 - $\mathbb P (A^c) = 1 - \mathbb P (A)$.
 - Additivité simple : $\mathbb P \left( \bigcup_{i=1}^n A_i \right) = \sum_{i=1}^n \mathbb P (A_i)$. Il faut que les $A_i$ soient disjoints.
 
-### D’autres propriétés
+#### D’autres propriétés
 
 **$\sigma$-additivité d’intervalles**. Imaginons que notre espace d’événements $\mathcal A$ contient des intervalles, qu’on notera $B_n$. On en prend une famille d’intervalles et on imagine que les intervalles devient de plus en plus grandes, c’est-à-dire, le prochain intervalle contient l’actuel, ou $B_n \subset B_{n+1}$.  Donc :
 
@@ -73,9 +74,9 @@ $$
 \mathbb P \left( \bigcup_{n \ge 1} B_n\right ) \le \sum_{n \ge 1} \mathbb P (B_n)
 $$
 
-# Fonction de répartition : $F_X(x)$
+## Fonction de répartition : $F_X(x)$
 
-## La probabilité accumulée jusqu’à un certain point $t$
+### La probabilité accumulée jusqu’à un certain point $t$
 
 Soit $\mathbb P$ une loi de probabilité sur $\mathbb{R}$. On définit une fonction de répartition $F$ comme :
 
@@ -83,16 +84,17 @@ $$
 F_X(t) = \mathbb P(X\le t)
 $$
 
-Étant donné que les probabilités sont toujours entre $0$ et 
+Étant donné que les probabilités sont toujours entre $0$ et
+
 $$, et que la somme de toutes les probabilités est $1$ est la somme d’aucune est $0$, on conclut que $F$ est croissante et borné entre $0$ et $1$.  En plus, on ajoute une possibilité d’être ***continue à droite*** (càd. si elle présente des sauts, le point où se produit le saut sera inclut dans le prochain échelon et pas l’actuel).
 
 Toutes ces propriétés permettent de définir une autre unique fonction ou loi de probabilité $f$.
 
-# Fonction de densité : $f_X(x)$
+## Fonction de densité : $f_X(x)$
 
-## Presque identique à une loi de probabilité
+### Presque identique à une loi de probabilité
 
-### Motivation
+#### Motivation
 
 Dans le cadre dénombrable, on avait une fonction appelée “loi de probabilité” $\mathbb P$ qui assigne chaque valeur possible d’une expérience aléatoire avec une probabilité. Elle nous permet de dire que “la probabilité de l’expérience $X$ résulte en $x$ est $\mathbb P(X=x)$, ou que la probabilité qu’elle soit contenu dans un intervalle $[a,b]$ est $\mathbb P(a \le X \le b)$”.
 
@@ -104,7 +106,7 @@ $$
 
 Pourquoi on se souci de faire remarquer tout ça ? **Parce qu’il ne faut pas penser que la fonction de densité est la même chose que la loi de probabilité**, que c’est un erreur que j’ai déjà fait. Il peut être utile penser que la fonction de densité parle des “probabilités relatives” tant que la fonction de répartition parle des “probabilités absolues ou réelles”.
 
-### Définition et conditions
+#### Définition et conditions
 
 Pour définir une fonction de densité, on part du principe qu’on peut déterminer (ou on connaît déjà) sa fonction de répartition. Particulièrement, s’il existe une telle fonction $f_X(x)$ qui vérifie le condition suivante en bas, $f_X(x)$ est donc la fonction de densité de $\mathbb{P}$.
 
@@ -122,11 +124,11 @@ $$
 
 Ici, $\Omega$ est un ensemble des valeurs que la variable aléatoire $X$ peut prendre.
 
-# Propriétés généralisées du cas dénombrable
+## Propriétés généralisées du cas dénombrable
 
 Les propriétés et notions suivantes se généralisent aussi du cas dénombrable au cadre général: **probabilité conditionnelle, indépendance, espérance et moments**.
 
-## Par rapport à l’espérance
+### Par rapport à l’espérance
 
 Par la suite, on va s’intéresser juste aux [V.As](http://V.As) qui ont admettent une fonction de densité. Donc, l’espérance d’une telle V.A X serait comme suit :
 
@@ -149,7 +151,7 @@ L’utilité de cette décomposition est que si $\mathbb{E}[X^+]$ ou $\mathbb{E}
 
 On garde aussi la linéarité et la multiplicativité de l’espérance (cette dernière si $X_1$ et $X_2$ sont des V.A. indépendantes).
 
-### Espérances des fonctions de $X$ : on garde le domaine $\Omega_X$ et la densité $f_X$
+#### Espérances des fonctions de $X$ : on garde le domaine $\Omega_X$ et la densité $f_X$
 
 Pour calculer une espérance, on doit résoudre une intégrale défini dont l’intégrande (membre de l’intégrale ou la fonction à intégrer) est un produit : une variable et sa fonction de densité, normalement.
 
@@ -171,7 +173,7 @@ Les deux différences sont le change de $\Omega_X$ à $\Omega_{e^X}$ et le chang
 
 On pourrait, effectivement, déduire une densité $f_{e^X}$ et un domaine de définition $\Omega_{e^X}$, mais cela on va l’explorer dans la dernière section de cette note.
 
-## Par rapport à la variance
+### Par rapport à la variance
 
 Supposant encore que les V.As d’intérêt admettent une fonction de densité, une fois on connaît l’espérance $\mathbb E[X]$ d’un cadre continu, on peut en déduire la variance $\text{Var}(X)$ :
 
@@ -179,11 +181,11 @@ $$
 \text{Var}(X)=\mathbb E[(X-\mathbb E[X])^2] = \mathbb E[X^2]-\underbrace{\mathbb E[X]^2}_{\text{connu}},\text{ où } \mathbb E [X^2]=\int_{\Omega_X} x^2 \cdot f_X(x)\space dx
 $$
 
-Puisque $\mathbb E[X]$ est une constante (si elle existe; que ce n’est pas toujours le cas), $\mathbb E[X]^2$ est aussi une constante. 
+Puisque $\mathbb E[X]$ est une constante (si elle existe; que ce n’est pas toujours le cas), $\mathbb E[X]^2$ est aussi une constante.
 
-# Densité d’une V.A. fonction de $X$ : $Y=\varphi(X)$
+## Densité d’une V.A. fonction de $X$ : $Y=\varphi(X)$
 
-## Dérivation
+### Dérivation
 
 Soit $X$ une V.A. de densité $d_X(x)$. Soit $\varphi$ une fonction monotonique et continûment dérivable, soit $Y = \varphi(X)$ la V.A. dont on veut trouver sa densité. Donc, la densité $f_Y(y)$ serait :
 

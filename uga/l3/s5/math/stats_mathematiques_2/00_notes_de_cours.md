@@ -1,4 +1,4 @@
-# 00 // notes de cours
+## 00 // notes de cours
 
 Cours #2 :
 

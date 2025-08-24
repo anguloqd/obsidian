@@ -1,8 +1,8 @@
-# 03 // algorithmes de tri
+## 03 // algorithmes de tri
 
-# Tri-bulle (Bubble sort) ou tri par propagation
+## Tri-bulle (Bubble sort) ou tri par propagation
 
-## L’algorithme
+### L’algorithme
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sorting_bubblesort_anim.gif/260px-Sorting_bubblesort_anim.gif)
 
@@ -12,7 +12,7 @@
 - Il doit son nom au fait qu'il déplace rapidement les plus grands éléments en fin de tableau, comme des bulles d'air qui remonteraient rapidement à la surface d'un liquide.
 - C'est le plus lent des algorithmes de tri communément enseignés, et il n'est donc guère utilisé en pratique.
 
-## En Java
+### En Java
 
 ```java
 for(int i = 0;i < n; i++){
@@ -26,16 +26,16 @@ for(int i = 0;i < n; i++){
 }
 ```
 
-# Tri par insertion
+## Tri par insertion
 
-## L’algorithme
+### L’algorithme
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Insertion-sort-example-300px.gif/220px-Insertion-sort-example-300px.gif)
 
 - Le tri par insertion considère chaque élément du tableau et l'insère à la bonne place parmi les éléments déjà triés.
 - Ainsi, au moment où on considère un élément, les éléments qui le précèdent sont déjà triés, tandis que les éléments qui le suivent ne sont pas encore triés.
 
-## En Java
+### En Java
 
 ```java
 for(int i = 1;i < n; i++) {
@@ -49,9 +49,9 @@ for(int i = 1;i < n; i++) {
 }
 ```
 
-# Tri rapide (Quick-sort)
+## Tri rapide (Quick-sort)
 
-## L’algorithme
+### L’algorithme
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sorting_quicksort_anim.gif/260px-Sorting_quicksort_anim.gif)
 
@@ -61,12 +61,14 @@ for(int i = 1;i < n; i++) {
         1. Si 2ème E.M. < Pivot, on échange de place le marqué et le deuxième marqué et on reprend à avec ce dernier et celui à sa droite.
         2. Si non, on passe au suivant.
     2. On répète ce processus jusqu'à ce qu'on arrive à l'élément à gauche du pivot.
-        
+
+
         À ce point, on échange le pivot et le deuxième élément marqué si pivot < deuxième élément.
+
         
     3. Après, on partitionne le tableau à droite et à gauche d'où le pivot est tombé et on répète le processus.
 
-## En Java
+### En Java
 
 ```java
 public static void quicksort(int[] arr, int low, int high) {

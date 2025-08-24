@@ -1,17 +1,17 @@
-# 01 // l'espace vectoriel $\mathbb{R}^n$
+## 01 // l'espace vectoriel $\mathbb{R}^n$
 
-# Les bases, venant de l'algèbre abstraite
+## Les bases, venant de l'algèbre abstraite
 
-## Définition
+### Définition
 
 De manière abstraite, pour expliquer ce qui est un espace vectoriel, il faut expliquer ce qui est une tuple et une structure algébrique.
 
 - Une **tuple** est une séquence ordonnée finie d'éléments.
-- Une **structure algébrique** est une tuple $(a_1, a_2, ..., a_n)$ où $*a_1*$ est un ensemble non-vide est $(a_2, ..., a_n)$ sont des opérations applicables aux éléments de $*a_1*$.
+- Une **structure algébrique** est une tuple $(a_1, a_2, …, a_n)$ où $*a_1*$ est un ensemble non-vide est $(a_2, …, a_n)$ sont des opérations applicables aux éléments de $*a_1*$.
 
 Finalement, un **espace vectoriel** est une structure algébrique crée d'un ensemble non-vide et deux opérations: l'addition (opération interne) et le produit scalaire (opération externe). Ces deux opérations satisfont huit propriétés fondamentales.
 
-### Les huit propriétés fondamentales
+#### Les huit propriétés fondamentales
 
 Les propriétés qui suivent découlent de la définition de la somme et multiplication par un scalaire.
 
@@ -29,7 +29,7 @@ Les propriétés qui suivent découlent de la définition de la somme et multipl
     (Distribution valide pour la droite et pour la gauche)
     - **Distribution d'un vecteur** : $\forall u \in E, \text{ où } \lambda,\mu \in \mathbb{R} : (λ + µ) \cdot u = λ \cdot u + µ \cdot u$
 
-## Quelques extras
+### Quelques extras
 
 > [!note]
 > **Extra**: la différence entre une tuple et un ensemble.
@@ -41,14 +41,14 @@ Les propriétés qui suivent découlent de la définition de la somme et multipl
 > - **Finitude**: un tuple a un nombre fini d'éléments, tandis qu'un ensemble ou un multi-ensemble peut avoir un nombre infini d'éléments.
 
 > [!note]
-> **Extra**: sur les structures algébriques...
+> **Extra**: sur les structures algébriques…
 >
 > - Les arguments des opérations doivent être finis.
 > - Elles doivent aussi contenir des identités, propriétés et axiomes dérivées des opérations.
 
-# $\mathbb{R}^n$ vu comme un espace vectoriel
+## $\mathbb{R}^n$ vu comme un espace vectoriel
 
-## En dimension 1 et au-delà
+### En dimension 1 et au-delà
 
 L’ensemble des nombres réels $\mathbb{R}$ est souvent représenté par une droite (penser à la droite numérique normale). C’est un espace de dimension 1.
 

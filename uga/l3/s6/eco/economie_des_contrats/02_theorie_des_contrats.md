@@ -1,14 +1,14 @@
-# 02 // théorie des contrats
+## 02 // théorie des contrats
 
 [Partie II Théorie des Contrats 2022.pdf](ressources/02_theorie_des_contrats_partie_ii_thorie_des_contrats_2022.pdf)
 
-# Introduction
+## Introduction
 
 ![…](ressources/02_theorie_des_contrats_untitled.png)
 
-# La sélection adverse
+## La sélection adverse
 
-## Éléments de base
+### Éléments de base
 
 Si la sélection adverse est présentée comme "opportunisme pré-contractuel", la définition est l'inobservabilité d'une caractéristique du bien échangé par l'un des agents, ou simplement "asymétrie d'information d'un agent par rapport à l'autre".
 
@@ -19,9 +19,9 @@ Ceci provoque deux conséquences :
 - Incompatibilité avec le cadre néoclassique du fonctionnement des marchés concurrentiels
 - Risque de disparition des marchés ou de rationnement de l'offre de biens
 
-## Solutions : signal et filtrage
+### Solutions : signal et filtrage
 
-### Signal (Spence, 1974)
+#### Signal (Spence, 1974)
 
 Les agents détenant une information privée, et qui peuvent être handicapés par la sélection adverse, prennent l'initiative d'envoyer un signal ou d'adopter un comportement (mais avec un coût) qui dévoile leur information aux autres parties.
 
@@ -29,14 +29,15 @@ Comme exemples, on trouve les « bons » vendeurs de voitures (en proposant une 
 
 Encore faut-il que le signal soit efficace, c-à d qu'il révèle l'information de manière crédible pour les agents non informés, ce qui n'est généralement pas gratuit !
 
-### Filtrage et discrimination (Rothschild & Stiglitz, 1976)
+#### Filtrage et discrimination (Rothschild & Stiglitz, 1976)
 
 Les agents non informés, et qui peuvent être handicapés par la sélection adverse, amènent les agents informés à faire un choix parmi un ensemble de proposition, afin d'obtenir les informations privés. Il s'agit de discriminer les agents en différentes catégories en fonction de certains critères.
 
 Comme exemple, proposer deux types de contrats d'assurance, un contrat à franchise
+
 élevée et à prime faible (type 1), et un contrat à franchise faible et à prime élevé (type 2). Les souscripteurs du contrat de type 1 préfèrent une prime faible, quitte à accepter une franchise élevée en cas d'accident, ils anticipent donc peu d'accidents et représentent des conducteurs à faible risque. Inversement pour les conducteurs à haut risque qui préfèrent un contrat de type 2.
 
-## Conclusion
+### Conclusion
 
 Problèmes de sélection adverse : situations d'information incomplète et asymétrique ex-ante (ou pré-contractuel).
 
@@ -46,9 +47,9 @@ Mécanismes concurrentiels : inefficaces car les équilibres obtenus ne sont plu
 
 Possibilités de mécanismes / contrats incitatifs pour contrer les problèmes de sélection adverse mais à un coût non nul.
 
-# L'aléa moral
+## L'aléa moral
 
-## Introduction
+### Introduction
 
 Les relations principal-agent sont les situations dans lesquelles un individu (l'agent) agit sous la direction d'un autre (le Principal) et est supposé agir conformément aux objectifs du principal.
 
@@ -59,7 +60,7 @@ Cette situation introduit d'asymétries informationnelles : le principal est non
 
 Il y a donc un risque d'opportunisme post-contractuel (intérêt pour tirer au flanc) de la part de l'agent le plus informé : risque moral ou aléa moral pour le principal.
 
-## Le modèle de départ : action observable
+### Le modèle de départ : action observable
 
 Les résultats ou les performances de l'agent peuvent prendre une valeur $y$, avec $y \in [y_1, y_2]$. Cette valeur dépend non seulement de l'effort $a$ de l'agent, avec $a \in [a_{\min}, a_{\max}]$, mais également d'un facteur aléatoire assimilé à un élément dont l'agent n'a pas le contrôle.
 
@@ -118,7 +119,7 @@ Finalement, il y a trois assertions à retenir :
 - A noter que l'observation de l'effort ne supprime les conflits d'intérêt entre les deux. Le principal est capable de choisir une politique d'incitation sans faire supporter l'intégralité du risque à l'Agent.
     - Comme il peut observer $a^*$, il est en droit de le licencier et de lui verser un salaire nul dans le cas où l'action n'est pas $a^*$ : « schéma par palier avec menace crédible »
 
-## Modèle avec action cachée
+### Modèle avec action cachée
 
 Posons le contexte du modèle :
 
@@ -164,17 +165,19 @@ Le Principal est neutre au risque et son utilité est donnée par son profit : $
 À part, il y a deux contraintes à saturer (vérifier) :
 
 - Contrainte d'incitation : pour que l'Agent fournisse l'effort $e_H$, il faut que le Principal fasse en sorte que l'espérance d'utilité de l'Agent avec $e_H$ soit supérieure à celle qu'il obtiendrait avec le niveau $e_B$
-    
+
     $$
     \sum_{i=1}^n p_i^H v(w_i) - C_H \geq \sum_{i=1}^n p_i^B v(w_i) - C_B
-    $$
+
+$$
+
     
 - Contrainte de participation : encore faut-il que la rémunération proposée par le contrat soit attractif par rapport à l'extérieur, d'où la seconde contrainte :
     
     $$
     \sum_{i=1}^n p_i^H v(w_i) - C_H  \geq V
-    $$
     
+$$
 
 Compte tenu du schéma de rémunération proposé par le Principal (les $w_i$), l'Agent doit constater qu'il est avantageux non seulement d'accepter ce contrat mais également de fournir l'effort $e_H$.
 
@@ -188,7 +191,7 @@ La règle optimale proposée par le Principal est un compromis entre les motifs 
 
 Le ratio de vraisemblance précise comment l'observation des résultats devient un signal de l'effort fourni par l'Agent, d'où dans l'équation (1) une rémunération optimale décroissante avec le ratio $[p_i^B / p_i^H]$.
 
-### Et si l'agent était plutôt risque-neutre et non risquephobe ?
+#### Et si l'agent était plutôt risque-neutre et non risquephobe ?
 
 S'il est neutre au risque, il ne voudrais plus une "assurance" dans le contrat, ce qui veut dire que la partie fixe n'est plus indispensable pour l'agent. En plus, l'utilité "intermédiaire" du salaire devient $v(w_i) = \alpha w_i = w_i$.
 

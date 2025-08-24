@@ -1,8 +1,8 @@
-# 05 // thm. de De Moivre-Laplace
+## 05 // thm. de De Moivre-Laplace
 
-# Théorème de De Moivre-Laplace
+## Théorème de De Moivre-Laplace
 
-## Le théorème : une approximation d’une loi binomiale
+### Le théorème : une approximation d’une loi binomiale
 
 $$
 Z_n = \frac{X_n - np}{\sqrt{np(1-p)}} = \frac{X_n - \mu}{\sigma} \implies \left(\lim_{n\rightarrow\infty} Z_n\right)\sim\mathcal N(0,1)
@@ -21,6 +21,6 @@ $$
 \mathbb P (k_\text{inf}\le X_\mathcal{B}\le k_\text{sup}) \approx \int_{z_\text{inf}}^{z_\text{sup}} \mathcal N(0,1)dz,\text{ où } z_\text{inf/sup}=\frac{k_\text{inf/sup}-\mu}{\sigma}
 $$
 
-## La table $Z$ : trouver l’aire sous la courbe de $\mathcal N(0,1)$
+### La table $Z$ : trouver l’aire sous la courbe de $\mathcal N(0,1)$
 
 ![](https://i.pinimg.com/736x/48/17/ef/4817ef9d245f015924effa926a985e46--normal-distribution-statistics.jpg)

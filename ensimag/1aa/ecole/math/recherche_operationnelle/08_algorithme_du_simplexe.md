@@ -1,4 +1,4 @@
-# 08 // algorithme du simplexe
+## 08 // algorithme du simplexe
 
 [2_CM_simplexe_1_WEB.pdf](ressources/08_algorithme_du_simplexe_2_cm_simplexe_1_web.pdf)
 

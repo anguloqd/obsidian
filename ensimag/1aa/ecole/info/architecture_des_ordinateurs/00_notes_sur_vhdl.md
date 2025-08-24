@@ -1,4 +1,4 @@
-# 00 // notes sur VHDL
+## 00 // notes sur VHDL
 
 ```vhdl
 entity my_entity is
@@ -61,7 +61,7 @@ begin
 end architecture behavioral;
 ```
 
-## Entity declaration
+### Entity declaration
 
 ENTITY DECLARATION:
 
@@ -80,7 +80,7 @@ ENTITY DECLARATION:
         - integer: numeric values
         - other custom types you can define
 
-## Architecture block
+### Architecture block
 
 ARCHITECTURE BLOCK:
 

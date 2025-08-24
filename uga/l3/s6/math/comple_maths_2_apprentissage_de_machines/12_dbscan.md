@@ -1,20 +1,22 @@
-# 12 // dbscan
+## 12 // dbscan
 
 [lecture_dbscan_3.pdf](ressources/12_dbscan_lecture_dbscan_3.pdf)
+
 [Papier d’origine 1996_DBSCAN_KDD.pdf](ressources/12_dbscan_1996_dbscan_kdd.pdf)
+
 [DBSCAN avec des paramètres adaptatifs : OPTICS.pdf](ressources/12_dbscan_optics.pdf)
 
-# DBSCAN - Clustering par densité
+## DBSCAN - Clustering par densité
 
-## Introduction
+### Introduction
 
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise) est un algorithme de clustering non-paramétrique basé sur la densité. Contrairement aux méthodes traditionnelles comme k-means qui nécessitent de spécifier à l'avance le nombre de clusters, DBSCAN identifie automatiquement les groupes de points en se basant sur leur densité locale dans l'espace des données.
 
 L'approche fondamentale de DBSCAN consiste à regrouper les points qui sont étroitement espacés (possédant de nombreux voisins proches) tout en marquant comme valeurs aberrantes les points isolés dans des régions de faible densité (dont les plus proches voisins sont éloignés).
 
-## Principe de fonctionnement
+### Principe de fonctionnement
 
-### Définitions fondamentales
+#### Définitions fondamentales
 
 DBSCAN repose sur trois concepts clés définis à partir d'un rayon $\epsilon$ et d'un seuil minimal de points $n_{points}$ :
 
@@ -26,13 +28,13 @@ DBSCAN repose sur trois concepts clés définis à partir d'un rayon $\epsilon$ 
 
 **Points aberrants (outliers)** : Les points qui ne sont accessibles depuis aucun autre point sont considérés comme des valeurs aberrantes ou du bruit.
 
-### Formation des clusters
+#### Formation des clusters
 
 Une fois que chaque point a été correctement classifié selon les définitions précédentes, la formation des clusters suit une règle simple : un cluster est constitué de tous les points (centraux ou non-centraux) qui sont accessibles depuis un point central donné. Les points non-accessibles ne sont affectés à aucun cluster et sont considérés comme du bruit.
 
 Cette approche permet de découvrir des clusters de formes arbitraires, contrairement aux méthodes basées sur des prototypes qui tendent à produire des clusters sphériques.
 
-## Algorithme
+### Algorithme
 
 L'implémentation de DBSCAN suit une procédure systématique en trois étapes principales :
 
@@ -44,7 +46,7 @@ L'implémentation de DBSCAN suit une procédure systématique en trois étapes p
 
 Cette approche garantit que tous les points d'un même cluster sont connectés par des chemins de haute densité, préservant ainsi la structure naturelle des données.
 
-## Hyperparamètres
+### Hyperparamètres
 
 DBSCAN nécessite la configuration de trois hyperparamètres principaux :
 
@@ -56,9 +58,9 @@ DBSCAN nécessite la configuration de trois hyperparamètres principaux :
 
 Le choix de ces paramètres influence fortement les résultats de l'algorithme et nécessite souvent une expertise du domaine ou une analyse exploratoire des données.
 
-## Avantages et limites
+### Avantages et limites
 
-### Avantages
+#### Avantages
 
 DBSCAN présente plusieurs avantages significatifs par rapport aux méthodes de clustering traditionnelles :
 
@@ -70,7 +72,7 @@ DBSCAN présente plusieurs avantages significatifs par rapport aux méthodes de 
 
 **Simplicité paramétrique** : Avec seulement trois hyperparamètres, l'algorithme reste relativement simple à configurer, particulièrement lorsque des experts du domaine peuvent guider le choix des paramètres.
 
-### Limites
+#### Limites
 
 Malgré ses avantages, DBSCAN présente certaines limitations :
 

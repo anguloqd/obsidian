@@ -1,10 +1,10 @@
-# 02 // automates à états finis
+## 02 // automates à états finis
 
 [Slides du chapitre 2](ressources/02_automates_a_etats_finis_chapitre_2.pdf)
 
-# Automates à états finis déterministes (AEFD)
+## Automates à états finis déterministes (AEFD)
 
-## Définition formelle
+### Définition formelle
 
 Mathématiquement, un automate à états finis déterministe est une tuple de cinq éléments :
 
@@ -16,7 +16,7 @@ Mathématiquement, un automate à états finis déterministe est une tuple de ci
 - $\delta : Q \times \Sigma \mapsto Q$ : une fonction de transition **partielle** appelée *fonction de transition*
     - Elle est partielle car son domaine peut bien ne pas contenir toutes les posibles couples d’un symbole de $\Sigma$ et un état de $Q$.
 
-## Définition et propriétés
+### Définition et propriétés
 
 Dans le domaine de l’informatique théorique, une automate à états finis déterministe représente une machine abstraite. Un AEFD est traditionnellement vu comme une machine à ruban :
 
@@ -39,7 +39,7 @@ Quelques précisions par rapport à cette machine à ruban spécifique…
 
 ![untitled](ressources/02_automates_a_etats_finis_untitled_4.png)
 
-## Transitions, successions et acceptation de mots
+### Transitions, successions et acceptation de mots
 
 Supposons une AEFD avec les propriétés suivantes, où $q_0$ est l’état initial et final. Par exemple, on déduit du tableau que $\delta(q_1,1)=q_2$.
 
@@ -57,7 +57,7 @@ Notons qu’on peut faire la même chose avec un diagramme de transition. Rigour
 
 **Notons qu’un tableau ou diagramme de transition ne nous indique pas le mot ou input à lire, mais seulement les règles pour le lire et s’il pourrait être accepté par l’automate.** Si jamais on a un mot ou input qui est en contradiction avec le diagramme ou tableau, on le rejète.
 
-### Relations de succession
+#### Relations de succession
 
 Une configuration courante est la couple $(q,w)$, où $q$ est l’état courant et $w$ est le mot qui reste à lire sur le ruban (comptant le symbole courant sur lequel est la tête de lecture).
 
@@ -71,15 +71,15 @@ Une succession est une relation entre deux configurations notée “$\rightarrow
 
 Dans cette dernière relation, il existe le cas particulier $n=0$ définit à part, où la configuration initiale et finale sont la même, et donc on définit que $(q, w) \rightarrow^* (q,w)$. Cette dernière proposition implique que **la relation de succession (non immédiate) est réflexive** ($aRa$ vrai).
 
-### Définition d’acceptation d’un mot
+#### Définition d’acceptation d’un mot
 
 Avec la définition de succession, on peut formaliser la définition de mot accepté. Un mot est accepté par l’AEFD $A$ si et seulement si $(q_0,w) \rightarrow^* (q_f,\varepsilon), q_f \in F$, où $\varepsilon$ est le caractère vide ou blanc et $q_f$ est un état final.
 
-Encore plus, on peut définit un langage accepté par l’AEFD $A$ à partir d’un alphabet $\Sigma$ si et seulement si tous ses mots sont acceptés par l’AEFD, càd. $L(A, \Sigma) =\{w \in \Sigma^* : w \text{ accepté par } A \}$. 
+Encore plus, on peut définit un langage accepté par l’AEFD $A$ à partir d’un alphabet $\Sigma$ si et seulement si tous ses mots sont acceptés par l’AEFD, càd. $L(A, \Sigma) =\{w \in \Sigma^* : w \text{ accepté par } A \}$.
 
-# Automates et expressions régulières
+## Automates et expressions régulières
 
-## Diagrammes de transition
+### Diagrammes de transition
 
 Souvent, on va plutôt travailler avec des regex au lieu de langages réguliers. On peut créer aussi un diagramme de transition avec des expressions régulières comme suit :
 
@@ -95,15 +95,15 @@ Ce diagramme représente la expression régulière $a(aa^*b)^*b$, càd. les mots
 
 Dans ce cas particulier, il est plus facilement commencer les boucles fermés construits par les états $2$ et $5$, et aussi par $5$ tout seul.
 
-Voyons l’exemple plus simple du langage $\{x \cup y\}^*$, ou aussi l’expression régulière $(x+y)^*$. 
+Voyons l’exemple plus simple du langage $\{x \cup y\}^*$, ou aussi l’expression régulière $(x+y)^*$.
 
 ![untitled](ressources/02_automates_a_etats_finis_untitled_9.png)
 
 **Note pratique**. Il est facile à voir que le symbole $+$ peut être lu comme “ou” et la concaténation $\cdot$ comme “et”.
 
-# Automates à états finis non-déterministes (AEFND)
+## Automates à états finis non-déterministes (AEFND)
 
-## Différences avec les AEFD
+### Différences avec les AEFD
 
 Notons que, dans les diagrammes de transition des AEFD, une transition (correspondance $(q_a,x)\mapsto q_b$) est uniquement déterminée par son état courant $q_0$ et le prochain symbole à lire $x$ (ou aussi le symbole dessous la tête de lecture).
 
@@ -117,7 +117,7 @@ Par contre, pour les AEFND, il peut avoir une situation où on puisse arriver à
 
 Dans la pratique, la plupart du temps une transition dans le cas AEFND nous mène à un seul état, mais faire cette redéfinition de l’image permet de représenter quand une transition peut nous mener à plus d’un état.
 
-## Redéfinitions à partir des AEFD
+### Redéfinitions à partir des AEFD
 
 On remplace la fonction de transition $\delta$ avec un ensemble $R$ appelé une “relation de transition”, qui contient des triplets ordonnés $(q, v, q\prime)$ où $q,q\prime \in Q$ et $v \in \Sigma^*$ et contient toutes les transitions valides et possibles.
 
@@ -137,7 +137,7 @@ Cas non-deterministe.
 
 Cas déterministe.
 
-## Wikipédia : redéfinition de l’acceptation de mots
+### Wikipédia : redéfinition de l’acceptation de mots
 
 > [!note]
 > Je laisse cette redéfinition car je l’ai trouvé utile, même si elle fais pas partie du cours.
@@ -147,7 +147,7 @@ Un mot ou input $w=x_0x_1…x_n$ est accepté par un AEFND $A$ s’il existe une
 1. $r_0 = q_0$
 La première condition indique que, pour lire l’input, on doit pouvoir commencer par l’état initial.
 2. $r_{i+1} \in \delta(r_i,x_{i+1}), i \in [0,n-1]$
-La deuxième condition indique que le prochain état $r_{i+1}$ est **atteignable** à partir de l’état actuel $r_i$ et si on décide de lire le symbole $x_{i+1}$ du mot actuel $w$. 
+La deuxième condition indique que le prochain état $r_{i+1}$ est **atteignable** à partir de l’état actuel $r_i$ et si on décide de lire le symbole $x_{i+1}$ du mot actuel $w$.
 3. $r_n \in F$
 La troisième condition indique que l’état atteint à la fin est un état final.
 

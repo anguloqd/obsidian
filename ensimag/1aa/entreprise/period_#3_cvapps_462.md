@@ -1,10 +1,12 @@
-# Period #3 - CVAPPS 462
+## Period #3 - CVAPPS 462
 
 retinanet-resnet50 : `decode_util.py`, ligne 83 (et 65 aussi), variable `box_head`
 
 with original kann-video-demo: [576, 4]
+
 with new kann-video-demo: [9216, 4]
-9216/576 = 16, un facteur de 16 de plus qui sort magiquement ? 
+
+9216/576 = 16, un facteur de 16 de plus qui sort magiquement ?
 
 soupçon problème d’alignement, var output_tensor in post_process
 

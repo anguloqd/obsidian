@@ -1,10 +1,10 @@
-# 03 // déterminisation d’un automate non-déterministe (AEFND)
+## 03 // déterminisation d’un automate non-déterministe (AEFND)
 
 [Slides du chapitre 3](ressources/03_determinisation_d’un_automate_non_determinist_chapitre_3_compressed.pdf)
 
-# Relation entre les AEFD et AEFND
+## Relation entre les AEFD et AEFND
 
-## Leur différences
+### Leur différences
 
 Dans le cas AEFD, la transition d’un état est donnée par une fonction mathématique, qui prend un couple état-symbole et retourne **un et un seul état**. Dans la définition formelle de fonction, les éléments du domaine ont chacun *une seule image*.
 
@@ -18,17 +18,17 @@ Notons que, dans l’état $1$, la couple état-symbole $(1,a)$ peut correspondr
 
 On dit qu’un mot est accepté par un AEFND s’il existe un chemin possible pour que la machine arrive dans un état accepté. Toute tentative de traduire directement un AEFND par un programme sur un ordinateur demande d’implémenter un mécanisme de retour en arrière (*backtracking* en anglais). Particulièrement, chaque fois qu’on choisit un arc ou chemin, on se rappelle de ce choix et on y revient si les symboles qui suivent ne permettent pas d’accepter le mot input.
 
-## L’équivalence
+### L’équivalence
 
-Il est visible qu’un AEFND permet de représenter des procédures complexes de reconnaissance de chaîne avec moins d'états que ce qu’un AEFD nécessiterait. Cela dit, **tout langage accepté par un AEFND est aussi accepté par un AEFD, car ces langages sont des *langages réguliers*.** 
+Il est visible qu’un AEFND permet de représenter des procédures complexes de reconnaissance de chaîne avec moins d'états que ce qu’un AEFD nécessiterait. Cela dit, **tout langage accepté par un AEFND est aussi accepté par un AEFD, car ces langages sont des *langages réguliers*.**
 
 Donc, un AEFND n’est pas plus puissant qu’un AEFD, même si un AEFD a besoin généralement de plus d’états pour pouvoir accepter le même langage.
 
-# Construire un AEFD à partir d’un AEFND
+## Construire un AEFD à partir d’un AEFND
 
-## Déterminisation
+### Déterminisation
 
-L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFND est par construction de sous-ensembles. 
+L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFND est par construction de sous-ensembles.
 
 ![untitled](ressources/03_determinisation_d’un_automate_non_determinist_untitled_1.png)
 
@@ -36,10 +36,12 @@ L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFN
 
 1. On commence de l’état de départ de AEFND. Ce serait aussi l’état initial de l’AEFD.
 2. Quand on arrive a une bifurcation (correspondance multiple d’un couple état-symbole vers un état) $\delta(1,a)= 2$ ou $3$, et donc $\delta^\prime(1,a)=\{2,3\}$. On regroupe tous les états d’arrivée dans un nouveau état qui représente cet ensemble d’états. Formellement,
-    
+
     $$
     \delta^\prime(\{q_0,\dots,q_n\},a)= \bigcup_{i=0}^n \delta({q_i},a)
-    $$
+
+$$
+
     
 3. Après, pour répliquer les arcs qui sort de chaque état qui compose le nouveau état, pour chaque symbole possible, on se demande s’il existe une connexion entre ce symbole et chaque état composant. C’est-à-dire, dans le cas d’avant, $\delta^\prime(\{2,3\},a)$ n’existe pas ni pour $2$ ni $3$, donc il n’y a pas un arc de symbole $a$, mais il y en a pour $b$ car $\delta(2,b)=4$ et $\delta(3,b)=5$. On regroupe à nouveau tous ces états dans le nouveau état $\{4,5\}$.
 4. On refait le même processus et on voit qu’on replique la branche d’états $(2,4)$ et la branche d’états $(3,5,6)$.

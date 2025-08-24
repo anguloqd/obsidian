@@ -1,8 +1,8 @@
-# 01 // objets et classes
+## 01 // objets et classes
 
 [INFF5_1_1.pdf](ressources/01_objets_et_classes_inff5_1_1.pdf)
 
-# Introduction des concepts de la programmation par objets
+## Introduction des concepts de la programmation par objets
 
 ![](ressources/01_objets_et_classes_untitled.png)
 
@@ -11,7 +11,8 @@ Notion d’un *objet*.
 ![](ressources/01_objets_et_classes_untitled_1.png)
 
 Notion d'*encapsulation*.
-## Les *objets* et les classes
+
+### Les *objets* et les classes
 
 ![Un *objet* est une collection de de données et operations.](ressources/01_objets_et_classes_untitled.png)
 
@@ -50,7 +51,7 @@ public class Programme {
 // notons que "monObj" est un objet de type "Programme"
 ```
 
-Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier. 
+Par convention, dans l’écriture d’un programme complexe, on définit quelque `class` dans un fichier Java et on les utilise dans un autre fichier Java où on écrit le code principale. Il est nécessaire que les deux fichiers soient présents sur le même dossier.
 
 ```java
 // fichier "Variables.java"
@@ -73,7 +74,7 @@ class Programme {
 // retourne 5
 ```
 
-### L’état : ensemble des attributs des classes
+#### L’état : ensemble des attributs des classes
 
 Une fois un objet a hérité des attributs, on peut les modifier comme suite :
 
@@ -128,7 +129,7 @@ public int Methode {
 // retourne 0
 ```
 
-### L’interface : ensemble des méthodes des classes
+#### L’interface : ensemble des méthodes des classes
 
 Déjà, chaque fois qu’on appelle une classe, on doit écrire le nom de la méthode suivi des parenthèses `()`.
 
@@ -167,11 +168,11 @@ public class Principale {
 
 La méthode `main` est considérée la méthode la plus importante. En bref, elle est le corps principal du code, ce que fait le programme, utilisant d’autres méthodes et variables définies hors du `main`. Un programme java ne peut pas marcher si le `main` n’existe pas. Elle est toujours exécutée lors de l’exécution du programme.
 
-### Constructeurs
+#### Constructeurs
 
 Le constructeur est une méthode spéciale. Elle est utilisée pour “initialiser” des objets, c’est à dire, pour créer un objet et qu’il hérite des attributs et méthodes. On l’appelle chaque fois qu’on utilise l’opérateur `new` dans le `main`.
 
-Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas. 
+Normalement, si on ne déclare pas le constructeur, il est présent invisiblement. On peut ne pas le déclarer pour simplicité. En revanche, on le déclare pour initialiser un objet et changer les valeurs de ses primitives, car les valeurs par défaut ne conviennent pas.
 
 Ils existent deux manières d’utiliser un constructeur : par défaut et paramétrisé. Le constructeur par défaut agit de la même manière que comme si on ne le déclare pas. Le constructeur paramétrisé prend un paramètre pour fixer la valeur d’un attribut de l’objet.
 
@@ -205,7 +206,7 @@ public class Demo {
 
 ![untitled](ressources/04_genericite_untitled_1.png)
 
-### Modificateurs
+#### Modificateurs
 
 Les modificateurs sont des mots clés qui accompagnent les classes, attributs et méthodes dans leurs déclarations. Souvent, ils spécifient la capacité d’être accédés par d’autres classes, mais ils peuvent aussi spécifier d’autres fonctionnalités.
 
@@ -234,7 +235,7 @@ On les classifie par rapport à ses fonctionnalités: modificateurs d’accès e
         - `synchronized` : les méthodes peuvent seulement être accédés par un fil à la fois.
         - `volatile` : la valeur d’un attribut n’est pas gardé localement dans un fil de la mémoire, et est toujours lit dès la mémoire principale.
 
-## Réutilisation de classes et sous-classes
+### Réutilisation de classes et sous-classes
 
 Réutiliser des instructions est l’un des points forts de programmer.
 
@@ -255,13 +256,14 @@ void dessineEtAfficheAire(FormeGeo f) {
 ```
 
 Une sous-classe, c’est effectivement une classe dans une autre. Précisément, c’est une classe qui ***hérite*** les attributs et méthodes d’une autre classe, comme ça il n’y a pas besoin de les redéfinir.
-Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”. 
 
-## Composition et héritage sur Java
+Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”.
+
+### Composition et héritage sur Java
 
 **La hiérarchie de classe peut-être de composition ou de héritage**. La composition définit une classe comme la somme de ses parties (”loosely coupled”, car changer la superclasse n’est pas un fait délicat), tant que l’héritage dérive une classe d’une autre (”tightly coupled”, car changer la superclasse peut causer des problèmes).
 
-Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc. 
+Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc.
 
 ```java
 public class ExempleComposition {
@@ -367,9 +369,9 @@ public class Main {
 // L'animal a fait un son
 ```
 
-# Initialisation des objets
+## Initialisation des objets
 
-## Le constructeur : une méthode spéciale
+### Le constructeur : une méthode spéciale
 
 Chaque fois on initialise des objets, on fait un appel au constructeur. Le constructeur est une méthode spéciale automatiquement appelée à la création de l'objet (`new`), après allocation de la mémoire.
 
@@ -430,7 +432,7 @@ class Point{
 
 Notons que si on utilise le constructeur pour fixer les valeurs des attributs, les attributs doivent être déclarés avant. Donc, l'initialisation au niveau de la déclaration est faite avant l'appel au constructeur.
 
-## Surcharge de constructeurs (et de méthodes)
+### Surcharge de constructeurs (et de méthodes)
 
 Surcharger est le fait de créer des méthodes différentes avec le même nom. Java fait la différence au moment de regarder les types d’input et leur ordre, ce qui s’appelle la “signature” de la méthode.
 
@@ -482,7 +484,7 @@ class Cercle {
 }
 ```
 
-## Mot clé `this`
+### Mot clé `this`
 
 Cette mot clé à 3 utilisations. Dans le code du début de la section “initialisation d’objets”, on a déjà vu une utilisation du mot clés `this` : pour lever les ambiguïtés de deux paramètres sous le même nom. `this`, plus formellement, appelle la classe où on se trouve.
 
@@ -527,9 +529,9 @@ class Point {
 }
 ```
 
-# Organisation du code en package
+## Organisation du code en package
 
-## *Encapsulation* et contrôle d'accès
+### *Encapsulation* et contrôle d'accès
 
 ![Notion d’encapsulation.](ressources/01_objets_et_classes_untitled.png)
 
@@ -543,9 +545,9 @@ Java permet de modifier la “visibilité” des attributs et méthodes avec le 
 
 On peut appliquer aussi les modificateurs sur les classes. Normalement on utilise que `public` et rien. `public` pour pouvoir accéder à la classe partout, et (rien) pour qu’elle soit accessible par les autres fichiers dans le même dossier/package de la classe. On peut “imbriquer” de packages. Par fichier Java, on peut avoir plusieurs classes mais seulement une seule classe publique, et elle doit avoir le même nom du fichier Java où elle est écrite.
 
-# Modificateurs d’accès
+## Modificateurs d’accès
 
-## Restriction des méthodes
+### Restriction des méthodes
 
 Ils peuvent être places devant une déclaration de classe, méthode ou d’attribut (d’instance ou de classe).
 
@@ -559,9 +561,9 @@ Pour donner un accès en lecture ou modification, on les fait avec des méthodes
 - Les membres publics définissent l'interface exposée de la classe. Les modifier pourrait entraîner d’erreurs de compilation.
 - On ne peut avoir qu'une classe publique par fichier .java.
 
-# Chaînes de caractères en Java
+## Chaînes de caractères en Java
 
-## La classe `String` et `StringBuffer`
+### La classe `String` et `StringBuffer`
 
 Il existe plusieurs classes en Java permettant de créer et manipuler des chaînes de caractères. Les deux classes principalement utilisées sont :
 
@@ -570,21 +572,21 @@ Il existe plusieurs classes en Java permettant de créer et manipuler des chaîn
 
 On verra que `StringBuffer` a plus de fonctionnalité que `String`.
 
-## `StringBuffer` : constructeur, variables et méthodes
+### `StringBuffer` : constructeur, variables et méthodes
 
-### Constructeurs
+#### Constructeurs
 
 - `StringBuffer(String s)` : permet d'obtenir une chaîne avec les mêmes caractères
 que `s`.
 - `StringBuffer(int c)` : permet d'obtenir une chaîne vide de capacité c.
 - `StringBuffer()` : permet d'obtenir une chaîne vide de capacité 16.
 
-### Méthodes générales
+#### Méthodes générales
 
 - `int length()` : retourne comme la longueur (nombre de caractères) de la chaîne.
 - `int capacity()` : retourne la capacité de `this`, l’objet ou instance courante.
 
-### Méthodes de concaténation (à la fin)
+#### Méthodes de concaténation (à la fin)
 
 - `StringBuffer append(String s)` : ajoute en fin de chaîne les caractères de `s`. Modifie
 `this` et le retourne en résultat (permet l'activation de méthodes en cascade).
@@ -592,30 +594,30 @@ que `s`.
 `this` et le retourne en résultat.
 - Il existe de nombreuses autres signatures pour `append`.
 
-### Méthodes de caractère et sous-chaîne
+#### Méthodes de caractère et sous-chaîne
 
 - `char charAt(int i)` : retourne le caractère d'indice i dans la chaîne.
 - `String substring(int i)` : retourne le suffixe de la chaîne à partir de l'indice i.
 - `String substring(int i, int j)` : retourne la sous-chaîne de longueur `j - i` commençant à l'indice `i`.
 - Ces méthodes sont susceptibles de lever une `StringIndexOutOfBoundsException`.
 
-### Méthodes de suppression
+#### Méthodes de suppression
 
 - `StringBuffer delete(int i, int j)` : supprime les caractères d'indices `i` à `j – 1`. Modifie `this` et le retourne.
 - `StringBuffer deleteCharAt(int i)` : supprime le caractère d'indice i. Modifie `this` et le retourne en résultat.
 
-### Méthodes d’insertion
+#### Méthodes d’insertion
 
 - `StringBuffer insert(int i, String s)` : insère `s` à l'indice `i`. Modifie `this` et le retourne.
 - `StringBuffer insert(int i, char c)` : insère `c` à l'indice `i`. Modifie `this` et le retourne en résultat.
 - Il existe de nombreuses autres signatures pour `insert`.
 
-### Méthodes de remplacement
+#### Méthodes de remplacement
 
 - `StringBuffer replace(int i, int j, String s)` : remplace les caractères d'indices `i` (inclus) à `j` (exclus) par tous ceux de `s`. Modifie `this` et le retourne.
 - `void setCharAt(int i, char c)` : remplace le caractère d'indice `i` par `c`.
 
-### Méthodes de conversion à `String`
+#### Méthodes de conversion à `String`
 
 - `String toString()` : retourne une `String` contenant les mêmes caractères que `this`.
 - La conversion inverse se fait par le constructeur `StringBuffer(String s)`.

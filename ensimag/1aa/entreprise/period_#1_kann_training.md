@@ -1,16 +1,16 @@
-# Period #1 - KaNN Training
+## Period #1 - KaNN Training
 
 > [!tip] 💡
 >
 > Here, I want to take notes from the KaNN Training session, KaNN How-To pages from confluence, and my usage of KaNN in general.
 
-# PPTX
+## PPTX
 
 [](https://kalray.atlassian.net/wiki/spaces/KANN/pages/569212956/KaNN+How+To)
 
 [https://kalrayinc.sharepoint.com/sites/Embedded-ComputeApps/Shared%20Documents/Forms/AllItems.aspx?e=5%3A9e260ecbf525434a9f04bb14b4e1e586&sharingv2=true&fromShare=true&at=9&CT=1730284899731&OR=OWA%2DNT%2DMail&CID=fea87111%2Dfd76%2D3b96%2Dcc8b%2D3f0b9cc5b099&FolderCTID=0x0120006533E1ECD394894885D12A79DD4491D0&id=%2Fsites%2FEmbedded%2DComputeApps%2FShared%20Documents%2FCompute%20Apps%2FSDK%20Trainings%2FKaNN%20training&viewid=4b762c53%2D371c%2D4257%2Dada0%2D9dbe7533d763](https://kalrayinc.sharepoint.com/sites/Embedded-ComputeApps/Shared%20Documents/Forms/AllItems.aspx?e=5%3A9e260ecbf525434a9f04bb14b4e1e586&sharingv2=true&fromShare=true&at=9&CT=1730284899731&OR=OWA%2DNT%2DMail&CID=fea87111%2Dfd76%2D3b96%2Dcc8b%2D3f0b9cc5b099&FolderCTID=0x0120006533E1ECD394894885D12A79DD4491D0&id=%2Fsites%2FEmbedded%2DComputeApps%2FShared%20Documents%2FCompute%20Apps%2FSDK%20Trainings%2FKaNN%20training&viewid=4b762c53%2D371c%2D4257%2Dada0%2D9dbe7533d763)
 
-# Notes from KaNN: How-To
+## Notes from KaNN: How-To
 
 > [!tip] 💡
 >
@@ -25,7 +25,7 @@ Running a neural network is a 4 step process:
 
 The confluence page will run the CNN algorithm “UNet” on two images. The test is created on a parallel directory to kaf, called “`test_unet`”. In general, your KaNN test should be outside of the kaf directory.
 
-## Generate a NN using “`kann generate`”
+### Generate a NN using “`kann generate`”
 
 Let’s look at “`kann generate -h`” (`-h` for help):
 
@@ -54,7 +54,7 @@ kann generate --arch=kv3-2 ../examples/networks/UNet2D_Tiny_Med/onnx/network_fp1
 kann generate --arch=kv3-2 --generate-txt-cmds --draw-graph-pdf ../examples/networks/UNet2D_Tiny_Med/onnx/network_fp16.yaml
 ```
 
-## Prepare inputs
+### Prepare inputs
 
 This step generates an input data stream from video or a set of pictures (png format). We will be using two images: `cat.png` and `cup.png`.
 
@@ -89,7 +89,7 @@ IMAGE2=../kaf/kann/examples/networks/UNet2D_Tiny_Med/onnx/data/MRI_brain/TCGA_CS
 python $GENERATED_DIR/input_preparator.py $INPUT_STREAM  $IMAGE1 $IMAGE2 --batch-size 2
 ```
 
-## Run the NN
+### Run the NN
 
 A test application for model execution has been compiled in “Build KaNN Runtime” step. This step triggers inference of the input batch stream (2 images) on MPPA.
 
@@ -105,11 +105,11 @@ $KANN_BUILD_DIR_CV2/bin/kann_opencl_cnn $GENERATED_DIR/serialized_params_KaNNv5.
 # Output stream is stored in inputs_outputs_kann directory. 
 ```
 
-# Notes from KaNN: `kaf_applications`
+## Notes from KaNN: `kaf_applications`
 
 Remember to call “make” on the terminal to execute the makefile utility and produce the necessary binaries.
 
-## `/kaf_acceleration_examples/README.template`
+### `/kaf_acceleration_examples/README.template`
 
 ```bash
 -----------------------------------------------------
@@ -652,13 +652,13 @@ $ ./output/bin/board_info_extensions
 
 ```
 
-## …
+### …
 
 …
 
-# Notes from KaNN: Training session
+## Notes from KaNN: Training session
 
-## Example from `kann-models-zoo`
+### Example from `kann-models-zoo`
 
 ```bash
 $ ./generate networks/classifiers/regnet-x-1.6g/onnx/network_f16.yaml -d r1.6
@@ -864,7 +864,7 @@ $ ./run infer r1.6
 # [KaNN Demo] frame:2/0   read: 0.01ms    pre: 2.52ms     onnx: 10.04ms   post: 0.39ms    draw: 0.03ms    show: 0.00ms    total: 13.00ms (76.9fps)
 ```
 
-## Efficiency computation
+### Efficiency computation
 
 Efficiency of execution of a program on a hardware is a measure between $0$ and $1$ representing how close we are to the **peak** theoretical execution time. We want to be as close to $1$ as possible. It is computed as follows:
 
@@ -884,7 +884,7 @@ $$
 \text{Theoretical Execution Time = } \frac{\text{3.24 GFLOPS}}{\text{25 TFLOPS}} = \frac{\text{3.24 GFLOPS}}{\text{25000 GFLOPS}} = 0.000129 s
 $$
 
-So theoretically it takes $0.000129s$ or $129 \mu s$ to execute the CNN algorithm. 
+So theoretically it takes $0.000129s$ or $129 \mu s$ to execute the CNN algorithm.
 
 When it comes to the actual execution time, we need to look again at the `kann generate` log, particularly the memory statistics section.
 
@@ -895,7 +895,7 @@ When it comes to the actual execution time, we need to look again at the `kann g
 # [INFO]   cluster operation latencies: 322.8 Kcycle 316.0 Kcycle 322.0 Kcycle 327.9 Kcycle 204.8 Kcycle
 ```
 
-A kcycle or kilo-cycle is a measure of time based on the number of processor clock cycles, with each kcycle representing 1,000 clock cycles. 
+A kcycle or kilo-cycle is a measure of time based on the number of processor clock cycles, with each kcycle representing 1,000 clock cycles.
 
 …
 

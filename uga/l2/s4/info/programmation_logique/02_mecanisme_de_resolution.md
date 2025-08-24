@@ -1,10 +1,10 @@
-# 02 // mécanisme de résolution
+## 02 // mécanisme de résolution
 
 [Slides de mécanisme de résolution](coursprologl2_2_(2).pdf)
 
-# Unification
+## Unification
 
-## Faire correspondre deux expressions, si possible
+### Faire correspondre deux expressions, si possible
 
 Procédé par lequel on essaie de rendre deux clauses identiques par des substitutions, en donnant des valeurs aux variables qu’elles contiennent, càd. **en instanciant** les variables.
 
@@ -16,9 +16,9 @@ Procédé par lequel on essaie de rendre deux clauses identiques par des substit
 -? X=Y,p(X,Y)=p(a,b) % false
 ```
 
-# Parcours de résolution
+## Parcours de résolution
 
-## Recherche exhaustive
+### Recherche exhaustive
 
 Prolog en premier teste les possible solutions du haut en bas, et lit les règles de gauche à droit.
 
@@ -34,9 +34,9 @@ Prolog en premier teste les possible solutions du haut en bas, et lit les règle
 
 Voyons que Prolog teste en premier le paire (charlie,david) pour le première appel à `pere(X,Z)`, puis il teste (henri,charlie). Quand Prolog arrive a un point où il est impossible de trouver une proposition vraie, il s’arrête, reviens en arrière au dernier point de choix (*backtrack*) en défaisant toutes les unifications ou maths faits depuis ce point, et essaie la combinaison suivante, comme ça il teste toutes les possibilités possibles.
 
-# Opérateurs
+## Opérateurs
 
-## Expressions arithmétiques
+### Expressions arithmétiques
 
 - `is` : analogue de calcul puis affectation. `=` ne fait pas des calculs à droite !
 `N is 5*X` est différent de `N=5*X` !
@@ -51,7 +51,7 @@ Voyons que Prolog teste en premier le paire (charlie,david) pour le première ap
 ?- S1 is sign(20), S2 is sign(-12). % S1 = 1, S2 = -1.
 ```
 
-## Comparaison et unification
+### Comparaison et unification
 
 [récapitulatif d’opérateurs](recapitulatifoperateurs_(2).pdf)
 
@@ -67,7 +67,7 @@ Voyons que Prolog teste en premier le paire (charlie,david) pour le première ap
 ?- f(X)\==f(x). % true.
 ```
 
-## Prédicats de comparaison
+### Prédicats de comparaison
 
 - `X=:=Y` : calcul de chaque coté, puis évaluation de possible égalité
 - `X=\=Y` : calcul de chaque coté, puis évaluation de possible inégalité
@@ -79,7 +79,7 @@ Voyons que Prolog teste en premier le paire (charlie,david) pour le première ap
 ?- 5 =:= 3 + 2. % true
 ```
 
-## Entrées et sorties de texte
+### Entrées et sorties de texte
 
 ```prolog
 % affichage
@@ -92,7 +92,7 @@ Voyons que Prolog teste en premier le paire (charlie,david) pour le première ap
 % A = toto.
 ```
 
-## Listes et le symbole `|`
+### Listes et le symbole `|`
 
 Les listes s’utilisent comme suit :
 
@@ -120,9 +120,9 @@ On peut utiliser la syntaxe `|` pour référencier les premiers éléments à ga
 –? [[X,Y]|L] = [[a,1],[b,2],[c,3]]. % X=a, Y=1, L=[[b,2],[c,3]]
 ```
 
-# Parcours d’une liste en Prolog
+## Parcours d’une liste en Prolog
 
-## Regarder récursivement l’élément le plus à gauche
+### Regarder récursivement l’élément le plus à gauche
 
 On le fait de manière récursive : on définit un cas de base et puis le cas récursif. Pour le cas de base, on indique la valeur qui correspondra ou se “mappera” à la liste vide `[]`.
 

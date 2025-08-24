@@ -1,10 +1,10 @@
-# 03 // théorie des graphes
+## 03 // théorie des graphes
 
-# Introduction
+## Introduction
 
 [Slides de théorie de graphes](ressources/03_theorie_des_graphes_slides_graphes_minfo_annote2.pdf)
 
-## Définition intuitive et formelle d’un graphe (orienté)
+### Définition intuitive et formelle d’un graphe (orienté)
 
 On introduit le concept d’un graphe avec un exemple : un site internet est composé de cinq pages notées $A$, $B$, $C$, $D$ et $E$. En un clic, on peut passer d’une page à certaines autres selon les possibilités suivantes.
 
@@ -17,13 +17,13 @@ On introduit le concept d’un graphe avec un exemple : un site internet est com
 
 Graphique sagittal.
 
-Un graphe est une tuple $G=\{V,E\}$. Les points ou nœuds sont appelés des *sommets* et son ensemble est noté $V$, et les flèches orientés sont appelées des *arcs* et son ensemble est $*E*$. 
+Un graphe est une tuple $G=\{V,E\}$. Les points ou nœuds sont appelés des *sommets* et son ensemble est noté $V$, et les flèches orientés sont appelées des *arcs* et son ensemble est $*E*$.
 
 Par rapport à la notation, les sommets sont simplement notés avec de lettres comme $V=\{a_0, a_1, \dots, a_n\}$, tant que les arcs sont notés comme des couples de $E$ comme $E=\{(a_1,a_2),(a_3,a_5),(a_7,a_{11})\}$ pour dire qu’il existe un arc qui part du sommet $a_3$ pour arriver au sommet $a_5$, par exemple.
 
-# Matrice d’adjacence
+## Matrice d’adjacence
 
-## Définition et exemple
+### Définition et exemple
 
 Pour formaliser une certaine configuration de sommets et d’arcs d’un graphe $G$, on utilise une matrice dite *d’adjacence*. Cette matrice compte les chemins allant du sommet en ligne au sommet en colonne.
 
@@ -45,7 +45,7 @@ Si on ajoutait un autre chemin allant de $D$ à $C$, on changerait l’entrée $
 
 On peut définir aussi les ensembles de successeurs et de prédécesseurs d’un sommet donné. Pour $A$, on note ses successeurs $\Gamma^+(A)=\{C,E\}$ et ses prédécesseurs $\Gamma^-(A)=\{B,E\}$.
 
-## Chemin et longueur dans un graphe orienté
+### Chemin et longueur dans un graphe orienté
 
 Un chemin est défini formellement comme une suite de sommets tel qu’un tout sommet est successeur du sommet précédent, à exception du premier sommet.
 
@@ -66,7 +66,7 @@ $$
 >
 > ![untitled](ressources/03_theorie_des_graphes_untitled_2.png)
 
-Notons déjà qu’un chemin de longueur $1$ est tout simplement un arc, qui sont notés dans la matrice d’adjancence. Deux sommets sont *adjacents* s’il sont connectés par un arc. Une propriété intéressante de telle matrice est qu’on peut en déduire les chemins de longueur $n$ générale avec l’opération $M^n$. 
+Notons déjà qu’un chemin de longueur $1$ est tout simplement un arc, qui sont notés dans la matrice d’adjancence. Deux sommets sont *adjacents* s’il sont connectés par un arc. Une propriété intéressante de telle matrice est qu’on peut en déduire les chemins de longueur $n$ générale avec l’opération $M^n$.
 
 ![untitled](ressources/03_theorie_des_graphes_untitled_1.png)
 
@@ -95,9 +95,9 @@ Il y a, par contre, de choses importantes à remarquer :
 - Partant de $A$ jusqu’à $E$, il existe un chemin de longueur 1, mais pas de longueur 2.
 - Partant de $B$ jusqu’à $C$, il existe **deux** chemins de longueur 2 !
 
-## Fermeture transitive
+### Fermeture transitive
 
-La fermeture transitive est un opération qui prend un graphe et retourne un autre graphe. En particulier, s’il existe un chemin partant de $v_i$ à $v_j$ de n’importe quelle longueur, on rajoute un arc direct $(v_i,v_j)$. 
+La fermeture transitive est un opération qui prend un graphe et retourne un autre graphe. En particulier, s’il existe un chemin partant de $v_i$ à $v_j$ de n’importe quelle longueur, on rajoute un arc direct $(v_i,v_j)$.
 
 ![Graphe de départ à gauche, sa fermeture transitive à droite.](ressources/03_theorie_des_graphes_untitled_3.png)
 
@@ -149,9 +149,9 @@ $$
 
 Finalement, chaque entrée de $\tilde{M}_G$ devrait s’interpreter comme s’il existe au moins un chemin de taille égale ou inférieur à $n$ qui va de $v_i$ à $v_j$ si $\tilde{m}_{ij}=1$, et $0$ sinon.
 
-# Graphes non-orientés
+## Graphes non-orientés
 
-## Définition
+### Définition
 
 En différence avec les graphes orientés, les arcs d’un graphe non-orienté pourrait être considérés bidirectionnels. Il n’est plus important la direction, mais la connexion entre deux sommet. Comme ça, on n’a plus besoin de spécifier la direction de chaque arc.
 
@@ -170,11 +170,12 @@ Pour déduire la matrice d’adjacence $M_{G^\prime}$ d’un graphe non-orienté
 1. On inverses **toutes** les directions du graphe orienté, ce qui serait la même chose que transposer $M_{G}$, donc on obtient un graphe dont la matrice d’adjacence est $M_G^t$.
 2. On l’additione avec la matrice du graphe original, pour obtenir celle du graphe orienté.
 On notera qu’on a été obligé d’orienter deux fois la boucle sur $C$, d’où le coefficient $2$ sur la diagonale. Aussi, la matrice $M_{G^*}$ est symétrique (par rapport à la diagonale).
-    
+
     $$
     M_{G^*}=M_G+M_{G}^t
-    $$
-    
+
+$$
+
 
 Un sommet $v$ est dit **connexe** si, pour tous les autres sommets $w$ ($w\ne v$), il existe une **chaîne** (équivalence de chemin d’un graphe non orienté) reliant $v$ à $w$. Bref, à partir de $v$, on peut arriver à tout autre sommet du graphe. Un graphe est **connexe** si tous ses sommets sont connexes.
 
@@ -276,7 +277,9 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
 On peut dire qu’un sommet dans un graphe est de niveau $0$ s’il n’as pas de prédécesseur dans l’ensemble de sommets $S$. L’ensemble de sommets de niveau 0 est noté $S_0$. Ayant défini $S_0$, on peut définir $S_n$ récursivement comme suit :
 
 $$
+
 S_n = S - S_{n-1}
+
 $$
 
 ![Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.](ressources/03_theorie_des_graphes_untitled_13.png)
@@ -319,11 +322,12 @@ On denote la date au plus tôt du sommet $B$ comme $t(B)$. En plus, on notera pa
     \\
     \max\big( \{t(s^-_X)+d(s^-_X,X): s^-_X \in \Gamma^-(X)\} \big), \text{ sinon }
     \end{cases}
-    $$
     
+$$
+
 5. Quand on arrive à la fin, $t(\text{fin})=14$, le projet dure $14$ jours au mieux sans raté aucune tâche).
 
-### Date au plus tard : $T(X)$
+#### Date au plus tard : $T(X)$
 
 Maintenant, on va calculer la date au plus tard. La différence ici c’est qu’on commence dès la fin jusqu’àux premiers tâches du projet. On rappelle que la date au plus tard est la date la plus tardive où on commence une tâche sans retarder le projet, càd de sorte que toutes les tâches du niveau précédent soient complètes (même si les tâches du niveau courant ne le sont pas).
 
@@ -344,7 +348,7 @@ t(\text{fin}), \text{ si } X=\text{fin}
 \end{cases}
 $$
 
-### Graphique final et la marge d’une tâche
+#### Graphique final et la marge d’une tâche
 
 ![Pour chaque tâche, on nota sa date au plus tôt dans la casse gauche et sa date au plus tard dans la casse droite.](ressources/03_theorie_des_graphes_untitled_15.png)
 

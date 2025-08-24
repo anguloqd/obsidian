@@ -1,10 +1,10 @@
-# 03 // interfaces, paquetages et exceptions
+## 03 // interfaces, paquetages et exceptions
 
 [INFF5_3.pdf](ressources/03_interfaces_paquetages_et_exceptions_inff5_3.pdf)
 
-# Interfaces
+## Interfaces
 
-## `interface` : une sorte de classe que de méthodes/constantes
+### `interface` : une sorte de classe que de méthodes/constantes
 
 Pensons à la notion de “héritage multiple”. Imaginons deux classes A et B avec une seule méthode truc(), et maintenant C va hériter (`extends`) au même temps de A et B, mais lequel méthode ? truc() de A ou truc() de B ? C’est pour ça que l’héritage multiple n’existe pas.
 
@@ -61,7 +61,7 @@ class Personne {
 }
 ```
 
-## Généralités sur les interfaces et les classes abstraites
+### Généralités sur les interfaces et les classes abstraites
 
 Une interface peut seulement contenir des signatures de méthodes (**pas de corps ni de constructeurs**) et, plus rarement, des constantes (attributs **forcément déclarés `static final`**).
 
@@ -103,14 +103,14 @@ Il faudrait mentionner quelques faits par rapport aux interfaces contres les cla
 - Une interface peut être implémentée par une ou plusieurs classes.
 - Une interface ne peut pas hériter d'une classe.
 
-## Types d’interfaces
+### Types d’interfaces
 
 Ils existent deux utilisations des interfaces :
 
 - Interfaces classiques : vraiment ajoutent la signature des méthodes, comme `Comparable` (qui ajoute la signature de `.compareTo()`).
 - Interfaces de “balisage” : sont des interface vide qui juste indique à travers leurs noms et leurs type hérités une propriété des classes qui l’implémentent, comme `Cloneable` (qui indique qu’il est légal d’utiliser `.clone()` avec telle classe),
 
-## Interfaces prédéfinies en Java
+### Interfaces prédéfinies en Java
 
 La première interface prédéfinie en Java est `Cloneable`. Sa définition est littéralement vide.
 
@@ -131,11 +131,11 @@ public interface Comparable {
 
 Le type Comparable et la méthode `.compareTo(…)` sont les deux d’intérêt. Plusieurs d’autres méthodes se servent du type. Par exemple, la classe `Arrays` possède une méthode `.sort(Object[] t)` pour ordonner les objets d’une liste en ordre croissant, d’où le besoin de *comparer* et le type `Comparable`.
 
-# Paquetages
+## Paquetages
 
-## Espaces de noms et les *packages*
+### Espaces de noms et les *packages*
 
-Les espaces de noms est une notion abstraite. Ils permet de regrouper des *choses* de la même *famille* et de lever les ambiguïtés de noms. **On pourrait les voir comme des dossiers**. 
+Les espaces de noms est une notion abstraite. Ils permet de regrouper des *choses* de la même *famille* et de lever les ambiguïtés de noms. **On pourrait les voir comme des dossiers**.
 
 Par exemple, le nom de famille est un espace de noms (donc ils ont tous une caractéristique commune : le nom de famille) permettant de discriminer les personnes ayant le même prénom (donc ils ont tous un caractéristique différente : le prénom).
 
@@ -178,9 +178,10 @@ C’est qui signifie que dans le dossier src, il y a un dossier “fr”, puis u
 ![untitled](ressources/05_flux_et_fichiers_untitled_3.png)
 
 Par convention, les packages ne sont nommés qu’avec des lettres minuscules.
+
 S’il y a deux classes dans le dossier src avec le même nom, et si elles appartiennent à deux paquets différents, il faut utiliser leur noms complets pour les importer. Si elles appartiennent au même paquet, on ne peut qu’utiliser l’une des deux classes dans le même projet.
 
-## Paquetages, classes et espace disque
+### Paquetages, classes et espace disque
 
 - Pour tout paquetage, il doit exister un répertoire de même nom sur le disque.
 - Le répertoire correspondant à un sous-paquetage doit être un sous-répertoire dans le répertoire correspondant au paquetage englobant.
@@ -188,11 +189,11 @@ S’il y a deux classes dans le dossier src avec le même nom, et si elles appar
 
 Par exemple, la classe `miashs.fractions.Fraction` doit être définie dans un fichier Fraction.java se trouvant dans un répertoire `fractions`, se trouvant dans un répertoire `miashs`.
 
-## Directives `import`
+### Directives `import`
 
 Une directive import dans un fichier .java permet d'utiliser les éléments importés en les désignant par leur « nom court ». Par exemple, `import java.util.Scanner` permet d'utiliser la classe `Scanner` sans la désigner par `java.util.Scanner`.
 
-### Le symbole `*`
+#### Le symbole `*`
 
 On peut utiliser `*` pour importer toutes les classes d'un paquetage. Par exemple, `import java.util.*` permet d'utiliser en les désignant par leur nom court la classe `Scanner`, la classe `Arrays`, etc.
 
@@ -200,15 +201,15 @@ On peut utiliser `*` pour importer toutes les classes d'un paquetage. Par exempl
 
 Il ne peut pas y avoir d'ambiguïté dans les importations (le compilateur veille). Par exemple, `import java.util.*` et `import java.sql.*` nécessite de désigner d'utiliser la classe `Date` en la désignant par `java.util.Date` ou `java.sql.Date`.
 
-# Exceptions
+## Exceptions
 
-## Erreurs et la solution
+### Erreurs et la solution
 
 Une exception est une sorte de “condition exceptionnelle” : un problème qui empêche la continuation de la méthode ou du bloc courant, car l'on ne dispose pas d'information suffisante dans le contexte courant pour traiter ce problème. La solution à ces exceptions est de reléguer le problème au “niveau supérieur”, i.e. le bloc appelant.
 
 **Note contextuelle**. L’ensemble d’erreurs qu’une méthode pourrait lever est dit ses “*throws*”.
 
-## Les exceptions comme des objets
+### Les exceptions comme des objets
 
 Établissons nos classes d’exemple :
 
@@ -252,7 +253,7 @@ En Java, les exceptions sont des objets qui se manipulent avec deux mots clés :
 
 Une exception est interceptée (abordée) ou pas interceptée. Si elle n’est jamais interceptée, elle montre l’erreur sur la console qui est indiqué par le mot-clé `throw`. Si elle est interceptée, elle fait tout ce qu’indique la clause `catch` et essaie de continuer avec le programme.
 
-La méthode qui contient le `throw` enverra ou “propagera” ce message à toutes les méthodes qui l’avaient appelé avant tant qu’elle n’est pas interceptée. C’est le principe de la patate chaude. Si la propagation de l’exception arrive à la méthode main, la trace de la pile des appels (i.e. ordre d’appel de méthodes) est affiché et le programme s’arrête. 
+La méthode qui contient le `throw` enverra ou “propagera” ce message à toutes les méthodes qui l’avaient appelé avant tant qu’elle n’est pas interceptée. C’est le principe de la patate chaude. Si la propagation de l’exception arrive à la méthode main, la trace de la pile des appels (i.e. ordre d’appel de méthodes) est affiché et le programme s’arrête.
 
 ```java
 public class IntroExceptions {
@@ -278,7 +279,7 @@ at cours9.IntroExceptions.main(IntroExceptions.java:85)
 */
 ```
 
-## Interception d’exceptions
+### Interception d’exceptions
 
 Pour intercepter cet exception, on utilise un bloc `try-catch`.
 
@@ -327,7 +328,7 @@ finally {
 }
 ```
 
-## L’objet `Throwable` et hiérarchie d’exceptions
+### L’objet `Throwable` et hiérarchie d’exceptions
 
 On avait dit que toute exception est un objet. Ils existent de différents types d’exceptions, mais le type le plus basique est la classe `Throwable`.
 
@@ -340,7 +341,7 @@ Hiérarchie d’exceptions
 - `RuntimeException` ou exceptions non “vérifiées” : situations qu’un programme ne peut pas anticiper et corriger.  Elle indiquent généralement une mauvaise utilisation de la méthode appelée (bug).
     - Ici, on a les exceptions `ArrayIndexOutOfBoundsException` et `NullPointerException`.
 
-### L’obligation d’interception et propagation explicite
+#### L’obligation d’interception et propagation explicite
 
 Si jamais on lance une exception de type `Exception` (exception vérifiée) qui n’est pas `RuntimeException`, **on doit forcément la propager explicitement ou l’intercepter, ou les deux**. La propagation explicite se fait à la ligne de la déclaration de la méthode, et l’interception se fait dans une des méthodes appelantes.
 

@@ -1,2 +1,1 @@
-# (2) 10 // héritage, polymorphisme
-
+## (2) 10 // héritage, polymorphisme

@@ -1,6 +1,6 @@
-# 00 // notes sur les partiels
+## 00 // notes sur les partiels
 
-# CC1
+## CC1
 
 #1.2.b. : il arrive de voir $n$ comme un paramètre dans un intégrale de variable $t$. Le paramètre $n$ ne permet pas d’arriver à une forme fermée ou explicite. Donc, il serait bon de développer quelques cas de $n$ pour regarder le motif. **Il est utile de faire division longue, où D° dén. ≤ D° num., même s’ils sont égaux !**
 
@@ -35,13 +35,13 @@ $$
 \sum_{k=0}^n \int_0^1 (-t^2)^k = \int_0^1 \sum_{k=0}^n (-t^2)^k=\int_0^1 \frac{1-(-t^2)^{n+1}}{1-(-t^2)}
 $$
 
-#1.2.c. : il peut être utile d’utiliser les intégrales passées pour des formes fermées légèrement changées. 
+#1.2.c. : il peut être utile d’utiliser les intégrales passées pour des formes fermées légèrement changées.
 
 #1.2.d., **théorème** : le produit de deux suites, $(a_n)$ et $(b_n)$, où $a_n \longrightarrow 0$ et $(b_n)$ bornée, tend vers $0$. Particulièrement utile quand $b_n = (-1)^n$ ou une fonction trigonométrique comme $b_n = \cos(n)$ qui est bornée.
 
 #2 : apprendre dérivées et intégrales des fonctions trigo., particulièrement fonctions circulaires inverses.
 
-## Post-correction
+### Post-correction
 
 #2.3 : si on demande le domaine de convergence, **IL FAUT SAVOIR SI ON INCLUT LES BORNES**. Test individuel de -R et R dans le D.L.
 
@@ -65,9 +65,9 @@ $$
 
 #3.3 : une question si $f(x)$ est de clase $\mathcal{C}^1$ signifie qu’on doit savoir si les dérivés partielles de cette fonctions sont continues, particulièrement s’il y a des points individuellement définis (fonction par branches). Très pareil à démontrer continuité, mais avec les dérivés partielles.
 
-# CC2
+## CC2
 
-## Tip à part…
+### Tip à part…
 
 Pour les changements d’indice dans les sommes, si on applique une transformation à $k$ qui arrive jusqu’à $n$ sur le symbole $\Sigma$, on applique la transformation contraire à $k$ sur l’expression.
 

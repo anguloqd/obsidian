@@ -1,10 +1,10 @@
-# 02 // marchés financiers et anticipations
+## 02 // marchés financiers et anticipations
 
 [Slides des anticipations](ressources/02_marches_financiers_et_anticipations_chapitre_2_diapo.pdf)
 
-# Valeur Actuelle Nette (VAN)
+## Valeur Actuelle Nette (VAN)
 
-## Définition
+### Définition
 
 La VAN sur une suite de revenus $Z=(Z_t)_{t=0}^\infty$ est la valeur présente des revenus anticipés d’un investisseur. Elle sert pour déterminer une décision d’investissement.
 
@@ -23,7 +23,7 @@ On constate que plus le revenu est lointain, plus le facteur d’actualisation (
 
 Cela dit, a partir de la période $1$ et au-delà, on ne connaît vraiment pas ni les revenus ni les taux des rendements. Donc, on doit utiliser de anticipations de $Z_i^e$ et $i_i^e$, $i≥1$.
 
-## VAN d’un revenu réel
+### VAN d’un revenu réel
 
 On peut tout diviser par P, le prix d’un bien représentatif de l’économie (souvent représentant le niveau de prix), pour obtenir la VAN réelle :
 
@@ -37,11 +37,11 @@ $$
 
 Où les $z_i$ sont les revenus réels et les $r_i$ sont les taux d’intérêt réels.
 
-# Prix des obligations et courbe des taux
+## Prix des obligations et courbe des taux
 
-## Définition d’obligation et de courbe des taux
+### Définition d’obligation et de courbe des taux
 
-### Les obligations (et terminologie)
+#### Les obligations (et terminologie)
 
 Les obligations sont une forme d’emprunt, normalement avec une durée de moyen ou long terme. Celui qui emprunt l’argent est *l’emetteur*, et celui qui prête l’argent est *le souscripteur* ou *le créancier*. Au moment de la créer, il est déterminé un montant principal, une date de maturité, un taux d’intérêt (qui engendre un coupon) et une période.
 
@@ -54,13 +54,13 @@ Les obligations sont une forme d’emprunt, normalement avec une durée de moyen
 
 Pour les agents financier, les deux caractéristiques d’une obligation sont **le risque de défaut** (probabilité que l’emetteur ne puisse pas payer les coupons ou le principal), et **la maturité** (durée pendant laquelle l’acheteur reçoit des versements ou coupons).
 
-### Les courbes de taux
+#### Les courbes de taux
 
 Une courbe de taux est juste un graphe avec une période (à partir d’aujourd’hui) en abscisse et le taux de rendement pour les obligations en ordonné.
 
 ![untitled](ressources/02_marches_financiers_et_anticipations_untitled.png)
 
-## VAN comme critère de décision
+### VAN comme critère de décision
 
 Face à deux obligations, on peut utiliser la VAN pour décider laquelle vaut plus en temps présent. On prend deux hypothèses :
 
@@ -85,7 +85,7 @@ $$
 P_{1,2}^e = \frac{100}{(1+i_{1,2}^e)}
 $$
 
-On note qu’on peut réécrire le prix actuel de $O_2$ en injectant le prix anticipé d’une obligation de temps 1 à temps 2. **La chose à retenir est que le prix est la valeur actuelle d’un prix estimé dans le futur**. Une équation qui lie le $P_{0,B}$ avec $P_{1,B}$ est appelée “**relation d’arbitrage**”. 
+On note qu’on peut réécrire le prix actuel de $O_2$ en injectant le prix anticipé d’une obligation de temps 1 à temps 2. **La chose à retenir est que le prix est la valeur actuelle d’un prix estimé dans le futur**. Une équation qui lie le $P_{0,B}$ avec $P_{1,B}$ est appelée “**relation d’arbitrage**”.
 
 $$
 P_{0,2} = \frac{100}{(1+i_{0,1})(1+i_{1,2}^e)} = \frac{\frac{100}{(1+i_{1,2}^e)}}{(1+i_{0,1})}=\frac{P_{1,2}^e}{(1+i_{0,1})} \implies \underbrace{(1+i_{0,1})=\frac{P_{1,2}^e}{P_{0,2}}}_\text{vraie relation d'arbitrage}
@@ -113,7 +113,7 @@ $$
 i_{0,n} \approx \frac{1}{n}\left( \sum_{p=0}^{n-1} i_{p,(p+1)} \right)
 $$
 
-## Risque
+### Risque
 
 Notons que $O_1$ n’a aucun risque car, au moment d’investir, on traite déjà avec un seul taux d’intérêt et on ne doit pas faire d’estimations d’autres taux dans le futur. Par contre, investir dans $O_2$ dépend (positivement, directement ou dans le même sens) du prix futur de l’obligation de l’année 1 à l’année 2, qui n’est pas encore défini.
 
@@ -133,9 +133,9 @@ Plus la maturité augmente, plus le risque augmente, donc $x$ aussi. L’investi
 
 Idée : est-ce que il existe une prime pour chaque période d’une année à l’autre ? Si oui, il devrait exister aussi plusieurs risques pour plusieurs estimations de prix.
 
-# Marchés financiers et variations des cours des actions
+## Marchés financiers et variations des cours des actions
 
-## Définition d’action et détermination de son prix
+### Définition d’action et détermination de son prix
 
 Une action est une partie du capital d’une entreprise. Elle donne droit à des dividendes, qui sont une partie ou un pourcentage de chaque profit de chaque période. La valeur des actions est donc la VAN des dividendes futurs (ou plutôt de leurs estimations).
 
@@ -183,13 +183,13 @@ $$
 
 Le valeur d’une action sont tous les valeurs au présent du prochain dividende et des prochains prix de l’action. On constate que le prix de l’action dépend directement (au même sens) des estimations de dividendes et inversement des taux d’intérêt.
 
-## Effets de hausse des taux sur la bourse et l’activité éco.
+### Effets de hausse des taux sur la bourse et l’activité éco.
 
 Variations des prix des actions/obligations sont imprévisibles, et leur attractivité est déterminée par les anticipations des investisseurs. Anticipation d’une hausse des cours des actions amène à une hausse de celle-ci.
 
 La relation de Phillips dans l’actualité est que, tant que le chômage $u$ se situe par-dessous de la NAIRU $u_n$ (et donc il crée de l’inflation $\pi$), il existe un risque que la FED fasse augmenter les taux d’intérêt. Si les marches financiers sous-estime la réussite du freinage de l’inflation à travers la hausse des taux, le cours des actions va baisser.
 
-## Risque et bulles
+### Risque et bulles
 
 Des bulles, ou des effets de modes, peuvent faire d´evier le cours des actions de leur “valeur fondamentale”. Pour de nombreux actifs, il est difficile de calculer une valeur fondamentale et le cours dépend beaucoup des anticipations sur le cours futur.
 

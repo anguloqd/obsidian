@@ -1,4 +1,4 @@
-# onnxsim
+## onnxsim
 
 ```bash
   607  git checkout fa46ba5 -- networks/classifiers/inception-v3/onnx/inception_v3_i8.yaml

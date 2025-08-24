@@ -1,11 +1,12 @@
-# 04 // relations verticales
+## 04 // relations verticales
 
 [Partie 2_05_L3 MIASHS_Relations verticales_cours.pdf](ressources/04_relations_verticales_partie_2_05_l3_miashs_relations_verticales_cours.pdf)
+
 [06_L3 MIASHS_Eco_cont_Intégration et restrictions verticales_moodle.pdf](ressources/04_relations_verticales_06_l3_miashs_eco_cont_integration_et_restrictions_verticales_moodle.pdf)
 
-# Formes de relations verticales
+## Formes de relations verticales
 
-## Premières définitions
+### Premières définitions
 
 **Définition de "relations verticales"** : les relations verticales désignent les interactions entre les entreprises opérant à différents niveaux d'une même chaîne de production ou de distribution. Par exemple, un fabricant et un fournisseur, ou un détaillant et un distributeur. Les relations verticales sont donc différentes des relations horizontales qui se produisent entre entreprises opérant au même niveau.
 
@@ -21,8 +22,8 @@ Les relations verticales sont différentes des relations offre-demande. Beaucoup
 
 On fait donc les distinctions suivantes :
 
-- **Les firmes en amont (upstream)** : des fabricants de biens de consommation, des producteurs de biens intermédiaires, ...
-- **Les firmes en aval (downstream)** : des distributeurs, des détaillants, ...
+- **Les firmes en amont (upstream)** : des fabricants de biens de consommation, des producteurs de biens intermédiaires, …
+- **Les firmes en aval (downstream)** : des distributeurs, des détaillants, …
 - **Le marché entre les firmes amont et les firmes aval** : le marché intermédiaire (ou marché de gros).
 - **Le marché entre les firmes aval et les consommateurs finals** : le marché final (ou marché de détail).
 
@@ -36,7 +37,7 @@ Nous allons donc étudier successivement trois types de relations verticales :
 2. **Intégration verticale**
 3. **Entre ces deux extrêmes il existe les contrats (de long terme)**
 
-## Les transactions par le marché (spot markets)
+### Les transactions par le marché (spot markets)
 
 Les transactions par le marché présentent **trois avantages principaux** :
 
@@ -45,12 +46,13 @@ Les transactions par le marché présentent **trois avantages principaux** :
 3. **La réalisation d'économies d'échelle** : la spécialisation permet aux fournisseurs de servir plusieurs clients et d'atteindre des volumes plus importants
 
 Les avantages liés aux transactions par les marchés viennent du fait qu'il n'y a pas de relation particulière entre la firme et ses fournisseurs :
+
 - La firme est indifférente entre les fournisseurs (le changement d'offreurs est sans coût).
 - La firme peut même se substituer aux fournisseurs qui ont des coûts élevés ou qui ne sont pas disposés à ajuster les quantités pour maximiser les gains du commerce.
 
 Pour que la firme soit incitée à sortir d'une simple relation de marché, il faut que des variables nouvelles l'amènent à lier un lien particulier avec un ou plusieurs fournisseurs. C'est ce que nous allons voir maintenant.
 
-## Les transactions hors marché
+### Les transactions hors marché
 
 Sortir du marché peut être souhaitable pour plusieurs raisons :
 
@@ -59,25 +61,25 @@ Sortir du marché peut être souhaitable pour plusieurs raisons :
 - **L'existence de pouvoir de marché**
 - **La nécessité d'avoir des actifs spécifiques**
 
-### Le problème de mesure de l'effort
+#### Le problème de mesure de l'effort
 
 Possibilité de ne pas pouvoir mesurer l'effort de vente des détaillants.
 
 - **Problème de passager clandestin (free rider)**. Pour éviter ce problème :
     - Intégration verticale
-    - Contrats long terme... dont les termes incitent à accroître les ventes
+    - Contrats long terme… dont les termes incitent à accroître les ventes
 
-### Les problèmes de coordination
+#### Les problèmes de coordination
 
 En économie on montre que les problèmes de coordination de type synchronisation et affectation (des ressources, des activités) sont plus efficacement résolus si l'on sort du marché.
 
 **Exemple de la SNCF** : l'intégration verticale permet de coordonner les politiques de prix et de services entre l'infrastructure ferroviaire et les services de transport.
 
-### L'existence de pouvoir de marché
+#### L'existence de pouvoir de marché
 
 Une des raisons pour préférer des transactions hors marché qu'une firme avec du pouvoir de marché peut utiliser l'intégration verticale pour accroître ses profits.
 
-### La nécessité d'avoir des actifs spécifiques
+#### La nécessité d'avoir des actifs spécifiques
 
 Certaines productions nécessitent des investissements spécifiques en actifs.
 
@@ -97,9 +99,9 @@ Dans le cas d'actifs spécifiques, la firme peut choisir :
 - Des contrats de long terme dont les termes indiquent le niveau d'actifs spécifiques
 - L'intégration verticale
 
-## Les contrats
+### Les contrats
 
-### Opportunisme post-contractuel : actifs spécifiques et hold-up
+#### Opportunisme post-contractuel : actifs spécifiques et hold-up
 
 À l'inverse des transactions par le marché, les contrats (long terme) permettent de construire une relation propice à des investissements spécifiques. Cependant, ces investissements spécifiques peuvent alors générer des risques de hold-up pour les deux partenaires.
 
@@ -107,7 +109,9 @@ Dans le cas d'actifs spécifiques, la firme peut choisir :
 
 **Mesure de la quasi-rente** : La quasi-rente associée avec les investissements spécifiques mesure la spécificité de l'investissement et correspond à la différence entre :
 
-$$\text{Quasi-rente} = \text{Valeur de l'actif dans son utilisation présente} - \text{Meilleure utilisation alternative}$$
+$$
+\text{Quasi-rente} = \text{Valeur de l'actif dans son utilisation présente} - \text{Meilleure utilisation alternative}
+$$
 
 **Hold-up et quasi-rente : principe**
 
@@ -119,18 +123,18 @@ Le problème du hold-up : si $\pi_1 - \pi_2 > 0$, B peut améliorer sa situation
 
 Si A l'anticipe, elle n'investira pas dans un actif spécifique à la relation.
 
-### Les solutions au problème du hold-up
+#### Les solutions au problème du hold-up
 
 1. **Avoir plusieurs fournisseurs et/ou clients**
 2. **Adapter ses investissements stratégiques** afin de s'écarter de la relation exclusive :
    - Choix technologiques (moins spécifiques, standardisation des produits)
    - Choix de localisation (parc technologique)
    - Choix de formation moins spécifique
-3. **Contrats contingents** aux variables importantes pour éviter la renégociation (prix des entrants, variables du marché, ...)
+3. **Contrats contingents** aux variables importantes pour éviter la renégociation (prix des entrants, variables du marché, …)
 4. **L'exemple des franchises**
 5. **Intégration verticale**
 
-## L'exemple des franchises
+### L'exemple des franchises
 
 **Franchise** : contrat par lequel une entreprise franchiseuse accorde à une autre (le franchisé) en échange d'une compensation financière le droit d'exploiter une franchise dans le but de commercialiser un type de produits ou des services déterminés.
 
@@ -140,13 +144,13 @@ Aux yeux de l'UE, trois éléments doivent être présents dans ce contrat :
 - Le franchiseur doit communiquer un certain savoir-faire au franchisé
 - Le franchiseur doit apporter au franchisé une assistance commerciale ou technique pendant toute la durée de l'accord
 
-### Types de franchises
+#### Types de franchises
 
-- **Franchise de distribution** : vous vendez des produits sélectionnés par le franchiseur (55% des franchises en France). Ex. : tout ce qui est alimentation : McDonald's, Domino's... ; chaînes d'hôtel, cosmétiques (Yves Rocher), d'habillement...
-- **Franchise de services** : vous vendez des services conçus par le franchiseur (45% des franchises en France). Ex. : hôtellerie, coiffure...
+- **Franchise de distribution** : vous vendez des produits sélectionnés par le franchiseur (55% des franchises en France). Ex. : tout ce qui est alimentation : McDonald's, Domino's… ; chaînes d'hôtel, cosmétiques (Yves Rocher), d'habillement…
+- **Franchise de services** : vous vendez des services conçus par le franchiseur (45% des franchises en France). Ex. : hôtellerie, coiffure…
 - **Franchise industrielle** : vous produisez selon le savoir-faire du franchiseur. Transfert de technologie. Ex. : Coca-Cola
 
-### Composante financière et contreparties
+#### Composante financière et contreparties
 
 - **Droit d'entrée** : couvre une partie des investissements faits par le franchiseur, grosso modo, le coût fixe
 - **Redevance d'enseigne** (paiement annuel)
@@ -155,27 +159,28 @@ Aux yeux de l'UE, trois éléments doivent être présents dans ce contrat :
 - **Marge sur les achats**
 - **RFA et marges arrières**
 
-### Avantages pour le franchiseur
+#### Avantages pour le franchiseur
 
-- Avantages évidents d'un réseau pour l'homogénéité, la puissance d'achat, la puissance publicitaire, les moyens...
+- Avantages évidents d'un réseau pour l'homogénéité, la puissance d'achat, la puissance publicitaire, les moyens…
 - Développement moins coûteux qu'en succursale car l'investissement est réparti entre franchiseur et franchisés
 - Développement plus rapide
 - Efficacité du partenariat entre indépendants car des franchisés bien sélectionnés sont plus motivés que des salariés
 
-### Avantages pour le franchisé
+#### Avantages pour le franchisé
 
-- Avantages évidents d'un réseau pour l'homogénéité, la puissance d'achat, la puissance publicitaire, les moyens...
+- Avantages évidents d'un réseau pour l'homogénéité, la puissance d'achat, la puissance publicitaire, les moyens…
 - Propriétaire de son entreprise
 - Il copie un succès en se faisant aider d'où un démarrage plus rapide et moins coûteux
 - Limitation du risque
 - Rentabilité des capitaux investis
 - Maîtrise professionnelle supérieure grâce au transfert de savoir-faire et à l'assistance
 
-## L'intégration verticale
+### L'intégration verticale
 
 La question principale devient "intégrer ou non une activité ?", qui ressemble aussi à "faire ou faire-faire ?".
 
 Il faut comparer le coût (dont coût d'opportunité) :
+
 - D'une production en interne (intégration verticale)
 - Du recours à des firmes externes ("au marché")
 
@@ -183,7 +188,7 @@ Il faut comparer le coût (dont coût d'opportunité) :
 - **Coûts de transaction** : coût de recherche d'information, coût de recherche d'un nouveau partenaire, coûts de conclusion du contrat
 - La notion d'actif spécifique va y jouer progressivement un rôle central
 
-### Approche de Coase
+#### Approche de Coase
 
 **Constat de départ** de l'analyse : "Des îlots de pouvoir conscient dans un océan de coopération inconsciente"
 
@@ -193,7 +198,7 @@ Il faut comparer le coût (dont coût d'opportunité) :
 
 Le choix entre coordination par le marché et coordination dans la firme dépendra donc de la confrontation du coût d'une transaction supplémentaire par le marché et du coût d'organisation interne de la même transaction.
 
-### Approche de Williamson
+#### Approche de Williamson
 
 **Hypothèses de comportement** :
 - **Rationalité limitée** : contrats incomplets
@@ -219,7 +224,7 @@ Expliquer l'intégration verticale, c'est expliquer pourquoi une coordination ad
 
 Pour conclure, la différence totale entre coûts d'internalisation et coûts de recours au marché est une fonction décroissante de la spécificité des actifs. Passé un certain seuil, cette différence devient négative et l'intégration verticale devient la forme d'organisation qui minimise les coûts.
 
-### Intégration verticale et gains d'efficacité
+#### Intégration verticale et gains d'efficacité
 
 Classiquement, le résultat de l'intégration verticale est d'augmenter le pouvoir de marché d'une firme. Mais si l'intégration verticale se traduit par des gains d'efficacité (économies d'échelle, de gamme), alors ces gains peuvent compenser les effets négatifs sur la concurrence. En effet, du fait de ces gains d'efficacité, les coûts peuvent diminuer, ce qui peut bénéficier aux consommateurs.
 
@@ -234,13 +239,13 @@ Ceci dit, l'intégration verticale est une solution radicale. Beaucoup de béné
 - Sous-traitance
 - Franchises
 - Contrats d'exclusivité
-- Prix de revente imposés ou conseillés...
+- Prix de revente imposés ou conseillés…
 
 On appelle de tels arrangements des **restrictions verticales**. Leur analyse est l'objet du chapitre suivant du cours.
 
-# Intégration et restrictions verticales
+## Intégration et restrictions verticales
 
-## Premières définitions
+### Premières définitions
 
 **La concurrence intermarques** : C'est la concurrence entre les produits de marques différentes. Elle se manifeste lorsque les consommateurs choisissent entre des produits similaires offerts par des entreprises concurrentes.
 
@@ -255,7 +260,7 @@ On distingue **deux catégories de restrictions verticales** :
 - **Restrictions tarifaires** : Ce sont des contrôles sur les prix et les conditions de vente des produits. Par exemple, un prix de revente imposé ou des rabais conditionnels.
 - **Restrictions non-tarifaires** : Elles incluent des limitations qui ne concernent pas directement le prix, comme les quotas de vente, les exclusivités territoriales, ou les clauses de non-concurrence.
 
-Pour l'économiste, les effets sur le bien-être des restrictions verticales sont ambigus...
+Pour l'économiste, les effets sur le bien-être des restrictions verticales sont ambigus…
 
 **Des effets positifs** :
 - **Amélioration de l'efficacité** : Les restrictions verticales peuvent éliminer les inefficacités dues à la double marge et aligner les incitations entre les niveaux de production et de distribution.
@@ -267,12 +272,12 @@ Pour l'économiste, les effets sur le bien-être des restrictions verticales son
 
 De ce fait, l'analyse publique des restrictions verticales est compliquée par le fait que certaines clauses peuvent avoir à la fois des effets positifs et négatifs en termes d'efficacité. Il y a aussi une forte variation des politiques publiques dans le temps et entre les différentes juridictions.
 
-### Restrictions verticales et politique de la concurrence
+#### Restrictions verticales et politique de la concurrence
 
 **États-Unis** :
 - En 1967, la Cour Suprême déclare les restrictions verticales illégales per se
 - En 1977, elle statue que les restrictions verticales non tarifaires doivent être "évaluées" suivant la "Règle de Raison" (Rule of Reason)
-- Depuis, tendance vers plus d'acceptation. Par exemple, en 1997, prix maximum déclarés légaux...
+- Depuis, tendance vers plus d'acceptation. Par exemple, en 1997, prix maximum déclarés légaux…
 
 **Europe** :
 - L'Article 81(1) interdit les restrictions verticales
@@ -281,9 +286,10 @@ De ce fait, l'analyse publique des restrictions verticales est compliquée par l
 - En 1988, exemption pour les accords de franchise.
 - Prix de revente imposé illégal, mais des prix minimum ou maximum "recommandés" sont acceptables
 
-## Cadre d'analyse : le modèle de double marge
+### Cadre d'analyse : le modèle de double marge
 
 Le modèle analyse une situation où :
+
 - **Un fabricant F** opère sur le marché du bien intermédiaire
 - **Un distributeur D** s'approvisionne sur le marché du bien intermédiaire et opère sur le marché du bien final
 
@@ -292,7 +298,7 @@ Le modèle analyse une situation où :
 - Ces marges s'additionnent : le prix élevé sur le marché final est le résultat du phénomène de double-marge
 - **"Qu'y a-t-il de pire qu'un monopole ? Une chaîne de monopoles !"**
 
-### Formalisation du modèle
+#### Formalisation du modèle
 
 **Hypothèses** :
 - Une entreprise F en amont produit un bien intermédiaire en monopole
@@ -306,80 +312,111 @@ Le modèle analyse une situation où :
 1. F fixe le prix de gros $w$
 2. D observe $w$ et fixe le prix de détail $p$
 
-### A. Cas de la chaîne de monopoles
+#### A. Cas de la chaîne de monopoles
 
 **Étape 2** : Le programme de maximisation du profit du distributeur est :
-$$\max_p \pi_D = (p - w)(a - p)$$
+
+$$
+\max_p \pi_D = (p - w)(a - p)
+$$
 
 La condition de premier ordre s'écrit :
-$$\frac{\partial \pi_D}{\partial p} = 0 \Leftrightarrow a - 2p + w = 0$$
+
+$$
+\frac{\partial \pi_D}{\partial p} = 0 \Leftrightarrow a - 2p + w = 0
+$$
 
 D'où : $p = \frac{a + w}{2}$
 
 La demande pour le bien final, et donc pour le bien intermédiaire, est alors :
-$$q = a - p = a - \frac{a + w}{2} = \frac{a - w}{2}$$
+
+$$
+q = a - p = a - \frac{a + w}{2} = \frac{a - w}{2}
+$$
 
 **Étape 1** : Le programme de maximisation du profit du fabricant est :
-$$\max_w \pi_F = (w - c)q(w) = (w - c)\frac{a - w}{2}$$
+
+$$
+\max_w \pi_F = (w - c)q(w) = (w - c)\frac{a - w}{2}
+$$
 
 La condition de premier ordre s'écrit :
-$$\frac{\partial \pi_F}{\partial w} = 0 \Leftrightarrow \frac{a - w}{2} - \frac{w - c}{2} = 0$$
+
+$$
+\frac{\partial \pi_F}{\partial w} = 0 \Leftrightarrow \frac{a - w}{2} - \frac{w - c}{2} = 0
+$$
 
 D'où : $w = \frac{a + c}{2}$
 
 En remplaçant $w$ par sa valeur, on trouve le prix d'équilibre sur le marché final :
-$$p = \frac{a + \frac{a + c}{2}}{2} = \frac{3a + c}{4}$$
 
-**Profits individuels** : 
+$$
+p = \frac{a + \frac{a + c}{2}}{2} = \frac{3a + c}{4}
+$$
+
+**Profits individuels** :
 - $\pi_D = \frac{(a - c)^2}{16}$
 - $\pi_F = \frac{(a - c)^2}{8}$
 
 Soit un surplus total en double monopole de :
-$$SP = \pi_D + \pi_F = \frac{3(a - c)^2}{16}$$
 
-### B. Cas de la firme intégrée
+$$
+SP = \pi_D + \pi_F = \frac{3(a - c)^2}{16}
+$$
+
+#### B. Cas de la firme intégrée
 
 On suppose maintenant que les firmes F et D sont intégrées verticalement. On a alors le problème classique du monopole :
 
-$$\max_{p^{IV}} \pi^{IV} = (p - c)(a - p)$$
+$$
+\max_{p^{IV}} \pi^{IV} = (p - c)(a - p)
+$$
 
 On trouve alors que :
+
 - $p^{IV} = \frac{a + c}{2}$
 - $q^{IV} = \frac{a - c}{2}$
 - $SP^{IV} = \pi^{IV} = \frac{(a - c)^2}{4}$
 
-### Comparaison des deux cas
+#### Comparaison des deux cas
 
 On observe que $p > p^{IV}$ et $SP < SP^{IV}$
 
 Ce qui implique que :
+
 - **Le profit joint des firmes séparées est inférieur à celui de la firme intégrée** (Proposition 1)
 - **Le surplus collectif est inférieur dans le cas d'une chaîne de monopoles** à celui qui serait obtenu avec un monopole couvrant toutes les activités de la chaîne (Proposition 2)
 
-## Les restrictions verticales comme solution à la double marge
+### Les restrictions verticales comme solution à la double marge
 
 Le problème de la double marge plaide pour l'intégration verticale, mais l'intégration verticale est coûteuse :
+
 - Coûts pour manager les employés du circuit de distribution
-- Producteur et distributeur sur des marchés géographiques éloignés...
+- Producteur et distributeur sur des marchés géographiques éloignés…
 
 C'est pourquoi les firmes mettent en place des **restrictions verticales** qui permettent de restaurer de l'efficacité dans la filière.
 
-### Solution #1 : Tarification en partie double
+#### Solution #1 : Tarification en partie double
 
 Supposons que la firme amont (F) propose un tarif en deux parties (tarif binôme) à la firme aval (D) : un prix unitaire ($w$) et une partie fixe (ex. une redevance de franchise) $FF$.
 
 La firme F fixe le prix unitaire ($w$) au coût marginal : $w = c$
 
 Le problème de la firme D s'écrit alors :
-$$\max_p \pi_D = (p - c)(a - p) - FF$$
+
+$$
+\max_p \pi_D = (p - c)(a - p) - FF
+$$
 
 C'est le profit de monopole intégré moins la partie fixe FF !
 
 On trouve alors :
-- $p = \frac{a + c}{2} = p^{IV}$ 
+
+- $p = \frac{a + c}{2} = p^{IV}$
 - $q = \frac{a - c}{2} = q^{IV}$
 
 Les profits des deux firmes s'écrivent :
+
 - $\pi_D = \frac{(a - c)^2}{4} - FF$
 - $\pi_F = FF$
 
@@ -389,7 +426,7 @@ Le profit total des firmes est maximum, égal à $\pi^{IV}$. La répartition du 
 
 **Limite** : Nécessite que la firme amont connaisse parfaitement la demande et les coûts de la firme aval.
 
-### Solution #2 : Prix de revente imposé
+#### Solution #2 : Prix de revente imposé
 
 Le distributeur peut aussi fixer un prix maximum de vente au détail. La firme F impose à la firme D un prix de détail $p$ maximum égal à $p^{IV} = \frac{a + c}{2}$.
 
@@ -397,7 +434,7 @@ Le partage du surplus $SP$ entre le fabricant F en amont et le distributeur D en
 
 Si c'est F qui a tout le pouvoir de marché, $w = p^{IV} = \frac{a + c}{2}$, si c'est D qui l'a, $w = c$.
 
-### Solution #3 : Quotas de vente
+#### Solution #3 : Quotas de vente
 
 De manière équivalente au prix de revente imposé, la firme peut imposer un quota de vente.
 
@@ -413,11 +450,12 @@ Le partage du surplus $SP$ entre le fabricant en amont et le distributeur en ava
 >
 > Des estimations sur ce nouveau contrat montrent que le prix de location moyen est passé de 4,6 à 4 dollars ; puis une augmentation de quantité de location. Les profits augmentent. On a donc passé d'une situation de double marge à un monopole intégré.
 
-## Enjeux de concurrence intramarque et intermarques
+### Enjeux de concurrence intramarque et intermarques
 
-### Concurrence intramarque
+#### Concurrence intramarque
 
 ![Exemple d'une concurrence intramarque](ressources/04_relations_verticales_untitled_2.png)
+
 Exemple d'une concurrence intramarque
 
 **Le risque de free-riding entre distributeurs** : S'il y a plusieurs distributeurs, il peut exister des externalités horizontales entre ceux-ci, ce qui peut entraîner un problème de free-riding (passager clandestin).
@@ -432,9 +470,10 @@ Exemple d'une concurrence intramarque
 - Les territoires exclusifs
 - Le prix de revente imposé
 
-### Concurrence intermarques
+#### Concurrence intermarques
 
 ![Exemple de concurrence intermarques](ressources/04_relations_verticales_untitled_3.png)
+
 Exemple de concurrence intermarques
 
 Parce qu'elles affectent les formes de la concurrence entre distributeurs d'une même marque, les contraintes verticales affectent indirectement la concurrence entre distributeurs de produits rivaux et, par suite, en amont la concurrence entre producteurs.
@@ -449,23 +488,23 @@ Plusieurs travaux ont ainsi montré que les restrictions verticales peuvent avoi
 
 > [!note] Exemple : cas de la grande distribution en France : loi Galland
 >
-> **Loi Galland** : renforcer la transparence, interdire aux fabricants de discriminer par le prix aux distributeurs, un rabais fait à un distributeur devra se faire à tous les distributeurs. 
-> 
-> **Premier problème** : si tous les distributeurs vont recevoir le même rabais, pas besoin de concurrence intra-distributeur. 
-> 
-> **Deuxième problème** : les fabricants se sont dit qu'ils pouvaient augmenter le prix, même ensemble comme un monopole. 
-> 
+> **Loi Galland** : renforcer la transparence, interdire aux fabricants de discriminer par le prix aux distributeurs, un rabais fait à un distributeur devra se faire à tous les distributeurs.
+>
+> **Premier problème** : si tous les distributeurs vont recevoir le même rabais, pas besoin de concurrence intra-distributeur.
+>
+> **Deuxième problème** : les fabricants se sont dit qu'ils pouvaient augmenter le prix, même ensemble comme un monopole.
+>
 > **Résultat** : les prix des biens ont augmenté de 30%.
 >
 > En fait, le fait d'interdire la discrimination par le prix est aussi, de manière cachée, une manière d'interdire l'intégration verticale.
 
 Dans certaines circonstances, les restrictions verticales peuvent être utilisées pour empêcher l'accès au marché d'entreprises susceptibles de concurrencer efficacement les entreprises déjà installées.
 
-## Étude de cas : la parfumerie de luxe
+### Étude de cas : la parfumerie de luxe
 
 Des restrictions verticales ont favorisé une entente verticale en France entre parfumeurs et leurs distributeurs sur la période 1998-2000. Cette entente verticale a été condamnée par l'Autorité de la concurrence.
 
-### Présentation du secteur
+#### Présentation du secteur
 
 **Chiffres clés** :
 - Environ 1,9 milliards d'euros de chiffre d'affaires en France en 2016
@@ -482,7 +521,7 @@ Des restrictions verticales ont favorisé une entente verticale en France entre 
 
 **Côté distributeurs**, marché dominé par la distribution sélective, mais celle-ci a perdu des parts de marché (55% en 2004). Les 20 premières marques représentent près de 80% du marché de la distribution sélective.
 
-### Pratiques en cause
+#### Pratiques en cause
 
 **Particularités de la vente en distribution sélective** : système où le fabricant sélectionne ses distributeurs selon des critères qualitatifs et quantitatifs précis.
 
@@ -490,11 +529,11 @@ Des restrictions verticales ont favorisé une entente verticale en France entre 
 
 **Application de la politique** : surveillance et sanctions en cas de non-respect des prix conseillés.
 
-### Le procès
+#### Le procès
 
 **Chronologie** :
 - **1983** : Première condamnation
-- **2000** : Affaire d'autosaisine par l'Autorité de la concurrence  
+- **2000** : Affaire d'autosaisine par l'Autorité de la concurrence
 - **2006** : Condamnation
 
 Mais le procès ne concerne que les années 1997 à 2000.
@@ -504,10 +543,10 @@ Mais le procès ne concerne que les années 1997 à 2000.
 - Politique de protection de l'image de marque
 
 **Total des condamnations** : 45,4 millions d'euros
-- **13 producteurs** : 17,8 millions d'euros (L'Oréal, Chanel, Christian Dior, Yves Saint Laurent, Guerlain...)
+- **13 producteurs** : 17,8 millions d'euros (L'Oréal, Chanel, Christian Dior, Yves Saint Laurent, Guerlain…)
 - **3 distributeurs** : 27,6 millions d'euros (Marionnaud, Séphora et Nocibé)
 
-### Suites du procès
+#### Suites du procès
 
 **Étude en 2006** de 50 références de parfum vendus par les 3 sites : marionnaud.fr, sephora.fr, nocibe.fr sur 13 marques : Boucheron, Cacharel, Dior, Armani, Givenchy, Guerlain, Hugo Boss, Kenzo, Lacoste, Nina Ricci, Ralph Lauren, Rochas et Yves Saint Laurent.
 
@@ -522,7 +561,7 @@ Mais le procès ne concerne que les années 1997 à 2000.
 
 Cette étude de cas illustre parfaitement comment les restrictions verticales peuvent être utilisées pour maintenir des prix élevés au détriment de la concurrence et des consommateurs, justifiant ainsi l'intervention des autorités de la concurrence.
 
-## Synthèse du chapitre
+### Synthèse du chapitre
 
 Les relations verticales prennent trois formes principales : les transactions par le marché, les contrats de long terme, et l'intégration verticale. Le choix entre ces formes dépend largement du degré de spécificité des actifs et des coûts de transaction.
 

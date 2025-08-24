@@ -1,2 +1,1 @@
-# (1) 06 // récursivité et programmation dynamique
-
+## (1) 06 // récursivité et programmation dynamique

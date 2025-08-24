@@ -1,16 +1,16 @@
-# 01 // tests de $\chi^2$
+## 01 // tests de $\chi^2$
 
 [slides chi2 stat 3 annote.pdf](ressources/01_tests_de_$_chi^2$_slides_chi2_stat_3_annote.pdf)
 
-# Tests du $χ²$
+## Tests du $χ²$
 
-## Test du $χ²$ pour l’*indépendance* entre deux variables
+### Test du $χ²$ pour l’*indépendance* entre deux variables
 
 Dans cette section, on s'intéresse aux relations entre deux variables notées $X$ et $Y$. Supposons que l'on observe ces deux variables sur $n$ unités statistiques. A chaque individu $i$, on peut associer un couple d'observations $(x_i; y_i)$. Chaque variable peut-être quantitative ou qualitative.
 
 Les données peuvent être représentées dans un tableau à double entrée appelé **tableau de contingence**.
 
-Notons $m_{X_1}, ..., m_{X_J}$ les $J$ modalités de $X$, et $m_{Y_1}, ..., m_{Y_K}$ les $K$ modalités de $Y$.
+Notons $m_{X_1}, …, m_{X_J}$ les $J$ modalités de $X$, et $m_{Y_1}, …, m_{Y_K}$ les $K$ modalités de $Y$.
 
 Introduisons les quantités suivantes :
 
@@ -18,15 +18,15 @@ Introduisons les quantités suivantes :
 - $n_{•k}$ est le nombre de fois où la variable $Y$ prend la valeur $m_{Y_k}$
 - $n_{j•}$ est le nombre de fois où la variable $X$ prend la valeur $m_{X_j}$
 
-### Distributions marginales
+#### Distributions marginales
 
 A partir du tableau de contingence, on peut retrouver la distribution de chacune des variables séparément.
 
 ![image.png](ressources/01_tests_de_$_chi^2$_image.png)
 
-Les distributions de $X$ et de $Y$ sont appelées distributions marginales. Sur chaque variable, on peut calculer les indicateurs habituels (moyenne, variance, écart type si la variable est quantitative...). Ces paramètres sont qualifiés d’indicateurs marginaux.
+Les distributions de $X$ et de $Y$ sont appelées distributions marginales. Sur chaque variable, on peut calculer les indicateurs habituels (moyenne, variance, écart type si la variable est quantitative…). Ces paramètres sont qualifiés d’indicateurs marginaux.
 
-### Statistique du χ²
+#### Statistique du χ²
 
 En présence de deux variables, l'un des enjeux principaux est d'étudier (c'est à dire quantifier voire expliquer) la dépendance entre les deux caractères.
 
@@ -76,7 +76,7 @@ où $J$ et $K$ sont le nombre de modalités de chacune des deux variables consid
 
 **Théorème.** La variable du test $D_{χ²}$ suit une loi du $χ²$ à $(K-1)(L-1)$ degrés de liberté.
 
-### Interprétation
+#### Interprétation
 
 Au seuil $α\%$ (le plus souvent $α = 5\%$), il faut comparer $D_{χ²}$ au quantile d'ordre $1-α\%$ ($q_{0,95}$ le plus souvent) d'une loi du $χ²(d)$, où:
 
@@ -89,7 +89,7 @@ L'interprétation est la suivante :
 - si $D_χ² ≥ q_{1-α}$, on conclut que les deux variables sont dépendantes
 - sinon, on conclut qu'elles sont indépendantes
 
-## Test du $χ²$ pour l'*ajustement* d'une série à une loi de probabilité
+### Test du $χ²$ pour l'*ajustement* d'une série à une loi de probabilité
 
 > [!important]
 >
@@ -105,11 +105,11 @@ $$
 m ≈ 50.78, σ ≈ 3.74
 $$
 
-### Hypothèse nulle
+#### Hypothèse nulle
 
 On pose $H_0$ comme "La série observée est distribuée selon une loi normale $\mathcal N(50.78, 3.74)$"
 
-### Variable du test
+#### Variable du test
 
 La statistique du test est :
 
@@ -121,14 +121,14 @@ où $O_i$ sont les effectifs observés et $T_i$ les effectifs théoriques.
 
 **Théorème**. La variable du test $D_{χ²}$ suit une loi du $χ²$ à $(l-s-1)$ degrés de liberté, où $l$ est le nombre de modalités observées, $s$ est le nombre de paramètres estimés.
 
-### Interprétation
+#### Interprétation
 
 Au seuil $α\%$, on compare $D_χ²$ au quantile $q_{1-α}$ de la loi du $χ²(d)$ :
 
 - si $D_{χ²} ≥ q_{1-α}$, on conclut que les deux distributions ne peuvent pas être identiques
 - sinon, on ne rejette pas cette hypothèse
 
-### Application
+#### Application
 
 Dans l'exemple des sacs de ciment :
 

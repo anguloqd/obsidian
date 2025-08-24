@@ -1,4 +1,4 @@
-# Period #2 - Exporting and importing with numpy
+## Period #2 - Exporting and importing with numpy
 
 ```bash
   521  mkdir test

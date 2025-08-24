@@ -1,10 +1,10 @@
-# 04 // grammaires
+## 04 // grammaires
 
 [Slides du chapitre 4](ressources/04_grammaires_chapitre_4_compressed.pdf)
 
-# Les grammaires
+## Les grammaires
 
-## Types de grammaires
+### Types de grammaires
 
 On s’intéresse à deux processus : générer des mots à partir d’un langage, et dire si un mot fait partie ou non d’un langage. Pour ces deux tâches, ils existent deux grammaires formelles :
 
@@ -13,9 +13,9 @@ On s’intéresse à deux processus : générer des mots à partir d’un langag
 
 Une grammaire formelle (ou simplement grammaire) est une description précise d’un langage formel (càd. d’un ensemble de mots). Dans ce cours, on s’intérèsse plutôt aux grammaires génératives.
 
-# Les grammaires descriptives
+## Les grammaires descriptives
 
-## Comment elles marchent
+### Comment elles marchent
 
 La description des règles pour générer une chaîne à partir d’un langage se fait comme suit :
 
@@ -24,7 +24,7 @@ La description des règles pour générer une chaîne à partir d’un langage s
 
 Le langage est constitué de toutes les chaînes qui peuvent être générées de cette manière. Toute séquence particulière de choix de règles appliquées pendant ce processus donne naissance à une chaîne particulière dans le langage. S’il y a plusieurs manières différentes de générer une seule chaîne, alors la grammaire est dite “ambiguë”.
 
-## Exemple
+### Exemple
 
 Supposons l'alphabet contenant les symboles a et b, un symbole de départ S et les règles suivantes :
 
@@ -32,6 +32,7 @@ Supposons l'alphabet contenant les symboles a et b, un symbole de départ S et l
 2. Remplacer $S$ par $ba$.
 
 Générons une chaîne à partir de ces règles.
+
 On commence avec “S” et on choisit un règle à lui appliquer.
 
 - $R_1(S) = aSb$.
@@ -42,7 +43,7 @@ On s’arrête là, car tous les symboles font partie de l’alphabet.
 
 Finalement, le langage de la grammaire est l’ensemble de toutes les chaînes qui peuvent être générées en utilisant ce processus. Donc $\{ba, abab, aababb, aaababbb, \dots \}$.
 
-## Définition mathématique d’une grammaire
+### Définition mathématique d’une grammaire
 
 Formellement, on définit une grammaire comme un tuple de quatre éléments :
 
@@ -58,11 +59,12 @@ càd. l’ensembles de symboles qui ne font pas partie de l’alphabet.
 - $R$ : règles de production ou de réécriture d’une chaîne.
 
 Reprenant l’exemple passé, la grammaire $G$ serait telle que :
+
 $V_N=\{S\}$, $V_T=\{a,b\}$, $S = S$, et $R=\{R1 : S \mapsto aSb, R2 : S \mapsto ba\}$.
 
 Intuitivement, un mot $w\in V_T^*$ est engendré par une grammaire si on peut l’obtenir au bout d’un certain nombre fini de réécritures à partir du symbole axiome.
 
-## Définition mathématique d’une règle
+### Définition mathématique d’une règle
 
 Une règle c’est juste une fonction qui prend une chaîne (hors la chaîne vide) et renvoie une autre chaîne (ici la chaîne vide est possible).
 
@@ -73,7 +75,7 @@ $$
 
 Il faut noter que la chaîne de gauche, qui appartient à $\varphi$, contient au moins un symbole non-terminal (ce qui permet de continuer à la réécrire), ce qui n’est pas le cas d’un chaîne dans $\psi$.
 
-## Dérivations
+### Dérivations
 
 Une dérivation est juste le fait de convertir une chaîne appliquant des règles $n$ fois.
 
@@ -91,17 +93,17 @@ $$
 L(G)=\{w\in V_t^* : S \Rightarrow^*w\}
 $$
 
-# Hiérarchie de Chomsky
+## Hiérarchie de Chomsky
 
-## Définition
+### Définition
 
 Noam Chomsky a d'abord formalisé les grammaires génératives en 1956. Il les a classifiées en quatre types (connu maintenant comme la hiérarchie de Chomsky). La différence c’est que ces quatre types de grammaire ont des règles de production de plus en plus strictes et peuvent exprimer de moins en moins de langages formels.
 
-## Type 0
+### Type 0
 
 Les grammaires de type 0 sont appelées aussi les grammaires non-restreintes, et incluent toutes les grammaires formelles. **Il n’y a pas de restriction sur les côtés gauche et droit des règles de production de la grammaire**. Elles génèrent exactement tous les langages qui peuvent être reconnus par une machine de Turing.
 
-## Type 1
+### Type 1
 
 Les grammaires de type 1 sont appelées “grammaires sensibles au contexte”, qui génèrent des langages sensibles au contexte. Leurs règles sont souvent de la forme suivante :
 
@@ -113,7 +115,7 @@ Où $A$ est forcément non terminal et $\alpha$, $\beta$ et $\gamma$ des chaîne
 
 Les langages sont reconnus par un automate borné linéaire (une machine de Turing non-déterministe dont la bande – quantité de mémoire nécessaire pour le calcul – est bornée par le produit de la longueur du flux d’entrée par une constante).
 
-### Exemple
+#### Exemple
 
 Supposons $V_N = \{S,B,C\}$, $V_T = \{a,b,c\}$ et les règles de grammaires sont comme suivent :
 
@@ -126,7 +128,7 @@ Supposons $V_N = \{S,B,C\}$, $V_T = \{a,b,c\}$ et les règles de grammaires sont
 
 **Note pratique** : la grammaire est de type 1 car dans toutes ses règles la partie gauche est de longueur inférieure ou égale à la partie droite.
 
-## Type 2
+### Type 2
 
 Les grammaires de type 2 sont appelées les grammaires hors contexte, car elle génèrent un langage sans contexte. Leurs règles sont souvent de la forme suivante :
 
@@ -138,7 +140,7 @@ Où $A$ est non-terminal et $\gamma$ est terminal ou non-terminal. Ces langages 
 
 **Note** : les langages hors contexte sont la base théorique pour la syntaxe de la plupart des langages de programmation.
 
-### Exemple
+#### Exemple
 
 Supposons $V_N=\{S\}$, $V_T=\{a,b\}$ et les règles de production sont comme suit :
 
@@ -147,7 +149,7 @@ Supposons $V_N=\{S\}$, $V_T=\{a,b\}$ et les règles de production sont comme sui
 
 **Note pratique** : une grammaire est dite de type 2, (hors-contexte) si et seulement si elle est de type 1 et si, pour toute règle, la partie gauche est réduite à un seul symbole non-terminal.
 
-## Type 3
+### Type 3
 
 Les grammaires de type 3 sont appelées grammaires régulières, car elles génèrent des langages réguliers. Leurs règles sont souvent de la forme suivante :
 
@@ -159,22 +161,22 @@ Où A est non terminal, et le coté droite est constitué de forcément un termi
 
 Ces langages peuvent être reconnus par un automate à états finis.
 
-### Exemple
+#### Exemple
 
 - $S \Rightarrow aS$
 - $S \Rightarrow aA$
 - $A \Rightarrow bA$
 - $A \Rightarrow b$
 
-## Règles étendues
+### Règles étendues
 
 Une note importante sur les type 1, 2 et 3 c’est **qu’elles ne permettent pas d’engendrer le mot vide**. Les langages qu’elle engendrent ne contiennent donc pas le mot vide.
 
 Cela dit, on peut définir les grammaires de type étendus 1, 2 et 3 comment les grammaires de types respectifs 1, 2, 3 auxquelles on rajoute la possibilité de règles ayant $\varepsilon$ en partie droite.
 
-# Grammaire et définition récursive
+## Grammaire et définition récursive
 
-## Langage des Structures de Parenthèses Equilibrées (SPE)
+### Langage des Structures de Parenthèses Equilibrées (SPE)
 
 Un langage est un langage SPE **si et seulement s’il** est un des trois prochains :
 
@@ -183,7 +185,7 @@ Un langage est un langage SPE **si et seulement s’il** est un des trois procha
     - Si $A$ est SPE, donc $(A)$ est SPE.
     - Si $A$ et $B$ sont SPE, donc $AB$ est SPE.
 
-## Dérivations gauches et droites
+### Dérivations gauches et droites
 
 Etant donné une grammaire hors-contexte (type 2) il peut exister plusieurs manières de réécrire ses non-terminaux pour arriver précisément à la même chaîne. Pour illustrer, prenons un exemple où $V_N = \{S,A,B\}, V_T=\{a,b,c\}$, et les règles de dérivation sont comme suit :
 
@@ -200,7 +202,7 @@ $$
 \text{D. droite : } S \Rightarrow_1 aABc \Rightarrow_4 aAaBb \Rightarrow_5 aAabb \Rightarrow_2 abAbabb \Rightarrow_3 abcbabb
 $$
 
-## Arbre de dérivation
+### Arbre de dérivation
 
 Les dérivations dans les grammaires génératives peuvent être représentées par des arbres de dérivation. Reprenant l’exemple passé, on peut construire un arbre :
 
@@ -208,15 +210,15 @@ Les dérivations dans les grammaires génératives peuvent être représentées 
 
 La dérivation gauche correspond à la construction de l'arbre par la branche de gauche en premier, est c’est analogiquement le même pour la dérivation droite. Cependant, les deux dérivations aboutissent exactement au même arbre, **donc l'ordre d'application des règles de réécriture n’affecte pas l'ensemble des chaînes générées**.
 
-Pour une grammaire hors-contexte $G$ et un mot engendré $w\in V_T^*$, il existe un arbre tel que : 
+Pour une grammaire hors-contexte $G$ et un mot engendré $w\in V_T^*$, il existe un arbre tel que :
 
 - $S$ est la racine
 - $N$ a pour descendants immédiats $N_1, \dots, N_k \iff (N \mapsto N_1\dots N_k)$ est une règle
 - La concaténation des feuilles est $w$.
 
-**Théorème**. Pour tout $w\in L(G) \iff$ il existe un arbre de dérivation $A$ pour $w$. 
+**Théorème**. Pour tout $w\in L(G) \iff$ il existe un arbre de dérivation $A$ pour $w$.
 
-### Exemples
+#### Exemples
 
 Pour un premier exemple, prenons comme règles : $S \Rightarrow_1 aSb, S \Rightarrow_2 \varepsilon$. Donc :
 
@@ -240,7 +242,7 @@ Les arbres complets sont importants, car leurs feuilles lues de gauche à droite
 
 En plus, notons que **$E$ est un symbol récursif**. Un symbole récursif est un symbole non terminal tel que il existe un règle qui envoie ce symbole à une chaîne qui le contient. On pourrait commencer de $E \Rightarrow_2 E+V \Rightarrow_2 E+V+V \Rightarrow_2 E+V+V+V\dots$ et donc on engendre un langage infini.
 
-### Structure en constituants
+#### Structure en constituants
 
 Si on prend un sous-arbre d’un arbre $A$ et on concatène ses feuilles, on obtient un constituant. En particulier, une sous-chaîne est un constituant de type $X$ si on peut l’engendrer en concaténant ***toutes*** (pas seulement quelques unes) les feuilles d’un arbre dont la racine est $X$.
 
@@ -250,7 +252,7 @@ De l’arbre qui engendre de la grammaire $G$ la phrase $P$ (”Le garçon qui r
 
 On dit donc que sous-expression/sous-phrase “regarde le chat” est un constituant de type $SV$ de la expression/phrase $P$. “garçon qui regarde le chat” est un constituant de type $N^\prime$. Par contre, juste “garçon qui regarde” n’est pas un constituant, car il n’existe pas un nœud tel que concaténant ***toutes*** ses feuilles on obtient ***exactement*** telle phrase et rien de plus.
 
-### Ambiguïté syntaxique
+#### Ambiguïté syntaxique
 
 Certaines grammaires permettent que plusieurs arbres soient construits pour la même chaîne. Telles chaînes sont dites ambiguës par rapport à la grammaire.
 
@@ -260,7 +262,7 @@ Par exemple, prenons une grammaire avec ces règles : $S \Rightarrow_1 aBc, S \R
 
 Dans de tels cas, des règles différentes sont utilisées dans les deux dérivations. Ceci est différent dans le cas de dérivations gauche et droite, où on se donne des règles avec une quantité pour chaque à les appliquer, et on change juste l’ordre d’application.
 
-En contraste, dans cette ambiguïté, on ne choisit pas toujours les mêmes règles ou le même nombre de fois à les appliquer. 
+En contraste, dans cette ambiguïté, on ne choisit pas toujours les mêmes règles ou le même nombre de fois à les appliquer.
 
 $$
 \text{D.G. : } S \Rightarrow_1 aABb \Rightarrow_2 abAbBb \Rightarrow_3 abcbBb \Rightarrow_4 abcbaBb \Rightarrow_5 abcbabb \\

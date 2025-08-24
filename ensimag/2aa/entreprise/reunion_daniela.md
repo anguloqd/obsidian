@@ -7,4 +7,5 @@ Ideas de Daniela:
 3. Lionel: reporte de los tecnicos (en LIMS?) del test. SPEC23AA7349.
 
 \\10.194.200.27\one_lab_processed_data\FR_Amplitude\Pierre_Gaspari_SESA781039\CONTACTOR\SPECID_14_01_25_cl\SPEC23AA7349
-Path 
+
+Path

@@ -1,12 +1,12 @@
-# 04 // ANOVA
+## 04 // ANOVA
 
 [slides anova1 stat3 annote.pdf](ressources/04_anova_slides_anova1_stat3_annote.pdf)
 
 [slides anova 2 stat 3 annote.pdf](ressources/04_anova_slides_anova_2_stat_3_annote.pdf)
 
-# ANOVA à un facteur
+## ANOVA à un facteur
 
-## Motivation
+### Motivation
 
 Nous avons utilisé l'ANOVA dans l'étude du modèle linéaire $Y = β₁ξ + β₀ + ε$, avec certaines hypothèses sur $ξ$, $Y$, $ε$ de normalité et de non corrélation des termes d'erreur. Nous avions utilisé les tests de Student et de Fisher afin de vérifier la non nullité de $β₁$, ce qui entraînerait l'absence d'effet de $ξ$ sur $Y$, par l'étude des moyennes ou des variances.
 
@@ -25,9 +25,9 @@ Ou dans le deuxième cas :
 
 On considère le modèle $Xᵢ = E[Xᵢ] + ε$ᵢ. La question est de savoir si les $μᵢ = E[Xᵢ]$ sont identiques ($ξ$ n'a pas d'effet sur $X$) ou différents selon les valeurs $ξᵢ$. Dans ce cas, $ξ$ influence $X$.
 
-## Facteur à deux valeurs
+### Facteur à deux valeurs
 
-### Le modèle
+#### Le modèle
 
 On considère deux échantillons indépendants de tailles n₁ et n₂, respectivement :
 
@@ -53,7 +53,7 @@ $$
 \text{Var}(\bar{X}_1 - \bar{X}_2) = \frac{n_1}{n_1^2}\sigma^2 + \frac{n_2}{n_2^2}\sigma^2 = \sigma^2\left(\frac{1}{n_1} + \frac{1}{n_2}\right)
 $$
 
-### Le test de Student
+#### Le test de Student
 
 Cette quantité sera estimée par $s^2\left(\frac{1}{n_1} + \frac{1}{n_2}\right)$.
 
@@ -67,9 +67,9 @@ On rejettera donc $H_0$ au seuil $\alpha$ si $|T| \geq q^t_{1-\alpha/2}(n_1+n_2-
 
 Le numérateur de la statistique $T$ est une mesure de l'écart entre les moyennes échantillonnales, alors qu'au dénominateur figure l'écart type s qui est une mesure de la dispersion à l'intérieur des échantillons. Nous rejetons $H_0$ lorsque $|T|$ prend une valeur trop grande, c'est-à-dire lorsque l'écart entre les échantillons est trop grand comparé à la dispersion à l'intérieur des échantillons. Nous utiliserons le même principe maintenant dans le cas de plus de deux échantillons.
 
-## Facteur à $m$ modalités
+### Facteur à $m$ modalités
 
-### Le modèle
+#### Le modèle
 
 Supposons donc qu'on prélève $m$ échantillons indépendants :
 
@@ -83,7 +83,7 @@ X_{2,1}, X_{2,2}, \cdots, X_{2,n_2}
 X_{m,1}, X_{m,2}, \cdots, X_{m,n_m}
 $$
 
-### Le test de Fisher
+#### Le test de Fisher
 
 L'hypothèse à tester est $H_0$ : "$\mu_1 = \mu_2 = \cdots = \mu_m = \mu'$".
 
@@ -106,6 +106,7 @@ SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}_i)^2
 $$
 
 Puisque $\sum_{i=1}^{m} (n_i - 1) = n - m$, on estime $\sigma^2$ par $SCE/(n-m)$ et :
+
 $SCE/\sigma^2 \sim \chi^2(n-m)$, la variable du test est donc :
 
 $$
@@ -122,7 +123,7 @@ où $q$ est le quantile d'ordre $1-\alpha$ de la dite loi.
 
 Remarquons que nous rejetons $H_0$ seulement si $F$ est trop grand et non si $F$ est trop petit car un $F$ grand signifie que les $\bar{X}_i$ sont trop dispersées, et donc que les $\mu_i$ ne semblent pas être tous égaux.
 
-### Equation de la variance
+#### Equation de la variance
 
 Posons de plus :
 
@@ -150,7 +151,7 @@ Les résultats d'une analyse de variance sont habituellement présentés sous la
 | Erreur | $SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - \sum_{i=1}^{m} n_i\bar{X}_i^2$ | $n-m$ | $\frac{SCE}{n-m}$ | |
 | Total | $SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} X_{ij}^2 - n\bar{X}^2$ | $n-1$ | $\frac{SCT}{n-1}$ | |
 
-### Contrastes (rejet de l'hypothèse d'égalité des moyennes)
+#### Contrastes (rejet de l'hypothèse d'égalité des moyennes)
 
 La table d'analyse de variance nous permet de tester l'hypothèse que les moyennes des populations sont toutes égales. Dans la plupart des cas, le rejet de l'hypothèse soulève de nouvelles questions : si les moyennes ne sont pas toutes égales, où sont les différences? Nous étudions ici le cas où l'expérimentateur a formulé certaines questions (formulé certaines hypothèses) à priori.
 
@@ -218,9 +219,9 @@ Donc, sous $H_0$, $\frac{\hat{\varphi}}{\sigma\sqrt{\sum_i \frac{\lambda_i^2}{n_
 
 Donc $\frac{{\hat{\varphi}}/{\sigma\sqrt{\frac{\sum \lambda_i^2}{n_i}}}}{{\sqrt{\frac{(n-m)}{n-m}\frac{SCE/n-m}{\sigma^2}}}} \sim t_{n-m}$, qui simplifie à $\frac{\hat{\varphi}}{\sqrt{\frac{SCE}{n-m}}\sqrt{\sum_i \frac{\lambda_i^2}{n_i}}} \sim t_{n-m}$. À comparer au quantile théorique de $t_{n-m}$
 
-# ANOVA à deux facteurs
+## ANOVA à deux facteurs
 
-## Généralisation
+### Généralisation
 
 La généralisation de l'ANOVA à une voie à des plans d'expérience plus complexes est assez intuitive. Cet exemple suivant utilise deux facteurs.
 
@@ -236,7 +237,7 @@ Le loyer moyen dans une grande ville française, en fonction de deux facteurs : 
 
 L'analyse d'un tel jeu de données à pour objectif d'expliquer et de quantifier l'influence des deux facteurs sur la variable réponse (le loyer). Le plan d'expérience employé est complet, en ce sens que, pour chaque combinaison des deux facteurs, on dispose d'une observation.
 
-## Position du problème
+### Position du problème
 
 On veut mesurer maintenant le rôle conjoint de deux facteurs $A$ et $B$ sur la variable dépendante (réponse). Trois effets sont à mesurer :
 
@@ -246,7 +247,7 @@ On veut mesurer maintenant le rôle conjoint de deux facteurs $A$ et $B$ sur la 
 
 Les deux premiers seront les effets principaux.
 
-### Description des données
+#### Description des données
 
 La population est notée $P$, $X$ est la variable d'intérêt de moyenne globale $μ$. On étudie le rôle de deux facteurs $A$ et $B$, le facteur $A$ ayant $p$ modalités $(A_1, · · ·, A_p)$, le facteur $B$ ayant $q$ modalités $(B_1, · · ·, B_q)$.
 
@@ -258,7 +259,7 @@ On suppose que dans chaque sous-population $P_{ij}$, les observations $x_{i,j,k}
 
 Note. Pour simplifier l'exposé, dans tout ce qui suit, on considère que le plan d'expériences est équilibré, $\text{card}(E_{ij}) = n_{ij} = n$. Cela n'est pas gênant, en effet, en passant par un plan équilibré, on améliore la robustesse du test.
 
-## Tableau des moyennes
+### Tableau des moyennes
 
 Ce tableau est dérivé et est préféré pour des raisons pratiques que le tableau de données original.
 
@@ -268,7 +269,7 @@ Ce tableau est dérivé et est préféré pour des raisons pratiques que le tabl
 | **Essence** | $\bar X_{2,1}=101.6$ | $\bar X_{2,2}=138.4$ | $\bar X_{2,\circ}=120$ |
 | **Total** | $\bar X_{\circ,1}=79.85$ | $\bar X_{\circ,2}=118.5$ | $\bar X = 112.1$ |
 
-## Graphique des intersections
+### Graphique des intersections
 
 Ce graphe permet de distinguer les interactions lorsque les lignes se croisent.
 
@@ -278,11 +279,11 @@ Dans ce cas particulier, lorsque les lignes sont parallèles, il n’y a pas d�
 
 ![image.png](ressources/04_anova_image_1.png)
 
-## Hypothèses statistiques
+### Hypothèses statistiques
 
 Ce sont les mêmes que pour l'ANOVA à 1 facteur : normalité de la variable dépendante, indépendance des observations inter et intra groupes, variance homogène dans les groupes.
 
-## Hypothèses soumises au test
+### Hypothèses soumises au test
 
 Il y en a trois :
 
@@ -290,7 +291,7 @@ $$
 \begin{cases}H_0 : \mu_i = \mu, \quad \forall i & \text{absence d'effet de } A \\H_0 : \mu_j = \mu, \quad \forall j & \text{absence d'effet de } B \\H_0 : \mu_{ij} = \mu, \quad \forall i,j & \text{absence d'effet de l'interaction.}\end{cases}
 $$
 
-## Equation de la variance
+### Equation de la variance
 
 $$
 x_{i,j,k} - \bar{X} = \underbrace{(\bar{X}_{i\cdot} - \bar{X}) + (\bar{X}_{\cdot j} - \bar{X})}_{\text{Effet des facteurs principaux}} + \underbrace{(\bar{X}_{ij} - \bar{X}_{i\cdot} - \bar{X}_{\cdot j} + \bar{X})}_{\text{Effet de l'interaction}} + \underbrace{(x_{i,j,k} - \bar{X}_{ij})}_{\text{Erreur résiduelle}}

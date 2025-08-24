@@ -1,18 +1,16 @@
-# 03 // cas dénombrable : fonctions génératrices, inégalités et loi des grands nombres
+## 03 // cas dénombrable : fonctions génératrices, inégalités et loi des grands nombres
 
-# Fonctions génératrices
+## Fonctions génératrices
 
-## Définition générale
+### Définition générale
 
 > *Une fonction génératrice est un dispositif quelque peu similaire à un sac. Au lieu de transporter de manière détachée de nombreux petits objets, ce qui pourrait être gênant, on les met tous dans un sac, et on n'a alors qu'un seul objet à transporter, le sac.
 
 —* George Pólya
-> 
 
 > *Une fonction génératrice est une corde à linge sur laquelle on accroche une séquence de nombres à afficher.
 
 —* Hebert Wilf
-> 
 
 Une *fonction génératrice d’une suite* est juste une manière de codifier une **suite** dans une **série**, prenants les valeurs de la première et les mettant comme des coefficients dans la deuxième. Par exemple :
 
@@ -26,9 +24,9 @@ $$
 
 Il n’existe pas une seule forme propre des fonction génératrices. Celle en-dessus est une fonction génératrice appelée une *série formelle*, qui est une généralisation des polynômes mais avec une infinité de termes. Ce type de série particulière est définie de telle manière que son convergence n’est pas importante ni nécessaire pour faire des manipulations algébriques communes (addition, multiplication, sommes partielles, etc.).
 
-En réalité, on ne s’intéresse pas à voir la fonction comme une “fonction”. Elle n’est même pas une fonction dans le sens où elle établit une correspondance d’un ensemble de nombres à un autre. Aussi, la variable $x$ reste indéterminée, on ne s’intéresse pas non plus aux valeurs qu’elle pourrait prendre.  
+En réalité, on ne s’intéresse pas à voir la fonction comme une “fonction”. Elle n’est même pas une fonction dans le sens où elle établit une correspondance d’un ensemble de nombres à un autre. Aussi, la variable $x$ reste indéterminée, on ne s’intéresse pas non plus aux valeurs qu’elle pourrait prendre.
 
-## Définition en théorie des probabilités
+### Définition en théorie des probabilités
 
 Maintenant, on peut parler d’une fonction génératrice d’une variable aléatoire. Toute variable aléatoire $X$ associe ses résultats — l’univers — à des probabilités — la loi de la VA — dont la somme fait $1$.  Puisque une suite est un ensemble indexé, on suppose que $X$ peut prendre que des valeurs en $\mathbb{N}$, et puis on indexe l’univers, pour finalement pouvoir appliquer un fonction génératrice.
 
@@ -56,9 +54,9 @@ Il y a deux propriétés importantes si on vérifie que $|z| ≤ 1$ :
 - $f(z)$ est bien définie, càd. $f(z)\in\mathbb{R}$, car elle serait inférieur ou égale à la série $\sum(\mathbb P(X=k))$ qui on sait que converge à $1$. Ceci découle des propriétés des séries géométriques (on pourrait voir quelques polynômes comme des suites géométriques).
 - La fonction est croissante et $0 \le f(z) \le 1$.
 
-## Propriétés
+### Propriétés
 
-### Applications sur les lois de Bernoulli et binomiale
+#### Applications sur les lois de Bernoulli et binomiale
 
 Toujours avec $|z| ≤ 1$, si un ensemble de V.A. $\{X_1, \dots, X_n\}$ sont indépendantes entre elles du début, leurs fonctions génératrices les sont aussi.
 
@@ -72,7 +70,7 @@ $$
 \mathbb{E}[z^{\sum_{i=1}^n X_i}] = (\mathbb{E}[z^{X_k}])^n \text{, où } k \in \mathbb{N} \text{ et } 1 \le k \le n
 $$
 
-### Applications sur les dérivées, l’espérance et la variance
+#### Applications sur les dérivées, l’espérance et la variance
 
 Puisque la fonction génératrice a la forme d’un polynôme, la $k$-ième dérivée de la fonction génératrice vérifie l’égalité suivante :
 
@@ -80,7 +78,7 @@ $$
 f^{(k)}(0) = k!\cdot \mathbb P(X=k)
 $$
 
-### Fonctions génératrices pour construire l’espérance et variance
+#### Fonctions génératrices pour construire l’espérance et variance
 
 Les fonctions génératrices de probabilités nous permet facilement de trouver l’espérance et la variance. Notons que si $f$ est dérivable en $1$, donc :
 
@@ -100,7 +98,7 @@ $$
 \mathbb{E}[X] = f'(1) \hspace{8pt}\text{ et\hspace{8pt} Var}(X) = \mathbb{E}[X^2] - \mathbb{E}[X]^2 = [f'(1)+f''(1)]-[f'(1)]^2
 $$
 
-### Approximation poissonienne d’une binomiale
+#### Approximation poissonienne d’une binomiale
 
 Soit $(X_n)$ une suite des VA entières non-négatives représentés chacune par la fonction génératrice $f_n$, et $X$ une VA entière non-négative de fonction génératrice $f$. Les deux propositions sont équivalentes, avec $k\in\mathbb{N}$ et $0 \le z \le 1$ :
 
@@ -109,13 +107,12 @@ $$
 $$
 
 > **Théorème de continuité de Lévy**. La suite $(X_n)$ est convergente à $X$ si et seulement si leur fonctions caractéristique $(\varphi_n)$ convergent vers une fonction $\varphi$. En plus, $\varphi(t)$ serait la fonction caractéristique et continue de $X$.
-> 
 
 Cette propriété est utile pour construire une approximation entre la loi de Poisson et la loi Binomiale. Supposons que les VA dans $(X_n)$ sont des loi binomiales, avec $n$ le nombre de essais de Bernoulli de la VA et $p_n$ la probabilité de succès de chaque essai individuel.
 
 On sait que l’espérance de la loi Binomiale est $np_n$, **on veut donc définir $p_n$ en termes de $n$** tel que $\lim_{n \rightarrow \infty} np_n$ converge vers un nombre $\lambda$, respectant toujours que la somme des toute probabilité égal 1. Cela implique que, quand $n$ augmente, $p_n$ diminue. Une telle définition de $p_n$ pourrait être $p_n = \frac{\lambda}{n}$, et on voit clairement que $\lim_{n\rightarrow\infty} np_n = \lim_{n\rightarrow\infty}n\left(\frac{\lambda}{n}\right) = \lambda$, mais $p_n$ peut prendre n’importe quelle forme arbitraire telle que elle converge vers un réel $\lambda$, comme par exemple $\lim_{n\rightarrow\infty} np_n = \lim_{n\rightarrow\infty}n\left(\frac{\lambda}{n + \frac{1}{n}}\right) = \lambda$.
 
-Notons que la fonction génératrice $f_n(z)$ de un loi binomial $X_n$ est $(1-p_n+zp_n)^n$. Donc, si on fait $n \rightarrow \infty$ : 
+Notons que la fonction génératrice $f_n(z)$ de un loi binomial $X_n$ est $(1-p_n+zp_n)^n$. Donc, si on fait $n \rightarrow \infty$ :
 
 $$
 f_n(z)=e^{n\ln(1-p_n+zp_n)}=e^{n\ln(1+p_n(z-1))}
@@ -129,9 +126,9 @@ $$
 
 Ici, on a démontré qu’il existe effective la limite quand $n \rightarrow \infty$ de $f_n(z)$, laquelle on va appeler tout simplement $f(z)$. Donc, par l’équivalence de propositions précédente, on a démontré aussi qu’il existe aussi la limite de la loi de probabilités $\mathbb{P}(X_n=k)$ quand $n \rightarrow \infty$, sans besoin d’expliciter son expression mathématique.
 
-# Inégalités notables
+## Inégalités notables
 
-## Inégalité de Markov
+### Inégalité de Markov
 
 L’inégalité de Markov est une majoration d’une V.A. réelle (y incluse V.A entière). Soit $*X*$une variable aléatoire réelle, supposée presque sûrement positive ou nulle, et avec une espérance définie. La première formulation est la plus commune. Si $a>0$ :
 
@@ -145,9 +142,9 @@ $$
 \mathbb{P}(|X| \ge a) \le \frac{\mathbb{E}[f(|X|)]}{f(a)}
 $$
 
-## Inégalité de Bienaymé-Tchebicheff
+### Inégalité de Bienaymé-Tchebicheff
 
-Celle-ci est juste un conséquence de l’inégalité de Markov, sous condition que $X$ ait une variance. Prenons la version du cours de l’inégalité de Markov, fixons une autre V.A. réelle $Y = (X - \mathbb{E}[X])$ et $f(x) = x^2$. Notons que le $(X-\mathbb{E}[X])$ est mis au carré à droite de l’inégalité mais pas à gauche. Donc : 
+Celle-ci est juste un conséquence de l’inégalité de Markov, sous condition que $X$ ait une variance. Prenons la version du cours de l’inégalité de Markov, fixons une autre V.A. réelle $Y = (X - \mathbb{E}[X])$ et $f(x) = x^2$. Notons que le $(X-\mathbb{E}[X])$ est mis au carré à droite de l’inégalité mais pas à gauche. Donc :
 
 $$
 \begin{align*}
@@ -168,9 +165,9 @@ $$
 \mathbb{P}(|X - \mathbb{E}[X]| \ge a\sigma) \le \frac{1}{a^2} \iff \mathbb{P}(|X - \mathbb{E}[X]| \le a\sigma) \ge 1- \frac{1}{a^2}
 $$
 
-# Loi faible des grands nombres
+## Loi faible des grands nombres
 
-## “La moyenne empirique tend vers la moyenne théorique”
+### “La moyenne empirique tend vers la moyenne théorique”
 
 Pour montrer les deux versions de la loi des grands nombres, on aura besoin de ce qui suit :
 

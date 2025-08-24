@@ -1,4 +1,4 @@
-# Period #2 - CLI result display
+## Period #2 - CLI result display
 
 > [!important] ❗
 >

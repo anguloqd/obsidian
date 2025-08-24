@@ -1,10 +1,10 @@
-# 03 // classicisme : équilibre et politique économique
+## 03 // classicisme : équilibre et politique économique
 
 Rappel : le modèle macroéconomique classique voit l'économie comme une collection de marchés. Il existe aussi une interdépendance entre les marchés. Un équilibre global est alors recherché.
 
-## L'équilibre global
+### L'équilibre global
 
-### Loi de Walras et Loi de Say
+#### Loi de Walras et Loi de Say
 
 Dans la macro. économique, il existent deux lois de base : la loi de Walras et la loi des débouchés de Say.
 
@@ -22,7 +22,7 @@ Dans la macro. économique, il existent deux lois de base : la loi de Walras et 
 >
 >**Corollaire 2** : dans le modèle classique, les crises de surproduction sont impossibles.
 
-### Déterminant l'équilibre global
+#### Déterminant l'équilibre global
 
 Déterminons l'équilibre global. Grâce à la Loi de Walras, on omet le marché financier.
 
@@ -47,22 +47,25 @@ Rappelons que, dans la macro. classique, la sphère monétaire ne peut pas alté
 
 Rappelons aussi que le seul chômage dans la macro. classique est le chômage volontaire.
 
-## La politique économique
+### La politique économique
 
 Il existent deux types de politique économique : politique budgétaire et politique monétaire.
+
 - La **politique budgétaire** consiste à modifier les dépenses de l'État ou le montant des taxes
 - La **politique monétaire** consiste à modifier la masse monétaire
 
-### La politique budgétaire
+#### La politique budgétaire
 
 Nous partons d'une situation d'équilibre.
 
-#### Politique financée par émission de titres
+##### Politique financée par émission de titres
+
 - Si il y a une augmentation de $G$, les dépenses du gouvernement, donc cela augmente la demande de capitaux, ce qui fait monter les taux d'intérêt et ce qui réduit l'investissement (moins que ce qu'augmentent les dépenses publiques). Cela est un **effet d'éviction**.
 - Finalement, l'augmentation de dépenses publiques réduit proportionnellement l'investissement, ce qui laisse inchangé le niveau de production et d'emploi.
 - Notons aussi que, puisque le taux d'intérêt augmente, cela implique que la consommation actuelle se réduit.
 
-#### Politique financée par augmentation des taxes
+##### Politique financée par augmentation des taxes
+
 - Si une augmentation en $G$, elle devrait être représentée par une augmentation en $T$ de la même taille
 - $r$ inchangé, donc Investissement et Épargne total inchangés aussi
 - Mais, si $T$ augmente, $Y$ (production) diminue et donc $C$ (consommation) diminue, selon loi de Say
@@ -70,7 +73,7 @@ Nous partons d'une situation d'équilibre.
 
 **Conclusion** : une politique budgétaire expansionniste n'a pas d'influence sur le niveau de production ni d'emploi, soit à travers l'endettement ou l'augmentation de taxes.
 
-### La politique monétaire
+#### La politique monétaire
 
 Déjà, il faut maintenir l'égalité : $Y = (\bar{M}O/k)/p$.
 

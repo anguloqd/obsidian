@@ -1,12 +1,12 @@
-# 04 // discrimination prix en monopole
+## 04 // discrimination prix en monopole
 
 [Slides de discrimination prix](ressources/04_discrimination_prix_en_monopole_corolleur_f._2020_21_lecture_4_discrimination_prix.pdf)
 
 ![untitled](ressources/04_discrimination_prix_en_monopole_untitled.png)
 
-# Tarification non linéaire
+## Tarification non linéaire
 
-## Définition et types
+### Définition et types
 
 La tarification linéaire est un même prix pour tout le monde, donc cette tarification n’est pas discriminante. Les tarifications non linéaire sont donc celles discriminantes, et elles se divisent en trois types :
 
@@ -16,44 +16,46 @@ La tarification linéaire est un même prix pour tout le monde, donc cette tarif
 
 Dans le cas d’un monopole multi-produits, il peut proposer des différents prix selon les paniers de bien proposés, comme des offres groupées (*bundles* de produits) ou les ventes liées.
 
-## Conditions (pour *toutes* les discriminations !)
+### Conditions (pour *toutes* les discriminations !)
 
-Les conditions nécessaires pour que la firme puisse exercer une telle tarification sont comme suit : 
+Les conditions nécessaires pour que la firme puisse exercer une telle tarification sont comme suit :
 
 - La firme dispose d’un pouvoir de marché.
 - **Les préférences des consommateurs doivent être hétérogènes** (la demande est non constante, les consommateurs ont des différents prix de reserve) et la firme a la capacité de les apprécier, au moins plus ou moins.
 - Comme détail technique, **la revente doit être impossible entre segments** (sinon ceux qui payent le moins revendront aux autres).
 
-## Différenciation et discrimination
+### Différenciation et discrimination
 
 La discrimination n’a pas besoin de la différenciation. En effet, une firme peut discriminer toujours en offrant le même produit. Par contre, c’est vrai aussi que la différenciation de produits est un moyen de renforcer la discrimination :
 
 - Les demandeurs vont révéler leur type et classification par rapport aux produits différenciés
 - Au même temps, la revente est naturellement limitée, car les produits ne sont vraiment pas les mêmes.
 
-# Discrimination du 1er degré
+## Discrimination du 1er degré
 
-## Modèles typiques
+### Modèles typiques
 
-Dans la pratique, ce discrimination inclut de la différenciation. Il existe deux modèles ici : 
+Dans la pratique, ce discrimination inclut de la différenciation. Il existe deux modèles ici :
 
 1. Les modèles plus simple utilisent deux produits : produit 1 et produit 2, chacun ayant sa courbe de demande propre.
 2. Un autre type de modèle est un seul bien à deux prix différents : $p_1$ et $p_2$. La quantité du bien vendu à $p_1$ serait $q_1$ et de même avec $q_2$, d’où $q=q_1+q_2$. Bref, $p_1$ serait le prix constante pour les personnes “riches” et $p_2$ pour les personnes “moins riches”.
-    1. Parfois, cette stratégie de discrimination est meilleure pour le profit de la firme mais aussi pour le surplus de consommateur (et moins de perte sèche) que dans le cas où la firme applique bêtement la stratégie $q$ tel que $Rm=Cm$. 
-        
+    1. Parfois, cette stratégie de discrimination est meilleure pour le profit de la firme mais aussi pour le surplus de consommateur (et moins de perte sèche) que dans le cas où la firme applique bêtement la stratégie $q$ tel que $Rm=Cm$.
+
+
         ![untitled](ressources/04_discrimination_prix_en_monopole_untitled_1.png)
+
         
 
-# Discrimination du 3ème degré
+## Discrimination du 3ème degré
 
-## La présence de deux marchés
+### La présence de deux marchés
 
 Cette discrimination existe pour les établissement mono-produit mais aussi pour les multi-produits. Dans le deux cas, il y a segmentation.
 
 - **Mono-produit** : un seul bien est vendu sur deux marchés différents, donc deux demandes différentes et deux stratégies de prix différentes à appliquer, d’où la *discrimination*.
 - **Multi-établissement** : deux bien sont localisés, l’un au segment 1 au l’autre au segment 2.
 
-## Modèle de coûts constants : $Cm = \bar{c}$
+### Modèle de coûts constants : $Cm = \bar{c}$
 
 La logique : puisque le coûts sont constants, la firme décide à quel segment $i\in\{1,2\}$ vendre par rapport aux revenus marginaux $Rm$, qui dépendent des demandes de chaque segment.
 
@@ -78,7 +80,7 @@ $$
 Rm_i=Rm_{i\ne j}\hspace{12pt}\text{ et }\hspace{12pt}Rm_i=Cm_i
 $$
 
-## Modèle de coûts non constants
+### Modèle de coûts non constants
 
 La commodité du modèle à coûts constants était qu’on pouvait déduire les $q_i^*$ de chaque produit par lui-même, càd. sans besoin de considérer les coûts des autres produits. Ici, ce ne plus possible. **On est forcés à résoudre un système d’équations en $q_i$ et $q_j$** pour déterminer les quantités optimales. Par exemple :
 
@@ -86,7 +88,7 @@ La commodité du modèle à coûts constants était qu’on pouvait déduire les
 
 Ici, la fonction de coût marginale n’est plus $Q=q_i+q_j$ mais $2Q=2(q_1+q_2)$, d’où $C(Q)=Q^2=(q_i+q_j)^2$ (absence de coûts fixes), et on sait que la fonction quadratique n’est pas linéaire, donc on ne peut pas traiter les cas de chaque quantité séparément.
 
-## La demande coudée : $p^{D_{1+2}}$
+### La demande coudée : $p^{D_{1+2}}$
 
 Pour les deux segments de marché, normalement il y a un qui est disposé à payer plus que l’autre en général. Disons que $D_1$ est le segment disposer à payer plus cher, et $D_2$ moins cher. Un exemple de ceci se voit comme suit :
 
@@ -111,7 +113,8 @@ $p^\Sigma$ n’est pas vraiment une courbe de demande, on verra à quoi elle ser
 
 ![](ressources/04_discrimination_prix_en_monopole_untitled_3.png)
 
-La courbe rouge est $p^{D_1}$, la bleue est $p^{D_2}$ et la verte est $p^\Sigma$. 
+La courbe rouge est $p^{D_1}$, la bleue est $p^{D_2}$ et la verte est $p^\Sigma$.
+
 [https://www.desmos.com/calculator/a17orpj16q](https://www.desmos.com/calculator/a17orpj16q)
 
 Voyons : si le prix est entre $[20,100]$, le seule marché qui voudra acheter est $D_1$ (donc la courbe rouge entre $p=100$ et $p=20$). Par contre, si le prix est inférieur à $20$, les deux marchés participeront (donc, la courbe verte entre $p=20$ jusqu’à $p=0$). On en déduit que la courbe de demande pour les deux marchés est donc comme suit :
@@ -131,7 +134,7 @@ Il faudra voir quelle profit est le plus grand : si le profit de servit le march
 
 **Note pratique**. une firme en train de optimiser pour servir le marché $1$ (le plus riche) peut arriver à un prix où elle peut servir (et elle sert effectivement !) les deux marchés.
 
-## Apparition de l’élasticité $\epsilon=-\frac{\partial q}{\partial p} \cdot \frac{p}{q}$
+### Apparition de l’élasticité $\epsilon=-\frac{\partial q}{\partial p} \cdot \frac{p}{q}$
 
 On peut faire apparaître l’élasticité pour tracer de conclusions intéressantes dans l’optimisation du profit par rapport à chaque quantité. À nouveau, supposant des coûts constants :
 
@@ -144,20 +147,21 @@ $$
 $$
 
 Pour maintenir la dernière égalité la plus à droite, si $\epsilon_i \nearrow$, donc $p_i \searrow$ et inversement.
+
 **Le segment le plus sensible au prix bénéficie d’un prix moindre**.
 
-# Discrimination du 2ème degré
+## Discrimination du 2ème degré
 
-## La différence subtile avec la discrimination de 1er degré
+### La différence subtile avec la discrimination de 1er degré
 
 Voyons la différence avec la discrimination du 1er degré pour mieux comprendre :
 
 - **Discrimination de première degré** : permet de prix personnalisés—càd. c’est la firme qui peut signaler qui veut quoi, et prend l’initiative d’offre ses produits.
 - **Discrimination de deuxième degré** : ne permet pas de prix personnalisés—càd. la firme va plutôt offrir à tout le marché et laisser que les consommateurs choisissent leur menu, à la place d’aller directement au consommateur à l’imposer une offre.
 
-## Modèle de menu de prix dépendant de la qualité
+### Modèle de menu de prix dépendant de la qualité
 
-On suppose un marché de taille $n$, laquelle se divise en deux segments : les types “supérieurs” et les types “inférieurs”. Les supérieurs valorisent plus la qualité du produit que les inférieurs. 
+On suppose un marché de taille $n$, laquelle se divise en deux segments : les types “supérieurs” et les types “inférieurs”. Les supérieurs valorisent plus la qualité du produit que les inférieurs.
 
 On note la quantité de supérieurs comme $\lambda$ et les inférieurs comme $(n-\lambda)$. Il est évident que la somme des deux groupe conforme la taille de marché $n$.
 
@@ -166,6 +170,7 @@ On suppose aussi deux produits qu’on va offrir à tout le marché, où un prod
 ![](ressources/04_discrimination_prix_en_monopole_untitled_4.png)
 
 Dans cet exemple, la firme vend deux version d’un logiciel : version pro et version basique. Le marché est de taille $120$, avec $\lambda$ chercheurs et $(120-\lambda)$ d’autres consommateurs.
+
 Ici sont leurs prix de reserve pour chaque version.
 
 Dans ce modèle, on cherche des prix pour les deux versions du bien qui satisfassent deux contraintes. On note $p$ le prix fixé par la firme et $r(S,I)$ le prix de reserve des supérieurs pour le produit inférieur :
@@ -177,18 +182,18 @@ Les supérieurs vont basculer ou “se sélectionner eux-mêmes” du produit ba
 
 Comme autre hypothèse du modèle, les supérieurs vont payer plus cher que les inférieurs pour les deux produits.
 
-### Solution
+#### Solution
 
 Souvent, on déduit les meilleurs prix par essai et erreur. On commence pour trouve  un $p_\text{Inf}$ qui satisfasse la contrainte de participation, puis un $p_\text{Sup}$ pour la contrainte d’auto-selection.
 
 1. On découvre, avec essai et erreur fixant $p_\text{Inf}$, que $r(I,I)=2$. Donc, on fixe $p_\text{Inf}=2$.
 2. On découvre, avec essai et erreur fixant les deux prix, que $r(S,I)=5$ et $r(S,S)=9$. Donc, $p_\text{Sup} - 2 ≤ 9-5 \iff p_\text{Sup} ≤ 6$. On fixe $p_\text{Sup}=6$.
 
-Normalement, cette discrimination rapporte moins de profits que la discrimination de 1er degré, **mais parfois il peut en rapporter plus si comparé avec le prix uniforme !** Basiquement, ça dépend de $\lambda$, la quantité de consommateurs sup. dans le marché. 
+Normalement, cette discrimination rapporte moins de profits que la discrimination de 1er degré, **mais parfois il peut en rapporter plus si comparé avec le prix uniforme !** Basiquement, ça dépend de $\lambda$, la quantité de consommateurs sup. dans le marché.
 
 **Note** : la stratégie du prix uniforme qui appliquerait la firme serait de **ne vendre que le produit pro**, supposant qu’il en connaît ses reserves : ils vend $\max(r(S,S)\cdot \lambda, r(I,S) \cdot n)$, càd. il vendra celui qui le rapporte le plus de profit soit vendant seulement aux supérieurs à leurs prix de reserves, soit vendant à tout le monde aux prix de reserves des inférieurs.
 
-## Enseignements du modèle
+### Enseignements du modèle
 
 Les enseignements du modèle sont comme suit :
 
@@ -198,23 +203,23 @@ Les enseignements du modèle sont comme suit :
     2. Si passer d’une qualité basse à forte augmente proportionnellement plus le surplus des types valorisant le plus qualité que ceux le valorisant le moins.
 3. Le menu de prix accroît le *welfare* si vendre la basse qualité conduit à une expansion du marché, dans le cas contraire le menu de prix détériore le *welfare*.
 
-# Tarification binôme
+## Tarification binôme
 
-## Modèle $T(q) = A+pq$
+### Modèle $T(q) = A+pq$
 
 La tarification binôme est la vente d’un seul produit qui comprend deux parties : une partie fixe et une partie variable. Aller à une soirée *peut être vu* comme un produit à deux parties : le coût de l’entrée elle-même étant la partie fixe, et les boissons consommés après étant la partie variable.
 
 Le produit intégral a comme prix intégral $T(q) = A+pq$, où $A$ est le prix de la partie fixe, et $p$ le prix de chaque unité variable et $q$ la quantité des unités variables. La firme cherche à fixer le prix de $T$ pour chaque client tel qu’il soit égal à son prix de reserve (discrimination parfaite).
 
-Supposons en premier le typique modèle de monopole, où la firme fixe le prix de chaque unité (variable) qui correspond à la quantité telle que $Rm=Cm$. On sait qu’il y à un surplus de consommateurs pour les consommateurs qui en achètent. Maintenant, la firme veut fixer une partie fixe f, différente pour chaque consommateur, pour accaparer leur surplus. 
+Supposons en premier le typique modèle de monopole, où la firme fixe le prix de chaque unité (variable) qui correspond à la quantité telle que $Rm=Cm$. On sait qu’il y à un surplus de consommateurs pour les consommateurs qui en achètent. Maintenant, la firme veut fixer une partie fixe f, différente pour chaque consommateur, pour accaparer leur surplus.
 
-Pour le profit, on écrirait donc $\pi = \sum_i^n T(q_i) - C(\sum_i^n q_i)$. 
+Pour le profit, on écrirait donc $\pi = \sum_i^n T(q_i) - C(\sum_i^n q_i)$.
 
-## Exemple
+### Exemple
 
 Pour la fonction de coûts, supposons $C(q) = F + cq$, donc $Cm=c$, une constante. On va considérer la fonction de demande de chaque individu (pas des consommateurs agrégés !) comme $p=V-q$.
 
-1. En premier temps, on va fixer le prix de l’unité variable p appliquant le critère d’optimisation classique $Rm=Cm$. 
+1. En premier temps, on va fixer le prix de l’unité variable p appliquant le critère d’optimisation classique $Rm=Cm$.
 2. Une fois on a les $p^*$ et $q^*$ de ce consommateur, on regarde son surplus. Pour un prix fixe optimal $A$, on fixe $A = SC$.
 
 Suivant ce méthode, la tarification binôme a comme résultat que $p^*=\frac{V+c}{2}, q^*=\frac{V-c}{2}$ et $SC=\frac{(V-c)^2}{8}$. La tarification binôme finale serait $T^*=\frac{(V-c)^2}{8}+\frac{V^2-c^2}{4}$.
@@ -223,15 +228,15 @@ Par contre, on pourrait fixer aussi $p=Cm$ (comme si c’était concurrence parf
 
 Si on compare les deux solutions, il convient mieux de fixer $p=Cm$ quand $V>c$, c’est-à-dire toujours !
 
-# Discrimination prix multi-produits
+## Discrimination prix multi-produits
 
-## Vocabulaire
+### Vocabulaire
 
 Supposons qu’on a deux bien $A$ et $B$. Selon la manière dont on vend les deux bien, on peut définir la vente comme suit :
 
 - $A$ et $B$ : biens indépendantes
 - $(A+B)$ : *bundling* pur, pas possible d’acheter l’un sans l’autre
-- $A, B, (A+B)$ : *bundling* mixte. 
+- $A, B, (A+B)$ : *bundling* mixte.
 Possible d’acheter individuellement et groupellement.
 $(A+B)$ est moins cher que d’acheter individuellement $A$ et $B$
 - $A, (A+B)$ : liaison ou *tying*, où B le bien lié et A le bien liant
@@ -239,9 +244,9 @@ Possible d’acheter $A$ sans $B$, mais pas $B$ sans $A$.
 - $B, (A+B)$ : liaison ou *tying*, où A le bien lié et B le bien liant
 Possible d’acheter $B$ sans $A$, mais pas $A$ sans $B$.
 
-## Vente en package : biens en proportions fixes
+### Vente en package : biens en proportions fixes
 
-### Modèle de Stigler
+#### Modèle de Stigler
 
 Supposons deux consommateurs, $A$ et $B$, et deux produits offerts par une firme, un logiciel tableur genre Excel et un logiciel de traitement de texte genre Word.
 
@@ -253,17 +258,17 @@ Supposons maintenant un deuxième cas où on considère un package des deux logi
 
 La limitation de ce modèle est qu’on considère pas les coûts de production et qu’on considère pas le cas de seulement vendre les biens en package, sans possibilité d’acheter individuellement.
 
-### Modèle d’Adams et Yellen
+#### Modèle d’Adams et Yellen
 
 Ici, on considère de coûts marginaux constants $c_1$ et $c_2$, et encore deux types de consommateurs $X$ et $Y$, chacun avec un prix de réservation constants pour chacun des deux biens vendus.
 
-### Aucun *bundling* : $A$ et $B$, mais pas $(A+B)$
+#### Aucun *bundling* : $A$ et $B$, mais pas $(A+B)$
 
 Le prochain graphique a $p_1$ comme abscisses et $p_2$ comme ordonnées. Pour le moment, on ne tient pas en compte les coûts.
 
 ![untitled](ressources/04_discrimination_prix_en_monopole_untitled_6.png)
 
-### *Bundling* pur : $(A+B)$, mais pas $A$ ou $B$ individuellement
+#### *Bundling* pur : $(A+B)$, mais pas $A$ ou $B$ individuellement
 
 Si jamais la firme offre un package des deux biens, il est clair que son prix doit être $p_B<p_1+p_2$. La différence dans ce modèle par rapport au précédent ce que les consommateurs n’ont pas un prix de réservation pour un package (*bundle*), ils juste décident d’en acheter si les réservations individuelles sont moindre que le prix du *bundle* : $r_1+r_2<p_B$.
 
@@ -273,7 +278,7 @@ Pour le prochain graphique, on trace une fonction linéaire : $p_B = p_1 + p_2$,
 
 On construit la droite $p_B = p_1 + p_2$. Tous les points en dessous sont des clients dont leurs reserves ne leur mènent pas à acheter le *bundle*. Tous les points sur la courbe sont des clients intérésés par le *bundle*. Par contre, la firme ne peuvent pas vendre ni a $G$ ni a $H$, car leur reserves pour le prix du bien 2 et bien 1, resp., sont moindre que leurs coûts de fabrication, donc il ne vaut pas la peine de vendre aux client dans ces régions.
 
-### *Bundling* mixte : $A$, $B$ et $(A+B)$
+#### *Bundling* mixte : $A$, $B$ et $(A+B)$
 
 On prend un autre graphique pareil à celui d’avant, mais on ignore les coûts et on ajoute quelques autres aires. Pour le point x sur le graphique, il s’agit d’un consommateur dont ses réservations sont $p_1<r_1$ et $r_2<p_2$, donc il achète du bien 1 sans bien 2. C’est analogue pour le consommateur du point $y$. Le consommateur du point $z$ achète les deux biens.
 
@@ -287,7 +292,7 @@ On sait déjà qu’un consommateur va toujours acheter un *bundle* si $r_1 < p_
 
 La condition pour qu’il achète le *bundle* sur le produit qui l’intéresse individuellement est que le surplus du consommateur pour le *bundle* soit plus grande que d’acheter le bien 1, normalement quand le prix $p_2$ est proche de la différence du bundle avec $p_2$ (finalement, $p_2$ est assez proche de $r_2$, meme si par dessus).
 
-### Enseignements
+#### Enseignements
 
 - Le *bundling* mixte est généralement meilleur que celui pur.
 - Les ventes avec un bundle sont plus importantes que pour une tarification de monopole simple (linéaire), **mais les chiffres d’affaites n’est pas le profit !**
@@ -296,7 +301,7 @@ La condition pour qu’il achète le *bundle* sur le produit qui l’intéresse 
     dans le cas où $Cm$ est proche de $0$.
     - De la distribution des préférences des consommateurs : il est d’autant plus intéressant que les préférences sont hétérogènes.
 
-### Exemple de cours de Pepall et al.
+#### Exemple de cours de Pepall et al.
 
 Supposons un monopole qui vend bien 1 et bien 2, dont leurs coûts $Cm_1=100$ et $Cm_2=150$, et quatre type de consommateurs :
 
@@ -310,17 +315,19 @@ Supposons un monopole qui vend bien 1 et bien 2, dont leurs coûts $Cm_1=100$ et
     - $C$ : achète le bien 1 (surplus de $\$50$) sur le *bundle* (surplus de $\$20$)
     - $D$ : achète le bien 1 (surplus de $\$200$) sur le *bundle* (surplus de $\$0$)
     - Le profit de la firme est $\pi_M = \$800$ ou $\$850$, dépendant si $A$ achète le bien 2 ou le *bundle*. En tout cas, supérieur au *bundle* pur.
-    
-    Finalement, on a repris les prix de tarification linéaire pour la tarification de *bundling* mixte, **mais ceci n’est pas forcément l’optimal**. Si la firme fixe $p_1=\$450$, $p_2=\$450$ et $p_B=\$520$, on peut calculer que le profit final est $\pi_{M^*}=\$1190$. On a absorbé les surplus des tous les consommateurs à exception de $B$, qui garde $\$5$ en surplus. 
+
+
+    Finalement, on a repris les prix de tarification linéaire pour la tarification de *bundling* mixte, **mais ceci n’est pas forcément l’optimal**. Si la firme fixe $p_1=\$450$, $p_2=\$450$ et $p_B=\$520$, on peut calculer que le profit final est $\pi_{M^*}=\$1190$. On a absorbé les surplus des tous les consommateurs à exception de $B$, qui garde $\$5$ en surplus.
+
     
 
-### Conclusions
+#### Conclusions
 
 - Le *bundling* mixte est toujours au moins aussi profitable que le *bundle* pur, mais il faut parfois ne pas y recourir.
 - Certains consommateurs achètent le bundle mais ont des $r_i<Cm_i$ pour chaque produit $i$. La firme préférerait qu’ils n’achètent pas le bien $i$.
 - Le bundle est profitable pour de fortes variations des préférences, **il ne l’est plus pour des $Cm$ croissants** (accroître les ventes coûte de plus en plus cher). Effectivement, dans chaque exemple, on avait fixé des coûts marginaux constants.
 
-## Vente liées : bien lié et bien liant
+### Vente liées : bien lié et bien liant
 
 Les ventes où un bien est lié à l’autre est une bonne stratégie quand les biens sont complémentaires. Telles ventes facilitent la discrimination en prix en révélant la préférence des consommateurs.
 

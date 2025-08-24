@@ -1,4 +1,4 @@
-# (2) 08 // complexité
+## (2) 08 // complexité
 
 [Complexite_algo_Tris.pdf](ressources/(2)_08_complexite_complexite-algo_tris.pdf)
 
@@ -20,7 +20,7 @@ else I2.
 
 Dans le boolean `cond`, elle peut être en temps constant O(1), ou être en plus de temps, car le cond peut appeler des fonctions qui prennent plus de temps que O(1).
 
-Le temps de ce if est evalué: `T(If) = T(cond) + max(T(I1), T(I2))` (cas pessimiste).  
+Le temps de ce if est evalué: `T(If) = T(cond) + max(T(I1), T(I2))` (cas pessimiste).
 
 ```
 i = 0                       ← T(initialisation).

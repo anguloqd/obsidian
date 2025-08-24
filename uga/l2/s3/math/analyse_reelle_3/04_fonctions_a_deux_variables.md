@@ -1,14 +1,14 @@
-# 04 // fonctions à deux variables
+## 04 // fonctions à deux variables
 
-# Points critiques, extrêmes locaux et globaux
+## Points critiques, extrêmes locaux et globaux
 
-## Points critiques : $\frac{\partial f}{\partial x}=0$
+### Points critiques : $\frac{\partial f}{\partial x}=0$
 
 Un point critique par rapport à une variable $x$ pour une fonction à deux variables $f(x,y)$ est l’ensemble de points $(x,y)$ tel que $\frac{\partial f}{\partial x} = 0$, et de même pour $y$.
 
 Notons que la expression qui en résulte peut dépendre des deux variables, d’une des deux, ou d’aucune.
 
-## Discriminant $\Delta f(x,y)$ et extrêmes locaux
+### Discriminant $\Delta f(x,y)$ et extrêmes locaux
 
 Le discriminant d’une fonction $f(x,y)$ est l’expression suivante :
 
@@ -25,13 +25,13 @@ Si $(a,b)$ est un point critique :
     - $[r]_{(a,b)} \text{ ou } [t]_{(a,b)} = 0 \iff$on ne peut rien en conclure.
 - Si $[\Delta f]_{(a,b)} = 0$, on ne peut rien conclure.
 
-## Extrêmes globaux
+### Extrêmes globaux
 
 Si on peut démontrer que pour une valeur concrète de $y=y_0$, la fonction $f(x,y)$ diverge vers l’infini positif ou négatif, cela suffit pour dire que $f(x,y)$ n’as pas de maximum ou minimum global, respectivement. C’est de même pour $y$ qui est la variable qui bouge et $x=x_0$ la variable qui reste fixe.
 
-# Continuité et dérivabilité partielle
+## Continuité et dérivabilité partielle
 
-## Définition de continuité pour une fonction bivariable
+### Définition de continuité pour une fonction bivariable
 
 $$
 f \text{ continue en } (x_0,y_0) :\lim_{x \rightarrow x_0, y \rightarrow y_0}f(x,y)=f(x_0,y_0)
@@ -40,7 +40,7 @@ f \text{ continue en } (x_0,y_0) :\lim_{x \rightarrow x_0, y \rightarrow y_0}f(x
 \text{Pour un point de la forme } (c_0,c_0):\lim_{x \rightarrow c_0} f(x,x)=f(c_0,c_0)
 $$
 
-## Définition de dérivabilité pour un fonction bivariable
+### Définition de dérivabilité pour un fonction bivariable
 
 $$
 f \text{ dérivable p.r. à }x \text{ en } (x_0,y_0)  : \text{(analogiquement pour } y)
@@ -65,9 +65,9 @@ $$
 
 **Note #2** : une fonction bivariable $f(x,y)$ peut ne pas être continue et quand même avoir des dérivées partielles. Ceci est différent dans le cas d’une fonction univariable $f(x)$.
 
-# Intégration double sur un intervalle non-rectangulaire
+## Intégration double sur un intervalle non-rectangulaire
 
-## Régions de type I et type II
+### Régions de type I et type II
 
 Une région dans le plan cartésien est de type I s’il existe deux fonctions tel que la région est contenue verticalement entre les deux. C’est similaire pour les régions de type II, mais ici la région est contenue horizontalement.
 
@@ -87,7 +87,7 @@ Régions de type I.
 
 Régions de type II.
 
-## Théorème de Fubini
+### Théorème de Fubini
 
 Pour une fonction $f(x,y)$ continue sur la région $D$, on a que :
 

@@ -1,22 +1,22 @@
-# 06 // autres décompositions
+## 06 // autres décompositions
 
-# Qu’est-ce une décomposition ?
+## Qu’est-ce une décomposition ?
 
-## Définition
+### Définition
 
-Une *décomposition* est une manière de réécrire une matrice $A$ comme l’opération de différentes matrices. La diagonalisation est la décomposition qu’on a vu jusqu’à ce moment : $A =PDP^{-1}$. 
+Une *décomposition* est une manière de réécrire une matrice $A$ comme l’opération de différentes matrices. La diagonalisation est la décomposition qu’on a vu jusqu’à ce moment : $A =PDP^{-1}$.
 
 Pareil, la trigonalisation est une autre décomposition : $A = PTP^{-1}$, où $T$ matrice triangulaire.
 
-# Décomposition LU
+## Décomposition LU
 
-## Matrice de permutation
+### Matrice de permutation
 
-Avant d’aborder la décomposition, il faut expliquer qu’est-ce qu’une **matrice de permutation**. Elle est simplement une matrice $P$ tel que chaque ligne et colonne à un seul $1$ et des $0$ partout. La matrice identité est une **matrice de permutation**, par exemple, mais aussi si on inverse les lignes ou colonnes de l’identité. 
+Avant d’aborder la décomposition, il faut expliquer qu’est-ce qu’une **matrice de permutation**. Elle est simplement une matrice $P$ tel que chaque ligne et colonne à un seul $1$ et des $0$ partout. La matrice identité est une **matrice de permutation**, par exemple, mais aussi si on inverse les lignes ou colonnes de l’identité.
 
-## Décomposition LU : $P^{-1}A=LU$
+### Décomposition LU : $P^{-1}A=LU$
 
-Soit $A$ une matrice **inversible**. Donc, on peut réécrire $A$ comme : 
+Soit $A$ une matrice **inversible**. Donc, on peut réécrire $A$ comme :
 
 $$
 P^{-1}A=LU \space \text{ou} \space A=PLU
@@ -24,9 +24,9 @@ $$
 
 où $P$ est une matrice de permutation, $L$ est une matrice triangulaire inférieure ($L$ de “lower”) et $U$ est une matrice triangulaire supérieure ($U$ de “upper”). Parfois, on peut ramener la matrice de permutation $P$ à la matrice identité.
 
-# Matrices orthogonales et décomposition QR
+## Matrices orthogonales et décomposition QR
 
-## Matrice orthogonale : $Q$
+### Matrice orthogonale : $Q$
 
 Une matrice orthogonale est une matrice $Q$ telle qu’elle vérifie deux conditions :
 
@@ -34,16 +34,16 @@ Une matrice orthogonale est une matrice $Q$ telle qu’elle vérifie deux condit
 2. Le produit scalaire des vecteurs colonnes différents vaut $0$
 Ceci implique que les vecteurs sont deux à deux orthogonaux.
 
-### Propriétés
+#### Propriétés
 
 - $Q^{T}Q=I$
 - $\det(Q)=\pm 1$,
 - $Q^{-1}=Q^T$
 - Si $Q$ est une matrice de passage de une base $B_1$ à une base $B_2$, donc la matrice de passage de $B_2$ à $B_1$ est $Q^{T}$.
 
-## Décomposition QR : $A=QR$
+### Décomposition QR : $A=QR$
 
-Pour une matrice $A$, 
+Pour une matrice $A$,
 
 $$
 A=QR
@@ -53,15 +53,15 @@ Où $Q$ est une matrice orthogonale et $R$  est une matrice triangulaire supéri
 
 En plus, si $A$ est inversible, il existe une unique décomposition QR tel que les coefficients de $R$ soient strictement positifs. Telle décomposition est **unique**.
 
-# Matrice de covariance et ACP
+## Matrice de covariance et ACP
 
-## Avant, matrice symétriques : $M=M^T$
+### Avant, matrice symétriques : $M=M^T$
 
 Une matrice symétrique est une matrice $M$ telle que $M = M^T$. Une propriété est que **toute matrice symétrique réelle est diagonalisable** : il existe $Q$ orthogonale tel que $M=QD^TQ$.
 
-## Matrice de covariance : $M=\big[m_{i,j}\big],\hspace{4pt} m_{i,j}=\text{Cov}(i,j)$
+### Matrice de covariance : $M=\big[m_{i,j}\big],\hspace{4pt} m_{i,j}=\text{Cov}(i,j)$
 
-Une matrice de covariance est une matrice $M$ qui contient la covariances de deux coordonnés $i,j$ d’un vecteur aléatoire (càd. un vecteur qui contient des variables aléatoires ou variables statistiques) dans le coefficient $(i,j)$ de la matrice. 
+Une matrice de covariance est une matrice $M$ qui contient la covariances de deux coordonnés $i,j$ d’un vecteur aléatoire (càd. un vecteur qui contient des variables aléatoires ou variables statistiques) dans le coefficient $(i,j)$ de la matrice.
 
 Par exemple, supposons des variables statistiques d’un vin : prix $X_1$, dégrées d’alcool $X_2$ et âge $X_3$. Alors le vecteur colonne aléatoire qui leur représentent est $\mathbf{X} = (X_1,X_2,X_3)^T$.
 
@@ -76,7 +76,7 @@ M=
 \end{bmatrix}
 $$
 
-## ACP : Analyse en composantes principales
+### ACP : Analyse en composantes principales
 
 Avant d’expliquer qu’est-ce que l’analyse en composantes principales, il faut rappeler un peu de statistique. Supposons deux vecteurs aléatoires : l’un avec deux composants, et l’autre avec huit composants. Cela veut dire qu’on a besoin de deux vecteurs de **base** (canonique) pour représenter chaque entrée du premier vecteur aléatoire. Analogiquement, huit vecteurs de base pour le deuxième vecteur aléatoire.
 
@@ -86,7 +86,7 @@ Ici, “réduire la dimension” veut dire réduire la quantité de vecteurs né
 
 (Dans ce contexte, la variance “totale” de l’ensemble de données ou nuage des points multidimensionnel est simplement la somme des variances de chaque élément)
 
-### Étape #1 : standardiser les données, matrice de covariance
+#### Étape #1 : standardiser les données, matrice de covariance
 
 Ayant clarifier l’objectif, la première chose à faire est de standardiser les données, càd. on centre les données autour de $0$ et on réduit la variance à $1$. Ceci est un pas super important !
 
@@ -100,7 +100,7 @@ Une fois les données standardisées, on calcule la matrice de covariance des do
 
 On reprend ici l’exemple des bouteilles de vin.
 
-### Étape #2 : diagonalisation de la matrice de covariance
+#### Étape #2 : diagonalisation de la matrice de covariance
 
 Regardons à nouveau notre matrice de covariance. On voit que pour chaque élément, il existe une entrée qui représente sa relation de variance par rapport aux autres éléments. Donc, on pourrait interpréter chaque colonne comme un vecteur aussi ! Particulièrement, pour la colonne prix, l’interprétation serait “les **unités de covariance** entre le prix et l’élément $i$”, et comme ça pour les autres.
 
@@ -112,18 +112,17 @@ Du départ, notre base était la base canonique : chaque vecteur de la base cano
 
 Maintenant, avec la vecteurs propres comme base, chaque vecteur représente un “mélange” de chaque élément (prix, dégrées d’alcool…) et pour reconstruire un vin on prendra une certaine quantité $\lambda_i$ de chaque vecteur. Ceci est simplement l’interprétation de la partie $PD$ de la diagonalisation $A=PDP^{-1}$ .
 
-Si on prend un vin (une donnée) et on fait une combinaison linéaire avec un vecteur propre (cette “mélange” d’éléments), on obtient ce qu’on appelle un “facteur” ou “composant”. 
+Si on prend un vin (une donnée) et on fait une combinaison linéaire avec un vecteur propre (cette “mélange” d’éléments), on obtient ce qu’on appelle un “facteur” ou “composant”.
 
 > Jusqu’ici, un **détail important** à retenir ce que la trace est une invariante de similitude, donc $\text{Tr}(A) = \text{Tr}(D)$. En plus, la trace de $A$ est la variance total de l’ensemble de données standardisées.
 
 Un autre **détail important** est que les vecteurs propres dans $P$ doivent être orthogonaux deux à deux et de norme $1$, donc $P$ est une matrice orthogonale.
-> 
 
-### Étape #3 : réduction de dimension
+#### Étape #3 : réduction de dimension
 
 Notons que dans $D$, il aura des valeurs propres plus grands qu’autres, ce qui signifie que il faudrait plus d’un vecteur propre que d’autre pour reconstruire les variances. C’est ici où on fait la réduction de dimension : si chaque vecteur représente une dimension, et on a besoin d’une quantité petite d’un certain vecteur propre pour reconstruire les covariances (càd. un valeur propre petit), **on pourrait juste négliger tel vecteur propre**. Particulièrement, on voit combien d’un vecteur propre (son valeur propre) fait comme proportion de la variance totale : $\frac{\lambda_i}{\text{Tr}(A)}$.
 
-Il faut garder en tête que la plus de variance un vecteur garde du *dataset*, la plus d’information il en contient ! 
+Il faut garder en tête que la plus de variance un vecteur garde du *dataset*, la plus d’information il en contient !
 
 Chaque fois qu’on prend des vins (vecteurs ligne $\mathbf{x}_1, \dots, \mathbf{x}_n$) et on prend sa combinaison linéaire avec le vecteur de plus grand $\lambda$, $\mathbf{w}_1$, on obtient une constante résultat $(F_1)_i$ qui est le “facteur” du vin $i$ sous $\mathbf{w}_1$. Supposons qu’on garde tous les facteurs $(F_1, \dots, F_n)$ comme des données dans le vecteur ligne $\mathbf{F}_1$ associé au vecteur propre $\mathbf{w}_1$, alors il en résulte que $\mathbf{w}_1$ est tel vecteur colonne qui maximise la variance de $\mathbf{F}_1$. Formellement,
 
@@ -135,7 +134,7 @@ On pourra prendre un autre vecteur colonne $\mathbf{w}_i$ et faire la même opé
 
 Normalement avec l’ACP, on veut avoir des données originalement dans beaucoup de dimensions représentables en un nombre de dimensions qu’on puisse voir, donc normalement on garde au maximum les trois vecteurs propres qui contiennent le plus de variance totale du *dataset* ou nuage de points original.
 
-### Étape #4 : reconstruction des données réduites
+#### Étape #4 : reconstruction des données réduites
 
 Dans l’exemple du vin, on garde $\mathbf{w}_1$ et $\mathbf{w}_2$. Seulement avec eux deux, on peut reconstruire $86\%$ de la variance totale, c’est donc un sacrifice qui vaut le coup. Finalement, on détermine $F_1$ et $F_2$ de chaque vin et on graphique la nouvelle nuage en $2$ dimensions. Le résultat devrait semble quelque chose comme suit :
 

@@ -1,6 +1,7 @@
-# Period #1 - ACE training
+## Period #1 - ACE training
 
 Install ACE on a concrete tag (5.3.1 rc2)
+
 Install ACE submodules (kEnv, kann, kaf_applications) on that same tag
 
 Three components must be on the same version: ACE, STM32, MPPA. If that’s the case, everything should work correctly.
@@ -61,7 +62,7 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 ./run demo r1.6 utils/sources/dog.jpg --no-replay --no-display -v -d cpu
 ```
 
-## ACE Training (Stéphane Gailhard)
+### ACE Training (Stéphane Gailhard)
 
 dpu (definition): manycore, entre-sortie rapide, bloque hardcode,, calcul paralleles
 

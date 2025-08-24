@@ -1,4 +1,4 @@
-# Period #2 - Commiting to master branch
+## Period #2 - Commiting to master branch
 
 - Before anything, make sure you have configured your profile following the steps in Training slides.
 - After that, in a new repo you just cloned, run `installCommitHook` for the first time.

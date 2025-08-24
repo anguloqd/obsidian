@@ -1,16 +1,16 @@
-# 05 // flux et fichiers
+## 05 // flux et fichiers
 
 [INFF5_5.pdf](ressources/05_flux_et_fichiers_inff5_5.pdf)
 
-# Introduction
+## Introduction
 
-## Notion de flux
+### Notion de flux
 
 Un flux (de données) est l’abstraction d’une séquence de taille variable (voire inconnue) de données éventuellement hétérogènes qui peut constituer une entrée ou une sortie pour un programme.
 
 Un flux peut être associé à divers éléments du système d’entrées/sorties d’un ordinateur : clavier, écran, imprimante, fichier, connexion réseau, etc.
 
-## Les flux en Java
+### Les flux en Java
 
 Il existe plusieurs classes prédéfinies en Java permettant de créer et manipuler des flux. On distingue les flux selon deux critères :
 
@@ -19,9 +19,9 @@ Il existe plusieurs classes prédéfinies en Java permettant de créer et manipu
 
 Les classes relatives aux flux sont pour la plupart regroupées dans le paquetage `java.io`, mais aussi dans d’autres paquetages (`java.util`, `java.util.zip`, `java.security`, `javax.crypto`).
 
-# Flux d’octects
+## Flux d’octects
 
-## Comment ça marche en Java
+### Comment ça marche en Java
 
 Deux hiérarchies de classes prédéfinies existent en Java pour les flux d’octets.
 
@@ -30,13 +30,13 @@ Deux hiérarchies de classes prédéfinies existent en Java pour les flux d’oc
 
 Il existe une interface importante qui interagit avec les flux d’octects : l’interface `Cloaseable`, qui contient un seule méthode `void close() throws IOException`. Telle méthode ferme le flux et libère toutes les ressources systèmes associées au flux. N’a aucun effet si le flux est déjà fermé.
 
-## Flux d’octects en lecture
+### Flux d’octects en lecture
 
 ![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](ressources/05_flux_et_fichiers_untitled.png)
 
-Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
+Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B.
 
-### Classe abstraite `InputStream`
+#### Classe abstraite `InputStream`
 
 ```java
 // méthodes de lecture
@@ -57,24 +57,24 @@ void reset() throws IOException{ ... }
 
 - `abstract int read()`
 lit et retourne l’octet suivant. Retourne `-1` si EOF. Bloque jusqu’à la lecture de l’octet, EOF ou levée d’une `IOException`.
-- `int read(byte[] t)` 
+- `int read(byte[] t)`
 lit jusqu’à `t.length` octets, les range dans `t` et retourne le nombre d’octets lus ou `-1` si EOF. Méthode bloquante. Lève une `NullPointerException` si `t` vaut `null`.
-- `int read(byte[] t, int d, int lg)` 
+- `int read(byte[] t, int d, int lg)`
 lit jusqu’à `lg` octets, les range dans `t` à partir de l’indice `d` et retourne le nombre d’octets lus ou `-1` si EOF. Méthode bloquante. Lève une `NullPointerException` si `t` vaut `null`.
-- `int available()` 
+- `int available()`
 retourne le nombre d’octets disponibles (pouvant être lus sans bloquer avec `read()`).
-- `void close()` 
+- `void close()`
 ferme le flux.
-- `long skip(long n)` 
+- `long skip(long n)`
 saute `n` octets et retourne le nombre d’octets effectivement sautés.
-- `void mark(int limite)` 
+- `void mark(int limite)`
 positionne une marque à laquelle il est possible de revenir par un reset. limite indique le nombre d’octets pouvant être lus avant que cette marque soit invalidée.
-- `boolean markSupported()` 
+- `boolean markSupported()`
 retourne `true` si et seulement si le flux autorise l’utilisation de mark et reset.
-- `void reset()` 
+- `void reset()`
 repositionne la lecture à la dernière marque placée dans le flux. Une `IOException` est levée si aucune marque valide existe ou si les marques ne sont pas autorisées par le flux.
 
-### Classe `FileInputStream`
+#### Classe `FileInputStream`
 
 ```java
 // constructeurs
@@ -93,7 +93,7 @@ retourne le `FileDescriptor` représentant la connexion courante au fichier.
 - `FileChannel getChannel()`
 retourne le `FileChannel` représentant la connexion courante au fichier (avec la même position de lecture).
 
-### Classe abstraite `FilterInputStream` et ses classes enfants
+#### Classe abstraite `FilterInputStream` et ses classes enfants
 
 La classe `FilterInputStream` est une classe abstraite dont héritent de nombreuses sous-classes destinées à être des « décorateurs » pour un `InputStream` existant, dont notamment :
 
@@ -101,7 +101,7 @@ La classe `FilterInputStream` est une classe abstraite dont héritent de nombreu
 - `DataInputStream`
 - `InflaterInputStream` (dans le paquetage `java.util.zip`)
 
-### Classe `BufferedInputStream`
+#### Classe `BufferedInputStream`
 
 Elle ne contient que deux constructeurs :
 
@@ -110,7 +110,7 @@ décore `in` en le dotant d’un accès tamponné de 8192 octets.
 - `BufferedInputStream(InputStream in, int taille)`
 décore `in` en le dotant d’un accès tamponné de `taille` octets.
 
-### Classe `DataInputStream`
+#### Classe `DataInputStream`
 
 Elle ne contient qu’un constructeur :
 
@@ -152,7 +152,7 @@ lit plusieurs octets constituant une chaîne de caractères au format UTF8 modif
 
 L’interface lève une exception `EOFException` si il y a une tentative de lire au-delà de la fin du flux).
 
-### Exemple de lecture basique
+#### Exemple de lecture basique
 
 ```java
 InputStream entree;
@@ -172,13 +172,13 @@ try {
 }
 ```
 
-## Flux d’octects en écriture
+### Flux d’octects en écriture
 
 ![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](ressources/05_flux_et_fichiers_untitled_1.png)
 
-Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
+Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B.
 
-### Classe abstraite `OutputStream`
+#### Classe abstraite `OutputStream`
 
 Les méthodes plus importantes sont celles d’écriture :
 
@@ -197,7 +197,7 @@ vide le flux (assure que tout octet éventuellement « bufferisé » est bien en
 - `void close() throws IOException`
 ferme le flux.
 
-### Classe `FileOutputStream`
+#### Classe `FileOutputStream`
 
 Commençons par le constructeur :
 
@@ -219,11 +219,11 @@ retourne le `FileDescriptor` représentant la connexion courante au fichier.
 - `FileChannel getChannel() throws IOException`
 retourne le `FileChannel` représentant la connexion courante au fichier (avec la même position d’écriture).
 
-### Classe abstraite `FilterOutputStream` et ses sousclasses
+#### Classe abstraite `FilterOutputStream` et ses sousclasses
 
 La classe `FilterOutputStream` est une classe abstraite dont héritent de nombreuses sousclasses destinées à être des « décorateurs » pour un `OutputStream` existant, dont notamment les suivantes :
 
-### Classe `BufferedOutputStream`
+#### Classe `BufferedOutputStream`
 
 Il ne contient que deux constructeurs :
 
@@ -232,7 +232,7 @@ décore `out` en le dotant d’un accès tamponné de 8192 octets.
 - `BufferedOutputStream(OutputStream out, int taille)`
 décore `out` en le dotant d’un accès tamponné de `taille` octets.
 
-### Classe `DataOutputStream`
+#### Classe `DataOutputStream`
 
 Elle ne contient qu’un constructeur :
 
@@ -264,7 +264,7 @@ L’interface `DataOutput` donne accès a plusieurs méthodes :
 - `void writeUTF(String s)`
 écrit 2 octets indiquant un format UTF-8, puis les caractères de `s` en utilisant le format UTF-8.
 
-### Exemple d’écriture basique
+#### Exemple d’écriture basique
 
 ```java
 OutputStream sortie;
@@ -287,15 +287,15 @@ try {
 }
 ```
 
-# Flux de caractères
+## Flux de caractères
 
-## Flux de caractères en lecture
+### Flux de caractères en lecture
 
 ![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](ressources/05_flux_et_fichiers_untitled_2.png)
 
-Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
+Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B.
 
-### Classe abstraite `Reader`
+#### Classe abstraite `Reader`
 
 Elle contient deux constructeurs :
 
@@ -312,7 +312,7 @@ lit et retourne le caractère suivant. Retourne -1 si `EOF`. Bloque jusqu’à l
 lit jusqu’à `t.length` caractères, les range dans `t` et retourne le nombre d’octets lus ou -1 si EOF. Méthode bloquante. Lève une `NullPointerException` si `t` vaut `null`.
 - `int read(char[] t, int d, int l) throws IOException`
 lit jusqu’à `l` caractères, les range dans `t` et retourne le nombre d’octets lus ou -1 si EOF. Méthode bloquante. Lève une `NullPointerException` si `t` vaut `null`.
-- `int read(CharBuffer cb) throws IOException` 
+- `int read(CharBuffer cb) throws IOException`
 tente de lire des caractères dans `cb` et retourne le nombre d’octets lus ou -1 si EOF. (Méthode imposée par l’interface `Readable`).
 
 Finalement, d’autres méthodes :
@@ -330,7 +330,7 @@ retourne `true` si et seulement si le flux autorise l’utilisation de `mark` et
 - `void reset() throws IOException`
 repositionne la lecture à la dernière marque placée dans le flux. Une `IOException` est levée si aucune marque valide existe ou si les marques ne sont pas autorisées par le flux.
 
-### Classe `InputStreamReader`
+#### Classe `InputStreamReader`
 
 Elle ne contient que des constructeurs :
 
@@ -343,7 +343,7 @@ permet d’obtenir un `InputStreamReader` sur `in` en utilisant `dec` comme `Cha
 - `InputStreamReader(InputStream in, String name) throws UnsupportedEncodingException`
 permet d’obtenir un `InputStreamReader` sur `in` en utilisant le `Charset` nommé `name`.
 
-### Classe `FileReader`
+#### Classe `FileReader`
 
 Elle ne contient que des constructeurs :
 
@@ -354,7 +354,7 @@ ouvre une connexion en lecture sur le fichier `file`. Levée d’exception s’i
 - `FileReader(FileDescriptor fd) throws FileNotFoundException`
 initialise le `FileInputStream` d’après `fd` (pouvant être obtenu depuis une connexion existante).
 
-### Classe `BufferedReader`
+#### Classe `BufferedReader`
 
 Elle contient deux constructeurs :
 
@@ -368,13 +368,13 @@ Finalement, une méthode additionnelle :
 - `String readLine()`
 retourne une ligne lue dans `this`. Une ligne est toute suite de caractères se terminant par '`\n`', '`\r`', ou "`\r\n`". Les caractères de fin de ligne ne font pas partie du résultat. Retourne `null` si EOF.
 
-## Flux de caractères en écriture
+### Flux de caractères en écriture
 
 ![Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. ](ressources/05_flux_et_fichiers_untitled_3.png)
 
-Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B. 
+Les diagrammes sont un peut inverses, mais bref, si une classe A pointe vers une autre classe B, donc A hérite de B.
 
-### Classe abstraite `Writer`
+#### Classe abstraite `Writer`
 
 Elle contient deux constructeurs :
 
@@ -409,7 +409,7 @@ ferme le flux.
 - `void flush() throws IOException`
 vide le flux.
 
-### Classe `OutputStreamWriter`
+#### Classe `OutputStreamWriter`
 
 Elle ne contient que des constructeurs :
 
@@ -422,7 +422,7 @@ permet d’obtenir un `OutputStreamWriter` sur `out` en utilisant `dec` comme `C
 - `OutputStreamWriter(OutputStream out, String name) throws UnsupportedEncodingException`
 permet d’obtenir un `OutputStreamWriter` sur out en utilisant le `Charset` nommé `name`.
 
-### Classe `FileWriter`
+#### Classe `FileWriter`
 
 Similairement, elle ne contient que des constructeurs :
 
@@ -437,7 +437,7 @@ correspond à `FileWriter(file, false)`.
 - `FileWriter(FileDescriptor fd)`
 ouvre une connexion en écriture décrite par `fd`.
 
-### Classe `BufferedWriter`
+#### Classe `BufferedWriter`
 
 Elle contient deux constructeurs :
 

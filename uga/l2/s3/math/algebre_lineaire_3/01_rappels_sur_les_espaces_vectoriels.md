@@ -1,8 +1,8 @@
-# 01 // rappels sur les espaces vectoriels
+## 01 // rappels sur les espaces vectoriels
 
-# Équations linéaires ou cartésiennes
+## Équations linéaires ou cartésiennes
 
-## Définition et astuces
+### Définition et astuces
 
 Une équation cartésienne définit un sous-espace vectoriel. Par exemple :
 
@@ -20,13 +20,17 @@ z \\
 $$
 
 Le coefficient libre doit être forcément $0$ ! Cela implique que le vecteur nul appartient à l’ensemble, condition nécessaire pour un sev.
+
 Si le coefficient libre était différent de $0$, on ne parlerait pas d’un espace vectoriel mais d’un ***espace affin***, car le vecteur nul n’y est pas inclus.
 
 De cette manière, on décrit l’ensemble de points qui appartient à ce plan.
+
 Dans $\mathbb{R}^n$, une équation linéaire à $n$ variables décrit un sous-espace vectoriel de dimension $(n-1)$.
 
 On peut aussi décrire un même ensemble d’un hyperplan de dimension $n$ avec $n$ points ou vecteurs appartenant à l’hyperplan
+
 Par exemple, notons que $[1,1,1]$ et $[0,1,-1]$ vérifient l’équation cartésienne $2x-y-z=0$. Donc, ils appartiennent l’ensemble.
+
 Finalement, on peut décrire le même hyperplan comme l’espace engendré de ces deux vecteurs.
 
 $$
@@ -50,10 +54,11 @@ Un ensemble d’équations linéaires est dit “lié” si on peut décrire une
 
 De la même manière, une structure linéaire (une ligne, un plan, un hyperplan) peut être vu comme l’intersection de deux autres structures linéaires non-liées ou l’ensemble solution d’un système d’équations. Par exemple, dans $\mathbb{R}^3$, l’intersection de deux plans non-liées décrit une droite.
 
-Dans $\mathbb{R}^n$, un système de $k$ équations linéaires non-liées, chacune à $n$ variables, décrit un sous-espace vectoriel de dimension $(n-k)$. 
+Dans $\mathbb{R}^n$, un système de $k$ équations linéaires non-liées, chacune à $n$ variables, décrit un sous-espace vectoriel de dimension $(n-k)$.
+
 C’est-à -dire, un ensemble $E_1, …, E_k$ non-lié implique que le chaque équation est une “pièce d’information unique” et, s’il existe une solution, c’est le vecteur nul (supposant coefficient libre égal $0$).
 
-## Équations vectoriels d’une droite et un plan
+### Équations vectoriels d’une droite et un plan
 
 Pour le cas d’une droite dans le plan 2D, l’expression est celle-ci. Ici, c’est la forme générale, c’est-à-dire, on représente un ensemble de points. Pour représenter un point spécifique, on fixe $\lambda$ et on commence à varier $x$ pour obtenir $y$. Notons que si on veut représenter un sous-espace vectoriel, forcément le vecteur position $(P_1, P_2)$ est le vecteur nul $(0, 0)$.
 
@@ -88,7 +93,6 @@ E_2 : x + 2y + 3z = 0
 \implies (x,y,z) = (x,-2x,x)
 \newline
 x\text{ indépendent}.
-
 $$
 
 Si on ajoutait une équation qui serait une combinaison linéaire des équation déjà appartenant au système, on ne change rien, les solutions restent le mêmes. Dans le cas d’une droite dans l’espace, ajouter une équation liée serait d’ajouter un plan qui contient la droite intersection des deux autres équations. Elle est donc redondante.
@@ -103,5 +107,4 @@ E_3 : x+4y+9z = 0
 \end{cases}
 \implies (x,y,z) = (0,0,0)
 \newline
-
 $$

@@ -1,10 +1,10 @@
-# 02 // logique
+## 02 // logique
 
-# Propositions
+## Propositions
 
 [Slides de propositions](ressources/02_logique_slides_proposition_minfo_annote_final.pdf)
 
-## Les bases
+### Les bases
 
 Une proposition est un énoncé qui est soit vrai, soit faux. On appelle aussi une proposition vraie comme un proposition avec une valeur de vérité égal à $1$, et fausse avec une valeur de vérité $0$.
 
@@ -17,7 +17,7 @@ Un atome ou proposition atomique est une proposition ou un prédicat élémentai
 
 En plus, un littéral est soit un atome, soit sa négation.
 
-## Les connecteurs logiques
+### Les connecteurs logiques
 
 Les propositions atomiques servent à créer des propositions plus complexes à travers les connecteurs logiques. Les connecteurs logiques de base sont trois : la négation $\lnot$, la disjonction $\lor$ et la conjonction $\land$.
 
@@ -27,9 +27,9 @@ Un connecteur logique important est l’implication : $P \implies Q \equiv \lnot
 
 Il faut distinguer entre l’assertion implicative $P \implies Q$ et l’assertion conditionnel matériel $P\longrightarrow Q$ : la première assume des valeurs de vérités pour $P$ et $Q$, tant que la deuxième juste parle de la relation entre $P$ et $Q$ sans spécifier leur valeurs de vérité.
 
-## Règles de calcul propositionnel
+### Règles de calcul propositionnel
 
-Pour les connecteurs de base $\land$ et $\lor$, ils vérifient la commutativité, associativité et distributivité par rapport à trois propositions $P,Q,R$.  La double négation $\lnot(\lnot P)$ est équivalente à la même proposition de base $P$. 
+Pour les connecteurs de base $\land$ et $\lor$, ils vérifient la commutativité, associativité et distributivité par rapport à trois propositions $P,Q,R$.  La double négation $\lnot(\lnot P)$ est équivalente à la même proposition de base $P$.
 
 Les lois de De Morgan sont comme la “distributivité de la négation” par rapport à un connecteur $\land$ ou $\lor$. Particulièrement,
 
@@ -38,7 +38,7 @@ Les lois de De Morgan sont comme la “distributivité de la négation” par ra
 
 L’implication logique peut être reformulé grâce aux lois de De Morgan : $P\longrightarrow Q \iff \lnot Q \longrightarrow \lnot P$.
 
-## Clauses et formes normales
+### Clauses et formes normales
 
 Les clauses sont des successions de littéraux (atomes ou leurs négations) $\{l_1, \dots, l_n\}$ reliés par le même opérateur logique. Elles sont de grand intérêt en informatique.
 
@@ -64,21 +64,22 @@ $$
 
 Cette dernier expression $(\lnot l_1 \lor \dots \lor \lnot l_n \lor q)$ est d’intérêt, est une type d’une clause de Horn. Particulièrement, une clause de Horn est une clause **disjonctive** avec, au plus, un littéral positif.
 
-## *Modus ponens* et principe de résolution de Robinson
+### *Modus ponens* et principe de résolution de Robinson
 
-Le modus ponens est l’assertion $((P \longrightarrow Q) \land P) \implies Q$, c’est le passage d’une assertion conditionnelle à une assertion implicative matérielle. 
+Le modus ponens est l’assertion $((P \longrightarrow Q) \land P) \implies Q$, c’est le passage d’une assertion conditionnelle à une assertion implicative matérielle.
 
-Le principe de résolution de Robinson est une généralisation du modus ponens. 
+Le principe de résolution de Robinson est une généralisation du modus ponens.
 
 1. On part d’une clase disjonctive qui contient $p$ : $(p \lor a_1\lor \dots \lor a_n)$
 2. et d’une implication de p à une autre clause disjonctive : $p \implies (b_1 \lor \dots \lor b_n)$.
 3. Avec la définition d’implication, on peut réécrire la dernière formule comme $(\lnot p \lor b_1 \lor \dots \lor b_n)$.
 4. On met tout sous la forme de modus ponens :
-    
+
     $$
     \big((p \lor a_1\lor \dots \lor a_n) \land (\lnot p \lor b_1 \lor \dots \lor b_n)\big) \\\implies (a_1 \lor \dots \lor a_n \lor b_1 \lor \dots \lor b_n)
-    $$
-    
+
+$$
+
 
 La magie ici c’est que la clause finale ne dépend pas ni de $p$ ni de $\lnot p$ !
 
@@ -122,7 +123,9 @@ On a vu que les prédicats contiennent des variables mathématiques que attenden
 3. On supprime les quantificateurs existentiels qui sont devenus inutiles.
 
 $$
+
 \forall x \in E, \exists M>0:f(x)<M \longrightarrow \forall x \in E, f(x)<\underbrace{g(x)}_{f(x)+1}
+
 $$
 
 Note pratique #1 : si $\exists x$ avant de $\forall y$, on revient à donner à $x$ une valeur constante $a$, puis à eliminer le $\exists x$.

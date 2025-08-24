@@ -1,2 +1,1 @@
-# 06 // TD probas discrète et continu
-
+## 06 // TD probas discrète et continu

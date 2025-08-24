@@ -1,12 +1,12 @@
-# 03 // techniques de programmation
+## 03 // techniques de programmation
 
 [Slides de techniques 1](ressources/03_techniques_de_programmation_coursprologl2_3.pdf)
 
 [Slides de techniques 2](ressources/03_techniques_de_programmation_coursprologl2_4.pdf)
 
-# Prédicat `writef/2`
+## Prédicat `writef/2`
 
-## Imprimer des variables dans la console
+### Imprimer des variables dans la console
 
 C’est juste un prédicat pour concaténer ou inclure de valeurs de variables dans une chaîne. Le première paramètre est la chaîne à imprimer contenant `%t` pour les parties variables, et le deuxième paramètre est la liste de valeurs en ordre à afficher dans le string.
 
@@ -14,9 +14,9 @@ C’est juste un prédicat pour concaténer ou inclure de valeurs de variables d
 writef("Le joueur %t a gagné %t points.",[Nom,Pts])
 ```
 
-# Écriture d’un test `if`
+## Écriture d’un test `if`
 
-## Une suite de prédicats est déjà un test `if`
+### Une suite de prédicats est déjà un test `if`
 
 Tant que le mot clé if n’existe pas dans Prolog, on peut la simuler en écrivant plusieurs règles (”fonctions”) sous le même prédicat (”symbole”), comme si c’était de la surcharge de fonctions/méthodes en programmation par objets.
 
@@ -28,9 +28,9 @@ min(X,Y,X) :- X=<Y. % le minimum entre X et Y est X si X <=Y.
 min(4,7,R). % R=4.
 ```
 
-# Programmation avec un *accumulateur*
+## Programmation avec un *accumulateur*
 
-## Technique très importante et caractéristique de Prolog !
+### Technique très importante et caractéristique de Prolog !
 
 Un accumulateur est juste l’idée d’une liste qui initialement est vide et à la quelle on ajoute des éléments à chaque itération d’un processus jusqu’à qu’on arrive au résultat désiré.
 
@@ -45,11 +45,12 @@ inverse([X|L],Acc,R) :- inverse(L,[X|Acc],R)
 % L=[d,c,b,a]
 ```
 
-# La coupure `!` et le prédicat `fail`
+## La coupure `!` et le prédicat `fail`
 
-## La coupure `!`
+### La coupure `!`
 
 L’exploration systématique est une force de Prolog, mais elle conduit parfois à une explosion
+
 combinatoire. l existe un moyen de restreindre l’exploration de l’arbre de recherche avec la syntaxe `!`. Dans un prédicat, toutes les valeurs de variables choisies avant le `!` seront fixés comme la valeur définitive de chaque variable, càd ces variables deviendront de constantes.
 
 ```prolog
@@ -106,9 +107,9 @@ e(2).
 %X=1.
 ```
 
-Notons que la réponse X=2 de la première ligne de `a` n’apparaît pas comme solution car la valeur de X de fixe à 1. De même, les lignes en-dessous de a ne sont pas appelés, donc la deuxième solution n’est pas applicable. 
+Notons que la réponse X=2 de la première ligne de `a` n’apparaît pas comme solution car la valeur de X de fixe à 1. De même, les lignes en-dessous de a ne sont pas appelés, donc la deuxième solution n’est pas applicable.
 
-## Le prédicat `fail`
+### Le prédicat `fail`
 
 Ce prédicat est toujours faux. Il oblige Prolog à un retour arrière jusqu’au dernier point de choix.
 
@@ -119,7 +120,7 @@ afficheChiffres. % notons que X n'est pas paramètre de afficheChiffres,
 									% elle juste utilise X dans sa définition
 ```
 
-## La combinaison des deux
+### La combinaison des deux
 
 Permet d’exprimer une exception ou la négation d’une condition.
 
@@ -128,9 +129,9 @@ premier(N):- N1 is N-1,between(2,N1,X),N mod X=:=0,!,fail.
 premier(_).
 ```
 
-# Règles dynamiques avec `assert/1` et `retract/1`
+## Règles dynamiques avec `assert/1` et `retract/1`
 
-## Ajouter et retirer des faits et règles dès la console
+### Ajouter et retirer des faits et règles dès la console
 
 Dans l’écriture de requêtes (et pas l’écriture de prédicats), on peut ajouter et supprimer des faits et règles avec `assert` et `retract`, respectivement.
 
@@ -143,9 +144,9 @@ meilleurScore(marie,2556).
 retract(meilleurScore(_,_)) % supprimera tous les faits appeles "meilleurScore"
 ```
 
-# Récupération de toutes les solutions
+## Récupération de toutes les solutions
 
-## Prédicat `findall/3`
+### Prédicat `findall/3`
 
 `findall/3` est un prédicat prédéfini qui prends une variable et un prédicat et retourne dans le troisième paramètre `L` une liste avec toutes les valeurs de `X` qui vérifient le prédicat passé en paramètre.
 
@@ -157,22 +158,21 @@ retract(meilleurScore(_,_)) % supprimera tous les faits appeles "meilleurScore"
 % L=[0,3,6,9]
 ```
 
-# Intégrammes
+## Intégrammes
 
 Les intégrammes appelés parfois logigrammes sont un type de casse-tête logique. On donne un certain nombre d'indices, desquels il faudra déduire l'intégralité des relations entre tous les éléments.
 
-## Premier intégramme
+### Premier intégramme
 
 > Max, Eric et Luc habitent chacun une maison différente. Ils possèdent chacun un animal domestique distinct. Les maisons sont le studio, le pavillon et le château. Les animaux sont le chat, le cheval et le poisson.
 
 Les conditions sont :
-> 
+
 > - Max a un chat.
 > - Eric n’habite pas en pavillon.
 > - Luc habite un studio, il n’as pas le cheval.
 > 
 > La question c’est : **qui habite le château et qui a le poisson** ?
-> 
 
 ```prolog
 % les maisons :
@@ -218,19 +218,18 @@ resoudre :-
 % false.
 ```
 
-## Deuxième intégramme
+### Deuxième intégramme
 
 > Dans une rue, 3 maisons voisines sont de couleurs différentes : rouge, bleue et verte. Des personnes de nationalités différentes vivent dans ces maisons et elles ont chacune un animal de compagnie différent. Les nationalités sont anglais, espagnol et japonais. Les animaux sont les jaguar, l’escargot et le serpent.
 
 Les conditions sont :
-> 
+
 > - L'anglais vit dans la maison rouge.
 > - Le jaguar est l'animal de l'espagnol.
 > - Le japonais vit à droite de la maison du possesseur de l'escargot.
 > - Le possesseur de l'escargot vit à gauche de la maison bleue.
 > 
 > La question c’est : **qui possède le serpent ?**
-> 
 
 On va représenter la solution par une liste de 3 termes, chaque terme aura la forme suivante : `maison(couleur,nationalité,animal)`. Aussi, le prédicat solution sera `serpent(N, Rue)`, où `N` est la nationalité du possesseur du serpent et `Rue` est la liste de 3 termes `maison`.
 

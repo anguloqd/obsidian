@@ -1,10 +1,10 @@
-# 04 // le langage SQL DDL : data definition language
+## 04 // le langage SQL DDL : data definition language
 
 [Slides de SQL 3](ressources/04_le_langage_sql_ddl_data_definition_language_05.sql3.pdf)
 
-# Création d’un schéma
+## Création d’un schéma
 
-## `create schema`
+### `create schema`
 
 Une base de données est définie par son schéma. SQL propose de créer ce schéma avant de définir ses composants :
 
@@ -14,9 +14,9 @@ create schema CLICOM ;
 
 Cette instruction pourra être accompagné de divers paramètres spécifiant notamment les conditions d’autorisation d’acces. Les schémas sont rassemblés dans un catalogue qui représente un ensemble de bases de données.
 
-# Création d’une table
+## Création d’une table
 
-## `create table`
+### `create table`
 
 L’opération ci-dessous produit une table (vide, i.e., sans lignes) dont le schéma est conforme aux indications données par la requête `create table`. On y spécifie le nom de la table et la description de ses colonnes, on spécifiera pour chaque colonne son nom et le type de ses valeurs.
 
@@ -54,7 +54,7 @@ Chaque table accepte un type de donnée, limité par son argument numérique :
 - `TIMESTAMP` : dates et temps
 - `INTERVAL` : intervalles en années/mois/jours entre dates ou en heures/minutes/secondes entre instants
 
-## Domaines de valeurs : `create domain`
+### Domaines de valeurs : `create domain`
 
 On peut définir un domaine de valeurs, qui est une type de donnée déjà défini et qui est réutilisable dans la définition de plusieurs colonnes, ce qui rend la lecture plus aisée.
 
@@ -73,7 +73,7 @@ create table CLIENT (
 ) ;
 ```
 
-## Valeurs par défaut : `default`
+### Valeurs par défaut : `default`
 
 On peut aussi définir une valeur par défaut que le SGBD assignera automatiquement à une colonne (éventuellement via son domaine) lorsque l’utilisateur omettra d’en fournir une lors de la création d’une ligne.
 
@@ -83,9 +83,9 @@ create CAT char (2) default 'AA' ;
 create DATECOM date not null default current date ;
 ```
 
-# Les identifiants
+## Les identifiants
 
-## Clauses `primary key`, `foreign key` et `unique`
+### Clauses `primary key`, `foreign key` et `unique`
 
 On peut déclarer les clés principales, la clé étrangère et les valeurs uniques hors-clé (càd. autres identifiants) avec les clauses `primary key`, `foreign key` et `unique` respectivement.
 
@@ -110,7 +110,7 @@ create table ASSURE (
 
 Par défaut, l’identifiant visé par la clé étrangère dans la table cible est l’identifiant primaire de celle-ci. Il est toujours possible de faire viser un identifiant secondaire de la table même si cela est déconseillé.
 
-## Clause `match` pour les clés étrangères
+### Clause `match` pour les clés étrangères
 
 Une clé étrangère comporte autant de colonnes que l’identifiant cible et ses colonnes sont de même type. Si au moins une des colonnes est facultative (càd. il est possible qu’elle contienne des valeurs non-remplies ou `null`), alors il est possible de préciser via la clause `match`, la manière dont l’intégrité référentielle sera vérifiée en présence de valeurs nulles.
 
@@ -123,9 +123,9 @@ foreign key (NCLI , NFOURN) references
 ACHAT(NCLI , NFOURN) match full
 ```
 
-# Caractère d’une colonne : obligatoire/facultatif
+## Caractère d’une colonne : obligatoire/facultatif
 
-## Clauses `null` et `not null`
+### Clauses `null` et `not null`
 
 Par défaut, i.e., si l’on ne spécifie rien, toute colonne est facultative. Le caractère obligatoire d’une colonne se déclare avec la clause `not null`.
 
@@ -150,9 +150,9 @@ create table COMMANDE (
 );
 ```
 
-# Ajout/retrait de contraintes et colonnes
+## Ajout/retrait de contraintes et colonnes
 
-## Par rapport aux colonnes…
+### Par rapport aux colonnes…
 
 ```sql
 // ajoute colonne POIDS dont toutes les valeurs sont null
@@ -172,9 +172,9 @@ alter domain MONTANT set default -1.0 ; // modifie le domaine MONTANT
 drop domain MATRICULE ; // supprime le domaine MATRICULE
 ```
 
-## Par rapport aux contraintes (identifiants, facultativité)…
+### Par rapport aux contraintes (identifiants, facultativité)…
 
-La clause alter table permet aussi d’ajouter ou retirer des contraintes d’intégrité à posteriori : 
+La clause alter table permet aussi d’ajouter ou retirer des contraintes d’intégrité à posteriori :
 
 ```sql
 alter table CLIENT add primary key (NCLI) ;
@@ -211,9 +211,9 @@ alter table COMMANDE
 alter table DETAIL drop constraint C2 ; // ON EFFACE UNE CONTRAINTE COMME ÇA.
 ```
 
-# Modification de données
+## Modification de données
 
-## Introduction des données : `INSERT INTO/(VALUES, SFW)`
+### Introduction des données : `INSERT INTO/(VALUES, SFW)`
 
 L’ajout d’une ligne s’effectue avec l’instruction `INSERT INTO/VALUES` comme suit :
 
@@ -244,7 +244,7 @@ INSERT INTO CLIENT_TOULOUSE
 
 **Note pratique** : on appelle parfois ses tables snapshot : c’est juste la même table CLIENT mais pour les clients de Toulouse. Elles sont utilisées pour distribuer l’information à partir d’une base de données centrale et pour constituer des systèmes d’aide à la décision (les entreprôts de données).
 
-## Suppression de données : `DELETE FROM/WHERE`
+### Suppression de données : `DELETE FROM/WHERE`
 
 L’ordre de suppression porte sur un sous-ensemble des lignes d’une table. Les lignes à supprimer sont désignées par la clause `WHERE` dont le format est le même que celui de l’instruction SFW :
 
@@ -263,7 +263,7 @@ DELETE FROM DETAIL WHERE NPRO IN
 
 **Note** : après toute opération de suppression, la base de données doit être dans un état qui respecte les contraintes d’intégrité
 
-## Modification de données : `UPDATE/SET/WHERE`
+### Modification de données : `UPDATE/SET/WHERE`
 
 Comme la suppression, la modification est effectuée sur toutes lignes qui vérifient une condition de sélection :
 
@@ -293,7 +293,7 @@ WHERE EXISTS (SELECT * FROM DETAIL
 WHERE NPRO = P.NPRO) ;
 ```
 
-## Modes face à la suppression/modification de lignes
+### Modes face à la suppression/modification de lignes
 
 Une requête de suppression ou modification du contenu de la base de données (`INSERT`, `DELETE`, `UPDATE`, etc.) n’est exécutée que si le résultat respecte toutes les contraintes d’intégrité définies sur cette base. Une opération dont l’exécution laisse les données dans un état invalide est refusée.
 
@@ -326,7 +326,7 @@ WHERE (NCLI...);
 
 **Note** : tout ce qu’on montrera pour une commande de suppression, applique aussi pour une commande de modification. Il suffit de changer “`on delete…`” par “`on update…`”.
 
-### Blocage : `no action`
+#### Blocage : `no action`
 
 ```sql
 create table COMMANDE (
@@ -340,7 +340,7 @@ create table COMMANDE (
 
 Lors qu’un blocage se produit, la suppression est refusée. Un blocage se produit s’il existe une ou plusieurs lignes de COMMANDE dépendantes, i.e., dont `COMMANDE.NCLI = CLIENT.NCLI`.
 
-### Propagation : `cascade`
+#### Propagation : `cascade`
 
 ```sql
 create table COMMANDE (
@@ -354,7 +354,7 @@ create table COMMANDE (
 
 Lors qu’une propagation se produit, la suppression est acceptée. Une propagation entraîne la suppression conjointe des lignes de COMMANDE dépendantes.
 
-### Découplage : `set null`
+#### Découplage : `set null`
 
 ```sql
 create table COMMANDE (
@@ -368,7 +368,7 @@ create table COMMANDE (
 
 Lors qu’un découplage se produit, la suppression est acceptée. Un découplage entraîne l’attribution de la valeur nulle à la colonne NCLI, i.e., les données sont rendues indépendantes. **Ce mode sera notamment utilisé pour les clés étrangères cycliques**.
 
-### Interaction entre les modes
+#### Interaction entre les modes
 
 ```sql
 create table CLIENT (

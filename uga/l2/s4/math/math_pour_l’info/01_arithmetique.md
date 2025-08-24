@@ -1,8 +1,8 @@
-# 01 // arithmétique
+## 01 // arithmétique
 
-# Division euclidienne
+## Division euclidienne
 
-## Définition
+### Définition
 
 Diviser un nombre naturel $A$ (strictement naturel !) par un autre naturel $B$ est de trouver $Q,R\in\mathbb{N}$ qui vérifient l’équation suivante :
 
@@ -15,11 +15,11 @@ Dessus, le nombre $Q$ est le quotient et $R$ est le reste, où $0 \le R < B$. No
 > [!note]
 > À partir d’ici, on note la division euclidienne de $a$ et $b$ comme $a/b$, on ne parle jamais ici de la division rationnelle ou réelle.
 
-# Numération en base $b$
+## Numération en base $b$
 
 [Slides de numération annotés.pdf](ressources/01_arithmetique_slides_bases_annote.pdf)
 
-## Définition et notation
+### Définition et notation
 
 Il existent trois bases de numération relevantes dans la pratique : base $2$, base $10$ et base $16$.
 
@@ -37,7 +37,7 @@ Notons que si on écrit un nombre sans spécifier la base, on parle implicitemen
 
 **Proposition.** L’écriture d’un nombre entier en base $2$, $10$ ou $16$ est unique.
 
-## Conversion
+### Conversion
 
 Il est plus facile de parle d’une conversion quand on applique l’expansion en base $p$ d’un nombre $(a_n\dots a_2 a_1 a_0)_p$, càd. un nombre dont la première chiffre est $a_0$, la deuxième est $a_1$, etc. :
 
@@ -45,7 +45,8 @@ $$
 (a_n\dots a_2 a_1 a_0)_p = a_n \times p^n + \dots + a_2 \times p^2 + a_1 \times p + a_0
 $$
 
-### Base $p$ $\rightarrow$ Base 
+#### Base $p$ $\rightarrow$ Base
+
 $10$
 
 C’est la plus faciles des conversions. Il faut juste utiliser l’expansion de base $p$.
@@ -58,7 +59,7 @@ $$
 \text{Ex. }2 : (5C8)_{16}=5\times 16^2 + \underbrace{C}_{12} \times 16^1 + 8 = (1480)_{10}
 $$
 
-### Base $10$ $\rightarrow$ Base $p$
+#### Base $10$ $\rightarrow$ Base $p$
 
 On effectue une division euclidienne récursivement de chaque quotient et **on inverse l’ordre des restes obtenus, càd. du bas en haut !!!**
 
@@ -80,7 +81,6 @@ $$
 \\
 
 \implies (75)_{10}=(1001011)_2
-
 $$
 
 $$
@@ -98,10 +98,9 @@ $$
 \\
 
 \implies (2014)_{10}=(7DE)_{16}
-
 $$
 
-### Base $2$ $\rightarrow$ Base $16$ (ou viceversa)
+#### Base $2$ $\rightarrow$ Base $16$ (ou viceversa)
 
 On va utiliser ce tableau utile pour chaque chiffre “base” d’une base vers l’autre.
 
@@ -119,7 +118,7 @@ $$
 (F9)_{16}=(\underbrace{1111}_F \space \underbrace{1001}_9)_2
 $$
 
-### Numération des réels
+#### Numération des réels
 
 La définition qu’on avait présentée pour l’expansion en base $p$ d’un nombre naturel peut être étendue pour inclure les nombres réels. Pour un nombre réel qui a pour chiffres $(a_n \dots a_1 a_0 , b_1 \dots b_m)_p$, son expansion est :
 
@@ -141,33 +140,33 @@ $$
 
 Une application particulière est que $(0.\bar{1})_2=(0.111\dots)_2=(1)_{10}$. C’est une analogie des “les nombres avec période $9$ n’existent pas” et “$0.\bar{9} = 1$”.
 
-## Opérations
+### Opérations
 
 Les opérations élémentaires sont analogues à celles qu’on sait faire en base $10$.
 
-### L’addition
+#### L’addition
 
 “On pose une retenue quand on arrive à $p$”.
 
 ![untitled](ressources/01_arithmetique_untitled_1.png)
 
-### La soustraction
+#### La soustraction
 
 ![untitled](ressources/01_arithmetique_untitled_2.png)
 
-### Le produit
+#### Le produit
 
 ![untitled](ressources/01_arithmetique_untitled_3.png)
 
-### La division euclidienne
+#### La division euclidienne
 
 Le prof. n’as pas donné un exemple de comment faire. Il faut juste reprende ce qu’on fait en base $10$ et pense en termes généraux de base $p$ pour toute autre base.
 
-# Arithmétique élémentaire
+## Arithmétique élémentaire
 
 [Slides d’arithmétique élémentaire](ressources/01_arithmetique_slides_arithmetique_minfo_annote.pdf)
 
-## Multiples et diviseur
+### Multiples et diviseur
 
 Si $a$ est un nombre entier, $c$ est un multiple de $a$ s’il existe $b$ tel que $a \cdot b = c$. Notons que $c$ est aussi multiple de $b$.
 
@@ -180,7 +179,7 @@ Pour les diviseurs, $b$ est un diviseur (ou facteur) de $a$ s’il existe $c$ te
 - Si $a$ et $b$ sont divisibles par $c$, alors $c$ divise $ax+by, \forall x,y \in \mathbb{Z}$.
     - En particulier, $c$ divise $a+b$ et $a-b$.
 
-## Nombres premiers
+### Nombres premiers
 
 Un nombre premier est un nombre naturel qui a seulement deux diviseurs distinctes : $1$ et lui-même.
 
@@ -192,7 +191,7 @@ décomposition est unique.
 **Propriété #2**. Si $p$ est un nombre premier et divise un produit $ab$, alors il divise au moins un
 des termes.
 
-## PGCD et PPCM
+### PGCD et PPCM
 
 Le plus grand commun diviseur $PGCD(a,b)$ est une fonction qui prend deux nombres naturels et retourne un nombre $d$ tel qu’il est plus grand que tous les diviseurs communs de $a$ et $b$.
 
@@ -200,7 +199,7 @@ Similairement, le plus petit commun multiple $PPCM(a,b)$ est une fonction qui re
 
 Pour calculer le PGCD, on utilise l’algorithme d’Euclide, lequel est basée sur la propriété $PGCD(a,b) = PGCD(b, r_{a/b})$, où $r$ est le reste de la division euclidienne de $a/b$.
 
-### Algorithme d’Euclide
+#### Algorithme d’Euclide
 
 1. Pour trouver $PGCD(a,b)$, $a > b$, on pose la division euclidienne tel que $a = bq_1+r_1$.
 2. On divise récursivement le quotient et reste, $q_i/r_i$ obtenus jusqu’à que $r_n = 0$.
@@ -219,7 +218,7 @@ PGCD(495,210)=15
 \end{array}
 $$
 
-### Propriétés de PGCD et PPCM
+#### Propriétés de PGCD et PPCM
 
 > [!note]
 > Notation. $a \mid b$ signifie $a$ divise $b$. C’est-à-dire, $\exists a\in \mathbb{N} : \exists k \in \mathbb{N}, a = kb$.
@@ -231,13 +230,13 @@ $$
 - $PGCD(a, b)\mid PGCD(ac, bd)$.
 - Si $c$ est un diviseur commun de $a$ et $b \implies c = PGCD(a, b)$ si et seulement si $a/c$ et $b/c$ sont premiers entre eux.
 
-## Nombre copremiers : premiers entre eux
+### Nombre copremiers : premiers entre eux
 
 Deux nombres a et b sont premiers entre eux ou *copremiers* si leur seul diviseur commun est $1$. Une implication naturelle est que $PGCD(a,b) = 1$.
 
 Notons que $a$ et $b$ ne sont forcément pas premiers. Cela dit, un nombre premier $p$ est un nombre copremier à tous les nombres strictement inférieurs à $p$.
 
-### PGCD et décomposition en nombres premiers
+#### PGCD et décomposition en nombres premiers
 
 On peut déduire si $a$ et $b$ sont copremiers en regardant leur décomposition en nombre premiers : leur PPCM est le produit de tous les nombres premiers qui apparaissent dans les deux décompositions en facteurs premiers de ces deux entiers, chacun affecté du plus petit exposant qui apparait dans celles-ci.
 
@@ -249,7 +248,7 @@ $$
 PGCD(4950, 4875) = 3 \times 5^2 = 75
 $$
 
-### PPCM et décomposition en nombres premiers
+#### PPCM et décomposition en nombres premiers
 
 Dans le cas du PPCM, leur PPCM est le produit de tous les nombres premiers qui apparaissent dans au moins une des décompositions en facteurs premiers de ces deux entiers, chacun affecté du plus grand exposant qui apparait dans celles-ci.
 
@@ -264,7 +263,7 @@ PPCM(4950, 4875) = \\
 \end{array}
 $$
 
-### Propriétés entre copremiers, PGCD et PPCM ($a$ et $b$ copremiers)
+#### Propriétés entre copremiers, PGCD et PPCM ($a$ et $b$ copremiers)
 
 - Si $a$ divise $bc$ $\implies$ $a$ divise $c$.
 - On a $PGCD(a, bc) = PGCD(a, c)$.
@@ -274,7 +273,7 @@ $$
     - **Théorème de Bachet-Bezout**.
     $a$ et $b$ sont copremiers $\iff \exists x,y \in \Z : ax+by=1$.
 
-### Algorithme d’Euclide généralisé
+#### Algorithme d’Euclide généralisé
 
 Pour trouver une solution à $ax+by=PGCD(a,b)$, on remonte dès la fin de l’algorithme d’Euclide.
 
@@ -286,7 +285,6 @@ l_3 : 75 = 60 \times 1 + 15 \\
 l_4 : 60 = 15 \times 4 + 0 \\ \\
 PGCD(495,210)=15
 \end{array} \\ 
-
 $$
 
 $$
@@ -332,11 +330,11 @@ $$
 
 Quand on injecte, on voit que c’est pour pouvoir exprimer les choses en termes de $210$ et $495$. En $l_2 \rightarrow l_3$, on exprime $60$ en termes de $210$ et $75$ (on garde l’expression en $210$ et on remplace celle en $75$), puis en $l_1 \rightarrow (l_2 \rightarrow l_3)$, on exprime $75$ en termes de $495$ et $210$ (on garde les deux car ils sont les deux nombres qui nous intéressent).
 
-# Congruences
+## Congruences
 
 [Slides de congruence](ressources/01_arithmetique_slides_congr_minfo_annote.pdf)
 
-## Définition
+### Définition
 
 Soit $n$ un entier naturel. On dit que les entiers $a$ et $b$ sont congrus modulo $n$ si et seulement si ils ont le même reste dans la division euclidienne par $n$. On note alors $a \equiv b[n]$.
 
@@ -344,7 +342,7 @@ Il est immédiat de voir que si $a=nq+r$, alors $a \equiv r[n]$  ou aussi $a \eq
 
 [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic#Congruence)
 
-## Propriétés
+### Propriétés
 
 Soient $a,b,c,d \in \mathbb{N}$ et $n \in \mathbb{N}^*$. Si $a \equiv c[n]$ et $b \equiv d[n]$ (càd. ils sont des restes de $n$), les propriétés suivantes sont vraies, pour tout $p \in \mathbb{N}$ :
 
@@ -363,7 +361,7 @@ Ces propriétés permet de creer une algèbre de groupe cyclique de $n$, ce qu�
 
 [Modular multiplicative inverse](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
 
-## Petit théorème de Fermat
+### Petit théorème de Fermat
 
 Si $p$ est un nombre premier et $a$ est un entier non divisible par $p$ (non-multiple de $p$), alors :
 
@@ -372,11 +370,12 @@ a^{p-1} \equiv 1[p] \text{ ou, de manière equivalente, } a^p \equiv a[p].
 $$
 
 Ce théorème est fondamental dans la cryptologie moderne industrielle qui a besoin d’entiers
+
 naturels premiers à grands nombres de chiffres (codage RSA). Notons que si $p > a$ et $a\ne0$, la condition de $a$ non-divisible par $p$ est déjà vérifiée.
 
-**Corollaire**. Soit $p$ et $q$ des nombres premiers distincts. On pose $n=pq$ et, pour tout $a$ copremier avec $n$, il est vrai que $a^{(p-1)(q-1)} \equiv 1[n]$. 
+**Corollaire**. Soit $p$ et $q$ des nombres premiers distincts. On pose $n=pq$ et, pour tout $a$ copremier avec $n$, il est vrai que $a^{(p-1)(q-1)} \equiv 1[n]$.
 
-### Preuve du corollaire
+#### Preuve du corollaire
 
 **Preuve**. Montrons que pour $p$ et $q$ premiers, si $a \equiv b[p]$ et $a \equiv b[q]$, alors $a \equiv b[pq] \iff a \equiv b[n]$.
 
@@ -397,7 +396,7 @@ a^{q-1} \equiv 1[q] \implies {a^{q-1}}^{p-1}=a^{(p-1)(q-1)} \equiv 1^{p-1}[q]=1[
 a^{(p-1)(q-1)} \equiv1[n]
 $$
 
-## Groupe cyclique
+### Groupe cyclique
 
 Si on fixe un nombre naturel $n$, on peut classifier tous les nombres naturels selon leurs congruence modulo $n$. Par exemple, si on fixe $n=3$, on peut classifier les nombres $\bar1 \in \{1, 4, 7, \dots\}$ comme ceux qui sont congruents à $1[3]$. De même pour $\bar2 \in \{2,5,8,\dots\}$, et $\bar0 \in \{0,3,6, \dots\}$, ces derniers étant les multiples de $3$.
 
@@ -413,7 +412,7 @@ $$
 \text{Par exemple : }\Z/3\Z = \{\bar0_3, \bar1_3, \bar2_3\} = \{\{0,3,6,\dots\}, \{1,4,7,\dots\}, \{2,5,8,\dots\}\}
 $$
 
-### $\Z/n\Z$ comme algèbre : opérations entre classes de congruences/résidus
+#### $\Z/n\Z$ comme algèbre : opérations entre classes de congruences/résidus
 
 On peut doter à $\Z/n\Z$ d’opérations analogues à celles vus pour les entiers modulés par $n$ :
 
@@ -433,7 +432,7 @@ $$
 \end{align*}
 $$
 
-### Classes d’équivalences spéciales
+#### Classes d’équivalences spéciales
 
 Soient $\overline{a}, \overline{b} \in \Z /n \Z$ alors on définit si pour $\overline{a}$, il existe $\overline{b}$ telle que :
 
@@ -480,7 +479,7 @@ $$
 - $\overline{a}_n$ est un diviseur de zéro si $a$ et $n$ ne sont pas copremiers ou $PGCD(a,n) \ne 1$.
 - Si $n$ est premier, seule $\overline0$ n’est pas inversible.
 
-## Théorème chinois des restes
+### Théorème chinois des restes
 
 Soient $n_1$ et $n_2$ deux entiers plus grands que $1$ et copremiers, et $n = n_1 n_2$. On note $u_1$ et $u_2$ **tels que *$u_1n_1+u_2n_2 = 1$*, dont l’existence est assurée par le thm. de Bachet-Bezout. Il existe un **unique** $x[n]$ tel que $x \equiv r_1[n_1]$ et $x \equiv r_2[n_2]$. Particulièrement :
 
@@ -535,13 +534,13 @@ On voit que $10$ a résidu $2$ divisé par $4$ ($10 \equiv 2[4]$) et résidu $1$
 
 [Chinese remainder theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
 
-## Codage RSA
+### Codage RSA
 
 Il s’agit d’un codage tres populaire, utilisé a une échelle industrielle, sur lequel ont travaillé Rivest, Shamir et Adleman, MIT (USA). R et S sont informaticiens, A est un matheux.
 
 L’algorithme se divise en trois étapes : génération de clefs, chiffrement et déchiffrement. On imagine deux acteurs : Alice et Bob.
 
-### Génération de clefs
+#### Génération de clefs
 
 On choisit deux grands nombres premiers distincts $p$ et $q$, puis on calcule $n=pq$. Il est à noter que, connaissant $n$, il est très difficile de trouver $p$ et $q$. Comme note pratique, $p$ et $q$ doivent être choisis de manière aléatoire et avoir une longueur en bits similaire. Après, on calcule $\varphi(n)=(p-1)(q-1)$.
 
@@ -555,13 +554,13 @@ Ayant $\varphi(n)$, on choisit un entier positif $e < \varphi(n)$ et copremier a
 
 Finalement, on appelle la “clef publique” l’ensemble $(n,e)$, càd. le module et l’exposant de chiffrement ; et la “clef privée” l’ensemble $(n,d)$, càd. le module et l’expose de déchiffrement. Bien évidemment, l’exposant de déchiffrement $d$ doit se maintenir en secret.
 
-### Chiffrement
+#### Chiffrement
 
 Bob souhaite transmettre un message $M$ à Alice. Alice lui donne sa clef publique $(n,e)$ pour que Bob puisse chiffrer le message à transmettre (mais ne lui donne pas sa clef privée $(n,d)$ !).
 
 Bob prend son message $M$ et le transforme comme un nombre $m$ tel que $m < n$. Puis il obtient le message chiffre avec l’opération $c \equiv m^e[n]$. Finalement, Bob transmet $c$ à Alice.
 
-### Déchiffrement
+#### Déchiffrement
 
 Maintenant, c’est à Alice de déchiffrer $c$. Elle doit faire le calcul suivant pour déterminer $m$ : $m \equiv c^d[n]$. Finalement, ayant $m$, elle doit invertir le padding scheme pour trouver $M$.
 

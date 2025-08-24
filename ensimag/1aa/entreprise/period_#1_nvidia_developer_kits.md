@@ -1,8 +1,8 @@
-# Period #1 - NVidia Developer Kits
+## Period #1 - NVidia Developer Kits
 
-# NVidia Jetson AGX Orin
+## NVidia Jetson AGX Orin
 
-## SSH stuff
+### SSH stuff
 
 ```bash
 ssh-copy-id -i ~/.ssh/dangulo_win dangulo@ws2405
@@ -13,7 +13,7 @@ chmod 600 dangulo_win
 chmod 600 dangulo_win.pub
 ```
 
-## Commands executed
+### Commands executed
 
 ```bash
 nvidia-smi # to check if AGX Orin is running correctly
@@ -117,7 +117,7 @@ trtexec \
 	--int8 --fp16 --verbose
 ```
 
-## `trt_inference.py` (that I wrote)
+### `trt_inference.py` (that I wrote)
 
 ```python
 import tensorrt as trt
@@ -210,7 +210,7 @@ if __name__ == '__main__':
 
 ```
 
-## To execute `benchmark.py` in background
+### To execute `benchmark.py` in background
 
 ```bash
 # The command of interest to execute
@@ -232,17 +232,17 @@ $ ps
 $ ps -h
 ```
 
-## Hardware information
+### Hardware information
 
 [www.nvidia.com](https://www.nvidia.com/content/dam/en-zz/Solutions/gtcf21/jetson-orin/nvidia-jetson-agx-orin-technical-brief.pdf)
 
-## (?)
+### (?)
 
 Performing inference on a Convolutional Neural Network (CNN) model stored in an ONNX file on the **Nvidia Jetson AGX Orin** is straightforward, thanks to the hardware acceleration and the software tools available on the platform. Here’s a step-by-step guide to help you load and run your ONNX model on the AGX Orin using **TensorRT**, Nvidia's high-performance deep learning inference library.
 
-### **Steps to Perform Inference on the Jetson AGX Orin Using an ONNX Model**
+#### **Steps to Perform Inference on the Jetson AGX Orin Using an ONNX Model**
 
-### 1. **Set Up Your Jetson AGX Orin**
+#### 1. **Set Up Your Jetson AGX Orin**
 
 Ensure your **Jetson AGX Orin** is set up correctly with **JetPack** installed (which includes libraries like TensorRT, CUDA, cuDNN, and other essential dependencies). You should also have the ONNX runtime installed for loading and running the ONNX model.
 
@@ -254,36 +254,35 @@ nvidia-smi
 
 This should show the GPU information, confirming that the AGX Orin is running and ready to perform inference.
 
-### 2. **Install Required Dependencies**
+#### 2. **Install Required Dependencies**
 
 If you don't already have the necessary libraries, you need to install them. These include **TensorRT**, **onnx**, and **onnxruntime**.
 
 1. **TensorRT**: Nvidia provides TensorRT as part of the JetPack SDK. Ensure you have it by running:
-    
+
     ```bash
     sudo apt-get install libnvinfer8 libnvinfer-dev
     ```
-    
+
 2. **ONNX Runtime**: Install ONNX runtime (if not installed):
-    
+
     ```bash
     pip install onnxruntime
     ```
-    
+
 3. **ONNX**: If you need to install ONNX, use:
-    
+
     ```bash
     pip install onnx
     ```
-    
+
 4. **Numpy (if required)**:
-    
+
     ```bash
     pip install numpy
     ```
-    
 
-### 3. **Convert the ONNX Model to a TensorRT Engine (Optional for Performance)**
+#### 3. **Convert the ONNX Model to a TensorRT Engine (Optional for Performance)**
 
 While you can directly use the ONNX model with ONNX Runtime, you can gain significant performance improvements on the Jetson AGX Orin by using **TensorRT** to convert the model into a more optimized engine for inference.
 
@@ -291,16 +290,17 @@ To convert your ONNX model into a TensorRT engine, you can use the **trtexec** t
 
 - **Using `trtexec` (command-line tool)**:
 The `trtexec` tool converts an ONNX model to a TensorRT engine.
-    
+
     ```bash
     trtexec --onnx=model.onnx --saveEngine=model.trt
     ```
-    
+
     This will generate a TensorRT engine (`model.trt`), which can be loaded and used for inference.
+
     
 - **Using TensorRT Python API**:
 You can also load an ONNX model directly into TensorRT using the Python API. Here’s an example Python script to do this:
-    
+
     ```python
     import tensorrt as trt
     import onnx
@@ -317,13 +317,12 @@ You can also load an ONNX model directly into TensorRT using the Python API. Her
     input_data = ...  # Your input data
     result = engine.run(input_data)
     ```
-    
 
-### 4. **Load the ONNX Model and Perform Inference**
+#### 4. **Load the ONNX Model and Perform Inference**
 
 You can now run inference on the Jetson AGX Orin using either the **ONNX Runtime** or **TensorRT**.
 
-### **Using ONNX Runtime**:
+#### **Using ONNX Runtime**:
 
 Here’s a basic example of performing inference using **ONNX Runtime** on your model:
 
@@ -349,7 +348,7 @@ outputs = sess.run(None, {input_name: input_data})
 print(outputs[0])  # Assuming your model has one output
 ```
 
-### **Using TensorRT (via Python API)**:
+#### **Using TensorRT (via Python API)**:
 
 Once you've converted the ONNX model to a TensorRT engine, you can use the following approach to run inference:
 
@@ -389,14 +388,14 @@ cuda.memcpy_dtoh(output_data, d_output)
 print(output_data)
 ```
 
-### 5. **Optimizing for the Jetson Platform**
+#### 5. **Optimizing for the Jetson Platform**
 
 To maximize performance, you should also consider the following:
 
 - **Precision Mode**: You can optimize the inference by using lower precision modes (FP16 or INT8), which can be done during the conversion from ONNX to TensorRT using `trtexec` or in the TensorRT API.
 - **Dynamic Batching**: If your workload involves processing batches of inputs, TensorRT allows dynamic batching to improve throughput.
 
-### 6. **Monitoring Performance**
+#### 6. **Monitoring Performance**
 
 You can monitor the performance of your inference tasks using tools like `nvidia-smi` and `tegrastats` to keep track of GPU usage and power consumption:
 
@@ -405,6 +404,6 @@ nvidia-smi
 tegrastats
 ```
 
-### **Summary**
+#### **Summary**
 
 To perform inference on an ONNX model on the **Jetson AGX Orin**, you can either use **ONNX Runtime** or **TensorRT**. Using TensorRT provides significant performance benefits by optimizing the model for the Jetson platform’s hardware. You can convert the ONNX model to a TensorRT engine for faster inference or directly use ONNX Runtime if you don’t need the optimization step. Both methods are supported on the Jetson platform and leverage its GPU and AI accelerators for high-performance inference.

@@ -1,7 +1,8 @@
-# Guide API de Scikit-Learn
-## Prétraitement des données
+## Guide API de Scikit-Learn
 
-### Mise à l'échelle des caractéristiques
+### Prétraitement des données
+
+#### Mise à l'échelle des caractéristiques
 
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler, Normalizer
@@ -24,7 +25,7 @@ normalizer = Normalizer(norm='l2')
 X_normalized = normalizer.fit_transform(X)
 ```
 
-### Encodage des variables catégorielles
+#### Encodage des variables catégorielles
 
 ```python
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, OrdinalEncoder
@@ -44,7 +45,7 @@ oe = OrdinalEncoder()
 X_ordinal = oe.fit_transform(X_categorical)
 ```
 
-### Sélection de caractéristiques
+#### Sélection de caractéristiques
 
 ```python
 from sklearn.feature_selection import SelectKBest, chi2, f_classif, RFE, SelectFromModel
@@ -67,7 +68,7 @@ selector = SelectFromModel(rf, threshold='median')
 X_selected = selector.fit_transform(X, y)
 ```
 
-### Division des données
+#### Division des données
 
 ```python
 from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
@@ -84,9 +85,9 @@ for train_idx, test_idx in sss.split(X, y):
     y_train, y_test = y[train_idx], y[test_idx]
 ```
 
-## Apprentissage supervisé
+### Apprentissage supervisé
 
-### Modèles linéaires
+#### Modèles linéaires
 
 ```python
 from sklearn.linear_model import (
@@ -119,7 +120,7 @@ log_reg.fit(X_train, y_train)
 y_proba = log_reg.predict_proba(X_test)
 ```
 
-### Modèles basés sur les arbres
+#### Modèles basés sur les arbres
 
 ```python
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
@@ -144,7 +145,7 @@ gb = GradientBoostingClassifier(
 gb.fit(X_train, y_train)
 ```
 
-### Machines à vecteurs de support (SVM)
+#### Machines à vecteurs de support (SVM)
 
 ```python
 from sklearn.svm import SVC, SVR
@@ -158,7 +159,7 @@ svr = SVR(kernel='rbf', C=1.0, gamma='scale')
 svr.fit(X_train, y_train)
 ```
 
-### Bayes naïf
+#### Bayes naïf
 
 ```python
 from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
@@ -172,7 +173,7 @@ mnb = MultinomialNB(alpha=1.0)
 mnb.fit(X_train, y_train)
 ```
 
-### K plus proches voisins
+#### K plus proches voisins
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
@@ -186,9 +187,9 @@ knn_reg = KNeighborsRegressor(n_neighbors=5, weights='distance')
 knn_reg.fit(X_train, y_train)
 ```
 
-## Apprentissage non supervisé
+### Apprentissage non supervisé
 
-### Clustering
+#### Clustering
 
 ```python
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
@@ -213,7 +214,7 @@ cluster_labels = gmm.fit_predict(X)
 log_likelihood = gmm.score(X)
 ```
 
-### Réduction de dimensionnalité
+#### Réduction de dimensionnalité
 
 ```python
 from sklearn.decomposition import PCA, TruncatedSVD, NMF
@@ -237,9 +238,9 @@ nmf = NMF(n_components=10, random_state=42)
 X_nmf = nmf.fit_transform(X)
 ```
 
-## Sélection et validation de modèles
+### Sélection et validation de modèles
 
-### Validation croisée
+#### Validation croisée
 
 ```python
 from sklearn.model_selection import (
@@ -267,7 +268,7 @@ scoring = ['accuracy', 'precision', 'recall', 'f1']
 scores = cross_validate(model, X, y, cv=5, scoring=scoring)
 ```
 
-### Réglage des hyperparamètres
+#### Réglage des hyperparamètres
 
 ```python
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
@@ -298,9 +299,9 @@ random_search = RandomizedSearchCV(
 random_search.fit(X_train, y_train)
 ```
 
-## Évaluation de modèles
+### Évaluation de modèles
 
-### Métriques de classification
+#### Métriques de classification
 
 ```python
 from sklearn.metrics import (
@@ -332,7 +333,7 @@ precision, recall, _ = precision_recall_curve(y_true, y_proba[:, 1])
 fpr, tpr, _ = roc_curve(y_true, y_proba[:, 1])
 ```
 
-### Métriques de régression
+#### Métriques de régression
 
 ```python
 from sklearn.metrics import (
@@ -348,7 +349,7 @@ r2 = r2_score(y_true, y_pred)
 mape = mean_absolute_percentage_error(y_true, y_pred)
 ```
 
-## Pipelines
+### Pipelines
 
 ```python
 from sklearn.pipeline import Pipeline, make_pipeline
@@ -374,9 +375,9 @@ full_pipeline = Pipeline([
 ])
 ```
 
-## Techniques avancées
+### Techniques avancées
 
-### Méthodes d'ensemble
+#### Méthodes d'ensemble
 
 ```python
 from sklearn.ensemble import VotingClassifier, BaggingClassifier, AdaBoostClassifier
@@ -399,7 +400,7 @@ ada_boost = AdaBoostClassifier(
 )
 ```
 
-### Données déséquilibrées
+#### Données déséquilibrées
 
 ```python
 from imblearn.over_sampling import SMOTE
@@ -415,7 +416,7 @@ class_weights = compute_class_weight('balanced', classes=np.unique(y), y=y)
 model = RandomForestClassifier(class_weight='balanced')
 ```
 
-### Transformateurs personnalisés
+#### Transformateurs personnalisés
 
 ```python
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -432,7 +433,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
         return X_transformed
 ```
 
-## Modèles courants de LeetCode
+### Modèles courants de LeetCode
 
 ```python
 # Framework de comparaison de modèles
@@ -480,7 +481,7 @@ def plot_validation_curve(model, X, y, param_name, param_range):
     return train_scores, val_scores
 ```
 
-## Optimisation des performances
+### Optimisation des performances
 
 ```python
 # Traitement parallèle

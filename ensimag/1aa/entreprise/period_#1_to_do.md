@@ -1,6 +1,6 @@
-# Period #1 - To-Do
+## Period #1 - To-Do
 
-# Normal To-Do
+## Normal To-Do
 
 - [ ]  NVidia Jetson (for AGX Orin):
     - [x]  Add args for dla-cores and --allowGPUFallback to:
@@ -25,22 +25,25 @@
     - [x]  `KANN_POCL_FILE=$KANN_BUILD_DIR_CV2/opencl_kernels/mppa_kann_opencl.cl.pocl` ?
         - [x]  Same answer.
 
-# Newcomers Checklist
+## Newcomers Checklist
 
 [https://kalrayinc.sharepoint.com/:p:/r/sites/Embedded-ComputeApps/_layouts/15/doc2.aspx?sourcedoc=%7BBE439A1B-74D2-41A8-A739-9D0E72D4DBEA%7D&file=Compute%20apps%20-%20new%20comers%20-%20Daniel.pptx&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&action=edit&mobileredirect=true](https://kalrayinc.sharepoint.com/:p:/r/sites/Embedded-ComputeApps/_layouts/15/doc2.aspx?sourcedoc=%7BBE439A1B-74D2-41A8-A739-9D0E72D4DBEA%7D&file=Compute%20apps%20-%20new%20comers%20-%20Daniel.pptx&wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&action=edit&mobileredirect=true)
 
-# Objectives
+## Objectives
 
 [Objectifs_periode_1_Daniel_angulo.pdf](ressources/period_#1_to_do_objectifs_periode_1_daniel_angulo_1.pdf)
 
-## Missions
+### Missions
 
 Au cours de la première période, l’apprenti devra :
+
 1/ Acquérir les connaissances et compétences nécessaires à son environnement de travail
+
 2/ Participer à l’évaluation technique de produits concurrents
+
 3/ Participer au développement de nouvelles fonctionnalités
 
-## Objectifs pédagogiques et activités prévues
+### Objectifs pédagogiques et activités prévues
 
 Pour se faire, nous organisons le temps de travail de Daniel sur :
 
@@ -53,7 +56,7 @@ Pour se faire, nous organisons le temps de travail de Daniel sur :
     ▪ Ecrire un script d’évaluation de précision (mAP-50) pour un CNN de type « Object- detection » sur le dataset COCO-128 (128 images / classes) (1 semaine)
     ▪ Evaluer et améliorer le script (1 semaine)
 
-## Autres éléments de description complémentaires
+### Autres éléments de description complémentaires
 
 Pas de résultats sur objectifs attendus. On reste modulaire et progressif en fonction des compétences de Daniel. Les seules priorités de cette 1e phase en entreprise sont :
 

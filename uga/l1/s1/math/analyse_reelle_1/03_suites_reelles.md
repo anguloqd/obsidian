@@ -1,24 +1,25 @@
-# 03 // suites réelles
+## 03 // suites réelles
 
 [Slides des suites réelles](ressources/03_suites_reelles_chap3.pdf)
 
-# Suites réelles
-## Généralités sur les suites réelles
+## Suites réelles
+
+### Généralités sur les suites réelles
 
 1. Une suite réelle est une application de $\mathbb{N}$, ou d'une partie de $\mathbb{N}$, dans $\mathbb{R}$.
 2. L'image d'un $n \in \mathbb{N}$ se note $u_n$ et s'appelle le terme de rang $n$ de la suite.
 3. La suite est désignée par l'ensemble de ses termes via la notation $(u_n)$ ou $(u_n)_{n \in \mathbb{N}}$.
 
-### Distinction entre ensemble et suite
+#### Distinction entre ensemble et suite
 
 Donnons un exemple :
 
 - L'ensemble des entiers pairs, désigné par $\{2n : n \in \mathbb{N}\}$, et
 - La suite des entiers pairs, désignée par $(u_n)_{n \in \mathbb{N}}$, avec, pour tout $n \in \mathbb{N}, u_n = 2n$.
 
-La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $u_0 = 0, u_1 = 2, u_2 = 4$, $...$ ce que ne fait pas l'ensemble.
+La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $u_0 = 0, u_1 = 2, u_2 = 4$, $…$ ce que ne fait pas l'ensemble.
 
-### Définition par terme général ou par récurrence
+#### Définition par terme général ou par récurrence
 
 - **Définition par terme général** : une expression de $u_n$ en fonction de $n$.
 - **Définition par récurrence** : on définit le premier terme ou les premiers termes et on explicite une dépendance du terme de rang $n$ aux termes de rang inférieurs à $n$.
@@ -38,25 +39,25 @@ La suite attribue un indice (et donc un certain ordre) à chaque entier pair : $
 >Il faut comprendre l'expression $u_{n+1} = u_n + 2$ comme :
 >« on passe d'un terme au suivant en ajoutant 2 »
 
-## Propriétés des suites
+### Propriétés des suites
 
 >[!theorem] Axiome de récurrence
->Soit $P_n$ une propriété indexée par $n \in \mathbb{N}$. Si les propriétés suivantes sont vraies : 
+>Soit $P_n$ une propriété indexée par $n \in \mathbb{N}$. Si les propriétés suivantes sont vraies :
 >
 >1. **Initialisation** : $P_0$ vraie.
 >2. **Hérédité** : $\forall n \in \mathbb{N}, P_n \Rightarrow P_{n+1}$
 >
->... alors $\forall n \in \mathbb{N}, P_n$ est vraie.
+>… alors $\forall n \in \mathbb{N}, P_n$ est vraie.
 
-### Autres propriétés
+#### Autres propriétés
 
 >[!important]
 >- Une suite est majorée (resp. minorée, bornée) si et seulement si elle l'est à partir d'un certain rang.
 >- Une suite $(u_n)_{n \in \mathbb{N}}$ est bornée si, et seulement si, la suite $(|u_n|)_{n \in \mathbb{N}}$ est majorée.
 
-## Suites classiques
+### Suites classiques
 
-### Suite arithmétique : $u_{n+1}=u_n+r$
+#### Suite arithmétique : $u_{n+1}=u_n+r$
 
 Soit $r \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = u_n + r$ est appelée suite arithmétique de raison $r$. Si $(u_n)_{n \in \mathbb{N}}$ est arithmétique de premier terme $u_0 = a$ et de raison $r$, alors son terme général est $u_n = a + nr$.
 
@@ -73,7 +74,7 @@ $$
 S_n=\text{ nb de termes } \times \frac{\text{premier terme} + \text{n-ième terme}}{2}
 $$
 
-### Suite géométrique : $u_{n+1}=q\times u_n$
+#### Suite géométrique : $u_{n+1}=q\times u_n$
 
 Soit $q \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = q \times u_n$ est appelée suite géométrique de raison $q$. Si $(u_n)_{n \in \mathbb{N}}$ est géométrique de premier terme $u_0 = a$ et de raison $q$, alors son terme général est $u_n = a \times q^n$.
 
@@ -90,7 +91,7 @@ $$
 S_n=\text{ premier terme } \times \frac{\text{raison}^{\text{nb de termes}}-1}{\text{raison}-1}
 $$
 
-### Suite arithmético-géométrique : $u_{n+1} = au_n + b$
+#### Suite arithmético-géométrique : $u_{n+1} = au_n + b$
 
 Soit $a, b \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n+1} = au_n + b$ est appelée suite arithmético-géométrique.
 
@@ -104,8 +105,10 @@ Soit $a, b \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u
 >
 >- On cherche un $x$ tel que $ax + b = x$. C'est-à-dire, $x = \frac{b}{1-a}$.
 >- On pose une nouvelle suite, $(v_n)$, comme $v_n = u_n - x$.
->- Ceci vérifie que :    
->$$\begin{align*}
+>- Ceci vérifie que :
+>
+>$$
+>\begin{align*}
 >v_{n+1} &= u_{n+1} - x \\
 >&= au_n + b - x \\
 >&= au_n + b - (ax + b) \\

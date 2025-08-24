@@ -1,10 +1,10 @@
-# 02 // héritage
+## 02 // héritage
 
 [INFF5_2.pdf](ressources/02_heritage_inff5_2.pdf)
 
-# Composition, délégation et héritage
+## Composition, délégation et héritage
 
-## Types de réutilisation de code
+### Types de réutilisation de code
 
 Java offre deux moyens pour réutiliser le code de classes existantes : la composition et l’héritage.
 
@@ -15,9 +15,9 @@ En plus, on pourrait ajouter un autre moyen :
 
 - Délégation : dans un objet de type A, on crée un objet de type B avec un méthode de A qui appelle une méthode de B. Ceci est pour simuler l’héritage juste d’une méthode de l’objet de type B à la fois de tout en hériter.
 
-## Plus sur l’héritage
+### Plus sur l’héritage
 
-### Contenu utile du cours #1 : réutilisation de classes et sous-classes
+#### Contenu utile du cours #1 : réutilisation de classes et sous-classes
 
 Réutiliser des instructions est l’un des points forts de programmer.
 
@@ -38,13 +38,14 @@ void dessineEtAfficheAire(FormeGeo f) {
 ```
 
 Une sous-classe, c’est effectivement une classe dans une autre. Précisément, c’est une classe qui ***hérite*** les attributs et méthodes d’une autre classe, comme ça il n’y a pas besoin de les redéfinir.
-Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”. 
 
-## Composition et héritage sur Java
+Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”.
+
+### Composition et héritage sur Java
 
 **La hiérarchie de classe peut-être de composition ou de héritage**. La composition définit une classe comme la somme de ses parties (”loosely coupled”, car changer la superclasse n’est pas un fait délicat), tant que l’héritage dérive une classe d’une autre (”tightly coupled”, car changer la superclasse peut causer des problèmes).
 
-Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc. 
+Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc.
 
 ```java
 public class ExempleComposition {
@@ -150,7 +151,7 @@ public class Main {
 // L'animal a fait un son
 ```
 
-### Contenu de ce cours
+#### Contenu de ce cours
 
 L'héritage est un des principaux concepts de la programmation par objet. En Java, on utilise toujours l'héritage lorsque l'on créé une classe, car toute classe est héritée de la classe plus général `Object`, qui contient aussi les méthodes `toString()`, `equals()`, etc.
 
@@ -158,11 +159,11 @@ Si on veut créer une classe enfant d’une classe parent différent de `Object`
 
 Dans l’héritage on peut ajouter des nouveaux membres, mais aussi redéfinir ceux qui existaient avant. Cela dit, redéfinir d’attributs n’est pas exactement utile, on va plutôt redéfinir de méthodes. On peut aussi surcharger les méthodes de la super-classe originale.
 
-# Les super-classes
+## Les super-classes
 
-## `super` : appeler le constructeur d’une super-classe
+### `super` : appeler le constructeur d’une super-classe
 
-La première instruction d'un constructeur est toujours l'appel d'un constructeur de la super-classe en utilisant la syntaxe `super(...)`, ou l'appel d'un autre constructeur de la classe en utilisant la syntaxe `this(...)`.
+La première instruction d'un constructeur est toujours l'appel d'un constructeur de la super-classe en utilisant la syntaxe `super(…)`, ou l'appel d'un autre constructeur de la classe en utilisant la syntaxe `this(…)`.
 
 Si rien n'est indiqué, le compilateur Java considère par défaut un appel au constructeur sans paramètre de la super-classe, soit `super()`.
 
@@ -189,7 +190,7 @@ public class B extends A {
 
 À l'instanciation d'une classe, l'initialisation de la partie héritée de l'instance doit être effectuée avant celle de la partie localement définie. Un constructeur de la super-classe doit donc toujours être exécuté avant l'exécution d'un constructeur de la classe. Les constructeurs sont donc exécutés dans l'ordre des classes les plus générales aux plus spécifiques.
 
-## Pseudo-variables
+### Pseudo-variables
 
 Il existe deux pseudo-variables que l'on peut utiliser dans les méthodes d'une classe :
 
@@ -198,7 +199,7 @@ Il existe deux pseudo-variables que l'on peut utiliser dans les méthodes d'une 
 
 Elle sont appelées pseudo-variables car leur valeur change selon le contexte, on ne peut pas modifier leur valeur explicitement.
 
-## `Object` : la classe mère des toutes les autres
+### `Object` : la classe mère des toutes les autres
 
 `Object` est la racine de la hiérarchie d'héritage en Java : toute classe hérite (directement ou indirectement) de `Object`.
 
@@ -208,7 +209,7 @@ Elle sont appelées pseudo-variables car leur valeur change selon le contexte, o
 - `public String toString()`
 - `public Class getClass()`
 
-## `instanceof` : vérifie l’héritage entre deux classes
+### `instanceof` : vérifie l’héritage entre deux classes
 
 L'opérateur `instanceof` permet de savoir si une référence possède un type donné.
 
@@ -223,9 +224,9 @@ System.out.println(p instanceof Point3D); // false
 System.out.println(p instanceof String); // Erreur
 ```
 
-# Polymorphisme
+## Polymorphisme
 
-## Type de la référence et type réel, liaison dynamique
+### Type de la référence et type réel, liaison dynamique
 
 Les références (noms de variables) ont un type, et l’objet référencé a un type aussi. Avec l’héritage, on peut avoir un type différent pour chaque.
 
@@ -255,9 +256,9 @@ public static void main(String[] args){
 // "méthode de Point3D"
 ```
 
-Si jamais on appelle une méthode de `p` de type super-classe `Point`, on va aller exécuter celle référencée par `Point3D`. Cela cause des différences si on l’a redéfinie dans la sous-classe, comme vu dans l’exemple précédent. 
+Si jamais on appelle une méthode de `p` de type super-classe `Point`, on va aller exécuter celle référencée par `Point3D`. Cela cause des différences si on l’a redéfinie dans la sous-classe, comme vu dans l’exemple précédent.
 
-**Si la méthode appelée existe dans la sous-classe mais pas dans la super-classe, Java va planter. Ça implique aussi le constructeur !!!!!!!**  
+**Si la méthode appelée existe dans la sous-classe mais pas dans la super-classe, Java va planter. Ça implique aussi le constructeur !!!!!!!**
 
 Une autre chose : **le cast ne transforme pas le type d’un objet**. Le cast est juste une indication au compilateur de “voir” l’objet comme le type casté. Notons que si on décide de voir un point `p` comme un `Point3D` ça pose pas de problème jusqu’à qu’on veut accéder au point `z` (parce que ce point n’existe pas, on n’a jamais appelé le constructeur pour initialiser le point `z`).
 
@@ -292,7 +293,7 @@ class Test {
 }
 ```
 
-## Transtypage descendant
+### Transtypage descendant
 
 La transtypage ascendant est la situation ou le fils hérite le type de son père. Le transtypage descendant est un peu pareil : on force un père d’avoir le même type que son fils.
 
@@ -322,9 +323,9 @@ class Point {
 }
 ```
 
-# Classes abstraites et finales
+## Classes abstraites et finales
 
-## `abstract` : des catégories trop générales
+### `abstract` : des catégories trop générales
 
 Pour rappeler, l’héritage nous permet de factoriser le code (sortir les parties “communes” des termes ou des éléments. Les éléments sont des classes, dans ce cas).
 
@@ -370,11 +371,11 @@ Ici, la classe `Forme` est trop abstraite, jusqu’au point que définir la mét
 
 Les classes abstraite ne peuvent pas être instanciées. Les méthodes abstraites n’ont pas du contenu dedans, elles sont vides. Une classe qui possède au moins une méthode abstraite doit être déclaré abstraite.
 
-## `final` : attribut ou méthode *immodifiable*
+### `final` : attribut ou méthode *immodifiable*
 
 Il marche similairement aux modificateurs d’accès, et on peut l’utiliser avec des classes, attributs et méthodes. En général, il veut dire “cela ne peut pas être changé”.
 
-Avec les attributs, normalement on les utilise avec les attributs qui sont aussi `static`, càd., qui sont des “constantes globales” parmi les objets d’une certaine classe ; mais on peut utiliser `final` tout seul aussi. Quand on utilise ce dernier, on ne peut pas changer la référence du nom d’attribut, mais effectivement on peut changer internement l’attribut. 
+Avec les attributs, normalement on les utilise avec les attributs qui sont aussi `static`, càd., qui sont des “constantes globales” parmi les objets d’une certaine classe ; mais on peut utiliser `final` tout seul aussi. Quand on utilise ce dernier, on ne peut pas changer la référence du nom d’attribut, mais effectivement on peut changer internement l’attribut.
 
 ```java
 public classe CompteEuro {

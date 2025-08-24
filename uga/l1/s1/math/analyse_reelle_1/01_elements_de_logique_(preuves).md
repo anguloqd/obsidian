@@ -1,23 +1,27 @@
-# 01 // éléments de logique (preuves)
+## 01 // éléments de logique (preuves)
 
 [Slides d’éléments de logique](ressources/01_elements_de_logique_(preuves)_chap1.pdf)
 
-# Elements de logique 
+## Elements de logique
 
-## Introduction
+### Introduction
 
-### Démarche hypothético-déductive
+#### Démarche hypothético-déductive
+
 La démarche mathématique permet de **garantir qu'une affirmation soit vraie** sans avoir recours à la mesure expérimentale. Par exemple, on peut affirmer que dans le plan, la somme des angles de tout triangle est égale à 180 degrés.
 
 Cette garantie repose sur la **rédaction d'un raisonnement** qui explicite une raison à la véracité de l'énoncé.
 
-### Principe fondamental
+#### Principe fondamental
+
 Un raisonnement établit la véracité d'une affirmation (théorème, lemme, propriété, corollaire) à partir de :
+
 - Sa formulation en propositions plus élémentaires
 - Le calcul du résultat de cette "formule"
 - Des opérations sur les valeurs "vrai" et "faux"
 
-#### Exemple : somme de deux nombres impairs
+##### Exemple : somme de deux nombres impairs
+
 L'affirmation "la somme de 2 nombres impairs est paire" se décompose formellement en une conjonction infinie d'alternatives.
 
 **Reformulation avec définitions :**
@@ -34,9 +38,10 @@ L'affirmation devient : "Quel que soit $n \in \mathbb{N}$ tel qu'il existe $k \i
 >Alors $K \in \mathbb{N}$ et $n + n' = 2K$.
 >Ainsi, par définition, $n + n'$ est pair.
 
-## Calcul propositionnel
+### Calcul propositionnel
 
-### Définition - Proposition
+#### Définition - Proposition
+
 Une **proposition** est une formulation dont on peut dire qu'elle est vraie ou fausse.
 
 >[!example]+ Exemples
@@ -48,12 +53,13 @@ Une **proposition** est une formulation dont on peut dire qu'elle est vraie ou f
 >- "Si $x = 2$ alors $x > 0$" n'est pas une proposition (ne connaissant pas $x$)
 >- "Quel que soit $x \in \mathbb{R}$, si $x = 2$ alors $x > 0$" est une proposition vraie
 
-### Construction de propositions
-À partir de propositions dont on connaît la valeur de vérité, on peut construire d'autres propositions à l'aide de **connecteurs** (donc, et, ou, ...).
+#### Construction de propositions
+
+À partir de propositions dont on connaît la valeur de vérité, on peut construire d'autres propositions à l'aide de **connecteurs** (donc, et, ou, …).
 
 La valeur de vérité de la proposition construite se calcule à partir des **tables de vérité** des connecteurs.
 
-### Négation
+#### Négation
 
 **Table de vérité du connecteur "non" :**
 
@@ -67,7 +73,8 @@ La valeur de vérité de la proposition construite se calcule à partir des **ta
 >
 >**Principe du tiers exclu :** Une proposition est ou bien vraie ou bien fausse.
 
-#### Définition - Contradiction
+##### Définition - Contradiction
+
 Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P)$ est vraie. Une contradiction n'existe pas.
 
 >[!example]- Exemple d'utilisation du tiers exclu
@@ -80,9 +87,12 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 >- Si $P$ est vraie, et sachant que $\sqrt{2}$ est irrationnel, le résultat $a^b \in \mathbb{Q}$ est obtenu avec $a = b = \sqrt{2}$.
 >- Si $(non~P)$ est vraie, alors $\sqrt{2}^{\sqrt{2}}$ est irrationnel.
 >  Dans ce cas, en posant $a = \sqrt{2}^{\sqrt{2}}$ et $b = \sqrt{2}$, on obtient :
->  $$a^b = (\sqrt{2}^{\sqrt{2}})^{\sqrt{2}} = \sqrt{2}^{\sqrt{2} \times \sqrt{2}} = \sqrt{2}^2 = 2 \in \mathbb{Q}$$
+>
+>  $$
+>  a^b = (\sqrt{2}^{\sqrt{2}})^{\sqrt{2}} = \sqrt{2}^{\sqrt{2} \times \sqrt{2}} = \sqrt{2}^2 = 2 \in \mathbb{Q}
+>  $$
 
-### Disjonction
+#### Disjonction
 
 **Table de vérité du connecteur "ou" :**
 
@@ -93,7 +103,7 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 | F | V | V        |
 | F | F | F        |
 
-### Conjonction
+#### Conjonction
 
 **Table de vérité du connecteur "et" :**
 
@@ -109,7 +119,7 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 >
 >**Conséquence :** La négation de $(P \text{ et } Q)$ est $((\text{non }P) \text{ ou } (\text{non }Q))$.
 
-### Implication
+#### Implication
 
 **Table de vérité du connecteur "$\Rightarrow$" :**
 
@@ -120,7 +130,8 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 | F | V | V                   |
 | F | F | V                   |
 
-#### Formulations équivalentes de $(P \Rightarrow Q)$
+##### Formulations équivalentes de $(P \Rightarrow Q)$
+
 - $P$ implique $Q$
 - Si $P$ est vraie, alors $Q$ est vraie
 - Pour que $P$ soit vraie, il faut que $Q$ soit vraie
@@ -131,7 +142,8 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 >[!exercise]
 >Vérifier que $(P \Rightarrow Q)$ et $((\text{non }P) \text{ ou } Q)$ ont même table de vérité.
 
-### Réciproque
+#### Réciproque
+
 La proposition $(Q \Rightarrow P)$ est appelée **réciproque** de $(P \Rightarrow Q)$.
 
 >[!warning]
@@ -139,7 +151,8 @@ La proposition $(Q \Rightarrow P)$ est appelée **réciproque** de $(P \Rightarr
 >
 >**Exemple :** Si $P$ est fausse et $Q$ est vraie, alors $(P \Rightarrow Q)$ est vraie, tandis que $(Q \Rightarrow P)$ est fausse.
 
-### Contraposée
+#### Contraposée
+
 La proposition $((\text{non }Q) \Rightarrow (\text{non }P))$ est appelée **contraposée** de $(P \Rightarrow Q)$.
 
 **Propriété fondamentale :** Une implication $(P \Rightarrow Q)$ et sa contraposée $((\text{non }Q) \Rightarrow (\text{non }P))$ ont toujours même valeur.
@@ -155,7 +168,7 @@ La proposition $((\text{non }Q) \Rightarrow (\text{non }P))$ est appelée **cont
 
 **Conséquence pratique :** Pour montrer qu'une implication est vraie, il est possible de montrer que sa contraposée l'est.
 
-### Équivalence
+#### Équivalence
 
 **Table de vérité du connecteur "$\Leftrightarrow$" :**
 
@@ -166,7 +179,8 @@ La proposition $((\text{non }Q) \Rightarrow (\text{non }P))$ est appelée **cont
 | F | V | F                       |
 | F | F | V                       |
 
-#### Formulations équivalentes de $(P \Leftrightarrow Q)$
+##### Formulations équivalentes de $(P \Leftrightarrow Q)$
+
 - $P$ est équivalente à $Q$
 - $P$ est vraie si et seulement si $Q$ est vraie
 - Pour que $P$ soit vraie, il faut et il suffit que $Q$ soit vraie
@@ -175,7 +189,7 @@ La proposition $((\text{non }Q) \Rightarrow (\text{non }P))$ est appelée **cont
 >[!exercise]
 >Justifier que $(P \Leftrightarrow Q)$ et $((P \Rightarrow Q) \text{ et } (Q \Rightarrow P))$ ont même table de vérité.
 
-### Propriétés des connecteurs logiques
+#### Propriétés des connecteurs logiques
 
 **Équivalences fondamentales :**
 
@@ -194,27 +208,32 @@ La proposition $((\text{non }Q) \Rightarrow (\text{non }P))$ est appelée **cont
 >[!tip]
 >Dans un raisonnement, on peut remplacer la proposition 1 par la proposition 2 et réciproquement.
 
-## Prédicats et quantificateurs
+### Prédicats et quantificateurs
 
-### Motivation
+#### Motivation
+
 De nombreuses propositions prennent la forme :
+
 - De résultats d'existence : "Pour tout $x \in [0, +\infty[$, il existe un unique $y \in [0, +\infty[$ tel que $y^2 = x$"
 - De propriétés universelles : "Pour tout triangle ABC rectangle en A, $AB^2 + AC^2 = BC^2$"
 
-Les expressions "Pour tout [...]" et "Il existe [...]" sont centrales dans l'argumentation mathématique.
+Les expressions "Pour tout […]" et "Il existe […]" sont centrales dans l'argumentation mathématique.
 
-### Définition - Prédicat
-Un **prédicat** $P(x, y, ...)$ est une formulation qui peut être vraie ou fausse selon les valeurs des variables $x, y, ...$ fixées à l'extérieur de l'expression du prédicat.
+#### Définition - Prédicat
+
+Un **prédicat** $P(x, y, …)$ est une formulation qui peut être vraie ou fausse selon les valeurs des variables $x, y, …$ fixées à l'extérieur de l'expression du prédicat.
 
 >[!example]+ Exemples
 >- "$x > 2$" est un prédicat. Il est vrai pour tout $x > 2$, et faux sinon.
 >- "Il existe $x \in \mathbb{R}$ tel que $x \times a = 1$" est un prédicat. Il est vrai lorsque $a \neq 0$, et faux lorsque $a = 0$. Noter que la valeur de vérité ne dépend pas de $x$, qui est une **variable muette**.
 >- "Pour tout $x \in \mathbb{R}$, $x^2 \geq 0$" n'est pas un prédicat. C'est une proposition vraie, où $x$ est une variable muette.
 
-### Quantificateur universel
+#### Quantificateur universel
 
-#### Définition
+##### Définition
+
 Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition $(\forall x \in E, P(x))$ :
+
 - est **vraie** lorsque $P(x)$ est vraie pour tous les éléments $x$ de $E$
 - est **fausse** lorsque $P(x)$ est fausse pour au moins un élément $x$ de $E$
 
@@ -222,16 +241,22 @@ Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition
 
 **Notation :** Le symbole $\forall$ s'appelle le **quantificateur universel**.
 
-#### Interprétation logique
+##### Interprétation logique
+
 La proposition $\forall x \in E, P(x)$ est la **conjonction** de l'ensemble des propositions $P(e)$ lorsque $e$ parcourt l'ensemble $E$.
 
-Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, ...$, alors :
-$$\forall x \in E, P(x) \equiv P(e_1) \text{ et } P(e_2) \text{ et } P(e_3) \text{ et } ...$$
+Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, …$, alors :
 
-### Quantificateur existentiel
+$$
+\forall x \in E, P(x) \equiv P(e_1) \text{ et } P(e_2) \text{ et } P(e_3) \text{ et } ...
+$$
 
-#### Définition
+#### Quantificateur existentiel
+
+##### Définition
+
 Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition $(\exists x \in E, P(x))$ :
+
 - est **vraie** lorsque $P(x)$ est vraie pour au moins un élément $x$ de $E$
 - est **fausse** lorsque $P(x)$ est fausse pour tous les éléments $x$ de $E$
 
@@ -239,11 +264,15 @@ Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition
 
 **Notation :** Le symbole $\exists$ s'appelle le **quantificateur existentiel**.
 
-#### Interprétation logique
+##### Interprétation logique
+
 La proposition $\exists x \in E, P(x)$ est la **disjonction** de l'ensemble des propositions $P(e)$ lorsque $e$ parcourt l'ensemble $E$.
 
-Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, ...$, alors :
-$$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \text{ ou } ...$$
+Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, …$, alors :
+
+$$
+\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \text{ ou } ...
+$$
 
 >[!example]+ Exemples d'application
 >- $(\forall x \in \mathbb{R}, x^2 \geq 0)$ est une proposition vraie
@@ -252,9 +281,10 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >
 >Pour la dernière : il existe $x \in \mathbb{R}$ tel que $x^2 \leq x$, par exemple $x = 1$ ou $x = \frac{1}{2}$.
 
-### Négation des quantificateurs
+#### Négation des quantificateurs
 
-#### Propriété 1
+##### Propriété 1
+
 **La négation de $(\forall x \in E, P(x))$ est $(\exists x \in E, (\text{non}~P(x)))$.**
 
 >[!example]- Démonstration
@@ -272,7 +302,8 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >
 >Ce qui correspond exactement à : $(\exists x \in E, (\text{non}~P(x)))$.
 
-#### Propriété 2
+##### Propriété 2
+
 **La négation de $(\exists x \in E, P(x))$ est $(\forall x \in E, (\text{non}~P(x)))$.**
 
 >[!example]- Démonstration
@@ -282,16 +313,16 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >Par double négation, j'obtiens :
 >"la proposition $(\forall x \in E, (\text{non}~P(x)))$ est la négation de $(\exists x \in E, P(x))$."
 
-## Exemples de raisonnements
+### Exemples de raisonnements
 
-### Raisonnement général
+#### Raisonnement général
 
 >[!example]- Exemple
 >**Théorème :** $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}, y > x$.
 >
 >**Méthode :**
->- Pour montrer une proposition de la forme $(\forall x \in E, P(x))$, on commence par : "Soit $x \in E$. Alors [...]"
->- Pour montrer une proposition de la forme $(\exists x \in E, P(x))$, on utilise ses connaissances ou on exhibe un exemple $x = ...$ tel que $P(x)$ soit vraie. Dans ce cas, on écrit : "Je pose $x = ...$. [calculs]... Donc $P(x)$."
+>- Pour montrer une proposition de la forme $(\forall x \in E, P(x))$, on commence par : "Soit $x \in E$. Alors […]"
+>- Pour montrer une proposition de la forme $(\exists x \in E, P(x))$, on utilise ses connaissances ou on exhibe un exemple $x = …$ tel que $P(x)$ soit vraie. Dans ce cas, on écrit : "Je pose $x = …$. [calculs]… Donc $P(x)$."
 >
 >**Démonstration :**
 >Soit $x \in \mathbb{R}$.
@@ -299,7 +330,7 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >De $1 > 0$, je déduis, en ajoutant $x$ : $x + 1 > x + 0$.
 >Ainsi $y > x$.
 
-### Raisonnement par l'absurde
+#### Raisonnement par l'absurde
 
 >[!example]- Exemple
 >**Théorème :** $\forall x \in \mathbb{R} \setminus \{1\}, \frac{2x+2}{x-1} \neq 2$.
@@ -309,11 +340,15 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >**Démonstration :**
 >Je suppose, par l'absurde, qu'il existe $x \in \mathbb{R} \setminus \{1\}$ tel que $\frac{2x+2}{x-1} = 2$.
 >Alors, en multipliant par $x - 1$ (non nul), j'obtiens :
->$$2x + 2 = 2(x - 1)$$
+>
+>$$
+>2x + 2 = 2(x - 1)
+>$$
+>
 >J'en déduis $2x + 2 = 2x - 2$, et donc $2 = -2$.
 >Or $2 \neq -2$. Contradiction.
 
-### Disjonction de cas
+#### Disjonction de cas
 
 >[!example]- Exemple
 >**Théorème :** $\forall x \in \mathbb{R}, |x| \geq x$.
@@ -330,7 +365,7 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >**Cas 2 :** Je suppose $x < 0$. Je sais que quel que soit $x \in \mathbb{R}$, $|x| \geq 0$.
 >Ainsi $|x| \geq 0 > x$. Donc $|x| > x$, et donc $|x| \geq x$.
 
-### Raisonnement par contraposée
+#### Raisonnement par contraposée
 
 >[!example]- Exemple
 >**Théorème :** $\forall n \in \mathbb{N}$, si $n^2$ est pair, alors $n$ est pair.
@@ -342,7 +377,11 @@ $$\exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \tex
 >Je suppose que $n$ est impair.
 >Alors il existe $k \in \mathbb{N}$ tel que $n = 2k + 1$.
 >Alors :
->$$n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 = 2K + 1$$
+>
+>$$
+>n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 = 2K + 1
+>$$
+>
 >avec $K = 2k^2 + 2k \in \mathbb{N}$.
 >Donc $n^2$ est impair.
 >Par contraposée, si $n^2$ est pair, alors $n$ est pair.

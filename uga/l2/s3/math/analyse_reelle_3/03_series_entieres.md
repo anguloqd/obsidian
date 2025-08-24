@@ -1,12 +1,12 @@
-# 03 // séries entières
+## 03 // séries entières
 
-# Définitions : série entière et rayon de convergence
+## Définitions : série entière et rayon de convergence
 
-## Pourquoi série "entière" ?
+### Pourquoi série "entière" ?
 
 Une série entière est une série de la forme $\sum u_n x^n$, où $(u_n)$ suite réelle et $x \in \mathbb{C}$ (mais on se limitera aux réels). Elle est dite *entière* car l'exposant de $x$ est entier.
 
-## Rayon et domaine de convergence : les valeurs de $x$ tels que $\sum u_n x^n$ converge
+### Rayon et domaine de convergence : les valeurs de $x$ tels que $\sum u_n x^n$ converge
 
 On définit $E = \{ x :  (|u_n|x^n) \text{ bornée}\}$. Notons qu'il peuvent avoir plusieurs $x$ qui vérifient cette condition. Finalement, le rayon de convergence de la série entière $\sum u_n x^n$ est dénoté $R$ :
 
@@ -29,9 +29,9 @@ Elle peut converger ou diverger sur les bornes.
 
 L’ensemble de valeurs de $x=\{x_0, \dots, x_n\}$ où la série $\sum u_n x^n$ converge est appelé le domaine de convergence $D$ : $D = \{ x : \sum u_n x^n \text{ converge}\}$ .
 
-# Détermination du rayon de convergence
+## Détermination du rayon de convergence
 
-## Règle de d'Alembert
+### Règle de d'Alembert
 
 Supposons une suite réelle $(u_n)$ tel que $u_n \ne 0$ et $\lim_{n\rightarrow \infty} |\frac{u_{n+1}}{u_n}| = \ell$. Donc :
 
@@ -44,7 +44,7 @@ R =
 \end{cases}
 $$
 
-## Règle de Cauchy
+### Règle de Cauchy
 
 Supposons une suite réelle $(u_n)$ tel que $\lim_{n\rightarrow \infty} \sqrt[n]{|u_n|} = \ell`. Donc :
 
@@ -57,16 +57,16 @@ R =
 \end{cases}
 $$
 
-## “Somme” des séries
+### “Somme” des séries
 
 Soient $\sum u_n x^n$ et $\sum v_n x^n$ deux séries entières avec rayons de convergence $R_1$ et $R_2$, respectivement. Donc, si on crée la série “somme” $\sum (u_n+v_n)x^n$ avec rayon de convergence $R$ :
 
 - $R \ge \min(R_1,R_2)$
 - $R_1 \ne R_2 \implies R = \min(R_1,R_2)$
 
-# Séries entières d’une variable réelle
+## Séries entières d’une variable réelle
 
-## Intervalle de convergence $]R,R[$ et la fonction $S$
+### Intervalle de convergence $]R,R[$ et la fonction $S$
 
 Tout ce qu’on a présenté avant peut s’appliquer aussi aux nombres complexes, mais maintenant on se limite aux réels.
 
@@ -91,7 +91,7 @@ S :
 \end{gather*}
 $$
 
-Cette fonction $S$ est intégrable sous Riemann et aussi dérivable. Dans le cas de l’intégrale, l’intervalle d’intégration est dès $0$ à $x$ ou dès $x$ à $0$, pour $x \in ]-R,R[$. 
+Cette fonction $S$ est intégrable sous Riemann et aussi dérivable. Dans le cas de l’intégrale, l’intervalle d’intégration est dès $0$ à $x$ ou dès $x$ à $0$, pour $x \in ]-R,R[$.
 
 $$
 \int_0^xS(t)dt = \sum_{n=0}^{+\infty}u_n\frac{x^{n+1}}{n+1}
@@ -100,9 +100,9 @@ $$
 \space\space\space S'(x)=\sum_{n=1}^{+\infty}nu_nx^{n-1}
 $$
 
-# Développement en série entière
+## Développement en série entière
 
-## Série de Taylor : la connexion série entières et dev. limités
+### Série de Taylor : la connexion série entières et dev. limités
 
 Finalement, on connecte les séries entières avec les développements limités. Avec $r >0$, on prend une fonction $f : \space ]-r, r[ \space \mapsto \mathbb{R}$.
 
@@ -110,12 +110,12 @@ Cette fonction est dite “développable en $0$” s’il existe une série $\su
 
 En particulier, la série que permet de réécrire $f(x)$ sous forme de série entière est la série de Taylor. À savoir : $f(x) = \sum_{n=0}^{+\infty} \frac{f^{(n)}(0)}{n!}x^n$.
 
-## Développements limités usuels
+### Développements limités usuels
 
 > [!note]
 > Mnéumonique TEBG : trigo, exponentiel, binôme et géométrique.
 
-## Formule de binôme généralisée
+### Formule de binôme généralisée
 
 Rappelons la formule du binôme, pour $n\in\mathbb{N}$ :
 

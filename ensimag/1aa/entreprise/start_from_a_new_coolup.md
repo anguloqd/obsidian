@@ -1,4 +1,4 @@
-# start from a new coolup
+## start from a new coolup
 
 ```bash
 # starting from HOME DIR (~)...

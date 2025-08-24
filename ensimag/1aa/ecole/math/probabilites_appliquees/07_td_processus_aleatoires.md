@@ -1,4 +1,4 @@
-# 07 // TD processus aléatoires
+## 07 // TD processus aléatoires
 
 File M/D/\infty (Kendall): M est parce que les arrivées ont la propriété de Markov, D est le temps de services parce c’est deterministe, \infty est le nombre de serveurs.
 

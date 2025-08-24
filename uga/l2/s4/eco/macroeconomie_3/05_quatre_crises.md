@@ -1,10 +1,10 @@
-# 05 // quatre crises
+## 05 // quatre crises
 
 [Slides des quatres crises](chapitre_4c_diapo_(1).pdf)
 
-# Introduction
+## Introduction
 
-## Quelles sont ces quatre crises ?
+### Quelles sont ces quatre crises ?
 
 ![untitled](ressources/05_quatre_crises_untitled.png)
 
@@ -17,9 +17,9 @@ Depuis les années 1920 jusqu’au présent, on pourrait diviser l’histoire é
 - 1979-2015 : Crise financière mondiale de 2008-2009.
 - 2020-Actuellement : Crise sanitaire, politique budgétaire et monétaire expansionniste, retour de l’inflation et crise financière/bancaire.
 
-# La Grande Dépression : 1921-1941
+## La Grande Dépression : 1921-1941
 
-## Contexte
+### Contexte
 
 Capitalisme est un système économique dynamique : phases d’essor et de récession en sont des caractéristiques récurrentes, même lorsque les fluctuations de la production agricole liées aux conditions météorologiques jouent un rôle mineur dans l’économie. **Toutes les récessions ne sont cependant pas comparables**.
 
@@ -31,7 +31,7 @@ Trois mécanismes simultanés de rétroaction ont fait chuter l’économie amé
 - Faillite du système bancaire : la baisse consécutive du revenu empêcha le remboursement des emprunts. En 1933, près de la moitié des banques américaines avaient fait faillite, ce qui impliquait une baisse offre de crédit.
 - Déflation : les prix diminuent à mesure que les biens invendu s’accumulent dans les rayons des magasins.
 
-## La déflation
+### La déflation
 
 La déflation a poussé à la hausse la valeur réelle des dettes.
 
@@ -40,13 +40,13 @@ La déflation a poussé à la hausse la valeur réelle des dettes.
 
 Le Gouvernement des États-Unis n’as pas pu renverser spirale déflationniste.
 
-## La politique budgétaire
+### La politique budgétaire
 
 Au départ de la Grande Dépression, les politiques publiques ont à la fois amplifié et prolongé le choc. Le budget publique $G$ et les exportations nettes $(X-M)$ ont à peine changé.
 
 En 1931, des estimations indiquent que la production était 20% en dessous du plein emploi. Pourtant, il y avait un léger excédent budgétaire au même temps. De 1932 à 1936, le président Roosevelt a accumulé des déficits publiques, étant de 5,3% en 1936. Par contre, les déficits se sont réduits à 3% en 1938, ce qui renforcerait la récession. En 1940, la forte hausse des dépenses militaires a contribué à la reprise.
 
-## La politique monétaire et l’étalon-or
+### La politique monétaire et l’étalon-or
 
 Pendant la période, la politique monétaire restrictive a prolongé la Grande Dépression. Les taux directeurs r évoluaient à partir de 1925, atteignant un pic de 13% en 1932, ce qui a aggravé la chute de $C$ et $I$ en 1929 pendant le krach.
 
@@ -58,7 +58,7 @@ Ils sont plutôt décidé augmenter la compétitivité, mais les décideurs publ
 
 En septembre 1931, le Royaume-Uni a abandonné l’étalon-or, ce qui causerait une sortie massive d’or des États-Unis. Les investisseurs s’attendaient à ce que les Etats-Unis abandonnent ´ également ce système et dévaluent le dollar.
 
-## Changement des anticipations
+### Changement des anticipations
 
 En 1933, Roosevelt a lancé des réformes de politique économique :
 
@@ -67,13 +67,14 @@ En 1933, Roosevelt a lancé des réformes de politique économique :
 - Réformes du système bancaire “Glass-Steagall” : Glass supporterait un système fédéral d’assurance des fonds des clients bancaires. Steagall supporterait une séparation de la banque commerciales avec la banque d’investissement, pour rétablir la confiance du peuple sur les banques commerciales.
 
 Avec ces changements, les anticipations des ménages et des entreprises deviendrait davantage
+
 haussières. La productions et l’emploi étaient alors en période de croissance. L’incertitude à propos du futur aurait disparu, et les ménages réévalueraient leurs prévisions de richesse, ce qui les mènent à consommer d’avantage, jugeant que l’épargne supplémentaire n’était plus nécessaire.
 
 Cela dit, l’économie américaine n’atteignerait cependant pas le niveau d’emploi d’avant la Grande Dépression que lors du troisième mandat de Roosevelt et après le début de la Seconde Guerre Mondiale.
 
-# L’Âge d’or et la *stagflation* : 1948-1979
+## L’Âge d’or et la *stagflation* : 1948-1979
 
-## Croissance forte, chômage faible
+### Croissance forte, chômage faible
 
 Les États-Unis et d’autres pays ont présenté un forte productivité et un faible chômage.
 
@@ -91,7 +92,7 @@ Dans les économies d’après-guerre, le poids du secteur public était plus im
 
 Côté monétaire, l’introduction du système de Bretton-Woods a fini avec l’étalon-or. Bretton-Woods remplaçait le fait de fixer de la monnaie local en termes de l’once d’or, ce qui deviendrait en termes du dollar ; et **les États-Unis assurerait un changement fixe de $35 par l’once d’or**. Par contre, **le taux de change de la monnaie local contre le dollar pouvait fluctuer librement**, ce qui poussait les économies à éviter de devenir non compétitives.
 
-## Le compromis d’après-guerre
+### Le compromis d’après-guerre
 
 Pendant ce période, il y a eu un investissement élevé, une croissance rapide de la productivité, une croissance des salaires et un chômage faible. C’était un cercle vertueux.
 
@@ -115,9 +116,9 @@ Le Royaume-Uni a commencé l’âge d’or avec une productivité supérieure, m
 
 ![untitled](ressources/05_quatre_crises_untitled_3.png)
 
-## 1973 : la fin de l’âge d’or, début de la crise de la *stagflation*
+### 1973 : la fin de l’âge d’or, début de la crise de la *stagflation*
 
-Le cercle vertueux de l’âge d’or commencerait à se briser à la fin des 60s : 
+Le cercle vertueux de l’âge d’or commencerait à se briser à la fin des 60s :
 
 - Des années de faible $u$ ont convaincu les travailleurs qu’ils n’avaient pas à avoir peur de perdre leur travail.
 - Amélioration des conditions de travail et augmentation des salaires ont baissé le taux de profit.
@@ -126,13 +127,13 @@ Le cercle vertueux de l’âge d’or commencerait à se briser à la fin des 60
 
 En général, la croissance de la productivité s’est ralentie. En plus, les pays avancées ne tiraient plus les mêmes gains des transferts de technologie des États-Unis.
 
-### Premier choc pétrolier
+#### Premier choc pétrolier
 
 En 1973, **il arriverait le premier choc pétrolier**. Une augmentation des coûts des importations de pétrole va s’étandre vers les prix des autres produits, créant de l’inflation. Le salaire réel des employés va diminuer si les firmes veulent garder leurs marges de profit.
 
 Ceci dit, les travailleurs exerçaient encore un fort pouvoir de négociation même si le chômage augmentait, ce qui produit davantage de l’inflation pour pouvoir plaire les demandes des travailleurs. Il en resulte une amputation des profits, qui causerait une baisse de $I$ et qui ferait augmenter $u$. Il a eu quelques exceptions, comme la Suède, où les travailleurs ont relâché ses demandes pour maintenir la rentabilité des firmes et un $u$ diminué.
 
-### L’inflation anticipée $\pi^e$ a crée la stagflation
+#### L’inflation anticipée $\pi^e$ a crée la stagflation
 
 La courbe de Phillips ne s’appliquait pas pour un instant. L’inflation et le chômage étant normalement corrélés négativement, il y a eu un instant où le deux ont accru au même temps. Ceci est du à une croissance de $u$ et le fait que les anticipations d’inflation future créent de l’inflation presente, ce qui n’a pas permis la corrélation négative habituelle chômage-inflation.
 
@@ -144,9 +145,9 @@ On s’est rendu compte, en plus, que les récessions peuvent être différentes
 
 ![untitled](ressources/05_quatre_crises_untitled_6.png)
 
-# La grande modération et la crise financière : 1979-2015
+## La grande modération et la crise financière : 1979-2015
 
-## Post-âge d’or : 1979-1990
+### Post-âge d’or : 1979-1990
 
 Après 1979, soutenir la demande privée ne servait à rien : la crise était plutôt du côte offre, donc les états se sont engagés avec des politiques d’offre :
 
@@ -155,13 +156,13 @@ Après 1979, soutenir la demande privée ne servait à rien : la crise était pl
 - Politiques pour stimuler la concurrence et réduire le pouvoir de marché.
 - Politiques monétaire et budgétaire restrictives : gouvernements prêts à accepter $u$ élevé.
 
-## La grande modération : 1990-2008
+### La grande modération : 1990-2008
 
 La grande modération est une étape d’inflation $\pi$ faible et de chômage $u$ faible. À différence de l’âge d’or, les salaires $W$ augmentait moins que les profits.
 
 En 2000, il y a eu un nouveau choc pétrolier, mais moins déstabilisateur que les précédents. Ce fait, par contre, a été une préparation pour la crise financière du 2008, à cause des hausse des inégalités dans beaucoup de pays. Particulièrement par rapport aux inégalités, les taux de profits sont augmentés mais l’investissement restait faible, donc accaparation des richesses pour la part des plus riches.
 
-## La crise financière : 2008-2015
+### La crise financière : 2008-2015
 
 > [!note]
 > Il existent trois concepts importants pour cette époque :
@@ -192,10 +193,10 @@ Côté banques, elles sont devenues insolvables car leur actifs (propriétés ac
 
 ![untitled](ressources/05_quatre_crises_untitled_7.png)
 
-# Enseignements des trois époques
+## Enseignements des trois époques
 
 ![1682965663517_1682965647270_0_enseignements_Noise Remove_Quality Enhance_x1.jpeg](ressources/05_quatre_crises_1682965663517_1682965647270_0_enseignements_noise_remove_quality_enhance_x1.jpeg)
 
-# Crise sanitaire actuelle : depuis 2015
+## Crise sanitaire actuelle : depuis 2015
 
 Depuis 2015, il y a eu période de taux d’intérêt faible et une hausse de l’endettement. En 2020, avec la crise sanitaire, il s’est répandu la mentalité de “quoiqu’il en coûte”, l’endettement a explosé et il y a eu une apparition/intensification des bulles d’actif.

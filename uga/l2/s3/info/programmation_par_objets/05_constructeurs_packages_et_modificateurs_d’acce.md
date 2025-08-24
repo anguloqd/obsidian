@@ -1,10 +1,10 @@
-# 05 // constructeurs, packages et modificateurs d’accès
+## 05 // constructeurs, packages et modificateurs d’accès
 
 [Slides de cours 5.pdf](ressources/05_constructeurs_packages_et_modificateurs_d’acce_inff3_2223_cours5.pdf)
 
-# Initialisation des objets
+## Initialisation des objets
 
-## Le constructeur : une méthode spéciale
+### Le constructeur : une méthode spéciale
 
 Chaque fois on initialise des objets, on fait un appel au constructeur. Le constructeur est une méthode spéciale automatiquement appelée à la création de l'objet (`new`), après allocation de la mémoire.
 
@@ -65,7 +65,7 @@ class Point{
 
 Notons que si on utilise le constructeur pour fixer les valeurs des attributs, les attributs doivent être déclarés avant. Donc, l'initialisation au niveau de la déclaration est faite avant l'appel au constructeur.
 
-## Surcharge de constructeurs (et de méthodes)
+### Surcharge de constructeurs (et de méthodes)
 
 Surcharger est le fait de créer des méthodes différentes avec le même nom. Java fait la différence au moment de regarder les types d’input et leur ordre, ce qui s’appelle la “signature” de la méthode.
 
@@ -117,7 +117,7 @@ class Cercle {
 }
 ```
 
-## Mot clé `this`
+### Mot clé `this`
 
 Cette mot clé à 3 utilisations. Dans le code du début de la section “initialisation d’objets”, on a déjà vu une utilisation du mot clés `this` : pour lever les ambiguïtés de deux paramètres sous le même nom. `this`, plus formellement, appelle la classe où on se trouve.
 
@@ -162,9 +162,9 @@ class Point {
 }
 ```
 
-# Organisation du code en package
+## Organisation du code en package
 
-## *Encapsulation* et contrôle d'accès
+### *Encapsulation* et contrôle d'accès
 
 ![Notion d’encapsulation.](ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled.png)
 
@@ -178,9 +178,9 @@ Java permet de modifier la “visibilité” des attributs et méthodes avec le 
 
 On peut appliquer aussi les modificateurs sur les classes. Normalement on utilise que `public` et rien. `public` pour pouvoir accéder à la classe partout, et (rien) pour qu’elle soit accessible par les autres fichiers dans le même dossier/package de la classe. On peut “imbriquer” de packages. Par fichier Java, on peut avoir plusieurs classes mais seulement une seule classe publique, et elle doit avoir le même nom du fichier Java où elle est écrite.
 
-## Espaces de noms et les *packages*
+### Espaces de noms et les *packages*
 
-Les espaces de noms est une notion abstraite. Ils permet de regrouper des *choses* de la même *famille* et de lever les ambiguïtés de noms. **On pourrait les voir comme des dossiers**. 
+Les espaces de noms est une notion abstraite. Ils permet de regrouper des *choses* de la même *famille* et de lever les ambiguïtés de noms. **On pourrait les voir comme des dossiers**.
 
 Par exemple, le nom de famille est un espace de noms (donc ils ont tous une caractéristique commune : le nom de famille) permettant de discriminer les personnes ayant le même prénom (donc ils ont tous un caractéristique différente : le prénom).
 
@@ -223,11 +223,12 @@ C’est qui signifie que dans le dossier src, il y a un dossier “fr”, puis u
 ![untitled](ressources/05_constructeurs_packages_et_modificateurs_d’acce_untitled_3.png)
 
 Par convention, les packages ne sont nommés qu’avec des lettres minuscules.
+
 S’il y a deux classes dans le dossier src avec le même nom, et si elles appartiennent à deux paquets différents, il faut utiliser leur noms complets pour les importer. Si elles appartiennent au même paquet, on ne peut qu’utiliser l’une des deux classes dans le même projet.
 
-# Modificateurs d’accès
+## Modificateurs d’accès
 
-## Restriction des méthodes
+### Restriction des méthodes
 
 Ils peuvent être places devant une déclaration de classe, méthode ou d’attribut (d’instance ou de classe).
 

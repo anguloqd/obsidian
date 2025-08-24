@@ -1,28 +1,28 @@
-# 01 // introduction
+## 01 // introduction
 
 [Slides d’intro](coursprologl2_1_(3).pdf)
 
-# Principaux paradigmes en programmation
+## Principaux paradigmes en programmation
 
-## Programmation déclarative et Prolog
+### Programmation déclarative et Prolog
 
 Ils existent deux grandes catégories qui se divisent en plusieurs sous-catégories : la programmation impérative, où la machine se retrouve dans des états et on change son état en donnant directement et clairement d’ordres (ordre es synonyme de ”impérative”) à exécuter pour arriver au résultat désiré ; et déclarative, où on explicite à peine quelques propriétés du résultat désiré mais on explicite pas comment y arriver.
 
-Java est un langage impératif orienté-objet (il groupe d’ordres dépendant de l’état où la machine se trouve), Scheme est un langage déclaratif fonctionnel (le résultat est reçu comme la valeurs d’une série de fonctions), et Prolog est un langage déclaratif logique (le résultat est reçu comme une déduction logique ou un réponse à un système de ***faits*** et ***règles***). 
+Java est un langage impératif orienté-objet (il groupe d’ordres dépendant de l’état où la machine se trouve), Scheme est un langage déclaratif fonctionnel (le résultat est reçu comme la valeurs d’une série de fonctions), et Prolog est un langage déclaratif logique (le résultat est reçu comme une déduction logique ou un réponse à un système de ***faits*** et ***règles***).
 
-# Prolog : programmation logique
+## Prolog : programmation logique
 
-## Décrire le problème et laisser à Prolog le résoudre
+### Décrire le problème et laisser à Prolog le résoudre
 
 On utilise ce langage quand il n’existe pas d’algorithme pour résoudre un problème, mais que le contraintes qui définissent la solution sont connues. Un programme Prolog est composé de faits et règles, et est exécuté avec des requêtes (*queries* en Anglais).
 
 Note : les deux faits et règles sont des *clauses,* et l’ensemble de clauses qui ont le même nom et même nombre d’arguments (même arité) sont des *prédicats*. Parfois on dit “prédicat” quand on veut juste dire “clause”, c’est normale la confusion, souvent il est plus utile de parler de prédicats.
 
-## Faits : propositions de base
+### Faits : propositions de base
 
 Les faits ou **propositions** sont des affirmations vraies et donnent une propriété à un objet. Elles utilisent le verbe “être” comme dans “le soleil est une étoile”, qui donne au soleil le propriété d’étoile, comme si le soleil est désormais une constante de type “étoile”. Elles sont les **propositions de base**.
 
-Pour le cas de la proposition capitale, notons qu’on peut lier plusieurs objets sous un prédicat, mais on n’explicite pas comme elles sont liées. Dans ce cas, on pourrait l’interpréter comme “Paris est la capitale de France”, mais notons déjà que cela c’est notre interprétation ! **Prolog juste sait qu’il existe une proposition vraie par rapport au nom “capitale” qui lie aux constantes `france` et `paris`**. 
+Pour le cas de la proposition capitale, notons qu’on peut lier plusieurs objets sous un prédicat, mais on n’explicite pas comme elles sont liées. Dans ce cas, on pourrait l’interpréter comme “Paris est la capitale de France”, mais notons déjà que cela c’est notre interprétation ! **Prolog juste sait qu’il existe une proposition vraie par rapport au nom “capitale” qui lie aux constantes `france` et `paris`**.
 
 ```prolog
 – etoile(soleil).
@@ -31,9 +31,9 @@ Pour le cas de la proposition capitale, notons qu’on peut lier plusieurs objet
 – position(roi,b,7).
 ```
 
-**Les prédicats ne sont pas de fonctions !** C’est-à-dire, elles ne retournent pas une valeur qui pourrait être gardée/affectée dans une variable, et donc on ne peut pas mettre directement un prédicat directement dans un autre prédicat. 
+**Les prédicats ne sont pas de fonctions !** C’est-à-dire, elles ne retournent pas une valeur qui pourrait être gardée/affectée dans une variable, et donc on ne peut pas mettre directement un prédicat directement dans un autre prédicat.
 
-## Règles : opérations logiques avec des faits
+### Règles : opérations logiques avec des faits
 
 Les règles sont les opérations logiques de premier ordre, elle prennent des objets comme des variables. Par exemple, $X$ est une planète $\equiv$ ($X$ est un astre)$\land$($E$ est une étoile de $X$)$\land$($X$ est un satellite de $E$).
 
@@ -51,7 +51,7 @@ $$
 \text{En Prolog : } r(\dots) \space \underbrace{:-}_{\implies} \space p_1(\dots)\land p_2(\dots)\land \dots \land p_n(\dots)
 $$
 
-## Requêtes : exécution
+### Requêtes : exécution
 
 La manière de faire des exécutions en Prolog sont les requêtes, où on demande quel objet vérifierait un prédicat (fait ou règle), ou des objets pour lesquels un prédicat serait vrai.
 
@@ -74,7 +74,7 @@ Par défaut, tous les objets n’ont pas une propriété, et on spécifient ceux
 ?- carnivore(loup) % error ! le prédicat n'est pas défini, unknown procedure
 ```
 
-## Particularités sur le software SWI-Prolog
+### Particularités sur le software SWI-Prolog
 
 - Une ligne qui commence avec `-` est une clause, et avec `?-` est une requête.
 - Toutes les clauses (faits et règles) finissent avec un point `.`.
@@ -86,7 +86,7 @@ Par défaut, tous les objets n’ont pas une propriété, et on spécifient ceux
     - Le variables utilisées dans une requête sont existentiellement quantifiées par Prolog, avec le quantificateur mathématique $\exists$ qui signifie “existe-t-il”.
 - **Variables anonymes** : si jamais on veut faire une requête qui prend plusieurs arguments mais il y en a quelques-uns qui ne nous intéressent pas, on utilise le symbole `_` à la place de l’argument.
     - Une variable commençant par '`_`' et de longueur ≥ 2 n'est pas anonyme/muette.
-    
+
     ```prolog
     -mange(loup, chevre). % fait
     -carnivore(X) :- mange(X, Y), animal(Y). % règle
@@ -94,9 +94,8 @@ Par défaut, tous les objets n’ont pas une propriété, et on spécifient ceux
     
     -? cruel(loup) % true
     ```
-    
 
-## Opérateurs basiques
+### Opérateurs basiques
 
 - `<`,`>`,`=<`,`>=`,`=:=` (calcul, puis égalité), `=\=`, `mod`
 - L’opérateur `=` ne fait pas de calculs : `X=5+2` est différent de `X=7`

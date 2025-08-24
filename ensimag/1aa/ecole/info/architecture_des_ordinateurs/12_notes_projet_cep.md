@@ -1,4 +1,4 @@
-# 12 // notes projet CEP
+## 12 // notes projet CEP
 
 ---
 
@@ -57,12 +57,15 @@ traitant:
 ```
 
 csrrw: `csrrw x0, mtvec, x1`
+
 permet de mettre dans mtvec l’adresse du programme traitant (là où on va sauter)
 
 csrrs:  `addi x1, x0, 1 << 3 // csrrs x0, mstatus, x1`
+
 on va mettre le bit 3 de `x1` à `3` , puis on va simplement passer cette valeur à `mstatus` pour autoriser les interruptions.
 
 csrrs: `addi x1, x0, 0x7FF` - `addi  x1, x1, 1` - `csrrs x0, mie, x1`
+
 met le bit 11 de `mie` à `1`, pour autoriser les interruptions externes (bouton poussoir)
 
 au moment d’appuyer sur le bouton poussoir : `mepc ← pc`, `pc ← mtvec`, et on masque les interruptions. Puis, à la fin du programme traitant, `pc ← mepc`, et on démasque les interruptions (`mstatus[3] ← 1`)

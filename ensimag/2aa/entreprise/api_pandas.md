@@ -1,5 +1,6 @@
-# Guide API de Pandas
-## Création de structures de données
+## Guide API de Pandas
+
+### Création de structures de données
 
 ```python
 # Series
@@ -14,7 +15,7 @@ pd.DataFrame.from_dict(dict, orient='index')
 pd.DataFrame.from_records(records)
 ```
 
-## Chargement et sauvegarde de données
+### Chargement et sauvegarde de données
 
 ```python
 # Lecture de fichiers
@@ -35,7 +36,7 @@ df.to_parquet('output.parquet')
 df.to_pickle('output.pkl')
 ```
 
-## Inspection et informations sur les données
+### Inspection et informations sur les données
 
 ```python
 # Informations de base
@@ -60,7 +61,7 @@ df['col'].value_counts()
 df['col'].value_counts(normalize=True)  # proportions
 ```
 
-## Indexation et sélection
+### Indexation et sélection
 
 ```python
 # Sélection de colonnes
@@ -91,7 +92,7 @@ df.query('col1 > 5 and col2 < 10')
 df.eval('new_col = col1 + col2')
 ```
 
-## Filtrage et indexation booléenne
+### Filtrage et indexation booléenne
 
 ```python
 # Conditions
@@ -117,7 +118,7 @@ df['col'].str.extract('(\\d+)')  # groupes regex
 df['col'].str.extractall('(\\d+)')
 ```
 
-## Nettoyage de données et valeurs manquantes
+### Nettoyage de données et valeurs manquantes
 
 ```python
 # Détection des valeurs manquantes
@@ -147,7 +148,7 @@ df.drop_duplicates(subset=['col1', 'col2'])
 df.drop_duplicates(keep='last')
 ```
 
-## Transformation de données
+### Transformation de données
 
 ```python
 # Application de fonctions
@@ -171,7 +172,7 @@ df.replace([val1, val2], [new_val1, new_val2])
 df.replace(regex_dict)
 ```
 
-## Agrégation et groupement
+### Agrégation et groupement
 
 ```python
 # Agrégation de base
@@ -202,7 +203,7 @@ df.groupby('col').nth(0)  # première ligne de chaque groupe
 df.groupby('col').head(2)  # 2 premières lignes de chaque groupe
 ```
 
-## Fusion et jointure
+### Fusion et jointure
 
 ```python
 # Concaténation
@@ -224,7 +225,7 @@ df1.join(df2)  # jointure sur index
 df1.join(df2, how='outer', lsuffix='_left', rsuffix='_right')
 ```
 
-## Restructuration de données
+### Restructuration de données
 
 ```python
 # Tableaux croisés dynamiques
@@ -247,7 +248,7 @@ pd.crosstab(df['col1'], df['col2'])
 pd.crosstab(df['col1'], df['col2'], normalize='columns')
 ```
 
-## Tri et classement
+### Tri et classement
 
 ```python
 # Tri
@@ -262,7 +263,7 @@ df['col'].rank(method='dense')  # dense, min, max, average, first
 df.rank(axis=1)  # classer à travers colonnes
 ```
 
-## Opérations sur les séries temporelles
+### Opérations sur les séries temporelles
 
 ```python
 # Conversion DateTime
@@ -314,7 +315,7 @@ df['date'].dt.quarter
 df['date'].dt.to_period('M')
 ```
 
-## Séries temporelles avancées
+### Séries temporelles avancées
 
 ```python
 # Conversion de fréquence
@@ -336,7 +337,7 @@ from pandas.tseries.offsets import BDay
 df.index + BDay(1)  # ajouter 1 jour ouvrable
 ```
 
-## Données catégorielles
+### Données catégorielles
 
 ```python
 # Créer catégoriel
@@ -351,7 +352,7 @@ df['cat_col'].cat.remove_categories(['A'])
 df['cat_col'].cat.reorder_categories(['C', 'A', 'B'])
 ```
 
-## Opérations MultiIndex
+### Opérations MultiIndex
 
 ```python
 # Création MultiIndex
@@ -371,7 +372,7 @@ df.loc[pd.IndexSlice['A', :], :]
 df.xs('A', level=0)
 ```
 
-## Modèles courants de LeetCode
+### Modèles courants de LeetCode
 
 ```python
 # Trouver top N dans chaque groupe
@@ -406,7 +407,7 @@ def period_over_period_change(df, date_col, value_col, periods=1):
     return df_sorted[value_col].pct_change(periods=periods)
 ```
 
-## Optimisation des performances
+### Optimisation des performances
 
 ```python
 # Opérations efficaces

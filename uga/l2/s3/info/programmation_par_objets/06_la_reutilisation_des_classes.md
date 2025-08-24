@@ -1,10 +1,10 @@
-# 06 // la réutilisation des classes
+## 06 // la réutilisation des classes
 
 [Slides de cours 6.pdf](ressources/06_la_reutilisation_des_classes_inff3_2223_cours6.pdf)
 
-# Composition, délégation et héritage
+## Composition, délégation et héritage
 
-## Types de réutilisation de code
+### Types de réutilisation de code
 
 Java offre deux moyens pour réutiliser le code de classes existantes : la composition et l’héritage.
 
@@ -15,9 +15,9 @@ En plus, on pourrait ajouter un autre moyen :
 
 - Délégation : dans un objet de type A, on crée un objet de type B avec un méthode de A qui appelle une méthode de B. Ceci est pour simuler l’héritage juste d’une méthode de l’objet de type B à la fois de tout en hériter.
 
-## Plus sur l’héritage
+### Plus sur l’héritage
 
-### Contenu utile du cours #1 : réutilisation de classes et sous-classes
+#### Contenu utile du cours #1 : réutilisation de classes et sous-classes
 
 Réutiliser des instructions est l’un des points forts de programmer.
 
@@ -38,13 +38,14 @@ void dessineEtAfficheAire(FormeGeo f) {
 ```
 
 Une sous-classe, c’est effectivement une classe dans une autre. Précisément, c’est une classe qui ***hérite*** les attributs et méthodes d’une autre classe, comme ça il n’y a pas besoin de les redéfinir.
-Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”. 
 
-## Composition et héritage sur Java
+Par exemple, si on a une classe comme la classe “Ford”, une sous-classe pourrait être “Mustang”.
+
+### Composition et héritage sur Java
 
 **La hiérarchie de classe peut-être de composition ou de héritage**. La composition définit une classe comme la somme de ses parties (”loosely coupled”, car changer la superclasse n’est pas un fait délicat), tant que l’héritage dérive une classe d’une autre (”tightly coupled”, car changer la superclasse peut causer des problèmes).
 
-Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc. 
+Pour la composition, on s’intéresse à la relation “avoir” ou “en faire partie”. Par exemple, une voiture a une batterie, une personne a un cœur, une maison a une pièce de vie, etc.
 
 ```java
 public class ExempleComposition {
@@ -150,7 +151,7 @@ public class Main {
 // L'animal a fait un son
 ```
 
-### Contenu de ce cours
+#### Contenu de ce cours
 
 L'héritage est un des principaux concepts de la programmation par objet. En Java, on utilise toujours l'héritage lorsque l'on créé une classe, car toute classe est héritée de la classe plus général `Object`, qui contient aussi les méthodes `toString()`, `equals()`, etc.
 
@@ -158,13 +159,13 @@ Si on veut créer une classe enfant d’une classe parent différent de `Object`
 
 Dans l’héritage on peut ajouter des nouveaux membres, mais aussi redéfinir ceux qui existaient avant. Cela dit, redéfinir d’attributs n’est pas exactement utile, on va plutôt redéfinir de méthodes. On peut aussi surcharger les méthodes de la super-classe originale.
 
-# Surcharge et redéfinition
+## Surcharge et redéfinition
 
-## Leur différence
+### Leur différence
 
 Notons qu’’il y a une différence entre la surcharge et redéfinition. Dans la surcharge, deux fonctions avec le même nom coexistent et se différencient par leur signatures.
 
-### Initialisation dans la super-classe
+#### Initialisation dans la super-classe
 
 Quand on instancie une super-classe, on appel le constructeur de sa super-classe avant d’appeler celui de la sous-classe. Cela peut s’enchaîner jusqu’à arriver à la super-classe mère `Object` dont son constructeur ne fait rien de spécial.
 
@@ -219,7 +220,7 @@ class Etudiant extends Personne {
 }
 ```
 
-## La délégation (”transmission”)
+### La délégation (”transmission”)
 
 Parfois, on veut juste créer une classe qui hérite une ou quelques méthodes de la superclasse, et non toutes. La délégation est à mi-chemin de l’héritage et la composition, et elle tombe bien pour ce type de tâches.
 
@@ -256,21 +257,21 @@ public static void main(String[] args)
 
 Basiquement, on commence avec deux classes A et B et on déclare un objet de A dans la classe B. Pour “hériter” de méthodes de A dans B, on crée de fonctions dans classe B qui appellent, à travers l’objet A, les méthodes de la classe A.
 
-**La délégation est une relation d’*instantiation*, pas de *composition*, de deux classes !** (un objet `RealPrinter` instance dans une classe `Printer`). 
+**La délégation est une relation d’*instantiation*, pas de *composition*, de deux classes !** (un objet `RealPrinter` instance dans une classe `Printer`).
 
-## Le modificateur `protected`
+### Le modificateur `protected`
 
-Le modificateur d’accès `protected` donne l’accès aux sous-classes et aux classes du même package. On les utilise principalement avec les méthodes : on définit des variables `private` dans une superclasse, et on y accès dans les sous-classes avec une méthode `protected`. 
+Le modificateur d’accès `protected` donne l’accès aux sous-classes et aux classes du même package. On les utilise principalement avec les méthodes : on définit des variables `private` dans une superclasse, et on y accès dans les sous-classes avec une méthode `protected`.
 
-# Transtypage ascendant
+## Transtypage ascendant
 
-## Héritage de typage
+### Héritage de typage
 
 L'aspect le plus important de l'héritage est la relation de typage : si A `extends` B alors toute instance de A possède également le type B.
 
 Si une méthode ne prend que des paramètres de type A, on peut le passer un paramètre de type B. Par contre, le contraire ne marche pas.
 
-## Composition, délégation ou héritage ?
+### Composition, délégation ou héritage ?
 
 - Composition : référence vers un objet dans une classe. Déclaration d’une classe dans une autre *sans l’instancier* !
 - Délégation : **instanciation**, et on crée une méthode de classe courante qui appelle méthode de la classe instanciée.
@@ -278,7 +279,7 @@ Si une méthode ne prend que des paramètres de type A, on peut le passer un par
 
 L’héritage est à utiliser avec parcimonie ! La plupart du temps, on utilise la composition et on délègue certaines méthodes.
 
-Pour décider, il faut se poser la question : 
+Pour décider, il faut se poser la question :
 
 - Ai-je besoin d'utiliser le **transtypage ascendant** ?
 - Cela va t-il me permettre de factoriser du code ?

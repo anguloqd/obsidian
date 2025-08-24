@@ -1,8 +1,8 @@
-# 03 // politiques conjoncturelles en économie ouverte
+## 03 // politiques conjoncturelles en économie ouverte
 
-# Les politiques avec une mobilité parfaite des capitaux
+## Les politiques avec une mobilité parfaite des capitaux
 
-## Qu’est-ce que la mobilité parfaite
+### Qu’est-ce que la mobilité parfaite
 
 La mobilité parfaite des capitaux implique que l’élasticité $k$ tend ver l’infini. Économiquement, ils vont réagir immédiatement vers le taux d’intérêt le plus attractif.
 
@@ -15,11 +15,11 @@ La mobilité parfaite des capitaux implique que l’élasticité $k$ tend ver l�
 
 Pour les diagrammes de flux, il faut distinguer entre mouvement d’une courbe et mouvement d’un point d’équilibre (coupure entre 2 courbes).
 
-## Régime de changes fixes
+### Régime de changes fixes
 
 Si le taux de change est fixé par la banque centrale, tout déficit de BP se compense avec une vente de monnaie étrangères contre la monnaie national, et analogiquement pour tout excédent de BP.
 
-### La politique monétaire
+#### La politique monétaire
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled.png)
 
@@ -63,7 +63,7 @@ $$
 
 La politique monétaire est impuissante à augmenter durablement le revenu d’équilibre. On constate la même impuissance dans le sens de la restriction : toute restriction du crédit intérieur élève le taux d’intérêt national et attire des capitaux étrangers tant que l’offre de monnaie et le taux d’intérêt ne sont pas revenus à leur niveau initial.
 
-### La politique budgétaire : éviction internationale
+#### La politique budgétaire : éviction internationale
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_1.png)
 
@@ -99,9 +99,9 @@ Notons que cette politique, lors du passage de $B$ à $C$, cause l’éviction d
 
 La politique monétaire discrétionnaire est inopérante dans la recherche de l’équilibre interne. Il convient donc d’utiliser la politique budgétaire pour la recherche du plein-emploi. Par ailleurs, pour assurer l’équilibre de la balance des paiements, il suffit d’une politique monétaire neutre qui ne contrarie pas les variations de la masse monétaire induite par les entrées ou les sorties de capitaux.
 
-## Régime de changes flexibles
+### Régime de changes flexibles
 
-### La politique monétaire
+#### La politique monétaire
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_2.png)
 
@@ -146,9 +146,9 @@ $$
 
 Note : aussi, au moment de la hausse des exportations, les importations diminuent.
 
-**Idée : Le terme BP n’est pas composant de $e_r$ dans son équation.** 
+**Idée : Le terme BP n’est pas composant de $e_r$ dans son équation.**
 
-### La politique budgétaire : éviction par le taux de change
+#### La politique budgétaire : éviction par le taux de change
 
 ![Le point C ici serait le point hypothétique où la banque central augmente l’offre de monnaie,, mais dans ce cas elle n’en est pas obligee.](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_3.png)
 
@@ -188,34 +188,34 @@ Puisque la banque centrale n’as pas d’obligations de parité, on laisse le t
 
 Notons que la politique budgétaire n’est pas totalement inefficace dans la mesure où elle exerce bien un effet stimulant, mais sur le reste du monde: en raison de l’appréciation de la monnaie, la demande nette de la nation adressée à l’étranger a en effet augmenté
 
-# Les politiques avec une mobilité imparfaite des capitaux
+## Les politiques avec une mobilité imparfaite des capitaux
 
-## Mobilité imparfaite : forte et faible
+### Mobilité imparfaite : forte et faible
 
 Il existent deux degrés de mobilités de capitaux : forte et faible. Une mobilité forte est une situation où la courbe BP est dessous la courbe LM après leur coupure, de manière presque horizontale. Il convient de rappeler plutôt la mobilité parfaite qui est totalement horizontale. La mobilité faible, de sa part, est quand la courbe BP est dessus la courbe LM après leur coupure, presque verticale.
 
 Mathématiquement, on parle de mobilité forte si $k \rightarrow \infty$ et mobilité faible si $k \rightarrow 0$.
 
-## Régime de changes fixes
+### Régime de changes fixes
 
-### La politique monétaire
+#### La politique monétaire
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_4.png)
 
-Très similaire au cas de mobilité parfaite, **que la mobilité soit forte ou faible**. Une hausse de la offre monétaire entraîne une chute du taux d’intérêt, ce qui : 
+Très similaire au cas de mobilité parfaite, **que la mobilité soit forte ou faible**. Une hausse de la offre monétaire entraîne une chute du taux d’intérêt, ce qui :
 
 - estimule la production $Y$, ce qui augmente légèrement les importations et donc le déficit de la balance comérciale $BTC$
 - provoque une sortie de l’inversion étrangère et donc un déficit de la balance des capitaux $BCA$
 
-Finalement, on finit avec un déficit de la balance de paiements $BP$, donc le taux de change augmente et on est plus compétitifs. Par l’obligation de la banque centrale de rétablir la parité monétaire, elle diminue l’offre monétaire et defait tout l’effet initiale. La politique monétaire est, à nouveau, donc sans effet, soit forte ou faible la mobilité des capitaux. 
+Finalement, on finit avec un déficit de la balance de paiements $BP$, donc le taux de change augmente et on est plus compétitifs. Par l’obligation de la banque centrale de rétablir la parité monétaire, elle diminue l’offre monétaire et defait tout l’effet initiale. La politique monétaire est, à nouveau, donc sans effet, soit forte ou faible la mobilité des capitaux.
 
-### La politique budgétaire, mobilité des capitaux forte et faible
+#### La politique budgétaire, mobilité des capitaux forte et faible
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_5.png)
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_6.png)
 
-Une hausse des dépenses publiques nettes $G$ augmente la production $Y$, ce qui : 
+Une hausse des dépenses publiques nettes $G$ augmente la production $Y$, ce qui :
 
 - augmente la demande de monnaie pour les transactions et pousse le taux d’intéret à la hausse, ce qui attire les étrangers capitaux, donc une hausse des balance de capitaux BCA.
 - augmente aussi les importations, donc un déficit comérciale.
@@ -247,13 +247,13 @@ $$
 \Delta^-BP \rightarrow \Delta^+e. \text{ Action BC : } \Delta^-O_M \rightarrow \Delta^+i \rightarrow \dots \rightarrow \Delta^+BP \rightarrow \Delta^-e
 $$
 
-L’action de l’ouverture peut se voir si, après l’intervention de la banque, la production finale $Y$ est plus grande ou plus petite en comparaison à celle après la politique budgétaire. Pour la mobilité forte, on dit que ***la politique est renforcée par l’ouverture***, et ***limitée par l’ouverture*** dans le cas de la mobilité faible. 
+L’action de l’ouverture peut se voir si, après l’intervention de la banque, la production finale $Y$ est plus grande ou plus petite en comparaison à celle après la politique budgétaire. Pour la mobilité forte, on dit que ***la politique est renforcée par l’ouverture***, et ***limitée par l’ouverture*** dans le cas de la mobilité faible.
 
-## Régime de changes flexibles
+### Régime de changes flexibles
 
 (Quelque que soit le degré de mobilité, les deux leviers pol. mon. et pol. budg. sont efficaces en mobilité imparfaite + changes flexibles, et leurs efficacité sont encore renforcés par l’ouverture. Elle sont efficace plus en mobilité faible que forte, mais dans le monde réelle on s’en éloigne car le mondialisation renforce la mobilité de capitaux)
 
-### La politique monétaire
+#### La politique monétaire
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_7.png)
 
@@ -290,7 +290,7 @@ $$
 
 Cet effet est toujours le même si la mobilité est forte ou faible, parce que les effets de $BCA$ et $BTC$ sur $BP$ vont vers la même direction, différemment du cas de politique budgétaire.
 
-### La politique budgétaire, mobilité des capitaux forte et faible
+#### La politique budgétaire, mobilité des capitaux forte et faible
 
 ![untitled](ressources/03_politiques_conjoncturelles_en_economie_ouverte_untitled_8.png)
 

@@ -1,8 +1,8 @@
-# 03 // réduction d’endomorphismes
+## 03 // réduction d’endomorphismes
 
-# Rappel: changement de base
+## Rappel: changement de base
 
-## Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
+### Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
 
 Soit $E$ un espace vectoriel de dimension finie et soit $B = (e_1, e_2, \dots , e_p)$ une base de $E$. Comme annotation, si $B$ est la base canonique, on n'écrit pas un souscrit $B$ sur un vecteur, il ne faut pas mentionner la base.
 
@@ -12,7 +12,7 @@ L’objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéair
 
 Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de “$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l’algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l’équivalence d’appliquer une fonction. Multiplier est d’appliquer une fonction.
 
-## Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
+### Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
 
 Soit $E$ un espace vectoriel de dimension finie $n$. On sait que toutes les bases de $E$ ont $n$ éléments. Fixons deux bases du même ensemble $E$ : $B$ et $B'$.
 
@@ -34,9 +34,9 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 - Prenons 3 bases : $B$, $B'$, $B''$. Donc $P_{B,B''} = P_{B,B'} \cdot P_{B',B''}$.
 - $\mathbf{X} = P_{B,B'} \cdot \mathbf{X'}$, pour $\mathbf{X}$ élément de $E$ exprimé en $B$ et $\mathbf{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
 
-## Formule de changement de base
+### Formule de changement de base
 
-### Sur deux espaces vectoriels $E$ et $F$
+#### Sur deux espaces vectoriels $E$ et $F$
 
 Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \mapsto F$. Elle montre l'image de la base de départ dans la base d'arrivée. Une **matrice de passage** exprime un nouvelle base en terme d'une ancienne base toujours d'un même ensemble $E$. Il est très important de comprendre la différence entre les deux !
 
@@ -65,7 +65,7 @@ $$
 Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m’a posé de problèmes.
 4. $B$ : Mais, notons que tout cela serait le même que prendre $\mathbf{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
 
-### Sur un même espace vectoriel $E$
+#### Sur un même espace vectoriel $E$
 
 Le processus est plus simple si on parle d'un endomorphisme $E \mapsto E$ :
 
@@ -84,17 +84,18 @@ Interprétation :
 3. $P^{-1}$ : Finalement, on reprend l'image avec $B$ et on la réécrit en $\mathcal{B}'$.
 4. $B$ : Notons que tout cela serait le même si on applique la fonction nous laissant un résultat en $\mathcal{B}'$.
 
-### Matrices semblables
+#### Matrices semblables
 
 On dit que la matrice $B$ est semblable à la matrice $A$ s’il existe une matrice inversible $P ∈ M_n(K)$ telle que $B = P^{−1}AP$. Deux matrices semblables représentent le même endomorphisme, mais exprimé dans des bases différentes.
 
 - La relation "être semblable" est réflexive, symétrique et transitive.
 
-# Diagonalisation de matrices
+## Diagonalisation de matrices
 
-## Polynôme caractéristique : $P_{M,C}(\lambda) = \det(M-\lambda I)$
+### Polynôme caractéristique : $P_{M,C}(\lambda) = \det(M-\lambda I)$
 
 Le polynôme caractéristique est le polynôme unitaire (dont le coefficient du
+
 terme de plus haut degré est 1) lié à la matrice $M$ par $P_M(\lambda) = \det(M-\lambda I)$. Il est invariant sous la similarité de matrices. Par exemple :
 
 $$
@@ -120,21 +121,21 @@ Il y a des situations où il y a une “racine double”, c’est-à-dire, ou un
 
 J’ai tendance à me tromper aux calculs du polynôme caractéristique. **Si on te donne la réponse factorisée, expande-la.**
 
-## Valeur propre : $\lambda$
+### Valeur propre : $\lambda$
 
 Une fois établi notre polynôme caractéristique, les valeurs propres seront simplement les racines du polynôme. On déduit de l’exemple que elles sont $0$, $1$ et $3$.
 
-On note ici que l’ensemble de racines d’un polynôme caractéristique d’une matrice est appelé le *spectre* de $M$ et noté comme $\text{Sp}(M)$. 
+On note ici que l’ensemble de racines d’un polynôme caractéristique d’une matrice est appelé le *spectre* de $M$ et noté comme $\text{Sp}(M)$.
 
-## Sous-espace propre : $E_\lambda=\text{Ker}(M-\lambda I)$
+### Sous-espace propre : $E_\lambda=\text{Ker}(M-\lambda I)$
 
-Le sous-espace propre $E_\lambda$ est le noyau de $(M-\lambda I)$. Si $v$ appartient $E_\lambda$, alors : 
+Le sous-espace propre $E_\lambda$ est le noyau de $(M-\lambda I)$. Si $v$ appartient $E_\lambda$, alors :
 
 $$
 v \in \text{Ker}(M-\lambda I) \iff (M-\lambda I)v = 0 \iff Mv = \lambda v
 $$
 
-## Vecteur propre : $v_\lambda$
+### Vecteur propre : $v_\lambda$
 
 Un vecteur propre $v_\lambda$ associé a un valeur propre $\lambda$ est un tel vecteur qui satisfait l’équation $Mv_\lambda = \lambda v_\lambda$. Intuitivement, le vecteur propre d’un opérateur linéaire est la direction où cet opérateur fonctionne comme si c’était une escalade. En la pratique, on ne cherche pas seulement un vecteur propre, mais une base des vecteurs propres. Continuant avec l’exemple (les solutions sont des bases):
 
@@ -152,9 +153,9 @@ Notons que de chaque équation $Mv=\lambda v$, pour tous les valeurs propres de 
 
 Normalement, $(M - \lambda I)$ sera une matrice avec une seule ligne dépendante des autres. Parfois, il arrive que il y a deux ou plus, donc la solution en fait est un plan ou une structure linéaire de dimension plus grande. On peut, dans ce cas, extraire plus d’un seul vecteur base de solutions. Un plan est décrit avec une base de dimension $2$, donc on en peut extraire deux vecteur bases, par exemple.
 
-Ce dernier est utile dans le cas d’un valeur propre avec multiplicité algébrique $> 1$, voir la section de matrices non-diagonalisables. 
+Ce dernier est utile dans le cas d’un valeur propre avec multiplicité algébrique $> 1$, voir la section de matrices non-diagonalisables.
 
-## Diagonalisation en pratique : $A = PDP^{-1}$
+### Diagonalisation en pratique : $A = PDP^{-1}$
 
 Finalement, on construit notre diagonalisation qui est de base $A = PDP^{-1}$. Elle devient ce qui suit. Les couples vecteurs-valeurs doivent être dans la même colonne de leurs matrices respectives.
 
@@ -185,9 +186,9 @@ $$
 
 **Note** : la trace est une invariant de similitude. C’est-à-dire, $\text{Tr}(M)=\text{Tr}(D)$. Ceci est utile pour déterminer des valeurs dans la diagonale de $D$ qu’on ne connaît pas.
 
-# Applications
+## Applications
 
-## Puissance d’une matrice : $M^n=PD^nP^{-1}$
+### Puissance d’une matrice : $M^n=PD^nP^{-1}$
 
 Appliquer une puissance à une matrice diagonale est beaucoup plus facile en termes de computation que à une matrice non-diagonale. Particulièrement, si on reprend la matrice diagonale D de l’exemple passé…
 
@@ -216,16 +217,15 @@ M^n & = \overbrace{M \times M \times \dots \times M}^\text{n fois}
 \end{align*}
 $$
 
-## Inverse d’une matrice : $M^{-1}=PD^{-1}P^{-1}$
+### Inverse d’une matrice : $M^{-1}=PD^{-1}P^{-1}$
 
 De même avec l’opération inverse, qui est aussi un exposant $-1$. On aura besoin de la propriété $(AB)^{-1} = B^{-1} A^{-1}$, et aussi de la associativité de matrices. Le résultat final c’est que l’exposant agit sur la matrice diagonale, qui est de nouveau convenant pour les opération de puissances comme vu dans la section passée.
 
 $$
-
 M^{-1} = [(PD)(P^{-1})]^{-1} = (P^{-1})^{-1}(PD)^{-1} = PD^{-1}P^{-1}
 $$
 
-## Exponentielle d’une matrice : $e^M=Pe^DP^{-1}$
+### Exponentielle d’une matrice : $e^M=Pe^DP^{-1}$
 
 Si bien la notion de $e^M$, avec $M$ une matrice, ne fais pas du sens, on utilise plutôt l’expansion de Taylor de la fonction $e^x$. Cette dernier fait du sens car on a juste besoin d’une définition de puissances de matrices, ce qu’on a déjà vu et construit.
 
@@ -257,7 +257,7 @@ e^0 & 0 & 0 \\
 \text{Finalement, } e^M = Pe^DP^{-1}
 $$
 
-## Application aux systèmes différentiels linéaires
+### Application aux systèmes différentiels linéaires
 
 Commençons avec un exemple. On a le système d’équations différentiels ($y_i = y_i(x)$):
 
@@ -411,7 +411,7 @@ c_2e^{2x}
 \end{bmatrix}
 $$
 
-Ici, on a théoriquement fini. Si jamais on a des conditions sur $y_i(0) = c, c\in\mathbb{R}$, on peut déterminer $c_1$ et $c_2$. Disons que $y_1(0)=1$ et $y_2(0)=6$, donc : 
+Ici, on a théoriquement fini. Si jamais on a des conditions sur $y_i(0) = c, c\in\mathbb{R}$, on peut déterminer $c_1$ et $c_2$. Disons que $y_1(0)=1$ et $y_2(0)=6$, donc :
 
 $$
 \begin{cases}
@@ -426,12 +426,11 @@ c_2=2
 y_1= -e^{-3x}+2e^{2x}\\
 y_2= 4e^{-3x}+2e^{2x}
 \end{cases}
-
 $$
 
 **Théorème**. Si $M$ est une matrice diagonalisable, donc la solution générale d’un système peut être exprimé comme : $\mathbf{y} = \sum_i^n c_ie^{\lambda_i x}\mathbf{v}_i$, où $\lambda_i$ est le valeur propre associé et $\mathbf{v}_i$ est le vecteur propre associé (ou vecteur en colonne $i$ de la matrice de passage $P$).
 
-## Application aux suites récurrentes
+### Application aux suites récurrentes
 
 Rappelons que multiplier une vecteur par une matrice nous retourne un vecteur. La matrice est, dans ce sens, une sorte de fonction. Grâce à ça, on peut développer un sens de récurrence avec de matrices, particulièrement pour les suites où un prochain terme est une combinaison linéaires des termes passés. Ici, la fonction récurrente sera la matrice $M$.
 
@@ -467,11 +466,11 @@ $$
 M=PDP^{-1} \implies U_{p+1}=(PDP^{-1})U_p \implies U_p = P D^p P^{-1} U_0.
 $$
 
-La dernière expression, après avoir fait tous les produits entre vecteurs et matrices, sera une expression explicite des termes généraux de $u_p$, $v_p$ et $w_p$. 
+La dernière expression, après avoir fait tous les produits entre vecteurs et matrices, sera une expression explicite des termes généraux de $u_p$, $v_p$ et $w_p$.
 
-# Matrices non-diagonalisables
+## Matrices non-diagonalisables
 
-## Un cas particulière de matrices
+### Un cas particulière de matrices
 
 Pas toute matrice est diagonalisable, une telle matrice est dite *matrice défectueuse*. Formellement, une matrice défectueuse est une matrice carré qui n’a pas une base complète de vecteurs propres.
 

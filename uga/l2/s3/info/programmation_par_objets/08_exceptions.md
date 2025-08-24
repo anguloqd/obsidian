@@ -1,16 +1,16 @@
-# 08 // exceptions
+## 08 // exceptions
 
 [Slides de cours 8.pdf](ressources/08_exceptions_inff3_2223_cours8.pdf)
 
-# Exceptions et Java
+## Exceptions et Java
 
-## Erreurs et la solution
+### Erreurs et la solution
 
 Une exception est une sorte de “condition exceptionnelle” : un problème qui empêche la continuation de la méthode ou du bloc courant, car l'on ne dispose pas d'information suffisante dans le contexte courant pour traiter ce problème. La solution à ces exceptions est de reléguer le problème au “niveau supérieur”, i.e. le bloc appelant.
 
 **Note contextuelle**. L’ensemble d’erreurs qu’une méthode pourrait lever est dit ses “*throws*”.
 
-## Les exceptions comme des objets
+### Les exceptions comme des objets
 
 Établissons nos classes d’exemple :
 
@@ -54,7 +54,7 @@ En Java, les exceptions sont des objets qui se manipulent avec deux mots clés :
 
 Une exception est interceptée (abordée) ou pas interceptée. Si elle n’est jamais interceptée, elle montre l’erreur sur la console qui est indiqué par le mot-clé `throw`. Si elle est interceptée, elle fait tout ce qu’indique la clause `catch` et essaie de continuer avec le programme.
 
-La méthode qui contient le `throw` enverra ou “propagera” ce message à toutes les méthodes qui l’avaient appelé avant tant qu’elle n’est pas interceptée. C’est le principe de la patate chaude. Si la propagation de l’exception arrive à la méthode main, la trace de la pile des appels (i.e. ordre d’appel de méthodes) est affiché et le programme s’arrête. 
+La méthode qui contient le `throw` enverra ou “propagera” ce message à toutes les méthodes qui l’avaient appelé avant tant qu’elle n’est pas interceptée. C’est le principe de la patate chaude. Si la propagation de l’exception arrive à la méthode main, la trace de la pile des appels (i.e. ordre d’appel de méthodes) est affiché et le programme s’arrête.
 
 ```java
 public class IntroExceptions {
@@ -80,7 +80,7 @@ at cours9.IntroExceptions.main(IntroExceptions.java:85)
 */
 ```
 
-## Interception d’exceptions
+### Interception d’exceptions
 
 Pour intercepter cet exception, on utilise un bloc `try-catch`.
 
@@ -129,7 +129,7 @@ finally {
 }
 ```
 
-## L’objet `Throwable` et hiérarchie d’exceptions
+### L’objet `Throwable` et hiérarchie d’exceptions
 
 On avait dit que toute exception est un objet. Ils existent de différents types d’exceptions, mais le type le plus basique est la classe `Throwable`.
 
@@ -142,7 +142,7 @@ Hiérarchie d’exceptions
 - `RuntimeException` ou exceptions non “vérifiées” : situations qu’un programme ne peut pas anticiper et corriger.  Elle indiquent généralement une mauvaise utilisation de la méthode appelée (bug).
     - Ici, on a les exceptions `ArrayIndexOutOfBoundsException` et `NullPointerException`.
 
-### L’obligation d’interception et propagation explicite
+#### L’obligation d’interception et propagation explicite
 
 Si jamais on lance une exception de type `Exception` (exception vérifiée) qui n’est pas `RuntimeException`, **on doit forcément la propager explicitement ou l’intercepter, ou les deux**. La propagation explicite se fait à la ligne de la déclaration de la méthode, et l’interception se fait dans une des méthodes appelantes.
 

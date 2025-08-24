@@ -1,4 +1,4 @@
-# 09 // TD simulation de monte-carlo
+## 09 // TD simulation de monte-carlo
 
 Moyenne empirique : E(\bar(X)_n) = E(X_i) pour tout i.
 

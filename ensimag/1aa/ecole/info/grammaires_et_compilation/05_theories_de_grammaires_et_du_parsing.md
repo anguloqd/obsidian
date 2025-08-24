@@ -1,8 +1,8 @@
-# 05 // théories de grammaires et du parsing
+## 05 // théories de grammaires et du parsing
 
 [chap5_4up.pdf](ressources/05_theories_de_grammaires_et_du_parsing_chap5_4up.pdf)
 
-## Exo 5.3
+### Exo 5.3
 
 > [!question] ❓
 >
@@ -13,7 +13,7 @@
 
 ![untitled.jpg](ressources/02_langages_algebriques_et_bnf_untitled.jpg)
 
-## Exo 5.4
+### Exo 5.4
 
 > [!question] ❓
 >
@@ -21,7 +21,7 @@
 
 Facile à faire à partir de la réponse en haut.
 
-## Exo 5.5
+### Exo 5.5
 
 > [!question] ❓
 >

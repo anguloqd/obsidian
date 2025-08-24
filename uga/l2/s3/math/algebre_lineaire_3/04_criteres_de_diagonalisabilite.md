@@ -1,8 +1,8 @@
-# 04 // critères de diagonalisabilité
+## 04 // critères de diagonalisabilité
 
-# Vocabulaire
+## Vocabulaire
 
-## Multiplicité algébrique $\alpha_\lambda$ et géométrique
+### Multiplicité algébrique $\alpha_\lambda$ et géométrique
 
 La **multiplicité algébrique** d’un valeur propre $\lambda$ est la quantité de polynômes dont le valeur propre est racine des facteurs polynomiaux du polynôme caractéristique, **comptant les facteurs répétés**. Par exemple, dans $(\lambda-1)(\lambda-3)^2$, $\lambda=3$ a une multiplicité algébrique de $2$.
 
@@ -12,6 +12,7 @@ La **multiplicité algébrique** d’un valeur propre $\lambda$ est la quantité
 - Si $\alpha_\lambda > 1$, il y a ***au moins*** un $v_\lambda$ associé par $\lambda$. Normalement c’est plus d’un $v_\lambda$ associé.
 
 La **multiplicité géométrique** d’un valeur propre $\lambda$ est la dimension son sous-espace propre $E_\lambda$.
+
 Un règle plus facile aussi c’est qui mult. alg. $\alpha_\lambda$ $≠$ mult. géo. $\dim E_\lambda$, donc $M$ pas diagonalisable.
 
 **Théorème**. Soit $f$ endomorphe sur $\mathbb{R}^n$. Les quatre propositions suivantes sont équivalentes :
@@ -21,9 +22,9 @@ Un règle plus facile aussi c’est qui mult. alg. $\alpha_\lambda$ $≠$ mult. 
 - $\mathbb{R}^n=\oplus_i E_{\lambda_i}$
 - $\alpha_\lambda=\dim E_\lambda$, pour tout valeur propre $\lambda$.
 
-## Polynôme scindé
+### Polynôme scindé
 
-Un polynôme *scindé* est un polynôme factorisable en facteurs polynomiaux de degré $1$ sur $\mathbb{R}$. En plus, si chaque facteur polynomiaux de degré $1$ est unique, il est *simplement scindé*. 
+Un polynôme *scindé* est un polynôme factorisable en facteurs polynomiaux de degré $1$ sur $\mathbb{R}$. En plus, si chaque facteur polynomiaux de degré $1$ est unique, il est *simplement scindé*.
 
 $$
 (x^2+x+1) : \text{racines non-réelles, non-scindé.}
@@ -35,9 +36,9 @@ $$
 
 **Théorème**. Si le polynôme caractéristique est scindé, la matrice est trigonalisable (possiblement diagonalisable). En plus, s’il est simplement scindé, il est forcément diagonalisable. Par conséquence, **s’il n’est pas scindé, il n’est pas ni trigonalisable ni diagonalisable**.
 
-# Polynôme minimal : $P_{M,M}(X)$
+## Polynôme minimal : $P_{M,M}(X)$
 
-## Déduire diagonalisabilité sans la lancer
+### Déduire diagonalisabilité sans la lancer
 
 Le polynôme minimal $P_{M,M}(X)$ d’une matrice $M$ est le polynôme annulateur de $M$ de plus petit degré ayant les mêmes racines du polynôme caractéristique $P_{M,C}(X)$. Par exemple :
 
@@ -73,7 +74,7 @@ P_{M,C}(M)=(M-I)(M-2I)^2 =
 \end{pmatrix}^2=0
 $$
 
-Dans le cas précédent, $P_{M,M}(X) = P_{M,C}(X)$, car l’autre polynôme n’est pas annulateur. 
+Dans le cas précédent, $P_{M,M}(X) = P_{M,C}(X)$, car l’autre polynôme n’est pas annulateur.
 
 Note : la matrice identité $I$ est l’unité dans le monde des matrices.
 

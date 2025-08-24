@@ -1,34 +1,35 @@
-# 05 // threads (en Java)
+## 05 // threads (en Java)
 
 [systemes_cours5_2223.pdf](ressources/05_threads_(en_java)_systemes-cours5-2223.pdf)
 
-# Threads et synchronisation en Java
+## Threads et synchronisation en Java
 
-## Introduction aux threads
+### Introduction aux threads
 
-### Concept fondamental
+#### Concept fondamental
 
 Un thread, également appelé « processus léger », constitue une unité d'exécution au sein d'un processus. Un processus peut contenir plusieurs threads qui partagent tous le même espace mémoire, permettant ainsi un accès commun aux données et ressources du processus parent. Chaque thread possède néanmoins son propre pointeur d'exécution (Program Counter), lui conférant une progression indépendante dans le code.
 
-### Parallélisation des traitements
+#### Parallélisation des traitements
 
 Les threads permettent de paralléliser des traitements au sein d'une application. Par défaut, toute application Java s'exécute avec au moins un thread principal et un ou plusieurs threads dédiés au ramasse-miettes (garbage collector). Cette approche présente l'avantage de permettre l'exécution simultanée de plusieurs tâches, mais consomme davantage de ressources système.
 
-## Structure et contenu d'un thread
+### Structure et contenu d'un thread
 
-### Composants essentiels
+#### Composants essentiels
 
 Chaque thread contient du code ou un algorithme à exécuter, défini dans la méthode `public void run()`. Cette méthode doit être redéfinie selon les besoins spécifiques du thread. Le démarrage s'effectue par l'appel de la méthode `public void start()`.
 
-### Cycle de vie
+#### Cycle de vie
 
 Un thread vit jusqu'à la fin de l'exécution de sa méthode `run()`. Plusieurs mécanismes permettent de contrôler son état d'exécution :
+
 - `void sleep(int millisec)` endort temporairement le thread
 - `void wait()` met le thread en attente jusqu'à réveil explicite
 
-## Création des threads
+### Création des threads
 
-### Dérivation de la classe Thread
+#### Dérivation de la classe Thread
 
 La première approche consiste à dériver la classe `Thread` et redéfinir la méthode `run()` :
 
@@ -47,7 +48,7 @@ MonThread t = new MonThread();
 t.start(); // exécute la méthode run() en parallèle
 ```
 
-### Implémentation de l'interface Runnable
+#### Implémentation de l'interface Runnable
 
 La seconde approche implémente l'interface `Runnable` :
 
@@ -67,9 +68,9 @@ Thread t = new Thread(tache);
 t.start(); // exécute la méthode run() de MaTache en parallèle
 ```
 
-## Méthodes de la classe Thread
+### Méthodes de la classe Thread
 
-### Méthodes statiques
+#### Méthodes statiques
 
 Les méthodes statiques agissent sur le thread qui les exécute :
 
@@ -77,7 +78,7 @@ Les méthodes statiques agissent sur le thread qui les exécute :
 - `Thread.currentThread()` retourne une référence vers le thread courant
 - `Thread.yield()` indique au planificateur que le thread peut céder son tour d'exécution
 
-### Méthodes d'instance
+#### Méthodes d'instance
 
 Les méthodes d'instance permettent de contrôler un thread spécifique :
 
@@ -85,7 +86,7 @@ Les méthodes d'instance permettent de contrôler un thread spécifique :
 - `t.join()` bloque le thread appelant jusqu'à la terminaison du thread `t`
 - `t.yield()` indique que le thread `t` peut céder son tour d'exécution
 
-## Cycle de vie d'un thread
+### Cycle de vie d'un thread
 
 Les threads traversent plusieurs états durant leur existence :
 
@@ -96,26 +97,28 @@ Les threads traversent plusieurs états durant leur existence :
 5. **Mort** : fin de l'exécution de la méthode `run()`
 
 Les transitions entre états s'effectuent par :
+
 - `yield()` : passage d'en cours d'exécution à exécutable
 - `wait()`, `join()`, `sleep()` : passage vers l'état en attente
 - `notify()`, `notifyAll()`, fin du délai : réveil vers l'état exécutable
 
-## Synchronisation par moniteurs
+### Synchronisation par moniteurs
 
-### Concept de moniteur
+#### Concept de moniteur
 
 La synchronisation s'effectue par le moniteur d'un objet, structure composée d'un verrou et d'une liste d'attente. Tout objet Java possède un moniteur intrinsèque.
 
-### Méthodes de synchronisation
+#### Méthodes de synchronisation
 
 Pour un objet `o` donné :
+
 - `o.wait()` bloque le thread appelant et le place dans la file d'attente du moniteur de `o`
 - `o.notify()` réveille un thread en attente (choix non déterministe)
 - `o.notifyAll()` réveille tous les threads en attente
 
 Ces méthodes peuvent lever une `InterruptedException` et doivent être appelées dans un contexte synchronisé.
 
-## Interruption des tâches
+### Interruption des tâches
 
 Un thread bloqué peut être interrompu via la méthode `void interrupt()`. Cette interruption génère une `InterruptedException` dans les méthodes bloquantes :
 
@@ -137,9 +140,9 @@ Thread.sleep((long) (Math.random()*200));
 t.interrupt();
 ```
 
-## Exclusion mutuelle avec synchronized
+### Exclusion mutuelle avec synchronized
 
-### Principe fondamental
+#### Principe fondamental
 
 Le mot-clé `synchronized` garantit l'exclusion mutuelle en verrouillant l'accès à une ressource partagée :
 
@@ -178,11 +181,12 @@ class Compte {
 }
 ```
 
-### Utilisations du mot-clé synchronized
+#### Utilisations du mot-clé synchronized
 
 Le mot-clé `synchronized` peut s'utiliser de deux manières :
 
 **Devant une méthode** (verrouille l'objet sur lequel est appelée la méthode) :
+
 ```java
 class Compte {
     public volatile int value;
@@ -193,6 +197,7 @@ class Compte {
 ```
 
 **En tant que bloc** :
+
 ```java
 class Compte {
     public volatile int value;
@@ -206,7 +211,7 @@ class Compte {
 }
 ```
 
-## Problème d'interblocage
+### Problème d'interblocage
 
 L'imbrication de blocs synchronisés peut créer des situations d'interblocage. L'exemple suivant illustre ce risque :
 
@@ -236,17 +241,18 @@ class MonThread2 extends Thread {
 
 Si `MonThread1` acquiert le verrou `a` tandis que `MonThread2` acquiert le verrou `b`, les deux threads se retrouvent en attente mutuelle.
 
-## Attente passive
+### Attente passive
 
-### Mécanisme wait/notify
+#### Mécanisme wait/notify
 
 La méthode `wait()` appelée sur un objet `o` met le thread appelant en attente. Cette méthode doit être appelée en exclusion mutuelle, typiquement dans un bloc `synchronized(o)`. Elle peut lever une `InterruptedException`.
 
 Pour réveiller un thread en attente, un autre thread doit appeler :
+
 - `o.notify()` : réveille un thread en attente (choix non contrôlable)
 - `o.notifyAll()` : réveille tous les threads en attente
 
-## Sémaphores en Java
+### Sémaphores en Java
 
 Java fournit une classe `java.util.concurrent.Semaphore` pour implémenter des sémaphores :
 
@@ -265,9 +271,9 @@ sem.release();
 
 La méthode `tryAcquire()` accepte également un délai d'attente en paramètre.
 
-## Limites du mécanisme synchronized
+### Limites du mécanisme synchronized
 
-### Contraintes structurelles
+#### Contraintes structurelles
 
 Le mécanisme `synchronized` présente plusieurs limitations :
 
@@ -279,9 +285,9 @@ Le mécanisme `synchronized` présente plusieurs limitations :
 
 4. **Absence de gestion d'équité** : le thread attendant depuis le plus longtemps n'est pas nécessairement servi en premier
 
-## ReentrantLock
+### ReentrantLock
 
-### Extension des capacités de synchronisation
+#### Extension des capacités de synchronisation
 
 La classe `ReentrantLock` offre des fonctionnalités étendues par rapport aux moniteurs et au mot-clé `synchronized` :
 
@@ -314,7 +320,7 @@ class Y {
 }
 ```
 
-### Conditions multiples
+#### Conditions multiples
 
 `ReentrantLock` permet d'obtenir plusieurs conditions (files d'attente) sur un même verrou :
 
@@ -344,9 +350,9 @@ class Z {
 }
 ```
 
-## Autres mécanismes de synchronisation
+### Autres mécanismes de synchronisation
 
-### Barrières de synchronisation
+#### Barrières de synchronisation
 
 Java propose des classes spécialisées pour des patterns de synchronisation avancés :
 

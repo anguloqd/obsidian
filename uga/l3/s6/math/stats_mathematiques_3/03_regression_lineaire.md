@@ -1,14 +1,14 @@
-# 03 // régression linéaire
+## 03 // régression linéaire
 
 [slides intro reglin stat3 annote.pdf](ressources/03_regression_lineaire_slides_intro_reglin_stat3_annote.pdf)
 
 [slides reglin inf annote.pdf](ressources/03_regression_lineaire_slides_reglin_inf_annote.pdf)
 
-# Régression linéaire - point de vue descriptif
+## Régression linéaire - point de vue descriptif
 
 Dans certaines situations, on est amené à étudier deux caractères distincts d'une même population. On peut par exemple considérer la taille ($x$) et le poids ($y$) d'un ensemble d'individus. L'objectif principal de l'étude est de déterminer l'éventuel lien entre les deux variables $x$ et $y$.
 
-## Nuage de points
+### Nuage de points
 
 On relève le couple (taille, poids) de 8 individus. On résume les données dans le tableau suivant.
 
@@ -26,7 +26,7 @@ Par rapport à la forme de la nuage de points, d'une manière générale, trois 
 - forme allongée mais non rectiligne : les points ne sont pas alignés mais ont un profil ordonné
 - forme quelconque
 
-## Ajustement affine (droite de régression linéaire)
+### Ajustement affine (droite de régression linéaire)
 
 On s'intéresse plus particulièrement au premier cas. Procéder à un ajustement affine revient à chercher une droite $D$ d'équation
 
@@ -36,7 +36,7 @@ $$
 
 qui passe au plus proche des points du nuage de points. Cette droite nous servira donc d'approximation. Bien évidemment, suivant la méthode utilisée pour la construire, on peut obtenir différentes droites. La méthode la plus utilisée car donnant la meilleure approximation est la méthode des moindres carrés.
 
-## La méthode des moindres carrés
+### La méthode des moindres carrés
 
 L'idée de cette méthode est de chercher la droite qui minimise la somme des carrés des écarts verticaux entre la droite et les points du nuage, les résidus.
 
@@ -64,7 +64,7 @@ $$
 
 Le minimum de $M(\beta_1, \beta_0)$ s'obtient en annulant les dérivées partielles par rapport à $\beta_1$ et $\beta_0$.
 
-## Coefficient de corrélation linéaire
+### Coefficient de corrélation linéaire
 
 Notons que la méthode des moindres carrés peut être utilisée pour n'importe quelle série double. On peut tout à fait obtenir une droite de régression dans le premier cas. Pour s'assurer de façon objective (et non purement visuelle) que l'ajustement est valide, on considère un autre paramètre de la série : le coefficient de corrélation $r$
 
@@ -80,11 +80,11 @@ $$
 
 C'est cette dernière assertion qui nous permet de dire si la droite de régression est proche des points. En pratique, une régression linéaire est légitime si $r > 0.9$ ou si $r < -0.9$.
 
-# Régression linéaire - point de vue inférentiel
+## Régression linéaire - point de vue inférentiel
 
-## Introduction
+### Introduction
 
-### Somme des carrés des écarts
+#### Somme des carrés des écarts
 
 On peut supposer que $x$ et $y$ sont les observations d'un échantillon des variables $X$ et $Y$. On écrit donc le modèle
 
@@ -122,7 +122,7 @@ $$
 SCE = \sum_i (\hat{Y}_i - Y_i)^2
 $$
 
-### Hypothèses sur les termes d'erreur $ε$
+#### Hypothèses sur les termes d'erreur $ε$
 
 - Indépendance des erreurs : les $ε₁, ε₂, ⋯, εₙ$ sont indépendants.
 - Exogénéité : les variables explicatives $(X₁, ⋯ Xₙ)$ ne sont pas corrélées au terme d'erreur. De plus, les erreurs sont centrées $E(εᵢ) = 0$
@@ -131,7 +131,7 @@ $$
 
 Lemme. Les hypothèses du modèle montrent que $Yᵢ = β₁X + β₀ + εᵢ$ suit une loi normale $N(β₁Xᵢ + β₀, σ²)$. De plus, les $Yᵢ$ sont indépendants.
 
-### Équation de la variance
+#### Équation de la variance
 
 D'après les hypothèses précédentes, il vient que
 
@@ -156,7 +156,7 @@ $$
 SCT = SCM + SCE
 $$
 
-### Coefficient de détermination
+#### Coefficient de détermination
 
 Le coefficient de détermination est le rapport de variance de $Y$ expliquée par la régression :
 
@@ -166,7 +166,7 @@ $$
 
 Le coefficient $R²$ est donc la proportion de variance de $Y$ expliquée par le modèle.
 
-### Distribution de $β̂₁$
+#### Distribution de $β̂₁$
 
 La méthode des moindres carrés prend le parti de ne pas considérer d'erreur sur les valeurs $xᵢ$ prises par $X$. Il vient qu'on peut considérer l'ensemble de valeurs $Xᵢ = xᵢ$ qui seront non aléatoires et le modèle équivalent :
 
@@ -251,9 +251,9 @@ $$
 
 Si le nombre de degrés de liberté est assez élevé (plus de trente), on peut faire une approximation de la loi $t$ de Student par une loi $\mathcal N(0, 1)$.
 
-## Intervalles de confiance
+### Intervalles de confiance
 
-### Intervalles de confiances des coefficients de la régression
+#### Intervalles de confiances des coefficients de la régression
 
 Le dernier théorème de la section précédente, donne les distributions suivantes.
 
@@ -277,7 +277,7 @@ $$
 
 où la valeur $q_{t_{n-2}}^{1-\alpha/2}$ est le quantile d'ordre $1 - α/2$ d'une loi de Student à $n - 2$ degrés de liberté (obtenu de la table de la loi de Student).
 
-### Intervalles pour les prévisions
+#### Intervalles pour les prévisions
 
 Lorsque nous substituons dans l'équation de la droite de régression une valeur donnée de $X$, soit $X₀$, nous obtenons une certaine valeur que nous notons :
 
@@ -293,10 +293,12 @@ Cette valeur de $X₀$ peut être utilisée à deux fins, car elle estime deux c
 Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de limites de confiance.
 
 1. Dans le premier cas, lorsque nous voulons estimer la moyenne de la variable $Y$ lorsque la valeur de $X$ demeure fixée à $X₀$, nous utilisons l'intervalle à $100α\%$ de confiance suivant :
-    
+
     $$
     \hat{Y}_0 \pm q_{t_{n-2}}^{1-\alpha/2}\sqrt{s^2_\varepsilon\left(\frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)}
-    $$
+
+$$
+
     
     où la valeur $q_{t_{n-2}}^{1-\alpha/2}$ est le quantile d’ordre $1 − α/2$ d’une loi de Student à $n − 2$ degrés de liberté.
     
@@ -306,61 +308,76 @@ Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de l
     
     $$
     a_i = \frac{X_i - \bar{X}}{\sum_{i=1}^n (X_i - \bar{X})^2}
-    $$
     
+$$
+
     Nous avons
     
     $$
     \hat{\beta}_1 = \sum_{i=1}^n a_i Y_i
-    $$
+    
+
+$$
     
     et
     
     $$
     \sum_{i=1}^n a_i = 0, \sum_{i=1}^n a_i^2 = \frac{1}{\sum_{i=1}^n (X_i - \bar{X})^2}, \sum_{i=1}^n a_i X_i = 1
-    $$
     
+$$
+
     nous obtenons,
     
     $$
     \hat{Y}_0 = \bar{Y} + \hat{\beta}_1 (X_0 - \bar{X})
-    $$
+    
+
+$$
     
     Puisque
     
     $$
     \hat{\beta}_1 = \sum_{i=1}^n a_i Y_i
-    $$
     
+$$
+
     nous avons,
     
     $$
     \hat{\beta}_1 = \sum_{i=1}^n a_i (\beta_1 X_i + \beta_0 + \varepsilon_i)
-    $$
+    
+
+$$
     
     Il suit des égalités sur les sommes des $a_i$ que
     
     $$
     \hat{\beta}_1 = \beta_1 + \sum_{i=1}^n a_i \varepsilon_i
-    $$
     
+$$
+
     Par conséquent,
     
     $$
     \begin{align} Var(\hat{Y}_0) &= Var(\bar{Y} + \hat{\beta}_1 (X_0 - \bar{X})) \\ &= Var(\beta_0 + \beta_1 \bar{X} + \bar{\varepsilon} + (X_0 - \bar{X})(\beta_1 + \sum_{i=1}^n a_i \varepsilon_i)) \\ &= Var(\bar{\varepsilon} + (X_0 - \bar{X})\sum_{i=1}^n a_i \varepsilon_i) \end{align}
-    $$
+    
+
+$$
     
     On voit alors que le coefficient de $ε_i$ est
     
     $$
     \frac{1}{n} + (X_0 - \bar{X})a_i
-    $$
     
+$$
+
 2. Dans le second cas, il s'agit de prévoir, pour un individu donné, la valeur de $Y$ qui lui est propre, sachant que sa valeur en $X$ est $X₀$. L'intervalle est
-    
+
     $$
     \hat{Y}_0 \pm q_{t_{n-2}^{1-\alpha/2}}\sqrt{s^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum_i(X_i - \bar{X})^2}\right)}
-    $$
+
+$$
+
     
     ### Preuve
     
@@ -368,25 +385,29 @@ Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de l
     
     $$
     Var(\hat{\beta}_0 + \hat{\beta}_1 X_0 + \varepsilon) = Var(\hat{\beta}_0 + \hat{\beta}_1 X_0) + Var(\varepsilon)
-    $$
     
+$$
+
     De manière analogue à la preuve précédente,
     
     $$
     Var(\hat{\beta}_0 + \hat{\beta}_1 X_0 + \varepsilon) = \sigma^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
-    $$
+    
+
+$$
     
     qui peut être estimée par
     
     $$
     s^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
-    $$
+    
+$$
 
-## Tests sur la pente de la droite
+### Tests sur la pente de la droite
 
 Pour faire simple, les tests $F$ de Fischer et $t$ de Student testent l'hypothèse $H₀$ sous laquelle le coefficient $β₁$ est nul, contre $β₁$ est non nul (ce qui permet d'affirmer que $X$ explique $Y$, au moins en partie).
 
-### Test de Student
+#### Test de Student
 
 Notons l'hypothèse nulle
 
@@ -418,7 +439,7 @@ $$
 \frac{|\hat{\beta}_1|}{s_{\hat{\beta}_1}} \geq q_{t_{n-2}^{1-\alpha/2}}
 $$
 
-### Table d'ANOVA
+#### Table d'ANOVA
 
 L'analyse de la variance, souvent présentée sous forme d'un tableau, permet d'éclairer sur l'influence de la variable $X$ sur la variable $Y$ grâce à l'étude de la décomposition de la variance. Notons, encore, l'hypothèse nulle
 
@@ -456,11 +477,11 @@ Dans ce cadre, on voit qu'on peut utiliser le test de $t$ de Student pour le rap
 
 Dans le cadre d'une régression multiple (sur plusieurs variables explicatives), le test de Fischer teste l'effet global des variables sur la variable $Y$, les tests de Student testent l'effet de chaque variable explicative sur $Y$.
 
-## Tests sur régression linéaire multiple
+### Tests sur régression linéaire multiple
 
 La question qu'on se pose est de savoir si la variable réponse est expliquée par les variables explicatives dans leur globalité, ou par telle ou telle variable explicative. Cela se traduit, mathématiquement, par la non nullité des coefficients de la régression. En effet, si le coefficient d'une des variable explicative est nul ou presque nul, cette variable explicative fait peu varier la régression linéaire, elle n'influence donc pas la variable réponse. Plaçons-nous dans le cadre de la régression linéaire multiple.
 
-### Les tests $t$ de Student
+#### Les tests $t$ de Student
 
 Les tests de Student testent la nullité de chaque coefficient de la régression linéaire. Ainsi, on saura quelles variables explicatives ont un effet sur la variable expliquée.
 
@@ -471,11 +492,16 @@ Pour prendre une décision :
 - Si la p-value est inférieure au un niveau $α$ choisi (en général $0.05$), alors on rejette l'hypothèse nulle et on considère que la variable $X_i$ a un effet sur la variable réponse.
 - Si la p-value est supérieure au niveau $α$ choisi (en général $0.05$), alors on ne doit pas rejeter l'hypothèse nulle. La variable $X_i$ n'a pas d'effet sur la variable réponse.
 
-### Les tests $F$ de Fisher - ANOVA
+#### Les tests $F$ de Fisher - ANOVA
 
 Le test de Fisher teste l'effet de l'ensemble des variables explicatives sur la variable réponse. Ainsi, on saura si la variable réponse est expliquée par les variables explicatives. On appelle cela une ANalyse de la (Of) VAriance.
 
-L'hypothèse nulle du test est $$H₀ = \text{"Les variables } X_i \text{ n'ont pas d'effet, dans leur globalité, sur la variable réponse"} \\ = \text{"la variance de l'erreur est très forte face à la variance expliquée par le modèle"}$$
+L'hypothèse nulle du test est
+
+$$
+H₀ = \text{"Les variables } X_i \text{ n'ont pas d'effet, dans leur globalité, sur la variable réponse"} \\ = \text{"la variance de l'erreur est très forte face à la variance expliquée par le modèle"}
+$$
+
 Pour prendre une décision :
 
 - Si la p-value est inférieure au un niveau $α$ choisi (en général $0.05$), alors on rejette l'hypothèse nulle et on considère que les variable $X_i$ ont un effet global sur la variable réponse.

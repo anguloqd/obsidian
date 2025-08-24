@@ -1,10 +1,10 @@
-# 01 // approximations des grands échantillons
+## 01 // approximations des grands échantillons
 
-# Convergence, grands échantillons, approx. gaussiennes
+## Convergence, grands échantillons, approx. gaussiennes
 
-## Inégalités : Markov et Bienaymé-Tchebychev
+### Inégalités : Markov et Bienaymé-Tchebychev
 
-### Markov
+#### Markov
 
 L’inégalité de Markov est une majoration d’une V.A. réelle (y incluse V.A entière). Soit $*X*$une variable aléatoire réelle, supposée presque sûrement positive ou nulle, et avec une espérance définie. La première formulation est la plus commune. Si $a>0$ :
 
@@ -18,9 +18,9 @@ $$
 \mathbb{P}(|X| \ge a) \le \frac{\mathbb{E}[f(|X|)]}{f(a)}
 $$
 
-### Bienaymé-Tchebychev
+#### Bienaymé-Tchebychev
 
-Celle-ci est juste un conséquence de l’inégalité de Markov, sous condition que $X$ ait une variance. Prenons la version du cours de l’inégalité de Markov, fixons une autre V.A. réelle $Y = (X - \mathbb{E}[X])$ et $f(x) = x^2$. Notons que le $(X-\mathbb{E}[X])$ est mis au carré à droite de l’inégalité mais pas à gauche. Donc : 
+Celle-ci est juste un conséquence de l’inégalité de Markov, sous condition que $X$ ait une variance. Prenons la version du cours de l’inégalité de Markov, fixons une autre V.A. réelle $Y = (X - \mathbb{E}[X])$ et $f(x) = x^2$. Notons que le $(X-\mathbb{E}[X])$ est mis au carré à droite de l’inégalité mais pas à gauche. Donc :
 
 $$
 \begin{align*}
@@ -41,11 +41,11 @@ $$
 \mathbb{P}(|X - \mathbb{E}[X]| \ge a\sigma) \le \frac{1}{a^2} \iff \mathbb{P}(|X - \mathbb{E}[X]| \le a\sigma) \ge 1- \frac{1}{a^2}
 $$
 
-## Différent types de convergence
+### Différent types de convergence
 
 Pour toutes les types de convergence qui suit, on parlera d’une suite $(X_n)$ de variables aléatoires.
 
-### Convergence en loi vers $X$
+#### Convergence en loi vers $X$
 
 C’est le cas si la suite des répartitions de $X$, $\big(F_{X_n}\big)$, converge à une fonction existante, appelée $F_{X_\infty}$ ou tout simplement $F_X$. Notons que les propositions avec les fonctions génératrice $\mathcal{G}_{X_n}$ et $\mathbb E[f(X_n)]$ sont analogiques.
 
@@ -55,7 +55,7 @@ $$
 \end{array}
 $$
 
-### Convergence en probabilité vers $X$
+#### Convergence en probabilité vers $X$
 
 C’est le cas si la différence entre $X_n$ et $X$ devient arbitrairement petite le plus $n$ se rapproche de l’infini (1ère proposition).
 
@@ -63,9 +63,9 @@ $$
 \forall\varepsilon >0, \lim_{n\rightarrow\infty} \mathbb P(|X_n-X| < \varepsilon)=1 \iff \lim_{n\rightarrow\infty}\mathbb P(|X_n-X|>\varepsilon)=0
 $$
 
-La différence avec la convergence en loi est que, pour la conv. en loi il se peut que la proba de la différence entre suite-limite ne soit pas plus petite qu’un epsilon particulier. 
+La différence avec la convergence en loi est que, pour la conv. en loi il se peut que la proba de la différence entre suite-limite ne soit pas plus petite qu’un epsilon particulier.
 
-### Convergence en moyenne d’ordre $p$ vers $X$
+#### Convergence en moyenne d’ordre $p$ vers $X$
 
 C’est le cas si le moment d’ordre $p$ de $X_n$ existe pour tout $n$, et le moment centré d’ordre $p$ devient $0$ à la limite.
 
@@ -73,7 +73,7 @@ $$
 \mathbb E[X_n^p] \in \mathbb{R}\text{\hspace{6pt} et } \lim _{n\rightarrow \infty} \mathbb E[|X_n-X|^p]=0
 $$
 
-### Convergence *presque-sûrement* vers $X$
+#### Convergence *presque-sûrement* vers $X$
 
 $$
 \begin{array}{lc}
@@ -96,7 +96,7 @@ Si $X_n → X$ presque sûrement et $g$ est une fonction continue sur $\mathbb{R
 - **Théorème de Slutsky “en deux dimensions/variables”**.
 Si $X_n → X$ presque sûrement et $Y_n → Y$ presque sûrement et $g$ est une fonction continue sur $\mathbb{R}^2$ alors $g(X_n, Y_n) → g(X, Y)$ presque sûrement.
 
-### Relations entre les convergences
+#### Relations entre les convergences
 
 Ces quatre définitions de convergence ont une relation d’implication utile et intéressante :
 
@@ -114,9 +114,9 @@ $$
 
 En outre, la convergence en probabilité est équivalente à la convergence en loi dans le cas de la convergence vers une constante. Notons aussi que, dans le cas général, il n’y a pas, entre convergence en m.q. et convergence p.s., de domination de l’une sur l’autre.
 
-# Loi des grands nombres (faible et forte)
+## Loi des grands nombres (faible et forte)
 
-## Préparation et version faible
+### Préparation et version faible
 
 Pour montrer les deux versions de la loi des grands nombres, on aura besoin de ce qui suit :
 
@@ -139,6 +139,7 @@ $$
 $$$$
 
 \text{En plus, }\lim_{n \rightarrow \infty} \mathbb{P} \left(\bar{X}_n -\mathbb{E}[X_i] \ge \epsilon \right)  \le \underbrace{\lim_{n \rightarrow \infty} \mathbb{P} \left(\left|\bar{X}_n -\mathbb{E}[X_i] \right| \ge \epsilon \right)}_0
+
 $$$$
 \text{Finalement, } 0 \le \underbrace{\lim_{n \rightarrow \infty} \mathbb{P} \left(\bar{X}_n -\mathbb{E}[X_i]\ge \epsilon\right)}_0 \le 0.
 $$

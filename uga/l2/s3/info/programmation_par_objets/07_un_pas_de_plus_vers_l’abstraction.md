@@ -1,14 +1,14 @@
-# 07 // un pas de plus vers l’abstraction
+## 07 // un pas de plus vers l’abstraction
 
 [Slides de cours 7.pdf](ressources/07_un_pas_de_plus_vers_l’abstraction_inff3_2223_cours7.pdf)
 
-# Le mot-clé `final`
+## Le mot-clé `final`
 
-## `final` : attribut ou méthode *immodifiable*
+### `final` : attribut ou méthode *immodifiable*
 
 Il marche similairement aux modificateurs d’accès, et on peut l’utiliser avec des classes, attributs et méthodes. En général, il veut dire “cela ne peut pas être changé”.
 
-Avec les attributs, normalement on les utilise avec les attributs qui sont aussi `static`, càd., qui sont des “constantes globales” parmi les objets d’une certaine classe ; mais on peut utiliser `final` tout seul aussi. Quand on utilise ce dernier, on ne peut pas changer la référence du nom d’attribut, mais effectivement on peut changer internement l’attribut. 
+Avec les attributs, normalement on les utilise avec les attributs qui sont aussi `static`, càd., qui sont des “constantes globales” parmi les objets d’une certaine classe ; mais on peut utiliser `final` tout seul aussi. Quand on utilise ce dernier, on ne peut pas changer la référence du nom d’attribut, mais effectivement on peut changer internement l’attribut.
 
 ```java
 public classe CompteEuro {
@@ -25,11 +25,11 @@ Une classe `final` ne peut pas être étendue, càd. on n’en peut pas hériter
 
 En règle générale, il faut avoir de bonnes raisons de déclarer des méthodes ou classes finales, car on ne peut rien changer après.
 
-# Polymorphisme
+## Polymorphisme
 
 Après le notions de classes et d'héritage, le polymorphisme est la plus importante notion. Le polymorphisme est la capacité d'un code à être utilisé avec différents types, conséquence de l’héritage.
 
-## Type de la référence et type réel, liaison dynamique
+### Type de la référence et type réel, liaison dynamique
 
 Les références (noms de variables) ont un type, et l’objet référencé a un type aussi. Avec l’héritage, on peut avoir un type différent pour chaque.
 
@@ -59,9 +59,9 @@ public static void main(String[] args){
 // "méthode de Point3D"
 ```
 
-Si jamais on appelle une méthode de `p` de type super-classe `Point`, on va aller exécuter celle référencée par `Point3D`. Cela cause des différences si on l’a redéfinie dans la sous-classe, comme vu dans l’exemple précédent. 
+Si jamais on appelle une méthode de `p` de type super-classe `Point`, on va aller exécuter celle référencée par `Point3D`. Cela cause des différences si on l’a redéfinie dans la sous-classe, comme vu dans l’exemple précédent.
 
-**Si la méthode appelée existe dans la sous-classe mais pas dans la super-classe, Java va planter. Ça implique aussi le constructeur !!!!!!!**  
+**Si la méthode appelée existe dans la sous-classe mais pas dans la super-classe, Java va planter. Ça implique aussi le constructeur !!!!!!!**
 
 Une autre chose : **le cast ne transforme pas le type d’un objet**. Le cast est juste une indication au compilateur de “voir” l’objet comme le type casté. Notons que si on décide de voir un point `p` comme un `Point3D` ça pose pas de problème jusqu’à qu’on veut accéder au point `z` (parce que ce point n’existe pas, on n’a jamais appelé le constructeur pour initialiser le point `z`).
 
@@ -96,7 +96,7 @@ class Test {
 }
 ```
 
-## Transtypage descendant
+### Transtypage descendant
 
 La transtypage ascendant est la situation ou le fils hérite le type de son père. Le transtypage descendant est un peu pareil : on force un père d’avoir le même type que son fils.
 
@@ -126,9 +126,9 @@ class Point {
 }
 ```
 
-# Classes et méthodes abstraites
+## Classes et méthodes abstraites
 
-## `abstract` : des catégories trop générales
+### `abstract` : des catégories trop générales
 
 Pour rappeler, l’héritage nous permet de factoriser le code (sortir les parties “communes” des termes ou des éléments. Les éléments sont des classes, dans ce cas).
 
@@ -174,9 +174,9 @@ Ici, la classe `Forme` est trop abstraite, jusqu’au point que définir la mét
 
 Les classes abstraite ne peuvent pas être instanciées. Les méthodes abstraites n’ont pas du contenu dedans, elles sont vides. Une classe qui possède au moins une méthode abstraite doit être déclaré abstraite.
 
-# Interfaces
+## Interfaces
 
-## `interface` : une sorte de classe que de méthodes/constantes
+### `interface` : une sorte de classe que de méthodes/constantes
 
 Pensons à la notion de “héritage multiple”. Imaginons deux classes A et B avec une seule méthode truc(), et maintenant C va hériter (`extends`) au même temps de A et B, mais lequel méthode ? truc() de A ou truc() de B ? C’est pour ça que l’héritage multiple n’existe pas.
 
@@ -233,7 +233,7 @@ class Personne {
 }
 ```
 
-## Généralités sur les interfaces et les classes abstraites
+### Généralités sur les interfaces et les classes abstraites
 
 Une interface peut seulement contenir des signatures de méthodes (**pas de corps ni de constructeurs**) et, plus rarement, des constantes (attributs **forcément déclarés `static final`**).
 
@@ -275,15 +275,15 @@ Il faudrait mentionner quelques faits par rapport aux interfaces contres les cla
 - Une interface peut être implémentée par une ou plusieurs classes.
 - Une interface ne peut pas hériter d'une classe.
 
-## Types d’interfaces
+### Types d’interfaces
 
 Ils existent deux utilisations des interfaces :
 
 - Interfaces classiques : vraiment ajoutent la signature des méthodes, comme `Comparable` (qui ajoute la signature de `.compareTo()`).
 - Interfaces de “balisage” : sont des interface vide qui juste indique à travers leurs noms et leurs type hérités une propriété des classes qui l’implémentent, comme `Cloneable` (qui indique qu’il est légal d’utiliser `.clone()` avec telle classe),
 
-# Sur l’abstraction et l’implémentation...
+## Sur l’abstraction et l’implémentation…
 
-## “Non finies”
+### “Non finies”
 
 Les classes abstraites et interfaces sont “non-finies”. Si on déclare une classe “finie” il faut que les méthodes des abstraites et interfaces soient définitivement définis !!

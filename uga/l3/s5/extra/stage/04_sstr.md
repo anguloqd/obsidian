@@ -1,12 +1,12 @@
-# 04 // sstr
+## 04 // sstr
 
-# SSTR : Synthetic Season-Trend-Residual, un module pour les séries synthétiques
+## SSTR : Synthetic Season-Trend-Residual, un module pour les séries synthétiques
 
 Ce module SSTR permet de générer des séries temporelles synthétiques avec des composantes de tendance, saisonnalité et résidus contrôlées. Il est particulièrement utile pour tester les performances d'algorithmes de détection de ruptures comme BEAST, car on connaît la position exacte des vraies ruptures.
 
-## API
+### API
 
-### Classe `SSTR`
+#### Classe `SSTR`
 
 ```python
 import numpy as np
@@ -212,7 +212,7 @@ class SSTR:
         )
 ```
 
-### Classe `Trend`
+#### Classe `Trend`
 
 ```python
 class Trend:
@@ -335,7 +335,7 @@ class Trend:
                         warnings.warn(f"rupture {i} indétectable (pas de changement de pente ni de niveau)")
 ```
 
-### Classe `Season`
+#### Classe `Season`
 
 ```python
 class Season:
@@ -492,7 +492,7 @@ class Season:
                 raise ValueError("amp_cos doit avoir autant de lignes que de segments")
 ```
 
-### Classe `Residual`
+#### Classe `Residual`
 
 ```python
 class Residual:
@@ -562,7 +562,7 @@ class Residual:
             raise ValueError("sigma doit être un nombre positif ou nul")
 ```
 
-## Démo
+### Démo
 
 ```python
 import numpy as np
@@ -694,36 +694,38 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Documentation technique
+### Documentation technique
 
-### Architecture du module
+#### Architecture du module
 
 Le module SSTR suit une architecture modulaire avec séparation claire des responsabilités:
 
 - **SSTR**: classe principale orchestrant la génération
-- **Trend**: composante de tendance linéaire par morceaux  
+- **Trend**: composante de tendance linéaire par morceaux
 - **Season**: composante saisonnière harmonique
 - **Residual**: composante de bruit blanc
 
-### Validation des paramètres
+#### Validation des paramètres
 
 Chaque classe implémente une validation rigoureuse:
+
 - Vérification des types de données
 - Validation des plages de valeurs
 - Contrôle de cohérence entre paramètres
 - Messages d'erreur explicites en français
 
-### Gestion des ruptures
+#### Gestion des ruptures
 
 Les ruptures sont définies par:
+
 - **breaks_idx**: positions des ruptures (indices > 1)
 - **breaks_mag**: magnitudes des sauts de niveau
 - Le nombre de segments = nombre de ruptures + 1
 
-### Extensions possibles
+#### Extensions possibles
 
 - Tendances non-linéaires (polynomial, exponentiel)
 - Résidus autocorrélés (AR, MA, ARMA)
 - Saisonnalités multiples
 - Ruptures graduelles vs abruptes
-- Export vers formats standards (CSV, JSON, HDF5) 
+- Export vers formats standards (CSV, JSON, HDF5)

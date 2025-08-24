@@ -1,10 +1,10 @@
-# 05 // différenciation en monopole, oligopoles, en statique
+## 05 // différenciation en monopole, oligopoles, en statique
 
 [Slides de différenciation](ressources/05_differenciation_en_monopole_oligopoles_en_st_corolleur_f._2020_21_lecture_4_diffrenciation_en_monopole_oligopoles_cadre_statique_l2_micro3_miashs.pdf)
 
-# La différenciation
+## La différenciation
 
-## Motivation
+### Motivation
 
 L’étude d’un marché **différencié** repose sur deux idées clefs :
 
@@ -20,7 +20,7 @@ La différenciation a deux qualités, chacune avec deux modalités :
 
 Par rapport à la différenciation verticale, on la trouve surtout dans les marchés des biens indivisibles, durables et dont une personne en a normalement un (voitures, téléphones). Le plus souvent, par contre, est de trouver la différenciation verticale et horizontale simultanées.
 
-## Comment la modéliser
+### Comment la modéliser
 
 On peut reconnaître trois familles de modèles :
 
@@ -29,7 +29,7 @@ On peut reconnaître trois familles de modèles :
 - 3ème famille de modèles, “à choix discrets” : le choix des individus portent sur les produits (pour un ensemble d’alternatives fini) et non sur les quantités.
     - Ce sont des modèles relâchant à des degrés divers l’hypothèse de rationalité parfaite, ou aussi des modèles d’utilité aléatoire.
 
-## Classification des biens selon l’observabilité de sa qualité
+### Classification des biens selon l’observabilité de sa qualité
 
 On distingue classiquement les biens non durables vs durables (voir monopole à bien durable, et conjecture de Coase). On peut aussi classer les biens selon **l’accès à l’information** sur les caractéristiques des biens :
 
@@ -39,15 +39,15 @@ Par exemple : ordinateurs spécifiant ses informations techniques
 Par exemple : on ne peut évaluer la qualité d’un vin qu’au moment de le boire
 - Biens de croyance (*credence goods*) : qualité non-evaluable, ni avant ni au moment de la consommation
 
-## Différenciation et bien-être
+### Différenciation et bien-être
 
 Côté consommateurs, ils retirent un gain associé à la hausse du nombre de variétés produites ; par contre, les quantités produite sont plus fables que si les biens n’avaient été homogènes
 
 Côté producteurs, si on part d’une situation où il y a une variété remplacé par plusieurs, ceux qui n’y participaient pas sont gagnants, et ceux qui y participaient sont perdants.
 
-# Différenciation pour un monopole multi-produits
+## Différenciation pour un monopole multi-produits
 
-## Quels prix ? Un approche spatiale de la différenciation
+### Quels prix ? Un approche spatiale de la différenciation
 
 Ce modèle tente de faire une analogie d’une caractéristique avec une rue linéaire : sur un point se trouve un modalité de la caractéristique, et plus on est loin de ce point, plus on s’éloigne de la modalité de la caractéristique. Voyons :
 
@@ -80,7 +80,7 @@ $$
 > [!note]
 > Il manque le cas de coûts asymétriques : $c_1 \ne c_2$. J’ai pas du temps moi !
 
-## Combien de variétés ?
+### Combien de variétés ?
 
 > [!note]
 > Dans le modèle précédent, on fixer maximiser le profit en fonction de $q$, étant donné que les deux magasins rivaux étaient localisés sur les extrémités de la rue. Ici, on parle d’une seule firme qui possède plusieurs établissement, et elle veut savoir comment les repartir sur la rue **hors extrémités**.
@@ -103,11 +103,11 @@ On peut généraliser ceci à $n$ magasins :
 - On déduit que le profit agrégé est donc $\pi^*(n)=(V-\frac{t}{2n}-c)N-nF$,
 d’où le profit par magasin est $\frac{\pi^*(n)}{n}=\left(V-\frac{t}{2n}-c\right)\frac{N}{n}-F$.
 
-### Nombre optimal d’établissements
+#### Nombre optimal d’établissements
 
 Pour déterminer jusqu’à quel point il est profitable de créer un établissement de plus au nombre actuel $n$, on doit résoudre l’inégalité $\pi^*(n+1)>\pi^*(n)$, ce qui conduit à $n(n+1)<\frac{tN}{2F}$, avec $F$ les coûts fixes constants, $N$ les consommateurs et $t$ le prix de transport.
 
-### Ne pas servir tout le marché, seulement une partie
+#### Ne pas servir tout le marché, seulement une partie
 
 Si jamais on considère de ne pas servir tout le marché mais juste une partie, on pourrait commencer à monter le prix à partir du prix maximum qui sert à tout le marché.
 
@@ -129,7 +129,7 @@ $$
 
 On peut aussi déduire le nombre d’établissements $n$ socialement efficace : particulièrement, si $C(N,n+1)≤C(N,n) \iff n(n+1)<\frac{tN}{4f}$.
 
-# Cournot et Bertrand avec des biens différenciés
+## Cournot et Bertrand avec des biens différenciés
 
 > [!note]
 > Bilan :
@@ -145,13 +145,13 @@ On peut aussi déduire le nombre d’établissements $n$ socialement efficace : 
 > 3. Pour un jeu séquentiel, le suiveur aura la même probabilité de jouer en prix ou en
 > quantité, que le leader ait joué en quantité ou en prix en 1ère période
 
-## Cournot
+### Cournot
 
 Le modèle de Cournot ne change presque pas. La prémisse reste la même, mais la fonction de demande pour les deux firmes reste maintenant inclut un indice de différentiation $d$. Un exemple serait la fonction de demande inverse $p_i(q_i,q_j)=a-q_i-dq_j$.
 
 On utilise telle demande pour calculer le profit, puis pour optimiser le profit, et finalement pour trouver les $q^*$ optimaux.
 
-## Bertrand classique, différentiation horizontale
+### Bertrand classique, différentiation horizontale
 
 Bertrand ne change pas trop non plus. La fonction de demande (non inverse) change à nouveau à $q_i(p_i,p_j)=a-dp_i+p_j$, où $d$ est le paramètre de différenciation :
 
@@ -168,7 +168,7 @@ Exemple où $a=1, d = \gamma$ et coûts marginaux constants $0<c<1$.
 
 On en déduit que plus les biens sont différenciés, plus les prix d’équilibre diminuent.
 
-## Bertrand, différenciation verticale
+### Bertrand, différenciation verticale
 
 La différenciation horizontale considère deux produits qui ne sont pas entièrement comparables, comme un iPhone contre un Google Pixel. Par contre, la différenciation vertical impose une qualité stricte plus grande que l’autre, comme un iPhone 13 sur un iPhone 12.
 
@@ -219,7 +219,7 @@ Pour un consommateur qui préfère le bien $i$, il préférera plus de tel bien 
 
 Le processus d’optimisation est le même : on calcule la CPO par rapport aux prix, puis on trouves les prix d’équilibre de chaque produit qui satisfont le système d’équations.
 
-## Bertrand-Cournot avec différenciation
+### Bertrand-Cournot avec différenciation
 
 L’idée basique est que une firme 1 (Cournot) joue avec sa propre quantité en réaction au prix de la firme 2 $q_1(p_2)$, tant que l’autre firme 2 (Bertrand) joue avec son propre prix en réaction à la quantité de firme 1 $p_2(q_1)$. Puisque la firme 1 va jouer (maximiser son profit…) avec sa quantité, on va exprimer $p_1$ comme une ***fonction*** en termes de $q_1$ et $p_2$ :
 
@@ -320,15 +320,16 @@ Aussi, étudiant les deux fonctions de profit, supposant $f_1=f_2=0$ :
 ![](ressources/05_differenciation_en_monopole_oligopoles_en_st_untitled_8.png)
 
 On fixe $a=1$ pour simplicité de lecture du graphique.
+
 [https://www.desmos.com/calculator/qspaij3o72](https://www.desmos.com/calculator/qspaij3o72)
 
-# Modèles d’oligopoles à adresse
+## Modèles d’oligopoles à adresse
 
 Dans le modèle d’Hotelling, on reprend une rue linéaire de longueur $\ell$ qui contient $\ell$ consommateurs (continus, pas discrètes, donc ils sont divisibles) uniformément distribués sur la rue. On suppose aussi deux firmes $i=\{1,2\}$ et que chaque consommateur a un prix de réservation $v_i$.
 
-Leur prix total à payer pour une unité du bien vendu par i serait le prix du bien en soi plus la distance à parcourir : $p_i+tx$, avec $t$ le coût d’une unité de transport et $x$ la distance à parcourir. 
+Leur prix total à payer pour une unité du bien vendu par i serait le prix du bien en soi plus la distance à parcourir : $p_i+tx$, avec $t$ le coût d’une unité de transport et $x$ la distance à parcourir.
 
-## Modèle d’Hotelling : prix fixé, choix de localisation
+### Modèle d’Hotelling : prix fixé, choix de localisation
 
 On revient sur une rue linéaire. Pour un premier temps, on suppose deux firmes qui sont franchisés, et leur franchiseurs leur exigent à chacun de fixer leur prix à $p=0$. Un détail aussi évidant c’est que $a+b\le\ell$.
 
@@ -341,11 +342,12 @@ q_A=a+\frac{\ell-b-a}{2}=\frac{\ell-b+a}{2}
 $$
 
 La meilleure réponse de $A$ pour cette localisation de $B$ est donc de se rapprocher du centre
+
 (capte davantage de consommateurs à sa droite, et conserve ses consommateurs à sa gauche). $B$ tiendra le même raisonnement et les deux firmes se localiseront au centre ($\frac{ℓ}{2}$).
 
 Ici, Hotelling a observé le ***principe de différenciation minimale*** ou aussi appelée simplement ***la Loi de Hotelling*** : sur la plupart des marchés, la concurrence conduit les producteurs à réduire la différence entre leurs produits en qualité de bien, de localisation, et dans d’autres manières essentielles.
 
-En l’absence de concurrence en prix, les deux firmes se localisent au centre dans ce modèle. Ce résultat est socialement inefficace : le meilleur résultat est quand les deux firmes se situent sur $\frac{1}{4}\ell$ et $\frac{3}{4}\ell$, respectivement. Il est intéressant à voir que ce résultat socialement optimal est calculé de la manière suivante : on determine $a$ et $b$ qui minimisent la “desutilité agrégée”, càd. la distance qu’ils doivent se déplacer, $x$. 
+En l’absence de concurrence en prix, les deux firmes se localisent au centre dans ce modèle. Ce résultat est socialement inefficace : le meilleur résultat est quand les deux firmes se situent sur $\frac{1}{4}\ell$ et $\frac{3}{4}\ell$, respectivement. Il est intéressant à voir que ce résultat socialement optimal est calculé de la manière suivante : on determine $a$ et $b$ qui minimisent la “desutilité agrégée”, càd. la distance qu’ils doivent se déplacer, $x$.
 
 $$
 S(a,b)=\min_{a,b} \left( \int_0^\frac{a+b}{2} |x-a|dx+\int_\frac{a+b}{2}^1 |x-b|dx \right) =\frac{3}{4}(a^2+b^2)-\frac{ab}{2}-b+\frac{1}{2}
@@ -355,7 +357,7 @@ S(a,b)=\min_{a,b} \left( \int_0^\frac{a+b}{2} |x-a|dx+\int_\frac{a+b}{2}^1 |x-b|
 \frac{\partial S}{\partial a} = \frac{\partial S}{\partial b} = 0 \implies a^*=\frac{1}{4},\hspace{4pt} b^*=\frac{3}{4}.
 $$
 
-## Modèle d’Hotelling : localisation fixée, choix de prix
+### Modèle d’Hotelling : localisation fixée, choix de prix
 
 Sur une deuxième rue linéaire de longueur $\ell=35$, une firme est fixée sur $a=4$ et l’autre firme est fixé sur $b=1$., avec $Cm=0$ Elle jouent sur leur prix. Chaque consommateur consomme une baguette et supporte un prix égal au prix du bien plus le coût de transport : $p+td$.
 
@@ -426,7 +428,7 @@ Comme observation finale : le profit de A et B augmentent avec $a$ et $b$, càd.
 
 Si $A$ et $B$ sont proches, les firmes chercheront à capturer l’intégralité de $ℓ$, car réduire le prix un peu cause une augmentation de revenu de la partie captée plus grande que la perte de revenu de leur parties déjà captées.
 
-## Modèle d’Hotelling : différenciation horizontale et verticale simultanément
+### Modèle d’Hotelling : différenciation horizontale et verticale simultanément
 
 Hotelling de base modèle la différenciation horizontale. On pourrait aussi considérer le différenciation verticale. Soit deux firmes sur les bords d’une rue et des consommateurs uniformes sur $\ell$. La différence c’est que le bien de firme 1 est supérieur au bien de firme 2, donc leurs prix de reserves aussi : $r_1 > r_2$.
 
@@ -450,7 +452,7 @@ $$
 
 La part de marché de la firme 1 est plus grande quand l’avantage en qualité (càd. la prime que les consommateur veulent payer pour obtenir le bien 1 sur le bien 2, ou simplement la différences des reserves) est plus grande que la différences de coûts.
 
-## Version de Lancaster
+### Version de Lancaster
 
 Lancaster suggère plutôt une différenciation horizontale et verticale pas avec un modèle, mais avec un vecteur : une liste de caractéristiques. Pour deux types des clients A et B, on peut voir leur prix de reserves de chaque unité d’une certaine caractéristique.
 
