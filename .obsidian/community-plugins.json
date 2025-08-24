@@ -2,5 +2,8 @@
   "obsidian-importer",
   "file-explorer-plus",
   "custom-font-loader",
-  "dynamic-outline"
+  "dynamic-outline",
+  "obsidian-style-settings",
+  "obsidian-linter",
+  "quickadd"
 ]
