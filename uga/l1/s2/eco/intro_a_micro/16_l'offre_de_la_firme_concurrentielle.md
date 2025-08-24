@@ -2,20 +2,31 @@
 
 ## Quatre hypothèses de concurrence parfaite
 
-- Économie d'echelles sont faibles relativement à la taille du marché.
-- L'output est homogène.
-- Information parfaite.
-- Entrée et sortie libre.
+>[!important] Conditions de la concurrence parfaite
+>1. Économies d'échelle faibles relativement à la taille du marché
+>2. Output homogène (produits identiques)
+>3. Information parfaite
+>4. Entrée et sortie libre
 
 ## Maximisation du profit
 
-- Profit : P = R - C(q) = pq - CV(q) - F.
-    - Le p ici c’est le coût marginal !! En monopole c’est la fonction de demande inverse p(q), mais dans la firme concurrentielle est le coût marginal.
-    - (Surplus du producteur = pq - CV(q).
-- Point de maximisation : p = Cm(q).
-- **Première exception** : l'offre de la firme existe seulement tant que le Cm soit croissant.
-- **Seconde exception** :
-    - La firme quitte le marché si pq - C(q) < F.
-    - **Cond. de fermeture** : CVM > p.
-    - **Seuil de fermeture** : CVM = p.
-    - **Seuil de rentabilité** : CM = p.
+### Formulation du profit
+$$\text{Profit} = R - C(q) = pq - CV(q) - F$$
+
+Le $p$ ici est le prix de marché, que la firme concurrentielle prend comme donné. En monopole, c'est la fonction de demande inverse $p(q)$.
+
+Surplus du producteur = $pq - CV(q)$
+
+### Condition de maximisation
+>[!important] Règle fondamentale
+>Le profit est maximisé lorsque $p = Cm(q)$
+
+### Exceptions à la règle
+
+**Première exception** : L'offre de la firme existe seulement lorsque le $Cm$ est croissant
+
+**Seconde exception - Règles de fermeture** :
+- La firme quitte le marché si $pq - C(q) < -F$
+- **Condition de fermeture** : $CVM > p$
+- **Seuil de fermeture** : $CVM = p$
+- **Seuil de rentabilité** : $CM = p$
