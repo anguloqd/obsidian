@@ -161,8 +161,8 @@ La valeur de la persistance de l’inflation $\theta$ affecte la relation inflat
     $$
     \pi_{t+1}-\pi_t=(m+z)-\alpha u_t \tag{8}
 
-$$
 
+$$
     
     - La **variation de l’inflation** $(\pi_{t+1}-\pi_t)$ est négativement corrélée au chômage $u_t$.
     - Si $u_t$ est élevé, tel que $u_t > \frac{(m+z)}{\alpha} \implies$ baisse de l’inflation : $\pi_{t+1} < \pi_t$.
@@ -192,7 +192,6 @@ Encore plus, le chômage $u$ ne peut pas être maintenu sous un certain seuil, c
 ## La relation entre le chômage structurel et la courbe de Phillips
 
 La définition du taux de chômage naturel $u_n$ est la valeur constante donnée du taux de chômage $u$ tel que le niveau d’inflation actuel $\pi_t$ est égal au niveau d’inflation anticipé $\pi_t^e$. Si on reprend l’équation 5 et on impose l’égalité $\pi_t=\pi_t^e$, on déduit la suite :
-
 $$
 
 \pi_t=\pi_t^e+(m+z)-\alpha u_t \implies \pi_t - \pi_t^e = (m+z)-\alpha u_t
@@ -206,18 +205,14 @@ $$
 0 = (m+z)-\alpha u_t \implies u_n = \frac{m+z}{\alpha}\tag{9}
 
 $$
-
 On peut réarranger cette dernière équation comme  $\alpha u_n = (m+z)$ et l’injecter dans l’équation 5 pour trouver une identité utile :
-
 $$
 
 \pi_t - \pi_t^e = (m+z)-\alpha u_t \implies \pi_t - \pi_t^e = -\alpha(u_t-u_n) \tag{10}
 
 $$
-
 Encore plus, si on suppose que $\pi_{t-1} \approx \pi_t^e$, la relation devient finalement comme suit :
 (Oui, c’est $\pi_{t-1}$ et non pas $\pi_{t+1}$, j’ai confirmé !)
-
 $$
 
 \underbrace{\pi_{t}-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_{t}-u_n) \tag{11}

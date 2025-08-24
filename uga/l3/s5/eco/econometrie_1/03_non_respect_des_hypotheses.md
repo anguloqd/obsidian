@@ -25,17 +25,19 @@ Comme rappel, $\mathbf{X}$ est de dimension $(n, k+1)$.
 De la forme plus générale, càd. sans savoir si $H_2$ est respectée ou non, on peut écrire la variance des estimateurs comme :
 
 $$
+
 V(\hat{\boldsymbol{\beta}})=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbb{E}[\mathbf{u}\mathbf{u}^T]\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}
+
 $$
 
 - Si $H_2$ est respectée, cette expression devient donc :
 
-    $$
-    V(\hat{\boldsymbol{\beta}})=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\underbrace{\mathbb{E}[\mathbf{u}\mathbf{u}^T]}_{\sigma^2_u I_n}\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}=\sigma^2_u(\mathbf{X}^T\mathbf{X})^{-1}
+$$
+
+V(\hat{\boldsymbol{\beta}})=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\underbrace{\mathbb{E}[\mathbf{u}\mathbf{u}^T]}_{\sigma^2_u I_n}\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}=\sigma^2_u(\mathbf{X}^T\mathbf{X})^{-1}
 
 $$
 
-    
 - Si, par contre, $H_2$ n'est pas respectée :
 
 $$
@@ -53,78 +55,45 @@ La variance des perturbations $\mathbf{u}$ prend une forme différente dans les 
 $$
 
 \begin{aligned}
-
 V(\mathbf{u}) = E\left[\mathbf{u} \mathbf{u}^T\right] &=\begin{bmatrix}
-
 \sigma_u^2 & 0 & 0 & 0 & 0 \\
-
 0 & \sigma_u^2 & 0 & \cdots & 0 \\
-
 0 & 0 & \sigma_u^2 & \cdots & 0 \\
-
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-
 0 & 0 & 0 & \cdots & \sigma_u^2
-
 \end{bmatrix}
-
 \\[30pt]
-
 &= \sigma_u^2 \begin{bmatrix}
-
 1 & 0 & 0 & 0 & 0 \\
-
 0 & 1 & 0 & \cdots & 0 \\
-
 0 & 0 & 1 & \cdots & 0 \\
-
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-
 0 & 0 & 0 & \cdots & 1
-
 \end{bmatrix}
-
 = \sigma_u^2 I_N
-
 \end{aligned}
-
 \\[10pt]
-
 \text{Hétéroscédasticité : } V(\mathbf{u}) = \begin{bmatrix}
-
 \omega_{11} & 0 & 0 & \cdots & 0 \\
-
 0 & \omega_{22} & 0 & \cdots & 0 \\
-
 0 & 0 & \omega_{33} & \cdots & 0 \\
-
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-
 0 & 0 & 0 & \cdots & \omega_{NN}
-
 \end{bmatrix}
-
 \\[10pt]
-
 \text{Autocorrelation : } V(\mathbf{u}) = \begin{bmatrix}
-
 1 & \omega_{12} & \omega_{13} & \cdots & \omega_{1N} \\
-
 \omega_{21} & 1 & \omega_{31} & \cdots & \omega_{2N} \\
-
 \omega_{31} & \omega_{32} & 1 & \cdots & \omega_{3N} \\
-
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-
 \omega_{N1} & \omega_{N2} & \omega_{N3} & \cdots & 1
-
 \end{bmatrix}
 
 $$
 
-# Hétéroscédasticité $(H_2)$
+## Hétéroscédasticité $(H_2)$
 
-## Définition
+### Définition
 
 $H_2$, l'hypothèse de variance constante ou homoscédasticité, nous assure que la variance des perturbations est constante pour toute valeur réalisée de $\mathbf{X}$. Justement, quand ce n'est plus le cas, on parle d'hétéroscédasticité.
 
@@ -142,9 +111,9 @@ $$
 
 $$
 
-Ici, $\Omega$ est une matrice qui est différente de la matrice identité $I_n$. On expliquera l'aspect de cette matrice $\Omega$ plus tard. 
+Ici, $\Omega$ est une matrice qui est différente de la matrice identité $I_n$. On expliquera l'aspect de cette matrice $\Omega$ plus tard.
 
-## Contexte
+### Contexte
 
 Le plus souvent, on retrouve les problèmes d’hétéroscédasticité avec des données en coupe transversale. Ceci est expliqué par les situations suivantes :
 
@@ -154,7 +123,7 @@ Le plus souvent, on retrouve les problèmes d’hétéroscédasticité avec des 
 - Observations représentent des moyennes calculées sur des échantillons de taille différentes
 - Taille des erreurs est liée, de façon proportionnelle, aux valeurs prises par une variable explicative dans le modèle
 
-## Identifier l’hétéroscédasticité : stats. descriptives
+### Identifier l’hétéroscédasticité : stats. descriptives
 
 Une première manière d’identifier l’hétéroscédasticité c’est de voir les statistiques descriptives : voir des graphiques, mais aussi de voir des gros différence entre deux sous-échantillons de l’échantillon. **C’est une méthode informelle car nous ne savons pas si cette différence est statistiquement significative**.
 
@@ -164,11 +133,11 @@ Une première manière d’identifier l’hétéroscédasticité c’est de voir
 
 “restaurn” est 0 si la zone n’applique pas des restrictions pour fumer dans les restaurants, et 1 sinon. “cigs” est la quantité de cigarettes fumées. Si on voit seulement les zones où restaurn=0 (un sous-échantillon), on voit que la variance est différente de si restaurn=1 (un autre sous-échantillon).
 
-## Identifier l’hétéroscédasticité : tests
+### Identifier l’hétéroscédasticité : tests
 
 Une deuxième manière c’est d’estimer les MCO, puis vois le graphique des résidus au carré vs. $\hat y$. Encore une autre manière c’est de lancer des tests d’hétéroscédasticité : test de Breuch-Pagan, ou le test de White qui est plus général.
 
-### Test de Breuch-Pagan
+#### Test de Breuch-Pagan
 
 Ça commence par estimer le modèle par les MCO. On obtient donc le vecteur colonne $\hat{\mathbf{u}}$ qui contient dans la ligne $i$ l'estimateur $\hat{u}_i$.
 
@@ -187,14 +156,12 @@ Ainsi, on crée une statistique de test et une région critique :
 $$
 
 \text{Pour } i \text{ fixé, } H_0:\sigma^2_i=\sigma_u^2 \text{ vs. }H_1:\sigma^2_i=h(Z_i a)
-
 \\[10pt]
-
 \tau=\left\{T=Q_{BP}=\frac{SCE_{\text{aux.}}}{2}, \mathcal{C}=\left\{Q_{BP}:Q_{BP}>\chi^2(p)\right\} \right\}
 
 $$
 
-### Test de White
+#### Test de White
 
 La différence de ce test avec Breuch-Pagan c'est que ce test considère toutes les variances des perturbations pour chaque input des observations (vecteur des $x_i$ observés). Ça commence de la même manière : estimation par les MCO, estimation de $(\hat{u}_i)^2$, puis on lance une régression linéaire comme suit :
 
@@ -209,16 +176,14 @@ Finalement, le test est donc
 $$
 
 H_0:\forall i, \sigma^2_i=\sigma_u^2 \text{ vs. }H_1:\exists i, \sigma^2_i\neq \sigma_u^2
-
 \\[10pt]
-
 \tau=\left\{T=Q_{W}=NR^2\approx \chi^2\left(\frac{(k+1)(k+2)}{2}-1 \right), \mathcal{C}=\left\{Q_{W}:Q_{W}>\chi^2_\text{th}\right\} \right\}
 
 $$
 
-## Corriger l'hétéroscédasticité
+### Corriger l'hétéroscédasticité
 
-### Écarts-types robustes
+#### Écarts-types robustes
 
 Il existe une manière de corriger les écarts-types des estimateurs du MCO. L'intérêt c'est que les intervalles de confiance et les résultats de tests de significativité sont calculés avec l'écart-type de $\boldsymbol{\beta}$, donc si l'écart-type est biaisé à cause du non respect de $H_2$, nos intervalles et résultats de tests ne sont pas fiables. **Il est absolument nécessaire que l'échantillon soit de grande taille**.
 
@@ -238,7 +203,7 @@ IC calculé avec les écart-types originaux.
 
 IC calculé avec les écart-types robustes.
 
-### Les moindres carrés (quasi-) généralisés
+#### Les moindres carrés (quasi-) généralisés
 
 On voudrait transformer notre modèle original de $\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \mathbf{u}$. On commence par une matrice $\Omega$ qui résulte d'une opération d'autre matrice $\Phi$ : $\Omega = \Phi^T\Phi$. Il faut signaler que $\Omega$ est une matrice non-singulière avec inverse connue.
 
@@ -266,45 +231,33 @@ $$
 
 $$
 
-On verra donc le passage des MCG à MCQG pour $\hat{\boldsymbol{\beta}}$ et $V[\hat{\boldsymbol{\beta}}]$ : 
+On verra donc le passage des MCG à MCQG pour $\hat{\boldsymbol{\beta}}$ et $V[\hat{\boldsymbol{\beta}}]$ :
 
 $$
-
-\text{MCG : \hspace{5pt}}
-
-\begin{align*}
-
-&\hat{\boldsymbol{\beta}} = (\mathbf{X}^T \Omega^{-1}\mathbf{X})^{-1}\mathbf{X}^T\Omega^{-1}\mathbf{y}
-
-\\
-
+\begin{array}{l}
+\text{MCG : \hspace{5pt}}\\
+\begin{aligned}
+&\hat{\boldsymbol{\beta}} = (\mathbf{X}^T \Omega^{-1}\mathbf{X})^{-1}\mathbf{X}^T\Omega^{-1}\mathbf{y}\\
 &V(\hat{\boldsymbol{\beta}})=\sigma^2_u(\mathbf{X}^T\Omega^{-1}\mathbf{X})^{-1}
-
-\end{align*}
-
-\longrightarrow
-
-\text{MCQG : \hspace{5pt}}
-
-\begin{align*}
-
-&\hat{\boldsymbol{\beta}} = (\mathbf{X}^T \hat{\Omega}^{-1}\mathbf{X})^{-1}\mathbf{X}^T\hat{\Omega}^{-1}\mathbf{y}
-
+\end{aligned}\\
 \\
-
+\longrightarrow\\
+\\
+\text{MCQG : \hspace{5pt}}\\
+\begin{aligned}
+&\hat{\boldsymbol{\beta}} = (\mathbf{X}^T \hat{\Omega}^{-1}\mathbf{X})^{-1}\mathbf{X}^T\hat{\Omega}^{-1}\mathbf{y}\\
 &V(\hat{\boldsymbol{\beta}})=\sigma^2_u(\mathbf{X}^T\hat{\Omega}^{-1}\mathbf{X})^{-1}
-
-\end{align*}
-
+\end{aligned}
+\end{array}
 $$
 
 Alors que les MCG sont plus efficaces que les MCO en cas d'hétéroscédasticité ou d'autocorrélation, ce n'est pas le cas des MCQG. L'estimateur réalisable est asymptotiquement plus efficace, à condition que la matrice de covariance des erreurs soit estimée de manière cohérente, mais pour un échantillon de taille petite à moyenne, il peut être en fait moins efficace que les MCO.
 
 On voit donc pourquoi certains auteurs préfèrent utiliser les MCO et reformulent leurs inférences en considérant simplement un estimateur alternatif pour la variance de l'estimateur robuste à l'hétéroscédasticité ou à l'autocorrélation sérielle.
 
-### Preuve du biais de MCO et de la correction de biais du MCG
+#### Preuve du biais de MCO et de la correction de biais du MCG
 
-### → $\hat{\sigma}^2_{u,MCO}$ est biaisé
+#### → $\hat{\sigma}^2_{u,MCO}$ est biaisé
 
 On commence par prouver que l'estimateur des MCO est biaisé si $H_2$ non respectée :
 
@@ -324,7 +277,7 @@ La suite est donc :
 
 On conclut que $\hat{\sigma}^2_{u,MCO}$ est biaisé.
 
-### → $\hat{\sigma}^2_{u,MCG}$ est sans biais
+#### → $\hat{\sigma}^2_{u,MCG}$ est sans biais
 
 On sait que
 
@@ -334,7 +287,7 @@ $$
 
 $$
 
-Donc, 
+Donc,
 
 ![untitled](ressources/03_non_respect_des_hypotheses_untitled_8.png)
 
@@ -344,11 +297,11 @@ Puis, finalement,
 
 On conclut que $\hat{\sigma}^2_{u,MCG}$ est donc sans biais.
 
-### Les moindres carrés pondérés
+#### Les moindres carrés pondérés
 
 Si la forme de l'hétéroscédasticité est connue, l'estimateur des MCQG peut être appliqué. Ceci prend le nom de "Moindres Carrés Pondérés" ou MCP, car la connaissance de la variance non-constante est incorporée dans la régression. **L'objectif est de transformer le modèle de sorte que la variance devienne constante.**
 
-### → Variance de $u$ de la forme $\sigma^2z^2_t$
+#### → Variance de $u$ de la forme $\sigma^2z^2_t$
 
 On commence par supposer que la variance de la vraie erreur peut s'écrire en fonction d'une autre variable $z_t$. Attention, ici on est dans des données de panel (coupe transversale et évolution dans le temps simultanément).
 
@@ -374,9 +327,9 @@ V(v_t)=V \left( \frac{u_t}{z_t} \right)=\frac{V(u_t)}{z_t^2}=\frac{\sigma^2 z_t^
 
 $$
 
-La variance de ce nouveau modèle devient donc constante. 
+La variance de ce nouveau modèle devient donc constante.
 
-### → Variance de $u$ de la forme $\sigma^2_i \exp(Z_i a)$
+#### → Variance de $u$ de la forme $\sigma^2_i \exp(Z_i a)$
 
 Un autre cas c'est que la variance prenne une forme de type dit "multiplicatif".
 
@@ -402,33 +355,27 @@ $$
 
 $$
 
-# Autocorrélation $(H_2)$
+## Autocorrélation $(H_2)$
 
-## Définition et illustration
+### Définition et illustration
 
 Quand $H_2$ n'est pas respectée, le deuxième cas c'est l'autocorrélation. Quand elle est présente, la matrice des variances des perturbations est de la forme suivante, où les $\omega$ ne sont pas forcément égaux à $0$, donc $H_2$ n'est pas respectée.
 
 $$
 
 \text{Autocorrelation : } V(\mathbf{u}) = \begin{bmatrix}
-
 1 & \omega_{12} & \omega_{13} & \cdots & \omega_{1N} \\
-
 \omega_{21} & 1 & \omega_{31} & \cdots & \omega_{2N} \\
-
 \omega_{31} & \omega_{32} & 1 & \cdots & \omega_{3N} \\
-
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-
 \omega_{N1} & \omega_{N2} & \omega_{N3} & \cdots & 1
-
 \end{bmatrix}
 
 $$
 
-Ceci implique qu’il y a une dépendance temporelle entre les observations. 
+Ceci implique qu’il y a une dépendance temporelle entre les observations.
 
-Il est intéressant d’aller voir le graphique de $\hat u_{t+1}$ vs. $\hat u_t$. 
+Il est intéressant d’aller voir le graphique de $\hat u_{t+1}$ vs. $\hat u_t$.
 
 Un premier cas c’est quand la relation entre les perturbations adjacentes est **linéairement positive**. Dans ce cas, le graphique $\hat u_t$ vs. $t$ présente des “blocs” : quand $\hat u_t$ est positif, $\hat u_{t+1}$ est fréquemment positif aussi. Idem dans le cas négatif. Ça crée, dans l’exemple, un bloc des perturbations positifs, puis des perturbations négatives, puis positives de nouveau.
 
@@ -442,15 +389,15 @@ Quand $H_2$ est respectée, l’erreur a plutôt une forme comme suit.
 
 ![untitled](ressources/03_non_respect_des_hypotheses_untitled_12.png)
 
-## Conséquence pour les MCO
+### Conséquence pour les MCO
 
 Les estimateurs des MCO restent sans biais et convergents. La seule chose qui change c’est qu’ils ne sont plus à variance minimale. Ils ne sont donc plus BLUE, ni des estimateurs de Gauss-Markov, ni efficients, etc.
 
 Ceci donc signifie qu’on ne peut pas lancer des tests de significativité de l’effet une variable explicative sur une variable expliquée ! Il se peut que ce soit significatif, oui, **mais on ne peut pas lancer des tests car ce tests dépendent du respect des hypothèses, car les statistiques de Student ne suivront pas une loi de Student et pareil pour Fisher**. Toute inférence statistique faite avec ces estimateurs est donc invalide. **Il faudra “corriger” les estimateurs, mais on verra cela après**.
 
-## Tests pour identifier
+### Tests pour identifier
 
-### Test de Durbin-Watson
+#### Test de Durbin-Watson
 
 Pour ce test, on devra :
 
@@ -486,28 +433,29 @@ Si le $DW$ tombe sur une zone de rejet de $H_0$ ou inconclusive, on passe au MCQ
 
 Le résultat de ce test est valide sous trois conditions : la matrice des $X$ n'est pas aléatoire $(H_3)$, il n'y a pas de termes de retard dans la régression originale, et la constante originale est différente de $0$.
 
-### Test de Breuch-Godfrey
+#### Test de Breuch-Godfrey
 
 C'est un test plus général qui introduit des corrélations d'ordre $r$. À nouveau, il faut :
 
 1. Estimation originale par les MCO
 2. Calculer $\hat{\mathbf{u}}$
 3. Monter la régression auxiliaire comme suit, où $v_t \sim \mathcal{N}(0, \sigma^2_v)$.
-    
-    $$
-    u_t=\rho_1 u_{t-1}+\rho_2 u_{t-2}+\cdots+\rho_r u_{t-r}+v_t
-    
+
+$$
+
+u_t=\rho_1 u_{t-1}+\rho_2 u_{t-2}+\cdots+\rho_r u_{t-r}+v_t
+
 $$
 
 4. Lancer le test, où $H_0$ : $\forall i\geq 1, \rho_i=0$, vs. $H_1 : \exists i \geq 1, \rho_i \neq 0$.
 La statistique du test est donc $(T-r)R^2$.
 La région critique est $(T-r)R^2 > \chi^2_r$.
 
-### Correction de l'autocorrélation
+#### Correction de l'autocorrélation
 
 [T.2.4 - Examples of Applying Cochrane-Orcutt Procedure](https://online.stat.psu.edu/stat501/book/export/html/1003)
 
-#### MCQG : méthode de Prais-Winsten
+##### MCQG : méthode de Prais-Winsten
 
 Ceci exige la même préparation que les deux tests d'autocorrélation.
 
@@ -518,15 +466,19 @@ On estimera $\rho$ par $\hat{\rho}$ par les MCO.
 Notons que la constante de ce modèle linéaire est égale à $0$.
 
 $$
+
 u_t=\rho u_{t-1}+v_t
+
 $$
 
 Une fois qu'on a calculé $\hat{\rho}$, on monte une autre régression auxiliaire. On fera la substitution $y^*_t = y_t - \hat{\rho} y_{t-1}$ et $X^*_t = X_t - \hat{\rho} X_{t-1}$. On finit par avoir ce qui suit :
 
 $$
+
 y^*_t = \alpha(1-\hat{\rho})+X^*_t\boldsymbol{\beta}+u_t
 \\
 y_t-\hat{\rho} y_{t-1}=\alpha(1-\hat{\rho})+(X_t-\hat{\rho} X_{t-1})\boldsymbol{\beta}+u_t
+
 $$
 
 Finalement, la "correction" des $\boldsymbol{\beta}$ se fait par réestimer ce nouveau modèle par les MCO. Les $\hat{\boldsymbol{\beta}}$ qui en résultent sont les MCO "corrigés par l'autocorrélation".
@@ -534,6 +486,7 @@ Finalement, la "correction" des $\boldsymbol{\beta}$ se fait par réestimer ce n
 Dans le calcul de $V(\beta)$, on a que :
 
 $$
+
 \Omega = \begin{bmatrix}
 \frac{1}{1-\rho^2} & \frac{\rho}{1-\rho^2} & \frac{\rho^2}{1-\rho^2} & \cdots & \frac{\rho^{T-1}}{1-\rho^2} \\
 \frac{\rho}{1-\rho^2} & \frac{1}{1-\rho^2} & \frac{\rho}{1-\rho^2} & \cdots & \frac{\rho^{T-2}}{1-\rho^2} \\
@@ -541,36 +494,39 @@ $$
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 \frac{\rho^{T-1}}{1-\rho^2} & \frac{\rho^{T-2}}{1-\rho^2} & \frac{\rho^{T-3}}{1-\rho^2} & \cdots & \frac{1}{1-\rho^2}
 \end{bmatrix}
+
 $$
 
-#### MCQG : méthode de Cochrane-Orcutt
+##### MCQG : méthode de Cochrane-Orcutt
 
 Cette méthode est identique à celle de Prais-Winsten, mais on laisse tomber l'observation en temps initial et on refait la procédure. $\Omega$ reste la même.
 
 Une note intéressante c'est que la transformation de $y^*$ et $X^*$ est appelée "l'estimation de Cochrane-Orcutt". Cette méthode précède la méthode de Prais-Winsten.
 
-#### MCQG : méthode de Hildreth et Lu
+##### MCQG : méthode de Hildreth et Lu
 
 Cette méthode est fondée sur le balayage et sur la répétition de l'estimation de Cochrane-Orcutt. Basiquement, on choisit plusieurs valeurs de $\rho \in [-1, 1]$ et on répète la méthode de Cochrane-Orcutt. On garde la valeur de $\hat{\rho}$ qui minimise la $SCR$ de l'estimation de Cochrane-Orcutt.
 
-#### Estimateur de maximum de vraisemblance
+##### Estimateur de maximum de vraisemblance
 
 La log-vraisemblance s'écrit, sous $H_2^*$ :
 
 $$
+
 \begin{aligned}
 \log L\left(\boldsymbol{\theta}^*\right) & =\log L\left(y_1, \ldots, y_T ; \mathbf{b}, \sigma_u^2, \Omega\right) \\
 & =-\frac{T}{2} \log 2 \pi-\frac{T}{2} \log \sigma_u^2+\frac{1}{2} \log \left(1-\rho^2\right)-\frac{1}{2 \sigma_u^2}\left(\mathbf{y}^*-\mathbf{X}^* \mathbf{b}\right)^T\left(\mathbf{y}^*-\mathbf{X}^* \mathbf{b}\right)
 \end{aligned}
+
 $$
 
 On cherche les valeurs de $\mathbf{b}$ qui maximisent la log-vraisemblance.
 
-## Endogénéité $(H_3)$
+### Endogénéité $(H_3)$
 
 [Causal Inference with Linear Regression: Endogeneity](https://towardsdatascience.com/causal-inference-with-linear-regression-endogeneity-9d9492663bac)
 
-### Définition et sources
+#### Définition et sources
 
 La définition est simplement quand une variable explicative est corrélée avec le terme d'erreur. Une telle variable est dite une variable endogène. Son estimateur par les MCO correspondant n'est plus BLUE, car il faut vérifier $H_3$ : "toutes les variables indépendantes sont non corrélées avec les termes d'erreurs".
 
@@ -578,7 +534,7 @@ Le problème de l'endogénéité est courant en sciences sociales et économie. 
 
 Les sources d'endogénéité sont souvent des variables omises, la simultanéité et les erreurs de mesure. Ce cours va plutôt se concentrer sur les erreurs de mesure.
 
-### L'erreur de mesure
+#### L'erreur de mesure
 
 Dans un modèle de régression linéaire, on suppose que les observations sont mesurées correctement et sans erreur. Dans de nombreuses situations, cette hypothèse n'est pas respectée. Certaines variables (par exemple, la capacité et la volonté des gens de faire de l'exercice) peuvent ne pas être mesurables, et nous utilisons alors des variables de substitution (par exemple, les scores de QI des gens et le nombre d'heures passées dans la salle de sport) pour mesurer l'effet. Il est parfois difficile de faire des observations correctes.
 
@@ -593,6 +549,7 @@ Si la valeur observée $x_t$ est mesurée avec erreur, on peut l'écrire comme :
 Le vrai modèle serait donc : $y_t = \beta_1 \tilde{x_t}+\beta_0+u_t$. Mais on peut voir ce qui impliquerait pour $x_t$ :
 
 $$
+
 \begin{aligned}
 y_t & =\beta_1 \tilde{x}_t+\beta_0+u_t \\
 & =\beta_1\left(x_t-v_t\right)+\beta_0+u_t \\
@@ -600,17 +557,18 @@ y_t & =\beta_1 \tilde{x}_t+\beta_0+u_t \\
 \end{aligned}
 \\
 \mathbb{E}\left[x_t w_t\right]=\mathbb{E}\left[\left(\tilde{x}_t+v_t\right) w_t\right]=\mathbb{E}\left[\left(\tilde{x}_t+v_t\right)\left(u_t-\beta_1 v_t\right)\right]=-\beta_1 \sigma_v^2 \neq 0
+
 $$
 
 L'estimateur des MCO de $\beta_1$ est donc biaisé et non convergent. On voit que $x_t$ est corrélée avec $w_t$ à travers $\beta_1$.
 
-### Méthode des variables instrumentales
+#### Méthode des variables instrumentales
 
 #TODO(À faire !)
 
-### Tests
+#### Tests
 
-#### Test de Hausman : vérifier l'exogénéité
+##### Test de Hausman : vérifier l'exogénéité
 
 Ce test s'applique à un estimateur dans deux cas :
 
@@ -620,29 +578,37 @@ Ce test s'applique à un estimateur dans deux cas :
 Les hypothèses sont mathématiquement définies comme suit :
 
 $$
+
 H_0:\text{plim}_{T\to\infty} \frac{\mathbf{X}^T \mathbf{u}}{T}=0 \text{ vs. } H_1: \text{plim}_{T\to\infty} \frac{\mathbf{X}^T \mathbf{u}}{T}\neq0
+
 $$
 
 La statistique du test serait :
 
 $$
+
 Q_H=\left(\widehat{\boldsymbol{\beta}_{IV}}-\widehat{\boldsymbol{\beta}_{MCO}}\right)^T\left[\widehat{V}\left(\hat{\boldsymbol{\beta}}_{IV}\right)-\widehat{V}\left(\hat{\boldsymbol{\beta}}_{MCO}\right)\right]^{-1}\left(\widehat{\boldsymbol{\beta}_{IV}}-\widehat{\boldsymbol{\beta}_{MCO}}\right) \sim \chi^2(k+1)
+
 $$
 
 Et la région de rejet est donnée par $Q_H > Q_\text{th}$.
 
-#### Test de Sargan : valider le choix des instruments
+##### Test de Sargan : valider le choix des instruments
 
 $H_0$ devient "les VI sont de bons instruments" contre $H_1$ "les VI ne sont pas de bons instruments". Mathématiquement,
 
 $$
+
 H_0:\text{plim}_{T\to\infty} \frac{\mathbf{Z}^T \mathbf{u}}{T}=0 \text{ vs. } H_1: \text{plim}_{T\to\infty} \frac{\mathbf{Z}^T \mathbf{u}}{T}\neq0
+
 $$
 
 La statistique du test est donc
 
 $$
+
 Q_S=\frac{\bar{\mathbf{u}}^T {\mathbf{Z}}(\mathbf{Z}^T\mathbf{Z})^{-1}\mathbf{Z}^T\bar{\mathbf{u}}}{\hat{\sigma}^2_{\mathbf{u}, VI}}=TR^2\sim\chi^2(p-(k+1))
+
 $$
 
 Et, à nouveau, la région de rejet est donnée par $Q_S > Q_\text{th}$.

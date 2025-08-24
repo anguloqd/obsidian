@@ -40,6 +40,7 @@ L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFN
     $$
     \delta^\prime(\{q_0,\dots,q_n\},a)= \bigcup_{i=0}^n \delta({q_i},a)
 
+
 $$
 
     

@@ -171,25 +171,27 @@ Une symétrie central est une homothétie avec $λ = -1$.
     $$
     \text{Mat}_B(f)=\begin{bmatrix}0&1\\1&0\end{bmatrix}
 
-$$
 
+$$
     
 - **Rotation (de $\theta$ radians) :**
     
-    $$
-    \text{Mat}_B(f)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}
     
 $$
 
+    \text{Mat}_B(f)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}
+    
+
+$$
     - Particulièrement, quand il y a $p$ rotations à la suite…
         
-        $$
+        
+$$
+
         \text{Mat}_B(f^p)=\begin{bmatrix}\cos(p\theta)&-\sin(p\theta)\\\sin(p\theta)&\cos(p\theta)\end{bmatrix}
         
 
 $$
-        
-
 ### Matrice d'un isomorphisme : $f$ bijective et linéaire
 
 $f$ est bijective (et donc isomorphe, parce que l'espace d'applications linéaires et un espace vectoriel et donc vérifie la propriété de linéarité) si et seulement si la matrice $\text{Mat}_{B, B'}(f)$ est inversible.
@@ -198,9 +200,9 @@ $f$ est bijective (et donc isomorphe, parce que l'espace d'applications linéair
 
 De plus, si $f : E \mapsto F$ est bijective, alors la matrice de l'application linéaire $f^{−1} : F \mapsto E$ est la matrice $(\text{Mat}_{B,B'}(f))^{-1}$. Pour le déduire, par l'équivalence composition/multiplication, on observe facilement que $\text{Mat}_{B,B'}(f^{-1}) = (\text{Mat}_{B,B'}(f))^{-1}$.
 
-# Changement de bases
+## Changement de bases
 
-## Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
+### Préparation : de $y=f(x)$ à $\mathbf{Y}_{B'}=A\mathbf{X}_B$
 
 Soit $E$ un espace vectoriel de dimension finie et soit $B = (e_1, e_2, \dots , e_p)$ une base de $E$. Comme annotation, si $B$ est la base canonique, on n'écrit pas un souscrit $B$ sur un vecteur, il ne faut pas mentionner la base.
 
@@ -210,7 +212,7 @@ L'objective est de faire une analogie de "$y = f(x)$" dans l'algèbre linéaire.
 
 Après, soit $\mathbf{X}$ un vecteur colonne de $E$ (exprimé dans la base $B$) et $\mathbf{Y}$ un vecteur colonne de $F$ (exprimé dans la base $B'$). Finalement, l'analogie de "$y = f(x)$" serait "$\mathbf{Y} = A\mathbf{X}$". Voyons que, dans le monde de l'algèbre linéaire, multiplier $\mathbf{X}$ par A à gauche est l'équivalence d'appliquer une fonction. Multiplier est d'appliquer une fonction.
 
-## Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
+### Matrice de passage d'une base $B$ à une autre $B^\prime$ : $P_{B,B^\prime}$
 
 Soit $E$ un espace vectoriel de dimension finie $n$. On sait que toutes les bases de $E$ ont $n$ éléments. Fixons deux bases du même ensemble $E$ : $B$ et $B'$.
 
@@ -232,9 +234,9 @@ On devrait connaître trois propriétés importantes de la matrice de passage :
 - Prenons 3 bases : $B$, $B'$, $B''$. Donc $P_{B,B''} = P_{B,B'} \cdot P_{B',B''}$.
 - $\mathbf{X} = P_{B,B'} \cdot \mathbf{X'}$, pour $\mathbf{X}$ élément de $E$ exprimé en $B$ et $\mathbf{X'}$ qui est le même élément de $E$ mais exprimé en $B'$.
 
-## Formule de changement de base
+### Formule de changement de base
 
-### Sur deux espaces vectoriels $E$ et $F$
+#### Sur deux espaces vectoriels $E$ et $F$
 
 Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \mapsto F$. Elle montre l'image de la base de départ dans la base d'arrivée. Une **matrice de passage** exprime un nouvelle base en terme d'une ancienne base toujours d'un même ensemble $E$. Il est très important de comprendre la différence entre les deux !
 
@@ -242,35 +244,30 @@ Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \
 > Aide : la notation $\text{Mat}_{1,2}$ se lit "de $1$ à $2$" tant que $P_{1,2}$ se lit "à $1$ de $2$". $\text{Mat}$ se lit dans "le bon ordre", càd. de gauche à droite ; et $P$ dans l'ordre inverse.
 
 La formule de changement de base est la suivante :
-
 $$
 
 B=Q^{-1}AP
 
 $$
-
 - On considère 4 bases : $\mathcal{B}_{E}$, $\mathcal{B}_{E}'$, $\mathcal{B}_{F}$, $\mathcal{B}_{F}'$.
 - $A = \text{Mat}_{\mathcal{B}_{E},\mathcal{B}_{F}}(f)$ et $B = \text{Mat}_{\mathcal{B}_{E}',\mathcal{B}_{F}'}(f)$ sont des fonctions.
 - $P = P_{\mathcal{B}_{E},\mathcal{B}_{E}'}$ et $Q = P_{\mathcal{B}_{F},\mathcal{B}_{F}'}$ sont des passages.
 
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
-
 $$
 
 B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
 
 $$
-
 1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
 3. $Q^{-1}$ : Finalement, on va exprimer le vecteur résultat de $\mathcal{B}_{F}$ à $\mathcal{B}_{F}'$.
 Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m'a posé de problèmes.
 4. $B$ : Mais, notons que tout cela serait le même que prendre $\mathbf{Y}$ exprimé en $\mathcal{B}_{E}'$ et prendre son image par $f$ exprimé en $\mathcal{B}_{F}'$.
 
-### Sur un même espace vectoriel $E$
+#### Sur un même espace vectoriel $E$
 
 Le processus est plus simple si on parle d'un endomorphisme $E \mapsto E$ :
-
 $$
 
 B = P^{-1}AP
@@ -288,7 +285,7 @@ Interprétation :
 3. $P^{-1}$ : Finalement, on reprend l'image avec $B$ et on la réécrit en $\mathcal{B}'$.
 4. $B$ : Notons que tout cela serait le même si on applique la fonction nous laissant un résultat en $\mathcal{B}'$.
 
-### Matrices semblables
+#### Matrices semblables
 
 On dit que la matrice $B$ est semblable à la matrice $A$ s'il existe une matrice inversible $P ∈ M_n(K)$ telle que $B = P^{−1}AP$. Deux matrices semblables représentent le même endomorphisme, mais exprimé dans des bases différentes.
 

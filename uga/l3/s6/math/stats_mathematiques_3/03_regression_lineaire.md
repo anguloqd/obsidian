@@ -297,8 +297,8 @@ Lorsque l'on fait de telles prévisions, on préfère accompagner celles-ci de l
     $$
     \hat{Y}_0 \pm q_{t_{n-2}}^{1-\alpha/2}\sqrt{s^2_\varepsilon\left(\frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)}
 
-$$
 
+$$
     
     où la valeur $q_{t_{n-2}}^{1-\alpha/2}$ est le quantile d’ordre $1 − α/2$ d’une loi de Student à $n − 2$ degrés de liberté.
     
@@ -306,54 +306,72 @@ $$
     
     On utilisera les notations et les résultat d’un lemme précédent. Pour rappel,
     
-    $$
-    a_i = \frac{X_i - \bar{X}}{\sum_{i=1}^n (X_i - \bar{X})^2}
     
 $$
 
+    a_i = \frac{X_i - \bar{X}}{\sum_{i=1}^n (X_i - \bar{X})^2}
+    
+
+$$
     Nous avons
     
-    $$
+    
+$$
+
     \hat{\beta}_1 = \sum_{i=1}^n a_i Y_i
     
 
 $$
-    
     et
     
-    $$
-    \sum_{i=1}^n a_i = 0, \sum_{i=1}^n a_i^2 = \frac{1}{\sum_{i=1}^n (X_i - \bar{X})^2}, \sum_{i=1}^n a_i X_i = 1
     
 $$
 
+    \sum_{i=1}^n a_i = 0, \sum_{i=1}^n a_i^2 = \frac{1}{\sum_{i=1}^n (X_i - \bar{X})^2}, \sum_{i=1}^n a_i X_i = 1
+    
+
+$$
     nous obtenons,
     
-    $$
+    
+$$
+
     \hat{Y}_0 = \bar{Y} + \hat{\beta}_1 (X_0 - \bar{X})
     
 
 $$
-    
+
     Puisque
     
-    $$
+    
+
+$$
+
     \hat{\beta}_1 = \sum_{i=1}^n a_i Y_i
     
+
 $$
 
     nous avons,
     
-    $$
+    
+
+$$
+
     \hat{\beta}_1 = \sum_{i=1}^n a_i (\beta_1 X_i + \beta_0 + \varepsilon_i)
     
 
 $$
-    
+
     Il suit des égalités sur les sommes des $a_i$ que
     
-    $$
+    
+
+$$
+
     \hat{\beta}_1 = \beta_1 + \sum_{i=1}^n a_i \varepsilon_i
     
+
 $$
 
     Par conséquent,
@@ -363,42 +381,53 @@ $$
     
 
 $$
-    
+
     On voit alors que le coefficient de $ε_i$ est
     
-    $$
+    
+
+$$
+
     \frac{1}{n} + (X_0 - \bar{X})a_i
     
+
 $$
 
 2. Dans le second cas, il s'agit de prévoir, pour un individu donné, la valeur de $Y$ qui lui est propre, sachant que sa valeur en $X$ est $X₀$. L'intervalle est
 
-    $$
+$$
+
     \hat{Y}_0 \pm q_{t_{n-2}^{1-\alpha/2}}\sqrt{s^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum_i(X_i - \bar{X})^2}\right)}
 
 $$
 
-    
     ### Preuve
     
      Il s'agit maintenant de trouver la variance de β̂₀ + β̂₁X₀ + ε. On note que ε est une réplication du terme d'erreur indépendante des autres. Il suit
     
-    $$
+    
+
+$$
+
     Var(\hat{\beta}_0 + \hat{\beta}_1 X_0 + \varepsilon) = Var(\hat{\beta}_0 + \hat{\beta}_1 X_0) + Var(\varepsilon)
     
+
 $$
 
     De manière analogue à la preuve précédente,
     
-    $$
-    Var(\hat{\beta}_0 + \hat{\beta}_1 X_0 + \varepsilon) = \sigma^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
     
 
 $$
+    Var(\hat{\beta}_0 + \hat{\beta}_1 X_0 + \varepsilon) = \sigma^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
     
+$$
+
     qui peut être estimée par
     
-    $$
+    
+
+$$
     s^2_\varepsilon\left(1 + \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum(X_i - \bar{X})^2}\right)
     
 $$

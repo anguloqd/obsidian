@@ -36,18 +36,20 @@ Par rapport à quelques limites :
     \\[0.1in]
     \text{et } \lim_{x \rightarrow \infty} a^xx^m=0, \text{ avec } 0 < a < 1\text{ et } m>0.
 
-$$
 
+$$
     
 2. Analogiquement, la fonction logarithmique est dominée par les polynômes, en croissance et décroissance.
     
-    $$
+    
+$$
+
     \lim_{x \rightarrow \infty} \frac{x^m}{\ln{x}} \rightarrow \infty\text{, avec } m>0;
     \\[0.1in]
     \text{et } \lim_{x \rightarrow \infty} x^m\ln{x}=0, \text{ avec } m<0.
     
-$$
 
+$$
 Autres séries importantes :  série géométrique, série exponentielle (expansion de Taylor de $e^x$), série harmonique alternante (converge à $\ln2$).
 
 ## Convergence et opérations de séries
@@ -61,12 +63,13 @@ Si la suite des sommes partielles $\Sigma u_n$ converge, donc la limite existe. 
 ### Opérations entre séries et propriétés
 
 Avant de rentrer sur les sommes des séries, il est à note que la série d’une suite peut être vu comme un opérateur linéaire :
-
 $$
+
 \sum_{n=0}^\infty(u_n + v_n) = \sum_{n=0}^\infty(u_n) + \sum_{n=0}^\infty(v_n)
-\hspace{8pt}\text{ et }\hspace{8pt}\sum_{n=0}^\infty (\alpha u_n) = \alpha \sum_{n=0}^\infty (u_n)
-$$
 
+\hspace{8pt}\text{ et }\hspace{8pt}\sum_{n=0}^\infty (\alpha u_n) = \alpha \sum_{n=0}^\infty (u_n)
+
+$$
 - L’addition de séries $\sum(u_n)$ et $\sum(v_n)$…
     - Converge si les deux convergent.
     - Diverge si l’une converge et l’autre diverge.

@@ -107,13 +107,11 @@ Le choix de la distribution de proposition influence crucially l'efficacité de 
 L'échantillonneur de Gibbs représente un cas particulier de l'algorithme Metropolis-Hastings particulièrement adapté aux distributions multivariées. Il exploite la décomposition de la distribution jointe en distributions conditionnelles complètes.
 
 Pour un vecteur de paramètres $\theta = (\theta_1, ..., \theta_k)$, l'algorithme cycle séquentiellement à travers les composantes, échantillonnant chacune conditionnellement aux autres :
-
 $$
 
 \theta_i^{(t+1)} \sim P(\theta_i | \theta_1^{(t+1)}, …, \theta_{i-1}^{(t+1)}, \theta_{i+1}^{(t)}, …, \theta_k^{(t)}, \text{données})
 
 $$
-
 Cette approche présente l'avantage d'éviter la spécification d'une distribution de proposition et garantit un taux d'acceptation de 100%. Cependant, elle nécessite la capacité d'échantillonner directement les distributions conditionnelles complètes.
 
 ### Reverse-Jump MCMC
@@ -123,13 +121,11 @@ Les méthodes MCMC conventionnelles opèrent dans des espaces de paramètres de 
 Cette extension s'avère cruciale pour des problèmes comme la détection de points de rupture, où le nombre de ruptures constitue lui-même un paramètre inconnu. L'algorithme propose des mouvements trans-dimensionnels : ajout ou suppression de paramètres, modifiant la dimension de l'espace d'état.
 
 La règle d'acceptation se généralise pour tenir compte des changements dimensionnels :
-
 $$
 
 \alpha = \min\left(1, \frac{\pi(\theta^*) q(\theta^{(t)} | \theta^*)}{\pi(\theta^{(t)}) q(\theta^* | \theta^{(t)})} \left| \frac{\partial \theta^*}{\partial (\theta^{(t)}, u)} \right|\right)
 
 $$
-
 Le terme jacobien $\left| \frac{\partial \theta^*}{\partial (\theta^{(t)}, u)} \right|$ assure la conservation des probabilités lors des transformations dimensionnelles.
 
 ### Diagnostic de convergence
@@ -154,7 +150,6 @@ $$
 y_t = T_t + S_t + \varepsilon_t
 
 $$
-
 où $T_t$ représente la tendance à long terme, $S_t$ la composante saisonnière, et $\varepsilon_t$ le bruit aléatoire. Cette formulation suppose l'indépendance des composantes et l'additivité de leurs effets.
 
 La composante de tendance capture l'évolution directionnelle globale de la série. Elle reflète des changements structurels graduels ou des shifts de régime. L'estimation de la tendance nécessite de séparer les variations persistantes des fluctuations transitoires.
@@ -164,13 +159,11 @@ La composante de tendance capture l'évolution directionnelle globale de la sér
 La saisonnalité manifeste des patterns répétitifs liés à des cycles naturels ou institutionnels. Dans le contexte écologique, la saisonnalité reflète les cycles phénologiques : germination printanière, croissance estivale, sénescence automnale, dormance hivernale.
 
 Les modèles harmoniques offrent une représentation parcimonieuse de la saisonnalité via des combinaisons de fonctions trigonométriques :
-
 $$
 
 S_t = \sum_{k=1}^K \left[ a_k \sin\left(\frac{2\pi k t}{P}\right) + b_k \cos\left(\frac{2\pi k t}{P}\right) \right]
 
 $$
-
 Cette formulation permet d'adapter la complexité du pattern saisonnier en ajustant l'ordre harmonique $K$. Les écosystèmes simples peuvent être adéquatement décrits par quelques harmoniques, tandis que les systèmes complexes nécessitent des ordres supérieurs.
 
 ### Points de rupture et changements structurels
@@ -185,7 +178,6 @@ $$
 y_t = \sum_{j=1}^m \mathbf{1}(\tau_{j-1} < t \leq \tau_j) \left( \alpha_j + \beta_j t + \varepsilon_t \right)
 
 $$
-
 Cette formulation permet des changements simultanés de niveau et de pente aux points de rupture $\tau_j$.
 
 ### Modèles linéaires par morceaux
@@ -212,7 +204,6 @@ $$
 \text{AIC} = -2 \log L + 2k
 
 $$
-
 où $L$ représente la vraisemblance maximale et $k$ le nombre de paramètres. Cette pénalisation linéaire reflète l'augmentation attendue de la variance avec la complexité du modèle.
 
 Le critère d'information bayésien (BIC) impose une pénalité plus sévère :
@@ -221,7 +212,6 @@ $$
 \text{BIC} = -2 \log L + k \log n
 
 $$
-
 Cette pénalisation logarithmique en la taille d'échantillon $n$ favorise davantage les modèles parcimonieux, particulièrement pour de grands échantillons.
 
 ### Moyennage bayésien de modèles
@@ -234,7 +224,6 @@ $$
 P(\tilde{y} | \text{données}) = \sum_{m=1}^M P(\tilde{y} | M_m, \text{données}) P(M_m | \text{données})
 
 $$
-
 Cette approche capture l'incertitude liée au choix du modèle, souvent négligée par les méthodes conventionnelles. L'incertitude totale se décompose en incertitude intra-modèle et inter-modèles.
 
 Le BMA présente des avantages prédictifs démontrés empiriquement : il produit généralement des prédictions plus précises et mieux calibrées que la sélection d'un modèle unique. Cette supériorité découle de l'effet de "sagesse des foules" : les erreurs de modèles individuels tendent à se compenser mutuellement.
@@ -249,7 +238,6 @@ $$
 \text{LOO-CV} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_{-i})^2
 
 $$
-
 Cette méthode fournit une estimation quasi-non biaisée de l'erreur de généralisation mais peut s'avérer computationnellement coûteuse pour de grands échantillons.
 
 ## Modèles linéaires généralisés

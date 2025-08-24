@@ -25,39 +25,39 @@ Sous ces hypothèses, il découle que :
     $$
     \mathbb{E}[\hat{\beta}_0]=\beta_0 \text{\hspace{8pt}et\hspace{8pt}}\mathbb{E}[\hat{\beta}_1]=\beta_1 
 
-$$
 
+$$
     
 - Les variances sont les suivantes, mais il nous manque un paramètre $\sigma^2_u$.
     
-    $$
+    
+$$
+
     \text{Var}(\hat{\beta}_1)=\frac{\sigma^2_u}{\sum_{i=1}^N(x_i-\bar{x})^2}
     
     \text{\hspace{8pt}et\hspace{8pt}}
     
     \text{Var}(\hat{\beta}_0)=\frac{\sigma^2_u}{n}\frac{\sum_{i=1}^Nx_i^2}{\sum_{i=1}^N(x_i-\bar{x})^2}
     
-$$
 
+$$
 - Si on prend la variance des résidus, ce serait un estimateur biaisé de $\sigma^2_u$.
 Néanmoins, il existe un estimateur sans biais de $\sigma^2_u$, où $k$ le nombre de var. explicatives. Dans ce cas, $k=1$.
 
-    $$
+    
+$$
+
     \hat{\sigma}^2_u=\frac{\sum_{i=1}^n\hat{u}_i^2}{N-(k+1)} \implies \mathbb{E}[\hat{\sigma}^2_u]=\sigma^2_u
 
 $$
-
-
 ## Généralisation à $k$ variables explicatives, changement des $H_i$
 
 C'est juste l'inclusion de plus de variables explicatives dans le modèle :
-
 $$
 
 y_i=\beta_0+\beta_1x_{i1}+\beta_2 x_{i2}+\cdots+\beta_k x_{ik}+u_i
 
 $$
-
 - $y_i$ : observation individuelle de la variable à expliquer pour l'individu $i$
 - $k$ : le nombre de variables explicatives du modèle
 - $x_{ik}$ : les $k$ variables explicatives qui correspondent à l'individu $i$
@@ -68,7 +68,6 @@ Fixer un $i$ est de se fixer sur un individu (coupe transversale)
 Fixer un $t$ est de voir une photographie des individus au moment $t$.
 
 Pour écrire l'équation qui tient compte de tous les individus $i$, on écrit sous forme matricielle :
-
 $$
 
 \mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\mathbf{u}
@@ -130,14 +129,13 @@ u_n
 \end{bmatrix}
 
 $$
-
 > [!note]
 > Le vecteur $\hat{\boldsymbol{\beta}}$ qui contient les estimateurs des MCO de $\boldsymbol{\beta}$ et qui résout ce système d'équations linéaires utilise la [pseudo-inverse](https://en.wikipedia.org/wiki/Generalized_inverse) ou l'inverse de [Moore-Penrose](https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse) de $\mathbf{X}$ (une généralisation de l'inverse pour les matrices pas forcément carrées. Elle est égale à l'inverse régulière si la matrice est carrée).
->
-> $$
-> \hat{\boldsymbol{\beta}}=(\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
-> $$
+$$
 
+> \hat{\boldsymbol{\beta}}=(\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}
+
+$$
 Les cinq hypothèses du cas linéaire simple sont légèrement changées dans le cas général :
 
 - $H_1$ : $\mathbb{E} [u_i] = 0$
@@ -159,7 +157,6 @@ Comme rappel, $\mathbf{X}$ est de dimension $(n, k+1)$.
 - Le premier composant est la variable dépendante et la deuxième la variable indépendante, donc si on parle de la dérivée vecteur-par-scalaire, un vecteur est une variable dépendante et le scalaire la variable indépendante.
 
 La dérivée d'un vecteur $\mathbf{y}$ par rapport à un scalaire $x$ est utilisée dans le cas où $\mathbf{y}$ contient à chaque entrée des fonctions de $x$ différentes. On prend donc la dérivée partielle de chaque fonction par rapport à $x$. Ceci nous donne aussi le "vecteur tangent". Si on suppose qu'en physique, $\mathbf{y}$ sont les coordonnées de position, le vecteur tangent montre la vitesse vers chaque direction.
-
 $$
 
 \frac{\partial \mathbf{y}}{\partial x}=
@@ -183,11 +180,9 @@ $$
 \end{bmatrix}
 
 $$
-
 ![Pour chaque point de la position en 2 dimensions, on a le vecteur tangent (qui représente la vitesse) et un vecteur normal qui n'a pas d'importance ici.](ressources/02_regression_lineaire_multiple_untitled.png)
 
 Après, on a la dérivée d'un scalaire par rapport à un vecteur, où les entrées du vecteur sont les arguments du scalaire $y=f(x_1,\cdots, x_n)$. Le résultat prend la dérivée partielle du scalaire par rapport à chaque variable indépendante. On note que le gradient est un cas de dérivée scalaire-par-vecteur.
-
 $$
 
 \frac{\partial y}{\partial \mathbf{x}}=
@@ -213,9 +208,7 @@ $$
 =\nabla y
 
 $$
-
 Finalement, la dérivée d'un vecteur $\mathbf{y}$ par rapport à un autre vecteur $\mathbf{x}$ suppose que chaque entrée de $\mathbf{y}$ est une fonction à plusieurs variables qui se trouvent dans $\mathbf{x}$. Pour chaque ligne, on dérive une fonction $y_i$ par rapport à toutes ses variables indépendantes dans $\mathbf{x}$ (càd, ligne $1$ contient le gradient de $y_1$, ligne $2$ le gradient de $y_2$, etc). Concrètement, l'entrée $ij$ est la dérivée de la fonction $i$ par rapport à la variable indépendante $j$.
-
 $$
 
 \frac{\partial \mathbf{y}}{\partial \mathbf{x}} =
@@ -257,29 +250,23 @@ $$
 \end{bmatrix}
 
 $$
-
 ## Comment calculer les MCO
 
 Les MCO sont juste les coefficients d'une régression linéaire mais appliqués sur un échantillon, dans l'espoir que ces valeurs seront pas si éloignées des vraies valeurs qu'on obtiendrait si on appliquait la régression linéaire sur toute la population.
 
 Partons du terme SCE pour trouver ce qui nous intéresse :
-
 $$
 
 SCE=\sum_{i=1}^n (y_i-\hat{y}_i)^2= \sum_{i=1}^n \hat{u}^2_i
 
 $$
-
 Voyons que maintenant on traite avec un vecteur d'erreurs $\mathbf{u}$. Pour que chaque entrée devienne $\hat{u}^2_i$ on peut écrire une opération avec $\mathbf{u}$ comme suit : 
-
 $$
 
 \mathbf{u}^T \mathbf{u} = \sum_{i=1}^n \hat{u}^2_i
 
 $$
-
 Et finalement, on veut minimiser cette expression.
-
 $$
 
 \min_{\boldsymbol{\beta}}(\mathbf{u}^T \mathbf{u})
@@ -311,9 +298,7 @@ $$
 \end{align*}
 
 $$
-
 On applique la condition de premier ordre à l'expression pour arriver au résultat. On omet la condition de deuxième ordre.
-
 $$
 
 \begin{align*}
@@ -341,7 +326,6 @@ $$
 \end{align*}
 
 $$
-
 ---
 
 Pour faire le passage de la première ligne à la deuxième ligne, voici quelques opérations avec dérivées, vecteurs et scalaires à savoir, sorties du PDF ci-dessous, page 12/61.
@@ -349,7 +333,6 @@ Pour faire le passage de la première ligne à la deuxième ligne, voici quelque
 [Ch3slides_multiple_linear_regression.pdf](ressources/02_regression_lineaire_multiple_ch3slides_multiple_linear_regression.pdf)
 
 Pour ce premier, notons qu'on fait une combinaison linéaire de coefficients $\mathbf{a}$. Le résultat final de l'opération $\mathbf{a}^T \mathbf{x}$ est juste $[a_{j=1}x_{i=1}+a_{j=2}x_{i=2}+\cdots+a_{j=m}x_{i=n}]$. Si on dérive cette expression par $\mathbf{x}$ (scalaire-par-vecteur), on devrait avoir de retour le vecteur avec les coefficients, donc $\mathbf{a}$.  
-
 $$
 
 \begin{align*}
@@ -359,9 +342,7 @@ $$
 \end{align*}
 
 $$
-
 Pour ce deuxième, notons que l'expression qui résulte de $\mathbf{x}^T \mathbf{x}$ (comb. linéaire) est égale à $[x_1^2+x_2^2+\cdots+x_n^2]$. La dérivée de cette expression devrait nous retourner $2x_i$ pour l'entrée $i$, donc $2\mathbf{x}$.
-
 $$
 
 \begin{align*}
@@ -371,9 +352,7 @@ $$
 \end{align*}
 
 $$
-
 Pour ce troisième, la forme de chaque entrée de $\mathbf{A} \mathbf{x}$ tout seul est un vecteur colonne $(\sum_{i,j=1}^{i=n, j=m} a_{ij}x_i)$. Après, la forme de chaque entrée de $\mathbf{x}^T(\mathbf{A} \mathbf{x})$ est donc $(\sum_{i,j=1}^{i=n, j=m} a_{ij}x_i^2)$. Si on dérive chaque terme par $x_i$, on finit avec le vecteur colonne $(\sum_{i,j=1}^{i=n, j=m} 2a_{ij}x_i)$, donc $2\mathbf{A}\mathbf{x}$.
-
 $$
 
 \begin{align*}
@@ -385,9 +364,7 @@ $$
 \end{align*}
 
 $$
-
 Finalement, on utilise un raisonnement pareil pour ce dernier.
-
 $$
 
 \begin{align*}
@@ -397,11 +374,9 @@ $$
 \end{align*}
 
 $$
-
 ## Variance des MCO
 
 La variance de la matrice des estimateurs $\hat{\boldsymbol{\beta}}$ est égale à la matrice de covariance entre les estimateurs $\hat{\beta}_i$ et $\hat{\beta}_j$, pour $k$ variables explicatives.
-
 $$
 
 \text{Var}(\hat{\boldsymbol{\beta}})=\hat{\sigma^2_u}(\mathbf{X}^T\mathbf{X})^{-1}=
@@ -425,15 +400,12 @@ $$
 \end{bmatrix}
 
 $$
-
 Comme rappel, l'estimateur des écarts-types des perturbations $u$ est :
-
 $$
 
 \hat{\sigma^2_u}=\frac{\hat{\mathbf{u}}^T\hat{\mathbf{u}}}{n-(k+1)}=\frac{SCR}{n-(k+1)}
 
 $$
-
 # Hypothèses et propriétés
 
 ## Espérance et variance de $\hat{\boldsymbol{\beta}}$
@@ -463,19 +435,16 @@ Finalement, on peut calculer $\hat{\mathbf{u}}$ :
 ![untitled](ressources/02_regression_lineaire_multiple_untitled_4.png)
 
 Et donc, finalement :
-
 $$
 
 \hat{\mathbf{u}}^T \hat{\mathbf{u}}=\mathbf{u}^T \mathbf{M}^T \mathbf{M} \mathbf{u}=\mathbf{u}^T \mathbf{M} \mathbf{u}
 
 $$
-
 # Qualité de l'ajustement
 
 ## Rappel : analyse de la variance et $R^2$
 
 La populaire équation de la variance, qui décompose la variance comme la somme de deux termes, est la suivante :
-
 $$
 
 \underbrace{\sum_{i=1}^N(y_i-\bar{y})^2}_{SCT}=\underbrace{{\sum_{i=1}^N(\hat{y}_i-\bar{y})^2}}_{SCE}+\underbrace{\sum_{i=1}^N(y_i-\hat{y}_i)^2}_{SCR}
@@ -485,17 +454,14 @@ $$
 \text{Remarque : } \sum_{i=1}^N(y_i-\hat{y}_i)^2=\sum_{i=1}^N(\hat{u}_i - \cancel{\bar{\hat{u}}}^{\space0})^2
 
 $$
-
 Où $SCT$ est la somme des carrés totaux, $SCE$ est la somme des carrés expliqués, et $SCR$ est la somme des carrés des résidus.
 
 Avec cette terminologie, on rappelle le coefficient de détermination :
-
 $$
 
 R^2=\frac{SCE}{SCT}=1-\frac{SCR}{SCT}
 
 $$
-
 - $R^2 = 1$ : si tous les points correspondant aux données se trouvent sur la droite d'ajustement.
 - $R^2 = 0$ : les variations entre les $\hat{y}_i$ ne capturent quasiment rien de la variation observée entre les $y_i$.
 - Remarque : un faible $R^2$ n'implique pas forcément que la régression des MCO ne sert à rien, mais que d'autres "problèmes" peuvent expliquer ce résultat.
@@ -507,7 +473,6 @@ Un fait important par rapport à $R^2$ est que sa valeur augmente si le nombre d
 Pour $R^2$, toute variable explicative nous rapproche de la meilleure prédiction, ce qui n'est pas désirable, car on veut distinguer entre les variables explicatives qui sont de bons prédicteurs et celles qui ne le sont pas.
 
 La manière populaire d'ajuster $R^2$ est comme $\bar{R^2}$, un $R^2$ ajusté aux degrés de liberté :
-
 $$
 
 \bar{R^2}=R^2-\frac{k-1}{n-k}(1-R^2)=1-\frac{SCR/(n-k)}{SCT/(n-1)}

@@ -319,7 +319,6 @@ $$
     
 - Si $f$ est lpz. pour tout compact (fermé et borné) de $E$, donc $f$ est localement lpz : c’est le cas de $f(x)=x^2$ aussi.
 
-
     ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_9.png)
 
     
@@ -360,18 +359,18 @@ Voyons quelques produits hermitiens :
 
  $$
     \langle x,y \rangle = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
-
 $$
 
 - Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\mathbb{R}$.
+
   $$
 
     \langle P,Q \rangle = \int_0^1 P(t)\overline Q(t)dt
-    
+
 
 $$
-
-## Orthogonalité, projections et orthonormalité
+#
+# Orthogonalité, projections et orthonormalité
 
 ### Orthogonalité
 
@@ -397,7 +396,6 @@ Soit $B=\{e_i\}$ une base de $E$. Elle est orthonormée si :
 - Les vecteurs sont deux à deux orthogonaux : $\langle e_i, e_j \rangle = 0, i \ne j$.
 
 Une première note importante à faire c’est que, si $F_1\in E$ tel que $F_1=\text{Vect}(e_1)$, donc
-
 $$
 
 p_{F_1}(u)=\langle u, e_1 \rangle e_1

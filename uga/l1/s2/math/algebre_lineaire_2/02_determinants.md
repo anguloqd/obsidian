@@ -42,8 +42,8 @@ $$
     a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
     \end{array}
 
-$$
 
+$$
     
     - On recopie les deux premières colonnes à droite de la matrice (colonnes grisées)
     - On additionne les produits de trois termes en les regroupant selon la direction de la diagonale descendante (à gauche)
@@ -56,13 +56,11 @@ $$
 Le déterminant est finalement le coefficient par lequel les aires sont multiplies passant de la base canonique a une autre base.
 
 On caractérise le déterminant comme une fonction ou application d'une matrice à une coefficient réel.
-
 $$
 
 \det:M_n(\mathbb{K})\mapsto \mathbb{K}
 
 $$
-
 ### Premières propriétés
 
 ### Optionnel : clarification de la propriété #1
@@ -72,7 +70,9 @@ $$
 - Imaginons une troisième matrice, $C$, égale à $A$ et $B$ à exception de la colonne $j$, où dans chaque ligne $i$, on va prendre une combinaison linéaire des coefficients $a_{ij}$ et $b_{ij}$, avec coefficients $λ$ et $µ$.
 - Finalement, $\text{det}(C) = λ \cdot \text{det}(A) + µ \cdot \text{det}(B)$.
     
-    $$
+    
+$$
+
     \begin{vmatrix} 
     a_{11} & \cdots & \lambda a_{1j} + \mu b_{1j} & \cdots & a_{1n} \\
     a_{21} & \cdots & \lambda a_{2j} + \mu b_{2j} & \cdots & a_{2n} \\
@@ -92,8 +92,8 @@ $$
     a_{n1} & \cdots & b_{nj} & \cdots & a_{nn}
     \end{vmatrix}
     
-$$
 
+$$
     - (Les barres de valeur abs. ici signifie le det.)
 - **Propriété #1** : le déterminant est linéaire par rapport à chaque vecteur colonne, les autres étant fixés
 - **Propriété #2** : si une matrice $A$ a deux colonnes identiques, alors son déterminant est nul
@@ -161,60 +161,78 @@ La matrice après l'opération élémentaire serait $A' = A \cdot E$, où **$E$ 
 #### Déterminants de matrices triangulaires
 
 Le déterminant d'une matrice triangulaire de dimension $n \times n$, soit supérieure ou inférieure, est égal au produit des entrées diagonaux, peu importe les autres entrées.
-
 $$
+
 A_n^\text{inf}=\begin{bmatrix}
+
 a_{11}&0&\cdots&0\\
+
 a_{21}&a_{22}&\cdots&0\\
+
 \vdots&\vdots&\ddots&\vdots\\
+
 a_{n1}&a_{n2}&\cdots&a_{nn}\end{bmatrix}
 
 \text{ ou }
 
 A_n^\text{sup}=\begin{bmatrix}
+
 a_{11}&a_{12}&\cdots&a_{1n}\\
+
 0&a_{22}&\cdots&a_{2n}\\
+
 \vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&a_{nn}\end{bmatrix} 
+
+0&0&\cdots&a_{nn}\end{bmatrix}
 
 \\[12pt]
 
 \implies\det(A)=a_{11}a_{22}\dots a_{nn}
-$$
 
+$$
 ## Calculs de déterminants de taille générale $n$
 
 ### Préparation
 
 Soit $A$ une matrice carrée. On va appeler $A_{ij}$ à la matrice extraite qu'on obtient en effaçant la ligne $i$ et la colonne $j$. Voyons cet exemple :
-
 $$
+
 A = \begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{bmatrix} \quad \Rightarrow \quad
-A_{32} = \begin{bmatrix}
-1 & 3 \\
-4 & 6
-\end{bmatrix} \quad \Rightarrow \quad
-\det(A_{32}) = 1 \cdot 6 - 3 \cdot 4 = 6 - 12 = -6
-$$
 
+1 & 2 & 3 \\
+
+4 & 5 & 6 \\
+
+7 & 8 & 9
+
+\end{bmatrix} \quad \Rightarrow \quad
+
+A_{32} = \begin{bmatrix}
+
+1 & 3 \\
+
+4 & 6
+
+\end{bmatrix} \quad \Rightarrow \quad
+
+\det(A_{32}) = 1 \cdot 6 - 3 \cdot 4 = 6 - 12 = -6
+
+$$
 On introduit l'idée d'un *mineur* : un "mineur d'ordre $n-p$" est le déterminant d'une matrice extraite $A'$ d'une matrice de base $A$ à laquelle on a appliqué la suppression de lignes et colonnes $p$ fois. Ainsi et dans cet exemple, le $\text{det}(A_{ij})$ est un mineur d'ordre $n-1$ de la matrice $A$.
 
 Une autre idée importante pour la suite est le *cofacteur* : le "cofacteur de $A$ relatif au coefficient $a_{ij}$" est $C_{ij}$ = $(-1)^{i+j} \cdot \text{det}(A_{ij})$. Dans cette exemple, on a que :
-
 $$
+
 C_{32}=(-1)^{3+2}\det A_{32}=(-1)\times(-11)=11
-$$
 
+$$
 ### Développement suivant une ligne ou une colonne
 
 On reprend les idées de mineur et cofacteur pour présenter la méthode de calcul général d'un déterminant. Notamment, c'est la méthode de "développement d'une matrice", et on peut la faire par rapport aux lignes (indice $i$) ou colonnes (indice $j$).
-
 $$
+
 \text{Dev. par rapport aux lignes :} \det A=\sum_{i=1}^n(-1)^{i+j}a_{ij}\det A_{ij}=\sum_{i=1}^na_{ij}C_{ij}
+
 $$$$
 
 \text{Dev. par rapport aux colonnes :}\det A=\sum_{j=1}^n(-1)^{i+j}a_{ij}\det A_{ij}=\sum_{j=1}^na_{ij}C_{ij}

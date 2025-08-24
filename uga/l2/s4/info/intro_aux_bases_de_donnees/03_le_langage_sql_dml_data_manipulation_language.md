@@ -264,8 +264,6 @@ C’est l’opérateur de différence ensembliste. Construit l’ensemble d’é
 
 Il n’existe pas une syntaxe pour le produit cartésien, plutôt on utilise une **jointure sans condition de jointure** (clause `WHERE` avec une égalité). Elle risque d’être cependant coûteuse et, sans justification, il faudra la considérer comme une erreur.
 
-
-
 ### Auto-jointure et données cycliques
 
 On qualifie de cyclique une structure de données qui fait, directement ou indirectement, référence à elle. Il est normalement d’intérêt de faire une requête en joignant la table à elle-même, donc une auto-jointure. Par exemple :

@@ -41,7 +41,6 @@ Dans la pratique, ce discrimination inclut de la différenciation. Il existe deu
 2. Un autre type de modèle est un seul bien à deux prix différents : $p_1$ et $p_2$. La quantité du bien vendu à $p_1$ serait $q_1$ et de même avec $q_2$, d’où $q=q_1+q_2$. Bref, $p_1$ serait le prix constante pour les personnes “riches” et $p_2$ pour les personnes “moins riches”.
     1. Parfois, cette stratégie de discrimination est meilleure pour le profit de la firme mais aussi pour le surplus de consommateur (et moins de perte sèche) que dans le cas où la firme applique bêtement la stratégie $q$ tel que $Rm=Cm$.
 
-
         ![untitled](ressources/04_discrimination_prix_en_monopole_untitled_1.png)
 
         
@@ -315,7 +314,6 @@ Supposons un monopole qui vend bien 1 et bien 2, dont leurs coûts $Cm_1=100$ et
     - $C$ : achète le bien 1 (surplus de $\$50$) sur le *bundle* (surplus de $\$20$)
     - $D$ : achète le bien 1 (surplus de $\$200$) sur le *bundle* (surplus de $\$0$)
     - Le profit de la firme est $\pi_M = \$800$ ou $\$850$, dépendant si $A$ achète le bien 2 ou le *bundle*. En tout cas, supérieur au *bundle* pur.
-
 
     Finalement, on a repris les prix de tarification linéaire pour la tarification de *bundling* mixte, **mais ceci n’est pas forcément l’optimal**. Si la firme fixe $p_1=\$450$, $p_2=\$450$ et $p_B=\$520$, on peut calculer que le profit final est $\pi_{M^*}=\$1190$. On a absorbé les surplus des tous les consommateurs à exception de $B$, qui garde $\$5$ en surplus.
 

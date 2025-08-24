@@ -388,9 +388,8 @@ Il existe deux autres définitions équivalentes des économies d’echelle, don
     
     \text{Multi-produit : } S=\frac{C(q_1,q_2,\dots,q_n)}{q_1Cmg_1 + q_2Cmg_2+\dots + q_nCmg_n}
 
+
 $$
-
-
 Toutes les trois définitions sont mathématiquement équivalentes : si l’une est vraie, les autres deux sont aussi vraies, et de même si l’une est fausse.
 
 ### Économies d’échelle spécifiques
@@ -399,13 +398,11 @@ Toutes les trois définitions sont mathématiquement équivalentes : si l’une 
 > Les coûts spécifiques sont des coûts pour produire un bien $1$ mais pas un bien $2$.
 
 Ayant défini le coût moyen incrémentale $CMI$ (aussi appelé à coût supplémentaire moyen), on peut aussi définir les “économies d’échelles spécifiques”, que c’est une réécriture de l’indice d’économie d’échelles mono-produit mais remplaçant le $CM(q)$ pour le $CMI(q_i|q_j)=CMI_i$.
-
 $$
 
 S=\frac{CM(q)}{Cmg(q)} \longrightarrow ESP_i=\frac{CSM_i}{Cm_i}
 
 $$
-
 L’interprétation de $ESP_i$ reste la même de celle de $S$ pour le cas mono-produit.
 
 **Note**. Il se peut qu’il existe un cas où il n’existe pas des économie d’échelles spécifiques mais qu’il existe simultanément des économies d’échelles conjointes (car les rendements à échelles sont croissants pour tout niveau de production).
@@ -425,13 +422,11 @@ La définition mathématique des économies de gammes est la suivante :
 **Il faut absolument qu’il y ait complémentarité, sinon ce n’est pas éco. de gamme !**
 
 Une autre méthode pour vérifier une situation des économies de gammes, sans passer par la définition, c’est d’utiliser l’indice des économies de gammes $EG$, similaire à l’idée de l’indice d’économies d’échelle.
-
 $$
 
 EG=\frac{C(q_1,0)+C(0,q_2)-C(q_1,q_2)}{C(q_1,q_2)}
 
 $$
-
 Intuitivement, cet indice montre la différence de cout total résultant de la production séparée de biens (proportionnel au coût conjoint).
 
 - Si $EG > 0$, on a des économies de gamme
@@ -444,7 +439,6 @@ Pour rappel, la sous-additivité de coûts est la condition $C(q)<C(q_1)+C(q_2),
 **La fonction de coût est sous-additive si et seulement s’il y a des eco. d’échelle ET gamme**. Si jamais on a une sans l’autre, la fonction de coût n’est pas sous-additive.
 
 Exemple #1 :
-
 $$
 
 C(q_1,q_2)=q_1+q_2+(q_1q_2)^{1/3}
@@ -470,9 +464,7 @@ C(q_1,q_2) \nless C(q_1,0)+C(0,q_2)
 \implies C \text{ non sous-additive.}
 
 $$
-
 Exemple #2 :
-
 $$
 
 C(q_1,q_2)=q_1^{1/4}+q_2^{1/4}-(q_1q_2)^{1/4}

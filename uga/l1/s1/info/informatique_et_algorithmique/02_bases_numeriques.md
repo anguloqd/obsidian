@@ -122,6 +122,7 @@ Prenons base $10$ et quatre chiffres.
     $$
     \underbrace{0.}_\text{signe} - \underbrace{10000011}_\text{excedent} - \underbrace{(1.)011111}_\text{mantisse}
 
+
 $$
 
     

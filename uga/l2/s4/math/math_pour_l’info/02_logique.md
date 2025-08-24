@@ -78,9 +78,8 @@ Le principe de résolution de Robinson est une généralisation du modus ponens.
     $$
     \big((p \lor a_1\lor \dots \lor a_n) \land (\lnot p \lor b_1 \lor \dots \lor b_n)\big) \\\implies (a_1 \lor \dots \lor a_n \lor b_1 \lor \dots \lor b_n)
 
+
 $$
-
-
 La magie ici c’est que la clause finale ne dépend pas ni de $p$ ni de $\lnot p$ !
 
 # Prédicats
@@ -121,7 +120,6 @@ On a vu que les prédicats contiennent des variables mathématiques que attenden
 1. On transforme en forme “prénexe” : on quantifie toutes les variables et les seuls connecteurs logiques qu’il y a sont ceux basiques ($\land$, $\lor$ et $\lnot$).
 2. On remplace toute variable quantifiée existentiellement ($\exists$) par un symbole de fonction dont les arguments sont les variables quantifiées universellement ($\forall$) qui précèdent notre variable.
 3. On supprime les quantificateurs existentiels qui sont devenus inutiles.
-
 $$
 
 \forall x \in E, \exists M>0:f(x)<M \longrightarrow \forall x \in E, f(x)<\underbrace{g(x)}_{f(x)+1}

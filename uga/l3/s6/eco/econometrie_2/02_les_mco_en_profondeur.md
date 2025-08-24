@@ -489,7 +489,6 @@ $$
 Cons_i = \alpha_0 + b_{1,0} prix_{1,i} + b_{2,0} prix_{2,i} + b_{3,0} revenu_i + u_i
 
 $$
-
     avec $prix_{1,i}$ et $prix_{2,i}$ très liés. Solution habituelle : retirer une des variables ou abandonner l'estimation.
 
 2.  **Effets âge-expérience-génération** : Ces trois variables sont par définition linéairement liées (âge = expérience + âge d'entrée sur le marché du travail), posant un problème d'identification fondamental.
@@ -497,13 +496,11 @@ $$
 #### Multicolinéarité dans les données de panel
 
 **Données hiérarchisées ou en clusters** : Considérons le modèle
-
 $$
 
 y_{it} = \alpha_{i,0}\tilde{d}_i + \alpha_{t,0}\tilde{d}_t + b_{1,0}\tilde{x}_{it} + b_{2,0}\tilde{x}_{2,it} + b_{3,0}\tilde{x}_{3,t} + u_{it}
 
 $$
-
 où $\tilde{d}_i = 1$ si observation de l'individu $i$, 0 sinon.
 
 **Problèmes d'identification** :
@@ -549,51 +546,41 @@ Le paramètre $\boldsymbol{a}_0$ est identifiable dans ce modèle de régression
 #### Condition d'orthogonalité et estimation
 
 Lorsque les conditions précédentes sont satisfaites, le modèle $y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i$ avec $E[u_i] = 0$ et $E[u_i|\mathbf{x}_i] = \mathbf{0}$ implique la validité de la condition d'orthogonalité :
-
 $$
 
 E[(y_i - \mathbf{x}_i'\boldsymbol{a}_0)\mathbf{x}_i] = \mathbf{0}_{K \times 1}
 
 $$
-
 Cette condition de moment, fondée sur l'exogénéité de $\mathbf{x}_i$, caractérise $\boldsymbol{a}_0$ de manière unique.
 
 #### Application du principe d'analogie
 
 Le principe d'analogie définit l'estimateur de la Méthode des Moments $\hat{\boldsymbol{a}}^{MM}_N$ à partir de la contrepartie empirique :
-
 $$
 
 \hat{\boldsymbol{a}}^{MM}_N \text{ est solution de } \frac{1}{N}\sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i = \mathbf{0}_{K \times 1}
 
 $$
-
 On démontre alors que $\hat{\boldsymbol{a}}_{MM,N} = \hat{\boldsymbol{a}}_{MCO,N}$ et que :
-
 $$
 
 \sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}E[u_i^2\mathbf{x}_i\mathbf{x}_i'](E[\mathbf{x}_i\mathbf{x}_i'])^{-1})
 
 $$
-
 #### Cas homoscédastique
 
 Dans le cas où les termes d'erreur sont homoscédastiques ($E[u_i^2|\mathbf{x}_i] = V[u_i|\mathbf{x}_i] = \sigma_0^2$), on a :
-
 $$
 
 E[u_i^2\mathbf{x}_i\mathbf{x}_i'] = \sigma_0^2 E[\mathbf{x}_i\mathbf{x}_i']
 
 $$
-
 et donc :
-
 $$
 
 \sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \sigma_0^2(E[\mathbf{x}_i\mathbf{x}_i'])^{-1})
 
 $$
-
 #### Distinction ajustement-identification
 
 Le cours établit une distinction fondamentale : si $E[u_i|\mathbf{x}_i] \neq \mathbf{0}$ (endogénéité), alors :
@@ -611,7 +598,6 @@ Cependant, une mesure satisfaisante de $\boldsymbol{a}_0$ (l'effet causal recher
 #### Démarche générale d'identification
 
 La démarche d'identification des paramètres d'un modèle de régression linéaire suit une logique méthodique. Premièrement, on définit $\boldsymbol{a}_0$ comme la solution d'un problème théorique appelé "problème limite". Dans le cas du modèle de régression linéaire, ce problème s'énonce ainsi :
-
 $$
 
 \boldsymbol{a}_0 \text{ est solution en } \boldsymbol{a} \text{ de l'équation } E[(y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i] = \mathbf{0}

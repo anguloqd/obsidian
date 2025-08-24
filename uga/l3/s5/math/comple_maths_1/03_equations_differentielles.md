@@ -76,13 +76,17 @@ y^\prime+a(t)y(t)=0 \iff y^\prime_0=-a(t)y_0(t)
 
 $$
 2. Trouver **une** solution de l’équation complète $y^\prime+a(t)y(t)=f(t)$. Ceci est réécrit aussi comme     
-	$$
-y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)
+	
 $$
 
+y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)
+
+$$
 3. La solution générale sera $y=y_0+y_*$. Si on dérive les deux membres de cette dernière équation, on devrait trouver l’équation du départ.
 
-   $$
+   
+$$
+
     \begin{align*}
     y^\prime & =y_0^\prime+y_*^\prime \\
     & =-a(t) y_0(t)+f(t)-a(t) y_0(t) \\
@@ -93,12 +97,9 @@ $$
     y^{\prime}+a(t) y(t) =f(t)
 
 $$
-
-
 ## Résolution de l’équation homogène
 
 Si $a$ est continue sur $I$ et admet des primitives, et $t_0\in ]\alpha, \beta[$, le théorème de dérivation des fonction composées montre que 
-
 $$
 
 \begin{align*}
@@ -114,13 +115,11 @@ y_0(t)&=\exp\left(-\int_{t_0}^ta(s)ds\right)
 \end{align*}
 
 $$
-
 Notons que ce $C$ aura une valeur différente pour chaque valeur initiale $t_0$.
 
 ## Résolution de l’équation particulière
 
 Ici, il suffit de trouve une solution à l’équation dite “particulière”. Pour ce faire, on peut utiliser la méthode de variation de la constante, aussi appelée méthode de Lagrange. On cherche une solution de la forme 
-
 $$
 
 \begin{align*}
@@ -130,27 +129,22 @@ y_*(t)&=C(t)\exp\left(-\int_{t_0}^ta(s)ds\right)
 \end{align*}
 
 $$
-
 La solution est donc :
-
 $$
 
 y_*(t)=C(t)\exp\left(-A(t)\right)
 
 $$
-
 Il ne nous resterait que dériver $y_*(t)$ et résoudre l’équation particulière pour trouver la fonction $C(t)$.
 
 ## Exemple
 
 Cherchons les solutions de l’équation suivante :
-
 $$
 
 y^\prime+2y=t^2+3t
 
 $$
-
 On commence par la solution de l’équation homogène : $y_0 = Ce^{-2t}$. On fait de même pour la solution particulière de l’équation particulière : $y_* = C(t)e^{-2t}$. Ayant ce dernier, on dérive $y_*$ :
 $$
 
@@ -164,7 +158,6 @@ y_*^{\prime}(t) & =C^{\prime}(t) e^{-2 t}-2 C(t) e^{-2 t} \\
 
 $$$$
 \text{On revient à l'équation : } y_*^{\prime}+2 y=t^2-3 t
-
 $$$$
 
 \begin{align*}

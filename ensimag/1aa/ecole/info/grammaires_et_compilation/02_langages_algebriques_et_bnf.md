@@ -255,6 +255,7 @@ On utilise une fonction de substitution $\sigma$ sur la première réponse.
     
     \sigma(L_1) = \sigma(aL_1b\mid \epsilon) = \sigma(a).\sigma(L_1).\sigma(b)\mid \sigma(\epsilon) = A.\sigma(L_1).b \mid \epsilon
 
+
 $$
 
     

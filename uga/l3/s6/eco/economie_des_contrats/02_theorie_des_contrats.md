@@ -169,24 +169,26 @@ Le Principal est neutre au risque et son utilité est donnée par son profit : $
     $$
     \sum_{i=1}^n p_i^H v(w_i) - C_H \geq \sum_{i=1}^n p_i^B v(w_i) - C_B
 
-$$
 
+$$
     
 - Contrainte de participation : encore faut-il que la rémunération proposée par le contrat soit attractif par rapport à l'extérieur, d'où la seconde contrainte :
     
-    $$
-    \sum_{i=1}^n p_i^H v(w_i) - C_H  \geq V
     
 $$
 
+    \sum_{i=1}^n p_i^H v(w_i) - C_H  \geq V
+    
+
+$$
 Compte tenu du schéma de rémunération proposé par le Principal (les $w_i$), l'Agent doit constater qu'il est avantageux non seulement d'accepter ce contrat mais également de fournir l'effort $e_H$.
 
 La condition de premier ordre est :
-
 $$
+
 \frac{1}{V'(w_i)} = \lambda + \mu \left[1 - \frac{p_i^B}{p_i^H}\right]
-$$
 
+$$
 La règle optimale proposée par le Principal est un compromis entre les motifs d'incitation et d'assurance de l'Agent.
 
 Le ratio de vraisemblance précise comment l'observation des résultats devient un signal de l'effort fourni par l'Agent, d'où dans l'équation (1) une rémunération optimale décroissante avec le ratio $[p_i^B / p_i^H]$.
@@ -196,17 +198,20 @@ Le ratio de vraisemblance précise comment l'observation des résultats devient 
 S'il est neutre au risque, il ne voudrais plus une "assurance" dans le contrat, ce qui veut dire que la partie fixe n'est plus indispensable pour l'agent. En plus, l'utilité "intermédiaire" du salaire devient $v(w_i) = \alpha w_i = w_i$.
 
 Donc, pour saturer la contrainte de participation :
-
 $$
+
 \sum_{i=1}^n p_i^H v(w_i)-C_H=V \iff \sum_{i=1}^n p_i^H v(w_i) = V + C_H
-$$
 
+$$
 On calcule l'espérance du profit :
-
 $$
+
 \Pi^* = E[\Pi] = \sum_{i=1}^n p_i^H (y_i-w_i) \\
+
 \text{Puis, notons que de la CP, } \\
+
 \sum_{i=1}^n p_i^H (y_i-w_i) = \sum_{i=1}^n p_i^H y_i - (V + C_H)
+
 $$
 
 Le maximum est atteint quand $w_i = y_i - \Pi^*$.

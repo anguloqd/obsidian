@@ -316,29 +316,26 @@ $$
 
 - Puisque on a une seule VA, la fonction de vraisemblance est la même que la densité de $X$.
 
-    $$
-    L(\lambda|x)=f(x|\lambda)
-
+$$
+L(\lambda|x)=f(x|\lambda)
 $$
 
-    
 - Détermine la log-vraisemblance, puis la fonction de score.
 
 $$
-
 \begin{align*}
 
 &\ln(L(\lambda)) = \ln(\lambda)-\lambda x=\ln(\lambda)-\lambda x \implies
+
 s(\lambda)=\frac{\partial \ln L}{\partial \lambda}(\lambda)=\frac{1}{\lambda}-x
 
 \end{align*}
-
 $$
 
 - Puis, la fonction d’information de Fisher.
-    
-    $$
-    \begin{align*}
+
+$$
+\begin{align*}
     &-\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)=\frac{1}{\lambda^2} &&\text{Préparation pour }I(\lambda)
     \\[10pt]
     &&\vdots
@@ -355,19 +352,15 @@ $$
     &\frac{1}{ \lambda^2}\int_\Omega L(\lambda|x)dx
     &&\text{Constante sort de l'intégrale}
     \end{align*}
-    
 $$
 
-    Mais, voyons que intégrale de la densité dans toutes les valeurs de $x$ définies doit être $1$, par définition. Donc, finalement :
-    
-    $$
-    I(\lambda)=\frac{1}{ \lambda^2}\cancel{\int_\Omega f(x|\theta)dx}^{\space1}=\frac{1}{\lambda^2}
-    
+Mais, voyons que intégrale de la densité dans toutes les valeurs de $x$ définies doit être $1$, par définition. Donc, finalement :
 
 $$
-    
-    On est d’accords avec l’info de la distribution exponentielle sur Wikipédia. On est d’accord aussi avec [ce post de MathStackExchange](https://math.stackexchange.com/questions/1899995/fisher-information-for-exponential-distribution).
-    
+I(\lambda)=\frac{1}{ \lambda^2}\cancel{\int_\Omega f(x|\theta)dx}^{\space1}=\frac{1}{\lambda^2}
+$$
+
+On est d’accords avec l’info de la distribution exponentielle sur Wikipédia. On est d’accord aussi avec [ce post de MathStackExchange](https://math.stackexchange.com/questions/1899995/fisher-information-for-exponential-distribution).
 
 ## Méthodes de construction d’un estimateur
 
@@ -382,9 +375,7 @@ Supposons que $θ$, le paramètre qu’on veut estimer, soit le seul paramètre 
 Si $φ$ est bijective, elle admettra une application inverse qui nous permettra d’écrire $θ = φ^{−1}(\mu)$. On en conclut donc :
 
 $$
-
 \mu=\varphi(\theta) \hspace{10pt}\text{et}\hspace{10pt}\theta=\varphi^{-1}(\mu)\iff\hat\theta=\varphi^{-1}(\bar X_n)
-
 $$
 
 Le but est de exprimer la moyenne populationnelle $\mu$ comme une fonction du paramètre $\theta$. Et, puisque la moyenne est le moment d’ordre $1$ d’une variable aléatoire, le nom de cette méthode est donc la méthode des moments.
@@ -404,7 +395,6 @@ En plus, pour chaque $\mu^\prime_k$, on considère qu’il existe une fonction $
 Dans le cas ou la distribution est déterminée par plus d’un paramètre, $\theta=[\theta_1, \cdots, \theta_n]$, on pourrait tenter de calculer autant de moments que des paramètres pour après faire un système d’équations. Supposons qu’on veut estimer $n$ paramètres, donc on sait que
 
 $$
-
 \begin{cases}
 
 \mu^\prime_1&=&\varphi_1(\theta_1, \cdots,\theta_k)
@@ -434,13 +424,11 @@ m^\prime_1&=\varphi_1(\hat\theta_1,\cdots,\hat\theta_k)
 m^\prime_k&=\varphi_k(\hat\theta_1,\cdots,\hat\theta_k)
 
 \end{cases}
-
 $$
 
 Par exemple, pour estimer les paramètres d’une normale :
 
 $$
-
 \begin{cases}
 
 \mathbb E[X] = \mu
@@ -462,18 +450,22 @@ $$
 \hat{\mathbb E}[X^2] = \frac{1}{n}\sum_{i=1}^n X_i^2=\hat{\mu^2} + \hat{\sigma^2}
 
 \end{cases}
+$$
 
-$$$$
-
+$$
 \text{Finalement, }
+
 \begin{cases}
+
 \hat \mu = \underbrace{\frac{1}{n}\sum_{i=1}^n X_i}_{\bar {X_n}}
 
 \\[30pt]
 
 \hat{\sigma^2} = \frac{1}{n}\sum_{i=1}^n X^2_i-\hat{\mu^2}
+
 \end{cases}
 $$
+
 Notons que le dernier pas c’est de “mettre un chapeau à tout”, càd. de passer du paramètre à l’estimateur.
 
 Rappel. $S^{2}$ est la variance “qu’on ne veut pas”, la variance non corrigée. Après, on peut la corriger comme $S^{2^\prime}=\frac{n}{n-1}S^{2}$.
@@ -481,60 +473,78 @@ Rappel. $S^{2}$ est la variance “qu’on ne veut pas”, la variance non corri
 ### Méthode du maximum de vraisemblance
 
 On appelle l’estimateur du maximum de vraisemblance (EMV) du paramètre $\theta$, donne l’échantillon réalisé $x$, au $\beta$ tel que
+
 $$
 \theta ^*_{\mathbf{x}}\text{est EMV de }\theta\iff\theta^*_{\mathbf{x}}=\max_{\theta\in\Theta}L(\theta|\mathbf{x})
 $$
+
 Bref, on appelle EMV l’input $\theta^*$ qui maximise la fonction de vraisemblance $L$ étant donné un échantillon observé. **Notons donc, pour toute réalisation différente de l’échantillon, on aura un EMV différent aussi, donc EMV est une fonction de l’échantillon $\mathbf{x}$.** Ceci étant dit, je vais juste simplifier sa notation à $\theta^*$.
 
 Par contre, la définition ci-dessus ne nous garantit ni l’existence, ni l’unicité d’un tel estimateur. Pour trouver l’input $\theta$ qui maximise $L$, et supposant que $L$ est deux fois dérivable, on calcule $\theta^*$ tel que
+
 $$
 \begin{cases}
+
 \frac{\partial L}{\partial\theta}(\theta^*)=0
 
 \\[10pt]
 
 \frac{\partial^2 L}{\partial\theta^2}(\theta^*)<0
+
 \end{cases}
 $$
+
 Par contre, le plus souvent c’est de calculer $\theta^*$ tel que
+
 $$
 \begin{cases}
+
 \frac{\partial \ln L}{\partial\theta}(\theta^*)=0
+
 \\[10pt]
+
 \frac{\partial^2 \ln L}{\partial\theta^2}(\theta^*)<0
+
 \end{cases}
 $$
+
 **Optimiser $\ln(L)$ est normalement plus simple que $L$. Dans la pratique, on injecte le resultat obtenu de la première équation dans la deuxième**. Rappelons, par ailleurs, que si $θ^*$ est un EMV de $θ$ alors $g(θ^*)$ est l’EMV du paramètre $g(θ)$ pour $g$ continue.
 
 **Exemple**. Supposons qu’on observe un échantillon, et qu’on s’intéresse au paramètre de la variance, donc $\theta=\text{var}(X)$. On détermine un estimateur sans biais de $\theta$, dans ce cas $\hat\theta={S^2}^\prime$. Puis, on calcule $\theta^*$ qui maximise la probabilité $L(\theta|x)$ . Finalement, si $g(x)=\sqrt{x}$, donc on a que
+
 $$
 g(\theta^*)\text{ est un EMV de }g(\theta)=g(\text{var(X)})=\sqrt{\text{var(X)}}=\sigma_X
 $$
+
 **Note**. $g(\hat \theta)$ peut ne pas être sans biais. Notons que $g({S^2}^\prime)=\sqrt{{S^2}^\prime}=S^\prime$ ne peut pas être un estimateur sans biais de $σ$, car on aurait alors
+
 $$
 \text{var}(S^\prime)=\mathbb {E}[{S^2}^\prime]-\mathbb E^2[S^\prime]=\theta-\theta =0
 $$
+
 Et ce qui n’est pas possible, car $\text{var}(X) >0$ par définition. Contradiction.
 
 ### Comportement asymptotique et conditions
 
 Soit $\{\theta^*_n\}$ une suite de $\theta^*$ qui change avec l’augmentation de $n$. Donc, les valeurs de cette suite sont telles qu’elles se distribuent de manière gaussienne quand $n \rightarrow\infty$
+
 $$
 \lim_{n\rightarrow\infty} \sqrt{n}(\theta^*_n-\theta)\sim\mathcal N\left(0,\frac{1}{I(\theta)}\right) \iff \lim_{n\rightarrow\infty} \theta^*_n\sim\mathcal N\left(\theta,\frac{1}{nI(\theta)}\right)
 $$
+
 C’est qui est juste une application du théorème central de la limite, donc on cherche que $n\ge30$. On devra admettre à nouveau les conditions pour la nullité de l’espérance du score.
 
 Notons que donc $\theta^*_n$ est asymptotiquement sans biais et asymptotiquement efficace, ce qui implique qui $\theta^*_n$ converge en moyenne quadratique (et on pourrait assurer qu’il converge presque sûrement avec d’autres conditions). Ces propriétés se résument comme que $\theta^*_n$ est un estimateur BAN : best asymptotically normal.
 
-# Estimation par intervalle de confiance
+## Estimation par intervalle de confiance
 
-## Motivation et définition
+### Motivation et définition
 
 Un estimateur donne une valeur unique comme estimation. La valeur obtenue a peu de chances de coïncider avec celle du vrai paramètre, qui est inconnu.
 
 L’estimation par intervalle de confiance consiste a entourer, d’un intervalle $[a, b]$, la valeur de l’estimateur et affirmer plutôt que $θ$ se trouve dans $[a, b]$. On peut alors choisir $a$ et $b$ de telle sorte que la probabilité que cette proposition soit vraie soit assez élevée.
 
-## Intervalle de confiance pour $\mu$, connaissant $\sigma^2$
+### Intervalle de confiance pour $\mu$, connaissant $\sigma^2$
 
 > [!note]
 > J’ai joué un peu avec la dist. exponentielle pour construire un intervalle de confiance
@@ -552,34 +562,28 @@ Par contre, cette supposition n’est pas réaliste. On y retournera après.
 1. On prend un échantillon $X=[X_1,\cdots,X_n]$ d’où on suppose que $X\sim\mathcal N(\mu,\sigma^2)$.
 2. On construit notre statistique qui estimerait le paramètre d’intérêt $\mu$, dans ce cas $\bar X$.
 3. On détermine la loi de notre estimateur $\bar X$. On devrait savoir qu’une somme de $n$ VA normales est aussi une VA normale, particulièrement $\bar X \sim (\mu, \frac{\sigma^2}{n})$. Il faudrait calculer ceci *analytiquement* si la loi des $X_i$ de base n’est pas normale.
-4. Une fois déterminée la loi de $\bar X$, on commence à se servir de ses propriétés connues pour établir un intervalle $[a,b]$ tel que 
-    
-    
+4. Une fois déterminée la loi de $\bar X$, on commence à se servir de ses propriétés connues pour établir un intervalle $[a,b]$ tel que
+
 $$
-    \mathbb P(a\le \bar X \le b)=0.95
-    
+\mathbb P(a\le \bar X \le b)=0.95
 $$
-    
+
 5. On se sert de la propriété de la distribution normale suivante. Notons qu’on peut s’en servir même si on connaît pas $\mu$.
-    
-    
+
 $$
-    \bar X \sim \mathcal N(\mu,\frac{\sigma^2}{n}) \iff\underbrace{\left(\frac{\bar X-\mu}{\sigma/\sqrt n}\right)}_Z\sim\mathcal N(0,1)
-    
+\bar X \sim \mathcal N(\mu,\frac{\sigma^2}{n}) \iff\underbrace{\left(\frac{\bar X-\mu}{\sigma/\sqrt n}\right)}_Z\sim\mathcal N(0,1)
 $$
-    
+
 6. On change notre direction à vouloir encadrer $95\%$ de la loi de $z$ sous un nouveau intervalle. Arbitrairement, on voudra que cet intervalle soit symétrique autour de $0$, donc
-    
-    
+
 $$
-    \mathbb P(-q\le Z\le q)=0.95 \implies q\approx1.96
-    
+\mathbb P(-q\le Z\le q)=0.95 \implies q\approx1.96
 $$
-    
+
 7. On réécrit l’inégalité encadrante en termes des paramètres et l’estimateur
-    
-    $$
-    \begin{align*}
+
+$$
+\begin{align*}
     &\mathbb P(-q\le Z\le q)
     &\text{Préparation}
     \\[5pt]
@@ -592,51 +596,69 @@ $$
     &\mathbb P \left(\bar X -1.96\frac{\sigma}{\sqrt n} \le \mu\le\bar X+1.96\frac{\sigma}{\sqrt n}\right)
     &\text{Isolation de }\mu
     \end{align*}
-    $$$$
-    
-    \mathbb P \left(\bar X -1.96\sigma_{\bar X} \le \mu\le\bar X+1.96\sigma_{\bar X}\right)=0.95, \text{ où } \sigma_{\bar X}=\frac{\sigma}{\sqrt n}
-    $$
-    
+$$
+
+$$
+\mathbb P \left(\bar X -1.96\sigma_{\bar X} \le \mu\le\bar X+1.96\sigma_{\bar X}\right)=0.95, \text{ où } \sigma_{\bar X}=\frac{\sigma}{\sqrt n}
+$$
+
 8. Ici, on peut finalement substituer les valeurs connus de $n$, de $\bar X$ et la valeur de $\sigma$ qui découle de la valeur supposée connue de $\sigma^2$. On obtient une borne numérique concrète.
 9. Éventuellement, si on veut une autre valeur de signification $\alpha$ différente de $5\%$, la forme générale de l’IC est
-    
-    $$
-    \mathbb P \left(\bar X -z_{\alpha/2}\sigma_{\bar X} \le \mu\le\bar X+z_{\alpha/2}\sigma_{\bar X}\right)=\alpha,
+
+$$
+\mathbb P \left(\bar X -z_{\alpha/2}\sigma_{\bar X} \le \mu\le\bar X+z_{\alpha/2}\sigma_{\bar X}\right)=\alpha,
     \\[10pt]
     \text{ où } z_{\alpha/2}\text{ est telle que }\mathbb P(-z_{\alpha/2}\le Z \le z_{\alpha/2})=1-\alpha
-    $$
-    
+$$
 
-## $\sigma^2$ inconnue et la loi de Student
+### $\sigma^2$ inconnue et la loi de Student
 
 On avait dit qu’on supposée connue la valeur de $\sigma^2$, ce qui nous a permis d’établir l’IC. En réalité, ceci est difficilement le cas. Donc, avant d’estimer $\mu$ à travers un IC, on estime $\sigma^2$ avec une estimation ponctuelle, calculant dans ce cas $S^{2^\prime}$ et en le remplaçant dans l’IC de $\mu$, donc
+
 $$
 IC=[\bar X-z_{\alpha/2}\hat\sigma_{\bar X};\bar X+z_{\alpha/2}\hat\sigma_{\bar X}],\text{ où } \hat\sigma_{\bar X}=\sqrt{\frac{S^{2^\prime}}{n}}=\frac{S^\prime}{\sqrt n}
 $$
+
 Il faut se rappeler que la construction de l’intervalle de confiance s’est faite sous l’hypothèse que nous échantillonnons une population normale :
+
 $$
 Z=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)
 $$
-Mais, si on remplace $\sigma_{\bar X}$ dans la définition de $Z$ par $\hat\sigma_{\bar X}$, notons que le dénominateur est maintenant une variable aléatoire fonction des données (à cause de $S^\prime$) et ne plus une constante résultat de deux constantes, et donc **on ne peut pas assurer que $Z$ suit une loi $\mathcal N(0,1)$**. 
+
+Mais, si on remplace $\sigma_{\bar X}$ dans la définition de $Z$ par $\hat\sigma_{\bar X}$, notons que le dénominateur est maintenant une variable aléatoire fonction des données (à cause de $S^\prime$) et ne plus une constante résultat de deux constantes, et donc **on ne peut pas assurer que $Z$ suit une loi $\mathcal N(0,1)$**.
 
 Afin de résoudre ce problème, on utilisera la loi de Student. La loi de Student à $k$ degrés de libertés est la loi du quotient, indépendant, d’une loi normale centrée-réduite et de la racine d’une loi de $χ^2$ divisé par son degré de liberté $k$.
+
 $$
 T=\frac{Z}{\sqrt{U/k}},\hspace{10pt}\text{ où }
+
 \begin{cases}
+
 Z=\frac{\bar X-\mu}{\sigma/\sqrt n}=\frac{\bar X-\mu}{\sigma_{\bar X}}
+
 \\[5pt]
+
 U=\sum_{i=1}^kX_i^2\iff U \sim\chi^2_k
+
 \end{cases}
 $$
+
 Dans ce cas, le numérateur $Z$ reste égal et on définit le dénominateur comme suit, où le facteur $1/\sigma^2$ devant est l’inverse de la variance de la population, pas de la moyenne échantillonnale.
+
 $$
 U=\frac{1}{\sigma^2}\underbrace{\sum_{i=1}^n(X_i-\bar X)^2}_{S^{2^\prime}\times(n-1)} \iff \begin{cases}
+
 \frac{U}{n-1}=\frac{S^{2^\prime}}{\sigma^2}
+
 \\[5pt]
+
 U\sim\chi^2_{n-1}
+
 \end{cases}
 $$
+
 Finalement, on écrit la variable aléatoire de Student $T$ comme suit, où $S^\prime$ est la racine carrée de la variance échantillonnale corrigée $S^{2^\prime}$ :
+
 $$
 T=
 
@@ -645,18 +667,23 @@ T=
 
 \frac{\bar X-\mu}{\underbrace{(\sigma/\sqrt{n})}_{\sigma_{\bar X}}}\times\frac{1}{S^\prime/\sigma}
 =
+
 \frac{\bar X-\mu}{S^\prime/\sqrt{n}}
+$$
 
-\\[10pt]
-
+$$
 \text{Finalement, }
+
 T\sim\mathcal T_{n-1}
 $$
+
 Une autre manière de voir $T$ : “quotient indépendant d’une normale avec la racine d’une loi chi-carré divisée par ses degrés de libertés”. Le degrés de libertés sont $(n-1)$ car, le fait que la moyenne a été réalisé est une équation que les $X_i$ doivent respecter.
+
 $$
 T = \frac{\bar X_n - \mu}{(S_n/\sqrt{n})}=\frac{\frac{\bar X_n-\mu}{\sigma/\sqrt{n}}}{\sqrt{\frac{S_n^2}{\sigma^2}}}=\frac{\mathcal N(0,1)}{\sqrt{\chi^2_{n-1}/(n-1)}}
 $$
-## Les confusions autour des $\sigma$ et un exemple
+
+### Les confusions autour des $\sigma$ et un exemple
 
 Pour clarifier les doutes par rapport à toutes les notations sur $\sigma$, on suppose une population avec distribution uniforme de $\{1,2,3\}$ et on suppose un échantillon de $n=2$. Donc :
 
@@ -675,26 +702,33 @@ Si on observe $\{2,3\}$, donc $\hat\sigma = \frac{1}{\sqrt{2}}\approx0.71$.
 - La taille $n$ de l’échantillon est $n\ge30$ (donc $\bar X$ tend vers une loi normale à cause du TCL)
 
 Donc, si l’une de ces deux conditions est vérifiées, on peut prendre comme estimateur $\hat\sigma_{\bar X}$, qui dans ce cas serait
+
 $$
 \hat\sigma_{\bar X}=\frac{\hat\sigma}{\sqrt{n}}=\frac{1/\sqrt{2}}{\sqrt{2}}=0.5
 $$
+
 Notons que, si les $X_i$ suivent chacune une loi normal, c’est strictement vraie l’équation $\sigma_{\bar X} = \frac{\sigma}{\sqrt{n}}$ (sans les chapeaux $\land$ des estimateurs, on parle des vraies paramètres !), c’est une dérivation algébrique.
 
 Par contre, si les $X_i$ suivent une autre loi (dans ce cas une loi uniforme), ce n’est pas vrai que $\sigma_{\bar X} = \frac{\sigma}{\sqrt{n}}$, c’est juste une approximation acceptable. La forme serrée de $\sigma_{\bar X}$ serait à calculer analytiquement en termes de $\sigma$ et $n$.
 
-## Statistique pivotale
+### Statistique pivotale
 
 Une statistique $\varphi([X_i], \theta)$, qui est une fonction des observations $[X_i]_{1\le i\le n}$ et du paramètre $\theta$, est appelée “quantité pivotale” si sa distribution ne dépend pas du paramètre inconnu $\theta$.
 
-Par exemple, et supposant $\sigma^2$ connue, la normalisation de la moyenne échantillonnale est une statistique pivotale, car sa distribution normalisée ne dépend pas de $\mu$. Peu importe la valeur de $\mu$, on sait que de prendre une moyenne échantillonnale et la normaliser par son $\mu$, quelle que soit, devrait suivre une loi normale standard. 
+Par exemple, et supposant $\sigma^2$ connue, la normalisation de la moyenne échantillonnale est une statistique pivotale, car sa distribution normalisée ne dépend pas de $\mu$. Peu importe la valeur de $\mu$, on sait que de prendre une moyenne échantillonnale et la normaliser par son $\mu$, quelle que soit, devrait suivre une loi normale standard.
+
 $$
 Z=\varphi([X_i])=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)
 $$
-Dans le cas d’une distribution exponentielle de paramètre $\frac{1}{\theta}$, une statistique pivotale est 
+
+Dans le cas d’une distribution exponentielle de paramètre $\frac{1}{\theta}$, une statistique pivotale est
+
 $$
 \frac{2}{\theta}\sum_{i=1}^nX_i\sim\chi^2_{2n}
 $$
-C’est l’existence d’une quantité pivotale qui permet la construction d’un intervalle de confiance. En effet, le fait que la distribution de $φ$ ne dépend plus du paramètre inconnu $θ$, **permet de trouver deux nombres $a$ et $b$, indépendants également de $θ$**, tels que 
+
+C’est l’existence d’une quantité pivotale qui permet la construction d’un intervalle de confiance. En effet, le fait que la distribution de $φ$ ne dépend plus du paramètre inconnu $θ$, **permet de trouver deux nombres $a$ et $b$, indépendants également de $θ$**, tels que
+
 $$
 \mathbb P(a \le \varphi([X_i], \theta)\le b)=1-\alpha
 $$

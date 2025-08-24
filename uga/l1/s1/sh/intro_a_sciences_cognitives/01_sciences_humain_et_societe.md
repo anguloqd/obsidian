@@ -91,7 +91,6 @@
 
 - Il y a presque 3000 ans, en Chine/Egypte/Grèce, les hommes essaieront de se libérer des explications ésotériques/religieuses.
 
-
     Les maths prennent du corps pendant cette époque. Développement des moyens d'observation.
 
     

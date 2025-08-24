@@ -64,19 +64,13 @@ Ayant dérivé deux fois, on arrive à la fonction $p\prime\prime(q)$, dont le s
 - Demande convexe $\iff p\prime\prime(q) >0$ : on étudie donc le signe de  $p\prime\prime(q)q+2p\prime(q)$.
     - Si $|p\prime\prime(q)| > |2p\prime(q)|
 
-
     \implies
-
-
 
     \frac{\partial Rm(q)}{\partial q}= p\prime\prime(q)q+2p\prime(q) >0$, ce cas n’est pas compatible avec le fait ou supposition que $Rm$ est en dessous de la courbe de demande (qui est conséquence de $q >0$, $p(q)>0$ et $p\prime(q)<0$).
 
     - Si $|p\prime\prime(q)| < |2p\prime(q)|
 
-
     \implies
-
-
 
     \frac{\partial Rm(q)}{\partial q}= p\prime\prime(q)q+2p\prime(q) <0$, et donc $Rm$ est décroissante par rapport à $q$. Donc, même conclusion, le monopole réduira les quantités offertes.
 
@@ -153,7 +147,6 @@ Ici, $c_i$ et $d_i$ sont des constantes et on veut déterminer pour quels $c_i$ 
 - On remplace un $q_i$ dans l’équation de l’autre et on résout, de même pour l’autre $q_j$.
 - On pose la condition $q_i > 0$ et on résout pour déterminer $c_A$ en termes des autres termes $f(c_B, d_B)$, de même pour $c_B$ en termes des autres termes $f(c_A, d_A)$.
 - On devrait arriver à un graphique de cette forme :
-
 
     ![untitled](ressources/03_firme_dominante_et_barrieres_a_l’entree_untitled_3.png)
 

@@ -148,4 +148,5 @@ Si on reprend la forme du master theorem,
     $$
     T(n) = O\left(n^{c_\text{crit}} \cdot \log_2(n)^{k+1}\right) = O\left(n^1 \cdot \log_2(n)^{0+1}\right)=O\left(n\log_2(n)\right)
 
+
 $$

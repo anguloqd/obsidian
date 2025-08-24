@@ -9,6 +9,7 @@
     $$
     F=\frac{SCE/k}{SCR/\big(n-(k+1)\big)}=\frac{R^2/k}{(1-R^2)/\big(n-(k+1)\big)}\sim \mathcal F(v_1=k,v_2=n-k-1)
 
+
 $$
 
     

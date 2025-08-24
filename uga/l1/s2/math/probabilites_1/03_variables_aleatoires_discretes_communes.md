@@ -146,11 +146,9 @@ Basiquement, l’entier ou les deux entiers dans l’intervalle inclus.
     $$
     \mathbb P(X=k+1)=\mathbb P(X=k)\frac{\lambda}{k+1}
 
+
 $$
-
-
 **Extra**. Un calcul intéressant est la somme de des probabilités de chaque résultat possible, c’est-à-dire de chaque $k$ possible :
-
 $$
 
 \begin{align*}\mathbb P(X=0)+\mathbb P(X=1)+\mathbb P(X=2)+\dots &= \sum_{k=0}^\infty\mathbb P(X=k)
@@ -166,7 +164,6 @@ $$
 \end{align*}
 
 $$
-
 Trivial : si on somme toute les possibilités, c'est sûr qu'on arrive à $1$. **Ce qui est intéressant ce que il apparaît l'expansion de Taylor de $e^x$ dans $\sum_{k=0}^\infty\frac{\lambda^k}{k!}$, si on suppose que $x=\lambda$**.
 
 ### Approximation d’une loi binomiale avec la loi de Poisson
@@ -178,21 +175,17 @@ On peut approximer une loi binomiale avec une loi de Poisson si et seulement si 
 - $np \le 15$
 
 Dans ce cas, on pose $λ = np$ et on a finalement ce qui suit :
-
 $$
 
 \mathcal B(n,p) \approx \text{Poisson}(np), \text{ ou } \mathbb P(X_\mathcal{B}=k)\approx\mathbb P(X_\mathcal{P}=k)=e^{-np}\frac{(np)^k}{k!}
 
 $$
-
 ## Loi hypergéométrique : $\text{Hypergeo}(N,K,n)$
-
 $$
 
 X\sim\text{Hypergeo}(N,K,n) \iff \mathbb P(X=k)=\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}
 
 $$
-
 C'est la probabilité, sans remise, de tirer $k$ succès (de $K$ possibles) et $(n-k)$ échecs (de $(N-K)$ possibles) d'un échantillon de taille $n$ d'une population de taille $N$.
 
 En d'autres termes, c'est la probabilité, sans remise, dans une suite de $n$ expériences, d'observer $k$ succès (de $K$ possibles succès dans $N$) et $(n-k)$ échecs (de $(N-K)$ possibles dans $N$). Un tel schéma est utilisé dans les sondages.
@@ -217,7 +210,6 @@ Il y a $10$ boules : $4$ rouges et $6$ bleues. Je fixe la taille des échantillo
 ### Approximer une hypergéométrique avec une binomiale
 
 Si $N\longrightarrow\infty$ et $\lim_{N\rightarrow\infty} \frac K N = p$, on peut donc établir l’approximation qui suit :
-
 $$
 
 \lim_{N\rightarrow\infty}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}

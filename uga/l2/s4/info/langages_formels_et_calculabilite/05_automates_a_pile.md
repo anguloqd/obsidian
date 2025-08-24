@@ -259,10 +259,11 @@ L’algorithme pour créer un AAP à partir d’une GHC est comme suit :
     $$
     \Delta(p,\varepsilon,\varepsilon) = (q,S)
 
-$$
 
+$$
     
-3. Si $\$$ n’est pas encore revenu sur le dessus de la pile, donc :
+3. Si $\
+$$ n’est pas encore revenu sur le dessus de la pile, donc :
     1. Soit l'automate dépile un non-terminal $A$ du haut de la pile et le remplace par la partie droite d'une règle de réécriture (de la forme $A \Rightarrow\varphi$) pour ce non-terminal.
         
         $$
@@ -278,7 +279,8 @@ $$
 
 $$
         
-4. Quand $\$$ revient en haut de la pile, l'automate se déplace dans son état d'acceptation/final.
+4. Quand $\
+$$ revient en haut de la pile, l'automate se déplace dans son état d'acceptation/final.
     
     $$
     \Delta(q, \varepsilon,\$)=(r,\varepsilon)

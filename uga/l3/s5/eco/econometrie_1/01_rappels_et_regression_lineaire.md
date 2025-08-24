@@ -254,32 +254,34 @@ Sous ces hypothèses, il découle que :
     $$
     \mathbb E[\hat\beta_0]=\beta_0 \text{\hspace{8pt}et\hspace{8pt}}\mathbb E[\hat\beta_1]=\beta_1 
 
-$$
 
+$$
     
 - Les variances sont les suivantes, mais il nous manque un paramètre $\sigma^2_u$.
     
-    $$
+    
+$$
+
     \text{Var}(\beta_1)=\frac{\sigma^2_u}{\sum_{i=1}^N(x_i-\bar x)^2}
     
     \text{\hspace{8pt}et\hspace{8pt}}
     
     \text{Var}(\beta_0)=\frac{\sigma^2_u}{n}\frac{\sum_{i=1}^Nx_i^2}{\sum_{i=1}^N(x_i-\bar x)^2}
     
-$$
 
+$$
 - Si on prend la variances des résidus, ce serait un estimateur biaisé de $\sigma^2_u$.
 Néanmoins, Il existe un estimateur sans biais de $\sigma^2_u$, où $k$ le nombre de var. explicatives. Dans ce cas, $k=1$.
 
-    $$
+    
+$$
+
     \hat\sigma^2_u=\frac{\sum_{i=1}^n\hat u_i^2}{N-(k+1)} \implies \mathbb E[\hat\sigma^2_u]=\sigma^2_u
 
 $$
+## Inférence
 
-
-# Inférence
-
-## Hypothèse de normalité des erreurs
+### Hypothèse de normalité des erreurs
 
 On se permet d’ajouter une hypothèse aux cinq hypothèses précédentes :
 
@@ -287,11 +289,12 @@ On se permet d’ajouter une hypothèse aux cinq hypothèses précédentes :
 $u_i$ est normale et ne dépend pas des variables explicatives.
 
 Tel hypothèse implique que $y|x \sim \mathcal N(\beta_0+\beta_1x_1, \sigma^2_u)$.
+
 ![[ressources/01_rappels_et_regression_lineaire_untitled_1.png]]
 
 Avec de grands échantillons, l’hypothèse de normalité n’est plus nécessaire.
 
-## Test bilatéral de $\beta_k$ $(t$-test$)$
+### Test bilatéral de $\beta_k$ $(t$-test$)$
 
 En bref, on utilise un test de Student pour estimer chaque $\beta_i$ de notre modèle. Je prends ce qu’on a fait en Statistique Mathématique 2.
 
@@ -306,8 +309,7 @@ Dans ce cas et vu précédemment, on utilise une variable de Student comme $T$. 
 
 Ceci n’est plus le cas quand on considère le cas général (càd. peu importe si $H_0$ ou si $H_1$), car on ne peut donc garantir que $\mu_0$ est la vraie moyenne de $H_0$ et tout la statistique $T$ ne suit plus une loi de Student.
 
-### Cas bilatéral
-
+#### Cas bilatéral
 $$
 
 \tau=\left\{T=\frac{\hat\beta_k-\cancel{\mathbb E[\hat\beta_k]}}{\hat\sigma_{\hat\beta_k}}^{\space = \beta_k=0}\hspace{-20pt}, A =\{T: -t^{(n-(k+1))}_{1-\alpha/2}<T< t^{(n-(k+1))}_{1-\alpha/2} \} \right\}
@@ -317,25 +319,20 @@ $$
 H_0:\beta_k=0\text{ vs. }H_1:\beta_k\ne0
 
 $$
-
 De même, on pourrait isoler $\hat\beta_k$ dans l’inégalité pour obtenir ce qui suit :
-
 $$
 
 \tau=\left\{ T=\hat\beta_k, A=\{ T : 0-\hat\sigma_{\beta_k} t^{(n-(k+1))}_{1-\alpha/2} < T < 0+\hat\sigma_{\beta_k}t^{(n-(k+1))}_{1-\alpha/2} \} \right\}
 
 $$
-
 $$
 
 \text{Rejeter si : }|T| \le t^{(n-(k+1))}_{1-\alpha/2 }, \text{ accepter sinon.}
 
 $$
-
-### Cas unilatéral
+#### Cas unilatéral
 
 Dans le cas des tests unilatéraux, on définit $A$ comme suit :
-
 $$
 
 H_0 : \beta_k \le 0 \longrightarrow A=\{ T : T <t^{(n-(k+1))}_{1-\alpha }\} \iff \bar A =\{ T : t^{(n-(k+1))}_{1-\alpha } \le T\}
@@ -345,27 +342,21 @@ H_0 : \beta_k \le 0 \longrightarrow A=\{ T : T <t^{(n-(k+1))}_{1-\alpha }\} \iff
 H_0 : \beta_k \ge 0 \longrightarrow A=\{ T : t^{(n-(k+1))}_{1-\alpha }<T\} \iff \bar A =\{ T :T \le t^{(n-(k+1))}_{1-\alpha }\}
 
 $$
-
 La prof. veut qu’on explicite la règle de decision, qui est dans la définition de $\bar A$.
-
 $$
 
 \text{Rejeter si : }|T| \le t^{(n-(k+1))}_{1-\alpha }, \text{ accepter sinon.}
 
 $$
-
-## Significativité globale du modèle $(F$-test$)$
+### Significativité globale du modèle $(F$-test$)$
 
 Ce test s’appuie sur la statistique de Fisher :
-
 $$
 
 F=\frac{SCE/k}{SCR/\big(n-(k+1)\big)}=\frac{R^2/k}{(1-R^2)/\big(n-(k+1)\big)}\sim \mathcal F(v_1,v_2)
 
 $$
-
-Les valeurs de la loi de Fisher ont déjà été calculés dans une table. Le test prend donc la forme qui suit, et la nulle affirme que la relation entre $y$ et chacune des variables explicatives $x_i$ est nulle. 
-
+Les valeurs de la loi de Fisher ont déjà été calculés dans une table. Le test prend donc la forme qui suit, et la nulle affirme que la relation entre $y$ et chacune des variables explicatives $x_i$ est nulle.
 $$
 
 \tau=\left\{ F \text{ comme statistique}, A=\{F: F<f^{(v_1,v_2)}_{1-\alpha}\} \right\}
@@ -375,9 +366,7 @@ $$
 H_0 : \forall i \le k,  \beta_i=0 \text{ vs. } H_1 : \exist i\le k, \beta_i\ne 0
 
 $$
-
 Normalement, le test de Student et le test de Fisher nous mène toujours à la même conclusion. Il semble que, dans ce cours, on fera de tests de Fisher seulement unilatéraux.
-
 $$
 
 \text{Rejeter si : }F\ge f^{(v_1,v_2)}_{1-\alpha}, \text{ accepter sinon.}

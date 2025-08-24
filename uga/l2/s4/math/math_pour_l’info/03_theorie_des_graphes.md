@@ -174,9 +174,8 @@ On notera qu’on a été obligé d’orienter deux fois la boucle sur $C$, d’
     $$
     M_{G^*}=M_G+M_{G}^t
 
+
 $$
-
-
 Un sommet $v$ est dit **connexe** si, pour tous les autres sommets $w$ ($w\ne v$), il existe une **chaîne** (équivalence de chemin d’un graphe non orienté) reliant $v$ à $w$. Bref, à partir de $v$, on peut arriver à tout autre sommet du graphe. Un graphe est **connexe** si tous ses sommets sont connexes.
 
 ## Arbres
@@ -275,13 +274,11 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
 ## Dessin d’un graphe par niveaux
 
 On peut dire qu’un sommet dans un graphe est de niveau $0$ s’il n’as pas de prédécesseur dans l’ensemble de sommets $S$. L’ensemble de sommets de niveau 0 est noté $S_0$. Ayant défini $S_0$, on peut définir $S_n$ récursivement comme suit :
-
 $$
 
 S_n = S - S_{n-1}
 
 $$
-
 ![Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.](ressources/03_theorie_des_graphes_untitled_13.png)
 
 Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.
@@ -315,7 +312,9 @@ On denote la date au plus tôt du sommet $B$ comme $t(B)$. En plus, on notera pa
 3. On voit que $t(E)=\min\big(t(D)+d(D,E), t(A)+d(A,E)\big)$. C’est-à-dire, la date au plus tôt des tâches prédécesseuses plus leurs distance à $E$. On déduit que $t(E)=7$, passant de D à E. 
 4. En general, si $\Gamma^-(X)$ est l’ensemble de prédécesseurs d’un sommet $X$, donc : 
     
-    $$
+    
+$$
+
     t(X)=
     \begin{cases}
     0, \text{ si } X\in S_0
@@ -323,8 +322,8 @@ On denote la date au plus tôt du sommet $B$ comme $t(B)$. En plus, on notera pa
     \max\big( \{t(s^-_X)+d(s^-_X,X): s^-_X \in \Gamma^-(X)\} \big), \text{ sinon }
     \end{cases}
     
-$$
 
+$$
 5. Quand on arrive à la fin, $t(\text{fin})=14$, le projet dure $14$ jours au mieux sans raté aucune tâche).
 
 #### Date au plus tard : $T(X)$
@@ -338,14 +337,20 @@ On lance un indice $i=0$ et on fixe $n$ comme la quantité des niveaux de tâche
 3. Pour $j=3$ c’est le sommet $E$. Même chose : $T(E)=T(C)-d(E,C)=10-3=7$.
 4. Pour $j=2$, on parle de $D$ et $A$. On commence par $A$. La chose intéressante ici c’est que on devra voir tous les successeurs de $A$ : $C$ et $E$, donc $T(A)=\min\big(T(C)-d(A,C),\hspace{2pt}T(E)-d(A,E)\big)$. On déduit aussi que $T(D)=2$.
 5. En général, si $\Gamma^+(X)$ est l’ensemble de prédécesseurs d’un sommet $X$, donc :
-
 $$
+
 T(X)=
+
 \begin{cases}
+
 t(\text{fin}), \text{ si } X=\text{fin}
+
 \\
+
 \min\big(\{T(s^+_X)-d(X,s^+_X):s^+_X \in \Gamma^+(X)\}\big), \text{ sinon}
+
 \end{cases}
+
 $$
 
 #### Graphique final et la marge d’une tâche

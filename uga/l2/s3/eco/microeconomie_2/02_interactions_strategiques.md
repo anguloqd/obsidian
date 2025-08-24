@@ -374,9 +374,8 @@ Hypothèses plus importantes :
     0, \text{ si } p_i>p_j
     \end{cases}
 
+
 $$
-
-
 ### Détermination de l’équilibre
 
 > **Théorème de Bertrand**. Sous les 5 derniers hypothèses, le seule équilibre de prix est $p_1^*=p_2^*=Cm$.
@@ -390,7 +389,6 @@ comme si elles étaient un nombre infini. Elles se comportent ainsi conformémen
 L’équilibre de Bertrand, comme l’équilibre de Cournot, est un équilibre de Nash.
 
 On arrive mathématiquement à que $Cm$ est le prix d’équilibre si on cherche les prix de $i$ (resp. $j$) qui maximise son profit respectif. **Celle-ci est aussi la fonction de réaction**. C’est-à-dire :
-
 $$
 
 R_i(p_j)=p_i^*=\argmax_{p_i} \pi_i(p_i,p_j), \text{ où } \pi_i(p_i,p_j)= \overbrace{(p_i-Cm)}^{\text{ Revenu moyen}} \times D_i(p_i,p_j)

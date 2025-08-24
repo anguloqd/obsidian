@@ -114,69 +114,84 @@ $$
 
 - Dérivation de la loi
 
-
     Soit $W$ une statistique de somme de rangs. Sous l'hypothèse nulle $\mathcal{H}_0$, on a $F_X = F_Y$et les rangs $R_i$ suivent une loi uniforme :
 
     $$
     R_i \sim \mathcal{U}([[ 1, n ]]), \quad \text{où } n = n_X + n_Y
 
-$$
 
+$$
     
     Espérance et variance des rangs :
     
-    $$
-    \mathbb{E}[R_i] = \frac{n+1}{2}, \quad \text{Var}(R_i) = \frac{n^2 - 1}{12}
     
 $$
 
+    \mathbb{E}[R_i] = \frac{n+1}{2}, \quad \text{Var}(R_i) = \frac{n^2 - 1}{12}
+    
+
+$$
     On a :
     
-    $$
+    
+$$
+
     \mathbb{E}[W] = \mathbb{E} \left[ \sum_{i=1}^{n_X} R_i \right] = \sum_{i=1}^{n_X} \mathbb{E}[R_i] = n_X \cdot \frac{n+1}{2}
     
 
 $$
-    
     Attention : les $R_i$ ne sont pas indépendants.
     
     La variance se calcule donc en tenant compte des covariances :
     
-    $$
+    
+$$
+
     \text{Var}(W) = \text{Var} \left( \sum_{i=1}^{n_X} R_i \right) = \sum_{i=1}^{n_X} \text{Var}(R_i) + \sum_{\substack{i,j=1 \\ i \ne j}}^{n_X} \text{Cov}(R_i, R_j)
     \\
     = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot C
     
-$$
 
+$$
     où $C$ est une constante (covariance entre deux rangs distincts).
     
     Supposons qu’il n’y ait pas de $Y$, donc $n_X = n$ : tous les $X$ sont en tête, donc la variance est nulle :
     
-    $$
+    
+$$
+
     \frac{n(n^2 - 1)}{12} + n(n - 1) \cdot C = 0 \Rightarrow C = -\frac{n+1}{12}
     
 
 $$
-    
+
     On remplace $C$ dans la variance générale :
     
-    $$
-    \text{Var}(W) = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot \left( -\frac{n+1}{12} \right)
     
+
 $$
 
-    $$
+    \text{Var}(W) = n_X \cdot \frac{n^2 - 1}{12} + n_X(n_X - 1) \cdot \left( -\frac{n+1}{12} \right)
+    
+
+$$
+
+$$
+
     = \frac{n_X(n+1)}{12} \left[ n - 1 - (n_X - 1) \right] = \frac{n_X n_Y (n+1)}{12}
     
 
 $$
-    
+
     On a donc :
     
-    $$
+    
+
+$$
+
     W = \sum_{i=1}^{n_X} R_i, \quad \mathbb{E}[W] = n_X \cdot \frac{n+1}{2}, \quad \text{Var}(W) = \frac{n_X n_Y (n+1)}{12}
     
+
 $$
 
     Si $n_X$ est grand, on applique le théorème central limite (version sans indépendance) :
@@ -186,7 +201,6 @@ $$
     
 
 $$
-    
 
 ### Conclusion du test
 
@@ -210,9 +224,9 @@ Remarque : Le test de Wilcoxon est excellent pour détecter les différences de 
 
 Si, par exemple, on observe le mot $\text {XXXXXXXYYYYYYYYXXXXXXX}$, l'hypothèse d'équidistribution est évidemment fausse (tous les $\text Y$ sont au centre et les $\text X$ sont aux deux bouts) ; le test de Wilcoxon, pourtant, donnera une valeur de $W$ tout-à-fait compatible avec l'hypothèse d'équidistribution.
 
-# Test de Spearman pour l’indépendance
+## Test de Spearman pour l’indépendance
 
-## Motivation
+### Motivation
 
 Nous avons déjà été amenés à tester l'indépendance de deux variables avec le test du $\chi^2$, en particulier pour les couples de variables qualitatives. Ce test reste le plus usité.
 
@@ -228,7 +242,7 @@ $R_{X(i)}$ est le rang obtenu par $X_i$ dans l'échantillon X ordonné ; de mêm
 
 L’idée est qu’**on ne fait plus la corrélation sur les observations de X et Y mais sur leurs rangs**.
 
-## La variable
+### La variable
 
 Le coefficient de corrélation de rangs est
 
@@ -251,11 +265,15 @@ R^* = \frac{ \frac{1}{n} \sum_{i=1}^n R_X(i) R_Y(i) - \left( \frac{1}{n} \sum_{i
 $$$$
 
 = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \left( \sum_{i=1}^n R_X(i) \right) \left( \sum_{i=1}^n R_Y(i) \right) }
+
 { \sqrt{ \left( n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2 \right)
+
 \left( n \sum_{i=1}^n R_Y^2(i) - \left( \sum_{i=1}^n R_Y(i) \right)^2 \right) } }
+
 $$
 On remarque toutefois que puisque les $R_X(i)$ (et les $R_Y(i)$) ne sont qu’une permutation des entiers de $1$ à $n$, on a :
 $$
+
 \sum_{i=1}^n R_X(i) = \sum_{i=1}^n i = \frac{n(n+1)}{2}
 
 $$$$
@@ -265,6 +283,7 @@ $$$$
 $$$$
 
 n \sum_{i=1}^n R_X^2(i) - \left( \sum_{i=1}^n R_X(i) \right)^2
+
 = \frac{n^2(n+1)(2n+1)}{6} - \frac{n^2(n+1)^2}{4}
 
 $$$$
@@ -274,9 +293,7 @@ $$$$
 = \frac{n^2(n^2 - 1)}{12}
 
 $$
-
 Le coefficient de corrélation de rangs devient donc :
-
 $$
 
 R^* = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \frac{n^2(n+1)^2}{4} }
@@ -286,35 +303,51 @@ R^* = \frac{ n \sum_{i=1}^n R_X(i) R_Y(i) - \frac{n^2(n+1)^2}{4} }
 $$$$
 
 = \frac{12 \sum_{i=1}^n R_X(i) R_Y(i)}{n(n^2 - 1)} - \frac{3(n+1)}{n-1}
+
 $$
 Posant $S^* = \sum_{i=1}^n R_X(i) R_Y(i)$, on observe que $R^*$ est fonction linéaire de $S^*$. Noter que :
 $$
+
 R^* = a S^* + b \quad \text{où} \quad
+
 a = \frac{12}{n(n^2 - 1)} \quad \text{et} \quad b = -\frac{3(n+1)}{n-1}
+
 $$
 Il suffit donc de connaître la distribution de $S^*$ pour connaître celle de $R^*$. En fait, on a
 $$
+
 E[R^*|H_0] = aE[S^*|H_0] + b
+
 $$
 et
 $$
+
 \text{Var}[R^*|H_0] = a^2 \text{Var}[S^*|H_0]
+
 $$
 En cette fin de chapitre, on se passera du détail des calculs. Si $H_0$ est vraie, et si $n$ est grand, la statistique $S^*$ suivra approximativement (TCL) une loi normale
 $$
+
 N\left(\frac{n^2(n+1)^2}{4}; \sqrt{\frac{n^2(n+1)(n^2-1)}{144}}\right)
+
 $$
 On en déduit alors que $R^*$ suit une loi normale (bien plus jolie)
 $$
+
 N\left(0, \sqrt{\frac{1}{n-1}}\right)
+
 $$
 ## Conclusion du test
 
 L'hypothèse $H_0$ sera donc rejetée au seuil α si
 $$
+
 |R^*| > q_{\alpha/2} \sqrt{\frac{1}{n-1}}
+
 $$
 où $q_{\alpha/2}$ est le quantile théorique de la loi normale N(0;1) :
 $$
+
 P(N(0;1) > q_{\alpha/2}) = \frac{\alpha}{2}
+
 $$

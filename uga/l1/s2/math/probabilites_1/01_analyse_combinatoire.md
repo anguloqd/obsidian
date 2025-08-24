@@ -69,7 +69,6 @@ $$
     - **Terme $C^{k-1}_{n-1}$** : c'est la quantité de combinaisons de $2$ éléments qui contient $*a*$. $\rightarrow$ Notons que on fixe $*a$* dans chaque groupe de $2$ et on seulement choisit le deuxième élément, donc $k \rightarrow k-1$ et on conserve l'ensemble sans $a$ de $(n-1)$ éléments car $a$ est déjà présent dans la tuple.
     - Les deux termes sont ceux qui permet, dans le Triangle de Pascal, de trouver le prochain terme.
 
-
     ![untitled](ressources/01_analyse_combinatoire_untitled.png)
 
     
@@ -106,6 +105,7 @@ Dans la pratique, on l’utilise de la manière suivante :
 
     $$
     \ln(n!)\approx n\ln(n)-n\cancel{\ln(e)}^1+\frac{1}{2}\ln(2\pi n)=n(\ln(n)-1)+\frac{1}{2}\ln(2\pi n)
+
 
 $$
 

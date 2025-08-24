@@ -62,7 +62,6 @@ for(int i = 1;i < n; i++) {
         2. Si non, on passe au suivant.
     2. On répète ce processus jusqu'à ce qu'on arrive à l'élément à gauche du pivot.
 
-
         À ce point, on échange le pivot et le deuxième élément marqué si pivot < deuxième élément.
 
         

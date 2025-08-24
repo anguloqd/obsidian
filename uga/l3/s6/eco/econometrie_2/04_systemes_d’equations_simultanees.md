@@ -202,7 +202,8 @@ $$
 
 Par continuité des fonctions $\mathbf{g}(\cdot)$ et $\boldsymbol{\gamma}(\cdot)$, on obtient :
 
-$$\hat{\mathbf{g}}_N^{MCI} \xrightarrow{p} \mathbf{g}_0 \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} \xrightarrow{p} \boldsymbol{\gamma}_0
+$$
+\hat{\mathbf{g}}_N^{MCI} \xrightarrow{p} \mathbf{g}_0 \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} \xrightarrow{p} \boldsymbol{\gamma}_0
 $$
 
 ## Conditions d'identification
@@ -219,14 +220,16 @@ L'approche par MCI révèle une équivalence fondamentale avec l'estimation par 
 
 Pour l'équation de $y_{d,i}$ :
 
-$$y_{d,i} = \mathbf{g}_0' \mathbf{x}_{d,i} + u_{d,i}
+$$
+y_{d,i} = \mathbf{g}_0' \mathbf{x}_{d,i} + u_{d,i}
 $$
 
 avec $\mathbf{x}_{d,i} = (1, y_{c,i}, \mathbf{q}_{d,i}', \mathbf{q}_i')'$ et le vecteur d'instruments $\mathbf{z}_i = (1, \mathbf{q}_i', \mathbf{q}_{d,i}', \mathbf{q}_{c,i})'$.
 
 L'estimateur par variables instrumentales s'écrit :
 
-$$\hat{\mathbf{g}}_N^{VI} = \left(\sum_{i=1}^N \mathbf{x}_{d,i} \mathbf{z}_i' \right)^{-1} \left(\sum_{i=1}^N \mathbf{z}_i \mathbf{z}_i' \right)^{-1} \sum_{i=1}^N \mathbf{z}_i y_{d,i}
+$$
+\hat{\mathbf{g}}_N^{VI} = \left(\sum_{i=1}^N \mathbf{x}_{d,i} \mathbf{z}_i' \right)^{-1} \left(\sum_{i=1}^N \mathbf{z}_i \mathbf{z}_i' \right)^{-1} \sum_{i=1}^N \mathbf{z}_i y_{d,i}
 $$
 
 Dans le cas juste-identifié, on démontre l'égalité $\hat{\mathbf{g}}_N^{MCI} = \hat{\mathbf{g}}_N^{VI}$, établissant l'équivalence conceptuelle entre les deux approches.
@@ -237,7 +240,8 @@ Dans le cas juste-identifié, on démontre l'égalité $\hat{\mathbf{g}}_N^{MCI}
 
 Pour le modèle général non nécessairement juste-identifié, la forme réduite devient :
 
-$$\begin{cases}
+$$
+\begin{cases}
 y_{d,i} = \boldsymbol{\pi}_d' \mathbf{z}_i + v_{d,i} \\
 y_{c,i} = \boldsymbol{\pi}_c' \mathbf{z}_i + v_{c,i}
 \end{cases}
@@ -253,7 +257,8 @@ Dans le cas sur-identifié où $\dim(\mathbf{q}_{d,i}) + \dim(\mathbf{q}_{c,i}) 
 
 Pour l'équation $m$ du système général :
 
-$$y_{m,i} = a_{m,0} + \mathbf{b}_{m,0}' \mathbf{y}_{m,i} + \mathbf{d}_{m,0}' \mathbf{q}_{m,i} + \mathbf{r}_{m,0}' \mathbf{q}_{m,i}^s + u_{m,i}
+$$
+y_{m,i} = a_{m,0} + \mathbf{b}_{m,0}' \mathbf{y}_{m,i} + \mathbf{d}_{m,0}' \mathbf{q}_{m,i} + \mathbf{r}_{m,0}' \mathbf{q}_{m,i}^s + u_{m,i}
 $$
 
 la condition d'ordre s'énonce :
