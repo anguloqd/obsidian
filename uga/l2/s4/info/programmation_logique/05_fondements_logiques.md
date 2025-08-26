@@ -46,11 +46,9 @@ C’est juste une forme de preuve par contradiction. Étant donné un ensemble d
 
 En Prolog, la définition d’une règle est une clause de Horn : une clause disjonctive qui a, au plus, un atome ou literal vrai.
 
-$$
-\begin{align*}
+$$\begin{align*}
 & &P_1 \lor \lnot P_2 \lor \dots \lor \lnot P_n
 \\ &\iff &\lnot(\lnot P_2 \lor \dots \lor \lnot P_n) \implies P_1
 \\ &\iff &P_2 \land \dots \land P_n \implies P_1
 \\ &\iff &\underbrace{P_1 \text{ :- } P_2,\space \dots \space , P_n}_\text{En Prolog}
-\end{align*}
-$$
+\end{align*}$$

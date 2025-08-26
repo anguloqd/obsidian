@@ -32,8 +32,6 @@
 
 Entre consommation présente ($c_1$) et future ($c_2$) :
 
-$$
-c_1 + \frac{c_2}{1+r} = m_1 + \frac{m_2}{1+r}
-$$
+$$c_1 + \frac{c_2}{1+r} = m_1 + \frac{m_2}{1+r}$$
 
 où $r$ est le taux d'intérêt et $m_i$ le revenu à la période $i$.

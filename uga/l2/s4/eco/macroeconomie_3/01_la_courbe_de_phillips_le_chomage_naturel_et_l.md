@@ -16,9 +16,7 @@ La théorie serait que plus on se rapproche au plein emploi des facteurs, plus l
 
 Voyons en premier la relation entre le niveau de prix anticipé, de chômage et de salaires :
 
-$$
-W=P^e F(u,z) \tag{1}
-$$
+$$W=P^e F(u,z) \tag{1}$$
 
 - $W$ : *wages*, niveau de salaires
 - $P^e$ : niveau ***anticipé*** des prix (pas les prix actuels !)
@@ -43,21 +41,17 @@ $$
 
 On a vu les prix anticipés $P^e$, voici la relation des prix actuels $P$ avec les salaires $W$ :
 
-$$
-P=(1+m)W \tag{2}
-$$
+$$P=(1+m)W \tag{2}$$
 
 Ici, $m$ est la marge du prix par rapport aux coûts. Une hypothèse simplificatrice faite c’est que les seuls coûts considérés sont les salaires.
 
 Avec cette équation, on peut la réarranger et l’njecter dans l’équation de $P^e$ et salaires $W$ :
 
-$$
-W=\frac{P}{(1+m)} \implies \frac{P}{(1+m)}=P^eF(u,z) 
+$$W=\frac{P}{(1+m)} \implies \frac{P}{(1+m)}=P^eF(u,z)
 \\
 \text{}
 \\
-\implies P=P^e(1+m)F(u,z) \tag{3}
-$$
+\implies P=P^e(1+m)F(u,z) \tag{3}$$
 
 Ayant faite cette manipulation, on peut voir la relation entre $P$ et tous les facteurs :
 
@@ -68,9 +62,7 @@ Ayant faite cette manipulation, on peut voir la relation entre $P$ et tous les f
 
 On prend la suivant forme fonctionnelle suivante de $F$ :
 
-$$
-F(u,z)=1-\alpha u + z
-$$
+$$F(u,z)=1-\alpha u + z$$
 
 - Hausse du taux de chômage $u \implies$ baisse de salaires $W$.
 - Hausse des autres facteurs $z \implies$ hausse de salaires $W$.
@@ -81,15 +73,11 @@ On y pourrait penser comme “l’élasticité-chômage des salaires”.
 
 Ayant cette forme de $F$, on peut l’injecter dans l’équation qui lie $P$ avec $P^e$comme suit :
 
-$$
-P=P^e(1+m)(1-\alpha u+z) \tag{4}
-$$
+$$P=P^e(1+m)(1-\alpha u+z) \tag{4}$$
 
 Cette relation peut être réécrite comme une relation en temps $t$ entre l’inflation $\pi_t$, l’inflation anticipée $\pi_t^e$ et le taux de chômage $u_t$ :
 
-$$
-\pi_t=\pi_t^e+(m+z)-\alpha u_t \tag{5}
-$$
+$$\pi_t=\pi_t^e+(m+z)-\alpha u_t \tag{5}$$
 
 Considérons les deux équations de $P$ et $\pi_t$. Voici leurs conséquences :
 
@@ -111,9 +99,7 @@ Proposée par Phillips, Samuelson et Solow, ils proposent une équation et deux 
 
 Sous ces deux hypothèses, on déduit logiquement que $\pi_t^e = \overline{\pi}$, et on réécrit l’équation qui lie la l’inflation actuelle et anticipée, appelée la relation inflation-chômage de la courbe de Phillips :
 
-$$
-\pi_t=\overline{\pi}+(m+z)-\alpha u_t \tag{6}
-$$
+$$\pi_t=\overline{\pi}+(m+z)-\alpha u_t \tag{6}$$
 
 ![On peut apprécier la relation négative entre inflation et chômage avant 1970.](ressources/01_la_courbe_de_phillips_le_chomage_naturel_et_l_untitled_1.png)
 
@@ -132,9 +118,7 @@ Basiquement, il y a deux raisons qui ont changé la relation entre chômage et i
 
 À la vue des ces changements, on peut proposer **une deuxième version entre $\pi_t^e$ et $\pi_t$**, où $\theta$ représente le poids de l’inflation en temps $t$ sur l’inflation en temps $t+1$ :
 
-$$
-\pi_{t+1}^e=(1-\theta)\overline{\pi}+\theta\pi_{t} \tag{7}
-$$
+$$\pi_{t+1}^e=(1-\theta)\overline{\pi}+\theta\pi_{t} \tag{7}$$
 
 #### Progression depuis les années 1970
 
@@ -148,9 +132,7 @@ $$
 
 Injections l’équations 7 dans l’équation 5 :
 
-$$
-\pi_{t+1}=(1-\theta)\overline{\pi}+\theta\pi_{t}+(m+z)-\alpha u_{t+1}
-$$
+$$\pi_{t+1}=(1-\theta)\overline{\pi}+\theta\pi_{t}+(m+z)-\alpha u_{t+1}$$
 
 La valeur de la persistance de l’inflation $\theta$ affecte la relation inflation-chômage :
 
@@ -158,11 +140,8 @@ La valeur de la persistance de l’inflation $\theta$ affecte la relation inflat
 - $\theta \in ]0,1[$  : $\pi_{t+1}$ dépend de $u$ et maintenant aussi de $\pi_t$.
 - $\theta = 1$ : la relation devient :
 
-    $$
-    \pi_{t+1}-\pi_t=(m+z)-\alpha u_t \tag{8}
+$$\pi_{t+1}-\pi_t=(m+z)-\alpha u_t \tag{8}$$
 
-
-$$
     
     - La **variation de l’inflation** $(\pi_{t+1}-\pi_t)$ est négativement corrélée au chômage $u_t$.
     - Si $u_t$ est élevé, tel que $u_t > \frac{(m+z)}{\alpha} \implies$ baisse de l’inflation : $\pi_{t+1} < \pi_t$.
@@ -192,9 +171,8 @@ Encore plus, le chômage $u$ ne peut pas être maintenu sous un certain seuil, c
 ## La relation entre le chômage structurel et la courbe de Phillips
 
 La définition du taux de chômage naturel $u_n$ est la valeur constante donnée du taux de chômage $u$ tel que le niveau d’inflation actuel $\pi_t$ est égal au niveau d’inflation anticipé $\pi_t^e$. Si on reprend l’équation 5 et on impose l’égalité $\pi_t=\pi_t^e$, on déduit la suite :
-$$
 
-\pi_t=\pi_t^e+(m+z)-\alpha u_t \implies \pi_t - \pi_t^e = (m+z)-\alpha u_t
+$$\pi_t=\pi_t^e+(m+z)-\alpha u_t \implies \pi_t - \pi_t^e = (m+z)-\alpha u_t
 
 \\
 
@@ -202,22 +180,16 @@ $$
 
 \\
 
-0 = (m+z)-\alpha u_t \implies u_n = \frac{m+z}{\alpha}\tag{9}
+0 = (m+z)-\alpha u_t \implies u_n = \frac{m+z}{\alpha}\tag{9}$$
 
-$$
 On peut réarranger cette dernière équation comme  $\alpha u_n = (m+z)$ et l’injecter dans l’équation 5 pour trouver une identité utile :
-$$
 
-\pi_t - \pi_t^e = (m+z)-\alpha u_t \implies \pi_t - \pi_t^e = -\alpha(u_t-u_n) \tag{10}
+$$\pi_t - \pi_t^e = (m+z)-\alpha u_t \implies \pi_t - \pi_t^e = -\alpha(u_t-u_n) \tag{10}$$
 
-$$
 Encore plus, si on suppose que $\pi_{t-1} \approx \pi_t^e$, la relation devient finalement comme suit :
 (Oui, c’est $\pi_{t-1}$ et non pas $\pi_{t+1}$, j’ai confirmé !)
-$$
 
-\underbrace{\pi_{t}-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_{t}-u_n) \tag{11}
-
-$$
+$$\underbrace{\pi_{t}-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_{t}-u_n) \tag{11}$$
 
 Ce serait encore une autre version de la courbe de Phillips. Elle rend compte d’une relation entre la variation de l’inflation et l’écart du chômage réalisé au chômage naturel/structurel.
 

@@ -47,9 +47,7 @@ Finalement, le langage de la grammaire est l’ensemble de toutes les chaînes q
 
 Formellement, on définit une grammaire comme un tuple de quatre éléments :
 
-$$
-G=\{V_N,V_T,S,R\}, \space V_N \cap V_T=\empty
-$$
+$$G=\{V_N,V_T,S,R\}, \space V_N \cap V_T=\empty$$
 
 - $V_N$ : vocabulaire non terminal,
 càd. l’ensembles de symboles qui ne font pas partie de l’alphabet.
@@ -68,10 +66,8 @@ Intuitivement, un mot $w\in V_T^*$ est engendré par une grammaire si on peut l�
 
 Une règle c’est juste une fonction qui prend une chaîne (hors la chaîne vide) et renvoie une autre chaîne (ici la chaîne vide est possible).
 
-$$
-\varphi=(V_N\cup V_T)^*\setminus\{\varepsilon\}, \psi = (V_N\cup V_T) \\
-R: \varphi \mapsto \psi
-$$
+$$\varphi=(V_N\cup V_T)^*\setminus\{\varepsilon\}, \psi = (V_N\cup V_T) \\
+R: \varphi \mapsto \psi$$
 
 Il faut noter que la chaîne de gauche, qui appartient à $\varphi$, contient au moins un symbole non-terminal (ce qui permet de continuer à la réécrire), ce qui n’est pas le cas d’un chaîne dans $\psi$.
 
@@ -89,9 +85,7 @@ La dérivation tout courte est la fermeture réflexive et transitive de la déri
 
 Finalement, avec les dérivations on peut définir un langage engendré d’une grammaire.
 
-$$
-L(G)=\{w\in V_t^* : S \Rightarrow^*w\}
-$$
+$$L(G)=\{w\in V_t^* : S \Rightarrow^*w\}$$
 
 ## Hiérarchie de Chomsky
 
@@ -107,9 +101,7 @@ Les grammaires de type 0 sont appelées aussi les grammaires non-restreintes, et
 
 Les grammaires de type 1 sont appelées “grammaires sensibles au contexte”, qui génèrent des langages sensibles au contexte. Leurs règles sont souvent de la forme suivante :
 
-$$
-\alpha A\beta \mapsto \alpha \gamma \beta
-$$
+$$\alpha A\beta \mapsto \alpha \gamma \beta$$
 
 Où $A$ est forcément non terminal et $\alpha$, $\beta$ et $\gamma$ des chaînes terminaux et non-terminaux. $\alpha$ et $\beta$ peuvent être la chaîne vide, mais $\gamma$ doit être forcément non-vide. **Comme note, la règle $S \mapsto \varepsilon$ est permise si $S$ n’apparaît sur le côté droit d’aucune règle**.
 
@@ -132,9 +124,7 @@ Supposons $V_N = \{S,B,C\}$, $V_T = \{a,b,c\}$ et les règles de grammaires sont
 
 Les grammaires de type 2 sont appelées les grammaires hors contexte, car elle génèrent un langage sans contexte. Leurs règles sont souvent de la forme suivante :
 
-$$
-A \mapsto \gamma
-$$
+$$A \mapsto \gamma$$
 
 Où $A$ est non-terminal et $\gamma$ est terminal ou non-terminal. Ces langages sont reconnus par un automate à pile (*pushdown automaton* en anglais) non-déterministe.
 
@@ -153,9 +143,7 @@ Supposons $V_N=\{S\}$, $V_T=\{a,b\}$ et les règles de production sont comme sui
 
 Les grammaires de type 3 sont appelées grammaires régulières, car elles génèrent des langages réguliers. Leurs règles sont souvent de la forme suivante :
 
-$$
-A \mapsto \alpha S \text{ ou } A \mapsto S \alpha
-$$
+$$A \mapsto \alpha S \text{ ou } A \mapsto S \alpha$$
 
 Où A est non terminal, et le coté droite est constitué de forcément un terminal $\alpha$ potentiellement suivi ou précédé d’un non terminal $S$ (mais pas le deux !). La règle $S \mapsto \varepsilon$ est aussi ici permise si $S$ n’apparaît pas à droite d’une règle.
 
@@ -197,10 +185,8 @@ Etant donné une grammaire hors-contexte (type 2) il peut exister plusieurs mani
 
 Si on prend la chaîne de départ $S$ et on applique une règle toujours sur le non-terminal le plus à gauche, on obtient ce qui s’appelle une **dérivation *gauche***. C’est analogiquement le même pour la **dérivation *droite***. Notons que dans ce cas, on peut arriver à une même chaîne :
 
-$$
-\text{D. gauche : } S \Rightarrow_1 aABb \Rightarrow_2 abAbBb \Rightarrow_3 abcbBb \Rightarrow_4 abcbaBb \Rightarrow_5 abcbabb \\
-\text{D. droite : } S \Rightarrow_1 aABc \Rightarrow_4 aAaBb \Rightarrow_5 aAabb \Rightarrow_2 abAbabb \Rightarrow_3 abcbabb
-$$
+$$\text{D. gauche : } S \Rightarrow_1 aABb \Rightarrow_2 abAbBb \Rightarrow_3 abcbBb \Rightarrow_4 abcbaBb \Rightarrow_5 abcbabb \\
+\text{D. droite : } S \Rightarrow_1 aABc \Rightarrow_4 aAaBb \Rightarrow_5 aAabb \Rightarrow_2 abAbabb \Rightarrow_3 abcbabb$$
 
 ### Arbre de dérivation
 
@@ -264,19 +250,15 @@ Dans de tels cas, des règles différentes sont utilisées dans les deux dériva
 
 En contraste, dans cette ambiguïté, on ne choisit pas toujours les mêmes règles ou le même nombre de fois à les appliquer.
 
-$$
-\text{D.G. : } S \Rightarrow_1 aABb \Rightarrow_2 abAbBb \Rightarrow_3 abcbBb \Rightarrow_4 abcbaBb \Rightarrow_5 abcbabb \\
+$$\text{D.G. : } S \Rightarrow_1 aABb \Rightarrow_2 abAbBb \Rightarrow_3 abcbBb \Rightarrow_4 abcbaBb \Rightarrow_5 abcbabb \\
 \text{D.D. : } S \Rightarrow_1 aABc \Rightarrow_4 aAaBb \Rightarrow_5 aAabb \Rightarrow_2 abAbabb \Rightarrow_3 abcbabb
 \\
-\text{On choisit les mêmes règles et le même nombre d'appl., on change l'ordre.}
-$$
+\text{On choisit les mêmes règles et le même nombre d'appl., on change l'ordre.}$$
 
-$$
-\text{D. \#}1 : S \Rightarrow_1 aBc \Rightarrow_3 abc \\
+$$\text{D. \#}1 : S \Rightarrow_1 aBc \Rightarrow_3 abc \\
 \text{D. \#}2 : S \Rightarrow_2 abC \Rightarrow_4 abc
 \\
-\text{On ne choisit pas les mêmes règles.}
-$$
+\text{On ne choisit pas les mêmes règles.}$$
 
 - Un mot $w \in L(G)$ est dit ambigu  $\iff w$ admet plus d’un arbre de dérivation.
 - Une grammaire $G$ est dite ambiguë $\iff$ elle engendre des mots ambigus.

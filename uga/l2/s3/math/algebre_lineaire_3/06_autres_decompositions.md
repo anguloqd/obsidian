@@ -18,9 +18,7 @@ Avant d’aborder la décomposition, il faut expliquer qu’est-ce qu’une **ma
 
 Soit $A$ une matrice **inversible**. Donc, on peut réécrire $A$ comme :
 
-$$
-P^{-1}A=LU \space \text{ou} \space A=PLU
-$$
+$$P^{-1}A=LU \space \text{ou} \space A=PLU$$
 
 où $P$ est une matrice de permutation, $L$ est une matrice triangulaire inférieure ($L$ de “lower”) et $U$ est une matrice triangulaire supérieure ($U$ de “upper”). Parfois, on peut ramener la matrice de permutation $P$ à la matrice identité.
 
@@ -45,9 +43,7 @@ Ceci implique que les vecteurs sont deux à deux orthogonaux.
 
 Pour une matrice $A$,
 
-$$
-A=QR
-$$
+$$A=QR$$
 
 Où $Q$ est une matrice orthogonale et $R$  est une matrice triangulaire supérieure.
 
@@ -67,14 +63,12 @@ Par exemple, supposons des variables statistiques d’un vin : prix $X_1$, dégr
 
 On construit alors une matrice de covariance à partir du vecteur aléatoire $\mathbf{X}$ :
 
-$$
-M=
+$$M=
 \begin{bmatrix}
-\text{var}(X_1) & \text{cov}(X_1,X_2) & \text{cov}(X_1,X_3) \\
-\text{cov}(X_2,X_1) & \text{var}(X_2) & \text{cov}(X_2,X_3) \\
-\text{cov}(X_3,X_1) & \text{cov}(X_3,X_2) & \text{var}(X_3)
-\end{bmatrix}
-$$
+V(X_1) & \text{cov}(X_1,X_2) & \text{cov}(X_1,X_3) \\
+\text{cov}(X_2,X_1) & V(X_2) & \text{cov}(X_2,X_3) \\
+\text{cov}(X_3,X_1) & \text{cov}(X_3,X_2) & V(X_3)
+\end{bmatrix}$$
 
 ### ACP : Analyse en composantes principales
 
@@ -126,9 +120,7 @@ Il faut garder en tête que la plus de variance un vecteur garde du *dataset*, l
 
 Chaque fois qu’on prend des vins (vecteurs ligne $\mathbf{x}_1, \dots, \mathbf{x}_n$) et on prend sa combinaison linéaire avec le vecteur de plus grand $\lambda$, $\mathbf{w}_1$, on obtient une constante résultat $(F_1)_i$ qui est le “facteur” du vin $i$ sous $\mathbf{w}_1$. Supposons qu’on garde tous les facteurs $(F_1, \dots, F_n)$ comme des données dans le vecteur ligne $\mathbf{F}_1$ associé au vecteur propre $\mathbf{w}_1$, alors il en résulte que $\mathbf{w}_1$ est tel vecteur colonne qui maximise la variance de $\mathbf{F}_1$. Formellement,
 
-$$
-\mathbf{w}_1=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(F_1)^2_i \right\}=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(\mathbf{x}_i \cdot \mathbf{w})^2 \right\}
-$$
+$$\mathbf{w}_1=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(F_1)^2_i \right\}=\argmax_{||\mathbf{w}||=1} \left\{ \sum_i(\mathbf{x}_i \cdot \mathbf{w})^2 \right\}$$
 
 On pourra prendre un autre vecteur colonne $\mathbf{w}_i$ et faire la même opération avec chaque vin $\mathbf{x}_i$, et la variance des facteurs résultats dans $\mathbf{F}_i$ sera plus petite que $\mathbf{F}_1$. De même, le vecteur propre $\mathbf{w}_2$ est tel qui maximise la variance et est différent de $\mathbf{w}_1$, et comme ça successivement.
 

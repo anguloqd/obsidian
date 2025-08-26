@@ -119,19 +119,14 @@ Prenons base $10$ et quatre chiffres.
 
 - On met tout ensemble :
 
-    $$
-    \underbrace{0.}_\text{signe} - \underbrace{10000011}_\text{excedent} - \underbrace{(1.)011111}_\text{mantisse}
+$$\underbrace{0.}_\text{signe} - \underbrace{10000011}_\text{excedent} - \underbrace{(1.)011111}_\text{mantisse}$$
 
-
-$$
-
-    
 - On remplit le zéros à gauche selon la quantité de bits choisie pour la mantisse,  $0 - 10000011 - (1.)011111100000000000000000$.
 
 ### Deux cas particuliers avec l'exposant
 
-- L'exposant $2^{n-1}$ (le nombre $111...111$ en binaire, tous $1$) est l'infini si la mantisse est nulle et NaN si la mantisse est non nulle.
-- L'exposant $0$ est $0$ (qui ne peut pas s’écrire sous la forme 1,… ×2 ...).
+- L'exposant $2^{n-1}$ (le nombre $111…111$ en binaire, tous $1$) est l'infini si la mantisse est nulle et NaN si la mantisse est non nulle.
+- L'exposant $0$ est $0$ (qui ne peut pas s’écrire sous la forme 1,… ×2 …).
 
 ### Représentation des réels communes
 

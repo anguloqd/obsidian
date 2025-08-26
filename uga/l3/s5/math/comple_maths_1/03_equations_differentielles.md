@@ -8,13 +8,11 @@
 
 On appelle problème de Cauchy au problème suivant :
 
-$$
-\begin{cases}
+$$\begin{cases}
 x^\prime(t)=f(t,x(t))
 \\
 x(t_0)=x_0\in\mathbb{R}
-\end{cases}
-$$
+\end{cases}$$
 
 La condition $x(t_0) = x_0$ est dite “donnée de Cauchy” ou “condition initiale”.
 
@@ -24,13 +22,11 @@ La condition $x(t_0) = x_0$ est dite “donnée de Cauchy” ou “condition ini
 
 **Exemple #1**.
 
-$$
-\begin{cases}
+$$\begin{cases}
 x^\prime(t)=t
 \\
 x(0)=0
-\end{cases}
-$$
+\end{cases}$$
 
 ![untitled](ressources/03_equations_differentielles_untitled.png)
 
@@ -48,21 +44,17 @@ Dans l’image précédente, juste avec la proposition $x^\prime(t)=f(t,x(t))$ e
 
 Considérons l’équation linéaire du premier ordre :
 
-$$
-y^\prime+a(t)y(t)=f(t)
-$$
+$$y^\prime+a(t)y(t)=f(t)$$
 
 où $a$ et $f$ sont des fonctions continues sur un intervalle. Notons qu’on peut transformer une telle équation dans un problème de Cauchy (sans condition initiale), supposant que $g$ loc. lpz. sur la deuxième variable :
 
-$$
-\begin{align*}
+$$\begin{align*}
 &&y^\prime+a(t)y(t)=f(t)
 \\
 &\implies&y^\prime=f(t)-a(t)y(t)
 \\
 &\implies&y^\prime=g(t,y(t))
-\end{align*}
-$$
+\end{align*}$$
 
 Notons donc que, du fait que on peut réécrire $y^\prime$ de telle manière, une unique solution est garantie pour toute condition initiale.
 
@@ -70,39 +62,28 @@ La stratégie de résolution d’une équation différentielle comme telle est d
 
 1. Déterminer **toutes** les solutions de l’équation homogène $y^\prime+a(t)y(t)=0$. Ceci est equivalent à
 
-   $$
+$$y^\prime+a(t)y(t)=0 \iff y^\prime_0=-a(t)y_0(t)$$
 
-y^\prime+a(t)y(t)=0 \iff y^\prime_0=-a(t)y_0(t)
-
-$$
 2. Trouver **une** solution de l’équation complète $y^\prime+a(t)y(t)=f(t)$. Ceci est réécrit aussi comme     
-	
-$$
 
-y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)
+$$y^\prime+a(t)y(t)=f(t) \iff y^\prime_*=f(t)-a(t)y_*(t)$$
 
-$$
 3. La solution générale sera $y=y_0+y_*$. Si on dérive les deux membres de cette dernière équation, on devrait trouver l’équation du départ.
 
-   
-$$
+$$\begin{align*}
+y^\prime & =y_0^\prime+y_*^\prime \\
+& =-a(t) y_0(t)+f(t)-a(t) y_0(t) \\
+& =-a(t)\left(y_0(t)+y_0(t)\right)+f(t) \\
+& =-a(t) y(t)+f(t) \\
+\end{align*}
+\\[6pt]
+y^{\prime}+a(t) y(t) =f(t)$$
 
-    \begin{align*}
-    y^\prime & =y_0^\prime+y_*^\prime \\
-    & =-a(t) y_0(t)+f(t)-a(t) y_0(t) \\
-    & =-a(t)\left(y_0(t)+y_0(t)\right)+f(t) \\
-    & =-a(t) y(t)+f(t) \\
-    \end{align*}
-    \\[6pt]
-    y^{\prime}+a(t) y(t) =f(t)
-
-$$
 ## Résolution de l’équation homogène
 
 Si $a$ est continue sur $I$ et admet des primitives, et $t_0\in ]\alpha, \beta[$, le théorème de dérivation des fonction composées montre que 
-$$
 
-\begin{align*}
+$$\begin{align*}
 
 y_0(t)&=\exp\left(-\int_{t_0}^ta(s)ds\right)
 
@@ -112,54 +93,43 @@ y_0(t)&=\exp\left(-\int_{t_0}^ta(s)ds\right)
 
 \\&=C\exp(-A(t))
 
-\end{align*}
+\end{align*}$$
 
-$$
 Notons que ce $C$ aura une valeur différente pour chaque valeur initiale $t_0$.
 
 ## Résolution de l’équation particulière
 
 Ici, il suffit de trouve une solution à l’équation dite “particulière”. Pour ce faire, on peut utiliser la méthode de variation de la constante, aussi appelée méthode de Lagrange. On cherche une solution de la forme 
-$$
 
-\begin{align*}
+$$\begin{align*}
 
 y_*(t)&=C(t)\exp\left(-\int_{t_0}^ta(s)ds\right)
 
-\end{align*}
+\end{align*}$$
 
-$$
 La solution est donc :
-$$
 
-y_*(t)=C(t)\exp\left(-A(t)\right)
+$$y_*(t)=C(t)\exp\left(-A(t)\right)$$
 
-$$
 Il ne nous resterait que dériver $y_*(t)$ et résoudre l’équation particulière pour trouver la fonction $C(t)$.
 
 ## Exemple
 
 Cherchons les solutions de l’équation suivante :
-$$
 
-y^\prime+2y=t^2+3t
+$$y^\prime+2y=t^2+3t$$
 
-$$
 On commence par la solution de l’équation homogène : $y_0 = Ce^{-2t}$. On fait de même pour la solution particulière de l’équation particulière : $y_* = C(t)e^{-2t}$. Ayant ce dernier, on dérive $y_*$ :
-$$
 
-\begin{align*}
+$$\begin{align*}
 
 y_*^{\prime}(t) & =C^{\prime}(t) e^{-2 t}-2 C(t) e^{-2 t} \\
 
 & =e^{-2 t}\left(C^{\prime}(t)-2 C(t)\right)
 
-\end{align*}
-
-$$$$
+\end{align*}$$$$
 \text{On revient à l'équation : } y_*^{\prime}+2 y=t^2-3 t
 $$$$
-
 \begin{align*}
 
 e^{-2 t}\left(C^{\prime}(t)-2 C(t)\right)+2 C(t) e^{-2 t}
@@ -177,9 +147,7 @@ e^{-2 t} C^{\prime}(t) & =t^2-3 t \\
 C^{\prime}(t) & =\left(t^2-3 t\right) e^{2 t}
 
 \end{align*}
-
 $$$$
-
 C(t)=\int\left(t^2-3 t\right) e^{2 t} d t=\frac{e^{2t}}{2}(t^2-4t+2)
 $$
 Ayant calculé $C(t)$, on peut finalement déduire $y_*$ :

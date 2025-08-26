@@ -31,9 +31,7 @@ On actualise la valeur de la machine chaque année ou période à travers un tau
 
 Tel investissement (capital physique, dans ce cas) génère de profits. Pour la profit de chaque année $t$, on le note $\Pi_t^e$. On parle de profit réels, pas de profits nominaux. On calcule alors la VAN réelle pour chaque profit réel futur :
 
-$$
-VAN(\Pi_t^e)=\frac{\Pi_{t+1}^e}{(1+r_t)}+(1-\delta)\frac{\Pi_{t+2}^e}{(1+r_t)(1+r_{t+1}^e)}+\dots \\ \text{} \\ =\sum_{t=0}^n (1-\delta)^t \frac{\Pi_{t+1}^e}{\prod_{u=0}^t (1+r_u)}
-$$
+$$VAN(\Pi_t^e)=\frac{\Pi_{t+1}^e}{(1+r_t)}+(1-\delta)\frac{\Pi_{t+2}^e}{(1+r_t)(1+r_{t+1}^e)}+\dots \\ \text{} \\ =\sum_{t=0}^n (1-\delta)^t \frac{\Pi_{t+1}^e}{\prod_{u=0}^t (1+r_u)}$$
 
 **Doute** : pourquoi on déprécie le profit et non pas les valeurs des machines ?
 
@@ -41,9 +39,7 @@ $$
 
 On retourne à l’investissement. On déduit qu’elle dépend positivement de la VAN des profits et négativement des taux d’intérêts réels $r_t$ et du prix de l’investissement $P$.
 
-$$
-I=I\left( VAN(\Pi_t^e), P\right)=VAN(\Pi_t^e)-P
-$$
+$$I=I\left( VAN(\Pi_t^e), P\right)=VAN(\Pi_t^e)-P$$
 
 Finalement, cela serait l’investissement d’un seul (une seule machine). On pourrait le généraliser à $n$ investissements.
 

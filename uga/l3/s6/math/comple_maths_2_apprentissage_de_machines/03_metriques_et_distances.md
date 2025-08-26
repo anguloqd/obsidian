@@ -39,9 +39,7 @@ Ces quatre axiomes garantissent la cohérence mathématique de la notion de dist
 
 La distance de Minkowski constitue une famille générale de distances paramétrée par un ordre $p \geq 1$. Pour deux vecteurs $x = (x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$ et $y = (y_1, y_2, \ldots, y_n) \in \mathbb{R}^n$, elle se définit par :
 
-$$
-d(x, y) = \left(\sum_{i=1}^{n} |x_i - y_i|^p\right)^{\frac{1}{p}}
-$$
+$$d(x, y) = \left(\sum_{i=1}^{n} |x_i - y_i|^p\right)^{\frac{1}{p}}$$
 
 Cette formulation engendre plusieurs distances classiques selon la valeur du paramètre $p$ :
 
@@ -49,9 +47,7 @@ Cette formulation engendre plusieurs distances classiques selon la valeur du par
 
 Lorsque $p = 1$, la distance de Minkowski devient la distance de Manhattan, également appelée distance $L_1$ :
 
-$$
-d(x, y) = \sum_{i=1}^{n} |x_i - y_i|
-$$
+$$d(x, y) = \sum_{i=1}^{n} |x_i - y_i|$$
 
 Cette distance correspond à la somme des valeurs absolues des différences entre coordonnées correspondantes.
 
@@ -59,9 +55,7 @@ Cette distance correspond à la somme des valeurs absolues des différences entr
 
 Pour $p = 2$, on obtient la distance euclidienne classique, ou distance $L_2$ :
 
-$$
-d(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
-$$
+$$d(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}$$
 
 Il s'agit de la distance "intuitive" correspondant à la longueur du segment reliant deux points dans l'espace euclidien.
 
@@ -69,9 +63,7 @@ Il s'agit de la distance "intuitive" correspondant à la longueur du segment rel
 
 À la limite quand $p$ tend vers l'infini, la distance de Minkowski converge vers la distance de Chebyshev, ou distance $L_\infty$ :
 
-$$
-d(x, y) = \max_{i=1,\ldots,n} |x_i - y_i|
-$$
+$$d(x, y) = \max_{i=1,\ldots,n} |x_i - y_i|$$
 
 Cette distance correspond à la plus grande différence absolue entre les coordonnées correspondantes.
 
@@ -98,9 +90,7 @@ La similarité cosinus mesure l'angle entre deux vecteurs plutôt que leur dista
 
 La dissimilarité cosinus se définit comme le complément à 1 de la similarité cosinus. Pour deux vecteurs $x = (x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$ et $y = (y_1, y_2, \ldots, y_n) \in \mathbb{R}^n$, elle s'exprime par :
 
-$$
-d(x, y) = 1 - \frac{x \cdot y}{||x|| \times ||y||} = 1 - \frac{\sum_{i=1}^{n} x_i \times y_i}{\sqrt{\sum_{i=1}^{n} x_i^2} \times \sqrt{\sum_{i=1}^{n} y_i^2}}
-$$
+$$d(x, y) = 1 - \frac{x \cdot y}{||x|| \times ||y||} = 1 - \frac{\sum_{i=1}^{n} x_i \times y_i}{\sqrt{\sum_{i=1}^{n} x_i^2} \times \sqrt{\sum_{i=1}^{n} y_i^2}}$$
 
 #### Exemple de calcul
 

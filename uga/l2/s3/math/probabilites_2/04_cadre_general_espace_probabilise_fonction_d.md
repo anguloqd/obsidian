@@ -64,15 +64,11 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 
 **$\sigma$-additivité d’intervalles**. Imaginons que notre espace d’événements $\mathcal A$ contient des intervalles, qu’on notera $B_n$. On en prend une famille d’intervalles et on imagine que les intervalles devient de plus en plus grandes, c’est-à-dire, le prochain intervalle contient l’actuel, ou $B_n \subset B_{n+1}$.  Donc :
 
-$$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} \mathbb P(B_n)
-$$
+$$\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} P(B_n)$$
 
 En outre, et ignorant la condition d’agrandissement du prochain intervalle $B_{n+1}$, on a la propriété suivante. Elle n’est pas une égalité stricte car il se peut que les $B_n$ ne soient pas disjoints.
 
-$$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) \le \sum_{n \ge 1} \mathbb P (B_n)
-$$
+$$\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) \le \sum_{n \ge 1} P(B_n)$$
 
 ## Fonction de répartition : $F_X(x)$
 
@@ -80,9 +76,7 @@ $$
 
 Soit $\mathbb P$ une loi de probabilité sur $\mathbb{R}$. On définit une fonction de répartition $F$ comme :
 
-$$
-F_X(t) = \mathbb P(X\le t)
-$$
+$$F_X(t) = P(X\le t)$$
 
 Étant donné que les probabilités sont toujours entre $0$ et
 
@@ -96,33 +90,27 @@ Toutes ces propriétés permettent de définir une autre unique fonction ou loi 
 
 #### Motivation
 
-Dans le cadre dénombrable, on avait une fonction appelée “loi de probabilité” $\mathbb P$ qui assigne chaque valeur possible d’une expérience aléatoire avec une probabilité. Elle nous permet de dire que “la probabilité de l’expérience $X$ résulte en $x$ est $\mathbb P(X=x)$, ou que la probabilité qu’elle soit contenu dans un intervalle $[a,b]$ est $\mathbb P(a \le X \le b)$”.
+Dans le cadre dénombrable, on avait une fonction appelée “loi de probabilité” $\mathbb P$ qui assigne chaque valeur possible d’une expérience aléatoire avec une probabilité. Elle nous permet de dire que “la probabilité de l’expérience $X$ résulte en $x$ est $P(X=x)$, ou que la probabilité qu’elle soit contenu dans un intervalle $[a,b]$ est $P(a \le X \le b)$”.
 
-Dans le cadre générale, ceci n’est plus le cas. Particulièrement, on ne peut pas parler de la probabilité que $X$ soit exactement égal à $x$, car pour tout $x$, $\mathbb P(X=x)=0$, car il y a une infinité de valeurs que $X$ peut prendre. On peut, par contre, parler d’une probabilité de que $X$ soit contenu dans un intervalle, qui serait donné comme suit :
+Dans le cadre générale, ceci n’est plus le cas. Particulièrement, on ne peut pas parler de la probabilité que $X$ soit exactement égal à $x$, car pour tout $x$, $P(X=x)=0$, car il y a une infinité de valeurs que $X$ peut prendre. On peut, par contre, parler d’une probabilité de que $X$ soit contenu dans un intervalle, qui serait donné comme suit :$$
 
-$$
 \mathbb P(a \le X  \le b)  \iff F_X(b)-F_X(a)
-$$
 
-Pourquoi on se souci de faire remarquer tout ça ? **Parce qu’il ne faut pas penser que la fonction de densité est la même chose que la loi de probabilité**, que c’est un erreur que j’ai déjà fait. Il peut être utile penser que la fonction de densité parle des “probabilités relatives” tant que la fonction de répartition parle des “probabilités absolues ou réelles”.
+$$Pourquoi on se souci de faire remarquer tout ça ? **Parce qu’il ne faut pas penser que la fonction de densité est la même chose que la loi de probabilité**, que c’est un erreur que j’ai déjà fait. Il peut être utile penser que la fonction de densité parle des “probabilités relatives” tant que la fonction de répartition parle des “probabilités absolues ou réelles”.
 
 #### Définition et conditions
 
-Pour définir une fonction de densité, on part du principe qu’on peut déterminer (ou on connaît déjà) sa fonction de répartition. Particulièrement, s’il existe une telle fonction $f_X(x)$ qui vérifie le condition suivante en bas, $f_X(x)$ est donc la fonction de densité de $\mathbb{P}$.
+Pour définir une fonction de densité, on part du principe qu’on peut déterminer (ou on connaît déjà) sa fonction de répartition. Particulièrement, s’il existe une telle fonction $f_X(x)$ qui vérifie le condition suivante en bas, $f_X(x)$ est donc la fonction de densité de $\mathbb{P}$.$$
 
-$$
 \underbrace{F(t)}_{\mathbb P(X\le t)}=\int_{-\infty}^tf_X(x)dx
-$$
 
-**Note**. Il se peut, parfois, que la fonction de répartition existe tant que la fonction de densité non !  Une condition pour que la densité existe est $\lim_{x \longrightarrow \epsilon} \int_{-\epsilon}^{\epsilon} f(x)dx = 0$. La source de problèmes est normalement que la fonction de répartition $F$ est discontinue.
+$$**Note**. Il se peut, parfois, que la fonction de répartition existe tant que la fonction de densité non !  Une condition pour que la densité existe est $\lim_{x \longrightarrow \epsilon} \int_{-\epsilon}^{\epsilon} f(x)dx = 0$. La source de problèmes est normalement que la fonction de répartition $F$ est discontinue.
 
-La fonction de densité a quelques similitudes avec la loi de probabilité d’une V.A. dénombrable. Particulièrement, il faut qu’elle vérifie les deux axiomes d’une loi de probabilité : quelle soit toujours positive et que la somme de probabilités soit égale à $1$.
+La fonction de densité a quelques similitudes avec la loi de probabilité d’une V.A. dénombrable. Particulièrement, il faut qu’elle vérifie les deux axiomes d’une loi de probabilité : quelle soit toujours positive et que la somme de probabilités soit égale à $1$.$$
 
-$$
 \forall x\in \mathbb{R},\hspace{4pt} f_X(x)\ge0 \space\text{ et }\space\int_\Omega f_X(x)dx = 1
-$$
 
-Ici, $\Omega$ est un ensemble des valeurs que la variable aléatoire $X$ peut prendre.
+$$Ici, $\Omega$ est un ensemble des valeurs que la variable aléatoire $X$ peut prendre.
 
 ## Propriétés généralisées du cas dénombrable
 
@@ -130,24 +118,20 @@ Les propriétés et notions suivantes se généralisent aussi du cas dénombrabl
 
 ### Par rapport à l’espérance
 
-Par la suite, on va s’intéresser juste aux [V.As](http://V.As) qui ont admettent une fonction de densité. Donc, l’espérance d’une telle V.A X serait comme suit :
+Par la suite, on va s’intéresser juste aux [V.As](http://V.As) qui ont admettent une fonction de densité. Donc, l’espérance d’une telle V.A X serait comme suit :$$
 
-$$
 \mathbb{E}[X]=\int_\Omega \ x\cdot f_X(x)\space dx
-$$
 
-Un outil pour le calcul de l’espérance, même si elle n’as pas de densité, est le suivant : soit $X$ une V.A. réelle, on peut la décomposer dans sa partie positive et négative comme suit.
+$$Un outil pour le calcul de l’espérance, même si elle n’as pas de densité, est le suivant : soit $X$ une V.A. réelle, on peut la décomposer dans sa partie positive et négative comme suit.$$
 
-$$
 X = X^+-X^-, \text{ où } X^+=\max(X,0) \text{ et }X^-=-\min(X,0)
 
 \\
 \\
 
 \text{Par linéarité de l'espérance, } \mathbb{E}[X] = \mathbb{E}[X^+] - \mathbb{E}[X^-]
-$$
 
-L’utilité de cette décomposition est que si $\mathbb{E}[X^+]$ ou $\mathbb{E}[X^-]$ n’existe pas, $\mathbb{E}[X]$ non plus.
+$$L’utilité de cette décomposition est que si $E(X^+)$ ou $E(X^-)$ n’existe pas, $E(X)$ non plus.
 
 On garde aussi la linéarité et la multiplicativité de l’espérance (cette dernière si $X_1$ et $X_2$ sont des V.A. indépendantes).
 
@@ -155,9 +139,8 @@ On garde aussi la linéarité et la multiplicativité de l’espérance (cette d
 
 Pour calculer une espérance, on doit résoudre une intégrale défini dont l’intégrande (membre de l’intégrale ou la fonction à intégrer) est un produit : une variable et sa fonction de densité, normalement.
 
-Par contre, si on veut calculer l’espérance d’une fonction de la V.A. $X$, il faut appliquer telle fonction à la variable dans l’intégrande en gardant toujours la densité de la V.A. originale $X$, et non pas voyant la densité de la fonction de la V.A $X$. Supposons qu’on veut déterminer l’espérance de $e^X$, donc :
+Par contre, si on veut calculer l’espérance d’une fonction de la V.A. $X$, il faut appliquer telle fonction à la variable dans l’intégrande en gardant toujours la densité de la V.A. originale $X$, et non pas voyant la densité de la fonction de la V.A $X$. Supposons qu’on veut déterminer l’espérance de $e^X$, donc :$$
 
-$$
 \begin{array}{ll}
 \text{Manière correcte : } 
 &
@@ -167,36 +150,31 @@ $$
 &
 \mathbb E [e^X] = \int_{\Omega_{e^X}} (e^x) \cdot f_{e^X}(x) \space dx
 \end{array}
-$$
 
-Les deux différences sont le change de $\Omega_X$ à $\Omega_{e^X}$ et le change de $f_X(x)$ à $f_{e^X}(x)$. En définitive, l’espérance suppose **contextuellement** qu’on garde le domaine de définition de l’intégrale $\Omega_X$ et la densité de la V.A. $f_X$. Quand on calcule une espérance, c’est une bonne pratique de se demander par rapport à quelle densité $f$ et à quel domaine $\Omega$.
+$$Les deux différences sont le change de $\Omega_X$ à $\Omega_{e^X}$ et le change de $f_X(x)$ à $f_{e^X}(x)$. En définitive, l’espérance suppose **contextuellement** qu’on garde le domaine de définition de l’intégrale $\Omega_X$ et la densité de la V.A. $f_X$. Quand on calcule une espérance, c’est une bonne pratique de se demander par rapport à quelle densité $f$ et à quel domaine $\Omega$.
 
 On pourrait, effectivement, déduire une densité $f_{e^X}$ et un domaine de définition $\Omega_{e^X}$, mais cela on va l’explorer dans la dernière section de cette note.
 
 ### Par rapport à la variance
 
-Supposant encore que les V.As d’intérêt admettent une fonction de densité, une fois on connaît l’espérance $\mathbb E[X]$ d’un cadre continu, on peut en déduire la variance $\text{Var}(X)$ :
+Supposant encore que les V.As d’intérêt admettent une fonction de densité, une fois on connaît l’espérance $E(X)$ d’un cadre continu, on peut en déduire la variance $V(X)$ :$$
 
-$$
 \text{Var}(X)=\mathbb E[(X-\mathbb E[X])^2] = \mathbb E[X^2]-\underbrace{\mathbb E[X]^2}_{\text{connu}},\text{ où } \mathbb E [X^2]=\int_{\Omega_X} x^2 \cdot f_X(x)\space dx
-$$
 
-Puisque $\mathbb E[X]$ est une constante (si elle existe; que ce n’est pas toujours le cas), $\mathbb E[X]^2$ est aussi une constante.
+$$Puisque $E(X)$ est une constante (si elle existe; que ce n’est pas toujours le cas), $E(X)^2$ est aussi une constante.
 
 ## Densité d’une V.A. fonction de $X$ : $Y=\varphi(X)$
 
 ### Dérivation
 
-Soit $X$ une V.A. de densité $d_X(x)$. Soit $\varphi$ une fonction monotonique et continûment dérivable, soit $Y = \varphi(X)$ la V.A. dont on veut trouver sa densité. Donc, la densité $f_Y(y)$ serait :
+Soit $X$ une V.A. de densité $d_X(x)$. Soit $\varphi$ une fonction monotonique et continûment dérivable, soit $Y = \varphi(X)$ la V.A. dont on veut trouver sa densité. Donc, la densité $f_Y(y)$ serait :$$
 
-$$
 f_Y(y)=\left[ (\varphi^{-1})'\right]_y \times f_X(\varphi^{-1}(y))
-$$
 
-La dérivation est tellement simple est jolie que je la laisse ici en bas. Partons de la fonction de répartition $F_Y(y)$ :
+$$La dérivation est tellement simple est jolie que je la laisse ici en bas. Partons de la fonction de répartition $F_Y(y)$ :$$
 
-$$
 F_Y(y)=\mathbb P(Y\le y)=\mathbb P(\varphi(X) \le y)= \mathbb P(X \le \varphi^{-1}(y))=F_X(\varphi^{-1}(y))
+
 $$
 
 Si on garde les membres les plus à gauche et à droite et on les dérive par rapport à $y$, on obtient la théorème présenté initialement.

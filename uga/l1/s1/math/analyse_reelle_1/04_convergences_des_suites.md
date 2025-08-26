@@ -8,9 +8,7 @@
 
 La définition formelle de la limite $\ell$ d'une suite $(u_n)$ est comme suit :
 
-$$
-\forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall n \geq N, |u_n - \ell| \leq \varepsilon
-$$
+$$\forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall n \geq N, |u_n - \ell| \leq \varepsilon$$
 
 En français, cette définition peut se lire comme :
 
@@ -81,9 +79,7 @@ Prenons comme base une suite de termes de la suite $(u_n)$. Formellement, c'est 
 
 Soit $I$ un intervalle fermé et borné de $\mathbb{R}$ et soit $f : I \rightarrow I$. On dit que $f$ est *contractante* sur $I$ si :
 
-$$
-\exists k \in [0, 1[, \forall x, y \in I, |f(x) - f(y)| < k|x - y|
-$$
+$$\exists k \in [0, 1[, \forall x, y \in I, |f(x) - f(y)| < k|x - y|$$
 
 En plus, si $f$ est contractante, alors $f$ est continue (admis) et possède un unique point fixe $\ell \in \mathbb{R}$ (ceci découle du théorème du point fixe de Banach). De plus, pour tout $u_0 \in I$, la suite définie par $u_0$ et $u_{n+1} = f(u_n)$ converge vers $\ell$.
 

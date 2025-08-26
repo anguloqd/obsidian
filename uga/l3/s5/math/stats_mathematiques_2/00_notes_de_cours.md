@@ -34,55 +34,39 @@ Truc algébrique clever : Var(Z) = E(Z^2) - E(Z)^2 \iff E(Z^2) = Var(Z)+E(Z)^2. 
 
  Premier partiel
 
-$$
-Var(\hat t)=Var\left(\frac{3}{2}\bar X_n \right)=\frac{9}{4}Var\left(\frac{1}{n}\sum_{i=1}^n X_i\right)
+$$V(\hat t)=Var\left(\frac{3}{2}\bar X_n \right)=\frac{9}{4}Var\left(\frac{1}{n}\sum_{i=1}^n X_i\right)
 \\[10pt]
 =^{\text{indep.}}\frac{9}{4n^2}\sum_{i=1}^nVar(X_i)
-=^\text{ident.}\frac{9}{4n^2}\sum_{i=1}^n\frac{t^2}{18}=\frac{t^2}{8n}
-$$
+=^\text{ident.}\frac{9}{4n^2}\sum_{i=1}^n\frac{t^2}{18}=\frac{t^2}{8n}$$
 
-$$
-Var(\hat t)=(\mathbb E[(\hat t_n) ^2]-\mathbb E[\hat t_n]^2)
+$$V(\hat t)=(E((\hat t_n) ^2]-E(\hat t_n)^2)
 
 \\[10pt]
 
-\text{Terme } \mathbb E[ (\hat t_n)^2]: \mathbb E[ (\hat t_n)^2] = E\left(\frac{9}{4} (\bar X_n)^2\right)=\frac{9}{4}E[(\bar X_n)^2]=\frac{9}{4}\left(Var(\bar X_n)+E[\bar X_n]^2\right)
+\text{Terme } E( (\hat t_n)^2]: E( (\hat t_n)^2] = E\left(\frac{9}{4} (\bar X_n)^2\right)=\frac{9}{4}E[(\bar X_n)^2]=\frac{9}{4}\left(V(\bar X_n)+E[\bar X_n]^2\right)
 \\
-= \frac{9}{4}\left(\frac{t^2/18}{n} +  \right)
-$$
+= \frac{9}{4}\left(\frac{t^2/18}{n} +  \right)$$
 
 Let’s denote the product as ( p ), so we have:
 
-$$
-[ p = \prod_{i=1}^{n} \left(0.5\right)^{x_i} \cdot \left(1.125\right)^{1-x_i} ]
-$$
+$$[ p = \prod_{i=1}^{n} \left(0.5\right)^{x_i} \cdot \left(1.125\right)^{1-x_i} ]$$
 
 Taking the natural logarithm of both sides, we get:
 
-$$
-[ \ln(p) = \sum_{i=1}^{n} \left[ x_i \ln(0.5) + (1-x_i) \ln(1.125) \right] ]
-$$
+$$[ \ln(p) = \sum_{i=1}^{n} \left[ x_i \ln(0.5) + (1-x_i) \ln(1.125) \right] ]$$
 
 Given that ( p < -\ln(3) ), we have:
 
-$$
-[ \ln(p) < -\ln(3) ]
-$$
+$$[ \ln(p) < -\ln(3) ]$$
 
 Substituting the expression for ( \ln(p) ) from above, we get:
 
-$$
-[ \sum_{i=1}^{n} \left[ x_i \ln(0.5) + (1-x_i) \ln(1.125) \right] < -\ln(3) ]
-$$
+$$[ \sum_{i=1}^{n} \left[ x_i \ln(0.5) + (1-x_i) \ln(1.125) \right] < -\ln(3) ]$$
 
 Rearranging the terms, we get:
 
-$$
-[ \sum_{i=1}^{n} x_i > \frac{-\ln(3) - n\ln(1.125)}{\ln(0.5) - \ln(1.125)} ]
-$$
+$$[ \sum_{i=1}^{n} x_i > \frac{-\ln(3) - n\ln(1.125)}{\ln(0.5) - \ln(1.125)} ]$$
 
 So, the inequality you’re looking for is:
 
-$$
-[ \sum_{i=1}^{n} x_i > \frac{-\ln(3) - n\ln(1.125)}{\ln(0.5) - \ln(1.125)} ]
-$$
+$$[ \sum_{i=1}^{n} x_i > \frac{-\ln(3) - n\ln(1.125)}{\ln(0.5) - \ln(1.125)} ]$$

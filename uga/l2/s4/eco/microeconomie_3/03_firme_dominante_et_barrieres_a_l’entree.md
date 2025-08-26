@@ -8,15 +8,11 @@
 
 Un monopole est une firme telle qu’elle est la seule firme dans un marché. Elle cherche, comme tout agent rationnel, à maximiser ses profits. Ces profits sont décrits par la fonction suivante, où $p(q)$ est la fonction de demande inverse et non pas un prix constante comme donnée (différent du cas de concurrence parfaite !) :
 
-$$
-\pi(q)=p(q)\cdot q-CT(q)
-$$
+$$\pi(q)=p(q)\cdot q-CT(q)$$
 
 L’optimisation se fait trouvant le maximum de la fonction $\pi(q)$, c’est-à-dire, trouvant les $q$ pour lesquels sa première dérivée égal à $0$ et la deuxième dérivée soit négative. Ces sont les conditions de premier et deuxième ordre, respectivement.
 
-$$
-q^* = q:\frac{\partial\pi(q)}{\partial q} = 0 \text{ et }\frac{\partial^2\pi(q)}{\partial^2 q}<0
-$$
+$$q^* = q:\frac{\partial\pi(q)}{\partial q} = 0 \text{ et }\frac{\partial^2\pi(q)}{\partial^2 q}<0$$
 
 ### Comparaison avec la concurrence parfaite
 
@@ -41,21 +37,17 @@ Pour simplifier, on suppose que la fonction de coûts est $CT(q)=cq$ où $c>0$. 
 
 Premièrement, on verra la condition de premier ordre :
 
-$$
-\frac{\partial\pi(q)}{\partial q} = 0 \iff p\prime(q)q+p(q)-c=0 \iff \underbrace{p\prime(q)q+p(q)}_\text{Revenu marginal}=\underbrace{c}_\text{Coût marginal}
-$$
+$$\frac{\partial\pi(q)}{\partial q} = 0 \iff p\prime(q)q+p(q)-c=0 \iff \underbrace{p\prime(q)q+p(q)}_\text{Revenu marginal}=\underbrace{c}_\text{Coût marginal}$$
 
 De la même manière, on calcule la dérivée du revenu marginal :
 
-$$
-\frac{\partial Rm(q)}{\partial q}= p\prime\prime(q)q+2p\prime(q)
+$$\frac{\partial Rm(q)}{\partial q}= p\prime\prime(q)q+2p\prime(q)
 
 \\
 \text{}
 \\
 
-\text{Rappel : } p\prime(q)<0, \text{par supposition}
-$$
+\text{Rappel : } p\prime(q)<0, \text{par supposition}$$
 
 Ayant dérivé deux fois, on arrive à la fonction $p\prime\prime(q)$, dont le signe déterminera si la demande est concave, convexe où linéaire. Ici, on peut évaluer chaque cas :
 
@@ -112,8 +104,7 @@ Le monopole peut produire **un même bien** (pas deux bien différents !) au sei
 
 Dans ce cas d’exercices, on a une relation directe ou équation qui lie la quantité produit d’un bien et son coût marginal, et aussi le fait que la quantité totale produite est $Q = q_1 + q_2$. Au moment d’exprimer Q par rapport au chaque $Cm_i$, l’”unification” de $Cm_1$ et $Cm_2$ est égale à $Cm_T$. Voyons un exemple :
 
-$$
-C_1(q_1)=3q_1^2, C_2(q_2)=q_2^2 \implies \underbrace{Cm_1=6q_1, Cm_2=2q_2}_{\text{relation directe entre } q_i -Cm_i}
+$$C_1(q_1)=3q_1^2, C_2(q_2)=q_2^2 \implies \underbrace{Cm_1=6q_1, Cm_2=2q_2}_{\text{relation directe entre } q_i -Cm_i}
 
 \\
 \text{}
@@ -130,8 +121,7 @@ p(Q)=100-Q \implies RT = Q \cdot p(Q) \implies Rm = 100-2Q = 100 - 8q_1
 \text{Maximisation : } Rm = Cm_1 \implies 100-8q_1=6q_1 \implies q_1 \approx 7, q_2 = 3q_1 = 21
 
 \\\text{}\\
-Q^* = q_1+ q_2 = 29, p^* = 71.
-$$
+Q^* = q_1+ q_2 = 29, p^* = 71.$$
 
 Il y a quelques enseignements à tenir en tête :
 
@@ -201,9 +191,7 @@ Ici, $\beta$ est la complémentarité de coût et $g$ est l’effet prix croisé
 
 On peut voir les deux produits comme le même produit mais dans deux périodes différentes. Prenons la forme suivante de profit qu’on cherche à maximiser, $\delta$ le facteur d’escompte :
 
-$$
-\max_{p_1,p_2} \underbrace{p_1q_q(p_q)-C(q_1(p_q)}_{\pi_1} + \underbrace{\delta\big(p_2q_2(p_2)-c_2(q_1(p_1),q_2(p_2))\big)}_{\pi_2}
-$$
+$$\max_{p_1,p_2} \underbrace{p_1q_q(p_q)-C(q_1(p_q)}_{\pi_1} + \underbrace{\delta\big(p_2q_2(p_2)-c_2(q_1(p_1),q_2(p_2))\big)}_{\pi_2}$$
 
 Avec un peu d’algèbre, on arrive à déduire que les prix optimaux $p_1^*,p_2^*$ sont tels que $Rm_2 = Cm_2$ et $Rm_1 < Cm_1$. La chose à retenir c’est que $q_1^*$ est plus élevée que dans le cas statique (càd. dans le cas d’une seule période), donc **le profit de court terme est sacrifié**.
 
@@ -231,13 +219,11 @@ La marge (mesurée avec l’indice de Lerner) pour des bien indépendants $1$ et
 
 On verra que dans le cas des biens 1 et 2 substituts et compléments, respectivement :
 
-$$
-\text{Biens substituts :  }\frac{p_q-Cm_1}{p_q}=\frac{1}{\epsilon_{11}}-\underbrace{\frac{(p_2-Cm_2)\epsilon_{12}q_2}{p_1\epsilon_{11}q_1}}_{\text{terme négatif}}> \frac{1}{\epsilon_{11}}
+$$\text{Biens substituts :  }\frac{p_q-Cm_1}{p_q}=\frac{1}{\epsilon_{11}}-\underbrace{\frac{(p_2-Cm_2)\epsilon_{12}q_2}{p_1\epsilon_{11}q_1}}_{\text{terme négatif}}> \frac{1}{\epsilon_{11}}
 
 \\\text{}\\
 
-\text{Biens compléments :  }\frac{p_q-Cm_1}{p_q}=\frac{1}{\epsilon_{11}}-\underbrace{\frac{(p_2-Cm_2)\epsilon_{12}q_2}{p_1\epsilon_{11}q_1}}_{\text{terme positif}} < \frac{1}{\epsilon_{11}}
-$$
+\text{Biens compléments :  }\frac{p_q-Cm_1}{p_q}=\frac{1}{\epsilon_{11}}-\underbrace{\frac{(p_2-Cm_2)\epsilon_{12}q_2}{p_1\epsilon_{11}q_1}}_{\text{terme positif}} < \frac{1}{\epsilon_{11}}$$
 
 On conclut que la marge des biens substituts sera plus élevée dans le cas des biens indépendants, et la marge de biens compléments sera moindre que dans le cas de biens indépendants.
 
@@ -282,24 +268,18 @@ Notons que toutes **ces fonctions de demande ne sont pas des fonctions de demand
 
 La fonction de profit du monopole ou de la firme dominante est donc comme suit :
 
-$$
-\pi_D=p\cdot q_D(p)-c(q_D(p))
-$$
+$$\pi_D=p\cdot q_D(p)-c(q_D(p))$$
 
 **Pour optimiser le profit, on applique la CPO mais par rapport au prix, pas par rapport à la quantité !**
 
-$$
-\frac{\partial\pi_D}{\partial p}=q_D+p\frac{\partial q_D}{\partial p}-\frac{\partial c}{\partial q_D}\frac{\partial q_D}{\partial p}=0
+$$\frac{\partial\pi_D}{\partial p}=q_D+p\frac{\partial q_D}{\partial p}-\frac{\partial c}{\partial q_D}\frac{\partial q_D}{\partial p}=0
 
 \iff
-q_D+\underbrace{\frac{\partial q_D}{\partial p}}_!\left( p-\frac{\partial c}{\partial q_D}\right)=0
-$$
+q_D+\underbrace{\frac{\partial q_D}{\partial p}}_!\left( p-\frac{\partial c}{\partial q_D}\right)=0$$
 
 On connaît tous les termes du membre gauche de la deuxième égalité à exception de $\partial q_D/ \partial p$. Pour la determine, on revient à la réécriture de la quantité offerte par la demande et on la dérive partiellement :
 
-$$
-\frac{\partial q_D}{\partial p}=\frac{\partial q_M}{\partial p}-\frac{\partial q_F}{\partial p} \implies q_D+\underbrace{\left( \frac{\partial q_M}{\partial p}-\frac{\partial q_F}{\partial p} \right)}_\text{remplace dans CPO}\left( p-\frac{\partial c}{\partial q_D}\right)=0
-$$
+$$\frac{\partial q_D}{\partial p}=\frac{\partial q_M}{\partial p}-\frac{\partial q_F}{\partial p} \implies q_D+\underbrace{\left( \frac{\partial q_M}{\partial p}-\frac{\partial q_F}{\partial p} \right)}_\text{remplace dans CPO}\left( p-\frac{\partial c}{\partial q_D}\right)=0$$
 
 Finalement là, on peut trouver le $p^*$ optimal, car le monopole connaît la demande de marché $q_M$, la demande adressée à la frange $q_F$ et bien sûr ses propres coûts $c$.
 

@@ -59,9 +59,7 @@ On prioritise des couples d'inputs "balancés", tenant aussi en considération l
 
 **Taux marginal de substitution technique** :
 
-$$
-TST = -\frac{\partial x_2}{\partial x_1} = \frac{Pm_1}{Pm_2}
-$$
+$$TST = -\frac{\partial x_2}{\partial x_1} = \frac{Pm_1}{Pm_2}$$
 
 - C'est la pente de l'isoquante au point considéré
 - Représente le taux auquel une entreprise peut substituer un facteur à un autre sans changer son niveau de production

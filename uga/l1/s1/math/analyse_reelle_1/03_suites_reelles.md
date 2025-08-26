@@ -66,13 +66,9 @@ Soit $r \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n
 
 On peut calculer la somme des éléments d'une suite arithmétique $S_n$ comme suit :
 
-$$
-S_n=\sum_{i=0}^n u_i=u_0+u_1+\dots+u_n=(n+1)\times\frac{u_0+u_n}{2}
-$$
+$$S_n=\sum_{i=0}^n u_i=u_0+u_1+\dots+u_n=(n+1)\times\frac{u_0+u_n}{2}$$
 
-$$
-S_n=\text{ nb de termes } \times \frac{\text{premier terme} + \text{n-ième terme}}{2}
-$$
+$$S_n=\text{ nb de termes } \times \frac{\text{premier terme} + \text{n-ième terme}}{2}$$
 
 #### Suite géométrique : $u_{n+1}=q\times u_n$
 
@@ -83,13 +79,9 @@ Soit $q \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u_{n
 
 On peut calculer la somme des éléments d'une suite géométrique $S_n$ comme suit :
 
-$$
-S_n=\sum_{i=0}^n u_i=u_0+u_1+\dots+u_n=u_0\times\frac{q^{n+1}-1}{q-1}
-$$
+$$S_n=\sum_{i=0}^n u_i=u_0+u_1+\dots+u_n=u_0\times\frac{q^{n+1}-1}{q-1}$$
 
-$$
-S_n=\text{ premier terme } \times \frac{\text{raison}^{\text{nb de termes}}-1}{\text{raison}-1}
-$$
+$$S_n=\text{ premier terme } \times \frac{\text{raison}^{\text{nb de termes}}-1}{\text{raison}-1}$$
 
 #### Suite arithmético-géométrique : $u_{n+1} = au_n + b$
 
@@ -114,8 +106,9 @@ Soit $a, b \in \mathbb{R}$. Toute suite vérifiant la relation de récurrence $u
 >&= au_n + b - (ax + b) \\
 >&= a(u_n - x) \\
 >&= av_n
->\end{align*}$$
->
+>\end{align*}
+$$
+
 >- Donc, $(v_n)$ est géométrique de raison $a$.
 >- Par conséquent $\forall n \in \mathbb{N}, v_n = v_0 \cdot a^n$, avec $v_0 = u_0 - x = u_0 - \frac{b}{1-a}$
 >- Finalement, $u_n = v_n + x$.

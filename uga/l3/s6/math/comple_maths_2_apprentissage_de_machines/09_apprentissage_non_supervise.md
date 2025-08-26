@@ -70,9 +70,7 @@ Les scores de clustering attribuent les meilleures évaluations aux algorithmes 
 
 Le score de silhouette mesure la similarité d'un objet à son propre cluster comparativement aux autres clusters. Pour une instance donnée, ce score se calcule selon la formule :
 
-$$
-s = \frac{b - a}{\max(a, b)}
-$$
+$$s = \frac{b - a}{\max(a, b)}$$
 
 où :
 
@@ -115,9 +113,7 @@ L'indice de Davies-Bouldin mesure la similarité moyenne de chaque cluster avec 
 
 La similarité entre les clusters i et j se définit par :
 
-$$
-R_{i,j} = \frac{s_i + s_j}{d_{i,j}}
-$$
+$$R_{i,j} = \frac{s_i + s_j}{d_{i,j}}$$
 
 où :
 
@@ -126,9 +122,7 @@ où :
 
 L'indice de Davies-Bouldin se calcule alors :
 
-$$
-DB = \frac{1}{k} \sum_{i=1}^{k} \max_{i \neq j} R_{i,j}
-$$
+$$DB = \frac{1}{k} \sum_{i=1}^{k} \max_{i \neq j} R_{i,j}$$
 
 où k désigne le nombre de clusters.
 

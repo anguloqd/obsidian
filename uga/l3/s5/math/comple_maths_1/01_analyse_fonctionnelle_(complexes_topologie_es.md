@@ -8,9 +8,7 @@
 
 La forme la plus classique de représenter un nombre complexe est la suivante :
 
-$$
-a+bi\hspace{6pt}\text{où } a,b\in\mathbb{R}
-$$
+$$a+bi\hspace{6pt}\text{où } a,b\in\mathbb{R}$$
 
 Supposons que $z=-1+i$. Donc, sa représentation graphique est la suivante :
 
@@ -18,9 +16,7 @@ Supposons que $z=-1+i$. Donc, sa représentation graphique est la suivante :
 
 Le module est défini comme une fonction qui prend un nombre complexe sur le plain complexe et retourne de ce nombre complexe à partir de l’origine. $|z|$ est le module du nombre $z$ et il est calculé comme suit :
 
-$$
-|z|=\sqrt{a^2+b^2}
-$$
+$$|z|=\sqrt{a^2+b^2}$$
 
 ### Forme trigonométrique
 
@@ -34,11 +30,9 @@ Une technique intéressante c’est de prendre un nombre $z$ et de le diviser pa
 
 En rappelant les définitions trigonométriques, pour $\tilde z$, la coordonnée des abscisses serait $\cos\theta$ et celle des ordonnées serait $\sin\theta$. Finalement, on a que :
 
-$$
-z=|z|(\cos\theta+i\sin\theta)
+$$z=|z|(\cos\theta+i\sin\theta)
 \\
-\tilde z=\cos\theta+i\sin\theta
-$$
+\tilde z=\cos\theta+i\sin\theta$$
 
 ### Propriétés élémentaires
 
@@ -54,21 +48,15 @@ Toutes les propriétés qui suivent, si on mentionne $\arg(z)$, l’image $\arg(
 
 Rappelons que :
 
-$$
-z=|z|(\cos\theta+i\sin\theta)
-$$
+$$z=|z|(\cos\theta+i\sin\theta)$$
 
 Seulement si $z$ est un nombre de modulo $1$, on pourrait écrire :
 
-$$
-e^{i\theta}=\cos\theta+i\sin\theta
-$$
+$$e^{i\theta}=\cos\theta+i\sin\theta$$
 
 Donc, on pourrait réécrire tout nombre $z$ d’une manière altérée de la forme trigonométrique, avec $r=|z|$ et $\theta=\arg(z)\mod 2\pi$.
 
-$$
-z=re^{i\theta}
-$$
+$$z=re^{i\theta}$$
 
 > [!note]
 > La preuve de ce théorème vient de l’expansion de Taylor pour $e^x$, $\sin x$ et $\cos x$. Il est aussi nécessaire le fait que le rayon de convergence est infini pour telles séries de Taylor.
@@ -91,12 +79,12 @@ $$
 > \\[10pt]
 > &=\cos(z)+i\sin(z)
 > \end{align*}
-> $$
+>
+$$
 >
 > **Note**. Le réordonnancement est possible car chaque série évoquée est absolument convergente.
 
 Notons qu’avec la notation exponentielle, on peut définir $\sin$ et $\cos$ comme suit :
-
 $$
 \begin{cases}
 e^{ix}=\cos x+i\sin x
@@ -110,21 +98,16 @@ e^{-ix}=\cos x-i\sin x
 \sin x=\frac{e^{ix}-e^{-ix}}{2i}
 \end{cases}
 $$
-
 ### Racines de l’unité
 
 Soit $n ∈ \mathbb{N}^∗$ un entier non nul. Si $z^n = 1$, alors $z\ne 0$ et on peut donc écrire $z = re^{iθ}$. De plus,
-
 $$
 z^n=1\iff r=1 \text{ et } \theta=\frac{2k\pi}{n}
 $$
-
 On a donc $n$ racines de l’unité souvent notées :
-
 $$
 \xi_k=e^{\frac{2k\pi}{n}}
 $$
-
 Si $z_0\ne 0$, pour résoudre l’équation $z^n = z_0$, on utilisera la forme exponentielle.
 
 ## Espace métrique
@@ -191,7 +174,6 @@ Elle induit la norme euclidienne.
 Finalement, on peut définir des normes sur les fonctions, mais on le verra plus tard.
 
 **Théorème**. Deux normes $N$ et $N^\prime$ sont équivalentes si la proposition suivante est vérifié. Cette relation est symétrique : si $N$ équivalente à $N^\prime$, donc $N^\prime$ équivalente à $N$.
-
 $$
 \exists \alpha, \beta > 0, \forall x\in E:\alpha N(x)\le N^\prime(x) \le \beta N(x)
 
@@ -199,7 +181,6 @@ $$
 
 \text{ Si vrai, donc } \beta^{-1}N^\prime(x)\le N(x) \le \alpha^{-1}N^\prime(x)
 $$
-
 **Théorème**. Sur $\mathbb{R}^n$, toutes les normes sont équivalentes. càd. elles valent le même. Ceci n’est pas vrai pour tous les espaces métriques, notamment le espace de suites avec la suite $u_n=1/n$.
 
 ### Boules et sous-ensembles ouverts/fermés
@@ -207,19 +188,14 @@ $$
 #### Premières définitions
 
 Une boule est la généralisation d’un cercle pour tous les espaces métriques. Pour la définir, on a besoin d’un espace métrique, un centre $x\in E$ et d’un rayon $r>0$ :
-
 $$
 \text{Boule ouverte : }B(x,r)=\left\{y\in E : d(x,y)<r \right\}
 $$$$
-
 \text{Boule fermée : }\bar B(x,r)=\left\{y\in E : d(x,y)\le r \right\}
-
 $$
-Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\mathbb{R}^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si : 
+Les boules nous permettent de généraliser les ensembles ouverts et fermés pour tous les espaces métriques, pas seulement $\mathbb{R}^n$. En particulier, $U$ est un (sous-ensemble) ouvert de $E$ si :
 $$
-
 \forall a\in U, \exists r > 0: B(a,r) \subset U
-
 $$
 Ceci veut dire qu’on peut prendre un point du sous-ensemble $U$ et qu’on peut faire une boule centré sur $a$ et de rayon arbitrairement petit tel que toute la boule est incluse dans $U$, qui est lui-même inclut en $E$. Il est possible donc de couvrir tout $U$ avec des boules de différentes tailles. **L’ouvert ne contient pas de frontières**.
 
@@ -247,9 +223,7 @@ Voyons une liste utile de propriétés :
 
 **Note**. Une intersection infinie d’ouverts n’est pas nécessairement un ouvert. Par exemple :
 $$
-
 \bigcap_{n=1}^\infty \left] -\frac{1}{n}, \frac{1}{n}\right[=\{0\}
-
 $$
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_6.png)
 
@@ -265,7 +239,6 @@ En Analyse Réelle, on a déjà vu une définition de limites (de suites) et con
 
 Soit $(E,d)$ un espace métrique et $(x_k)_{k\in\mathbb{N}}$ une suite d’éléments de $E$. $(x_k)$ converge vers une limite $\ell \in E$ et on note $x_k\rightarrow \ell$ ssi. :
 $$
-
 \forall \varepsilon > 0, \exists n_0 \in \mathbb{N}, \forall k > n_0:
 
 \begin{cases}
@@ -277,9 +250,8 @@ d((x_k), \ell) < \varepsilon
 x_k\in B(\ell, \varepsilon)
 
 \end{cases}
-
 $$
-Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble) fermé d’une manière qui n’est pas juste le complémentaire d’un ouvert. $F$ est un fermé de $E$ si, pour toute suite $(x_k)$ d’éléments de $F$ qui converge vers $\ell$, on a que $\ell\in F$. Ceci aide trivialement à atteindre les bornes. 
+Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble) fermé d’une manière qui n’est pas juste le complémentaire d’un ouvert. $F$ est un fermé de $E$ si, pour toute suite $(x_k)$ d’éléments de $F$ qui converge vers $\ell$, on a que $\ell\in F$. Ceci aide trivialement à atteindre les bornes.
 
 ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_8.png)
 
@@ -287,13 +259,11 @@ Notons que la convergence de suites nous permet de redéfinir un (sous-ensemble)
 
 Soit $(E,d)$, $(E^\prime, d^\prime)$ deux espaces métriques et $f$ une application $E\rightarrow E^\prime$. $f$ est continue en un point $x_0\in E$ si :
 $$
-
 \forall \varepsilon >0, \exists \delta >0 : f(B(x_0, \delta))\subset B(f(x_0), \varepsilon)
-
 $$
 De plus, si $A\subseteq E$, $f$ est continue sur $A$ si elle est continue en tout $a\in A$.
 
-**Théorème**. $f$ continue en $a$ équivaut à que toute suite $(x_k)$ convergente à $a$ implique $f(x_n)$ converge à $f(a)$. 
+**Théorème**. $f$ continue en $a$ équivaut à que toute suite $(x_k)$ convergente à $a$ implique $f(x_n)$ converge à $f(a)$.
 
 ### Fonctions lipschitziennes
 
@@ -301,30 +271,25 @@ Une fonction lipschitziennes (aussi fonctions lpz.) est une fonction avec à pei
 
 Soit $(E,d)$, $(E^\prime, d^\prime)$ deux espaces métriques et $f$ une application $E\rightarrow E^\prime$. $f$ est $L$-lipschitzienne, où $L>0$, si :
 $$
-
 \forall x,y \in E: d^\prime(f(x),f(y))\le L d(x,y)
-
 $$
 Si $L$ est le plus petit réel strictement positif vérifiant l’inégalité, on dit que $L$ est la constante de Lipschitz de $f$.
 
 Quelques propriétés :
 
 - Une fonction lipschitzienne est une fonction continue : si la suite $(x_k)$ converge vers $a$ donc :
-  
 $$
+d^\prime(f(x_k),f(a))\le L d(x_k,a)\longrightarrow 0 \implies d^\prime(f(x_k),f(a))\longrightarrow 0
+$$
+La réciproque est fausse, $f(x)=x^2$ comme exemple.
 
-    d^\prime(f(x_k),f(a))\le L d(x_k,a)\longrightarrow 0 \implies d^\prime(f(x_k),f(a))\longrightarrow 0
-    $$
-    La réciproque est fausse, $f(x)=x^2$ comme exemple.
-    
 - Si $f$ est lpz. pour tout compact (fermé et borné) de $E$, donc $f$ est localement lpz : c’est le cas de $f(x)=x^2$ aussi.
 
-    ![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_9.png)
+![Untitled](ressources/01_analyse_fonctionnelle_(complexes_topologie_es_untitled_9.png)
 
-    
 - Si une application $L$-lipschitzienne a une constante de Lipschitz $L<1$, l’application est contractante. Ceci permet l’existence d’un point fixe.
 - Si $E$ est un espace métrique complet, $f : E\rightarrow E$ et $f$ est une application contractante, donc il existe un point fixe $x^*$ tel que $f(x^*)=x^*$. De plus, toute suite  de la forme $x_{n+1}=f(x_n)$ converge vers $x^*$.
-    - Espace complet : dont toute suite de Cauchy converge. Dans la pratique, nos espaces sont complets. “Il faut aller chercher un monstre de fonction pour que l’espace ne soit pas complet”.
+- Espace complet : dont toute suite de Cauchy converge. Dans la pratique, nos espaces sont complets. “Il faut aller chercher un monstre de fonction pour que l’espace ne soit pas complet”.
 
 ## Espaces hilbertiens et hermitiens
 
@@ -333,11 +298,9 @@ $$
 Sincèrement, la seule différence importante du produit scalaire avec le produit hermitien est que le résultat du produit scalaire est réel et celui de l’hermitien est complexe. Comme rappel :
 
 Le produit scalaire n’est pas seulement le produit matriciel. En réalité, un produit scalaire est une opération d’une famille d’opération qui satisfait quelques propriétés :
-
 $$
 f :(x,y) \mapsto \langle x,y \rangle
 $$
-
 - Linéaire par rapport à chaque variable :
 $\langle x+ \lambda x', y \rangle = \langle x,y \rangle + \lambda\langle x',y \rangle$ et $\langle x, y+ \lambda y' \rangle = \langle x,y \rangle + \lambda\langle x,y' \rangle$
 - Symétrie : $\langle x,y \rangle = \langle y,x \rangle$
@@ -356,18 +319,12 @@ L’égalité est vérifié si $x$ et $y$ sont colinéaires.
 Voyons quelques produits hermitiens :
 
 - Le produit hermitien courant est juste l’analogue du produit matriciel. Si $x=(z_1, \cdots, z_n)$ et $y=(z_1^\prime, \cdots, z_n^\prime)$ sont deux vecteurs à coordonnées complexes, donc le produit est l’expression suivante. Notons que **ce produit retourne encore un réel même si les inputs sont des nombres complexes**, l’explication est visible dans la dernière ligne.
-
- $$
-    \langle x,y \rangle = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
 $$
-
+\langle x,y \rangle = z_1\bar {z_1^\prime}+ z_2 \bar {z_2^\prime}+\cdots+z_n \bar{z_n^\prime}=\sum_{i=1}^n z_i\bar{z^\prime_i}=\sum_{i=1}^n|z_i|^2 \in\mathbb{R}^+
+$$
 - Sur l’espace des polynômes de degré inférieur ou égal à $n$ à coefficients complexes, l’opération suivante est un produit hermitien, avec $t\in\mathbb{R}$.
-
-  $$
-
-    \langle P,Q \rangle = \int_0^1 P(t)\overline Q(t)dt
-
-
+$$
+\langle P,Q \rangle = \int_0^1 P(t)\overline Q(t)dt
 $$
 #
 # Orthogonalité, projections et orthonormalité
@@ -397,9 +354,7 @@ Soit $B=\{e_i\}$ une base de $E$. Elle est orthonormée si :
 
 Une première note importante à faire c’est que, si $F_1\in E$ tel que $F_1=\text{Vect}(e_1)$, donc
 $$
-
 p_{F_1}(u)=\langle u, e_1 \rangle e_1
-
 $$$$
 \text{D'où, } u = \text{Id}(u)=p_{F_1}(u)+\dots+p_{F_n}(u)=\langle u,e_1\rangle e_1 +\dots+ \langle u,e_n \rangle e_n
 $$

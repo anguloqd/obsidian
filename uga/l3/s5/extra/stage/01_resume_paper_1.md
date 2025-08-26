@@ -196,17 +196,13 @@ Un point de rupture détecté dans la demi-période du point réel est considér
 
 Le score $F1$ se calcule à partir de la précision utilisateur (UA) et producteur (PA) :
 
-$$
-F1=2\times\frac{PA\times UA}{PA+UA},\quad PA=\frac{TD}{TN},\quad UA=\frac{TD}{DN}
-$$
+$$F1=2\times\frac{PA\times UA}{PA+UA},\quad PA=\frac{TD}{TN},\quad UA=\frac{TD}{DN}$$
 
 où $PA$ représente les points de rupture corrects détectés sur tous les points réels, et $UA$ les points corrects sur toutes les détections. La valeur maximale de $F1$ est 1.0 (PA et UA parfaits), la minimale 0.0 (PA=0 ou UA=0).
 
 Le second indicateur $MAE_{\partial t}$ correspond à la moyenne des distances temporelles absolues entre points détectés et réels :
 
-$$
-MAE_{\partial t}=\frac{\sum_{i=1}^n\partial t_i}{n}, \quad \partial t_c=|t_{ref}-\hat t|
-$$
+$$MAE_{\partial t}=\frac{\sum_{i=1}^n\partial t_i}{n}, \quad \partial t_c=|t_{ref}-\hat t|$$
 
 ##### Précision de détection des changements abrupts (données réelles)
 

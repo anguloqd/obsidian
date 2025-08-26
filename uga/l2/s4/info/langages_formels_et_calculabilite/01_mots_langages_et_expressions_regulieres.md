@@ -50,19 +50,15 @@ Un alphabet est un ensemble fini non-vide de caractères dont les éléments son
 
 Mathématiquement, on peut définir un mot de longueur $n$ (ici $n=3$) comme suit :
 
-$$
-A=\{"A",\dots,"Z"\}
+$$A=\{"A",\dots,"Z"\}
 \implies \text{"OUI"} \in M^3_A = A\times A\times A
- \\
-\text{Où } M^3_A \text{ est l'ensemble de mots à 3 lettres dans l'alphabet }A
-$$
+\\
+\text{Où } M^3_A \text{ est l'ensemble de mots à 3 lettres dans l'alphabet }A$$
 
 Mais, dans ce cours, on utilisera une définition un peut plus compliquée. Elle serait la définition d’une fonction. À nouveau, pour le mot $\text{OUI}$, on définit la fonction $s_\text{OUI}$ :
 
-$$
-s_\text{OUI}: \{1,\dots,n\} \mapsto A^* \\
-s_\text{OUI}(1) = \text{O}, s_\text{OUI}(2) = \text{U}, s_\text{OUI}(3) = \text{I}
-$$
+$$s_\text{OUI}: \{1,\dots,n\} \mapsto A^* \\
+s_\text{OUI}(1) = \text{O}, s_\text{OUI}(2) = \text{U}, s_\text{OUI}(3) = \text{I}$$
 
 Notons que, dans cette fonction, on définit mathématiquement un mot **en définissant l’ensemble image de la fonction $s$**. Aussi, $n$ doit être le longueur du mot. Donc, il existe une unique fonction $s$ pour chaque mot.
 
@@ -74,8 +70,7 @@ L’un des propriétés des mots est leur longueur, dénoté $n$. Pour “$OUI$�
 
 Revenons maintenant à la première définition mathématique d’un alphabet et les mots de taille $n$:
 
-$$
-\begin{align*}
+$$\begin{align*}
 A = \{"A",\dots,"Z"\} \implies
 &W_A^0=\varepsilon \\
 &W_A^1=A \\
@@ -87,8 +82,7 @@ A = \{"A",\dots,"Z"\} \implies
 L_A^n=\bigcup_{i=0}^n W_A^n : \text{le strate de mots de taille max. } n \text{ construit à partir de l'alphabet } A
 
 \\
-\Sigma^*_A = \lim_{n \rightarrow \infty} L_A^n : \text{l'ensemble de tous les mots possibles dans } A 
-$$
+\Sigma^*_A = \lim_{n \rightarrow \infty} L_A^n : \text{l'ensemble de tous les mots possibles dans } A$$
 
 **Précision**. $\varepsilon$ est la chaîne vide et est toujours inclus dans $L^n_A$, pour tout $n$. Sa longueur est $0$.
 
@@ -98,8 +92,7 @@ La *stratification* est le fait de creer un ensemble de mots de longueur $n$ dan
 
 La concaténation est simplement une nouvelle fonction qui est une fonction par branches prenant les fonctions s de deux mots. Prenons $s_\text{BON}$ et $s_\text{JOUR}$, on note leur concaténation $s_\text{BON} \land s_\text{JOUR}$.
 
-$$
-s_\text{BON}\land s_\text{JOUR} : \{1, \dots, n_\text{BON}+n_\text{JOUR}\} \rightarrow A
+$$s_\text{BON}\land s_\text{JOUR} : \{1, \dots, n_\text{BON}+n_\text{JOUR}\} \rightarrow A
 
 \\
 \text{}
@@ -109,8 +102,7 @@ s_\text{BON}\land s_\text{JOUR}(n)=
 \begin{cases}
 s_\text{BON}(n), 1 \le n \le n_\text{BON}=3 \\
 s_\text{JOUR}(n), n_\text{BON}+1 \le n \le n_\text{BON}+ n_\text{JOUR}=7 \\
-\end{cases}
-$$
+\end{cases}$$
 
 La concaténation peut être vue comme une opération qui possède les propriétés d’associativité et neutralité, cette dernière avec la chaîne vide $\varepsilon$. **La concaténation n’est pas commutative !**
 
@@ -128,33 +120,25 @@ Ayant crée le strate global de **mots finis** $\Sigma^*_A$, on définit un lang
 
 Soit $L$ et $L’$ deux langages. L’union est une opération qui réunit les mots des deux langages.
 
-$$
-L \cup L' = \left\{u:u\in L \text{ ou } u \in L'\right\}
+$$L \cup L' = \left\{u:u\in L \text{ ou } u \in L'\right\}
 \\
-L \cup L' = L' \cup L
-$$
+L \cup L' = L' \cup L$$
 
 La concaténation ou produit est une opération retournant un langage qui contient la concaténation de tout possible choix de couples de mots préservant l’ordre. **Elle n’est pas commutative non plus !**
 
-$$
-L \cdot L' = \left\{w=u  \land v: u\in L \text{ et } v \in L'\right\}
+$$L \cdot L' = \left\{w=u  \land v: u\in L \text{ et } v \in L'\right\}
 \\
-L\cdot L' \ne L' \cdot L
-$$
+L\cdot L' \ne L' \cdot L$$
 
 ### L’étoile de Kleene
 
 On peut voir l’étoile de Kleene comme un extension d’un même langage. Si $L$ est un langage, $L^*$ est le langage élargit. Ce nouveau langage contient toute les possibles concaténations de zéro ou plusieurs mots du même langage. Par exemple :
 
-$$
-L=\{0,1\} \implies L^*=\{\varepsilon, 0, 1, 00, 01, 10, 11, 000,001, 010,011,\dots\}
-$$
+$$L=\{0,1\} \implies L^*=\{\varepsilon, 0, 1, 00, 01, 10, 11, 000,001, 010,011,\dots\}$$
 
 On en déduit que la définition de $L^*$ est l’union des toutes les concaténations dans un même alphabet de zéro mots, d’un mot, de deux mots, de trois mots, etc..  On a utilisé la notation $W^n_A = A^n$ pour l’ensemble de mots de longueur $n$. Il vient que la définition de $L^*_A$ est la suivante :
 
-$$
-L^*= \bigcup_{n=0}^\infty L^n=\{ \varepsilon \}\cup L\cup L^2 \cup L^3 \cup L^4 \dots, \text{ où } L^n=\underbrace{L\cdot L\cdot \space \dots \space \cdot L}_{n \text{ fois}}
-$$
+$$L^*= \bigcup_{n=0}^\infty L^n=\{ \varepsilon \}\cup L\cup L^2 \cup L^3 \cup L^4 \dots, \text{ où } L^n=\underbrace{L\cdot L\cdot \space \dots \space \cdot L}_{n \text{ fois}}$$
 
 Puisque $L$ est une partie de toutes les posibles mots dans $A$, on peut choisir $L$ comme le mots de juste une lettre dans A, c’est-à-dire, $L=W_A^1=A$. Donc, cela impliquerait que $L^*=\Sigma^*_A=A^*$. Cela dit, $L$ n’est pas limité à être $A$.
 
@@ -162,11 +146,9 @@ Puisque $L$ est une partie de toutes les posibles mots dans $A$, on peut choisir
 
 La concaténation et union des langages est associative et distributive. Pour les langages $A$,$B$,$C$ :
 
-$$
-A\cdot(B \cdot C) = (A \cdot B) \cdot C \text{ et } A\cup(B \cup C) = (A \cup B) \cup C
+$$A\cdot(B \cdot C) = (A \cdot B) \cdot C \text{ et } A\cup(B \cup C) = (A \cup B) \cup C
 \\
-A\cdot(B\cup C) = (A\cdot B) \cup (A \cdot C)
-$$
+A\cdot(B\cup C) = (A\cdot B) \cup (A \cdot C)$$
 
 En plus, il y a d’autres technicalités et conventions :
 

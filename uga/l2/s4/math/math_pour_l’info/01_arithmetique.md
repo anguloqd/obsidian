@@ -6,9 +6,7 @@
 
 Diviser un nombre naturel $A$ (strictement naturel !) par un autre naturel $B$ est de trouver $Q,R\in\mathbb{N}$ qui vérifient l’équation suivante :
 
-$$
-A=BQ+R
-$$
+$$A=BQ+R$$
 
 Dessus, le nombre $Q$ est le quotient et $R$ est le reste, où $0 \le R < B$. Notons qu’ici on parle de la division entière et pas de la division rationnelle.
 
@@ -29,9 +27,7 @@ Il existent trois bases de numération relevantes dans la pratique : base $2$, b
 
 Quand on parle des différents bases dans un même contexte, on adopte la notation $(n)_p$. Ici, $n$ est une quantité exprimée en chiffres dans une base et $p$ est la base concernée. Par exemple, toutes ces expressions qui suivent veulent exprimer le nombre $23$ :
 
-$$
-(23)_{10}=(10111)_2=(17)_{16}
-$$
+$$(23)_{10}=(10111)_2=(17)_{16}$$
 
 Notons que si on écrit un nombre sans spécifier la base, on parle implicitement de la base $10$.
 
@@ -41,9 +37,7 @@ Notons que si on écrit un nombre sans spécifier la base, on parle implicitemen
 
 Il est plus facile de parle d’une conversion quand on applique l’expansion en base $p$ d’un nombre $(a_n\dots a_2 a_1 a_0)_p$, càd. un nombre dont la première chiffre est $a_0$, la deuxième est $a_1$, etc. :
 
-$$
-(a_n\dots a_2 a_1 a_0)_p = a_n \times p^n + \dots + a_2 \times p^2 + a_1 \times p + a_0
-$$
+$$(a_n\dots a_2 a_1 a_0)_p = a_n \times p^n + \dots + a_2 \times p^2 + a_1 \times p + a_0$$
 
 #### Base $p$ $\rightarrow$ Base
 
@@ -51,20 +45,17 @@ $10$
 
 C’est la plus faciles des conversions. Il faut juste utiliser l’expansion de base $p$.
 
-$$
-\text{Ex. }1 : (11011)_2=1\times 2^4+1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 = (27)_{10}
+$$\text{Ex. }1 : (11011)_2=1\times 2^4+1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 = (27)_{10}
 
 \newline
 
-\text{Ex. }2 : (5C8)_{16}=5\times 16^2 + \underbrace{C}_{12} \times 16^1 + 8 = (1480)_{10}
-$$
+\text{Ex. }2 : (5C8)_{16}=5\times 16^2 + \underbrace{C}_{12} \times 16^1 + 8 = (1480)_{10}$$
 
 #### Base $10$ $\rightarrow$ Base $p$
 
 On effectue une division euclidienne récursivement de chaque quotient et **on inverse l’ordre des restes obtenus, càd. du bas en haut !!!**
 
-$$
-\left.
+$$\left.
 \begin{align*}
 75 = 2 \times 37 + 1 \\
 37 = 2 \times 18 + 1 \\
@@ -80,11 +71,9 @@ $$
 \text{}
 \\
 
-\implies (75)_{10}=(1001011)_2
-$$
+\implies (75)_{10}=(1001011)_2$$
 
-$$
-\left.
+$$\left.
 \begin{align*}
 2014 = 16 \times 125 + \underbrace{14}_E\\
 125 = 16 \times 7 + \underbrace{13}_D \\
@@ -97,8 +86,7 @@ $$
 \text{}
 \\
 
-\implies (2014)_{10}=(7DE)_{16}
-$$
+\implies (2014)_{10}=(7DE)_{16}$$
 
 #### Base $2$ $\rightarrow$ Base $16$ (ou viceversa)
 
@@ -108,35 +96,29 @@ On va utiliser ce tableau utile pour chaque chiffre “base” d’une base vers
 
 Après, la chose à garder en tête c’est que chaque chiffre en base $16$ correspond à quatre chiffres en base $2$. Ceci rend la conversion beaucoup plus facile pour la relation spéciale entre $2$ et $16$ ($16$ est une puissance de $2$, finalement). Voyons deux exemples :
 
-$$
-(\underbrace{0100}_4 \space \underbrace{1011}_B)_2=(4B)_{16}
+$$(\underbrace{0100}_4 \space \underbrace{1011}_B)_2=(4B)_{16}
 
 \\
 \text{}
 \\
 
-(F9)_{16}=(\underbrace{1111}_F \space \underbrace{1001}_9)_2
-$$
+(F9)_{16}=(\underbrace{1111}_F \space \underbrace{1001}_9)_2$$
 
 #### Numération des réels
 
 La définition qu’on avait présentée pour l’expansion en base $p$ d’un nombre naturel peut être étendue pour inclure les nombres réels. Pour un nombre réel qui a pour chiffres $(a_n \dots a_1 a_0 , b_1 \dots b_m)_p$, son expansion est :
 
-$$
-(a_n \dots a_1 a_0 , b_1 \dots b_m)_p = a_np^n + \dots +a_1p + a_0 + b_1p^{-1}\dots+b_mp^{-m}
+$$(a_n \dots a_1 a_0 , b_1 \dots b_m)_p = a_np^n + \dots +a_1p + a_0 + b_1p^{-1}\dots+b_mp^{-m}
 
 \\
 \text{}
 \\
 
-(7.25)_{10}=7 + 2 \times10^{-1}+5 \times10^{-2}
-$$
+(7.25)_{10}=7 + 2 \times10^{-1}+5 \times10^{-2}$$
 
 Pour convertir $7.25$ en base $2$, on découpe le nombre en partie entière et partie rationnelle. On sait bien convertir $7$ en base $2$, c’est $(111)_2$, et donc on s’occupe de la partie rationnelle. On utilise le même raisonnement : si une puissance négative de p dépasse le nombre $n$, on laisse $0$ et on passe à la puissance suivante. **On tente place rationnelle par place rationnelle, toujours mettant la plus grande chiffre possible dans chaque place sans dépasser le nombre objectif**.
 
-$$
-(111.1)_2 = 7.5 > 7.25 \longrightarrow (111.01)_2=7.25
-$$
+$$(111.1)_2 = 7.5 > 7.25 \longrightarrow (111.01)_2=7.25$$
 
 Une application particulière est que $(0.\bar{1})_2=(0.111\dots)_2=(1)_{10}$. C’est une analogie des “les nombres avec période $9$ n’existent pas” et “$0.\bar{9} = 1$”.
 
@@ -205,18 +187,16 @@ Pour calculer le PGCD, on utilise l’algorithme d’Euclide, lequel est basée 
 2. On divise récursivement le quotient et reste, $q_i/r_i$ obtenus jusqu’à que $r_n = 0$.
 3. On déduit que $q_n=r_{n-1}=PGCD(a,b)$.
 
-$$
-\begin{array}{c}
+$$\begin{array}{c}
 495 = 210 \times 2 + 75 \\
 210 = 75 \times 2 + 60 \\
 75 = 60 \times 1 + 15 \\
 60 = 15 \times 4 + 0
-\end{array} \longrightarrow 
+\end{array} \longrightarrow
 \begin{array}{c}
 \text{Le PGCD est le dernier reste non nul :}\\
 PGCD(495,210)=15
-\end{array}
-$$
+\end{array}$$
 
 #### Propriétés de PGCD et PPCM
 
@@ -240,28 +220,24 @@ Notons que $a$ et $b$ ne sont forcément pas premiers. Cela dit, un nombre premi
 
 On peut déduire si $a$ et $b$ sont copremiers en regardant leur décomposition en nombre premiers : leur PPCM est le produit de tous les nombres premiers qui apparaissent dans les deux décompositions en facteurs premiers de ces deux entiers, chacun affecté du plus petit exposant qui apparait dans celles-ci.
 
-$$
-\begin{array}{c}
+$$\begin{array}{c}
 4950= 2 \times3^2 \times5^2 \times 11 \\
 4875=3 \times 5^3 \times 13
-\end{array} \longrightarrow 
-PGCD(4950, 4875) = 3 \times 5^2 = 75
-$$
+\end{array} \longrightarrow
+PGCD(4950, 4875) = 3 \times 5^2 = 75$$
 
 #### PPCM et décomposition en nombres premiers
 
 Dans le cas du PPCM, leur PPCM est le produit de tous les nombres premiers qui apparaissent dans au moins une des décompositions en facteurs premiers de ces deux entiers, chacun affecté du plus grand exposant qui apparait dans celles-ci.
 
-$$
-\begin{array}{c}
+$$\begin{array}{c}
 4950= 2 \times3^2 \times5^2 \times 11 \\
 4875=3 \times 5^3 \times 13
 \end{array} \longrightarrow
-\begin{array}{c} 
+\begin{array}{c}
 PPCM(4950, 4875) = \\
 2 \times 3^2 \times 5^3 \times 11 \times 13  = 312750
-\end{array}
-$$
+\end{array}$$
 
 #### Propriétés entre copremiers, PGCD et PPCM ($a$ et $b$ copremiers)
 
@@ -277,18 +253,15 @@ $$
 
 Pour trouver une solution à $ax+by=PGCD(a,b)$, on remonte dès la fin de l’algorithme d’Euclide.
 
-$$
-\begin{array}{c}
+$$\begin{array}{c}
 l_1 : 495 = 210 \times 2 + 75 \\
 l_2 : 210 = 75 \times 2 + 60 \\
 l_3 : 75 = 60 \times 1 + 15 \\
 l_4 : 60 = 15 \times 4 + 0 \\ \\
 PGCD(495,210)=15
-\end{array} \\ 
-$$
+\end{array} \\$$
 
-$$
-\begin{array}{cl}
+$$\begin{array}{cl}
 \text{On cherche }x,y
 : & 495x+210y=15
 \end{array}
@@ -325,8 +298,7 @@ $$
 \text{}
 \\
 
-\text{D'après la dernière ligne : } x=3,y=-7
-$$
+\text{D'après la dernière ligne : } x=3,y=-7$$
 
 Quand on injecte, on voit que c’est pour pouvoir exprimer les choses en termes de $210$ et $495$. En $l_2 \rightarrow l_3$, on exprime $60$ en termes de $210$ et $75$ (on garde l’expression en $210$ et on remplace celle en $75$), puis en $l_1 \rightarrow (l_2 \rightarrow l_3)$, on exprime $75$ en termes de $495$ et $210$ (on garde les deux car ils sont les deux nombres qui nous intéressent).
 
@@ -346,12 +318,10 @@ Il est immédiat de voir que si $a=nq+r$, alors $a \equiv r[n]$  ou aussi $a \eq
 
 Soient $a,b,c,d \in \mathbb{N}$ et $n \in \mathbb{N}^*$. Si $a \equiv c[n]$ et $b \equiv d[n]$ (càd. ils sont des restes de $n$), les propriétés suivantes sont vraies, pour tout $p \in \mathbb{N}$ :
 
-$$
-a+b \equiv (c+d)[n] \\
+$$a+b \equiv (c+d)[n] \\
 a-b \equiv (c-d)[n] \\
 a\times b \equiv (c \times d)[n] \\
-a^p \equiv c^p[n]
-$$
+a^p \equiv c^p[n]$$
 
 On notera aussi que si $a \equiv b[n]$, alors $a-b \equiv 0[n]$ et $n$ divise $a - b$. Par exemple : $75 \equiv 5[7] \iff (75-5) \equiv 0[n]$ et donc $(75-5)$ est divisible par $7$.
 
@@ -365,9 +335,7 @@ Ces propriétés permet de creer une algèbre de groupe cyclique de $n$, ce qu�
 
 Si $p$ est un nombre premier et $a$ est un entier non divisible par $p$ (non-multiple de $p$), alors :
 
-$$
-a^{p-1} \equiv 1[p] \text{ ou, de manière equivalente, } a^p \equiv a[p].
-$$
+$$a^{p-1} \equiv 1[p] \text{ ou, de manière equivalente, } a^p \equiv a[p].$$
 
 Ce théorème est fondamental dans la cryptologie moderne industrielle qui a besoin d’entiers
 
@@ -385,16 +353,14 @@ Puisque $p \mid m$, on peut écrire $m = lp$ pour un certain $l \in \Z$ et $a-b=
 
 Finalement, on applique le petit théorème de Fermat et on arrive à la conclusion :
 
-$$
-\begin{cases}
+$$\begin{cases}
 a^{p-1} \equiv 1[p] \implies {a^{p-1}}^{q-1}=a^{(p-1)(q-1)} \equiv 1^{q-1}[p]=1[p]
 \\
 a^{q-1} \equiv 1[q] \implies {a^{q-1}}^{p-1}=a^{(p-1)(q-1)} \equiv 1^{p-1}[q]=1[q]
 \end{cases}
 \\
 \implies
-a^{(p-1)(q-1)} \equiv1[n]
-$$
+a^{(p-1)(q-1)} \equiv1[n]$$
 
 ### Groupe cyclique
 
@@ -402,15 +368,13 @@ Si on fixe un nombre naturel $n$, on peut classifier tous les nombres naturels s
 
 Ces agroupassions de naturels sont appelées “classes de congruences”. En plus, on peut regrouper les classes d’équivalences dans un ensemble partant d’un $n$ fixe pour créer l’ensemble $\Z/n\Z$, appelé “**l’anneau d’entiers modulo $n$**”.
 
-$$
-\Z/n\Z = \bigcup_{k=0}^{n-1}\overline{k}_n =\left\{\overline0_n,\overline1_n,\dots,\overline{n-2}_n,\overline{n-1}_n\right\},
+$$\Z/n\Z = \bigcup_{k=0}^{n-1}\overline{k}_n =\left\{\overline0_n,\overline1_n,\dots,\overline{n-2}_n,\overline{n-1}_n\right\},
 
 \text{ où } \overline{k}_n=\left\{p\in\mathbb{N}:p \equiv k[n] \right\}
 
 \\
 
-\text{Par exemple : }\Z/3\Z = \{\bar0_3, \bar1_3, \bar2_3\} = \{\{0,3,6,\dots\}, \{1,4,7,\dots\}, \{2,5,8,\dots\}\}
-$$
+\text{Par exemple : }\Z/3\Z = \{\bar0_3, \bar1_3, \bar2_3\} = \{\{0,3,6,\dots\}, \{1,4,7,\dots\}, \{2,5,8,\dots\}\}$$
 
 #### $\Z/n\Z$ comme algèbre : opérations entre classes de congruences/résidus
 
@@ -422,15 +386,13 @@ On peut doter à $\Z/n\Z$ d’opérations analogues à celles vus pour les entie
 
 Sous ces opérations, l’anneau $\Z/n\Z$ est fermé/stable et donc un **groupe algébrique**. En plus, le groupe est dit “cyclique” car si on additionne $1$ à chaque élément de $\overline{k}$ itérativement, on reviendra éventuellement à $\overline{k}$. Par exemple :
 
-$$
-\begin{align*}
+$$\begin{align*}
 \Z/3\Z = \{\overline0_3,\overline1_3,\overline2_3\}
 
 \longrightarrow
 
 \space &3 \equiv 0[3] \implies \overline3_3=\overline0_3 \\ &\overline{2}_3 + \overline{1}_3=\overline{3}_3=\overline0_3
-\end{align*}
-$$
+\end{align*}$$
 
 #### Classes d’équivalences spéciales
 
@@ -442,8 +404,7 @@ Soient $\overline{a}, \overline{b} \in \Z /n \Z$ alors on définit si pour $\ove
 
 Pour un certain $\overline{a}$ fixé, on utilise l’algorithme d’Euclide pour trouver son inverse multiplicative :
 
-$$
-PGCD(7,15)=1. \text{ On cherche } x,y :7x+15y=1
+$$PGCD(7,15)=1. \text{ On cherche } x,y :7x+15y=1
 
 \\
 \text{}
@@ -460,7 +421,7 @@ PGCD(7,15)=1. \text{ On cherche } x,y :7x+15y=1
 \text{}
 \\
 
-\text{Or, dans } \Z/15\Z : \overline{-2}=\overline{15-2}=\overline{13} \implies 
+\text{Or, dans } \Z/15\Z : \overline{-2}=\overline{15-2}=\overline{13} \implies
 \begin{array}{c}
 \overline{7}_{15} \times \overline{13}_{15} = \overline{1}_{15}
 \\ 7 \times 13 \equiv 1[15]
@@ -470,8 +431,7 @@ PGCD(7,15)=1. \text{ On cherche } x,y :7x+15y=1
 \text{}
 \\
 
-7[15],13[15] \text{ sont inverses, et aussi } \overline{7}_{15} , \overline{13}_{15}
-$$
+7[15],13[15] \text{ sont inverses, et aussi } \overline{7}_{15} , \overline{13}_{15}$$
 
 **Théorème**. Tout comme dans le cas des entiers, on énonce quelques analogies sur les clases :
 
@@ -483,21 +443,18 @@ $$
 
 Soient $n_1$ et $n_2$ deux entiers plus grands que $1$ et copremiers, et $n = n_1 n_2$. On note $u_1$ et $u_2$ **tels que *$u_1n_1+u_2n_2 = 1$*, dont l’existence est assurée par le thm. de Bachet-Bezout. Il existe un **unique** $x[n]$ tel que $x \equiv r_1[n_1]$ et $x \equiv r_2[n_2]$. Particulièrement :
 
-$$
-\begin{cases}
+$$\begin{cases}
 x \equiv r_1[n_1] \\
 x \equiv r_2[n_2]
 \end{cases}
 \iff
-x \equiv \big(r_2(u_1n_1)+r_1(u_2n_2)\big)[n]
-$$
+x \equiv \big(r_2(u_1n_1)+r_1(u_2n_2)\big)[n]$$
 
 **Exemple.** Disons qu’on cherche un $x$ qui vérifie le système de congruence suivant :
 
-$$
-\begin{cases}
+$$\begin{cases}
 x \equiv 1[3] \\
-x \equiv 2[4] 
+x \equiv 2[4]
 \end{cases}
 
 \implies
@@ -511,15 +468,14 @@ x \equiv 2[4]
 \text{}
 \\
 
-3u_1+4u_2=1 \implies 
+3u_1+4u_2=1 \implies
 \begin{cases}
 u_1=-1 \\
 u_2=1
 \end{cases} \implies
 \begin{array}{l}
 x \equiv \big(2(-1\times3)+1(1\times4)\big)[12]\\x\equiv (-6+4)[12]\equiv(-2)[12]\equiv10[12]
-\end{array}
-$$
+\end{array}$$
 
 Il faut dire aussi que ce serait plus facile aussi si on le fait avec un tableau de cette manière :
 

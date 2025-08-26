@@ -6,14 +6,11 @@
 
 L'addition de matrices se fait entrée par entrée. Pour deux matrices $A$ et $B$ de même taille $m \times n$, on a :
 
-$$
-(A + B)_{ij} = A_{ij} + B_{ij}
-$$
+$$(A + B)_{ij} = A_{ij} + B_{ij}$$
 
 **Exemple :**
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 1 & 2 \\
 3 & 4
 \end{pmatrix} + \begin{pmatrix}
@@ -22,8 +19,7 @@ $$
 \end{pmatrix} = \begin{pmatrix}
 6 & 8 \\
 10 & 12
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 **Propriétés :**
 - Associativité : $(A + B) + C = A + (B + C)$
@@ -35,14 +31,11 @@ $$
 
 Le produit matriciel $AB$ n'est défini que si le nombre de colonnes de $A$ égale le nombre de lignes de $B$. Si $A$ est de taille $m \times p$ et $B$ de taille $p \times n$, alors $AB$ est de taille $m \times n$ et :
 
-$$
-(AB)_{ij} = \sum_{k=1}^{p} A_{ik} B_{kj}
-$$
+$$(AB)_{ij} = \sum_{k=1}^{p} A_{ik} B_{kj}$$
 
 **Exemple :**
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 1 & 2 \\
 3 & 4
 \end{pmatrix} \begin{pmatrix}
@@ -54,8 +47,7 @@ $$
 \end{pmatrix} = \begin{pmatrix}
 19 & 22 \\
 43 & 50
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 > [!note]
 > Pièges communes :
@@ -74,9 +66,7 @@ Propriétés :
 
 Pour une matrice $A$ et un scalaire $\lambda \in \mathbb{K}$, la multiplication scalaire est définie par :
 
-$$
-(\lambda A)_{ij} = \lambda A_{ij}
-$$
+$$(\lambda A)_{ij} = \lambda A_{ij}$$
 
 **Propriétés :**
 - $(\lambda + \mu)A = \lambda A + \mu A$
@@ -92,9 +82,7 @@ Comme la multiplication n'est pas commutative, les identités binomiales usuelle
 
 Si $AB = BA$ (si $A$ et $B$ commuent sous la multiplication), alors la formule du binôme s'applique :
 
-$$
-(A + B)^n = \sum_{k=0}^{n} \binom{n}{k} A^{n-k} B^k
-$$
+$$(A + B)^n = \sum_{k=0}^{n} \binom{n}{k} A^{n-k} B^k$$
 
 Dans la pratique, l'une des deux matrices est souvent la matrice identité qui commute avec toute matrice.
 
@@ -109,9 +97,7 @@ Dans la pratique, l'une des deux matrices est souvent la matrice identité qui c
 
 Une matrice carrée $A$ est inversible (ou régulière) s'il existe une matrice $A^{-1}$ telle que :
 
-$$
-AA^{-1} = A^{-1}A = I
-$$
+$$AA^{-1} = A^{-1}A = I$$
 
 La matrice $A^{-1}$ est appelée l'inverse de $A$ et est unique si elle existe.
 
@@ -128,9 +114,7 @@ Plus généralement, quand $A$ est inversible, pour tout $p ∈ \mathbb{N}$, on 
 
 - Pour les matrices 2x2, la formule est :
 
-$$
-A = \begin{pmatrix} a &b \\ c & d \end{pmatrix} \iff A^{-1}=\frac{1}{ad-bc} \begin{pmatrix} d &-b \\ -c & a \end{pmatrix}
-$$
+$$A = \begin{pmatrix} a &b \\ c & d \end{pmatrix} \iff A^{-1}=\frac{1}{ad-bc} \begin{pmatrix} d &-b \\ -c & a \end{pmatrix}$$
 
 Le déterminant $ad - bc$ doit être non nul pour que l'inverse existe.
 
@@ -142,15 +126,13 @@ Pour calculer $A^{-1}$, on forme la matrice augmentée $(A | I)$ et on applique 
 
 **Exemple :**
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 2 & 1 & | & 1 & 0 \\
 1 & 1 & | & 0 & 1
 \end{pmatrix} \rightarrow \begin{pmatrix}
 1 & 0 & | & 1 & -1 \\
 0 & 1 & | & -1 & 2
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 Donc $\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}$.
 
@@ -167,13 +149,11 @@ Avant de les présenter, on devrait connaître l'équivalence par lignes. Deux m
 
 **Matrices échelonnées** : le nombre de zéros commençant une ligne croît strictement ligne par ligne jusqu'à ce qu'il ne reste plus que des zéros (si c'est le cas, mais il peut se passer qu'il n'y ait pas de lignes purement des zéros). Par exemple :
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 1&a_0&a_1&a_2&a_3 \\
 0&0&2&a_4&a_5 \\
 0&0&0&1&a_6
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 **Critères pour une matrice échelonnée :**
 1. Toutes les lignes non nulles sont au-dessus des lignes nulles
@@ -185,13 +165,11 @@ $$
 - le premier coefficient non nul d'une ligne (non nulle) vaut $1$
 - et c'est le seul élément non nul de sa colonne.
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 1&0&a_1&0&b_1 \\
 0&1&a_2&0&b_2 \\
 0&0&0&1&b_3
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 **Théorème :** Toute matrice peut être transformée en une unique matrice échelonnée réduite par des opérations élémentaires sur les lignes.
 
@@ -216,8 +194,7 @@ Les **matrices triangulaires supérieures** sont celles dont les coefficients st
 
 Un type de matrice intéressant sont les **matrices diagonales,** qui sont des matrices qui ont des $0$ dans toutes les entrées hors de la diagonale. Notons que par conséquent, elles sont triangulaires supérieures et inférieures simultanément. Par exemple :
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 2&0&0 \\
 0&3&0\\
 0&0&5
@@ -230,13 +207,11 @@ $$
 0&0&0 \\
 0&0&0\\
 0&0&0
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Si $D$ est une matrice diagonale, il est très facile de calculer ses puissances $D^p$ (par récurrence sur $p$) :
 
-$$
-D = \begin{bmatrix}
+$$D = \begin{bmatrix}
 a_1&0&0 \\
 0&a_2&0\\
 0&0&a_3
@@ -246,8 +221,7 @@ D^p = \begin{bmatrix}
 a_1^p&0&0 \\
 0&a_2^p&0\\
 0&0&a_3^p
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 **Propriétés des matrices diagonales :**
 - Elles commutent entre elles : $D_1 D_2 = D_2 D_1$
@@ -260,13 +234,11 @@ Une matrice $A$ de taille $n × n$, triangulaire, est inversible si et seulement
 
 **Matrice identité :** $I_n$ est la matrice diagonale avec des $1$ sur la diagonale :
 
-$$
-I_3 = \begin{pmatrix}
+$$I_3 = \begin{pmatrix}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 **Matrice nulle :** Toutes les entrées sont $0$.
 
@@ -280,16 +252,14 @@ C'est juste inverser les indices $i$ et $j$ de chaque entrée : $(A^T)_{ij} = A_
 
 **Exemple :**
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6
 \end{pmatrix}^T = \begin{pmatrix}
 1 & 4 \\
 2 & 5 \\
 3 & 6
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 **Théorème.**
 1. $(A + B)^T = A^T + B^T$
@@ -304,19 +274,15 @@ $$
 
 C'est la somme des entrées de la diagonale principale d'une matrice carrée :
 
-$$
-\text{tr}(A) = \sum_{i=1}^{n} A_{ii} = A_{11} + A_{22} + \cdots + A_{nn}
-$$
+$$\text{tr}(A) = \sum_{i=1}^{n} A_{ii} = A_{11} + A_{22} + \cdots + A_{nn}$$
 
 **Exemple :**
 
-$$
-\text{tr}\begin{pmatrix}
+$$\text{tr}\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9
-\end{pmatrix} = 1 + 5 + 9 = 15
-$$
+\end{pmatrix} = 1 + 5 + 9 = 15$$
 
 **Théorème.** Soient $A$ et $B$ deux matrices $n \times n$. Alors :
 1. $\text{tr}(A + B) = \text{tr}A + \text{tr}B$

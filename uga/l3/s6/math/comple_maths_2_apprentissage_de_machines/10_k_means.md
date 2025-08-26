@@ -12,9 +12,7 @@ L'algorithme k-means, développé par MacQueen en 1967, constitue une méthode d
 
 Formellement, étant donné un ensemble d'individus décrits par leurs caractéristiques $(X_1, \ldots, X_n)$, l'algorithme cherche à identifier k ensembles qui partitionnent les données en minimisant la variance intra-cluster :
 
-$$
-\sum_{i=1}^{k} \sum_{X \in S_i} ||X - \mu_i||^2
-$$
+$$\sum_{i=1}^{k} \sum_{X \in S_i} ||X - \mu_i||^2$$
 
 où $\mu_i = \frac{1}{|S_i|} \sum_{X \in S_i} X$ représente le centroïde du cluster i.
 
@@ -122,9 +120,7 @@ L'algorithme PAM procède par itérations selon le schéma suivant :
 
 **Initialisation** : Sélection gloutonne de k points parmi les n observations pour minimiser la fonction de coût :
 
-$$
-\sum_{i=1}^{k} \sum_{X \in S_i} d(X, x^{(i)})
-$$
+$$\sum_{i=1}^{k} \sum_{X \in S_i} d(X, x^{(i)})$$
 
 où $x^{(i)}$ représente le médoïde du cluster i et d une mesure de dissimilarité.
 

@@ -76,9 +76,7 @@ Les aides sous forme de biens et de services, plutôt que d'argent liquide. On l
 
 ### Composantes du PIB
 
-$$
-Y = C + I + G + XN
-$$
+$$Y = C + I + G + XN$$
 
 - $Y$ : PIB ou production
 - $C$ : Consommation
@@ -102,17 +100,13 @@ Avant de commencer, on va prendre $Y_1$ comme l’année de base avec laquelle o
 
 **Déflateur du PIB** : mesure le niveau actuel des prix par rapport au niveau des prix de l'année de base. Par exemple, pour le PIB déflaté de l’année $2$ :
 
-$$
-\bar{Y}_2=\frac{Y_2}{Y_1} \cdot 100
-$$
+$$\bar{Y}_2=\frac{Y_2}{Y_1} \cdot 100$$
 
 Le déflateur du PIB doit son nom au fait qu'il peut être utilisé pour éliminer l'inflation du PIB nominal, c'est-à-dire pour "dégonfler" le PIB nominal de l'augmentation due aux hausses de prix.
 
 **Inflation** : changement en pourcentage du niveau de prix d'une période à l'autre. Pour calculer le taux d’inflation de l’année $p$ à partir de l’année $q$, on fait comme suit :
 
-$$
-\pi_p=\frac{\bar Y_p-\bar Y_{q}}{\bar Y_q} \cdot 100,\hspace{4pt}p>q
-$$
+$$\pi_p=\frac{\bar Y_p-\bar Y_{q}}{\bar Y_q} \cdot 100,\hspace{4pt}p>q$$
 
 ## Production et croissance
 

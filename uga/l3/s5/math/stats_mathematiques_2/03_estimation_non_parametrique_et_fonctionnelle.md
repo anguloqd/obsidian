@@ -25,9 +25,7 @@ Rappelons quelques faits importants pour la suite :
 
 Pour un sondage d’une population ***finie***, ces conditions sont donc réunies, ceux-ci étant des caractéristiques descriptives de la population dans son ensemble. Soit $\mu$ et $\sigma^2$ la moyenne et la variance de la loi inconnue en question (supposant qu’elles existent), et soit $n\ge 30$, donc
 
-$$
-\mathbb E[\bar X] = \mu\hspace{8pt}\text{ et\hspace{8pt} Var}(\bar X)=\frac{\sigma^2}{n}
-$$
+$$E(\bar X) = \mu\hspace{8pt}\text{ et\hspace{8pt} Var}(\bar X)=\frac{\sigma^2}{n}$$
 
 La première relation reflétant un biais nul et la deuxième montrant directement la convergence en moyenne quadratique. En conclusion, nous utiliserons naturellement la moyenne empirique pour estimer la moyenne de la loi, nous satisfaisant de ces propriétés.
 
@@ -36,15 +34,11 @@ La première relation reflétant un biais nul et la deuxième montrant directeme
 
 En plus, et aussi grâce à $n\ge 30$ (pour TCL) et la convergence de $S^2$ vers $\sigma^2$, pour n'importe quelle loi des $X_i$, on a que
 
-$$
-\frac{\bar X-\mu}{S/\sqrt n}\sim\mathcal T_{n-1}
-$$
+$$\frac{\bar X-\mu}{S/\sqrt n}\sim\mathcal T_{n-1}$$
 
 Donc, indifférent de la loi des $X_i$, on peut avoir un IC classique (à $95\%$) pour le paramètre $\mu$ :
 
-$$
-IC_{95\%}(\mu)=\left[\bar X-t_{97.5\%}^{(n-1)}\frac{S}{\sqrt n}, \bar X+t_{97.5\%}^{(n-1)}\frac{S}{\sqrt n} \right]
-$$
+$$IC_{95\%}(\mu)=\left[\bar X-t_{97.5\%}^{(n-1)}\frac{S}{\sqrt n}, \bar X+t_{97.5\%}^{(n-1)}\frac{S}{\sqrt n} \right]$$
 
 #### Influence de valeurs extrêmes ou aberrantes sur $\bar X$
 
@@ -60,9 +54,7 @@ Si l’on soupçonne la présence de valeurs très extrêmes ou aberrantes, on p
 
 De la même manière qu’on construit une statistique sur $\bar X$ “centrée-réduite”,$\left(\frac{\bar X - \mu}{S/\sqrt n} \right)$, qui suit une loi connue (Student), on peut faire de même avec la variance empirique $S^{2^\prime}$, **sous la condition stricte que les $X_i$ suivent forcément une loi gaussienne** :
 
-$$
-\frac{(n-1)S^{2^\prime}}{\sigma^2}\sim\chi^2_{n-1}
-$$
+$$\frac{(n-1)S^{2^\prime}}{\sigma^2}\sim\chi^2_{n-1}$$
 
 Par contre, dans cette section, on a présumé qu’on ne connaît absolument pas la loi qui suivent les $X_i$. Si cette loi n’est pas gaussienne, on ne peut plus affirmer que telle statistique sur $S^{2^\prime}$ suit une loi de $\chi^2$, **même si $n$ tend vers l’infini**.
 
@@ -80,27 +72,21 @@ Ceci est le cas pour $S^{2^\prime}$ : les élément $(X_i-\bar X)$  (et donc leu
 
 Avant d’établir la loi de $S^{2^\prime}$ qui nous intéresse, il faut mentionner un fait important pour le calcul :
 
-$$
-\mathbb E[S^{2^\prime}]=\sigma^2 \hspace{8pt}\text{et}\hspace{8pt}\text{Var}(S^{2^\prime})=\frac{1}{n}\left(\mu^\prime_4-\frac{n-3}{n-1}\sigma^4\right), \text{où }\mu^\prime_4=\mathbb E[(X-\bar X)^4]
-$$
+$$E(S^{2^\prime})=\sigma^2 \hspace{8pt}\text{et}\hspace{8pt}V(S^{2^\prime})=\frac{1}{n}\left(\mu^\prime_4-\frac{n-3}{n-1}\sigma^4\right), \text{où }\mu^\prime_4=E((X-\bar X)^4]$$
 
 Finalement, on peut établir la loi de $S^{2^\prime}$ asymptotique à une Gaussienne comme suit, qui est juste une application du TCL “théorique et original” :
 
-$$
-\lim_{n\rightarrow\infty}
+$$\lim_{n\rightarrow\infty}
 
 \frac{\sqrt n (S^{2^\prime}-\sigma^2)}{\sqrt{\mu^\prime_4-\sigma^4}}
 
-\sim\mathcal N(0,1)
-$$
+\sim\mathcal N(0,1)$$
 
 #### Un IC dans le cas non paramétrique pour $\sigma^2$
 
 On peut réécrire cette dernière statistique pour arriver à une plus pratique :
 
-$$
-\frac{\sqrt n (S^{2^\prime}-\sigma^2)}{\sqrt{\mu^\prime_4-\sigma^4}}=\frac{\sqrt n (S^{2^\prime}-\sigma^2)}{\sigma^2\sqrt{\underbrace{(\mu^\prime_4/\sigma^4)}_\text{Curt.}-1}}
-$$
+$$\frac{\sqrt n (S^{2^\prime}-\sigma^2)}{\sqrt{\mu^\prime_4-\sigma^4}}=\frac{\sqrt n (S^{2^\prime}-\sigma^2)}{\sigma^2\sqrt{\underbrace{(\mu^\prime_4/\sigma^4)}_\text{Curt.}-1}}$$
 
 Le terme marqué $(\mu^\prime_4/\sigma^4)$ est connu comme le *coefficient de curtose*. Il vaut $3$ pour la loi Gaussienne, plus de $3$ pour un loi à pic plus prononcé, et moins de $3$ pour un pic plus plat.
 
@@ -116,9 +102,7 @@ On peut recourir à une approche dite par rééchantillonnage dont l’intérêt
 
 Un quantile d’ordre $p$ est la quantité sur la loi de distribution tel qu’elle “sépare” la population et contient $p\%$ de la population à sa gauche.
 
-$$
-\kappa_{p} : F(\kappa_p)=p  \iff \kappa_p=F^{-1}(p)
-$$
+$$\kappa_{p} : F(\kappa_p)=p  \iff \kappa_p=F^{-1}(p)$$
 
 Notons que, étant donné une loi, la probabilité d’observer une valeur $x\le \kappa_p$ est égale à $p$. Une autre interprétation importante sont les quantiles comme des “points de coupure” car la valeur $\kappa_p$ divise la loi en $p\%$ à sa gauche et $(1-p)\%$ à sa droite.
 
@@ -132,16 +116,12 @@ Normalement on adopte la notation “le $k$-ième $q$-quantile” théorique pou
 
 Avant de continuer, on note $\kappa_p$ le quantile $p$ de la population (et donc $\kappa_p=F^{-1}(p)$) et $\hat\kappa_p$ l’estimateur du précédent, qui on va définir comme tout simplement le quantile $p$ de l’échantillon. Si on suppose une densité continue $f$, on a donc
 
-$$
-\lim_{n\rightarrow\infty} n\text{Var}(\hat\kappa_{\lfloor np\rfloor +1})=\frac{p(1-p)}{f(\kappa_p)^2}
+$$\lim_{n\rightarrow\infty} nV(\hat\kappa_{\lfloor np\rfloor +1})=\frac{p(1-p)}{f(\kappa_p)^2}
 
 \text{\hspace{6pt}et\hspace{6pt}}
 
-\lim_{n\rightarrow\infty}\frac{f(\kappa_p)}{\sqrt{p(1-p)}}\sqrt n(\hat\kappa_{\lfloor np\rfloor +1}-\kappa_p)\sim\mathcal N(0,1)
-$$$$
-
+\lim_{n\rightarrow\infty}\frac{f(\kappa_p)}{\sqrt{p(1-p)}}\sqrt n(\hat\kappa_{\lfloor np\rfloor +1}-\kappa_p)\sim\mathcal N(0,1)$$$$
 \text{Formulation plus pratique : } \hat\kappa_p \sim \mathcal N\left(\mu=\kappa_p,\hspace{4pt} \sigma^2=\frac{p(1-p)}{nf(\kappa_p)^2}\right) \text{ si }n\text{ fini}
-
 $$
 Ceci nous permet de conclure que la quantile empirique $\hat\kappa_p$ est asymptotiquement sans biais et converge en moyenne quadratique vers sont estimande $\kappa_p$ puisque sa variance tend vers $0$ (on peut aussi montrer qu’elle converge presque sûrement).
 
@@ -149,28 +129,22 @@ Ceci nous permet de conclure que la quantile empirique $\hat\kappa_p$ est asympt
 
 Par contre, on a un souci : $f(\kappa_p)$ est inconnu. L’objectif c’est donc d’estimer ponctuellement $f(\kappa_p)$ pour construire un IC de $\kappa_p$. On sait que si on prend une observation $X_i$ d’une loi, celle-ci a probabilité $p$ d’être inférieur ou égale à $\kappa_p$ et $1-p$ sinon. Ceci est donc juste une loi de Bernoulli.
 
-Pour un échantillon $n$ à plusieurs observations, on appelle $n_\text{inf}$ la quantité d’observations inférieures ou égales à $\kappa_p$, ce qui serait une loi binomiale. Donc $n_\text{inf}\sim\mathcal B(n, p)$ ou 
+Pour un échantillon $n$ à plusieurs observations, on appelle $n_\text{inf}$ la quantité d’observations inférieures ou égales à $\kappa_p$, ce qui serait une loi binomiale. Donc $n_\text{inf}\sim\mathcal B(n, p)$ ou
 $$
-
-\mathbb P(\ell_1\le n_\text{inf} \le \ell_2) = \sum_{k=\ell_1}^{\ell_2} \binom{n}{k}p^k(1-p)^{n-k}
-
+P(\ell_1\le n_\text{inf} \le \ell_2) = \sum_{k=\ell_1}^{\ell_2} \binom{n}{k}p^k(1-p)^{n-k}
 $$
 Les $\ell_1$ et $\ell_2$ sont des limites pour encadrer. Ici, on veut se fixer deux tâches :
 
-- On veut choisir leurs valeurs tel que $\mathbb P(\ell_1\le n_\text{inf} \le \ell_2) \ge 0.95$ et quand même bien proche aussi de $0.95$.
+- On veut choisir leurs valeurs tel que $P(\ell_1\le n_\text{inf} \le \ell_2) \ge 0.95$ et quand même bien proche aussi de $0.95$.
 - On veut $\ell_1+\ell_2=n$ ou au moins une approximation de $n$, ce qui permettra que l’intervalle $[\ell_1, \ell_2]$ soit le plus symétrique possible autour de $n/2$, et donc le plus étroit.
 
 Une observation clé c’est que, si on choisit $\ell_1$ tel qu’il est vrai que $(X_{(\ell_1)} \le\kappa_p)$, donc il est impliqué qu’il existe ***au moins*** une quantité $\ell_1$ d’observations inférieures ou égales à $\kappa_p$, et donc c’est une équivalence avec la proposition $(\ell_1\le n_\text{inf})$. De même avec $(\kappa_p \le X_{(\ell_2+1)})$ et $(n_\text{inf} \le \ell_2)$. Mettant tout ensemble :
 $$
-
-\mathbb P(\ell_1\le n_\text{inf} \le \ell_2) = \mathbb P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)}),
-
+P(\ell_1\le n_\text{inf} \le \ell_2) = P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)}),
 $$
 et donc
 $$
-
-\mathbb P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)})=\sum_{k=\ell_1}^{\ell_2} \binom{n}{k}p^k(1-p)^{n-k}
-
+P(X_{(\ell_1)}\le\kappa_p\le X_{(\ell_2+1)})=\sum_{k=\ell_1}^{\ell_2} \binom{n}{k}p^k(1-p)^{n-k}
 $$
 La dernière égalité tient pour quelque soit $\kappa_p$. C’est en jouant avec $\ell_1$ et $\ell_2$ qu’on peut trouver un IC à n’importe quel niveau de signification, normalement $95\%$.
 
@@ -196,35 +170,25 @@ En premier, on crée l’idée de “$j$-ème sous-échantillon” $[x_i]_{-j}$ 
 
 Deuxième, on définit une nouvelle statistique $\hat\theta_j$ appelée “$\hat\theta$ privé de $j$” : cette statistique calcule l’estimateur sur $[x_i]_{-j}$. C’est comme si on considérait l’échantillon tiré comme tout la population et puis on en prend $n$ échantillons de taille $(n-1)$.
 $$
-
 \hat\theta_{-j}=\varphi([x_i]_{-j})
-
 $$
 Troisième, on définit autre statistique qui s’appelle le “$j$-ème pseudovaleur” (en anglais, le “$j$-th leave-out-one”) comme suit. Ceci est une combinaison linéaire convexe. Pour rappel, la combinaison linéaire d’estimateurs sans biais est aussi sans biais ssi. la somme des coefficients est égal à 1 (i.e. convexe).
 $$
-
 \hat\theta^*_{j}=n\hat\theta_n-(n-1)\hat\theta_{-j}
-
 $$
 Finalement, on définit l’estimateur jackknife $\hat\theta^*$ comme la moyenne des pseudovaleurs :
 $$
-
 \hat\theta^*=\frac{1}{n}\sum_j \hat\theta_{j}^*
-
 $$
 #### Créer un IC approché avec les pseudovaleurs
 
 Notons que la statistique finale $\hat\theta^*$ est une moyenne. On peut estimer la variance de cette statistique comme
 $$
-
 s^2_{\hat\theta^*}=\frac{1}{n-1}\sum_{i=1}^n(\hat\theta_j-\hat\theta^*)^2
-
 $$
 Pour finalement arriver à la construction d’un intervalle de confiance :
 $$
-
 IC_{95\%}(\theta)\approx[\hat\theta^*-(t^{n-1}_{2.5\%})s_{\hat\theta^*}, \hat\theta^*+(t^{n-1}_{97.5\%})s_{\hat\theta^*}]
-
 $$
 #### L’intérêt de cette méthode
 
@@ -243,15 +207,11 @@ Outre la réduction du biais, l’intérêt du jackknife, primordial ici, est de
 
 Il y a une proposition très importante admise sur le livre de Michel Lejeune. Soit $\hat\theta^*$ l’estimateur jackknife de $\theta$ et soit $s^2_{\hat\theta^*}$ la variance de l’estimateur jackknife. Donc,
 $$
-
 \frac{\hat\theta^*-\theta}{s_{\hat\theta^*}/\sqrt n}\sim\mathcal T_{n-1}, \text{ mais rappelons que} \lim_{n\rightarrow\infty}\frac{\hat\theta^*-\theta}{s_{\hat\theta^*}/\sqrt n}\sim\mathcal N(0,1)
-
 $$
-Notons que la statistique elle est très pareille à 
+Notons que la statistique elle est très pareille à
 $$
-
 \frac{\bar X-\mu}{\sigma/\sqrt n}
-
 $$
 Et que celle-ci aussi suit une loi normale. Donc, la proposition résulte du fait que les pseudovaleurs tendent à être indépendantes et gaussiennes pour une grande variété de
 statistiques, on peut donc voir l’analogie que les pseudovaleurs $[\hat\theta^*_j]$ sont comme les observations $[X_i]$ de $\bar X$.
@@ -262,15 +222,13 @@ En ce qui concerne l’approximation asymptotique de l’intervalle de confiance
 
 #### Préparation
 
-Juste avant de commencer, on va faire une modification importante à l’espérance $\mathbb E[X]$ ou plutôt la moyenne $\mu$ dans ce contexte :
+Juste avant de commencer, on va faire une modification importante à l’espérance $E(X)$ ou plutôt la moyenne $\mu$ dans ce contexte :
 $$
-
 \overbrace{\int_\Omega x\cdot f(x) \space dx}^{I_1} = \overbrace{\int _\Omega x\space dF(x)}^{I_2}, \text{ car }
 
 \\[8pt]
 
 \frac{d}{dx}F(x)=f(x) \iff dF(x)=f(x)dx
-
 $$
 Le deuxième intégrale est l’intégrale de Riemman-Stieltjes, est c’est une généralisation de la première intégrale. Bref, on peut utiliser $I_1$ seulement si $X$ a une fonction de densité, tant que on peut toujours utiliser $I_2$ (continu ou discrète) avec la seule condition que $X$ admet une espérance finie.
 
@@ -284,11 +242,9 @@ Ayant fait ça, on estime $\theta$ en calculant $\hat\theta^*$ sur le nouveau é
 
 Finalement, on estime la variance de $\hat\theta$ en calculant la variance empirique des éléments dans $\hat\Theta^*$, donc
 $$
-
 s^2_{\hat\theta^*}=\frac{1}{M-1}\sum_{i=1}^M(\hat\theta^*_i-\mu_{\hat\theta^*})^2 \text{\hspace{8pt}et\hspace{8pt} }\lim_{n\rightarrow\infty}s^2_{\hat\theta^*}=^\text{p.s.}s^2_{\hat\theta}
-
 $$
-On montre que, lorsque $M$ tend vers l’infini, l’estimateur issu de cette procédure tend presque sûrement vers l’estimateur du maximum de vraisemblance du paramètre $\text{Var}(\hat\theta)$. **Oui, il faut rappeler que $\text{Var}(\hat\theta)$ est un paramètre**.
+On montre que, lorsque $M$ tend vers l’infini, l’estimateur issu de cette procédure tend presque sûrement vers l’estimateur du maximum de vraisemblance du paramètre $V(\hat\theta)$. **Oui, il faut rappeler que $V(\hat\theta)$ est un paramètre**.
 
 En pratique, $M = 100$ fournit une approximation suffisante de cet EMV car l’écart sera alors négligeable par rapport à l’erreur d’estimation du maximum de vraisemblance lui-même.
 
@@ -296,17 +252,15 @@ En pratique, $M = 100$ fournit une approximation suffisante de cet EMV car l’�
 
 En supposant que $\hat\theta$ est asymptotiquement sans biais et gaussien, on peut construire un IC de $\theta$ comme suit
 $$
-
 IC_{95\%}(\theta)\approx[\hat\theta-1.96s^*_{\hat\theta},\hat\theta+1.96s^*_{\hat\theta}]
-
 $$
-L’approximation gaussienne est fréquemment légitime, en particulier si $\hat\theta$ est lui-même une estimation du maximum de vraisemblance de $\hat\theta$. 
+L’approximation gaussienne est fréquemment légitime, en particulier si $\hat\theta$ est lui-même une estimation du maximum de vraisemblance de $\hat\theta$.
 
 Par contre, celle-ci n’est pas assurée pour tous les types de statistiques ou bien elle peut être trop lente pour fournir une approximation satisfaisante au vu de la taille $n$ de l’échantillon.
 
 #### Deuxième construction d’un IC pour $\theta$
 
-Si on peut admettre que 
+Si on peut admettre que
 
 - la distribution de $\hat\theta$ tend vers une gaussienne quand $n\rightarrow\infty$;
 - la variance a une forme équivalente à $\sigma^2_\theta/n$, où $\sigma^2_\theta$ est constante
@@ -314,15 +268,11 @@ Si on peut admettre que
 
 Donc on peut appliquer une méthode *studentisée*. On modifie la méthode de sorte que, à chaque fois qu’on calcule une instance de $\hat\theta^*$ sur un nouveau échantillon, on calcule aussi $s^2_{\hat\theta^*}$. On finira donc avec un vecteur $\hat\Theta^2$ et un autre vecteur $\mathbf{s}^2_{\hat\theta^*}$ On définie un troisième vecteur $\mathbf{T}^*$ tel que
 $$
-
 \mathbf{T}^*=[T^*_i]_{1\le i \le n},\text{ où }T_i^*=\frac{\hat\theta^*_i-\hat\theta}{s^*_{\hat\theta^*, i}/\sqrt n}
-
 $$
 Finalement, on calcule les quantiles empiriques $t^*_{2.5\%}$ et $t^*_{97.5\%}$ pour établir l’IC comme suit :
 $$
-
 IC_{95\%}(\theta)\approx[\hat\theta-(t^*_{2.5\%})\frac{s}{\sqrt n},\hat\theta+(t^*_{2.5\%})\frac{s}{\sqrt n}]
-
 $$
 Il faudrait par contre que $M \ge 1000$ pour avoir des approximations précises.
 
@@ -330,7 +280,7 @@ Il faudrait par contre que $M \ge 1000$ pour avoir des approximations précises.
 
 - L’approche bootstrap est appropriée dans des situations très complexes, ou il n’y aura généralement pas d’alternative, et pas uniquement dans le cadre de l’échantillonnage aléatoire simple. C’est donc un outil extrêmement précieux qui est devenu viable avec les capacités de calcul actuelles.
 - Pour des types très divers de statistiques, il a été démontré que la distribution générée par les valeurs $\hat\Theta^*=[\hat\theta^*_i]_{1\le i \le M}$ en faisant tendre $M$ vers l’infini, appelée distribution bootstrap de la statistique $\theta$, converge vers la vraie distribution de $\theta$ quand $n$ tend vers l’infini et ceci de façon rapide.
-    - C’est-à-dire que, quand $M\rightarrow\infty$, l’estimateur bootstrap $\hat\theta^*$ tend vers l’estimateur de maximum de vraisemblance $\hat\theta$ et, quand $n\rightarrow\infty$, l’estimateur de maximum de vraisemblance $\hat\theta$ tend vers le vrai paramètre $\theta$.
+- C’est-à-dire que, quand $M\rightarrow\infty$, l’estimateur bootstrap $\hat\theta^*$ tend vers l’estimateur de maximum de vraisemblance $\hat\theta$ et, quand $n\rightarrow\infty$, l’estimateur de maximum de vraisemblance $\hat\theta$ tend vers le vrai paramètre $\theta$.
 - Signalons en particulier qu’alors que le jackknife échoue pour obtenir un intervalle de confiance pour la médiane (ou un quantile) de la loi mère, le bootstrap donne un résultat très proche de l’intervalle proposé vers la fin de la section précédente.
 
 # Estimation fonctionnelle
@@ -343,7 +293,6 @@ Si bien l’histogramme s’intéresse plutôt à l’estimation de pourcentage 
 
 La définition mathématique d’un histogramme est comme suit : on prend un échantillon et on crée une suite de valeurs qui seront la point de coupes des barres de l’histogramme. On crée des intervalles basées sur ces points de coupe et finalement on peut définir la fonction histogramme.
 $$
-
 \begin{align*}
 
 \text{Points de coupure : }&\{a_i\}_{1\le i\le {m}} \text{ tel que } a_i < a_{i+1}
@@ -373,43 +322,34 @@ $$
 \frac{n_i/n}{\ell(I_i)} \text{, où }x\in I_i
 
 \end{align*}
-
 $$
-Le plus souvent sera que la grille de découpage $\{a_i\}$ sera de longueur régulière $h$, donc 
+Le plus souvent sera que la grille de découpage $\{a_i\}$ sera de longueur régulière $h$, donc
 $$
-
 \forall i\in\mathbb{N},\space a_{i+1}-a_i=h \implies \hat f_n(x)=\frac{n_i}{nh} \text{, où }x\in I_i
-
 $$
 Notons que si on somme l’aire sous toute les barres, on doit arriver à $1$. Enfin, il s’agit d’une estimation d’une densité, donc la somme des toutes les probabilités doit valoir $1$.
 
 En plus, si on tire juste une observation $x_1$ de la population, la vrai probabilité que telle valeur tombe dans l’intervalle $I_i$ est notée $p_i$, qu’on estime comme $n_i/n$. Pour un échantillon de taille $n$, on va dire que la variable aléatoire $n_i \sim \mathcal B(n,p_i)$ compte le nombre d’observations qui tombe dans l’$i$-ème intervalle. Voyons la conséquence :
 $$
-
 \begin{align*}
 
 \hat f_n(x) = \frac{n_i}{nh} \text{ et } n_i\sim\mathcal B(n,p_i)\implies
 
-&\space\mathbb E[\hat f_n(x)]=\frac{1}{nh}\mathbb E[n_i]=\frac{np_i}{nh}=\frac{p_i}{h}
+&\spaceE(\hat f_n(x)]=\frac{1}{nh}E(n_i)=\frac{np_i}{nh}=\frac{p_i}{h}
 
 \\[7pt]
 
 &\space \text{Var}[\hat f_n(x)]=\frac{np_i(1-p_i)}{n^2h^2}=\frac{p_i(1-p_i)}{nh^2}
 
 \end{align*}
-
 $$
 On sait, en plus, que
 $$
-
 p_i=\int_{a_i}^{a_{i+1}}f(x)dx
-
 $$
 D’où $p_i/h$ serait la valeur moyenne de $f$ sur l’intervalle $I_i$. Il faut rappeler que la définition d’un estimateur sans biais est
 $$
-
-\mathbb E[\hat f(x)]=f(x), \text{ et voyons que } \mathbb E[\hat f_n(x)]=\frac {p_i} h
-
+E(\hat f(x)]=f(x), \text{ et voyons que } E(\hat f_n(x)]=\frac {p_i} h
 $$
 Donc $\hat f_n(x)$ n’est donc sans biais que pour les valeurs de $x\in I_i$ où la vraie densité $f$ prend cette valeur moyenne, que c’est juste un point particulier dans un intervalle réelle… donc juste un point $x^*_i$ ou un ensemble de points. Pour la plupart d’un intervalle, $\hat f_n(x)$ est biaisé. Le biais sur un point $x$ différent de $x^*_i$ est $f(x^*_i)-f(x)=p_i/h-f(x)$.
 
@@ -434,21 +374,16 @@ $n → ∞$, $h → 0$, $nh → ∞$—restent nécessaires pour assurer d’aut
 
 Si $f$ est deux fois dérivable, donc pour tout $x$ on a que
 $$
-
 \text{EQM}(\hat f_n(x))= \frac{h^2}{12}(f^\prime(x))^2+\frac{f(x)}{nh}+o(h^2)+o(\frac{1}{nh})
-
 $$
 et, si on laisse tendre $n → ∞$, $h → 0$ et $nh → ∞$ on finit donc avec
 $$
-
 \text{EQM}(\hat f_n(x))=\frac{h^2}{12}(f^\prime(x))^2+\frac{f(x)}{nh}
-
 $$
 Donc les restes de séries disparaissent. Le premier terme est dû au biais au carré et le deuxième terme à la variance.
 
 Maintenant, on ne s’intéresse plus a laisser $h\rightarrow\infty$ mais à savoir la vitesse de convergence de l’EQM à zéro en choisissant une valeur concrète de $h$. Si on prend la dérivé de EQM par rapport à $h$ et on l’annule, le $h$ qu’on obtient pour atteindre le minimum de EQM serait
 $$
-
 h=
 
 \left(
@@ -456,7 +391,6 @@ h=
 \frac{6f(x)}{f\prime(x)^2}
 
 \right)^{1/3}n^{-1/3}
-
 $$
 Si on choisit tel $h$, l’EQM serait asymptotiquement équivalent à $g(x)n^{-2/3}$, où g est une fonction seulement d’argument $x$ qui dépend de $f(x)$ et $f^\prime(x)$, et donc on dit que la vitesse de convergence est $n^{-2/3}$.
 
@@ -484,11 +418,9 @@ En plus, si la fonction $K$ est un noyau, la fonction $K^*$ définie comme $K^*(
 
 Maintenant, on suppose avoir tiré un échantillon $[x_i]$ de taille $n$ d’une population. On veut estimer la densité réelle avec l’estimateur $\hat f$ défini comme
 $$
-
 \hat f(x)=\frac{1}{nh} \sum_{i=1}^nK\left(\frac{x-x_i}{h}\right)
-
 $$
-où il nous reste le choix de h, appelé la “fenêtre de comptage” ou “bandwidth” en anglais. 
+où il nous reste le choix de h, appelé la “fenêtre de comptage” ou “bandwidth” en anglais.
 
 Pour illustrer l’objectif, supposons qu’on définit K comme une gaussienne $\mathcal N(0,2.25)$ et qu’on tire un échantillon $[-2.1,-1.3,-0.4,1.9,5.1,6.2]$. Voyons c’e que ça donne pour un histogramme $(h=2)$ et un estimateur à noyau.
 
@@ -512,9 +444,7 @@ Le noyau ne doit pas forcément être une gaussienne. Il existe plusieurs choix 
 
 Avant de commencer, il faut une réécriture utile de l’estimateur noyau comme suit :
 $$
-
 \hat f(x)=\frac{1}{nh}\sum_{i=1}^nK\left(\frac{x-X_i}{h}\right) \iff\hat f(x)=\frac{1}{n}\sum_{i=1}^n Z_i, \text{ où }Z_i=\frac{1}{h}K\left(\frac{x-X_i}{h}\right)
-
 $$
 Notons que l’estimateur $\hat f$, qui est une variable aléatoire, sera juste la moyenne de la somme des $Z_i$.
 
@@ -522,13 +452,11 @@ Notons que l’estimateur $\hat f$, qui est une variable aléatoire, sera juste 
 
 Il y a beaucoup de développements dans le matériel, mais on saut jusqu’à la fin pour comprendre le résultat. Ici, $x$ est la variable indépendante de l’estimateur $\hat f$, et $t$ la variable indépendante de la vrai densité $f$. On a donc, **pour un $x$ fixé**,
 $$
-
 \begin{align*}
 
-\mathbb E[\hat f(x)]-f(x)=\frac{h^2}{2}f^{\prime\prime}(x)\int_\mathbb{R} u^2K(u)du+o(h^2), \text{ où }u=\frac{x-t}{h}
+E(\hat f(x)]-f(x)=\frac{h^2}{2}f^{\prime\prime}(x)\int_\mathbb{R} u^2K(u)du+o(h^2), \text{ où }u=\frac{x-t}{h}
 
 \end{align*}
-
 $$
 Pour h petit le biais dépend donc de f(x) et du moment d’ordre 2 du noyau. Le biais est du signe de f”(x) : si f est concave en x le biais est négatif, si elle est convexe le biais est positif.
 
@@ -538,13 +466,10 @@ On voit que le biais se présente tel qu’il sous-estime les maximums et sur-es
 
 Pour la variance, on a que :
 $$
-
-\text{Var}(\hat f(x))=\frac{1}{nh}f(x)\int_\mathbb{R} K(u)^2du+O\left(\frac 1 n\right)
-
+V(\hat f(x))=\frac{1}{nh}f(x)\int_\mathbb{R} K(u)^2du+O\left(\frac 1 n\right)
 $$
 Pour l’erreur quadratique moyenne et **un $x$ fixé**, on a que
 $$
-
 \begin{align*}
 
 \text{EQM}(\hat f(x))
@@ -558,7 +483,6 @@ $$
 +O\left(\frac 1 n\right)
 
 \end{align*}
-
 $$
 Faisant abstraction des termes o(h4) + O( 1n ) n´egligeables dans les conditions de convergence, on voit que plus la largeur de fenˆetre h est faible plus le biais diminue mais plus la variance augmente et, inversement, l’´elargissement de la fenˆetre augmente le biais et diminue la variance.
 
@@ -566,7 +490,6 @@ Si on prend telle expression pour cherche le h qui la minimise, telle h est d’
 
 Un autre indicateur de performance à considérer serait le EQIM : l’erreur quadratique intégrée moyenne. Bref, on prend l’intégrale de l’EQM pour tous les $x$, et donc on n’aura plus besoin de parler de “un $x$ fixé”.
 $$
-
 \begin{align*}
 
 \text{EQIM}(\hat f)&=\int_\mathbb{R}\mathbb E\left[\left(\hat f(x)-f(x)\right)^2\right]dx=\int_\mathbb{R}\text{EQM}(\hat f(x))dx
@@ -588,7 +511,6 @@ $$
 +O\left(\frac 1 n\right)
 
 \end{align*}
-
 $$
 De même, si on prend telle expression pour cherche le $h$ qui la minimise, telle $h$ est d’ordre $n^{-1/5}$, qui est plus vite que le $n^{-2/3}$ de l’EQIM de l’histogramme si on l’aurait calculée.
 
@@ -610,81 +532,62 @@ Même si les expressions asymptotiques sont à prendre avec précaution, elles p
 
 Pour estimer la vraie fonction de répartition $F$, on utilisera la répartition **empirique** $F_n$, **même si c’est une loi continue** ! Ici, $I$ est une fonction indicatrice, qui vaut $1$ si la valeur réalisé de $X_i$ se trouve dans $(-\infty,x]$ et vaut $0$ sinon.
 $$
-
 F_n(x)=\frac 1 n \sum_{i=1}^nI_{(-\infty,x]}(X_i)
-
 $$
 Notons que la fonction de répartition empirique n’est pas forcément un estimateur, donc pas besoin d’écrire un chapeau sur $F_n$ que du moment où on l’utilise comme estimateur $\hat F_n$.
 
-Visuellement, c’est une fonction en escalier qui augmente de $1/n$ chaque fois que la valeur de la variable indépendante $x$ rencontre une valeur réalisée $x_i$.  
+Visuellement, c’est une fonction en escalier qui augmente de $1/n$ chaque fois que la valeur de la variable indépendante $x$ rencontre une valeur réalisée $x_i$.
 
 Notons que les $X_i$ sont des v.a. iid., et donc de les passer par la fonction indicatrice (une v.a. de Bernoulli masquée avec $p=F(x)$) et finir avec des $I(X_i)$ ne change pas le fait qu’elles sont des v.a. iid. En plus, on est en train de les additionner, donc une somme de v.a. iid. On peut donc évoquer le TCL, qui nous  mène a des faits remarquables :
 
 Si on laisse $x$ fixé a une valeur arbitraire,
 $$
-
 n\hat F_n(x)\sim\mathcal B(n,F(x)) \implies \lim_{n\rightarrow\infty} \hat F_n(x)\sim\mathcal N\left(F(x),\frac{F(x)(1-F(x))}{n}\right)
-
 $$
-**Ceci est juste variable si $n$ est grand**. Notons donc, $\hat F_n(x)$ est asymptotiquement sans biais et la variance tend vers zéro. Donc, le MSE tend vers zéro, et donc $\hat F_n(x)$ est un estimateur convergent de $F(x)$. 
+**Ceci est juste variable si $n$ est grand**. Notons donc, $\hat F_n(x)$ est asymptotiquement sans biais et la variance tend vers zéro. Donc, le MSE tend vers zéro, et donc $\hat F_n(x)$ est un estimateur convergent de $F(x)$.
 
 En plus, on peut construire un intervalle de confiance pour $p=F(x)$ tout de même comme on le ferait dans le cas d’une binomiale simple “de manuel”.
 
 Finalement et le plus important, la répartition empirique comme estimateur $\hat F_n$ est un estimateur sans biais, convergent de $F(x)$ et le maximum de vraisemblance de $F$. Ce dernier résultat résulte trop compliqué, mais on dira juste que $\hat F_n$ est la fonction qui maximise la probabilité d’observer un échantillon réalisé.
 $$
-
 \hat F_n : \max_F L(F|[x_i])=\prod_{i=1}^nF^\prime(x_i)
-
 $$
 ### Construire un intervalle de confiance pour chaque valeur $F(x)$
 
 Avant, on voudrait montrer la convergence uniforme de $\hat F$ vers $F$. Ce théorème est celui de Glivenko-Cantelli, qui on dit que la différence entre la répartition réelle et son estimateur tend vers $0$ si on augmente la taille de l’échantillon.
 $$
-
 \lim_{n\rightarrow\infty}\left(\sup_{x\in\mathbb{R}}|\hat F_n(x)-F(x)|\right)=^\text{p.s.}0
-
 $$
 Grâce à Kolmogorov-Smirnov, la borne $\sup$ de la différence est utilisée pour créer l’intervalle de confiance de $F(x)$ comme suit
 $$
-
 \text{Soit la statistique }D_n=\sup_{x\in\mathbb{R}}|\hat F_n(x)-F(x)|. \text{ Donc, }
 
 \\[8pt]
 
-\lim_{n\rightarrow\infty}\mathbb P(\sqrt{n}D_n<x)=
+\lim_{n\rightarrow\infty}P(\sqrt{n}D_n<x)=
 
 \underbrace{1-2\sum_{k=1}^\infty(-1)^{k-1}e^{-2{(kx)}^2}}_{G(x)}
-
 $$
 Notons que $G(x)$ est la répartition de la statistique $\sqrt{n}D_n$. La fonction $G(x)$ est vraiment puissante, du fait qu’elle ne dépend pas de la vrai répartition de départ $F(x)$, même pour $n$ fini. De ce fait, elle a été tabulée. À partir de $n = 40$, l’approximation par $G(x)$ est correcte à $10^{−2}$ près. En plus, son quantile de $95\%$ est aussi tabulé. Voyons,
 $$
-
-\mathbb P(\sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%})\simeq95\%
-
+P(\sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%})\simeq95\%
 $$
 Mais, voyons que
 $$
-
 \sqrt{n}\sup_{x\in\mathbb{R}}|\hat F_n-F(x)|< g_{95\%}\iff\forall x \in\mathbb{R}, \sqrt{n}|\hat F_n-F(x)|< g_{95\%}
-
 $$
 Finalement,
 $$
-
 IC_{95\%}(F(x))=\left[\hat F_n(x)-\frac{g_{95\%}}{\sqrt{n}}, \hat F_n(x)+\frac{g_{95\%}}{\sqrt{n}}\right]
-
 $$
 En plus, pour la fonction $G(x)$ on peut faire une simplification : si $x>0.8$ et $n=40$, $G(x)$ vaut presque juste $1-2e^{-2{x}^2}$. Étant donné qu’on s’intéresse quand $x=0.95$, $G(x)\approx 1.36$.
 $$
-
 IC_{95\%}(F(x))=\left[\hat F_n(x)-\frac{1.36}{\sqrt{n}}, \hat F_n(x)+\frac{1.36}{\sqrt{n}}\right]
-
 $$
 ### Lissage de $F_n$
 
 Très pareil à la section des estimateurs â noyau, on définit un nouveau estimateur $\hat F_n$ différent de la répartition empirique $F_n$. Cette estimateur sera une intégrale d’un estimateur à noyau $\hat f_n$ :
 $$
-
 \begin{align*}
 
 \hat F_n(x) &= \int_{-\infty}^x\hat f_n(t)dt=\int_{-\infty}^x\frac{1}{nh}\sum_{i=1}^nK\left( \frac{t-x_i}{h}\right)dt
@@ -698,21 +601,17 @@ $$
 &= \frac 1 n \sum_{i=1}^n\int_{-\infty}^{\frac{x-x_i}{h}}K(v)dv, \text{ où }v=\frac{t-x_i}{h}
 
 \end{align*}
-
 $$
 Notons que, dans la dernière ligne, on a mis le $1/h$ à l’intérieur de l’intégrale, puis il disparaît avec le changement de variable.
 
 Définissons  le “noyau intégré” comme $H$ et on aura un meilleure écriture de $\hat F_n$
 $$
-
 H(u)=\int_{-\infty}^uK(x)dx \implies \hat F_n(x)=\frac 1 n\sum_{i=1}^nH\left( \frac{x-x_i}{h}\right)
-
 $$
 Ici, comme pour la densité, se pose le problème de la largeur de fenêtre optimale. Il est toutefois moins crucial en raison de la plus faible sensibilité de l’estimation a ce paramètre de lissage.
 
 Par exemple, on s’était dit que le noyau de Tukey est le plus pratique. Sa version intégrée serait donc
 $$
-
 H(u)=
 
 \begin{cases}
@@ -728,7 +627,6 @@ H(u)=
 1, \text{ si } 1 \le u
 
 \end{cases}
-
 $$
 Lorsqu’on examine le graphe obtenu avec différents noyaux, on constate que la différence est imperceptible. Ceci s’explique par le fait que l’estimation d’une fonction de répartition est fortement contrainte par la condition de croissance de $0$ à $1$, et par sa continuité à droite. De ce fait, le problème est beaucoup plus simple que pour la densité.
 
@@ -745,9 +643,7 @@ Pour la suite, on suppose un noyau de Rosenblatt, mais les résultats sont valab
 
 Pour le biais, on trouve que
 $$
-
-\mathbb E[\hat F_n(x)-F(x)]=\frac {h^2}2 f\prime(x)\int_\mathbb{R} u^2K(u)du+o(h^2)
-
+E(\hat F_n(x)-F(x)]=\frac {h^2}2 f\prime(x)\int_\mathbb{R} u^2K(u)du+o(h^2)
 $$
 Si bien la répartition empirique $F_n$ est sans biais, un lissage $\hat F_n$ introduit un faible biais. En fait, ce biais s’annule aux extrema de la vrai répartition $F$.
 
@@ -755,15 +651,13 @@ Si bien la répartition empirique $F_n$ est sans biais, un lissage $\hat F_n$ in
 
 Pour la variance, on a que
 $$
-
-\text{Var}(\hat F_n(x))=\frac{1}{n}\left(
+V(\hat F_n(x))=\frac{1}{n}\left(
 
 F(x)[1-F(x)]
 
 +hf(x)\left[\int_{-1}^1H^2(u)du-1\right]+o(h)
 
 \right)
-
 $$
 
 On retrouve dans le premier terme de son expression asymptotique la variance de $F_n$. Par conséquent, on gagne sur la variance de $F_n$ si le deuxième terme est négatif, soit  $\left[\int_{-1}^1H^2(u)du\right]<1$, ce qui est vérifié pour les noyaux intégrés courants.

@@ -8,38 +8,38 @@
 
 Soit $\Sigma u_n$ une série à termes réels ou complexes. Supposons que $k \in [0, 1[$ et $N \in \mathbb{N}$ tel que si $n ≥ N, |u_{n+1}| ≤ k|u_n|$. Alors la série $\Sigma u_n$ converge.
 
-#### Critère de d’Alembert
-
-C’est un corollaire de la règle d’Alembert. Soit $\Sigma u_n$ à termes strictement positifs et supposons qu’il existe $\ell$ tel que $\lim_{n\rightarrow \infty} |\frac{u_{n+1}}{u_n}| = \ell$
-
-.
-
-- si $\ell < 1$$\implies$ $\Sigma u_n$ converge.
-- si $\ell >1 \implies \Sigma u_n$ ne converge pas.
-- si $\ell = 1$, elle peut converger ou diverger. On ne peut rien conclure.
-**De même si la limite n’existe pas !**
-
-Il est à noter que c’est plus facile d’utiliser d’Alembert avec des séries à termes positifs.
-
-**Note pratique.** On peut écrire le quotient $\frac{u_{n+1}}{u_n}$ comme $|\frac{u_{n+1}}{u_n}|$, et si ce dernier converge, le premier converge aussi.
-
-Après, encore si $(u_n)$ série a termes positifs, et supposant que $\Sigma u_n$ converge, on peut sommer $\Sigma u_n$ dans n’importe quel ordre. On ne change pas ni la nature ni la somme de $\Sigma u_n$. (on peut appliquer les propriétés commutative, associative et distributive !)
+t supposant que $\Sigma u_n$ converge, on peut sommer $\Sigma u_n$ dans n’importe quel ordre. On ne change pas ni la nature ni la somme de $\Sigma u_n$. (on peut appliquer les propriétés commutative, associative et distributive !)
 
 ### Règle de Cauchy et Critère de Cauchy
 
 #### Règle de Cauchy
 
-Soit $\Sigma u_n$ une série à termes réels ou complexes. Supposons que $k \in [0, 1[$ et $N \in \mathbb{N}$ tel que si $n ≥ N, \sqrt[n]{|u_n|} \le k$. Alors, la série $\Sigma u_n$ converge.
+Soit $\sum u_n$ une série à termes réels ou complexes. Supposons qu'il existe $k \in [0, 1[$ et $N \in \mathbb{N}$ tels que, si $n \geq N$, alors $\sqrt[n]{|u_n|} \leq k$. Alors, la série $\sum u_n$ converge.
+
+#### Critère de d’Alembert
+
+C’est un corollaire de la règle de d’Alembert. Soit $\sum u_n$ à termes strictement positifs et supposons qu’il existe $\ell$ tel que
+
+$$\lim_{n\rightarrow \infty} \left| \frac{u_{n+1}}{u_n} \right| = \ell.$$
+
+- Si $\ell < 1$, alors $\sum u_n$ converge.
+- Si $\ell > 1$, alors $\sum u_n$ diverge.
+- Si $\ell = 1$, on ne peut rien conclure (la série peut converger ou diverger).
+- **De même si la limite n’existe pas !**
+
+Il est à noter qu’il est plus facile d’utiliser d’Alembert avec des séries à termes positifs.
+
+**Note pratique.** On peut écrire le quotient $\frac{u_{n+1}}{u_n}$ comme $|\frac{u_{n+1}}{u_n}|$, et si ce dernier converge, le premier converge aussi.
 
 #### Critère de Cauchy
 
-C’est un corollaire de la règle d’Alembert. Soit $\Sigma u_n$ à termes strictement positifs et supposons qu’il existe $l$ tel que $\lim_{n\rightarrow \infty} \sqrt[n]{|u_n|} = \ell$
+C’est un corollaire de la règle de Cauchy. Soit $\sum u_n$ à termes strictement positifs et supposons qu’il existe $\ell$ tel que
 
-.
+$$\lim_{n\rightarrow \infty} \sqrt[n]{|u_n|} = \ell.$$
 
-- si $\ell < 1$$\implies$ $\Sigma u_n$ converge.
-- si $\ell >1 \implies \Sigma u_n$ ne converge pas.
-- si $\ell = 1$, elle peut converger ou diverger. On ne peut rien conclure.
+- Si $\ell < 1$, alors $\sum u_n$ converge.
+- Si $\ell > 1$, alors $\sum u_n$ diverge.
+- Si $\ell = 1$, on ne peut rien conclure (la série peut converger ou diverger).
 
 ## Comparaison a une série de Riemann
 
@@ -76,13 +76,11 @@ De plus, sa somme partielle $S_n = \sum_i^n (-1)^n u_n$ vérifie que $|S_\infty-
 
 On peut utiliser juste les premiers termes du développement limité d’une expression/fonction pour trouver une équivalence (au sens de convergence) entre deux fonctions. Par exemple :
 
-$$
-\text{Autour de 0, }\ln(1+x)=\sum_{n=1}^\infty \frac{(-1)^{n+1}x^n}{n}=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}\dots
+$$\text{Autour de 0, }\ln(1+x)=\sum_{n=1}^\infty \frac{(-1)^{n+1}x^n}{n}=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}\dots
 \newline
 \text{ }
 \newline
-\implies \ln(1+x) \sim x \text{ quand } x\longrightarrow 0 
-$$
+\implies \ln(1+x) \sim x \text{ quand } x\longrightarrow 0$$
 
 Cette dernière similitude nous permet de remplacer, dans une certaine expression, $\ln(1+x)$ par $x$, et voir si tel remplacement nous mène à conclure une convergence ou divergence. Notons que $x$ est le premier terme du DL de $\ln(1+x)$. Autour de $0$, $\ln(1+x) \simeq x$.
 

@@ -10,9 +10,7 @@ On voudrait introduire la courbe de Phillips dans le modèle IS/LM, d’où l’
 
 L’offre à court terme est donné par l’équation suivant :
 
-$$
-Y=C(Y-T)+I(Y,r+x)+G
-$$
+$$Y=C(Y-T)+I(Y,r+x)+G$$
 
 La différence avec le traditionnel IS/LM est l’inclusion de la prime de risque $x$ dans l’intérêt $r$ (en fait, c’est plutôt le taux directeur réel). Tel intérêt est donné pas LM horizontale, càd LM est la courbe $r=\bar{r}$, une constante.
 
@@ -20,45 +18,37 @@ La différence avec le traditionnel IS/LM est l’inclusion de la prime de risqu
 
 À la fin du chapitre 1, on avait introduit une forme finale de la relation inflation-chômage :
 
-$$
-\underbrace{\pi_t-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_t-u_n)
-$$
+$$\underbrace{\pi_t-\pi_{t-1}}_{\Delta\pi}=-\alpha(u_t-u_n)$$
 
 > [!note]
 > Pour simplicité, on évite de spécifier la période $t$ dans l’’inflation et le chômage à chaque moment. On juste considère la période actuelle $t$ ($\pi$) et une période future quelconque, pas forcément $t+1$ ($\pi^e$). Ceci devient donc :
 >
 > $$
 > \underbrace{\pi-\pi^e}_{\Delta\pi}=-\alpha(u-u_n)
-> $$
-
+>
+$$
 On rappelle que $\alpha$ est l’impact du chômage $u$ sur les salaires $W$, ou “l’élasticité-chômage des salaires”, et c’est une relation en sens inverse.
 
 - Si $u > u_n$, la variation de l’inflation $\Delta\pi$ est négative, donc elle baisse en temps $t$.
 - Si $u < u_n$, la variation de l’inflation $\Delta\pi$ est positive, donc elle augmente en temps $t$.
 
 $u$ étant le taux de chômage, on peut bien écrire la population de travail total $L$ comme la somme des travailleurs actifs $N$ et de chômeurs $U$ (tout en quantités absolues et non pas des taux), ce qui nous permet de faire les manipulations qui suivent :
-
 $$
 u=\frac{U}{L}=\frac{(L-N)}{N}=1-\frac{N}{L} \iff N=L(1-u)
 $$
-
 De plus, on dira qu’une unité de travailleurs actifs est égal à une unité de production : $N=L$. Il vient que $Y=L(1-u)$. Ceci est intéressant quand on se trouve sur le taux de chômage naturel ($u=u_n$), d’où on peut tracer deux définitions importantes :
 
 - Emploi structurel, potentiel ou plein emploi : $N_n =L(1-u_n)$
 - Production structurel, potentielle ou pleine production : $Y_n=L(1-u_n)$
 
 Avec la deuxième définition, on peut déduire **l’écart de production** : la distance entre la production actuelle avec la production potentielle.
-
 $$
 Y-Y_n=L\left((1-u)-(1-u_n)\right)=-L(u-u_n)
 $$
-
 Il est évident que, quand on est sur le plein emploi (càd. quand $u=u_n$), l’écart de production est nul. On peut remplacer $(u-u_n)$ avec $-(Y_t-Y_n)/L$ dans la relation emploi-chômage :
-
 $$
 \underbrace{\pi-\pi^e}_{\Delta\pi}=\frac{\alpha}{L}(Y-Y_n) \implies \underbrace{\pi-\pi_{t-1}}_{\Delta\pi}=\frac{\alpha}{L}(Y-Y_n), \text{ supposant }{\pi^e=\pi_{t-1}}
 $$
-
 D’où on déduit que $\pi_t$ augmente quand $Y > Y_n$. En général, l’inflation a une relation en même sens que la production.
 
 ## Dynamique et équilibre de moyen terme
@@ -78,7 +68,6 @@ On vient de voir que l’inflation $\pi$ augmente si la production actuelle $Y_t
 On propose une écriture des anticipation tout simplement comme $A=C+I$. Ceci implique que $A$ est une fonction qui prend comme variables indépendantes la production $Y$, les taxes $T$, les taux d’intérêt $r$ et la prime de risque, $x$ (laquelle on suppose constante pour toute les périodes).
 
 Mais, pour que ce soit vraiment des anticipations, on doit aussi prendre en compte les futurs de toutes ces variables. Finalement, la fonction d’anticipation devient ce qui sui :
-
 $$
 Y=A(Y,Y^e,T,T^e,r,r^e)+G
 $$

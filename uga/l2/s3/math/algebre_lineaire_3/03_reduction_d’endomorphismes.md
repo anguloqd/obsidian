@@ -45,9 +45,7 @@ Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \
 
 La formule de changement de base est la suivante :
 
-$$
-B=Q^{-1}AP
-$$
+$$B=Q^{-1}AP$$
 
 - On considère 4 bases : $\mathcal{B}_{E}$, $\mathcal{B}_{E}'$, $\mathcal{B}_{F}$, $\mathcal{B}_{F}'$.
 - $A = \text{Mat}_{\mathcal{B}_{E},\mathcal{B}_{F}}(f)$ et $B = \text{Mat}_{\mathcal{B}_{E}',\mathcal{B}_{F}'}(f)$ sont des fonctions.
@@ -55,9 +53,7 @@ $$
 
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
 
-$$
-B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
-$$
+$$B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)$$
 
 1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
@@ -69,9 +65,7 @@ Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m’a posé de problèmes.
 
 Le processus est plus simple si on parle d'un endomorphisme $E \mapsto E$ :
 
-$$
-B = P^{-1}AP
-$$
+$$B = P^{-1}AP$$
 
 - $P = P_{\mathcal{B},\mathcal{B}'}.$
 - $A = \text{Mat}_{\mathcal{B}}(f)$.
@@ -98,8 +92,7 @@ Le polynôme caractéristique est le polynôme unitaire (dont le coefficient du
 
 terme de plus haut degré est 1) lié à la matrice $M$ par $P_M(\lambda) = \det(M-\lambda I)$. Il est invariant sous la similarité de matrices. Par exemple :
 
-$$
-M = \begin{bmatrix}
+$$M = \begin{bmatrix}
 1&-1&0\\
 1&-2&-1\\
 0&-1&1
@@ -114,8 +107,7 @@ M = \begin{bmatrix}
 \newline
 \text{}
 \newline
-= -\lambda(\lambda-1)(\lambda-3)
-$$
+= -\lambda(\lambda-1)(\lambda-3)$$
 
 Il y a des situations où il y a une “racine double”, c’est-à-dire, ou un facteur du polynôme caractéristique est au carré (ou à autre puissance différente de 1). Dans ce cas, pour construire la matrice de passage $P$, on devra déduire deux bases linéairement indépendantes du valeur propre. Si c’est impossible, la matrice est non-diagonalisable.
 
@@ -131,21 +123,17 @@ On note ici que l’ensemble de racines d’un polynôme caractéristique d’un
 
 Le sous-espace propre $E_\lambda$ est le noyau de $(M-\lambda I)$. Si $v$ appartient $E_\lambda$, alors :
 
-$$
-v \in \text{Ker}(M-\lambda I) \iff (M-\lambda I)v = 0 \iff Mv = \lambda v
-$$
+$$v \in \text{Ker}(M-\lambda I) \iff (M-\lambda I)v = 0 \iff Mv = \lambda v$$
 
 ### Vecteur propre : $v_\lambda$
 
 Un vecteur propre $v_\lambda$ associé a un valeur propre $\lambda$ est un tel vecteur qui satisfait l’équation $Mv_\lambda = \lambda v_\lambda$. Intuitivement, le vecteur propre d’un opérateur linéaire est la direction où cet opérateur fonctionne comme si c’était une escalade. En la pratique, on ne cherche pas seulement un vecteur propre, mais une base des vecteurs propres. Continuant avec l’exemple (les solutions sont des bases):
 
-$$
-E_\lambda = \{0,1,3\} \implies \begin{cases}
+$$E_\lambda = \{0,1,3\} \implies \begin{cases}
 E_0 = \{k \overrightarrow{(1,1,1)},\space k \in \mathbb{R} \}\\
 E_1 = \{k \overrightarrow{(1,0,-1)},\space k \in \mathbb{R} \}\\
 E_3 = \{k\overrightarrow{(1,-2,1)},\space k \in \mathbb{R} \}\\
-\end{cases}
-$$
+\end{cases}$$
 
 Si on crée une famille avec ces bases de chaque sous espace propre, la famille est libre.
 
@@ -159,8 +147,7 @@ Ce dernier est utile dans le cas d’un valeur propre avec multiplicité algébr
 
 Finalement, on construit notre diagonalisation qui est de base $A = PDP^{-1}$. Elle devient ce qui suit. Les couples vecteurs-valeurs doivent être dans la même colonne de leurs matrices respectives.
 
-$$
-M=
+$$M=
 \overbrace{
 \begin{bmatrix}
 1&1&1\\
@@ -175,8 +162,7 @@ M=
 0&0&3
 \end{bmatrix}
 }^D
-P^{-1}
-$$
+P^{-1}$$
 
 **Théorème**. Si $f$ est un endomorphisme de $\mathbb{R}^n$ a travers la matrice $M$, les assertions suivantes sont équivalentes :
 
@@ -192,8 +178,7 @@ $$
 
 Appliquer une puissance à une matrice diagonale est beaucoup plus facile en termes de computation que à une matrice non-diagonale. Particulièrement, si on reprend la matrice diagonale D de l’exemple passé…
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 0&0&0\\
 0&1&0\\
 0&0&3
@@ -202,35 +187,29 @@ $$
 0^n&0&0\\
 0&1^n&0\\
 0&0&3^n
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 La définition d’une puissance est la multiplication répétitive d’une base. Notons que :
 
-$$
-\begin{align*}
+$$\begin{align*}
 M^n & = \overbrace{M \times M \times \dots \times M}^\text{n fois}
 \newline
 & = PD\cancel{P^{-1}} \times \dots \times \cancel{P}DP^{-1}
 \newline
 & = PD^nP^{-1}
-\end{align*}
-$$
+\end{align*}$$
 
 ### Inverse d’une matrice : $M^{-1}=PD^{-1}P^{-1}$
 
 De même avec l’opération inverse, qui est aussi un exposant $-1$. On aura besoin de la propriété $(AB)^{-1} = B^{-1} A^{-1}$, et aussi de la associativité de matrices. Le résultat final c’est que l’exposant agit sur la matrice diagonale, qui est de nouveau convenant pour les opération de puissances comme vu dans la section passée.
 
-$$
-M^{-1} = [(PD)(P^{-1})]^{-1} = (P^{-1})^{-1}(PD)^{-1} = PD^{-1}P^{-1}
-$$
+$$M^{-1} = [(PD)(P^{-1})]^{-1} = (P^{-1})^{-1}(PD)^{-1} = PD^{-1}P^{-1}$$
 
 ### Exponentielle d’une matrice : $e^M=Pe^DP^{-1}$
 
 Si bien la notion de $e^M$, avec $M$ une matrice, ne fais pas du sens, on utilise plutôt l’expansion de Taylor de la fonction $e^x$. Cette dernier fait du sens car on a juste besoin d’une définition de puissances de matrices, ce qu’on a déjà vu et construit.
 
-$$
-e^x = \sum_{n \ge 0} \frac{x^n}{n!} \implies e^M = \sum_{n \ge 0} \frac{M^n}{n!}= \sum_{n \ge 0} \frac{PD^nP^{-1}}{n!}= P(\sum_{n \ge 0}\frac{D^n}{n!})P^{-1}
+$$e^x = \sum_{n \ge 0} \frac{x^n}{n!} \implies e^M = \sum_{n \ge 0} \frac{M^n}{n!}= \sum_{n \ge 0} \frac{PD^nP^{-1}}{n!}= P(\sum_{n \ge 0}\frac{D^n}{n!})P^{-1}
 
 \newline
 \text{ }
@@ -254,27 +233,23 @@ e^0 & 0 & 0 \\
 \text{ }
 \newline
 
-\text{Finalement, } e^M = Pe^DP^{-1}
-$$
+\text{Finalement, } e^M = Pe^DP^{-1}$$
 
 ### Application aux systèmes différentiels linéaires
 
 Commençons avec un exemple. On a le système d’équations différentiels ($y_i = y_i(x)$):
 
-$$
-\begin{cases}
+$$\begin{cases}
 \begin{align*}
 &y^\prime_1 &{=} &&{y_1} &&+ && y_2
 \\
 &y^\prime_2 &{=} &&{4y_1} &&- &&2y_2
 \end{align*}
-\end{cases}
-$$
+\end{cases}$$
 
 Avant de chercher les solutions, on écrit le système sous forme matricielle comme suit :
 
-$$
-\mathbf{y^\prime}=A\mathbf{y} \iff 
+$$\mathbf{y^\prime}=A\mathbf{y} \iff
 \begin{bmatrix}
 y^\prime_1 \\
 y^\prime_2
@@ -287,13 +262,11 @@ y^\prime_2
 \begin{bmatrix}
 y_1 \\
 y_2
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 La solution n’est pas encore claire ici. Donc, si $A$ est diagonalisable avec $P$ comme matrice de passage, on va simplement supposer que $\mathbf{y}=P\mathbf{u}$, où $\mathbf{u}$ est un vecteur inconnu. La transformation suivante nous sera utile :
 
-$$
-\mathbf{y}=P\mathbf{u} \implies \mathbf{y^\prime} = P\mathbf{u^\prime} \implies P^{-1}\mathbf{y'} = \mathbf{u'} \implies
+$$\mathbf{y}=P\mathbf{u} \implies \mathbf{y^\prime} = P\mathbf{u^\prime} \implies P^{-1}\mathbf{y'} = \mathbf{u'} \implies
 \overbrace{
 P^{-1}A\mathbf{y}=\mathbf{u'}}^{(\mathbf{y'}=A\mathbf{y})}
 \\
@@ -301,8 +274,7 @@ P^{-1}A\mathbf{y}=\mathbf{u'}}^{(\mathbf{y'}=A\mathbf{y})}
 \\
 \implies
 \overbrace{
-P^{-1}AP\mathbf{u}=\mathbf{u'}}^{(\mathbf{y}=P\mathbf{u})} \implies \mathbf{u^\prime}=D\mathbf{u}
-$$
+P^{-1}AP\mathbf{u}=\mathbf{u'}}^{(\mathbf{y}=P\mathbf{u})} \implies \mathbf{u^\prime}=D\mathbf{u}$$
 
 Pourquoi est-elle utile ? Le système d’équations du départ est “couplé”, càd. on ne peut pas séparer $y_1$ et $y_2$ pour trouver des solutions particulières. Par contre, quand le système n’est pas couplé, il est plus facile de trouver une solution particulière.
 
@@ -310,8 +282,7 @@ Il arrive que le système n’est pas couplé quand la matrice qui le décrit, $
 
 On diagonalise alors $A$, et on détermine sa matrice de passage $P$ et celle diagonalisée $D$ pour finalement déterminer $\mathbf{u^\prime}$:
 
-$$
-\overbrace{\begin{bmatrix}
+$$\overbrace{\begin{bmatrix}
 1&1\\
 4&-2
 \end{bmatrix}}^A=
@@ -347,15 +318,13 @@ u_2
 \begin{bmatrix}
 -3u_1\\
 2u_2
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Rappelons l’équation qui lie les valeurs propres d’une transformation linéaire à elle-même : $Mv=\lambda v$. Dans ce contexte, il faut penser plutôt à une fonction $y$ ou $u$ à la place d’une transformation linéaire, et particulièrement cette fonction est la dérivé d’une autre fonction : $y^\prime(v)=\lambda v$. En plus, si on ajoute la contrainte $y^\prime(0) = c, c\in\mathbb{R}$, alors on déduit que $y(x)=ce^{\lambda x}$.
 
 Pensons l’interprétation de $y^\prime(v)=\lambda v$ : dériver la fonction est la même chose que l’escalader par $\lambda$. C’est presque la même chose qu’avec la transformation linéaire ! On peut donc voir, pour chaque $y_i$, leur dérivées est juste une combinaison linéaire entre elles. C’est donc un système d’équations différentiels ***linéaire***. On déduit donc $u_1$ et $u_2$ :
 
-$$
-\overbrace{
+$$\overbrace{
 \begin{bmatrix}
 u^\prime_1 \\
 u^\prime_2
@@ -376,13 +345,11 @@ u_2
 \begin{bmatrix}
 c_1e^{-3x}\\
 c_2e^{2x}
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 On retourne à l’équation qui lie $\mathbf{y}$ et $\mathbf{u}$ : $\mathbf{y} = P \mathbf{u}$. Maintenant, on peut déduire $\mathbf{y}$ :
 
-$$
-\overbrace{
+$$\overbrace{
 \begin{bmatrix}
 y_1\\
 y_2
@@ -408,13 +375,11 @@ c_2e^{2x}
 \begin{bmatrix}
 -c_1e^{-3x}+c_2e^{2x} \\
 4c_1e^{-3x}+c_2e^{2x}
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Ici, on a théoriquement fini. Si jamais on a des conditions sur $y_i(0) = c, c\in\mathbb{R}$, on peut déterminer $c_1$ et $c_2$. Disons que $y_1(0)=1$ et $y_2(0)=6$, donc :
 
-$$
-\begin{cases}
+$$\begin{cases}
 \overbrace{1}^{y_1(0)} = -c_1+c_2\\
 \underbrace{6}_{y_2(0)} = 4c_1+c_2
 \end{cases} \implies \begin{cases}
@@ -425,8 +390,7 @@ c_2=2
 \begin{cases}
 y_1= -e^{-3x}+2e^{2x}\\
 y_2= 4e^{-3x}+2e^{2x}
-\end{cases}
-$$
+\end{cases}$$
 
 **Théorème**. Si $M$ est une matrice diagonalisable, donc la solution générale d’un système peut être exprimé comme : $\mathbf{y} = \sum_i^n c_ie^{\lambda_i x}\mathbf{v}_i$, où $\lambda_i$ est le valeur propre associé et $\mathbf{v}_i$ est le vecteur propre associé (ou vecteur en colonne $i$ de la matrice de passage $P$).
 
@@ -434,8 +398,7 @@ $$
 
 Rappelons que multiplier une vecteur par une matrice nous retourne un vecteur. La matrice est, dans ce sens, une sorte de fonction. Grâce à ça, on peut développer un sens de récurrence avec de matrices, particulièrement pour les suites où un prochain terme est une combinaison linéaires des termes passés. Ici, la fonction récurrente sera la matrice $M$.
 
-$$
-\text{Soit }U_p=\overrightarrow{(u_p,v_p,w_p)}\text{ et } U_{p+1}=\overrightarrow{(u_{p+1},v_{p+1},w_{p+1})}
+$$\text{Soit }U_p=\overrightarrow{(u_p,v_p,w_p)}\text{ et } U_{p+1}=\overrightarrow{(u_{p+1},v_{p+1},w_{p+1})}
 \newline
 \text{}
 \newline
@@ -455,16 +418,13 @@ w_{p+1} = -v_p+w_p
 -1 & 1 & 0
 \end{bmatrix}
 }^M
-U_p
-$$
+U_p$$
 
 Rappelons aussi que appliquer une “fonction” $p$ fois à une vecteur est la même chose que la multiplier $p$ fois par la matrice d’application $M$, c’est-à-dire multiplier par $M^p$.
 
 Or, on sait que appliquer des puissances à matrices diagonaux est plus simple qu’à d’autres matrices. Donc, on diagonalise $M$ et cela rendra les calculs des prochains termes de la suite beaucoup plus simple.
 
-$$
-M=PDP^{-1} \implies U_{p+1}=(PDP^{-1})U_p \implies U_p = P D^p P^{-1} U_0.
-$$
+$$M=PDP^{-1} \implies U_{p+1}=(PDP^{-1})U_p \implies U_p = P D^p P^{-1} U_0.$$
 
 La dernière expression, après avoir fait tous les produits entre vecteurs et matrices, sera une expression explicite des termes généraux de $u_p$, $v_p$ et $w_p$.
 
@@ -474,22 +434,18 @@ La dernière expression, après avoir fait tous les produits entre vecteurs et m
 
 Pas toute matrice est diagonalisable, une telle matrice est dite *matrice défectueuse*. Formellement, une matrice défectueuse est une matrice carré qui n’a pas une base complète de vecteurs propres.
 
-$$
-M \text{ défecteuse} \iff M\text{ n’as pas } n \text{ vecteurs propres linéairement indépendantes}.
+$$M \text{ défecteuse} \iff M\text{ n’as pas } n \text{ vecteurs propres linéairement indépendantes}.
 \newline
-M \text{ défecteuse} \implies M \text{ a moins de  } n \text{ valeurs propres distincts. Réciproque fausse.}
-$$
+M \text{ défecteuse} \implies M \text{ a moins de  } n \text{ valeurs propres distincts. Réciproque fausse.}$$
 
 Ici c’est important le concept de multiplicité algébrique. Pensons à cet exemple :
 
-$$
-M = \begin{bmatrix}
+$$M = \begin{bmatrix}
 3&-1&1\\
 0&2&0\\
 1&-1&3
 \end{bmatrix}
-\implies \text{det}(M-\lambda I)=-(\lambda-2)^2(\lambda-4)
-$$
+\implies \text{det}(M-\lambda I)=-(\lambda-2)^2(\lambda-4)$$
 
 La valeur $\lambda=2$ annule deux facteurs polynomiaux. Donc, on dit que la valeur propre $2$ a une multiplicité algébrique de $2$.
 

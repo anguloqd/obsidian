@@ -17,9 +17,7 @@ Les applications de la CPD couvrent un spectre remarquablement large. En médeci
 
 Une série temporelle se définit comme une séquence de vecteurs de dimension $d$ contenant des observations à des instants successifs. Formellement, considérons un flux de données infini :
 
-$$
-S=\{\mathbf{x}_1, \cdots, \mathbf{x}_i, \cdots\}
-$$
+$$S=\{\mathbf{x}_1, \cdots, \mathbf{x}_i, \cdots\}$$
 
 où chaque $\mathbf{x}_i$ représente une observation vectorielle au temps $i$.
 
@@ -29,9 +27,7 @@ La stationnarité constitue une propriété fondamentale des processus stochasti
 
 L'auto-covariance mesure la dépendance d'une variable aléatoire avec elle-même à différents instants :
 
-$$
-\gamma(s,t)=\text{cov}(\mathbf{X}_s, \mathbf{X}_t)=\mathbb E[(\mathbf{X}_s-\mu_s)(\mathbf{X}_t-\mu_t)]
-$$
+$$\gamma(s,t)=\text{cov}(\mathbf{X}_s, \mathbf{X}_t)=E((\mathbf{X}_s-\mu_s)(\mathbf{X}_t-\mu_t)]$$
 
 Dans le cas stationnaire, cette auto-covariance ne dépend que de l'écart temporel $|t_1 - t_2|$ et non des instants absolus.
 
@@ -43,8 +39,7 @@ Pour analyser les changements locaux, on extrait des sous-séquences de la séri
 
 Chaque ligne $i$ de cette matrice contient la sous-séquence $W_{i,k}=\{\mathbf{X}_i, \mathbf{X}_{i+1}, \cdots, \mathbf{X}_{i+k-1}\}$ :
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 W_{i,k} \\
 W_{i+1,k} \\
 \vdots \\
@@ -55,9 +50,8 @@ W_{i+n-1,k}
 \mathbf{X}_{i} & \mathbf{X}_{i+1} & \cdots & \mathbf{X}_{i+k-1} \\
 \mathbf{X}_{i+1} & \mathbf{X}_{i+2} & \cdots & \mathbf{X}_{i+k} \\
 \vdots & \vdots & \ddots & \cdots \\
-\mathbf{X}_{i+n-1} & \mathbf{X}_{i+n} & \cdots & \mathbf{X}_{i+n+k-2} 
-\end{bmatrix}
-$$
+\mathbf{X}_{i+n-1} & \mathbf{X}_{i+n} & \cdots & \mathbf{X}_{i+n+k-2}
+\end{bmatrix}$$
 
 Cette matrice de dimensions $(m-k+1) \times k$ présente la structure particulière d'une matrice de Hankel, où les éléments sont constants le long des anti-diagonales.
 
@@ -72,17 +66,11 @@ Un point de rupture représente une transition entre différents états du proce
 
 Mathématiquement :
 
-$$
-H_0: \mathbb{P}_{W_{i,(\cdot)}} = \cdots = \mathbb{P}_{W_{j,(\cdot)}} = \cdots = \mathbb{P}_{W_{k,(\cdot)}}
-$$
+$$H_0: \mathbb{P}_{W_{i,(\cdot)}} = \cdots = \mathbb{P}_{W_{j,(\cdot)}} = \cdots = \mathbb{P}_{W_{k,(\cdot)}}$$
 
-$$
-\text{contre}
-$$
+$$\text{contre}$$
 
-$$
-H_A: \exists j^*, \quad \mathbb{P}_{W_{i,(\cdot)}} = \cdots = \mathbb{P}_{W_{j^*,(\cdot)}} \neq \mathbb{P}_{W_{j*+1,(\cdot)}} = \cdots = \mathbb{P}_{W_{k,(\cdot)}}
-$$
+$$H_A: \exists j^*, \quad \mathbb{P}_{W_{i,(\cdot)}} = \cdots = \mathbb{P}_{W_{j^*,(\cdot)}} \neq \mathbb{P}_{W_{j*+1,(\cdot)}} = \cdots = \mathbb{P}_{W_{k,(\cdot)}}$$
 
 où $\mathbb{P}_{W_{i},(\cdot)}$ désigne la fonction de densité de probabilité de la fenêtre commençant au temps $i$, et $j^*$ correspond au point de rupture.
 
@@ -133,45 +121,33 @@ Pour les deux premiers types d'algorithmes, l'établissement d'une matrice de co
 
 La précision traditionnelle se calcule comme le rapport des points correctement classifiés sur le total :
 
-$$
-\text{Précision}=\frac{TP+TN}{TP+FP+FN+TN}
-$$
+$$\text{Précision}=\frac{TP+TN}{TP+FP+FN+TN}$$
 
 Cette mesure s'avère inefficace pour les jeux de données déséquilibrés, typiques de la détection de points de rupture. La précision équilibrée résout ce problème :
 
-$$
-\text{Précision équilibrée}=\frac{TPR+TNR}{2}
-$$
+$$\text{Précision équilibrée}=\frac{TPR+TNR}{2}$$
 
 ##### Sensibilité et spécificité
 
 La sensibilité (ou taux de vrais positifs) mesure la proportion de points de rupture correctement identifiés :
 
-$$
-\text{Sensibilité}=\text{Rappel}=\text{Taux VP} =\frac{TP}{TP+FN}
-$$
+$$\text{Sensibilité}=\text{Rappel}=\text{Taux VP} =\frac{TP}{TP+FN}$$
 
 ##### Moyenne géométrique
 
 La détection de points de rupture produit typiquement un problème d'apprentissage avec distribution déséquilibrée, car le ratio de changements par rapport au total des données reste faible. La moyenne géométrique (G-mean) des taux de vrais positifs et négatifs offre une mesure robuste :
 
-$$
-\text{G-mean}=\sqrt{\text{Sensibilité}\times\text{Spécificité}}=\sqrt{\frac{TP}{TP+FN} \times \frac{TN}{TN+FP}}
-$$
+$$\text{G-mean}=\sqrt{\text{Sensibilité}\times\text{Spécificité}}=\sqrt{\frac{TP}{TP+FN} \times \frac{TN}{TN+FP}}$$
 
 ##### Précision et mesure F
 
 La précision se calcule comme le rapport des vrais positifs sur le total des points classifiés comme points de rupture :
 
-$$
-\text{Précision}=\frac{TP}{TP+FP}
-$$
+$$\text{Précision}=\frac{TP}{TP+FP}$$
 
 La mesure F combine précision et rappel :
 
-$$
-F_\beta=\frac{(1+\beta)^2\times\text{Rappel}\times\text{Précision}}{(\beta^2\times\text{Rappel})+\text{Précision}}
-$$
+$$F_\beta=\frac{(1+\beta)^2\times\text{Rappel}\times\text{Précision}}{(\beta^2\times\text{Rappel})+\text{Précision}}$$
 
 Le paramètre $\beta$ indique l'importance relative accordée au rappel par rapport à la précision. La mesure $F_1$ ($\beta = 1$) pondère équitablement les deux métriques.
 
@@ -193,33 +169,25 @@ Lorsque la différence temporelle entre le point de rupture détecté et le poin
 
 ##### Erreur absolue moyenne
 
-$$
-MAE=\frac{1}{n}\sum_{i=1}^n|\text{Prédit}(CP_i)-\text{Réel}(CP_i)|
-$$
+$$MAE=\frac{1}{n}\sum_{i=1}^n|\text{Prédit}(CP_i)-\text{Réel}(CP_i)|$$
 
 ##### Erreur quadratique moyenne
 
 Cette métrique pénalise davantage les points de rupture aberrants :
 
-$$
-MSE=\frac{1}{n}\sum_{i=1}^n\Big(\text{Prédit}(CP_i)-\text{Réel}(CP_i)\Big)^2
-$$
+$$MSE=\frac{1}{n}\sum_{i=1}^n\Big(\text{Prédit}(CP_i)-\text{Réel}(CP_i)\Big)^2$$
 
 ##### Différence signée moyenne
 
 Cet indicateur révèle la direction générale des erreurs de prédiction :
 
-$$
-MSD=\frac{1}{n}\sum_{i=1}^n(\text{Prédit}(CP_i)-\text{Réel}(CP_i))
-$$
+$$MSD=\frac{1}{n}\sum_{i=1}^n(\text{Prédit}(CP_i)-\text{Réel}(CP_i))$$
 
 ##### Erreur quadratique moyenne normalisée
 
 La normalisation facilite la comparaison entre jeux de données ou modèles d'échelles différentes :
 
-$$
-NRMSE=\frac{RMSE}{ACP_{max}-ACP_{min}}\text{ ou }NRMSE=\frac{RMSE}{\overline{ACP}}
-$$
+$$NRMSE=\frac{RMSE}{ACP_{max}-ACP_{min}}\text{ ou }NRMSE=\frac{RMSE}{\overline{ACP}}$$
 
 où $ACP$ désigne les points de rupture réels.
 
@@ -274,18 +242,14 @@ Ces approches utilisent la notion de sous-espaces pour identifier les changement
 
 Cette méthode propose des équations paramétriques où $x(t)$ représente l'état interne du système observé et $y(t)$ la sortie observée :
 
-$$
-\begin{align}
+$$\begin{align}
 &x(t+1)=Ax(t)+Ke(t) \\
 &y(t)=Cx(t)+e(t)
-\end{align}
-$$
+\end{align}$$
 
 L'objectif consiste à estimer la matrice d'observabilité étendue, qui mesure la capacité d'inférer les états internes $x(t)$ à partir des sorties externes $y(t)$ :
 
-$$
-O_k=\begin{bmatrix} C^T & (CA)^T & \cdots&(CA^{k-1})^T \end{bmatrix}
-$$
+$$O_k=\begin{bmatrix} C^T & (CA)^T & \cdots&(CA^{k-1})^T \end{bmatrix}$$
 
 #### Transformation du spectre singulier (SST)
 
@@ -305,9 +269,7 @@ Les processus gaussiens constituent une méthode probabiliste pour l'analyse et 
 
 Les observations se définissent comme une version bruitée des valeurs de fonction gaussienne :
 
-$$
-x_t=f(t)+\varepsilon_t
-$$
+$$x_t=f(t)+\varepsilon_t$$
 
 où $\varepsilon_t\sim\mathcal N(0,\sigma^2_n)$ et $f(t)\sim GP(0,K)$.
 
@@ -319,19 +281,13 @@ Ces méthodes projettent les observations dans un espace de Hilbert à noyau rep
 
 Les fenêtres passent par un noyau, puis leurs moyennes et covariances se calculent :
 
-$$
-\hat\mu=\frac 1 n \sum_{\ell=1}^n k(X_\ell,\cdot)
-$$
+$$\hat\mu=\frac 1 n \sum_{\ell=1}^n k(X_\ell,\cdot)$$
 
-$$
-\hat\Sigma=\frac 1 n \sum_{\ell=1}^n(k(X_\ell,.)-\hat\mu)\otimes(k(X_\ell,.)-\hat\mu)
-$$
+$$\hat\Sigma=\frac 1 n \sum_{\ell=1}^n(k(X_\ell,.)-\hat\mu)\otimes(k(X_\ell,.)-\hat\mu)$$
 
 Le ratio discriminant de Fisher à noyau entre deux échantillons se définit comme :
 
-$$
-KFDR(X_1^{\text{longueur }n_1},X_2^{\text{longueur }n_2})=\frac{n_1n_2}{n_1+n_2}\langle\hat\mu_2-\hat\mu_1,(\hat\Sigma_w+\gamma I)^{-1}(\hat\mu_2-\hat\mu_1)\rangle_\mathcal{H}
-$$
+$$KFDR(X_1^{\text{longueur }n_1},X_2^{\text{longueur }n_2})=\frac{n_1n_2}{n_1+n_2}\langle\hat\mu_2-\hat\mu_1,(\hat\Sigma_w+\gamma I)^{-1}(\hat\mu_2-\hat\mu_1)\rangle_\mathcal{H}$$
 
 L'inconvénient principal réside dans la dépendance forte au choix de la fonction noyau et de ses paramètres, problème aggravé dans les espaces de dimension modérée à élevée.
 
@@ -361,9 +317,7 @@ SWAB s'appuie sur bottom-up. Il prend toute la série temporelle $T$ et une fen�
 
 MDL définit la "longueur de description d'une série temporelle $T$" notée $DL(T)$ comme le nombre total de bits requis pour représenter la série :
 
-$$
-DL(T)=m\times H(T)
-$$
+$$DL(T)=m\times H(T)$$
 
 où $m$ est la longueur de $T$ et $H(T)$ son entropie.
 
@@ -377,15 +331,11 @@ Cette méthode crée un "shapelet" - un petit motif dans $T$ - beaucoup plus pro
 
 Cette approche détecte un changement lorsqu'un nouvel élément ou bloc de données ne s'ajuste à aucun cluster existant :
 
-$$
-\text{Changement}=\bigwedge_{j=1}^k [d(x_{i+1}, \text{centre}(C_j))>\text{rayon}(C_j)]
-$$
+$$\text{Changement}=\bigwedge_{j=1}^k [d(x_{i+1}, \text{centre}(C_j))>\text{rayon}(C_j)]$$
 
 où $k$ est le nombre de clusters et le rayon se définit comme :
 
-$$
-\text{rayon}(C)=\sqrt{\frac{\sum_{i=1}^n(x_i-\mu)^2}{n}}
-$$
+$$\text{rayon}(C)=\sqrt{\frac{\sum_{i=1}^n(x_i-\mu)^2}{n}}$$
 
 ### Analyse comparative et discussion
 

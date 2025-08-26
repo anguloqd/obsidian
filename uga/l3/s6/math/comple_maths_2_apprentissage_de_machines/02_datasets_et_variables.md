@@ -75,19 +75,13 @@ Les variables numériques bénéficient d'un arsenal riche d'indicateurs statist
 
 **Moyenne arithmétique** : synthétise la tendance centrale des données
 
-$$
-\bar{X} = \frac{1}{N} \sum_{i=1}^{N} x_i
-$$
+$$\bar{X} = \frac{1}{N} \sum_{i=1}^{N} x_i$$
 
 **Variance et écart-type** : quantifient la dispersion des données autour de la moyenne
 
-$$
-\text{var}(X) = \frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{X})^2
-$$
+$$V(X) = \frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{X})^2$$
 
-$$
-\sigma(X) = \sqrt{\text{var}(X)}
-$$
+$$\sigma(X) = \sqrt{V(X)}$$
 
 **Quantiles** : divisent la distribution ordonnée en parties égales. Les quartiles (quantiles d'ordre 1/4) et la médiane s'avèrent particulièrement utiles pour les datasets contenant de nombreuses valeurs aberrantes (outliers), car ces indicateurs résistent mieux à l'influence de valeurs extrêmes que la moyenne arithmétique.
 

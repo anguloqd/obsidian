@@ -34,8 +34,8 @@ On ajoute quelques suppositions :
 > \Delta Y
 > \rightarrow {^*\Delta} {L_1} \rightarrow\Delta i
 >
-> $$
-
+>
+$$
 ### La courbe IS (Investment-Savings)
 
 #### Construction logique de la courbe
@@ -53,17 +53,13 @@ Rappelons qu’en économie, on écrit la variable indépendante ou explicative 
 Avant de commencer, il faut dire que il est déjà suffisant le raisonnement économique presenté. La présentation mathématique ne sert que comme *vérification* du raisonnement, elle n’est pas une *explication*.
 
 Reprenons la formulation linéaire des fonctions d’investissement et de consommation et on ajoute, en plus, les dépenses publiques nettes ou balance publique $G$:
-
 $$
 Y = C_0 + cY + bi + G;\text{ avec } -1 \le b <0<  c\le 1.
 $$
-
 On peut exprimer $i$ en fonction de $Y$ comme suit. $DA$ est la “demande autonome”, qui la somme de la consommation incompressible et les dépenses publiques nettes.
-
 $$
 i = \frac{s}{b}Y - \frac{DA}{b} \text{, où } DA=C_0 + G.
 $$
-
 Finalement, notons que $i$ est une fonction linéaire en $Y$. La dérivée (où la pente dans ce cas) est $\frac{s}{b}$. $s$, la proportion marginale à épargner, est toujours positive. $b$, la sensibilité ou élasticité de l’investissement par rapport à $i$, est toujours négative. Donc la dérivée $\frac{s}{b}$ est toujours négative, et donc la droite IS est décroissante.
 
 #### Interprétation de la pente et de la position de IS
@@ -73,11 +69,9 @@ La pente ici garde la même interprétation d’élasticité de la droite. Pour 
 ![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_1.png)
 
 La position de la droite dépend du coefficient libre $\frac{DA}{b}$. Donc, une augmentation des dépenses publiques, une diminution des impôts où une augmentation des exportations déplacent la courbe vers la droite. Des variations en sens inverse de ces différentes variables déplacent la courbe $IS$ vers la gauche. Mathématiquement, la variation en $Y$ est proportionnel en $k$ de la variation de $DA$.
-
 $$
 Y_2 - Y_1 = \Delta Y = k_Y\Delta DA\text{, où } k_Y\text{ constante.}
 $$
-
 ![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_2.png)
 
 ### La courbe LM (Liquidity-Money)
@@ -95,17 +89,13 @@ Si le “revenu national” ou la production national de biens et services s’�
 On a déjà dit que $LM$ est croissante. Cela dit, $L_1$ est invariable. C’est-à-dire, si $\frac{M}{P}$ augmente, c’est uniquement car $L_2$ augmente, et ce dernier augmente si $i$ diminue.
 
 Voyons les équations. Supposons que $L_1$ et $L_2$ sont deux fonctions linéaires de $Y$ et $i$, respectivement. $g$ serait l’élasticité-revenu de la demande de monnaie, et $h$ l’élasticité de la demande de monnaie par rapport à l’intérêt. Alors :
-
 $$
 \frac{O_M}{P} = L_1(Y) + L_2(i) = gY + hi.
 $$
-
 Isolant $i$, on obtient une fonction encore linéaire de $i$ en $Y$ :
-
 $$
 i = \frac{O_M/P}{h} - \frac{g}{h}Y
 $$
-
 Notons que la dérivé de $i$ par rapport à $Y$ serait $-\frac{g}{h}$. $g$ est forcément positif, tant que $h$ est forcément négative. Donc $-\frac{g}{h}$ est positif, est donc la pente de la fonction de $i$ en $Y$ est croissante.
 
 #### Interprétation de la pente et de la position de LM
@@ -144,21 +134,19 @@ Sur la figure ci-dessous, on augmenterait davantage la production $Y$ si le taux
 ![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_4.png)
 
 #### Les conditions d’efficacité de la politique budgétaire
-
 $$
 \Delta^+ G \rightarrow
 \overbrace{
 \Delta^+ Y
 }^\text{effet direct}
 \rightarrow \space \space \space \overbrace{
-\Delta^+ L_1 \rightarrow 
+\Delta^+ L_1 \rightarrow
 \Delta^+ i \rightarrow
 \Delta^- I
-}^\text{effet indirect} 
+}^\text{effet indirect}
 \rightarrow \space
 \Delta^- Y\%
 $$
-
 On catégorise l’effet sur $Y$ de “direct” ou fort car une action sur $G$ est une action sur la courbe IS, càd. que le contexte est sur le marché de biens et services, dont $Y$. Par contre, les effets sur le reste des variables est “indirect” ou faible car elles font partie du marché de la monnaie et pas de celui des biens et services.
 
 Cette solution est efficace pour atteindre le plein emploi **si le marché est suffisamment réactif et vite (pour que l’offre de produits réagisse à la demande)** pour augmenter $Y$. L’inconvenant est que la pénalisation en investissement peut faire rétrécir un peu la production $Y$. Ce recoulement dépend de la sensibilité de l’investissement $I$ par rapport au taux d’interet $i$.
@@ -176,7 +164,6 @@ Une politique monétaire expansionniste, càd. une augmentation de l’offre de 
 ![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_5.png)
 
 #### Les conditions d’efficacité de la politique monétaire
-
 $$
 \Delta^+ O_M \space \rightarrow
 \overbrace{
@@ -187,7 +174,6 @@ $$
 \Delta^+ I \rightarrow
 \Delta^+ Y}^\text{effet indirect}
 $$
-
 Il faut en effet une baisse maximale des taux d’intérêt qui stimule au mieux l’investissement pour que celui-ci ait à son tour l’impact maximum sur la production.
 
 Cette politique est avantageuse car il n’y aurait pas de dette sur l’état, donc pas d’intérêt à payer. L’inconvenant c’est que l’effet sur la cible (investissement) est un effet indirect, et donc un effet incertain.
@@ -207,7 +193,6 @@ La situation keynésienne ordinaire est donc une position telle que le point $A$
 ![untitled](ressources/01_le_modele_is_lm_en_economie_fermee_untitled_6.png)
 
 #### Policy mix : la combinaison des politiques économiques
-
 $$
 \overbrace{\space
 \Delta^+ G \space\space \rightarrow
@@ -216,7 +201,7 @@ $$
 \space}_\text{effet direct}
 \rightarrow \space\space\space \underbrace{\space
 \Delta^+ L_1
-\rightarrow 
+\rightarrow
 \Delta^+ i
 \space}_\text{effet indirect}
 \space}^\text{Politique budgétaire},
@@ -225,7 +210,7 @@ $$
 \text{}
 \\
 
-\text{puis } 
+\text{puis }
 
 \overbrace{ \space
 \Delta^+O_M

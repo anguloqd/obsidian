@@ -30,33 +30,21 @@ L'objectif principal consiste à estimer, pour chaque label $y_i \in Y$, la prob
 
 Lorsque la dimension $n$ du vecteur de caractéristiques est importante, le calcul direct de cette probabilité devient informatiquement intraitable. La solution réside dans l'application de la définition des probabilités conditionnelles :
 
-$$
-P(y_i|x) = \frac{P(y_i, x)}{P(x)}
-$$
+$$P(y_i|x) = \frac{P(y_i, x)}{P(x)}$$
 
 Puisque $P(x)$ demeure constante pour une observation donnée $x$, il suffit de déterminer $P(y_i, x)$ pour comparer les probabilités des différentes classes.
 
 En appliquant itérativement la définition des probabilités conditionnelles, nous obtenons :
 
-$$
-P(y_i, x) = P(x_1, x_2, ..., x_n, y_i)
-$$
+$$P(y_i, x) = P(x_1, x_2, ..., x_n, y_i)$$
 
-$$
-= P(x_1|x_2, x_3, ..., y_i) \times P(x_2, x_4, ..., y_i)
-$$
+$$= P(x_1|x_2, x_3, ..., y_i) \times P(x_2, x_4, ..., y_i)$$
 
-$$
-= P(x_1|x_2, x_3, ..., y_i) \times P(x_2|x_3, x_4, ..., y_i) \times P(x_3, x_4, ..., y_i)
-$$
+$$= P(x_1|x_2, x_3, ..., y_i) \times P(x_2|x_3, x_4, ..., y_i) \times P(x_3, x_4, ..., y_i)$$
 
-$$
-= \ldots
-$$
+$$= \ldots$$
 
-$$
-= P(x_1|x_2, x_3, ..., y_i) \times P(x_2|x_3, x_4, ..., y_i) \times \ldots \times P(x_n|y_i) \times P(y_i)
-$$
+$$= P(x_1|x_2, x_3, ..., y_i) \times P(x_2|x_3, x_4, ..., y_i) \times \ldots \times P(x_n|y_i) \times P(y_i)$$
 
 #### Hypothèse d'Indépendance Conditionnelle
 
@@ -64,27 +52,19 @@ L'indépendance conditionnelle décrit les situations où une observation devien
 
 En appliquant cette hypothèse aux caractéristiques $x_i$, nous supposons que chaque caractéristique ne dépend que de la classe $y_i$ :
 
-$$
-P(x_1|x_2, x_3, ..., y_i) = P(x_1|y_i)
-$$
+$$P(x_1|x_2, x_3, ..., y_i) = P(x_1|y_i)$$
 
 Cette simplification transforme l'expression complexe en :
 
-$$
-P(y_i, x) = P(y_i) \prod_{j=1}^{n} P(x_j|y_i)
-$$
+$$P(y_i, x) = P(y_i) \prod_{j=1}^{n} P(x_j|y_i)$$
 
 Par conséquent :
 
-$$
-P(y_i|x) \propto P(y_i) \prod_{j=1}^{n} P(x_j|y_i)
-$$
+$$P(y_i|x) \propto P(y_i) \prod_{j=1}^{n} P(x_j|y_i)$$
 
 La classe prédite correspond au maximum de cette expression :
 
-$$
-\hat{y} = \arg\max_{i=1,...,k} \left(P(y_i) \prod_{j=1}^{n} P(x_j|y_i)\right)
-$$
+$$\hat{y} = \arg\max_{i=1,...,k} \left(P(y_i) \prod_{j=1}^{n} P(x_j|y_i)\right)$$
 
 #### Estimation des Paramètres
 
@@ -96,15 +76,11 @@ L'implémentation du classificateur naïf de Bayes nécessite l'estimation de de
 
 Pour les **variables continues** ($x_j \in \mathbb{R}$), l'approche standard suppose une distribution gaussienne des valeurs au sein de chaque classe, paramétrée par une moyenne $\mu_i$ et une variance $\sigma_i^2$ :
 
-$$
-f(v|y_i) = \frac{1}{\sqrt{2\pi\sigma_i^2}} e^{-\frac{(v-\mu_i)^2}{2\sigma_i^2}}
-$$
+$$f(v|y_i) = \frac{1}{\sqrt{2\pi\sigma_i^2}} e^{-\frac{(v-\mu_i)^2}{2\sigma_i^2}}$$
 
 Pour les **variables catégorielles** ($x_j \in \{0, …, K\}$), la probabilité s'estime comme la proportion des valeurs dans la classe :
 
-$$
-P(x = j|y_i) = \frac{N_{ji}}{N_i}
-$$
+$$P(x = j|y_i) = \frac{N_{ji}}{N_i}$$
 
 où $N_{ji}$ représente le nombre d'occurrences de la valeur $j$ dans la classe $i$, et $N_i$ le nombre total d'exemples dans la classe $i$.
 
@@ -141,17 +117,11 @@ L'entraînement consiste à calculer les estimateurs statistiques pour chaque po
 
 **Classification comme "Légendaire"** :
 
-$$
-P(\text{légendaire}|\text{hauteur}=25, \text{poids}=31, \text{queue}=1)
-$$
+$$P(\text{légendaire}|\text{hauteur}=25, \text{poids}=31, \text{queue}=1)$$
 
-$$
-\propto P(\text{légendaire}) \times P(\text{hauteur}=25|\text{légendaire})
-$$
+$$\propto P(\text{légendaire}) \times P(\text{hauteur}=25|\text{légendaire})$$
 
-$$
-\times P(\text{poids}=31|\text{légendaire}) \times P(\text{queue}=1|\text{légendaire})
-$$
+$$\times P(\text{poids}=31|\text{légendaire}) \times P(\text{queue}=1|\text{légendaire})$$
 
 Calculs détaillés :
 
@@ -164,17 +134,11 @@ Résultat : $P(\text{légendaire}|\text{données}) \propto 0.00017$
 
 **Classification comme "Non légendaire"** :
 
-$$
-P(\text{non-légendaire}|\text{hauteur}=25, \text{poids}=31, \text{queue}=1)
-$$
+$$P(\text{non-légendaire}|\text{hauteur}=25, \text{poids}=31, \text{queue}=1)$$
 
-$$
-\propto P(\text{non-légendaire}) \times P(\text{hauteur}=25|\text{non-légendaire})
-$$
+$$\propto P(\text{non-légendaire}) \times P(\text{hauteur}=25|\text{non-légendaire})$$
 
-$$
-\times P(\text{poids}=31|\text{non-légendaire}) \times P(\text{queue}=1|\text{non-légendaire})
-$$
+$$\times P(\text{poids}=31|\text{non-légendaire}) \times P(\text{queue}=1|\text{non-légendaire})$$
 
 Calculs détaillés :
 
@@ -227,8 +191,6 @@ L'utilisation de la fonction softmax comme couche d'activation finale dans les r
 
 La fonction softmax s'exprime comme :
 
-$$
-\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
-$$
+$$\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$
 
 Cette approche combine la puissance représentationnelle des réseaux de neurones avec la capacité de quantification de l'incertitude des modèles probabilistes.

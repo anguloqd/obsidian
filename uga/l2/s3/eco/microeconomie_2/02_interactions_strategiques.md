@@ -111,17 +111,15 @@ Il n’est pas rare de trouver des jeux où il n’y a pas d’équilibres de Na
 
 Après, on calcules les utilités espérées de Lui et Elle étant donné qu’il va au théâtre $T$ ou au football $F$. Dans ce cas :
 
-$$
-\mathbb{E}[L(T)]=2t+0(1-t) = 2t
+$$E(L(T)]=2t+0(1-t) = 2t
 \newline
-\mathbb{E}[L(F)]=0t+(1-t) = 1-t
+E(L(F)]=0t+(1-t) = 1-t
 \newline
 \text{ }
 \newline
-\mathbb{E}[E(T)]=0q+(1-q) = 1-q
+E(E(T)]=0q+(1-q) = 1-q
 \newline
-\mathbb{E}[E(F)]=2q+0(1-q) = 2q
-$$
+E(E(F)]=2q+0(1-q) = 2q$$
 
 Maintenant, on compare les utilités associés à chaque action pour chaque joueur. Un joueur va jouer une stratégie $i$ pour une certaine probabilité associé si l’utilité espérée à cette stratégie est supérieur aux autres stratégies.
 
@@ -133,19 +131,17 @@ Finalement, on peut construire notre fonction de décision. Une décision est un
 
 On construit alors les fonctions de meilleures décisions pour chaque joueur :
 
-$$
-\mathbb{P}(L^*(T))=
+$$P(L^*(T))=
 \begin{cases}
 1, \text{ si } t > \frac{1}{3} \\
 0, \text{ si } t < \frac{1}{3}
 \end{cases}
 \space\space\text{et}\space\space
-\mathbb{P}(E^*(T))=
+P(E^*(T))=
 \begin{cases}
 1, \text{ si } q < \frac{1}{3} \\
 0, \text{ si } q > \frac{1}{3}
-\end{cases}
-$$
+\end{cases}$$
 
 ![untitled](ressources/02_interactions_strategiques_untitled_2.png)
 
@@ -245,37 +241,31 @@ En termes d’efficacité, il est préférable pour les consommateurs d’avoir 
 
 L’équilibre des quantités produites est déduit en appliquant la condition d’optimisation de premier ordre des profits de chaque firme.
 
-$$
-\text{Profit de }i : \pi_i(q_i+q_j)=p(q_i+q_j)\times q_i -C(q_i)
+$$\text{Profit de }i : \pi_i(q_i+q_j)=p(q_i+q_j)\times q_i -C(q_i)
 
 \\
 \text{}
 \\
 
-\text{CPO} : \frac{\partial \pi_i}{\partial q_i} = 0 \iff \frac{\partial p(q_i+q_j)}{\partial q_i}q_i + p(q_i+q_j) - \frac{\partial C(q_i)}{\partial q_i} =0
-$$
+\text{CPO} : \frac{\partial \pi_i}{\partial q_i} = 0 \iff \frac{\partial p(q_i+q_j)}{\partial q_i}q_i + p(q_i+q_j) - \frac{\partial C(q_i)}{\partial q_i} =0$$
 
 La fonction qui resulte d’appliquer la CPO, et isolant $q_i$ d’un seul côté, au profit de la firme $i$ est la **fonction de réaction de la firme $i$**. **Notons qu’elle prend comme argument la quantité de l’autre firme !**
 
-$$
-q_i = R_i(q_j)= \frac{1}{\partial p/\partial q_i}\left(\frac{\partial C}{\partial q_i} -  p(q_i+q_j) \right)
-$$
+$$q_i = R_i(q_j)= \frac{1}{\partial p/\partial q_i}\left(\frac{\partial C}{\partial q_i} -  p(q_i+q_j) \right)$$
 
 L’équilibre est donc le pair de quantités qui satisfait le système d’équations ci-dessous :
 
-$$
-\left.
+$$\left.
 \begin{array}{l}
 q_i=R_i(q_j)
 \\
 q_j=R_j(q_i)
 \end{array}
-\right\} \implies 
+\right\} \implies
 \begin{array}{l}
 q_i^* = R_i(R_j(q_i)) \\
 q_j^* = R_j(R_i(q_j))
-\end{array}
-$$
+\end{array}$$
 
 Cet équilibre $(q_i^*,q_j^*)$ est un équilibre de Cournot-Nash. Il correspond à l’intersection des fonctions de réaction.
 
@@ -308,13 +298,11 @@ firme. La firme *follower* cherchera à maximiser son profit compte-tenu de la s
 
 Le leader choisira la quantité que maximise son profit, supposant qu’il connaît la quantité de réaction du follower. Donc, en comparaison avec Cournot, la firme follower maintient sa fonction de réaction (le follower accepte la quantité du leader comme constante), tant que le leader utilise la fonction de réaction du follower dans sa propre réaction.
 
-$$
-\text{Cournot : }\frac{\partial p(q_1+q_2)}{\partial q_1}q_1 + p(q_1+q_1) - \frac{\partial C(q_1)}{\partial q_1} =0
+$$\text{Cournot : }\frac{\partial p(q_1+q_2)}{\partial q_1}q_1 + p(q_1+q_1) - \frac{\partial C(q_1)}{\partial q_1} =0
 \\
 \text{}
 \\
-\text{Stackelberg } : \frac{\partial p(q_1+R_2(q_1))}{\partial q_1} q_1 + p(q_1+R_2(q_1)) - \frac{\partial C(q_1)}{q_1} =0
-$$
+\text{Stackelberg } : \frac{\partial p(q_1+R_2(q_1))}{\partial q_1} q_1 + p(q_1+R_2(q_1)) - \frac{\partial C(q_1)}{q_1} =0$$
 
 Le critère de réaction de la firme leader sera le $q$ qui maximise le profit, qui est-ce qui est exprimé en haut. Notons qu’on ne parle plus d’une fonction de réaction du leader.
 
@@ -351,7 +339,8 @@ Conclusions :
 
 - L’équilibre de Stackelberg est l’équilibre de Nash parfait en sous-jeu.
 
-### Duopole de Bertrand (concurrence par le $\$$, simultané)
+### Duopole de Bertrand (concurrence par le $\$$
+, simultané)
 
 #### Description et hypothèses de base
 
@@ -365,40 +354,35 @@ Hypothèses plus importantes :
 
 - La variable stratégique de chacune des firme sur le marché est le **prix**.
 - La demande assumée par chaque firme dépend de son niveau de prix par rapport à l’autre firme. Particulièrement, pour la firme $i$, sa quantité demandée est :
-
-    $$
-    D_i(p_1,p_2)=
-    \begin{cases}
-    D(p_i), \text{ si } p_i<p_j \\
-    \frac{D(p)}{2}, \text{ si } p_i=p_j=p \\
-    0, \text{ si } p_i>p_j
-    \end{cases}
-
-
+$$
+D_i(p_1,p_2)=
+\begin{cases}
+D(p_i), \text{ si } p_i<p_j \\
+\frac{D(p)}{2}, \text{ si } p_i=p_j=p \\
+0, \text{ si } p_i>p_j
+\end{cases}
 $$
 ### Détermination de l’équilibre
 
 > **Théorème de Bertrand**. Sous les 5 derniers hypothèses, le seule équilibre de prix est $p_1^*=p_2^*=Cm$.
-> 
 
 Mais notons, $p=Cm$ est la condition d’équilibre d’un marché concurrentiel, donc l’équilibre est celui de la concurrence parfaite. Encore plus, **on suppose que $Cm$ est constante !**
 
 La **paradoxe de Bertrand** est que, alors qu’elles sont deux, les entreprises agissent
+
 comme si elles étaient un nombre infini. Elles se comportent ainsi conformément à l’hypothèse d’atomicité de la concurrence parfaite.
 
 L’équilibre de Bertrand, comme l’équilibre de Cournot, est un équilibre de Nash.
 
 On arrive mathématiquement à que $Cm$ est le prix d’équilibre si on cherche les prix de $i$ (resp. $j$) qui maximise son profit respectif. **Celle-ci est aussi la fonction de réaction**. C’est-à-dire :
 $$
-
 R_i(p_j)=p_i^*=\argmax_{p_i} \pi_i(p_i,p_j), \text{ où } \pi_i(p_i,p_j)= \overbrace{(p_i-Cm)}^{\text{ Revenu moyen}} \times D_i(p_i,p_j)
-
 $$
 
 ### Conclusion
 
 On note que si $p_i=c$, donc $p_i-c=0$, donc si le revenu moyen de chaque unité vendue est $0$, le profit $\pi_i$ est aussi $0$, donc l’équilibre de Bertrand correspond à l'optimum social (équilibre de concurrence). Il est donc préférable pour les consommateurs sur les duopoles de Cournot et Stackelberg.
 
-**Le résultat de Bertrand dépend de plusieurs hypothèses très restrictives.** 
+**Le résultat de Bertrand dépend de plusieurs hypothèses très restrictives.**
 
 Particulièrement, il se peut qu’il soit plus profitable pour une entreprise A de n’est pas concurrir par le prix si son concurrent ne peut pas couvrir toute la demande de marché avec sa production.

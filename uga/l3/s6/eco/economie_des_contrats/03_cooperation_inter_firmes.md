@@ -208,9 +208,7 @@ Les individus comme les firmes ont une préférence pour le présent. Le profit 
 
 **Valeur actualisée du profit** :
 
-$$
-V(\pi) = \pi + \delta\pi + \delta^2\pi + \delta^3\pi + \ldots
-$$
+$$V(\pi) = \pi + \delta\pi + \delta^2\pi + \delta^3\pi + \ldots$$
 
 En résolvant : $V(\pi) = \frac{\pi}{1-\delta}$
 
@@ -231,21 +229,15 @@ Logiquement : $\pi^D > \frac{1}{2}\pi^M > \pi^N$
 
 **Profits si collusion** :
 
-$$
-V(\pi^{Cartel}) = \frac{\frac{1}{2}\pi^M}{1-\delta}
-$$
+$$V(\pi^{Cartel}) = \frac{\frac{1}{2}\pi^M}{1-\delta}$$
 
 **Profits si déviation** :
 
-$$
-V(\pi^{Déviation}) = \pi^D + \frac{\delta\pi^N}{1-\delta}
-$$
+$$V(\pi^{Déviation}) = \pi^D + \frac{\delta\pi^N}{1-\delta}$$
 
 **La collusion est soutenable si** $V(\pi^{Cartel}) > V(\pi^{Déviation})$, soit :
 
-$$
-\delta > \frac{\pi^D - \frac{1}{2}\pi^M}{\pi^D - \pi^N} \equiv \delta^*
-$$
+$$\delta > \frac{\pi^D - \frac{1}{2}\pi^M}{\pi^D - \pi^N} \equiv \delta^*$$
 
 La collusion est soutenable si les firmes accordent assez d'importance aux gains futurs.
 
@@ -253,15 +245,11 @@ La collusion est soutenable si les firmes accordent assez d'importance aux gains
 
 **Duopole de Cournot** : $\pi^D = 2025$, $\frac{1}{2}\pi^M = 1800$, $\pi^N = 1600$
 
-$$
-\delta^* = \frac{2025-1800}{2025-1600} = \frac{225}{425} \approx 0{,}53
-$$
+$$\delta^* = \frac{2025-1800}{2025-1600} = \frac{225}{425} \approx 0{,}53$$
 
 **Duopole de Bertrand** : $\pi^D = 3600$, $\frac{1}{2}\pi^M = 1800$, $\pi^N = 0$
 
-$$
-\delta^* = \frac{3600-1800}{3600-0} = \frac{1800}{3600} = 0{,}5
-$$
+$$\delta^* = \frac{3600-1800}{3600-0} = \frac{1800}{3600} = 0{,}5$$
 
 #### Interprétation du facteur d'escompte critique
 

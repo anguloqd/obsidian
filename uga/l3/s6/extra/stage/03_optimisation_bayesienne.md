@@ -46,9 +46,7 @@ Les processus gaussiens constituent l'outil mathématique central de l'optimisat
 
 Un processus gaussien se caractérise entièrement par sa fonction de moyenne $m(x)$ et sa fonction de covariance $k(x, x')$ :
 
-$$
-f(x) \sim \mathcal{GP}(m(x), k(x, x'))
-$$
+$$f(x) \sim \mathcal{GP}(m(x), k(x, x'))$$
 
 Cette spécification définit la distribution a priori sur l'espace des fonctions, encodant nos croyances initiales sur la régularité et le comportement de la fonction objectif.
 
@@ -64,17 +62,13 @@ La fonction de covariance $k(x, x') = \text{Cov}[f(x), f(x')]$ encode les hypoth
 
 Le choix du noyau reflète les propriétés attendues de la fonction objectif. Le noyau gaussien (RBF) :
 
-$$
-k_{\text{RBF}}(x, x') = \sigma_f^2 \exp\left(-\frac{||x - x'||^2}{2\ell^2}\right)
-$$
+$$k_{\text{RBF}}(x, x') = \sigma_f^2 \exp\left(-\frac{||x - x'||^2}{2\ell^2}\right)$$
 
 assume des fonctions infiniment différentiables avec une corrélation qui décroît exponentiellement avec la distance. Le paramètre $\ell$ contrôle la longueur de corrélation, tandis que $\sigma_f^2$ détermine la variance marginale.
 
 Le noyau de Matérn offre une alternative plus flexible :
 
-$$
-k_{\text{Matérn}}(x, x') = \sigma_f^2 \frac{2^{1-\nu}}{\Gamma(\nu)} \left(\frac{\sqrt{2\nu}||x - x'||}{\ell}\right)^\nu K_\nu\left(\frac{\sqrt{2\nu}||x - x'||}{\ell}\right)
-$$
+$$k_{\text{Matérn}}(x, x') = \sigma_f^2 \frac{2^{1-\nu}}{\Gamma(\nu)} \left(\frac{\sqrt{2\nu}||x - x'||}{\ell}\right)^\nu K_\nu\left(\frac{\sqrt{2\nu}||x - x'||}{\ell}\right)$$
 
 Le paramètre $\nu$ contrôle la différentiabilité : $\nu = 1/2$ produit des fonctions continues mais non-différentiables, tandis que $\nu \to \infty$ converge vers le noyau gaussien.
 
@@ -82,19 +76,13 @@ Le paramètre $\nu$ contrôle la différentiabilité : $\nu = 1/2$ produit des f
 
 Après avoir observé $n$ points $\mathbf{X} = \{x_1, …, x_n\}$ avec leurs valeurs $\mathbf{y} = \{y_1, …, y_n\}$, la distribution a posteriori du processus gaussien reste gaussienne. La prédiction en un nouveau point $x^*$ suit une distribution normale :
 
-$$
-f(x^*) | \mathbf{X}, \mathbf{y} \sim \mathcal{N}(\mu(x^*), \sigma^2(x^*))
-$$
+$$f(x^*) | \mathbf{X}, \mathbf{y} \sim \mathcal{N}(\mu(x^*), \sigma^2(x^*))$$
 
 où :
 
-$$
-\mu(x^*) = m(x^*) + k(x^*, \mathbf{X})[K + \sigma_n^2 I]^{-1}(\mathbf{y} - m(\mathbf{X}))
-$$
+$$\mu(x^*) = m(x^*) + k(x^*, \mathbf{X})[K + \sigma_n^2 I]^{-1}(\mathbf{y} - m(\mathbf{X}))$$
 
-$$
-\sigma^2(x^*) = k(x^*, x^*) - k(x^*, \mathbf{X})[K + \sigma_n^2 I]^{-1}k(\mathbf{X}, x^*)
-$$
+$$\sigma^2(x^*) = k(x^*, x^*) - k(x^*, \mathbf{X})[K + \sigma_n^2 I]^{-1}k(\mathbf{X}, x^*)$$
 
 La matrice $K$ contient les covariances entre tous les points observés, et $\sigma_n^2$ représente la variance du bruit d'observation.
 
@@ -116,9 +104,7 @@ Les fonctions d'acquisition constituent le mécanisme de décision de l'optimisa
 
 Une fonction d'acquisition $\alpha(x)$ assigne à chaque point candidat $x$ une valeur reflétant l'utilité attendue de son évaluation. Le prochain point à échantillonner est celui maximisant cette utilité :
 
-$$
-x_{\text{next}} = \arg\max_x \alpha(x)
-$$
+$$x_{\text{next}} = \arg\max_x \alpha(x)$$
 
 Cette optimisation de la fonction d'acquisition s'effectue généralement par des méthodes conventionnelles, car les fonctions d'acquisition sont typiquement peu coûteuses à évaluer et analytiquement tractables.
 
@@ -128,9 +114,7 @@ L'Expected Improvement représente l'une des fonctions d'acquisition les plus in
 
 Soit $f^* = \max_{i=1,…,n} y_i$ la meilleure valeur observée. L'amélioration en un point $x$ est définie par $I(x) = \max(0, f(x) - f^*)$. L'Expected Improvement s'écrit :
 
-$$
-\text{EI}(x) = \mathbb{E}[I(x)] = (\mu(x) - f^*)\Phi(Z) + \sigma(x)\phi(Z)
-$$
+$$\text{EI}(x) = E(I(x)] = (\mu(x) - f^*)\Phi(Z) + \sigma(x)\phi(Z)$$
 
 où $Z = \frac{\mu(x) - f^*}{\sigma(x)}$, et $\Phi$ et $\phi$ sont respectivement la fonction de répartition et la densité de la loi normale standard.
 
@@ -140,9 +124,7 @@ Cette formulation révèle l'équilibre exploration-exploitation : le premier te
 
 La Probability of Improvement calcule la probabilité qu'un point améliore le meilleur résultat actuel :
 
-$$
-\text{PI}(x) = P(f(x) > f^*) = \Phi\left(\frac{\mu(x) - f^*}{\sigma(x)}\right)
-$$
+$$\text{PI}(x) = P(f(x) > f^*) = \Phi\left(\frac{\mu(x) - f^*}{\sigma(x)}\right)$$
 
 Bien que conceptuellement simple, cette fonction d'acquisition souffre d'une tendance excessive à l'exploitation. Elle peut converger prématurément vers des optima locaux en négligeant l'exploration de régions incertaines mais potentiellement prometteuses.
 
@@ -150,9 +132,7 @@ Bien que conceptuellement simple, cette fonction d'acquisition souffre d'une ten
 
 La fonction Upper Confidence Bound adopte une approche inspirée de la théorie des bandits multi-bras :
 
-$$
-\text{UCB}(x) = \mu(x) + \beta \sigma(x)
-$$
+$$\text{UCB}(x) = \mu(x) + \beta \sigma(x)$$
 
 Le paramètre $\beta$ contrôle l'équilibre exploration-exploitation : des valeurs élevées favorisent l'exploration, tandis que des valeurs faibles privilégient l'exploitation. La théorie suggère des choix de $\beta$ dépendant de l'horizon temporel et de la dimension du problème.
 
@@ -162,9 +142,7 @@ Les méthodes basées sur l'entropie adoptent une perspective informationnelle. 
 
 L'Entropy Search maximise la réduction d'entropie de $p(x^*)$, la distribution sur la localisation de l'optimum :
 
-$$
-\text{ES}(x) = H[p(x^*)] - \mathbb{E}_{y|x}[H[p(x^*|x, y)]]
-$$
+$$\text{ES}(x) = H[p(x^*)] - \mathbb{E}_{y|x}[H[p(x^*|x, y)]]$$
 
 Cette approche présente l'avantage théorique de maximiser directement l'information acquise sur l'objectif d'optimisation, mais sa mise en œuvre s'avère computationnellement complexe.
 
@@ -172,9 +150,7 @@ Cette approche présente l'avantage théorique de maximiser directement l'inform
 
 La fonction Knowledge Gradient mesure l'amélioration attendue de la meilleure décision future après avoir observé un nouveau point :
 
-$$
-\text{KG}(x) = \mathbb{E}[V^{n+1} - V^n | x]
-$$
+$$\text{KG}(x) = E(V^{n+1} - V^n | x)$$
 
 où $V^n$ représente la valeur du meilleur point après $n$ observations. Cette approche intègre naturellement l'horizon temporel de l'optimisation et s'adapte aux budgets d'évaluation limités.
 
@@ -208,9 +184,7 @@ Les performances de l'optimisation bayésienne dépendent critiquement du choix 
 
 L'optimisation de ces hyperparamètres s'effectue généralement par maximisation de la vraisemblance marginale :
 
-$$
-\log p(\mathbf{y} | \mathbf{X}, \boldsymbol{\theta}) = -\frac{1}{2}\mathbf{y}^T K_{\boldsymbol{\theta}}^{-1} \mathbf{y} - \frac{1}{2}\log |K_{\boldsymbol{\theta}}| - \frac{n}{2}\log(2\pi)
-$$
+$$\log p(\mathbf{y} | \mathbf{X}, \boldsymbol{\theta}) = -\frac{1}{2}\mathbf{y}^T K_{\boldsymbol{\theta}}^{-1} \mathbf{y} - \frac{1}{2}\log |K_{\boldsymbol{\theta}}| - \frac{n}{2}\log(2\pi)$$
 
 Cette approche présente l'avantage de l'automatisation : les hyperparamètres s'ajustent automatiquement aux données observées sans intervention manuelle.
 
@@ -240,9 +214,7 @@ De nombreux problèmes d'optimisation pratiques impliquent des contraintes sur l
 
 L'Expected Constrained Improvement pondère l'Expected Improvement par la probabilité de faisabilité :
 
-$$
-\text{ECI}(x) = \text{EI}(x) \times P(\text{faisable} | x)
-$$
+$$\text{ECI}(x) = \text{EI}(x) \times P(\text{faisable} | x)$$
 
 #### Espaces de recherche discrets et mixtes
 

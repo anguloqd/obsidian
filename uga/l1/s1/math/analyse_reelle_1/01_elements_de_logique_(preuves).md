@@ -90,8 +90,9 @@ Une **contradiction** est une proposition $P$ telle que $P$ est vraie et $(non~P
 >
 >  $$
 >  a^b = (\sqrt{2}^{\sqrt{2}})^{\sqrt{2}} = \sqrt{2}^{\sqrt{2} \times \sqrt{2}} = \sqrt{2}^2 = 2 \in \mathbb{Q}
->  $$
-
+>
+>
+$$
 #### Disjonction
 
 **Table de vérité du connecteur "ou" :**
@@ -246,11 +247,9 @@ Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition
 La proposition $\forall x \in E, P(x)$ est la **conjonction** de l'ensemble des propositions $P(e)$ lorsque $e$ parcourt l'ensemble $E$.
 
 Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, …$, alors :
-
 $$
 \forall x \in E, P(x) \equiv P(e_1) \text{ et } P(e_2) \text{ et } P(e_3) \text{ et } ...
 $$
-
 #### Quantificateur existentiel
 
 ##### Définition
@@ -269,11 +268,9 @@ Soit $P(x)$ un prédicat dépendant de $x$. Soit $E$ un ensemble. La proposition
 La proposition $\exists x \in E, P(x)$ est la **disjonction** de l'ensemble des propositions $P(e)$ lorsque $e$ parcourt l'ensemble $E$.
 
 Si $E$ est un ensemble fini avec éléments $e_1, e_2, e_3, …$, alors :
-
 $$
 \exists x \in E, P(x) \equiv P(e_1) \text{ ou } P(e_2) \text{ ou } P(e_3) \text{ ou } ...
 $$
-
 >[!example]+ Exemples d'application
 >- $(\forall x \in \mathbb{R}, x^2 \geq 0)$ est une proposition vraie
 >- $(\exists x \in \mathbb{R}, x^2 > 0)$ est une proposition vraie
@@ -341,10 +338,12 @@ $$
 >Je suppose, par l'absurde, qu'il existe $x \in \mathbb{R} \setminus \{1\}$ tel que $\frac{2x+2}{x-1} = 2$.
 >Alors, en multipliant par $x - 1$ (non nul), j'obtiens :
 >
->$$
->2x + 2 = 2(x - 1)
->$$
 >
+$$
+>2x + 2 = 2(x - 1)
+>
+>
+$$
 >J'en déduis $2x + 2 = 2x - 2$, et donc $2 = -2$.
 >Or $2 \neq -2$. Contradiction.
 
@@ -378,10 +377,13 @@ $$
 >Alors il existe $k \in \mathbb{N}$ tel que $n = 2k + 1$.
 >Alors :
 >
->$$
->n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 = 2K + 1
->$$
 >
+$$
+>n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 = 2K + 1
+>
+>
+$$
+
 >avec $K = 2k^2 + 2k \in \mathbb{N}$.
 >Donc $n^2$ est impair.
 >Par contraposée, si $n^2$ est pair, alors $n$ est pair.

@@ -80,9 +80,7 @@ Les algorithmes utilisant la descente de gradient bénéficient également de la
 
 La normalisation min-max (rescaling) transforme l'amplitude des variables pour les faire évoluer dans l'intervalle [0, 1]. La formule de transformation s'écrit :
 
-$$
-x' = \frac{x - \min(x)}{\max(x) - \min(x)}
-$$
+$$x' = \frac{x - \min(x)}{\max(x) - \min(x)}$$
 
 Cette méthode préserve la distribution relative des données tout en harmonisant les échelles. Pour le vecteur [1, 3, 4, 2], la transformation min-max donne :
 
@@ -93,9 +91,7 @@ Cette méthode préserve la distribution relative des données tout en harmonisa
 
 La standardisation transforme les variables pour qu'elles présentent une moyenne nulle et une variance unitaire. Cette transformation suit la formule :
 
-$$
-x' = \frac{x - \bar{x}}{\sigma}
-$$
+$$x' = \frac{x - \bar{x}}{\sigma}$$
 
 où $\bar{x}$ représente la moyenne et $\sigma$ l'écart-type de la variable.
 
@@ -139,9 +135,7 @@ Plusieurs approches permettent de traiter les valeurs aberrantes : leur suppress
 
 La méthode de Tukey (Tukey's fence) constitue une approche standard pour la détection de valeurs aberrantes. Elle considère comme aberrantes les observations situées en dehors de l'intervalle :
 
-$$
-[Q_1 - k(Q_3 - Q_1), Q_3 + k(Q_3 - Q_1)]
-$$
+$$[Q_1 - k(Q_3 - Q_1), Q_3 + k(Q_3 - Q_1)]$$
 
 où $Q_1$ et $Q_3$ représentent respectivement les premier et troisième quartiles.
 

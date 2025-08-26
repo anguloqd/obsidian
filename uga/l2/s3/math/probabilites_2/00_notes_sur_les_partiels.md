@@ -8,12 +8,10 @@
 
 **Formule IPP** : $\int u \, dv = uv - \int v \, du$
 
-$$
-\begin{align}
+$$\begin{align}
 \text{Correct :} \quad &\int_0^\infty x^2e^x \, dx = \left[x^2e^x - 2\int x e^x \, dx\right]_0^\infty \\[0.5em]
 \text{Incorrect :} \quad &\int_0^\infty x^2e^x \, dx = x^2e^x - 2\int_0^\infty x e^x \, dx
-\end{align}
-$$
+\end{align}$$
 
 **Méthode correcte** :
 1. Appliquer IPP pour obtenir l'expression complète
@@ -26,15 +24,11 @@ Pour les intégrales définies sur des intervalles symétriques $[-a, a]$ :
 
 **Fonction paire** : $f(-x) = f(x)$
 
-$$
-\int_{-a}^a f(x) \, dx = 2\int_0^a f(x) \, dx
-$$
+$$\int_{-a}^a f(x) \, dx = 2\int_0^a f(x) \, dx$$
 
 **Fonction impaire** : $f(-x) = -f(x)$
 
-$$
-\int_{-a}^a f(x) \, dx = 0
-$$
+$$\int_{-a}^a f(x) \, dx = 0$$
 
 **Justification géométrique** :
 - Fonction paire : symétrie par rapport à l'axe des ordonnées → les aires se doublent
@@ -50,37 +44,27 @@ Soit $\bar{X}_n$ la moyenne empirique de $n$ V.A. iid avec $\mathbb{E}[X_i] = \m
 
 **Loi des Grands Nombres (LGN)** : Convergence de la moyenne vers l'espérance
 
-$$
-\lim_{n\rightarrow\infty} \mathbb{P}(|\bar{X}_n - \mu| \leq \epsilon) = 1, \quad \forall \epsilon > 0
-$$
+$$\lim_{n\rightarrow\infty} P(|\bar{X}_n - \mu| \leq \epsilon) = 1, \quad \forall \epsilon > 0$$
 
 **Théorème Central de la Limite (TCL)** : Vitesse de convergence et distribution limite
 
-$$
-\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)
-$$
+$$\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)$$
 
 #### Formulations équivalentes
 
 **LGN** (convergence en probabilité) :
 
-$$
-\bar{X}_n \stackrel{P}{\rightarrow} \mu
-$$
+$$\bar{X}_n \stackrel{P}{\rightarrow} \mu$$
 
 **TCL** (convergence en loi de la version normalisée) :
 
-$$
-\sqrt{n}(\bar{X}_n - \mu) \stackrel{d}{\rightarrow} \mathcal{N}(0, \sigma^2)
-$$
+$$\sqrt{n}(\bar{X}_n - \mu) \stackrel{d}{\rightarrow} \mathcal{N}(0, \sigma^2)$$
 
 #### Approximation pratique du TCL
 
 Pour $n$ suffisamment grand (règle empirique : $n \geq 30$) :
 
-$$
-\bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
-$$
+$$\bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)$$
 
 **Attention** : Cette approximation est valide pour $n$ fini mais grand. Si $n \rightarrow \infty$, la variance tend vers $0$ et on retrouve la convergence de la LGN.
 
@@ -90,12 +74,10 @@ Quand $n \rightarrow \infty$, la distribution de $(\bar{X}_n - \mu)$ devient **d
 
 **Fonction de répartition limite** :
 
-$$
-F(x) = \begin{cases}
+$$F(x) = \begin{cases}
 0, & x < 0 \\
 1, & x \geq 0
-\end{cases}
-$$
+\end{cases}$$
 
 Cette fonction correspond à la **mesure de Dirac** $\delta_0$.
 
@@ -128,9 +110,7 @@ Si le test d'Alembert $\lim_{n\rightarrow\infty} \left|\frac{u_{n+1}}{u_n}\right
 
 Pour simplifier une série, on peut **ré-indexer** en changeant la variable de sommation :
 
-$$
-S = \sum_{k=0}^\infty \frac{k}{(k+1)!} = \sum_{k=1}^\infty \frac{k-1}{k!} = \sum_{k=1}^\infty \frac{k}{k!} - \sum_{k=1}^\infty \frac{1}{k!}
-$$
+$$S = \sum_{k=0}^\infty \frac{k}{(k+1)!} = \sum_{k=1}^\infty \frac{k-1}{k!} = \sum_{k=1}^\infty \frac{k}{k!} - \sum_{k=1}^\infty \frac{1}{k!}$$
 
 **Techniques utiles** :
 - Décomposer en plusieurs séries
@@ -143,13 +123,9 @@ $$
 
 **Exemple** :
 
-$$
-e^x = \sum_{k=0}^\infty \frac{x^k}{k!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
-$$
+$$e^x = \sum_{k=0}^\infty \frac{x^k}{k!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$$
 
-$$
-e^{-x} = \sum_{k=0}^\infty \frac{(-x)^k}{k!} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots
-$$
+$$e^{-x} = \sum_{k=0}^\infty \frac{(-x)^k}{k!} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots$$
 
 **Piège fréquent** : Si la série de Taylor commence à $k=0$, attention au terme constant lors des manipulations !
 

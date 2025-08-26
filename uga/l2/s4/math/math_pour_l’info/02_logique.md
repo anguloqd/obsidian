@@ -48,19 +48,15 @@ Le plus souvent, le terme *clause* fait référence plutôt à la clause disjonc
 
 Une forme normale est définie comme un conjonction de clause disjonctive, par exemple $(A ∨ ¬B ∨ ¬C) ∧ (¬D ∨ E ∨ F)$. Un théorème important c’est que toute formule admet une forme normale qui lui est équivalente. Notons que $A ∧ (B ∨ (C ∧ D))$ n’est pas normale, mais :
 
-$$
-A ∧ (B ∨ (C ∧ D)) \iff \underbrace{A\land((B \lor C) \land (B \lor D))}_\text{forme normale !}
-$$
+$$A ∧ (B ∨ (C ∧ D)) \iff \underbrace{A\land((B \lor C) \land (B \lor D))}_\text{forme normale !}$$
 
 On peut appliquer les lois de De Morgan a une clause, par exemple :
 
-$$
-\begin{align*}
- &(l_1\land \dots \land l_n)\implies q \\
+$$\begin{align*}
+&(l_1\land \dots \land l_n)\implies q \\
 \iff \lnot&(l_1\land \dots \land l_n) \lor q \\
 \iff \lnot & l_1 \lor \dots \lor \lnot l_n \lor q
-\end{align*}
-$$
+\end{align*}$$
 
 Cette dernier expression $(\lnot l_1 \lor \dots \lor \lnot l_n \lor q)$ est d’intérêt, est une type d’une clause de Horn. Particulièrement, une clause de Horn est une clause **disjonctive** avec, au plus, un littéral positif.
 
@@ -75,11 +71,8 @@ Le principe de résolution de Robinson est une généralisation du modus ponens.
 3. Avec la définition d’implication, on peut réécrire la dernière formule comme $(\lnot p \lor b_1 \lor \dots \lor b_n)$.
 4. On met tout sous la forme de modus ponens :
 
-    $$
-    \big((p \lor a_1\lor \dots \lor a_n) \land (\lnot p \lor b_1 \lor \dots \lor b_n)\big) \\\implies (a_1 \lor \dots \lor a_n \lor b_1 \lor \dots \lor b_n)
+$$\big((p \lor a_1\lor \dots \lor a_n) \land (\lnot p \lor b_1 \lor \dots \lor b_n)\big) \\\implies (a_1 \lor \dots \lor a_n \lor b_1 \lor \dots \lor b_n)$$
 
-
-$$
 La magie ici c’est que la clause finale ne dépend pas ni de $p$ ni de $\lnot p$ !
 
 # Prédicats
@@ -120,11 +113,8 @@ On a vu que les prédicats contiennent des variables mathématiques que attenden
 1. On transforme en forme “prénexe” : on quantifie toutes les variables et les seuls connecteurs logiques qu’il y a sont ceux basiques ($\land$, $\lor$ et $\lnot$).
 2. On remplace toute variable quantifiée existentiellement ($\exists$) par un symbole de fonction dont les arguments sont les variables quantifiées universellement ($\forall$) qui précèdent notre variable.
 3. On supprime les quantificateurs existentiels qui sont devenus inutiles.
-$$
 
-\forall x \in E, \exists M>0:f(x)<M \longrightarrow \forall x \in E, f(x)<\underbrace{g(x)}_{f(x)+1}
-
-$$
+$$\forall x \in E, \exists M>0:f(x)<M \longrightarrow \forall x \in E, f(x)<\underbrace{g(x)}_{f(x)+1}$$
 
 Note pratique #1 : si $\exists x$ avant de $\forall y$, on revient à donner à $x$ une valeur constante $a$, puis à eliminer le $\exists x$.
 

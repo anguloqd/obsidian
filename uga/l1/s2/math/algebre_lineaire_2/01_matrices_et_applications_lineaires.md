@@ -19,16 +19,14 @@ On définit le rang d'une matrice comme étant le rang de ses vecteurs colonnes.
 
 Une matrice intéressante par rapport à son rang est une **matrice échelonnée**. On dit qu'une matrice est échelonnée par rapport aux colonnes si le nombre de zéros commençant une colonne croît strictement colonne après colonne, jusqu'à ce qu'il ne reste plus que des zéros. Autrement dit, la matrice transposée est échelonnée par rapport aux lignes. Par exemple :
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 +&0&0&0&0&0\\
 *&0&0&0&0&0\\
 *&+&0&0&0&0\\
 *&*&+&0&0&0\\
 *&*&*&0&0&0\\
 *&*&*&+&0&0
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Ici, les $∗$ désignent des coefficients quelconques (nuls ou non), et les $+$ des coefficients strictement non nuls. Le rang d'une matrice échelonnée par colonnes est égal au nombre de colonnes non nulles.
 
@@ -61,9 +59,7 @@ Supposons que $A$ n'a que deux vecteurs, $\{v_1, v_2\}$ et le même pour $B$, $\
 
 Il peut être vite fatigant de devoir faire des opérations mathématiques pour savoir quel vecteur $v$ de $A$ correspond à quel vecteur $w$ de $B$. Donc, c'est plus vite si on sépare chaque vecteur comme un produit des coordonnées et les vecteurs bases.
 
-$$
-f(x)=f\left(\sum_{i=1}^nx_ie_i \right)=\sum_{i=1}^nx_if(e_i)=\sum_{i=1}^nx_iv_i
-$$
+$$f(x)=f\left(\sum_{i=1}^nx_ie_i \right)=\sum_{i=1}^nx_if(e_i)=\sum_{i=1}^nx_iv_i$$
 
 Après, on juste passe chaque vecteur base par la fonction. Les vecteurs résultants seront une base de l'image de $f(x)$.
 
@@ -107,17 +103,14 @@ Mais, notons que finalement cette famille appartient à l'ensemble d'arrivée, $
 
 Dans la prochaine équation, on exprime l'image d'un vecteur $e_j$ de la base $B$, avec la base d'arrivé $B^\prime=(f_i)_{1\le i\le n}$ :
 
-$$
-f(e_j)=a_{1,j}f_1+a_{2,j}f_2+\dots+a_{n,j}f_n=\begin{bmatrix}a_{1,j}\\a_{2,j}\\\vdots\\a_{n,j}\end{bmatrix}_{B^\prime}
-$$
+$$f(e_j)=a_{1,j}f_1+a_{2,j}f_2+\dots+a_{n,j}f_n=\begin{bmatrix}a_{1,j}\\a_{2,j}\\\vdots\\a_{n,j}\end{bmatrix}_{B^\prime}$$
 
 > [!note]
 > **Attention !** On utilise la lettre $f$ pour la fonction/A.L. et aussi pour les vecteurs de la base $B^\prime$.
 
 La matrice d'application linéaire $f$ (par rapport aux bases $B$ et $B'$) est la matrice dont la $j$-ième colonne est constituée par les coordonnées du vecteur $f(e_j)$ dans la base $B^\prime=(f_i)_{1\le i\le n}$.
 
-$$
-\text{Mat}_{B,B'}(f) = \begin{bmatrix}
+$$\text{Mat}_{B,B'}(f) = \begin{bmatrix}
 | & | & & | \\
 f(e_1)_{B'} & f(e_2)_{B'} & \cdots & f(e_n)_{B'} \\
 | & | & & |
@@ -126,8 +119,7 @@ a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
 a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m,1} & a_{m,2} & \cdots & a_{m,n}
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 En termes plus simples, c'est la matrice dont les vecteurs colonnes sont l'image par $f$ des vecteurs de la base de départ $B$, exprimée dans la base d'arrivée $B'$. On note cette matrice $\text{Mat}_{B,B'}(f)$.
 
@@ -168,30 +160,17 @@ Mais ce n'est plus vrai si on a deux bases différentes !
 Une symétrie central est une homothétie avec $λ = -1$.
 - **Réflexion par rapport à la fonction ou axe de symétrie $y = x$** :
 
-    $$
-    \text{Mat}_B(f)=\begin{bmatrix}0&1\\1&0\end{bmatrix}
+$$\text{Mat}_B(f)=\begin{bmatrix}0&1\\1&0\end{bmatrix}$$
 
-
-$$
-    
 - **Rotation (de $\theta$ radians) :**
-    
-    
-$$
 
-    \text{Mat}_B(f)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}
-    
+$$\text{Mat}_B(f)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}$$
 
-$$
     - Particulièrement, quand il y a $p$ rotations à la suite…
         
-        
-$$
 
-        \text{Mat}_B(f^p)=\begin{bmatrix}\cos(p\theta)&-\sin(p\theta)\\\sin(p\theta)&\cos(p\theta)\end{bmatrix}
-        
+$$\text{Mat}_B(f^p)=\begin{bmatrix}\cos(p\theta)&-\sin(p\theta)\\\sin(p\theta)&\cos(p\theta)\end{bmatrix}$$
 
-$$
 ### Matrice d'un isomorphisme : $f$ bijective et linéaire
 
 $f$ est bijective (et donc isomorphe, parce que l'espace d'applications linéaires et un espace vectoriel et donc vérifie la propriété de linéarité) si et seulement si la matrice $\text{Mat}_{B, B'}(f)$ est inversible.
@@ -244,21 +223,17 @@ Rappelons : une **matrice d'application linéaire** décrit une fonction de $E \
 > Aide : la notation $\text{Mat}_{1,2}$ se lit "de $1$ à $2$" tant que $P_{1,2}$ se lit "à $1$ de $2$". $\text{Mat}$ se lit dans "le bon ordre", càd. de gauche à droite ; et $P$ dans l'ordre inverse.
 
 La formule de changement de base est la suivante :
-$$
 
-B=Q^{-1}AP
+$$B=Q^{-1}AP$$
 
-$$
 - On considère 4 bases : $\mathcal{B}_{E}$, $\mathcal{B}_{E}'$, $\mathcal{B}_{F}$, $\mathcal{B}_{F}'$.
 - $A = \text{Mat}_{\mathcal{B}_{E},\mathcal{B}_{F}}(f)$ et $B = \text{Mat}_{\mathcal{B}_{E}',\mathcal{B}_{F}'}(f)$ sont des fonctions.
 - $P = P_{\mathcal{B}_{E},\mathcal{B}_{E}'}$ et $Q = P_{\mathcal{B}_{F},\mathcal{B}_{F}'}$ sont des passages.
 
 Lisons de droite à gauche pour comprendre ce que elle veut nous dire :
-$$
 
-B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)
+$$B\mathbf{Y}_{\mathcal{B}}=Q^{-1}AP\mathbf{Y}_{\mathcal{B}'}\\[4pt](e\mathcal{b}'_e)\rightarrow_{\text{id}_E} (E,\mathcal{B}_E)\rightarrow_f(F,\mathcal{B}_F)\rightarrow_{\text{id}_F}(F,\mathcal{B}'_F)$$
 
-$$
 1. $P$ : On prend un vecteur $\mathbf{Y}$ de notre ensemble $E$ et on change sa base de $\mathcal{B}_{E}'$ à $\mathcal{B}_{E}$.
 2. $A$ : Après, on applique $f$ et le résultat sera en $\mathcal{B}_{F}$.
 3. $Q^{-1}$ : Finalement, on va exprimer le vecteur résultat de $\mathcal{B}_{F}$ à $\mathcal{B}_{F}'$.
@@ -268,11 +243,8 @@ Attention ! Ce ne pas $Q$, mais $Q^{-1}$, ça m'a posé de problèmes.
 #### Sur un même espace vectoriel $E$
 
 Le processus est plus simple si on parle d'un endomorphisme $E \mapsto E$ :
-$$
 
-B = P^{-1}AP
-
-$$
+$$B = P^{-1}AP$$
 
 - $P = P_{\mathcal{B},\mathcal{B}'}.$
 - $A = \text{Mat}_{\mathcal{B}}(f)$.

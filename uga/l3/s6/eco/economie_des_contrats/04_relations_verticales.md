@@ -109,9 +109,7 @@ Dans le cas d'actifs spécifiques, la firme peut choisir :
 
 **Mesure de la quasi-rente** : La quasi-rente associée avec les investissements spécifiques mesure la spécificité de l'investissement et correspond à la différence entre :
 
-$$
-\text{Quasi-rente} = \text{Valeur de l'actif dans son utilisation présente} - \text{Meilleure utilisation alternative}
-$$
+$$\text{Quasi-rente} = \text{Valeur de l'actif dans son utilisation présente} - \text{Meilleure utilisation alternative}$$
 
 **Hold-up et quasi-rente : principe**
 
@@ -316,43 +314,31 @@ Le modèle analyse une situation où :
 
 **Étape 2** : Le programme de maximisation du profit du distributeur est :
 
-$$
-\max_p \pi_D = (p - w)(a - p)
-$$
+$$\max_p \pi_D = (p - w)(a - p)$$
 
 La condition de premier ordre s'écrit :
 
-$$
-\frac{\partial \pi_D}{\partial p} = 0 \Leftrightarrow a - 2p + w = 0
-$$
+$$\frac{\partial \pi_D}{\partial p} = 0 \Leftrightarrow a - 2p + w = 0$$
 
 D'où : $p = \frac{a + w}{2}$
 
 La demande pour le bien final, et donc pour le bien intermédiaire, est alors :
 
-$$
-q = a - p = a - \frac{a + w}{2} = \frac{a - w}{2}
-$$
+$$q = a - p = a - \frac{a + w}{2} = \frac{a - w}{2}$$
 
 **Étape 1** : Le programme de maximisation du profit du fabricant est :
 
-$$
-\max_w \pi_F = (w - c)q(w) = (w - c)\frac{a - w}{2}
-$$
+$$\max_w \pi_F = (w - c)q(w) = (w - c)\frac{a - w}{2}$$
 
 La condition de premier ordre s'écrit :
 
-$$
-\frac{\partial \pi_F}{\partial w} = 0 \Leftrightarrow \frac{a - w}{2} - \frac{w - c}{2} = 0
-$$
+$$\frac{\partial \pi_F}{\partial w} = 0 \Leftrightarrow \frac{a - w}{2} - \frac{w - c}{2} = 0$$
 
 D'où : $w = \frac{a + c}{2}$
 
 En remplaçant $w$ par sa valeur, on trouve le prix d'équilibre sur le marché final :
 
-$$
-p = \frac{a + \frac{a + c}{2}}{2} = \frac{3a + c}{4}
-$$
+$$p = \frac{a + \frac{a + c}{2}}{2} = \frac{3a + c}{4}$$
 
 **Profits individuels** :
 - $\pi_D = \frac{(a - c)^2}{16}$
@@ -360,17 +346,13 @@ $$
 
 Soit un surplus total en double monopole de :
 
-$$
-SP = \pi_D + \pi_F = \frac{3(a - c)^2}{16}
-$$
+$$SP = \pi_D + \pi_F = \frac{3(a - c)^2}{16}$$
 
 #### B. Cas de la firme intégrée
 
 On suppose maintenant que les firmes F et D sont intégrées verticalement. On a alors le problème classique du monopole :
 
-$$
-\max_{p^{IV}} \pi^{IV} = (p - c)(a - p)
-$$
+$$\max_{p^{IV}} \pi^{IV} = (p - c)(a - p)$$
 
 On trouve alors que :
 
@@ -404,9 +386,7 @@ La firme F fixe le prix unitaire ($w$) au coût marginal : $w = c$
 
 Le problème de la firme D s'écrit alors :
 
-$$
-\max_p \pi_D = (p - c)(a - p) - FF
-$$
+$$\max_p \pi_D = (p - c)(a - p) - FF$$
 
 C'est le profit de monopole intégré moins la partie fixe FF !
 

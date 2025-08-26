@@ -9,9 +9,7 @@
 
 Si $x_i(p_1, p_2, m_i)$ est la demande du consommateur $i$ pour le bien 1, la demande de marché est :
 
-$$
-X(p_1, p_2, m_1, m_2, ..., m_n) = \sum_{i=1}^n x_i(p_1, p_2, m_i)
-$$
+$$X(p_1, p_2, m_1, m_2, ..., m_n) = \sum_{i=1}^n x_i(p_1, p_2, m_i)$$
 
 ### La marge extensive et la marge intensive
 
@@ -31,8 +29,9 @@ La mesure standard de l'élasticité d'une demande linéaire ($\Delta q/\Delta p
 >
 >$$
 >\varepsilon = \frac{\Delta q/q}{\Delta p/p} = \frac{\partial q}{\partial p} \cdot \frac{p}{q}
->$$
 >
+>
+$$
 >On considère généralement la valeur absolue de l'élasticité.
 
 #### Classification des demandes selon l'élasticité
@@ -46,17 +45,13 @@ La mesure standard de l'élasticité d'une demande linéaire ($\Delta q/\Delta p
 **Recette** : $R = pq$
 
 La variation de la recette en fonction du prix est :
-
 $$
 \frac{dR}{dp} = q(1 + \varepsilon)
 $$
-
 où $\varepsilon$ est négatif. On peut réécrire avec $\varepsilon$ en valeur absolue :
-
 $$
 \frac{dR}{dp} = q(1 - |\varepsilon|)
 $$
-
 >[!important] Relation entre recette et élasticité
 >- Si $|\varepsilon| < 1$ (demande inélastique) : $\frac{dR}{dp} > 0$ (une hausse de prix augmente la recette)
 >- Si $|\varepsilon| > 1$ (demande élastique) : $\frac{dR}{dp} < 0$ (une hausse de prix diminue la recette)
@@ -65,11 +60,9 @@ $$
 ### Les demandes à élasticité constante
 
 Une fonction de demande à élasticité constante prend la forme :
-
 $$
 q = cp^{\varepsilon}
 $$
-
 où $c$ est une constante positive et $\varepsilon$ est l'élasticité-prix relative (négative)
 
 #### Propriétés
@@ -81,7 +74,6 @@ où $c$ est une constante positive et $\varepsilon$ est l'élasticité-prix rela
 ### L'élasticité et la recette marginale
 
 **Recette marginale** : Variation de la recette par rapport à la quantité vendue :
-
 $$
 \frac{dR}{dq} = p(1 + \frac{1}{\varepsilon})
 $$

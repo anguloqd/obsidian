@@ -26,13 +26,11 @@ Un règle plus facile aussi c’est qui mult. alg. $\alpha_\lambda$ $≠$ mult. 
 
 Un polynôme *scindé* est un polynôme factorisable en facteurs polynomiaux de degré $1$ sur $\mathbb{R}$. En plus, si chaque facteur polynomiaux de degré $1$ est unique, il est *simplement scindé*.
 
-$$
-(x^2+x+1) : \text{racines non-réelles, non-scindé.}
+$$(x^2+x+1) : \text{racines non-réelles, non-scindé.}
 \\
 (x-1)(x-2)^2 : \text{scindé, pas simplement scindé.}
 \\
-(x-1)(x-2)(x-3) : \text{simplement scindé.}
-$$
+(x-1)(x-2)(x-3) : \text{simplement scindé.}$$
 
 **Théorème**. Si le polynôme caractéristique est scindé, la matrice est trigonalisable (possiblement diagonalisable). En plus, s’il est simplement scindé, il est forcément diagonalisable. Par conséquence, **s’il n’est pas scindé, il n’est pas ni trigonalisable ni diagonalisable**.
 
@@ -42,8 +40,7 @@ $$
 
 Le polynôme minimal $P_{M,M}(X)$ d’une matrice $M$ est le polynôme annulateur de $M$ de plus petit degré ayant les mêmes racines du polynôme caractéristique $P_{M,C}(X)$. Par exemple :
 
-$$
-M =
+$$M =
 \begin{pmatrix}
 5 &-7 & 6 \\
 0 & 1 & 0 \\
@@ -71,8 +68,7 @@ P_{M,C}(M)=(M-I)(M-2I)^2 =
 3&-7&3\\
 0&-1&0\\
 -3&5&-3
-\end{pmatrix}^2=0
-$$
+\end{pmatrix}^2=0$$
 
 Dans le cas précédent, $P_{M,M}(X) = P_{M,C}(X)$, car l’autre polynôme n’est pas annulateur.
 

@@ -6,9 +6,7 @@
 
 Le produit scalaire n’est pas seulement le produit matriciel. En réalité, un produit scalaire est une opération d’une famille d’opération qui satisfait quelques propriétés :
 
-$$
-f :(x,y) \mapsto \langle x,y \rangle
-$$
+$$f :(x,y) \mapsto \langle x,y \rangle$$
 
 - Linéaire par rapport à chaque variable :
 $\langle x+ \lambda x', y \rangle = \langle x,y \rangle + \lambda\langle x',y \rangle$ et $\langle x, y+ \lambda y' \rangle = \langle x,y \rangle + \lambda\langle x,y' \rangle$
@@ -86,19 +84,15 @@ Soit $B=\{e_i\}$ une base de $E$. Elle est orthonormée si :
 
 Une première note importante à faire c’est que, si $F_1\in E$ tel que $F_1=\text{Vect}(e_1)$, donc
 
-$$
-p_{F_1}(u)=\langle u, e_1 \rangle e_1 
+$$p_{F_1}(u)=\langle u, e_1 \rangle e_1
 \\
 \text{D'où, } u = \text{Id}(u)=p_{F_1}(u)+\dots+p_{F_n}(u)=\langle u,e_1\rangle e_1 +\dots+ \langle u,e_n \rangle e_n
 \\
-\text{Et, appliquant Pythagore, }||u||^2=\langle u,e_1 \rangle^2 + \dots + \langle u,e_n \rangle^2
-$$
+\text{Et, appliquant Pythagore, }||u||^2=\langle u,e_1 \rangle^2 + \dots + \langle u,e_n \rangle^2$$
 
 Pour tout ce qui précède, il est vital que la norme de $||e_i|| = 1$. Sinon, la règle générale est :
 
-$$
-p_F(u)=\frac{\langle u,v \rangle}{||v||^2}v
-$$
+$$p_F(u)=\frac{\langle u,v \rangle}{||v||^2}v$$
 
 **Théorème**. Soit $E$ un espace (hilbertien ou hermitien) de dimension $n$ muni d’un produit scalaire/hermitien. Donc, il existe dans $E$ des bases orthonormées.
 
@@ -108,9 +102,7 @@ Sur l’espace vectoriel $E$ de dimension $n$, soit $F$ un sous-espace de base o
 
 **Théorème**. La projection orthogonale de $u\in E$ sur $F$ est :
 
-$$
-p_F(u)= \langle u, e_1\rangle e_1 + \dots + \langle u, e_n \rangle e_n=\sum_{i=1}^n \langle u, e_i \rangle e_i
-$$
+$$p_F(u)= \langle u, e_1\rangle e_1 + \dots + \langle u, e_n \rangle e_n=\sum_{i=1}^n \langle u, e_i \rangle e_i$$
 
 La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur $u$ est le point qui minimise la distance de $u$ à $v$. C’est-à-dire : $||u-p_F(u)||=\inf \{ ||u-v||,  v\in F\}$.
 
@@ -134,8 +126,7 @@ La chose à retenir est que la projection orthogonale $v=p_F(u)$ d’un vecteur 
 
 Plus mathématiquement, et soit $p_\mathbf{u}(\mathbf{v})=\frac{\langle \mathbf{u},\mathbf{v} \rangle}{\langle \mathbf{u},\mathbf{u} \rangle} \cdot \mathbf{u}$ la projection orthogonale de $\mathbf{v}$ sur $\mathbf{u}$, donc l’algorithme ou le procédé de Gram-Schmidt est comme suit :
 
-$$
-\begin{align*}
+$$\begin{align*}
 &&\mathbf{u}_1 = \mathbf{v}_1 &&\longrightarrow &&\mathbf{e}_1=\frac{\mathbf{u}_1}{||\mathbf{u}_1||} \\
 
 &&\mathbf{u}_2 = \mathbf{v_2} - p_{\mathbf{u}_1}(\mathbf{v}_2) &&\longrightarrow &&\mathbf{e}_2=\frac{\mathbf{u}_2}{||\mathbf{u}_2||} \\
@@ -146,8 +137,7 @@ $$
 
 &&\mathbf{u}_k = \mathbf{v}_k - \sum_{i=1}^{k-1} p_{\mathbf{u}_i}(\mathbf{v}_k)&&\longrightarrow &&\mathbf{e}_k=\frac{\mathbf{u}_k}{||\mathbf{u}_k||} \\
 
-\end{align*}
-$$
+\end{align*}$$
 
 ![Les deux premières étapes de gram-schmidt.](ressources/05_produit_scalaire_et_algebre_bilineaire_untitled.png)
 

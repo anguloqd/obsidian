@@ -20,9 +20,7 @@ On peut donc écrire : $C(q) = CV(q) + F$
 
 **Coût marginal** :
 
-$$
-Cm(q) = \frac{dC}{dq}
-$$
+$$Cm(q) = \frac{dC}{dq}$$
 
 Pour le cas discret : $Cm(q) = C(q) - C(q-1)$
 
@@ -32,9 +30,7 @@ Comme $C(q) = CV(q) + F$, on a $Cm(q) = \frac{dCV(q)}{dq}$
 
 L'intégrale de 0 à $q$ du coût marginal est égale aux coûts variables jusqu'à $q$ :
 
-$$
-CV(q) = \int_{0}^{q} Cm(t) \, dt
-$$
+$$CV(q) = \int_{0}^{q} Cm(t) \, dt$$
 
 >[!important]
 >La courbe de coût moyen atteint son minimum lorsque le coût moyen est égal au coût marginal.

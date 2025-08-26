@@ -44,9 +44,7 @@ Lors de l'effet substitution, quand le prix d'un bien $x_1$ descend, on doit ré
 
 L'équation de Slutsky représente la variation totale de la demande par rapport à une variation du prix :
 
-$$
-\frac{\partial x_1}{\partial p_1} = \underbrace{\frac{\partial x_1^s}{\partial p_1}}_{\text{Effet de substitution}} + \underbrace{\frac{\partial x_1}{\partial m} \cdot (-x_1)}_{\text{Effet de revenu}}
-$$
+$$\frac{\partial x_1}{\partial p_1} = \underbrace{\frac{\partial x_1^s}{\partial p_1}}_{\text{Effet de substitution}} + \underbrace{\frac{\partial x_1}{\partial m} \cdot (-x_1)}_{\text{Effet de revenu}}$$
 
 **Bien de Giffen** : Si on suppose une augmentation du prix, dans le cas d'un bien inférieur, le signe de l'effet revenu est positif. Un bien Giffen est un bien inférieur, mais un bien inférieur n'est pas forcément un bien Giffen : il ne suffit pas que l'effet revenu aille dans le sens contraire de l'effet substitution, l'effet revenu doit dominer l'effet substitution. Un bien Giffen est donc un bien "fortement" inférieur.
 

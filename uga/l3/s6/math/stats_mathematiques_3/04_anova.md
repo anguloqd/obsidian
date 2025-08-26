@@ -1,4 +1,4 @@
-## 04 // ANOVA
+# 04 // ANOVA
 
 [slides anova1 stat3 annote.pdf](ressources/04_anova_slides_anova1_stat3_annote.pdf)
 
@@ -31,11 +31,9 @@ On considère le modèle $Xᵢ = E[Xᵢ] + ε$ᵢ. La question est de savoir si 
 
 On considère deux échantillons indépendants de tailles n₁ et n₂, respectivement :
 
-$$
-X_{1,1}, X_{1,2}, ···, X_{1,{n_1}}
+$$X_{1,1}, X_{1,2}, ···, X_{1,{n_1}}
 \\
-X_{2,1}, X_{2,2}, ···, X_{1,{n_2}}
-$$
+X_{2,1}, X_{2,2}, ···, X_{1,{n_2}}$$
 
 Donc, l'estimateur de la variance est $s^2 = \frac{\sum_{j=1}^{n_1} (X_{1,j} - \bar{X}1)^2 + \sum{j=1}^{n_2} (X_{2,j} - \bar{X}_2)^2}{n_1 + n_2 - 2}$
 
@@ -43,15 +41,11 @@ On note que $(n_1 + n_2 - 2)s^2/\sigma^2$ suit une loi $\chi^2(n_1 + n_2 - 2)$.
 
 Notre but est de tester l'hypothèse $H_0 = \text{"}\mu_1 = \mu_2\text{"}$, équivalente à "Le facteur n'a pas d'effet sur la variable $X$", ou encore "les deux échantillons sont issus de la même population". Nous allons donc étudier l'estimateur de la différence des moyennes $\bar{X}_1 - \bar{X}_2$, de moyenne nulle par hypothèse nulle, et de variance :
 
-$$
-\text{Var}(\bar{X}_1 - \bar{X}_2) = \text{Var}\left(\frac{1}{n_1}\sum_{j=1}^{n_1} X_{1,j} - \frac{1}{n_2}\sum_{j=1}^{n_2} X_{2,j}\right) = \frac{1}{n_1^2}\text{Var}\left(\sum_{j=1}^{n_1} X_{1,j}\right) + \frac{1}{n_2^2}\text{Var}\left(\sum_{j=1}^{n_2} X_{2,j}\right)
-$$
+$$V(\bar{X}_1 - \bar{X}_2) = \text{Var}\left(\frac{1}{n_1}\sum_{j=1}^{n_1} X_{1,j} - \frac{1}{n_2}\sum_{j=1}^{n_2} X_{2,j}\right) = \frac{1}{n_1^2}\text{Var}\left(\sum_{j=1}^{n_1} X_{1,j}\right) + \frac{1}{n_2^2}\text{Var}\left(\sum_{j=1}^{n_2} X_{2,j}\right)$$
 
 Et, par indépendance des échantillons. Il en suit :
 
-$$
-\text{Var}(\bar{X}_1 - \bar{X}_2) = \frac{n_1}{n_1^2}\sigma^2 + \frac{n_2}{n_2^2}\sigma^2 = \sigma^2\left(\frac{1}{n_1} + \frac{1}{n_2}\right)
-$$
+$$V(\bar{X}_1 - \bar{X}_2) = \frac{n_1}{n_1^2}\sigma^2 + \frac{n_2}{n_2^2}\sigma^2 = \sigma^2\left(\frac{1}{n_1} + \frac{1}{n_2}\right)$$
 
 #### Le test de Student
 
@@ -59,9 +53,7 @@ Cette quantité sera estimée par $s^2\left(\frac{1}{n_1} + \frac{1}{n_2}\right)
 
 Le test est basé sur la variable :
 
-$$
-T = \frac{\bar{X}_1 - \bar{X}_2}{s\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1 + n_2 - 2)
-$$
+$$T = \frac{\bar{X}_1 - \bar{X}_2}{s\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1 + n_2 - 2)$$
 
 On rejettera donc $H_0$ au seuil $\alpha$ si $|T| \geq q^t_{1-\alpha/2}(n_1+n_2-2)$
 
@@ -73,15 +65,13 @@ Le numérateur de la statistique $T$ est une mesure de l'écart entre les moyenn
 
 Supposons donc qu'on prélève $m$ échantillons indépendants :
 
-$$
-X_{1,1}, X_{1,2}, \cdots, X_{1,n_1}
+$$X_{1,1}, X_{1,2}, \cdots, X_{1,n_1}
 \\
 X_{2,1}, X_{2,2}, \cdots, X_{2,n_2}
 \\
 \vdots
 \\
-X_{m,1}, X_{m,2}, \cdots, X_{m,n_m}
-$$
+X_{m,1}, X_{m,2}, \cdots, X_{m,n_m}$$
 
 #### Le test de Fisher
 
@@ -89,35 +79,25 @@ L'hypothèse à tester est $H_0$ : "$\mu_1 = \mu_2 = \cdots = \mu_m = \mu'$".
 
 On observe que :
 
-$$
-\bar{X}_i - \bar{X} = \sum_{j=1}^{n_i} \frac{1}{n_i}(X_{ij} - \bar{X}) = \sum_{j=1}^{n_i} \frac{1}{n_i}\varepsilon_{ij} = \bar{\varepsilon}_i
-$$
+$$\bar{X}_i - \bar{X} = \sum_{j=1}^{n_i} \frac{1}{n_i}(X_{ij} - \bar{X}) = \sum_{j=1}^{n_i} \frac{1}{n_i}\varepsilon_{ij} = \bar{\varepsilon}_i$$
 
 dont la variance est $\sigma^2/n_i$. Par conséquent :
 
-$$
-\sum_{i=1}^{m} n_i(\bar{X}_i - \bar{X})^2 / \sigma^2 = SCM/\sigma^2 \sim \chi^2(m-1)
-$$
+$$\sum_{i=1}^{m} n_i(\bar{X}_i - \bar{X})^2 / \sigma^2 = SCM/\sigma^2 \sim \chi^2(m-1)$$
 
 On pose :
 
-$$
-SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}_i)^2
-$$
+$$SCE = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X}_i)^2$$
 
 Puisque $\sum_{i=1}^{m} (n_i - 1) = n - m$, on estime $\sigma^2$ par $SCE/(n-m)$ et :
 
 $SCE/\sigma^2 \sim \chi^2(n-m)$, la variable du test est donc :
 
-$$
-F = \frac{SCM/(m-1)}{SCE/(n-m)} \sim F_{m-1,n-m}
-$$
+$$F = \frac{SCM/(m-1)}{SCE/(n-m)} \sim F_{m-1,n-m}$$
 
 Nous rejetons $H_0$ au seuil $\alpha$ si :
 
-$$
-F = \frac{CMM}{CME} = \frac{SCM/(m-1)}{SCE/(n-m)} \geq q^{F_{m-1,n-m}}_{1-\alpha}
-$$
+$$F = \frac{CMM}{CME} = \frac{SCM/(m-1)}{SCE/(n-m)} \geq q^{F_{m-1,n-m}}_{1-\alpha}$$
 
 où $q$ est le quantile d'ordre $1-\alpha$ de la dite loi.
 
@@ -127,15 +107,11 @@ Remarquons que nous rejetons $H_0$ seulement si $F$ est trop grand et non si $F$
 
 Posons de plus :
 
-$$
-SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X})^2
-$$
+$$SCT = \sum_{i=1}^{m} \sum_{j=1}^{n_i} (X_{ij} - \bar{X})^2$$
 
 pour la dispersion totale. On peut aisément établir l'équation de la variance suivante :
 
-$$
-SCT = SCM + SCE
-$$
+$$SCT = SCM + SCE$$
 
 Où :
 
@@ -169,9 +145,7 @@ Pb. Est-ce la nature de l'engrais qui a un effet? Les 2 premiers sont le même e
 
 Les données portent sur la récolte obtenue dans chacune de ces trois conditions. En supposant que l'hypothèse $\mu_1 = \mu_2 = \mu_3$ sera rejetée, l'expérimentateur sait qu'il voudra ensuite tester l'hypothèse :
 
-$$
-\frac{\mu_1 + \mu_2}{2} = \mu_3 \Longleftrightarrow \frac{\mu_1}{2} + \frac{\mu_2}{2} - \mu_3 = \sum_i \lambda_i \mu_i
-$$
+$$\frac{\mu_1 + \mu_2}{2} = \mu_3 \Longleftrightarrow \frac{\mu_1}{2} + \frac{\mu_2}{2} - \mu_3 = \sum_i \lambda_i \mu_i$$
 
 Où,
 
@@ -181,37 +155,25 @@ Où,
 
 c'est l'hypothèse qu'en moyenne, les minéraux n'ont pas d'effet. Plus généralement, supposons qu'on veuille tester une hypothèse de la forme :
 
-$$
-H_0 = "\varphi = \sum_{i=1}^{m} \lambda_i \mu_i = 0"
-$$
+$$H_0 = "\varphi = \sum_{i=1}^{m} \lambda_i \mu_i = 0"$$
 
 où $\lambda_i$ sont des constantes données. la fonction linéaire $\varphi = \sum_i \lambda_i \mu_i$ sera estimée par
 
-$$
-\hat{\varphi} = \sum_{i=1}^{n} \lambda_i \bar{X}_i
-$$
+$$\hat{\varphi} = \sum_{i=1}^{n} \lambda_i \bar{X}_i$$
 
 Les $X_{ij} \sim \mathcal{N}(\mu_i, \sigma^2)$ i.i.d. Les $\bar{X}_i = \frac{1}{n_i} \sum_j X_{ij}$ sont des normales en tant que combinaisons linéaires de normales indépendantes
 
-$$
-E\bar{X}_i = \frac{1}{n_i} \sum_j EX_{ij} = \frac{1}{n_i} \sum_{j=1}^{n_i} \mu_i = \frac{n_i}{n_i} \mu_i
-$$
+$$E\bar{X}_i = \frac{1}{n_i} \sum_j EX_{ij} = \frac{1}{n_i} \sum_{j=1}^{n_i} \mu_i = \frac{n_i}{n_i} \mu_i$$
 
-$$
-Var(\bar{X}i) = Var\left(\frac{1}{n_i} \sum_j X{ij}\right) = \frac{1}{n_i^2} \sum_{j=1}^{n_i} Var(X_{ij}) = \frac{n_i}{n_i^2}\sigma^2 = \frac{\sigma^2}{n_i}
-$$
+$$V(\bar{X}i) = Var\left(\frac{1}{n_i} \sum_j X{ij}\right) = \frac{1}{n_i^2} \sum_{j=1}^{n_i} V(X_{ij}) = \frac{n_i}{n_i^2}\sigma^2 = \frac{\sigma^2}{n_i}$$
 
 avec les $X_{ij}$ indépendants. Notons que les $\bar{X}_i$ sont indépendants et suivent $\mathcal{N}\left(\mu_i, \frac{\sigma}{\sqrt{n_i}}\right)$
 
 Maintenant pour l’estimateur du contraste $\hat{\varphi}$,
 
-$$
-E\hat{\varphi} = E\left[\sum_i \lambda_i \bar{X}_i\right] = \sum_i \lambda_i E\bar{X}_i = \sum_i \lambda_i \mu_i = \varphi = 0 \text{ sous } H_0
-$$
+$$E\hat{\varphi} = E\left[\sum_i \lambda_i \bar{X}_i\right] = \sum_i \lambda_i E\bar{X}_i = \sum_i \lambda_i \mu_i = \varphi = 0 \text{ sous } H_0$$
 
-$$
-Var(\hat{\varphi}) = Var\left(\sum_i \lambda_i \bar{X}_i\right) = \sum_i \lambda_i^2 Var(\bar{X}_i) = \sigma^2 \sum_i \frac{\lambda_i^2}{n_i}
-$$
+$$V(\hat{\varphi}) = Var\left(\sum_i \lambda_i \bar{X}_i\right) = \sum_i \lambda_i^2 V(\bar{X}_i) = \sigma^2 \sum_i \frac{\lambda_i^2}{n_i}$$
 
 avec les $\bar X_i$ indépendants.
 
@@ -287,21 +249,15 @@ Ce sont les mêmes que pour l'ANOVA à 1 facteur : normalité de la variable dé
 
 Il y en a trois :
 
-$$
-\begin{cases}H_0 : \mu_i = \mu, \quad \forall i & \text{absence d'effet de } A \\H_0 : \mu_j = \mu, \quad \forall j & \text{absence d'effet de } B \\H_0 : \mu_{ij} = \mu, \quad \forall i,j & \text{absence d'effet de l'interaction.}\end{cases}
-$$
+$$\begin{cases}H_0 : \mu_i = \mu, \quad \forall i & \text{absence d'effet de } A \\H_0 : \mu_j = \mu, \quad \forall j & \text{absence d'effet de } B \\H_0 : \mu_{ij} = \mu, \quad \forall i,j & \text{absence d'effet de l'interaction.}\end{cases}$$
 
 ### Equation de la variance
 
-$$
-x_{i,j,k} - \bar{X} = \underbrace{(\bar{X}_{i\cdot} - \bar{X}) + (\bar{X}_{\cdot j} - \bar{X})}_{\text{Effet des facteurs principaux}} + \underbrace{(\bar{X}_{ij} - \bar{X}_{i\cdot} - \bar{X}_{\cdot j} + \bar{X})}_{\text{Effet de l'interaction}} + \underbrace{(x_{i,j,k} - \bar{X}_{ij})}_{\text{Erreur résiduelle}}
-$$
+$$x_{i,j,k} - \bar{X} = \underbrace{(\bar{X}_{i\cdot} - \bar{X}) + (\bar{X}_{\cdot j} - \bar{X})}_{\text{Effet des facteurs principaux}} + \underbrace{(\bar{X}_{ij} - \bar{X}_{i\cdot} - \bar{X}_{\cdot j} + \bar{X})}_{\text{Effet de l'interaction}} + \underbrace{(x_{i,j,k} - \bar{X}_{ij})}_{\text{Erreur résiduelle}}$$
 
 À partir de laquelle on extrait l'équation d'ANOVA :
 
-$$
-\underbrace{SCT}_{\text{Variabilité totale}} = \quad \underbrace{SCM_{A} + SCM_{B} + SCM_{AB}}_{\text{Variabilité expliquée}} \quad + \underbrace{SCE}_{\text{Variabilité résiduelle}}
-$$
+$$\underbrace{SCT}_{\text{Variabilité totale}} = \quad \underbrace{SCM_{A} + SCM_{B} + SCM_{AB}}_{\text{Variabilité expliquée}} \quad + \underbrace{SCE}_{\text{Variabilité résiduelle}}$$
 
 Où les termes sont :
 

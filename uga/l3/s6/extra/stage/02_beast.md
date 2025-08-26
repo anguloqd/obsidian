@@ -24,9 +24,7 @@ BEAST adopte une philosophie différente : plutôt que de chercher le "vrai" mod
 
 Le théorème de Bayes fournit le cadre mathématique :
 
-$$
-P(\text{modèle}|\text{données}) \propto P(\text{données}|\text{modèle}) \times P(\text{modèle})
-$$
+$$P(\text{modèle}|\text{données}) \propto P(\text{données}|\text{modèle}) \times P(\text{modèle})$$
 
 Cette formulation traite les paramètres et les structures de modèles comme des variables aléatoires, permettant une caractérisation complète de l'incertitude.
 
@@ -36,9 +34,7 @@ Cette formulation traite les paramètres et les structures de modèles comme des
 
 BEAST modélise une série temporelle $\{t_i, y_i\}_{i=1}^n$ selon la décomposition additive :
 
-$$
-y_i = S(t_i; \Theta_s) + T(t_i; \Theta_T) + \varepsilon_i
-$$
+$$y_i = S(t_i; \Theta_s) + T(t_i; \Theta_T) + \varepsilon_i$$
 
 où :
 
@@ -52,9 +48,7 @@ Les paramètres $\Theta_s$ et $\Theta_T$ encodent implicitement les changements 
 
 Le signal saisonnier est modélisé comme une fonction harmonique par morceaux. Avec $p$ points de rupture aux temps $\xi_k$ ($k = 1, …, p$), la série est divisée en $(p+1)$ segments. Pour chaque segment $[\xi_k, \xi_{k+1}]$, la saisonnalité prend la forme :
 
-$$
-S(t) = \sum_{l=1}^{L_k} \left[ a_{k,l} \sin\left(\frac{2\pi lt}{P}\right) + b_{k,l} \cos\left(\frac{2\pi lt}{P}\right) \right]
-$$
+$$S(t) = \sum_{l=1}^{L_k} \left[ a_{k,l} \sin\left(\frac{2\pi lt}{P}\right) + b_{k,l} \cos\left(\frac{2\pi lt}{P}\right) \right]$$
 
 où $P$ est la période (typiquement une année), $L_k$ est l'ordre harmonique du segment $k$, et $\{a_{k,l}, b_{k,l}\}$ sont les coefficients harmoniques.
 
@@ -64,9 +58,7 @@ Cette formulation permet à la complexité saisonnière de varier dans le temps 
 
 La tendance est représentée par une fonction linéaire par morceaux avec $m$ points de rupture aux temps $\tau_j$ ($j = 1, …, m$). Sur chaque segment $[\tau_j, \tau_{j+1}]$, la tendance est :
 
-$$
-T(t) = a_j + b_j \cdot t
-$$
+$$T(t) = a_j + b_j \cdot t$$
 
 Les coefficients $a_j$ et $b_j$ déterminent l'ordonnée à l'origine et la pente de chaque segment. Cette représentation capture les changements de régime : un écosystème peut passer d'une phase de croissance rapide à une phase de déclin, chaque transition étant marquée par un point de rupture.
 
@@ -74,9 +66,7 @@ Les coefficients $a_j$ et $b_j$ déterminent l'ordonnée à l'origine et la pent
 
 L'ensemble peut être reformulé sous forme matricielle standard :
 
-$$
-y = X_M \beta_M + \varepsilon
-$$
+$$y = X_M \beta_M + \varepsilon$$
 
 où :
 
@@ -113,9 +103,7 @@ Cette approche permet d'explorer efficacement un espace de modèles de dimension
 
 Plutôt que de sélectionner un modèle unique, BEAST combine tous les modèles échantillonnés via moyennage bayésien. L'estimation finale est :
 
-$$
-\hat{y}(t) = \frac{1}{N} \sum_{i=1}^N X_{M^{(i)}}(t) \beta_{M^{(i)}}
-$$
+$$\hat{y}(t) = \frac{1}{N} \sum_{i=1}^N X_{M^{(i)}}(t) \beta_{M^{(i)}}$$
 
 Cette combinaison permet d'approximer des signaux non-linéaires complexes tout en préservant l'information d'incertitude.
 
@@ -136,9 +124,7 @@ Ces choix reflètent des compromis pratiques entre flexibilité du modèle et st
 
 BEAST quantifie la probabilité d'occurrence d'un point de rupture à tout instant :
 
-$$
-P(\text{point de rupture à } t_s | \text{données}) = \frac{\text{nombre d'échantillons contenant } t_s}{N}
-$$
+$$P(\text{point de rupture à } t_s | \text{données}) = \frac{\text{nombre d'échantillons contenant } t_s}{N}$$
 
 Cette approche probabiliste dépasse les méthodes binaires (rupture/pas rupture) en fournissant des mesures de confiance graduées.
 
@@ -146,9 +132,7 @@ Cette approche probabiliste dépasse les méthodes binaires (rupture/pas rupture
 
 La combinaison de modèles linéaires par morceaux génère des tendances non-linéaires lisses. BEAST peut également calculer la probabilité d'avoir une tendance positive (verdissement) à tout moment :
 
-$$
-P(\text{verdissement à } t | \text{données}) = P\left(\frac{d\hat{y}}{dt}(t) > 0\right)
-$$
+$$P(\text{verdissement à } t | \text{données}) = P\left(\frac{d\hat{y}}{dt}(t) > 0\right)$$
 
 Cette information est cruciale pour distinguer les changements significatifs du bruit.
 
@@ -156,9 +140,7 @@ Cette information est cruciale pour distinguer les changements significatifs du 
 
 BEAST estime l'ordre harmonique optimal pour chaque période :
 
-$$
-\bar{L}(t) = \frac{1}{N} \sum_{i=1}^N L_k^{(i)} \text{ sujet à } t \in [\xi_k^{(i)}, \xi_{k+1}^{(i)}]
-$$
+$$\bar{L}(t) = \frac{1}{N} \sum_{i=1}^N L_k^{(i)} \text{ sujet à } t \in [\xi_k^{(i)}, \xi_{k+1}^{(i)}]$$
 
 Cette capacité d'adaptation révèle les changements phénologiques : un écosystème perturbé peut développer des patterns saisonniers plus complexes durant sa phase de récupération.
 

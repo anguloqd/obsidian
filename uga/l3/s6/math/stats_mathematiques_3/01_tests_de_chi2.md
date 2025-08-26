@@ -32,45 +32,31 @@ En présence de deux variables, l'un des enjeux principaux est d'étudier (c'est
 
 Si on était dans le cadre des probabilités, ce qui n'est pas le cas, alors deux caractères sont indépendants si la valeur de l'un n'a aucune influence sur la distribution de l'autre. Si tel était le cas, alors les distributions conditionnelles :
 
-$$
-f_{j|k} = \frac{f_{jk}}{f_{\bullet k}} \text{ et } f_{k|j} = \frac{f_{jk}}{f_{j\bullet}}
-$$
+$$f_{j|k} = \frac{f_{jk}}{f_{\bullet k}} \text{ et } f_{k|j} = \frac{f_{jk}}{f_{j\bullet}}$$
 
 seraient toutes semblables à la distribution marginale. Pour tout $(j, k)$, on devrait avoir :
 
-$$
-f_{j|k} = f_{j\bullet} \text{ et } f_{k|j} = f_{\bullet k}
-$$
+$$f_{j|k} = f_{j\bullet} \text{ et } f_{k|j} = f_{\bullet k}$$
 
 Ainsi, on aurait :
 
-$$
-f_{kj} = f_{j|k}f_{\bullet k} = f_{j\bullet}f_{\bullet k}
-$$
+$$f_{kj} = f_{j|k}f_{\bullet k} = f_{j\bullet}f_{\bullet k}$$
 
 D'où, si les deux variables étaient indépendantes, on aurait :
 
-$$
-n_{jk} = \frac{n_{j\bullet}n_{\bullet k}}{n}
-$$
+$$n_{jk} = \frac{n_{j\bullet}n_{\bullet k}}{n}$$
 
 En statistiques, on ne peut que "quantifier la distance à l'indépendance" à travers **la statistique du $χ²$**, notée comme suit :
 
-$$
-D_{\chi^2} = n\sum_{j=1}^J\sum_{k=1}^K\frac{(f_{jk} - f_{j\bullet}f_{\bullet k})^2}{f_{j\bullet}f_{\bullet k}}
-$$
+$$D_{\chi^2} = n\sum_{j=1}^J\sum_{k=1}^K\frac{(f_{jk} - f_{j\bullet}f_{\bullet k})^2}{f_{j\bullet}f_{\bullet k}}$$
 
 On peut remarquer que :
 
-$$
-D_{\chi^2} = n\left(\sum_{j=1}^J\sum_{k=1}^K\frac{n_{jk}^2}{n_{j\bullet}n_{\bullet k}} - 1\right)
-$$
+$$D_{\chi^2} = n\left(\sum_{j=1}^J\sum_{k=1}^K\frac{n_{jk}^2}{n_{j\bullet}n_{\bullet k}} - 1\right)$$
 
 ou de façon équivalente :
 
-$$
-D_{\chi^2} = \sum_{j=1}^J\sum_{k=1}^K\frac{\left(n_{jk} - \frac{n_{j\bullet}n_{\bullet k}}{n}\right)^2}{\frac{n_{j\bullet}n_{\bullet k}}{n}}
-$$
+$$D_{\chi^2} = \sum_{j=1}^J\sum_{k=1}^K\frac{\left(n_{jk} - \frac{n_{j\bullet}n_{\bullet k}}{n}\right)^2}{\frac{n_{j\bullet}n_{\bullet k}}{n}}$$
 
 où $J$ et $K$ sont le nombre de modalités de chacune des deux variables considérées. Le cas d'indépendance probabiliste serait alors équivalent à $D_{\chi^2} = 0$.
 
@@ -80,9 +66,7 @@ où $J$ et $K$ sont le nombre de modalités de chacune des deux variables consid
 
 Au seuil $α\%$ (le plus souvent $α = 5\%$), il faut comparer $D_{χ²}$ au quantile d'ordre $1-α\%$ ($q_{0,95}$ le plus souvent) d'une loi du $χ²(d)$, où:
 
-$$
-d = (J-1)(K-1)
-$$
+$$d = (J-1)(K-1)$$
 
 L'interprétation est la suivante :
 
@@ -101,9 +85,7 @@ L'interprétation est la suivante :
 
 On considère une série de 500 sacs de ciment avec leurs poids. On souhaite tester si cette série suit une loi normale $(m, σ)$ avec :
 
-$$
-m ≈ 50.78, σ ≈ 3.74
-$$
+$$m ≈ 50.78, σ ≈ 3.74$$
 
 #### Hypothèse nulle
 
@@ -113,9 +95,7 @@ On pose $H_0$ comme "La série observée est distribuée selon une loi normale $
 
 La statistique du test est :
 
-$$
-D_{χ^2} = \sum_{i=1}^l\frac{(O_i - T_i)^2}{T_i}
-$$
+$$D_{χ^2} = \sum_{i=1}^l\frac{(O_i - T_i)^2}{T_i}$$
 
 où $O_i$ sont les effectifs observés et $T_i$ les effectifs théoriques.
 

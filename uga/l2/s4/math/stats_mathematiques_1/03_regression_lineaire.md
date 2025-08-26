@@ -28,22 +28,16 @@ Pour la suite, on s’intéresse aux échantillons/populations qui on plutôt un
 
 Tel ajustement se fera avec une droite de la forme $y=ax+b$. La droite qui nous intéresse est celle qui réduit au minimum la somme des *résidus carrés*, qui sont les écarts du point réel au point correspondant sur la droite. Donc, pour coordonné $y_i$ d’une observation $(x_i,y_i)$, on a :
 
-$$
-y_i=\underbrace{(ax_i+b)}_{\text{estimation par la droite }\bar y}+\underbrace{\epsilon_i}_\text{erreur}
-$$
+$$y_i=\underbrace{(ax_i+b)}_{\text{estimation par la droite }\bar y}+\underbrace{\epsilon_i}_\text{erreur}$$
 
 #### La covariance $\sigma_{X,Y}$
 
-$$
-σx,y = Cov(x, y) = \frac{1}{N}\sum_{i=1}^N
-(x_i − \bar x)(y_i − \bar y)
-$$
+$$σx,y = \text{Cov}(x, y) = \frac{1}{N}\sum_{i=1}^N
+(x_i − \bar x)(y_i − \bar y)$$
 
 Si la covariance est proche de $0$, on on peut penser que les variables ont une dynamique qui n’ont rien de commun. Avec la covariance on peut déduire $a$ et $b$ de la meilleure droite :
 
-$$
-a=\frac{\sigma_{X,Y}}{\sigma_X^2}, \space b=\bar y - a\bar x
-$$
+$$a=\frac{\sigma_{X,Y}}{\sigma_X^2}, \space b=\bar y - a\bar x$$
 
 Notons que l’équation de $b$ implique que la droite passe par le centre de gravité $(\bar x, \bar y)$.
 
@@ -51,9 +45,7 @@ Notons que l’équation de $b$ implique que la droite passe par le centre de gr
 
 Notons que la méthode des moindres carrés peut être utilisée pour n’importe quelle série double. On peut tout à fait obtenir une droite de régression dans la nuage de points du troisième cas. Pour s’assurer de façon objective (et non purement visuelle) que l’ajustement est valide, on considère un autre paramètre de la série, le coefficient de corrélation linéaire $r$.
 
-$$
-r=\frac{\sigma_{X,Y}}{\sigma_X\sigma_Y}
-$$
+$$r=\frac{\sigma_{X,Y}}{\sigma_X\sigma_Y}$$
 
 - $−1 ≤ r ≤ 1$
 - $r$ est toujours du même signe que la pente de la droite et de la covariance
@@ -73,15 +65,11 @@ Cela dit, peu importe si on utilise la variance réelle ou estimée dans nos cal
 
 Reprenons notre équation pour chaque couple $(x,y)$ dans la nuage de point avec la droite d’estimation : >$Y = aX+b+\epsilon$. On suppose qu’on sort chaque $x_i$ et $y_i$ d’une V.A $X$ et $Y$, respectivement. On réécrit l’équation comme suit :
 
-$$
-Y=\beta_1X+\beta_0+\epsilon
-$$
+$$Y=\beta_1X+\beta_0+\epsilon$$
 
 Celle-ci serait l’équation de chaque terme de l’échantillon si notre échantillon était toute la population. Par contre, cela n’est pas normalement le cas. Donc, si on fait une régression linéaire avec un échantillon qui n’est pas la population, on utilise plutôt des estimateurs de $\beta_1$ et $\beta_0$ :
 
-$$
-Y=\underbrace{\hat{\beta_1}X+\hat{\beta_0}}_{\text{estimation }\hat Y}+\epsilon
-$$
+$$Y=\underbrace{\hat{\beta_1}X+\hat{\beta_0}}_{\text{estimation }\hat Y}+\epsilon$$
 
 ### Hypothèses sur les termes d’erreur $\epsilon_i$
 
@@ -105,9 +93,7 @@ Si on part de $\epsilon_i \sim \mathcal{N}(0,\sigma^2)$, il vient donc que $Y_i\
 
 C’est la quantité de la variance expliquée réelle par la droite modèle.
 
-$$
-R^2=\frac{Var(\hat Y)}{Var(Y)}=\frac{SCM}{SCT}
-$$
+$$R^2=\frac{V(\hat Y)}{V(Y)}=\frac{SCM}{SCT}$$
 
 ### Les lois sur $\hat{\beta}_1$ et $\hat{\beta}_0$
 

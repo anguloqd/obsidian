@@ -270,10 +270,10 @@
       "enabled": false
     }
   },
-  "lintOnSave": true,
+  "lintOnSave": false,
   "recordLintOnSaveLogs": false,
   "displayChanged": false,
-  "lintOnFileChange": true,
+  "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [],
@@ -284,35 +284,10 @@
     {
       "id": "quickadd:choice:1689bddc-847d-4ea6-a0b9-bdfa8520604c",
       "name": "QuickAdd: mathblocks",
-      "enabled": true
+      "enabled": false
     }
   ],
-  "customRegexes": [
-    {
-      "name": "Math Notation Standardization",
-      "regex": "(\\\\text\\{\\s*[Vv]ar\\s*\\}|\\b[Vv]ar)\\s*[\\(\\[]\\s*([A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)?)\\s*[\\)\\]]",
-      "replacement": "V[$2]",
-      "flags": "g",
-      "description": "Standardizes variance notation to V[X]",
-      "enabled": true
-    },
-    {
-      "name": "Standardize Expectation Notation",
-      "regex": "(\\\\text\\{\\s*[Ee]xp?(?:ectation)?\\s*\\}|\\b[Ee](?:xp?)?(?:ectation)?)\\s*[\\(\\[]\\s*([A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)?)\\s*[\\)\\]]",
-      "replacement": "\\mathbb{E}[$2]",
-      "flags": "g",
-      "description": "Standardizes expectation notation",
-      "enabled": true
-    },
-    {
-      "name": "Standardize Probability Notation",
-      "regex": "(\\\\text\\{\\s*[Pp](?:rob)?\\s*\\}|\\b[Pp](?:rob)?)\\s*[\\(\\[]\\s*([A-Za-z0-9=<>\\s\\+\\-\\*\\/]+)\\s*[\\)\\]]",
-      "replacement": "\\mathbb{P}[$2]",
-      "flags": "g",
-      "description": "Standardizes probability notation",
-      "enabled": true
-    }
-  ],
+  "customRegexes": [],
   "commonStyles": {
     "aliasArrayStyle": "single-line",
     "tagArrayStyle": "single-line",

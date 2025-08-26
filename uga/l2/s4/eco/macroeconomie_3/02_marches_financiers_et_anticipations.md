@@ -15,9 +15,7 @@ Cette statistique doit être construite à l’aide d’informations sur $Z$ et 
 
 On déduit que $1$ euro au présent vaut $(1+i_0)$ dans une année. Donc, on déduit que $\frac{1}{(1+i_0)}$ euros au présent vaut $1$ euro dans une année. Ceci est une VAN simple, car on considère juste une année. Par contre, on pourrait généraliser à $n$ années ou périodes de temps d’emprunt.
 
-$$
-VAN(Z)=Z_0+\frac{Z_1}{1+i_0}+\frac{Z_2}{(1+i_0)(1+i_1)}+\dots \frac{}{}=Z_0+\sum_{p=0}^n\frac{Z_{p+1}}{\prod_{q=0}^p (1+i_q)}
-$$
+$$VAN(Z)=Z_0+\frac{Z_1}{1+i_0}+\frac{Z_2}{(1+i_0)(1+i_1)}+\dots \frac{}{}=Z_0+\sum_{p=0}^n\frac{Z_{p+1}}{\prod_{q=0}^p (1+i_q)}$$
 
 On constate que plus le revenu est lointain, plus le facteur d’actualisation ($\frac{1}{\prod_q (1+i_q)}$) est faible, est donc plus les valeurs actuelle de chaque période devient aussi fables. On conclut que la VAN dépend positivement des revenus courants et anticipés, et négativement des taux d’intérêt présents et futurs.
 
@@ -27,13 +25,11 @@ Cela dit, a partir de la période $1$ et au-delà, on ne connaît vraiment pas n
 
 On peut tout diviser par P, le prix d’un bien représentatif de l’économie (souvent représentant le niveau de prix), pour obtenir la VAN réelle :
 
-$$
-\frac{VAN(Z)}{P} = \frac{1}{P}\left(Z_0+\frac{Z_1^e}{1+i_0}+\frac{Z_2^e}{(1+i_0)(1+i_1^e)}+\dots\right)=
+$$\frac{VAN(Z)}{P} = \frac{1}{P}\left(Z_0+\frac{Z_1^e}{1+i_0}+\frac{Z_2^e}{(1+i_0)(1+i_1^e)}+\dots\right)=
 \\
 \text{}
 \\
-z_0+\frac{z_1^e}{1+r_0}+\frac{z_2^e}{(1+r_0)(1+r_1^e)}+\dots
-$$
+z_0+\frac{z_1^e}{1+r_0}+\frac{z_2^e}{(1+r_0)(1+r_1^e)}+\dots$$
 
 Où les $z_i$ sont les revenus réels et les $r_i$ sont les taux d’intérêt réels.
 
@@ -72,29 +68,22 @@ Prenons deux obligations : $O_1$ à une maturité d’un an qui donne droit à u
 
 Leur prix à présent sont les valeurs actuelles du rendement. C’est-à-dire :
 
-$$
-P_1 = \frac{100}{(1+i_0)}, \space P_2=\frac{100}{(1+i_0)(1+i_1^e)}
-$$
+$$P_1 = \frac{100}{(1+i_0)}, \space P_2=\frac{100}{(1+i_0)(1+i_1^e)}$$
 
 > [!note]
 > Notation : maintenant $P_{A,B}$ est le prix dès temps $A$ à temps $B$, et de même avec le taux d’intérêt $i_{A,B}$. Notons que ce qu’on notait avant $P_1$ et $P_2$ peuvent être réécrits comme $P_{0,1}$ et $P_{0,2}$.
 
 Réfléchissons à $P_2$, car on va faire deux investissements en deux périodes. À la fin de la première période, on a la possibilité de vendre l’obligation au lieu d’attendre la maturité. Quel est le prix à ce moment là de l’obligation ? C’est encore le même critère : c’est la valeur “actuelle” (à ce moment-là) du rendement de l’obligation. **On parle d’une estimation**.
 
-$$
-P_{1,2}^e = \frac{100}{(1+i_{1,2}^e)}
-$$
+$$P_{1,2}^e = \frac{100}{(1+i_{1,2}^e)}$$
 
 On note qu’on peut réécrire le prix actuel de $O_2$ en injectant le prix anticipé d’une obligation de temps 1 à temps 2. **La chose à retenir est que le prix est la valeur actuelle d’un prix estimé dans le futur**. Une équation qui lie le $P_{0,B}$ avec $P_{1,B}$ est appelée “**relation d’arbitrage**”.
 
-$$
-P_{0,2} = \frac{100}{(1+i_{0,1})(1+i_{1,2}^e)} = \frac{\frac{100}{(1+i_{1,2}^e)}}{(1+i_{0,1})}=\frac{P_{1,2}^e}{(1+i_{0,1})} \implies \underbrace{(1+i_{0,1})=\frac{P_{1,2}^e}{P_{0,2}}}_\text{vraie relation d'arbitrage}
-$$
+$$P_{0,2} = \frac{100}{(1+i_{0,1})(1+i_{1,2}^e)} = \frac{\frac{100}{(1+i_{1,2}^e)}}{(1+i_{0,1})}=\frac{P_{1,2}^e}{(1+i_{0,1})} \implies \underbrace{(1+i_{0,1})=\frac{P_{1,2}^e}{P_{0,2}}}_\text{vraie relation d'arbitrage}$$
 
 On voit que le taux d’intérêt dans une année à partir du présent, càd. de t=0 à t_1, sera différent du taux d’intérêt dans une année à partir de l’année prochaine, càd. de t=1 à t=2. On voudrait déduire un taux d’intérêt qui reste le même dans le passage de t=0 à t=1 et puis de t=1 à t=2. Ceci serait le taux d’intérêt noté comme $i_{0,2}$ et formellement s’appelle “**rendement à maturité**”.
 
-$$
-\begin{align*} 
+$$\begin{align*}
 \text{On cherche }i_{0,2} :\space &\frac{100}{(1+i_{0,1})(1+i_{1,2}^e)} = \frac{100}{(1+i_{0,2})^2}
 
 \\
@@ -104,14 +93,11 @@ $$
 \\
 
 \implies& i_{0,2} \approx \frac{1}{2}(i_{0,1}+i_{1,2}^e)
-\end{align*}
-$$
+\end{align*}$$
 
 Cette dernière ligne est juste une approximation. Et on généralise cette approximation à $n$ taux d’intérêts comme la moyenne des $n$ taux d’intêret d’un année à la suivante. Cette approximation est en fait un peu plus grande que la vraie valeur.
 
-$$
-i_{0,n} \approx \frac{1}{n}\left( \sum_{p=0}^{n-1} i_{p,(p+1)} \right)
-$$
+$$i_{0,n} \approx \frac{1}{n}\left( \sum_{p=0}^{n-1} i_{p,(p+1)} \right)$$
 
 ### Risque
 
@@ -119,15 +105,11 @@ Notons que $O_1$ n’a aucun risque car, au moment d’investir, on traite déj�
 
 Au cause de ce risque, les investisseurs peuvent demande une “prime de risque”, qui est une valeur qui se ajoute au prix. On la note $x > 0$. Reprenant depuis la relation d’arbitrage :
 
-$$
-P_{0,2}=\frac{P_{1,2}^e}{(1+i_{0,1}+x)}=\frac{100}{(1+i_{0,1}+x)(1+i_{1,2}^e)}
-$$
+$$P_{0,2}=\frac{P_{1,2}^e}{(1+i_{0,1}+x)}=\frac{100}{(1+i_{0,1}+x)(1+i_{1,2}^e)}$$
 
 On peut reprendre l’approximation précédente pour calculer à nouveau $i_{0,2}$ en tenant en compte ce prime de risque :
 
-$$
-i_{0,2} \approx \frac{1}{2}(i_{0,1}+i_{1,2}+x)
-$$
+$$i_{0,2} \approx \frac{1}{2}(i_{0,1}+i_{1,2}+x)$$
 
 Plus la maturité augmente, plus le risque augmente, donc $x$ aussi. L’investisseur ne tient plus seulement compte du rendement.
 
@@ -141,45 +123,35 @@ Une action est une partie du capital d’une entreprise. Elle donne droit à des
 
 Supposons une entreprise qui va avoir un seul profit dans le future, et donc il nous correspondra un seul dividende D. Le prix de l’action est donc la VAN du dividende. considérant une prime de risque.
 
-$$
-Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}
-$$
+$$Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}$$
 
 On considère maintenant que cette firme va avoir deux profits, donc on obtiendrait deux dividendes de cette action. Le prix actuel de l’action Q serait donc comme suit :
 
-$$
-Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{D_2^e}{(1+i_{0,1}+x)(1+i_{1,2}^e+x)}
-$$
+$$Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{D_2^e}{(1+i_{0,1}+x)(1+i_{1,2}^e+x)}$$
 
 Notons que à la fin de la période 1, le détenteur de l’action peut décider de bien garder l’action ou de la revendre. Pour déterminer le prix de revente de l’action, on fait pareil comme on a fait avec l’obligation : on exprime la VAN du dividende de la période 2 comme si le temps présent était la période 1.
 
-$$
-Q_1^e = \frac{D_2^e}{(1+i_{1,2}^e+x)}
+$$Q_1^e = \frac{D_2^e}{(1+i_{1,2}^e+x)}
 
 \\
 \text{}
 \\
 
-\implies  \frac{D_2^e}{(1+i_{0,1}+x)(1+i_{1,2}^e+x)}=\frac{\frac{D_2^e}{(1+i_{1,2}^e+x)}}{(1+i_{0,1}+x)}=\frac{Q_1^e}{(1+i_{0,1}+x)}
-$$
+\implies  \frac{D_2^e}{(1+i_{0,1}+x)(1+i_{1,2}^e+x)}=\frac{\frac{D_2^e}{(1+i_{1,2}^e+x)}}{(1+i_{0,1}+x)}=\frac{Q_1^e}{(1+i_{0,1}+x)}$$
 
 On peut donc réécrire le cas d’une firme qui reparte deux dividendes, cette fois-ci considérant les estimations des prix futurs de l’action.
 
-$$
-Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{Q_1^e}{(1+i_{0,1}+x)}
-$$
+$$Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{Q_1^e}{(1+i_{0,1}+x)}$$
 
 Finalement, on pourrait généraliser ceci à $n$ dividendes obtenus dans le futur, d’où la valeur de l’action devient ce qui suit :
 
-$$
-Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{Q_1^e}{(1+i_{0,1}+x)}+\dots+\frac{Q_n^e}{(1+i_{0,1}+x)}
+$$Q_0=\frac{D_1^e}{(1+i_{0,1}+x)}+\frac{Q_1^e}{(1+i_{0,1}+x)}+\dots+\frac{Q_n^e}{(1+i_{0,1}+x)}
 
 \\
 \text{}
 \\
 
-Q_0=\frac{D_1^e}{(1+i_{0,1}+x)} + \sum_{p=1}^n\frac{Q_p^e}{(1+i_{0,1}+x)}
-$$
+Q_0=\frac{D_1^e}{(1+i_{0,1}+x)} + \sum_{p=1}^n\frac{Q_p^e}{(1+i_{0,1}+x)}$$
 
 Le valeur d’une action sont tous les valeurs au présent du prochain dividende et des prochains prix de l’action. On constate que le prix de l’action dépend directement (au même sens) des estimations de dividendes et inversement des taux d’intérêt.
 

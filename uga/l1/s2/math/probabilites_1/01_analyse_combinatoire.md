@@ -49,16 +49,14 @@ Si on compte toutes les manières d’ordonner toutes les sélections possibles 
 
 On devrait arriver à que, si on prend les manières de sélectionner $k$ éléments de $n$ sans ordre ($C^k_n$) et on les multiplie par la quantité de manières qu’on peut les ordonner ($k!$), on arriverait tout simplement à $A^k_n$.
 
-$$
-\begin{align*}\underbrace{k!}_{\{1,2,3\}}+\underbrace{k!}_{\{1,2,4\}}+\underbrace{k!}_{\{1,2,5\}}+\underbrace{k!}_{\{1,3,4\}}+\dots+\underbrace{k!}_{\{3,4,5\}} = A^k_n&\iff k!\cdot C^k_n = A^k_n
+$$\begin{align*}\underbrace{k!}_{\{1,2,3\}}+\underbrace{k!}_{\{1,2,4\}}+\underbrace{k!}_{\{1,2,5\}}+\underbrace{k!}_{\{1,3,4\}}+\dots+\underbrace{k!}_{\{3,4,5\}} = A^k_n&\iff k!\cdot C^k_n = A^k_n
 
-\\[0pt] 
+\\[0pt]
 &\iff C^k_n=\frac{A^k_n}{k!}
 
 \\[12pt]
 &\iff C^k_n=\frac{n!}{k!(n-k)!}
-\end{align*}
-$$
+\end{align*}$$
 
 ### Deux relations importantes
 
@@ -79,9 +77,7 @@ $$
 
 Le binôme de Newton est une équation super utile pour calculer l’expansion polynomiale d’un binôme à la puissance $n$ :
 
-$$
-(a+b)^n=\sum_{k=0}^nC^k_na^kb^{(n-k)}
-$$
+$$(a+b)^n=\sum_{k=0}^nC^k_na^kb^{(n-k)}$$
 
 #### Triangle de Pascal
 
@@ -95,19 +91,12 @@ Le triangle de Pascal est juste une présentation ou sorte de dessin qui contien
 
 Il s’agit d’une formule développée pour le calcul de $n!$ pour des grands valeurs de $n$ :
 
-$$
-n! \approx n^n e^{-n}\sqrt{2\pi n}
-$$
+$$n! \approx n^n e^{-n}\sqrt{2\pi n}$$
 
 Dans la pratique, on l’utilise de la manière suivante :
 
 1. On doit utiliser le $\log$ de l'expression à droite et à gauche et puis simplifier. On fait ceci car les constantes à droite devient plus faciles à calculer à la main.
 
-    $$
-    \ln(n!)\approx n\ln(n)-n\cancel{\ln(e)}^1+\frac{1}{2}\ln(2\pi n)=n(\ln(n)-1)+\frac{1}{2}\ln(2\pi n)
+$$\ln(n!)\approx n\ln(n)-n\cancel{\ln(e)}^1+\frac{1}{2}\ln(2\pi n)=n(\ln(n)-1)+\frac{1}{2}\ln(2\pi n)$$
 
-
-$$
-
-    
 2. Finalement, on prend l’expression plus à droite et on la met dans la fonction $\exp$ (pour défaire le $\ln$ et rester avec $n!$). On arrive finalement à une approximation de $n!$.

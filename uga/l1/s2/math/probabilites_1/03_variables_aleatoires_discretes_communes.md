@@ -20,31 +20,23 @@ Ceci implique qu’une population de la forme $\{x,x,\dots,x\}$ n’a pas de mod
 
 Mathématiquement, c’est la moyenne pondérée des résultats de la V.A $X$. Intuitivement, c'est la moyenne des résultats qu'on observerait si on pouvait répéter l’expérience une infinité de fois. Elle seulement existe si la série $\sum (x \cdot \mathbb P(X=x)$ est absolument convergente, sinon on dit que $X$ ne possède pas une espérance.
 
-$$
-\mathbb{E}(X) = \sum_{x \in \Omega_X} (x\cdot \mathbb P(X=x))
-$$
+$$E(X) = \sum_{x \in \Omega_X} (x\cdot P(X=x))$$
 
 #### Propriétés
 
 **Linéarité de l’espérance**. L’espérance de la somme est la somme des espérances, même si elles sont dépendantes.
 
-$$
-\mathbb{E}[X+Y] = \mathbb{E}[X] + \mathbb{E}[Y]
+$$E(X+Y) = E(X) + E(Y)
 \newline
-\mathbb{E}[\alpha X] = \alpha \mathbb{E}[X]  
-$$
+E(\alpha X) = \alpha E(X)$$
 
 **Produit des espérances**. Si deux V.A. sont **forcément indépendantes**  $\implies$ l’espérance du produit égal le produit des espérances. **Réciproque fausse**.
 
-$$
-\mathbb{E}[XY] =\mathbb{E}[X]\mathbb{E}[Y] 
-$$
+$$E(XY) =E(X)E(Y)$$
 
 **Espérance d’une V.A. fonction d’autre V.A**. Supposons une fonction réelle $f(x)$ et une VA définie sur une VA comme $Y=f(X)$. Donc, si la série $\sum(f(X) \cdot \mathbb P(X=x))$ est absolument convergente, donc on peut parler de l’espérance de $f(X)$ (ou de $Y$ aussi).
 
-$$
-\mathbb{E}[\overbrace{f(X)}^Y] = \sum_{x\in\Omega_X} (\overbrace{f(X)}^Y\cdot \mathbb P(X=x) )
-$$
+$$E(\overbrace{f(X)}^Y] = \sum_{x\in\Omega_X} (\overbrace{f(X)}^Y\cdot P(X=x) )$$
 
 ### Variance et écart-type : $\text{Var}(X)\text{ et }\sigma$
 
@@ -54,9 +46,7 @@ Un moment est une notion sortie de la physique. Si $n \in \mathbb{N}$ et $X$ est
 
 La variance est le moment d’ordre $2$ de $X$, c’est-à,dire, la valeur espérée du carré de la somme des écarts de chaque observation par rapport à la moyenne. Intuitivement, elle est simplement une mesure de dispersion de la moyenne, exprimée en unités carrées. **La variance est toujours positive !**
 
-$$
-\text{Var}(X) = \mathbb{E}[(X-\mathbb{E}[X])^2] =\sum_{x\in\Omega_X}( (x-\mathbb{E}[X])^2\cdot \mathbb P(X=x))
-$$
+$$V(X) = E((X-E(X))^2] =\sum_{x\in\Omega_X}( (x-E(X))^2\cdot P(X=x))$$
 
 - **Théorème de König-Huygens**. $\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$
 Cette relation rend plus confortable le calcul de la variance.
@@ -73,9 +63,7 @@ La racine carré de la variance est connue comme l’écart-type, noté comme $\
 > [!note]
 > Aide : la somme des entiers dans l’intervalle $[a,b]$ inclus est $\frac{n(a+b)}{2}$, où $n=(b-a+1)$ est la quantité d’entiers dans l’intervalle.
 
-$$
-X\sim U(a,b)\iff\mathbb P(X=x)=\frac{1}{\underbrace{(b-a+1)}_n},\hspace{4pt}\forall x\in[a,b]
-$$
+$$X\sim U(a,b)\iffP(X=x)=\frac{1}{\underbrace{(b-a+1)}_n},\hspace{4pt}\forall x\in[a,b]$$
 
 C'est une distribution telle que toutes les valeurs possibles de $X$ ont la même probabilité d'être observées.
 
@@ -86,13 +74,11 @@ C'est une distribution telle que toutes les valeurs possibles de $X$ ont la mêm
 
 ### Loi de Bernoulli ou variable indicatrice : $\text{Bernoulli}(p)$
 
-$$
-X\sim\text{Bernoulli}(p) \iff \mathbb P (X=x) =
+$$X\sim\text{Bernoulli}(p) \iff P(X=x) =
 \begin{cases}
 1,\text{ prob. } p \\
 0,\text{ prob. } (1-p)
-\end{cases}
-$$
+\end{cases}$$
 
 C'est une variable aléatoire $X$ que seulement prend deux valeurs : $0$ et $1$. Elle prend $1$ si le résultat de l’expérience est considéré un " succès ", et $0$ si on considère le résultat comme " échec ".
 
@@ -108,9 +94,7 @@ C'est une variable aléatoire $X$ que seulement prend deux valeurs : $0$ et $1$.
 
 ### Loi binomiale : $\mathcal B(n,p)$
 
-$$
-X\sim\mathcal B(n,p) \iff \mathbb P(X=k)=C^k_np^k(1-p)^{n-k}
-$$
+$$X\sim\mathcal B(n,p) \iff P(X=k)=C^k_np^k(1-p)^{n-k}$$
 
 C'est la probabilité, avec remise, dans une suite de $n$ essais de Bernoulli identiques et indépendantes (iid.), d'avoir $k$ succès et $(n-k)$ échecs.
 
@@ -120,9 +104,7 @@ C'est la probabilité, avec remise, dans une suite de $n$ essais de Bernoulli id
 
 ### Loi géométrique : $\text{Geo}(p)$
 
-$$
-X\sim\text{Geo}(p)\iff\mathbb P(X=k)=(1-p)^{k-1}p
-$$
+$$X\sim\text{Geo}(p)\iffP(X=k)=(1-p)^{k-1}p$$
 
 C'est la probabilité, dans une suite de $k$ expériences, d'observer en premier lieu $k-1$ échecs, puis le premier succès. À différence de la loi binomiale, notons qu'on ne multiplie pas par $C^k_n$. Donc, l'ordre ici est important, le succès doit être le dernier résultat.
 
@@ -133,9 +115,7 @@ C'est la probabilité, dans une suite de $k$ expériences, d'observer en premier
 
 C’est la probabilité d’observer une quantité k de événements dans une unité de temps de référence. Le paramètre $\lambda$ représente la quantité moyenne d’événements dans une unité de temps.
 
-$$
-X\sim\text{Poisson}(\lambda) \iff \mathbb P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}, \text{ où } \lambda\in[0,\infty) \text{ et } k\in\mathbb{N}
-$$
+$$X\sim\text{Poisson}(\lambda) \iff P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}, \text{ où } \lambda\in[0,\infty) \text{ et } k\in\mathbb{N}$$
 
 - **Espérance** : $E[X]=λ$
 - **Variance** : $E[X]=λ$
@@ -143,15 +123,11 @@ $$
 Basiquement, l’entier ou les deux entiers dans l’intervalle inclus.
 - Identité utile pour des calculs par récurrence :
 
-    $$
-    \mathbb P(X=k+1)=\mathbb P(X=k)\frac{\lambda}{k+1}
+$$P(X=k+1)=P(X=k)\frac{\lambda}{k+1}$$
 
-
-$$
 **Extra**. Un calcul intéressant est la somme de des probabilités de chaque résultat possible, c’est-à-dire de chaque $k$ possible :
-$$
 
-\begin{align*}\mathbb P(X=0)+\mathbb P(X=1)+\mathbb P(X=2)+\dots &= \sum_{k=0}^\infty\mathbb P(X=k)
+$$\begin{align*}P(X=0)+P(X=1)+P(X=2)+\dots &= \sum_{k=0}^\inftyP(X=k)
 
 \\[11pt] &=\sum_{k=0}^\infty e^{-\lambda}\frac{\lambda^k}{k!}
 
@@ -161,9 +137,8 @@ $$
 
 \\[5pt] &= 1
 
-\end{align*}
+\end{align*}$$
 
-$$
 Trivial : si on somme toute les possibilités, c'est sûr qu'on arrive à $1$. **Ce qui est intéressant ce que il apparaît l'expansion de Taylor de $e^x$ dans $\sum_{k=0}^\infty\frac{\lambda^k}{k!}$, si on suppose que $x=\lambda$**.
 
 ### Approximation d’une loi binomiale avec la loi de Poisson
@@ -175,17 +150,13 @@ On peut approximer une loi binomiale avec une loi de Poisson si et seulement si 
 - $np \le 15$
 
 Dans ce cas, on pose $λ = np$ et on a finalement ce qui suit :
-$$
 
-\mathcal B(n,p) \approx \text{Poisson}(np), \text{ ou } \mathbb P(X_\mathcal{B}=k)\approx\mathbb P(X_\mathcal{P}=k)=e^{-np}\frac{(np)^k}{k!}
+$$\mathcal B(n,p) \approx \text{Poisson}(np), \text{ ou } P(X_\mathcal{B}=k)\approxP(X_\mathcal{P}=k)=e^{-np}\frac{(np)^k}{k!}$$
 
-$$
 ## Loi hypergéométrique : $\text{Hypergeo}(N,K,n)$
-$$
 
-X\sim\text{Hypergeo}(N,K,n) \iff \mathbb P(X=k)=\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}
+$$X\sim\text{Hypergeo}(N,K,n) \iff P(X=k)=\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}$$
 
-$$
 C'est la probabilité, sans remise, de tirer $k$ succès (de $K$ possibles) et $(n-k)$ échecs (de $(N-K)$ possibles) d'un échantillon de taille $n$ d'une population de taille $N$.
 
 En d'autres termes, c'est la probabilité, sans remise, dans une suite de $n$ expériences, d'observer $k$ succès (de $K$ possibles succès dans $N$) et $(n-k)$ échecs (de $(N-K)$ possibles dans $N$). Un tel schéma est utilisé dans les sondages.
@@ -210,8 +181,5 @@ Il y a $10$ boules : $4$ rouges et $6$ bleues. Je fixe la taille des échantillo
 ### Approximer une hypergéométrique avec une binomiale
 
 Si $N\longrightarrow\infty$ et $\lim_{N\rightarrow\infty} \frac K N = p$, on peut donc établir l’approximation qui suit :
-$$
 
-\lim_{N\rightarrow\infty}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}
-
-$$
+$$\lim_{N\rightarrow\infty}\frac{C^k_KC^{n-k}_{N-K}}{C^n_N}=C^k_np^k(1-p)^{n-k}$$

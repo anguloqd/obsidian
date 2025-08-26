@@ -73,9 +73,7 @@ Pour le profits de magasins, il ne vaut pas la peine de descendre leurs prix de 
 
 La demande agrégée finale est donc :
 
-$$
-Q(p)=2N\frac{V-p}{t}, \text{ où } V>p>V-\frac{t}{2}
-$$
+$$Q(p)=2N\frac{V-p}{t}, \text{ où } V>p>V-\frac{t}{2}$$
 
 > [!note]
 > Il manque le cas de coûts asymétriques : $c_1 \ne c_2$. J’ai pas du temps moi !
@@ -117,13 +115,11 @@ En particulier, on veut un prix à payer aux consommateurs égal à $p+tr=V$. De
 
 Regardons maintenant un seul magasin au lieu de tous les magasins. Le magasin servira seulement une partie si $\pi_P^* > \pi_T^*$ :
 
-$$
-\pi_P^*>\pi_T^* \implies  \frac{2N(p-c)(V-p)}{t}-F>\frac{(V-\frac{t}{2n}-c)N}{n}-F
+$$\pi_P^*>\pi_T^* \implies  \frac{2N(p-c)(V-p)}{t}-F>\frac{(V-\frac{t}{2n}-c)N}{n}-F
 
 \\[08pt]
 
-\implies V>c+\frac{t}{n} \text{ ou } \underbrace{V >p+\frac{t}{2n}}_\text{J'hésite de ça}
-$$
+\implies V>c+\frac{t}{n} \text{ ou } \underbrace{V >p+\frac{t}{2n}}_\text{J'hésite de ça}$$
 
 **Doute** : la première inégalité sort de $p_T$ > $p_P$, mais cela fait pas de sens non ? Si on part d’un prix qui sert à tout le marché, forcément un prix plus pétit continue à servir le marché aussi. Je n’arrive pas à comprendre cette première inegalité donnée par le prof.
 
@@ -176,12 +172,10 @@ On introduit deux termes mathématiques : $z_i$, la qualité du produit $i$ ; et
 
 Avec ces contraintes, on peut maintenant établit la fonction d’utilité de $k$ pour le produit $i$ :
 
-$$
-U_{k,i}=\begin{cases}
+$$U_{k,i}=\begin{cases}
 0,\text{ si } \phi_k z_i - p_i < 0 \\
 \phi_k z_i - p_i, \text{ sinon}
-\end{cases}
-$$
+\end{cases}$$
 
 En plus, on dira que le produit 1 sera de meilleure qualité que le produit 2, donc $z_1>z_2$.
 
@@ -191,16 +185,13 @@ On graphique le niveau d’utilité du produit $i$, $U_i$, en fonction de $\phi$
 
 On notera qu’il y a un niveau de préférence où $U_1=U_2$. Ceci sera appelé le consommateur de préférence marginale, et il est indifférent entre choisir le produit 1 et le produit 2. On pourrait calculer logiquement ce point :
 
-$$
-Um_1=Um_2 \iff \phi_m=\frac{p_1-p_2}{Z}, \text{ où } Z=z_1-z_2
-$$
+$$Um_1=Um_2 \iff \phi_m=\frac{p_1-p_2}{Z}, \text{ où } Z=z_1-z_2$$
 
 Les consommateurs qui ont des préférences à gauche de $\phi_m$ vont préférer d’acheter le bien de qualité inférieure. Ceux à droite de $\phi_m$ vont préférer le bien de qualité supérieure.
 
 Les demandes que cette courbe d’utilité engendre, supposant des budgets identiques pour tous les consommateurs, sont comme suit :
 
-$$
-q_1=N(\phi_h-\phi_m)=N\left(\phi_H-\frac{p_1}{Z}+\frac{p_2}{Z}\right)=\frac{N(Z\phi_H-p_1+p_2)}{Z}
+$$q_1=N(\phi_h-\phi_m)=N\left(\phi_H-\frac{p_1}{Z}+\frac{p_2}{Z}\right)=\frac{N(Z\phi_H-p_1+p_2)}{Z}
 
 \\
 \text{}
@@ -212,8 +203,7 @@ q_2=N(\phi_m-\phi_L)=N\left(-\phi_L+\frac{p_1}{Z}-\frac{p_2}{Z}\right)=\frac{N(-
 \text{}
 \\
 
-\text{Note : } q_i=q_i(p_i, p_j)
-$$
+\text{Note : } q_i=q_i(p_i, p_j)$$
 
 Pour un consommateur qui préfère le bien $i$, il préférera plus de tel bien plus le prix de l’autre bien, bien $j$, soit grand ; et moins le prix du bien $i$ soit grand.
 
@@ -223,14 +213,13 @@ Le processus d’optimisation est le même : on calcule la CPO par rapport aux p
 
 L’idée basique est que une firme 1 (Cournot) joue avec sa propre quantité en réaction au prix de la firme 2 $q_1(p_2)$, tant que l’autre firme 2 (Bertrand) joue avec son propre prix en réaction à la quantité de firme 1 $p_2(q_1)$. Puisque la firme 1 va jouer (maximiser son profit…) avec sa quantité, on va exprimer $p_1$ comme une ***fonction*** en termes de $q_1$ et $p_2$ :
 
-$$
-\begin{array}{cclr}
+$$\begin{array}{cclr}
 
 p_i&=&a-q_i-dq_j & \text{départ : demande adressée à firme }i
 
 \\
 
-q_2&=&a-p_2-dq_1 &\text{...ajuster à la firme 2, isoler }q_2 
+q_2&=&a-p_2-dq_1 &\text{...ajuster à la firme 2, isoler }q_2
 
 \\
 p_1&=&a-q_1-d(a-p_2-dq_1) & \text{...injection de }q_2\text{ dans }p_1
@@ -252,8 +241,7 @@ q_2=a-p_2-dq_1
 \end{cases}&
 \space\space\space\space\space\space\space\space\space\space
 \text{nouveau système d'équations}
-\end{array}
-$$
+\end{array}$$
 
 Il faut noter que $d\in]0,\infty[$ est le **degré de différenciation**, où $d=0$ signifie que les produits de chaque firme sont totalement différents et, plus d augmente, plus homogènes sont les produits vendus.
 
@@ -263,8 +251,7 @@ Maintenant, avec ce nouveau système d’équations, on maximise $\pi_1$ par rap
 
 Si jamais on voudrait considérer des coûts marginaux non nuls, on pourrait voir le $p_i^*$ dans $p_iq_i$ (le revenu total) comme $(p_i-c_i)$ (le profit unitaire, profit de chaque unité vendue), donc $p_i^*q_i$ serait plutôt le revenu moyen.
 
-$$
-\begin{array}{l}
+$$\begin{array}{l}
 
 \pi_1 = \overbrace{\left[ (a(1-d)-(1-d^2)q_1+dp_2 \right]}^{p_1}q_1 - f_1
 
@@ -306,8 +293,7 @@ R_2 : p_2(q_1)=\frac{a-dq_1}{2}
 
 \space
 
-\pi^*_2=\underbrace{\frac{a^2(d^2+d-2)^2}{(3d^2-4)^2}}_{p_2^*q_2^*}-f_2
-$$
+\pi^*_2=\underbrace{\frac{a^2(d^2+d-2)^2}{(3d^2-4)^2}}_{p_2^*q_2^*}-f_2$$
 
 Il y a trois choses intéressantes à notes dans ce modèle : $p_1^* > p_2^*$, $q_1^* > q_2^*$ et $p_2^* = q_2^*$. Il y a une autre observation intéressante à voir sur les profits : **ils deviennent égaux, $\pi_1 = \pi_2$ (ignorant $f_i$), quand $d=0$.**
 
@@ -337,9 +323,7 @@ On revient sur une rue linéaire. Pour un premier temps, on suppose deux firmes 
 
 Pour la firme en $A$, elle vend à tous les consommateurs à sa gauche et à la moitié des consommateurs à sa droite qui ne sont pas capturés (à droite de…) par $B$. Donc :
 
-$$
-q_A=a+\frac{\ell-b-a}{2}=\frac{\ell-b+a}{2}
-$$
+$$q_A=a+\frac{\ell-b-a}{2}=\frac{\ell-b+a}{2}$$
 
 La meilleure réponse de $A$ pour cette localisation de $B$ est donc de se rapprocher du centre
 
@@ -349,13 +333,11 @@ Ici, Hotelling a observé le ***principe de différenciation minimale*** ou auss
 
 En l’absence de concurrence en prix, les deux firmes se localisent au centre dans ce modèle. Ce résultat est socialement inefficace : le meilleur résultat est quand les deux firmes se situent sur $\frac{1}{4}\ell$ et $\frac{3}{4}\ell$, respectivement. Il est intéressant à voir que ce résultat socialement optimal est calculé de la manière suivante : on determine $a$ et $b$ qui minimisent la “desutilité agrégée”, càd. la distance qu’ils doivent se déplacer, $x$.
 
-$$
-S(a,b)=\min_{a,b} \left( \int_0^\frac{a+b}{2} |x-a|dx+\int_\frac{a+b}{2}^1 |x-b|dx \right) =\frac{3}{4}(a^2+b^2)-\frac{ab}{2}-b+\frac{1}{2}
+$$S(a,b)=\min_{a,b} \left( \int_0^\frac{a+b}{2} |x-a|dx+\int_\frac{a+b}{2}^1 |x-b|dx \right) =\frac{3}{4}(a^2+b^2)-\frac{ab}{2}-b+\frac{1}{2}
 
 \\[5pt]
 
-\frac{\partial S}{\partial a} = \frac{\partial S}{\partial b} = 0 \implies a^*=\frac{1}{4},\hspace{4pt} b^*=\frac{3}{4}.
-$$
+\frac{\partial S}{\partial a} = \frac{\partial S}{\partial b} = 0 \implies a^*=\frac{1}{4},\hspace{4pt} b^*=\frac{3}{4}.$$
 
 ### Modèle d’Hotelling : localisation fixée, choix de prix
 
@@ -377,38 +359,32 @@ On utilise cette réecriture de y pour l’injecter dans l’équation du consom
 
 La fonction de demande de $A$ (et analogiquement pour $B$) serait donc comme suit :
 
-$$
-q_A(p_A,p_B)=\begin{cases}
+$$q_A(p_A,p_B)=\begin{cases}
 \ell, \text{ si } p_A<p_A^b(p_B)
 \\
 \frac{1}{2}\left(\ell+a-b+\frac{p_B-p_A}{t}\right), \text{ si } p_A^b(p_B) \le p_A \le p_A^h(p_B)
 \\
 0, \text{ si } p_A^h(p_B) < p_A
-\end{cases}
-$$
+\end{cases}$$
 
 Le profit de $A$ (et analogiquement pour $B$) serait donc :
 
-$$
-\pi_A(p_A,p_B)=
+$$\pi_A(p_A,p_B)=
 \begin{cases}
 p_A \cdot \ell, \text{ si } p_A<p_A^b(p_B)
 \\
 p_A \cdot \frac{1}{2}\left(\ell+a-b+\frac{p_B-p_A}{t}\right), \text{ si } p_A^b(p_B) \le p_A \le p_A^h(p_B)
 \\
 0, \text{ si } p_A^h(p_B) < p_A
-\end{cases}
-$$
+\end{cases}$$
 
 A et B vont chacun chercher à optimiser leurs profit. Donc :
 
-$$
-\frac{\partial \pi_A}{\partial p_A}=0 \iff p_A(p_B)=\frac{1}{2}\left[p_B+t(\ell-b+a)\right]
+$$\frac{\partial \pi_A}{\partial p_A}=0 \iff p_A(p_B)=\frac{1}{2}\left[p_B+t(\ell-b+a)\right]
 
 \\[7pt]
 
-\frac{\partial \pi_B}{\partial p_B}=0 \iff p_B(p_A)=\frac{1}{2}\left[p_A+t(\ell-a+b)\right]
-$$
+\frac{\partial \pi_B}{\partial p_B}=0 \iff p_B(p_A)=\frac{1}{2}\left[p_A+t(\ell-a+b)\right]$$
 
 Si on graphique ces fonctions de réactions, on obtient le graphique ci-dessous :
 
@@ -416,13 +392,11 @@ Si on graphique ces fonctions de réactions, on obtient le graphique ci-dessous 
 
 Finalement, les paramètres optimaux d’équilibre de Nash sont les suivants :
 
-$$
-p_A^*=t\left(\ell+\frac{a-b}{3}\right), \hspace{4pt}\pi_A^*=\frac{1}{2t}(p_A^*)^2
+$$p_A^*=t\left(\ell+\frac{a-b}{3}\right), \hspace{4pt}\pi_A^*=\frac{1}{2t}(p_A^*)^2
 
 \\[5pt]
 
-p_B^*=t\left(\ell+\frac{b-a}{3}\right), \hspace{4pt}\pi_B^*=\frac{1}{2t}(p_B^*)^2
-$$
+p_B^*=t\left(\ell+\frac{b-a}{3}\right), \hspace{4pt}\pi_B^*=\frac{1}{2t}(p_B^*)^2$$
 
 Comme observation finale : le profit de A et B augmentent avec $a$ et $b$, càd. en s’éloignant du bord. Ceci étant dit, si les firmes sont du départ suffisamment éloignées, il se peut que si une firme tente de capter le publique de l’autre, la perte de revenu de sa partie déjà captée sera plus grande que le gain de revenu de la partie nouvelle captée, donc ce n’est pas convenient, elle préféreront ne pas capter l’intégralité de $\ell$.
 
@@ -442,13 +416,11 @@ On continue à faire un peu de même : on calcule le profit, on optimise avec CP
 
 Par contre, la conclusion intéressante ici c’est de calculer quand est-ce que la quantité demande de bien 1 est supérieure à celle demandée de bien 2 :
 
-$$
-\begin{array}{rl}
+$$\begin{array}{rl}
 D_1(p_1^*,p_2^*)>D_2(p_1^*,p_2^*) &\iff \frac{(r_1-r_2)-(c_1-c_2)}{6t}>\frac{(r_2-r_1)-(c_2-c_1)}{6t}
 \\
 &\iff r_1-r_2 > c_1-c_2
-\end{array}
-$$
+\end{array}$$
 
 La part de marché de la firme 1 est plus grande quand l’avantage en qualité (càd. la prime que les consommateur veulent payer pour obtenir le bien 1 sur le bien 2, ou simplement la différences des reserves) est plus grande que la différences de coûts.
 

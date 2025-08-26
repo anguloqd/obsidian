@@ -62,9 +62,7 @@ Considérons un exemple concret de classification où l'objectif est de prédire
 
 La distance euclidienne entre deux points $(x_1, y_1)$ et $(x_2, y_2)$ est calculée selon la formule :
 
-$$
-d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
-$$
+$$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$$
 
 **Calcul des distances pour l'échantillon (25, 31) :**
 

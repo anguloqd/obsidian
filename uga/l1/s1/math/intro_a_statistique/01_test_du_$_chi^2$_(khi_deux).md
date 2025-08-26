@@ -13,9 +13,7 @@
 
 C'est un test statistique très important pour aider à déterminer si deux variables sont indépendantes ou non. Il prend comme statistique $\chi^2(n)$, qui est une somme des carrés de $n$ variables normales standard iid :
 
-$$
-\chi^2(n)=\sum_{i=1}^nX_i^2,\hspace{4pt}\text{où }X_i\sim\mathcal{N}(0,1)
-$$
+$$\chi^2(n)=\sum_{i=1}^nX_i^2,\hspace{4pt}\text{où }X_i\sim\mathcal{N}(0,1)$$
 
 Maintenant, on doit fixer qu’est-ce  que notre $H_0$. La définition de $H_0$ change selon le test statistique lancé, et pour celui-ci, indique que **les deux variables son indépendantes**. C'est à dire, on commence ce test en pensant que les deux variables son indépendantes.
 
@@ -27,9 +25,7 @@ Pour rejeter $H_0$, on doit être capable de dire que la valeur de $\chi^2(n)$ o
 
 Une fois on a notre valeur de $\chi^2(n)$, on pourrait l’utiliser pour créer un autre indicateur : la $V$ de Cramér. L'indicateur va de $0$ a $1$ et désigne le niveau de dépendance de deux variables.
 
-$$
-V=\sqrt{\frac{\chi^2(n)/n}{\min(k-1,r-1)}},\hspace{4pt}k \text{ nombre de colonnes et }r \text{ nombre de lignes}
-$$
+$$V=\sqrt{\frac{\chi^2(n)/n}{\min(k-1,r-1)}},\hspace{4pt}k \text{ nombre de colonnes et }r \text{ nombre de lignes}$$
 
 La p-value de la signification de $V$ est exactement la même calculée pour $\chi^2(n)$.
 

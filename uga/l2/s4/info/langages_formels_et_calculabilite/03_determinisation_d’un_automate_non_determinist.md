@@ -37,11 +37,7 @@ L’algorithme de déterminisation pour construire un AEFD à partir d’un AEFN
 1. On commence de l’état de départ de AEFND. Ce serait aussi l’état initial de l’AEFD.
 2. Quand on arrive a une bifurcation (correspondance multiple d’un couple état-symbole vers un état) $\delta(1,a)= 2$ ou $3$, et donc $\delta^\prime(1,a)=\{2,3\}$. On regroupe tous les états d’arrivée dans un nouveau état qui représente cet ensemble d’états. Formellement,
 
-    $$
-    \delta^\prime(\{q_0,\dots,q_n\},a)= \bigcup_{i=0}^n \delta({q_i},a)
-
-
-$$
+$$\delta^\prime(\{q_0,\dots,q_n\},a)= \bigcup_{i=0}^n \delta({q_i},a)$$
 
     
 3. Après, pour répliquer les arcs qui sort de chaque état qui compose le nouveau état, pour chaque symbole possible, on se demande s’il existe une connexion entre ce symbole et chaque état composant. C’est-à-dire, dans le cas d’avant, $\delta^\prime(\{2,3\},a)$ n’existe pas ni pour $2$ ni $3$, donc il n’y a pas un arc de symbole $a$, mais il y en a pour $b$ car $\delta(2,b)=4$ et $\delta(3,b)=5$. On regroupe à nouveau tous ces états dans le nouveau état $\{4,5\}$.

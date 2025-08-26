@@ -112,9 +112,7 @@ Pour une ACP centrée, les données sont centrées autour de leur moyenne. Pour 
 
 La matrice de corrélation $C$ est calculée selon la formule :
 
-$$
-C = \frac{1}{n} Z^t Z
-$$
+$$C = \frac{1}{n} Z^t Z$$
 
 où $Z$ représente la matrice standardisée et $n$ le nombre d'individus dans le jeu de données.
 
@@ -207,35 +205,25 @@ L'objectif consiste à minimiser la divergence entre ces distributions de probab
 
 La divergence de Kullback-Leibler constitue une mesure de similarité statistique qui quantifie la différence entre une distribution de probabilité $P$ et une distribution $Q$ :
 
-$$
-D_{KL}(P||Q) = \sum_{x \in X} P(x) \log \left( \frac{P(x)}{Q(x)} \right)
-$$
+$$D_{KL}(P||Q) = \sum_{x \in X} P(x) \log \left( \frac{P(x)}{Q(x)} \right)$$
 
 Dans le cas de t-SNE, l'objectif consiste à minimiser :
 
-$$
-KL(P||Q) = \sum_{i \neq j} p_{ij} \log \left( \frac{p_{ij}}{q_{ij}} \right)
-$$
+$$KL(P||Q) = \sum_{i \neq j} p_{ij} \log \left( \frac{p_{ij}}{q_{ij}} \right)$$
 
 #### Définition des distributions
 
 Dans l'espace original, la probabilité conditionnelle que $j$ soit le voisin de $i$ suit une gaussienne centrée sur $x_i$ :
 
-$$
-p_{j|i} = \frac{\exp(-\|x_i - x_j\|^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-\|x_i - x_k\|^2 / 2\sigma_i^2)}
-$$
+$$p_{j|i} = \frac{\exp(-\|x_i - x_j\|^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-\|x_i - x_k\|^2 / 2\sigma_i^2)}$$
 
 où $\sigma_i$ mesure la densité autour de $x_i$ et doit être estimé. La probabilité jointe est définie par :
 
-$$
-p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}
-$$
+$$p_{ij} = \frac{p_{j|i} + p_{i|j}}{2N}$$
 
 Dans le nouvel espace dimensionnel, une loi de Student à queues lourdes est utilisée :
 
-$$
-q_{ij} = \frac{(1 + \|q_i - q_j\|^2)^{-1}}{\sum_k \sum_{l \neq k} (1 + \|q_k - q_l\|^2)^{-1}}
-$$
+$$q_{ij} = \frac{(1 + \|q_i - q_j\|^2)^{-1}}{\sum_k \sum_{l \neq k} (1 + \|q_k - q_l\|^2)^{-1}}$$
 
 L'optimisation utilise la descente de gradient pour minimiser la divergence KL.
 

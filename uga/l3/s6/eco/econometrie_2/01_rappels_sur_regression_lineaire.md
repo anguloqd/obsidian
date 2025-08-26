@@ -56,9 +56,7 @@ Ce problème de simultanéité se retrouve fréquemment en économétrie, notamm
 
 Dans le modèle linéaire général $y_i = \mathbf{x}_i' \mathbf{a}_0 + u_i = \alpha_0 + \mathbf{\tilde{x}}_i' \mathbf{b}_0 + u_i$ avec $E[u_i] \equiv 0$, l'identification des paramètres repose sur l'estimation des covariances entre les variables observées. La covariance fondamentale s'écrit :
 
-$$
-\text{Cov}(y_i, \mathbf{\tilde{x}}_i) = V(\mathbf{\tilde{x}}_i) \mathbf{b}_0 + \text{Cov}(u_i, \mathbf{\tilde{x}}_i)
-$$
+$$\text{Cov}(y_i, \mathbf{\tilde{x}}_i) = V(\mathbf{\tilde{x}}_i) \mathbf{b}_0 + \text{Cov}(u_i, \mathbf{\tilde{x}}_i)$$
 
 Cette équation révèle que les covariances observables mélangent les paramètres d'intérêt $\mathbf{b}_0$ avec les covariances non observables entre variables explicatives et terme d'erreur.
 
@@ -80,9 +78,7 @@ Un **modèle de régression** est défini comme un modèle linéaire où toutes 
 
 La démonstration formelle du problème d'identification repose sur l'analyse de la convergence de l'estimateur MCO. En utilisant la représentation $\hat{\mathbf{a}}_{MCO}^N = \mathbf{a}_0 + \left(\frac{1}{N} \sum_{i=1}^{N} \mathbf{x}_i \mathbf{x}_i' \right)^{-1} \frac{1}{N} \sum_{i=1}^{N} \mathbf{x}_i u_i$, la loi des grands nombres implique que :
 
-$$
-\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a}_0 + E[\mathbf{x}_i \mathbf{x}_i']^{-1} E[\mathbf{x}_i u_i]
-$$
+$$\hat{\mathbf{a}}_{MCO}^N \xrightarrow{p}_{N \rightarrow +\infty} \mathbf{a}_0 + E[\mathbf{x}_i \mathbf{x}_i']^{-1} E[\mathbf{x}_i u_i]$$
 
 Le terme $E[\mathbf{x}_i u_i]$ détermine la présence ou l'absence de biais asymptotique. Si ce terme est nul (exogénéité), l'estimateur converge vers la vraie valeur. Sinon, il converge vers une valeur biaisée, révélant l'impossibilité d'identifier les vrais paramètres.
 

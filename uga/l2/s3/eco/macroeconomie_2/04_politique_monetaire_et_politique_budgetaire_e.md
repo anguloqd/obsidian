@@ -39,9 +39,7 @@ Dans la pratique, les réserves des banques européennes doivent être autour de
 
 La taux au jour le jour (quotidien) de compartiment interbancaire du marché monétaire est le taux au quel les banques commerciale empruntent parmi elles. Rationnement, elle est encadré par le taux d’appel d’offre et du prise en pension :
 
-$$
-i_\text{ Directeur} \le i_\text{ Interbancaire} \le i_\text{ Pension}
-$$
+$$i_\text{ Directeur} \le i_\text{ Interbancaire} \le i_\text{ Pension}$$
 
 Si le taux interbancaire était plus baisse que le taux directeur, les banques commerciales n’auraient jamais besoins de recourir à la Banque Centrale, car il serait moins cher d’emprunter parmi elles. D’autre côté, si le taux interbancaire était plus grand que le taux de pension, les banques commerciales n’aurait jamais besoin d’emprunter parmi elles, car il serait plus cher que d’emprunter à la Banque Centrale (qui est déjà cher si c’est de la prise en pension).
 

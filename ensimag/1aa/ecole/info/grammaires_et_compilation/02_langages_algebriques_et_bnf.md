@@ -48,9 +48,7 @@ Un mot sur l'alphabet $V$ représente une formule propositionnelle en notation p
 
 On cherche une fonction $f : 2^{V^*} \to 2^{V^*}$ telle que le langage $L_{\text{préfixe}}$ est donné par le plus petit point fixe de $f$, i.e.,
 
-$$
-L_{\text{préfixe}} = \lim_{h \to +\infty} f^h(\emptyset)
-$$
+$$L_{\text{préfixe}} = \lim_{h \to +\infty} f^h(\emptyset)$$
 
 Définition de $f$ :
 
@@ -65,9 +63,7 @@ $\{ouv \mid o \in \{\&, |, >\}, u \in X, v \in X\} \subseteq f(X).$
 
 En résumé :
 
-$$
-f(X) = \{t, f\} \cup \mathbb{N}_1 \cup \{-u \mid u \in X\} \cup \{ouv \mid o \in \{\&, |, >\}, u, v \in X\}
-$$
+$$f(X) = \{t, f\} \cup \mathbb{N}_1 \cup \{-u \mid u \in X\} \cup \{ouv \mid o \in \{\&, |, >\}, u, v \in X\}$$
 
 > [!question] ❓
 >
@@ -80,9 +76,7 @@ Très pareil à l’exo précédent, mais on change deux choses :
 
 D’où, la fonction $f$ est telle que :
 
-$$
-⁍
-$$
+$$⁍$$
 
 ### Exo 2.14 et 2.15
 
@@ -92,8 +86,8 @@ $$
 >
 > $$
 > g\left(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)\right) = \lim_{i\rightarrow+\infty} f^i_2(\emptyset)
-> $$
-
+>
+$$
 > [!question] ❓
 >
 > Soient $A, B \subseteq V^*$ et $E_1 = V^*$. Pour $f_1(X) = A.X.B \cup B^*$ et $g(X) = \{\epsilon\}\setminus X$, montrer $g(\lim_{i\rightarrow+\infty} f^i_1(\emptyset)) = \emptyset$.
@@ -205,23 +199,18 @@ $f^4(\emptyset, \emptyset) = \left( \{b, abab\}, \{ab, aabab\} \right)$
 > Montrer que les langages définis dans le TP (`Prop`, `Nnf` en notations préfixes ou infixes) sont algébriques.
 
 $\mathbf{Prop}$ est un ensemble défini de manière récursive. Avant de parler de Prop, on définit une function telle que $\lim f^n(\empty) = \mathbf{Prop}$. On peut déjà utiliser la fonction de l’exo 2.13
-
 $$
 f(X) = \{t, f\} \cup \mathbb{N}_1 \cup \{ (u) \mid u \in X\} \cup \{-u \mid u \in X\} \cup \{uov \mid o \in \{\&, |, >\}, u, v \in X\}
 $$
-
 On peut écrire $f^1(\empty)$, $f^2(\empty)$, $f^3(\empty)$ et on pourra se convaincre que $\lim f^n(\empty) = \mathbf{Prop}$, ce dernier étant définit donc comme:
-
 $$
 \mathbf{Prop} = \{t, f\} \space\cup\space \mathbb{N}_1 \space\cup\space -\mathbf{Prop} \space\cup\space \mathbf{Prop} . \{\&, |, >\}.\mathbf{Prop} \space\cup\space \{(\}.\mathbf{Prop}.\{)\}
 $$
-
 L’argument à faire pour démontrer que c’est un langage algébrique est de dire que $f$ constitue un système d’équations algébrique (à 1 équation), où le membre droit de l’équation est constitué d’opérateurs ensemblistes (union), concaténation, le mot vide (pas le cas ici en fait, mais bon) et des constantes (ici $t$, $f$, $($, $)$ et les variables représentées avec $\mathbb{N}_1$). Et donc que $\lim f^i(X)$ est le plus petit point fixe (assuré par un théorème vu en cours), et que c’est justement $\mathbf{Prop}$. Finalement, $\mathbf{Prop}$ est algébrique.
 
 ---
 
 Pour $\mathbf{Nnf}$, l’argument est similaire. Donc, j’écris juste le système d’équations où les fonctions $f_1$, $f_2$, $f_3$ sont déjà évalués à leur limite à l’infini et donc on tombe sur les plus petits points, montrant que $\mathbf{Nnf}$ est un langage algébrique (la première équation étant toujours le langage algébrique d’intérêt):
-
 $$
 \begin{cases}
 \mathbf{Nnf}= \{t, f\} \cup \mathbf{Ncst} \\
@@ -229,7 +218,6 @@ $$
 \mathbf{NNInt} = \mathbb{N}_1 \cup \{-\}.\mathbb{N}_1
 \end{cases}
 $$
-
 ### Exo 2.18
 
 > [!question] ❓
@@ -244,18 +232,15 @@ Une autre solution pourrait être `L ::= aL | aLb | ε`
 `A ::= aA | B, B ::= a B b | ε`
 4. $\{a^nb^p | 2p \geq n \geq p\} \to$
 On utilise une fonction de substitution $\sigma$ sur la première réponse.
+$$
+\sigma:\begin{cases}
+a \to a|aa = A \\
+b \to b
+\end{cases}
 
-    $$
-    \sigma:\begin{cases}
-     a \to a|aa = A \\
-    b \to b
-    \end{cases}
-    
-    \\[10pt]
-    
-    \sigma(L_1) = \sigma(aL_1b\mid \epsilon) = \sigma(a).\sigma(L_1).\sigma(b)\mid \sigma(\epsilon) = A.\sigma(L_1).b \mid \epsilon
+\\[10pt]
 
-
+\sigma(L_1) = \sigma(aL_1b\mid \epsilon) = \sigma(a).\sigma(L_1).\sigma(b)\mid \sigma(\epsilon) = A.\sigma(L_1).b \mid \epsilon
 $$
 
     

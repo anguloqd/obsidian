@@ -53,9 +53,7 @@ Propriétés des courbes d'indifférence :
 
 Le TMS est la dérivée dans un point en particulier sur une courbe d'indifférence :
 
-$$
-\text{TMS} = -\frac{dy}{dx}
-$$
+$$\text{TMS} = -\frac{dy}{dx}$$
 
 Il est toujours négatif et mesure la propension marginale à payer.
 

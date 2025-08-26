@@ -76,41 +76,29 @@ Dans ce modèle, on aura la perspective du principal, donc on voudra maximiser l
 
 Le programme du principal devient donc : $\max_{w(y), a} E[V_P(w(y), a)]$ sous la contrainte $E[V_A(w(y), a)] \geq U_A$.
 
-$$
-\begin{cases}
+$$\begin{cases}
 \max_{w(y), a} \int_{y_1}^{y_2} V_P(y-w(y)) p(y|a)dy, \text{sous la contrainte}
 \\
 \int_{y_1}^{y_2}V_A(w(y))p(y|a)dy-C(a) \geq U_A
-\end{cases}
-$$
+\end{cases}$$
 
 La solution à telle problème $(w^*(y), a^*)$ est obtenue à travers de la fonction lagrangienne : $\max_{w(y), a} L[w(y), a]$
 
-$$
-L = \int_{y_1}^{y_2} V_P(y-w(y)) p(y|a)dy + \lambda[\int_{y_1}^{y_2}V_A(w(y))p(y|a)dy - C(a) - U_A]
-$$
+$$L = \int_{y_1}^{y_2} V_P(y-w(y)) p(y|a)dy + \lambda[\int_{y_1}^{y_2}V_A(w(y))p(y|a)dy - C(a) - U_A]$$
 
 Les dérivées de $L$ par rapport à $w(y)$ et $a$ sont, respectivement :
 
-$$
-\frac{\partial L}{\partial w(y)} = 0 \iff -V_P'(y-w(y))+\lambda V_A'(w(y))=0
-$$
+$$\frac{\partial L}{\partial w(y)} = 0 \iff -V_P'(y-w(y))+\lambda V_A'(w(y))=0$$
 
-$$
-\frac{\partial L}{\partial a} = 0 \iff \int_{y_1}^{y_2} V_P(y-w(y)) \frac{dp(y|a)}{da}dy + \lambda[\int_{y_1}^{y_2}V_A(w(y))\frac{dp(y|a)}{da}dy - C'(a)] = 0
-$$
+$$\frac{\partial L}{\partial a} = 0 \iff \int_{y_1}^{y_2} V_P(y-w(y)) \frac{dp(y|a)}{da}dy + \lambda[\int_{y_1}^{y_2}V_A(w(y))\frac{dp(y|a)}{da}dy - C'(a)] = 0$$
 
 Le multiplicateur de Lagrange finit par être $\lambda = V_P'/V_A'$. Si on défini $r_i = -V_i''/V_i'$, on a donc
 
-$$
-\frac{dw^*}{dy} = \frac{r_P}{r_P+r_A} \iff w^*(y) = \alpha y + C 
-$$
+$$\frac{dw^*}{dy} = \frac{r_P}{r_P+r_A} \iff w^*(y) = \alpha y + C$$
 
 Si l'agent est neutre au risque ($r_P=0$) et l'agent riscophobe, on a donc $w'(y) = C$, dont la valeur de $C$ est donnée par l'optimum de la contrainte de participation :
 
-$$
- C = V_A^{-1}[U_A + C(a^*)]
-$$
+$$C = V_A^{-1}[U_A + C(a^*)]$$
 
 Finalement, il y a trois assertions à retenir :
 
@@ -130,9 +118,7 @@ Posons le contexte du modèle :
 
 Soient les probabilités $p_i^H$ et $p_i^B$ que la production atteigne la valeur $y_i$ lorsque l'effort est Haut ou Bas. La distribution de la variable $Y|e_H$ domine stochastiquement à $Y|e_B$.
 
-$$
-P(y \leq y_i|e_H) = \sum_{k=1}^i p_k^H \leq \sum_{k=1}^i p_k^B = P(y \leq y_i|e_B)
-$$
+$$P(y \leq y_i|e_H) = \sum_{k=1}^i p_k^H \leq \sum_{k=1}^i p_k^B = P(y \leq y_i|e_B)$$
 
 Il y a toujours trois question à répondre, selon le prof. Llerena :
 
@@ -151,12 +137,10 @@ Hypothèses :
 
 La fonction d'utilité de l'agent est donc :
 
-$$
-\begin{cases}
-U(w,e_i) = v[w(y)]-C(e_i) \text{, s'il accepte le contrat} \\ 
+$$\begin{cases}
+U(w,e_i) = v[w(y)]-C(e_i) \text{, s'il accepte le contrat} \\
 U = V, \text{sinon}
-\end{cases}
-$$
+\end{cases}$$
 
 L'agent, ne connaissant pas le résultat de son activité avant de choisir son effort, maximise son Utilité Espérée.
 
@@ -166,29 +150,18 @@ Le Principal est neutre au risque et son utilité est donnée par son profit : $
 
 - Contrainte d'incitation : pour que l'Agent fournisse l'effort $e_H$, il faut que le Principal fasse en sorte que l'espérance d'utilité de l'Agent avec $e_H$ soit supérieure à celle qu'il obtiendrait avec le niveau $e_B$
 
-    $$
-    \sum_{i=1}^n p_i^H v(w_i) - C_H \geq \sum_{i=1}^n p_i^B v(w_i) - C_B
+$$\sum_{i=1}^n p_i^H v(w_i) - C_H \geq \sum_{i=1}^n p_i^B v(w_i) - C_B$$
 
-
-$$
-    
 - Contrainte de participation : encore faut-il que la rémunération proposée par le contrat soit attractif par rapport à l'extérieur, d'où la seconde contrainte :
-    
-    
-$$
 
-    \sum_{i=1}^n p_i^H v(w_i) - C_H  \geq V
-    
+$$\sum_{i=1}^n p_i^H v(w_i) - C_H  \geq V$$
 
-$$
 Compte tenu du schéma de rémunération proposé par le Principal (les $w_i$), l'Agent doit constater qu'il est avantageux non seulement d'accepter ce contrat mais également de fournir l'effort $e_H$.
 
 La condition de premier ordre est :
-$$
 
-\frac{1}{V'(w_i)} = \lambda + \mu \left[1 - \frac{p_i^B}{p_i^H}\right]
+$$\frac{1}{V'(w_i)} = \lambda + \mu \left[1 - \frac{p_i^B}{p_i^H}\right]$$
 
-$$
 La règle optimale proposée par le Principal est un compromis entre les motifs d'incitation et d'assurance de l'Agent.
 
 Le ratio de vraisemblance précise comment l'observation des résultats devient un signal de l'effort fourni par l'Agent, d'où dans l'équation (1) une rémunération optimale décroissante avec le ratio $[p_i^B / p_i^H]$.
@@ -198,21 +171,16 @@ Le ratio de vraisemblance précise comment l'observation des résultats devient 
 S'il est neutre au risque, il ne voudrais plus une "assurance" dans le contrat, ce qui veut dire que la partie fixe n'est plus indispensable pour l'agent. En plus, l'utilité "intermédiaire" du salaire devient $v(w_i) = \alpha w_i = w_i$.
 
 Donc, pour saturer la contrainte de participation :
-$$
 
-\sum_{i=1}^n p_i^H v(w_i)-C_H=V \iff \sum_{i=1}^n p_i^H v(w_i) = V + C_H
+$$\sum_{i=1}^n p_i^H v(w_i)-C_H=V \iff \sum_{i=1}^n p_i^H v(w_i) = V + C_H$$
 
-$$
 On calcule l'espérance du profit :
-$$
 
-\Pi^* = E[\Pi] = \sum_{i=1}^n p_i^H (y_i-w_i) \\
+$$\Pi^* = E[\Pi] = \sum_{i=1}^n p_i^H (y_i-w_i) \\
 
 \text{Puis, notons que de la CP, } \\
 
-\sum_{i=1}^n p_i^H (y_i-w_i) = \sum_{i=1}^n p_i^H y_i - (V + C_H)
-
-$$
+\sum_{i=1}^n p_i^H (y_i-w_i) = \sum_{i=1}^n p_i^H y_i - (V + C_H)$$
 
 Le maximum est atteint quand $w_i = y_i - \Pi^*$.
 

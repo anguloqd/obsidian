@@ -17,7 +17,9 @@ La courbe d'offre de marché est la somme horizontale des courbes individuelles 
 >
 >$$
 >S(p) = D(p)
->$$
+>
+>
+$$
 
 #### Propriétés de l'équilibre
 

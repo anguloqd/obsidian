@@ -48,11 +48,10 @@ Notons que chaque unité de monnaie est une unité d’utilité ici. Le définit
 
 Pour chaque bien étudié, et pour leus prix fixés, la condition équi-marginale serait comme suit :
 
-$$
-\text{Pour bien }g\text{, on cherche }:\argmax_{q_g}U(M,q_1, \dots, q_G)
+$$\text{Pour bien }g\text{, on cherche }:\argmax_{q_g}U(M,q_1, \dots, q_G)
 \\
 
-U(R,p,q)=R-\sum_{g=1}^G p_gq_g + u(q_1, \dots, q_G) \implies \frac{\partial U}{\partial q_G}=0 \implies 
+U(R,p,q)=R-\sum_{g=1}^G p_gq_g + u(q_1, \dots, q_G) \implies \frac{\partial U}{\partial q_G}=0 \implies
 p_g=\underbrace{\frac{\partial U}{\partial q_g}}_{Umg_g}
 
 \\
@@ -64,8 +63,7 @@ p_1=\frac{\partial U}{\partial {q_1}}=Um_1 \\
 p_2=\frac{\partial U}{\partial {q_2}}=Um_2 \\
 \vdots \\
 p_G=\frac{\partial U}{\partial {q_G}}=Um_G \\
-\end{cases}
-$$
+\end{cases}$$
 
 Avec la condition budgétaire et equi-marginale on peut déduire le panier optimal. Dans ce panier, on demande $q_g = D_g(p_1, \dots, p_G)$.
 
@@ -75,14 +73,12 @@ Avec la condition budgétaire et equi-marginale on peut déduire le panier optim
 
 Une telle fonction d’utilité permet de modeler un individu qui arrive à un point de *satiété* par rapport à un certain bien. Elles sont de la forme suivante :
 
-$$
-U(q,M) = \begin{cases} M+aq-\frac{1}{2}bq^2, \text{si }0 \le q \le \frac{a}{b} \\
+$$U(q,M) = \begin{cases} M+aq-\frac{1}{2}bq^2, \text{si }0 \le q \le \frac{a}{b} \\
 
 \\
 
 M+\frac{a^2}{2b}, \text{si }q > \frac{a}{b}
-\end{cases}
-$$
+\end{cases}$$
 
 ![xd.png](ressources/01_fondamentaux_1_xd.png)
 
@@ -98,9 +94,7 @@ Notons que quand le prix est $0$ (le bien est gratuit), l’individu prend jusqu
 
 Ici, on parle de l’élasticité-prix de la quantité demandée d’un individu $*i*$, et on suppose une fonction de demande linéaire : $p = a-bq$ ou aussi $q = \frac{a}{b} - \frac{1}{b}p$ (on utilisera plutôt cette dernière formulation).
 
-$$
-\varepsilon_i=\frac{\mathrm{d}{q}/q}{\mathrm{d}p/p}=\underbrace{\frac{\mathrm{d}q}{\mathrm{d}p}}_{-1/b} \cdot \frac{p}{q}=\frac{1}{b} \cdot \frac{p}{\frac{a-p}{b}}=\frac{p}{a-p}
-$$
+$$\varepsilon_i=\frac{\mathrm{d}{q}/q}{\mathrm{d}p/p}=\underbrace{\frac{\mathrm{d}q}{\mathrm{d}p}}_{-1/b} \cdot \frac{p}{q}=\frac{1}{b} \cdot \frac{p}{\frac{a-p}{b}}=\frac{p}{a-p}$$
 
 **Propriétés**. Cette élasticité est une fonction croissante de $p$ et ne dépend que de $a$, pas de $b$.
 
@@ -137,19 +131,15 @@ Dans la section precedente, on a evalué juste un bien et le reste est la quanti
 
 La nouvelle fonction d’utilité quadratique prend la forme suivante :
 
-$$
-U(q_1,q_2,M)=
+$$U(q_1,q_2,M)=
 \begin{cases}
 M+a_1q_1+a_2q_2-\frac{1}{2}(b_1q_1^2+b_2q_2^2+2dq_1q_2), \text{ si } q_i \le \frac{a_ib_j-a_id}{b_1b_2-d^2} \\
 M+\frac{a_1^2b_2+a_2^2b_1-2a_1a_2d}{2(b_1b_2-d^2)}, \text{ sinon}
-\end{cases}
-$$
+\end{cases}$$
 
 La dérivée première (utilité marginale) et la dérivée seconde sont les suivantes :
 
-$$
-\frac{\partial U}{\partial q_i}=Umg_i=a_i-b_iq_i-dq_j \text{ et } \frac{\partial^2U}{\partial q_i \partial q_j}=-d
-$$
+$$\frac{\partial U}{\partial q_i}=Umg_i=a_i-b_iq_i-dq_j \text{ et } \frac{\partial^2U}{\partial q_i \partial q_j}=-d$$
 
 Notons que dans la fonction d’utilité et sa première dérivée, $d$ multiplie les deux bien et l’autre bien, respectivement. On voit que $d$ represente l’effet sur l’utilité d’un bien sur l’autre, donc leur relation. C’est ici où on peut parler de substituabilité et complémentarité :
 
@@ -163,8 +153,7 @@ Notons que dans la fonction d’utilité et sa première dérivée, $d$ multipli
 
 Pour des consommateurs parfaitement rationnels, on peut déduire leurs demandes à partir de leurs fonctions d’utilité comme on l’avait vu dans le cas général dans la section précédente :
 
-$$
-\begin{cases}
+$$\begin{cases}
 p_1=Um_1\\
 p_2=Um_2
 \end{cases} \implies
@@ -182,13 +171,11 @@ b_1=b_2=b
 \end{array} \implies \begin{cases}
 p_1=a-bq_1-dq_2 \\
 p_2=a-dq_1-bq_2
-\end{cases}
-$$
+\end{cases}$$
 
 Utilisant un peu d’algèbre linéaire, on peut réécrire le système comme suit, où $|\beta|>|\delta|$:
 
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 a-p_1\\
 a-p_2
 \end{bmatrix}
@@ -200,7 +187,7 @@ d&b
 \begin{bmatrix}
 q_1\\
 q_2
-\end{bmatrix} \implies 
+\end{bmatrix} \implies
 \begin{bmatrix}
 b&d\\
 d&b
@@ -222,8 +209,7 @@ q_2
 \text{On arrive à : } \begin{cases}
 q_1=\alpha-\beta p_1+\delta p_2 \\
 q_2=\alpha-\beta p_2+\delta p_1
-\end{cases}, \text{ où } \alpha=\frac{a}{b+d}, \beta=\frac{b}{b^2-d^2}, \delta=\frac{d}{b^2-d^2}
-$$
+\end{cases}, \text{ où } \alpha=\frac{a}{b+d}, \beta=\frac{b}{b^2-d^2}, \delta=\frac{d}{b^2-d^2}$$
 
 Voyons $q_i=\alpha-\beta p_1+\delta p_2$ : il y a une relation inverse entre prix et quantité car $-\beta < 0$, ce qui décrit la “loi” de la demande pour un bien normale. Cela dit, on voit que la quantité demandé $q_i$ dépend aussi de l’autre bien à travers $\delta$.
 
@@ -278,9 +264,7 @@ Cela dit, c’est le contraire pour les biens durables : les agents diffèrent l
 
 Prenons deux point sur une courbe de demande $(p_A,q_A)$ et $(p_B,q_B)$. Si on calcule l’élasticité passant de $A$ à $B$, elle est différent si on passe de $B$ à $A$. D’où le besoins de la méthode du point moyen, pour que l’élasticité de passer de $A$ à $B$ “soit la même” que de $B$ à $A$. Le point de référence qui l’on utilise ici est la moyenne des deux $q$ et $p$ (regarde les dénominateurs).
 
-$$
-\varepsilon=\frac{(q_B-q_A)/[(q_B+q_A)/2]}{(p_B-p_A)/[(p_B+p_A)/2]}
-$$
+$$\varepsilon=\frac{(q_B-q_A)/[(q_B+q_A)/2]}{(p_B-p_A)/[(p_B+p_A)/2]}$$
 
 Cette méthode est utile aussi si on ne connaît que deux points de la courbe de demande.
 
@@ -290,15 +274,11 @@ Cette méthode est utile aussi si on ne connaît que deux points de la courbe de
 
 Rappel : une firme rationnelle cherche à maximiser sa fonction de profit, où $f$ ici est l’output total utilisant $x_1$ unités de input $1$ et $x_2$ unités de input $2$.
 
-$$
-\pi(x_1,x_2) = RT(x_1,x_2)-CT(x_1,x_2) = pf(x_1,x_2)-(w_1x_1+w_2x_2)
-$$
+$$\pi(x_1,x_2) = RT(x_1,x_2)-CT(x_1,x_2) = pf(x_1,x_2)-(w_1x_1+w_2x_2)$$
 
 Cela se fait avec la condition de premier ordre et deuxième ordre (CPO suffit dans ce cas) :
 
-$$
-\text{CPO : } \frac{\partial\pi}{\partial x_i}=0 \implies p\frac{\partial f(x_1^*,x_2^*)}{\partial x_i}=w_i
-$$
+$$\text{CPO : } \frac{\partial\pi}{\partial x_i}=0 \implies p\frac{\partial f(x_1^*,x_2^*)}{\partial x_i}=w_i$$
 
 ### Fonction de coûts (un bien) et concepts associés
 
@@ -306,20 +286,16 @@ La fonction de coût est construite de manière analogue à la fonction de deman
 
 Encore dans l’analogie, on utilise la courbe d’isocoûts comme l’analogue de la courbe des préférences. Normalement, on voit que deux inputs : le travail $L$ et le capital $K$, ce dernier souvent consideré constante dans le court terme et seulement variable dans le long terme.
 
-$$
-\text{Court terme : } c(y,\bar{x_2}) =\min_{x_1}w_1x_1+w_2\bar{x_2}=y
+$$\text{Court terme : } c(y,\bar{x_2}) =\min_{x_1}w_1x_1+w_2\bar{x_2}=y
 \\
-\text{Long terme : } c(y) =\min_{x_1,x_2}w_1x_1+w_2x_2=y
-$$
+\text{Long terme : } c(y) =\min_{x_1,x_2}w_1x_1+w_2x_2=y$$
 
 L’optimum pour $w_1$,$w_2$ et $y$ fixés est aussi analogue à celle du cas du consommateur. On utilise la condition équi-marginale et la contrainte de production :
 
-$$
-\begin{cases}
+$$\begin{cases}
 \frac{Pm_1}{Pm_2}=\frac{w_1}{w_2} \\
 y=f(x_1,x_2)
-\end{cases}, \text{ où } Pm_i=\frac{\partial f}{\partial x_i}
-$$
+\end{cases}, \text{ où } Pm_i=\frac{\partial f}{\partial x_i}$$
 
 **Note #1**. $Pm_1/Pm_2$ est appelé le taux de substitution technique ou TST.
 
@@ -341,21 +317,17 @@ Ce changement nous permet maintenant de “homogénéiser” la production : si 
 
 Avec cette fonction de quantité, on déduit le coût moyen homothétique ou de proportion :
 
-$$
-CMP(Q)=\frac{C(\lambda_1q_1,\lambda_2q_2)}{Q}
-$$
+$$CMP(Q)=\frac{C(\lambda_1q_1,\lambda_2q_2)}{Q}$$
 
 ![untitled](ressources/01_fondamentaux_1_untitled_2.png)
 
 D’autre côté, on peut construire l’idée de coût de production incrémental. Pour un $q_2$ constante donné, on regarde le coût de produire $q_1$ produisant $q_2$. Avec une logique similaire, on peut parler du coût moyen de production incrémental $CMI$ ou aussi coût supplémentaire incrémental $CSI$ :
 
-$$
-CI(q_1|q_2) = C(q_1,q_2)-C(0,q_2)
+$$CI(q_1|q_2) = C(q_1,q_2)-C(0,q_2)
 \\
 \text{}
 \\
-CSI(q_2|q_2)=\frac{C(q_1,q_2)-C(0,q_2)}{q_1}
-$$
+CSI(q_2|q_2)=\frac{C(q_1,q_2)-C(0,q_2)}{q_1}$$
 
 #### Économies d’échelle (avec $n$ biens) et d’apprentissage
 
@@ -363,9 +335,7 @@ $$
 
 Dans le cas mono-produit, on disait qu’**on avait des économies d’échelle si le coût moyen est décroissant en fonction de la quantité produite**. On dira le même dans le cas d’une firme multi-produit pour un niveau fixe de $q_2$ (mais pas pour tout niveau de prod. de $q_2$ !)
 
-$$
-\frac{\partial CMP}{\partial Q} = \frac{q_1Cm_1+q_2Cm_2-C(q_1,q_2)}{Q^2}
-$$
+$$\frac{\partial CMP}{\partial Q} = \frac{q_1Cm_1+q_2Cm_2-C(q_1,q_2)}{Q^2}$$
 
 - $\frac{\partial CMP}{\partial Q }> 0$ : dés-économies d’échelle
 - $\frac{\partial CMP}{\partial Q } = 0$ : on se trouve sur la TMO ou minimum de CMP
@@ -378,18 +348,15 @@ Il existe deux autres définitions équivalentes des économies d’echelle, don
 - Rendements croissants : on a une économie d’echelle pour tout niveau de production $(q_1,q_2)$, on vérifie que $C(\lambda q_1, \lambda q_2) < \lambda C(q_1,q_2)$.
 - Indice d’économies d’échelle multi-produits : c’est un indicateur $S$ dont on peut déduire s’il s’agit d’une économie d’échelle ou non. Si $S > 1$, on a des économie d’échelle, et si $S < 1$ on a des dés-économies d’échelles.
 
-    $$
-    \text{Mono-produit : }
-    S=\frac{CM(q)}{Cmg(q)}=\frac{C(q)}{q \cdot Cmg(q)}
-    
-    \\
-    \text{}
-    \\
-    
-    \text{Multi-produit : } S=\frac{C(q_1,q_2,\dots,q_n)}{q_1Cmg_1 + q_2Cmg_2+\dots + q_nCmg_n}
+$$\text{Mono-produit : }
+S=\frac{CM(q)}{Cmg(q)}=\frac{C(q)}{q \cdot Cmg(q)}
 
+\\
+\text{}
+\\
 
-$$
+\text{Multi-produit : } S=\frac{C(q_1,q_2,\dots,q_n)}{q_1Cmg_1 + q_2Cmg_2+\dots + q_nCmg_n}$$
+
 Toutes les trois définitions sont mathématiquement équivalentes : si l’une est vraie, les autres deux sont aussi vraies, et de même si l’une est fausse.
 
 ### Économies d’échelle spécifiques
@@ -398,11 +365,9 @@ Toutes les trois définitions sont mathématiquement équivalentes : si l’une 
 > Les coûts spécifiques sont des coûts pour produire un bien $1$ mais pas un bien $2$.
 
 Ayant défini le coût moyen incrémentale $CMI$ (aussi appelé à coût supplémentaire moyen), on peut aussi définir les “économies d’échelles spécifiques”, que c’est une réécriture de l’indice d’économie d’échelles mono-produit mais remplaçant le $CM(q)$ pour le $CMI(q_i|q_j)=CMI_i$.
-$$
 
-S=\frac{CM(q)}{Cmg(q)} \longrightarrow ESP_i=\frac{CSM_i}{Cm_i}
+$$S=\frac{CM(q)}{Cmg(q)} \longrightarrow ESP_i=\frac{CSM_i}{Cm_i}$$
 
-$$
 L’interprétation de $ESP_i$ reste la même de celle de $S$ pour le cas mono-produit.
 
 **Note**. Il se peut qu’il existe un cas où il n’existe pas des économie d’échelles spécifiques mais qu’il existe simultanément des économies d’échelles conjointes (car les rendements à échelles sont croissants pour tout niveau de production).
@@ -422,11 +387,9 @@ La définition mathématique des économies de gammes est la suivante :
 **Il faut absolument qu’il y ait complémentarité, sinon ce n’est pas éco. de gamme !**
 
 Une autre méthode pour vérifier une situation des économies de gammes, sans passer par la définition, c’est d’utiliser l’indice des économies de gammes $EG$, similaire à l’idée de l’indice d’économies d’échelle.
-$$
 
-EG=\frac{C(q_1,0)+C(0,q_2)-C(q_1,q_2)}{C(q_1,q_2)}
+$$EG=\frac{C(q_1,0)+C(0,q_2)-C(q_1,q_2)}{C(q_1,q_2)}$$
 
-$$
 Intuitivement, cet indice montre la différence de cout total résultant de la production séparée de biens (proportionnel au coût conjoint).
 
 - Si $EG > 0$, on a des économies de gamme
@@ -439,9 +402,8 @@ Pour rappel, la sous-additivité de coûts est la condition $C(q)<C(q_1)+C(q_2),
 **La fonction de coût est sous-additive si et seulement s’il y a des eco. d’échelle ET gamme**. Si jamais on a une sans l’autre, la fonction de coût n’est pas sous-additive.
 
 Exemple #1 :
-$$
 
-C(q_1,q_2)=q_1+q_2+(q_1q_2)^{1/3}
+$$C(q_1,q_2)=q_1+q_2+(q_1q_2)^{1/3}
 
 \\
 
@@ -461,13 +423,11 @@ C(q_1,q_2) \nless C(q_1,0)+C(0,q_2)
 
 \\
 
-\implies C \text{ non sous-additive.}
+\implies C \text{ non sous-additive.}$$
 
-$$
 Exemple #2 :
-$$
 
-C(q_1,q_2)=q_1^{1/4}+q_2^{1/4}-(q_1q_2)^{1/4}
+$$C(q_1,q_2)=q_1^{1/4}+q_2^{1/4}-(q_1q_2)^{1/4}
 
 \\
 
@@ -487,8 +447,6 @@ C(q_1,q_2)< C(q_1,0)+C(0,q_2)
 
 \\
 
-\implies C \text{ sous-additive.}
-
-$$
+\implies C \text{ sous-additive.}$$
 
 Les conditions nécessaires et suffisantes pour avoir sous-additivité globale de la fonction de coût multi-produits sont plus complexes que pour le cas mono-produit.

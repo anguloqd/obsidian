@@ -43,13 +43,11 @@ planete(X) :- astre(X),etoile(E),satellite(X,E).
 
 Normalement, le symbole $\equiv$ signifie si et seulement si ($\iff$) dans la logique de première ordre. Cela dit, en Prolog, le symbole de “définition” (`:-`) en fait est une implication logique et ne pas une équivalence logique. Si $p_1, \dots, p_n$ sont des prédicats, alors :
 
-$$
-\text{En Maths : } p_1(\dots)\land p_2(\dots)\land \dots \land p_n(\dots) \implies r(\dots)
+$$\text{En Maths : } p_1(\dots)\land p_2(\dots)\land \dots \land p_n(\dots) \implies r(\dots)
 
 \\
 
-\text{En Prolog : } r(\dots) \space \underbrace{:-}_{\implies} \space p_1(\dots)\land p_2(\dots)\land \dots \land p_n(\dots)
-$$
+\text{En Prolog : } r(\dots) \space \underbrace{:-}_{\implies} \space p_1(\dots)\land p_2(\dots)\land \dots \land p_n(\dots)$$
 
 ### Requêtes : exécution
 

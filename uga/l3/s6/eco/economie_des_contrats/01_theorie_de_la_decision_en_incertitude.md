@@ -35,23 +35,17 @@ Supposons deux loteries $L_1= \{(1000\text{€}, 0.5) ; (-1000\text{€}, 0.5)\}
 
 Ceci étant dit, il y a des situations problématiques si on décide de choisir la EMG comme notre critère de décision. L'une de ces situations est la paradoxe de St. Petesbourg : c'est un jeu d'une pièce équilibrée lancée jusqu'à l'obtention de l'événement "Face". A chaque jet qui sort pile, le joueur gagne $2^n\text{€}$. Donc :
 
-$$
-EMG  = \sum_{n=0}^\infty 2^{-n}2^{n} = 1+1+1\ldots \to \infty
-$$
+$$EMG  = \sum_{n=0}^\infty 2^{-n}2^{n} = 1+1+1\ldots \to \infty$$
 
 On dit que le prix juste pour jouer un jeu est égal à son espérance. Le problème se lève quand l'espérance est l'infini, personne n'est prête à payer une somme infinie d'argent pour jouer à ce jeu.
 
 La solution proposée par Bernoulli en 1738 serait que les joueurs maximisent plutôt l'espérance du logarithme du gain :
 
-$$
-V(J) = \sum_{n=0}^\infty 2^{-n} \log(2^{n}) = 2 \log(2)
-$$
+$$V(J) = \sum_{n=0}^\infty 2^{-n} \log(2^{n}) = 2 \log(2)$$
 
 Et, comme généralisation de la solution, les joueurs ne maximisent pas les gains monétaires bruts mais l'utilité que leur procurent ces gains : on remplace la fonction $\log$ par une fonction $U(.)$ croissant concave qui représente l'utilité de la richesse :
 
-$$
-V(J) = \sum_{n=0}^\infty 2^{-n} U(2^{n})  \text{ avec } U'(.) > 0, U''(.) < 0 
-$$
+$$V(J) = \sum_{n=0}^\infty 2^{-n} U(2^{n})  \text{ avec } U'(.) > 0, U''(.) < 0$$
 
 ### Prise en compte du risque
 
@@ -61,9 +55,7 @@ Une solution est celle de Markowitz (1952) : intégrer dans l'analyse le risque 
 
 Par exemple, on pourrait avoir :
 
-$$
-V(a) = F(\mu_a, \sigma^2_a) = \alpha + \beta \mu_a - \gamma \sigma^2_a, \text{ avec } F'_\mu = \beta > 0
-$$
+$$V(a) = F(\mu_a, \sigma^2_a) = \alpha + \beta \mu_a - \gamma \sigma^2_a, \text{ avec } F'_\mu = \beta > 0$$
 
 Notons que si on fixe une valeur constante de $V(a)$ et on regarde les valeurs $\mu$ et $\sigma^2$ comme des variables, nous avons une courbe d'indifférence.
 
@@ -73,9 +65,7 @@ Courbe d'indifférence pour $V(a)$ fixé
 
 En plus, on pourrait dériver donc un taux marginal de substitution :
 
-$$
-TMS_{\mu / \sigma^2} = -F'_{\sigma^2} / F'_{\mu} = \gamma / \beta
-$$
+$$TMS_{\mu / \sigma^2} = -F'_{\sigma^2} / F'_{\mu} = \gamma / \beta$$
 
 La pente des courbes d'indifférence dépend donc du signe de $\gamma$ : une constante qui mesure le degré d'aversion au risque.
 
@@ -111,9 +101,7 @@ Pour les relations de préférence, nous avons $\geq^{\#}$ pour préférence fai
 
 Si les trois axiomes précédents sont satisfaits, alors il existe une fonction d'utilité $U(.)$ définie sur l'ensemble des conséquences $X$, à une transformation strictement affine croissante près, et une fonction de valeur $V(.)$ définie sur $A$ telles que :
 
-$$
-a_1 \geq^{\#} a_2 \iff V(a_1) = \sum_{i=1}^n p_{1,i}(x_i) u(x_i) \geq \sum_{i=1}^n p_{2,i}(x_i) u(x_i) = V(a_2)
-$$
+$$a_1 \geq^{\#} a_2 \iff V(a_1) = \sum_{i=1}^n p_{1,i}(x_i) u(x_i) \geq \sum_{i=1}^n p_{2,i}(x_i) u(x_i) = V(a_2)$$
 
 Ainsi, la valeur d'une action risquée est l'espérance mathématique des utilités de ses résultats possibles (et non plus des gains) : l'individu rationnel prend ses décisions en maximisant son utilité espérée.
 
@@ -123,9 +111,7 @@ Ainsi, la valeur d'une action risquée est l'espérance mathématique des utilit
 
 Ce critère choisit l'action parmi toutes que maximise la préférence de Markovitz linéaire, mais en utilisant non pas la variance traditionnelle mais plutôt une variance "tronquée" qui ne prend en compte que les pertes possibles comme suit :
 
-$$
-\sigma^2(a) = \sum_{i=1}^n p_a(x_i)^2, x_i < 0
-$$
+$$\sigma^2(a) = \sum_{i=1}^n p_a(x_i)^2, x_i < 0$$
 
 #### Maximin
 
@@ -257,21 +243,15 @@ Nombreuses expériences qui montrent la violation de l'axiome d'indépendance de
 
 Soit une loterie $R$ particulière qui assure un gain d'un Euro avec une probabilité de 1 : $R = {(1, 1)}$, alors on peut écrire :
 
-$$
-L_1^* = \lambda L_1 + (1 - \lambda) R = 0.01L_1 + 0.99R
-$$
+$$L_1^* = \lambda L_1 + (1 - \lambda) R = 0.01L_1 + 0.99R$$
 
 et
 
-$$
-L_2^* = \lambda L_2 + (1 - \lambda) R = 0.01L_2 + 0.99R
-$$
+$$L_2^* = \lambda L_2 + (1 - \lambda) R = 0.01L_2 + 0.99R$$
 
 Et si les agents respectent l'axiome d'indépendance de VNM, alors on a :
 
-$$
-L_1 >^{\#} L_2 \iff L_1^* >^{\#} L_2^*
-$$
+$$L_1 >^{\#} L_2 \iff L_1^* >^{\#} L_2^*$$
 
 Or, la majorité des sujets préfèrent $L_2^*$ à $L_1^*$, alors qu'ils ont préféré $L_1$ à $L_2$. Et cela malgré le "rapport constant" des probabilités de gains pour les deux situations : $0.98 / 1 = 0.0098 / 0.01 = 0.98$
 
@@ -299,9 +279,7 @@ Considérons trois états de la nature $E_1$, $E_2$ et $E_3$ :
 
 Si l'agent respecte le 2ème postulat alors on a :
 
-$$
-a_1 \geq^{\#} a_2 \iff a_1' \geq^{\#} a_2'
-$$
+$$a_1 \geq^{\#} a_2 \iff a_1' \geq^{\#} a_2'$$
 
 Même Savage a préféré $a_2'$ à $a_1'$, alors qu'il préférait $a_1$ à $a_2$.
 
@@ -330,9 +308,7 @@ _Pari i : gain en $ si la première boule tirée est de couleur X._
 
 D'après Savage, si l'agent respecte le 2ème postulat alors on a :
 
-$$
-P_1 \geq^{\#} P_2 \iff P_3 \geq^{\#} P_4
-$$
+$$P_1 \geq^{\#} P_2 \iff P_3 \geq^{\#} P_4$$
 
 **Résultats expérimentaux** : $P_1 \geq^{\#} P_2$ et $P_4 \geq^{\#} P_3$
 

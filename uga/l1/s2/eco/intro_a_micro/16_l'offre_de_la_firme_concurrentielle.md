@@ -12,9 +12,7 @@
 
 #### Formulation du profit
 
-$$
-\text{Profit} = R - C(q) = pq - CV(q) - F
-$$
+$$\text{Profit} = R - C(q) = pq - CV(q) - F$$
 
 Le $p$ ici est le prix de marché, que la firme concurrentielle prend comme donné. En monopole, c'est la fonction de demande inverse $p(q)$.
 

@@ -18,17 +18,13 @@ La consommation est notée $c_1$ et $c_2$, le revenu est noté $m_1$ et $m_2$.
 
 La contrainte budgétaire s'écrit :
 
-$$
-p_1c_1 + p_2c_2 = p_1m_1 + p_2m_2
-$$
+$$p_1c_1 + p_2c_2 = p_1m_1 + p_2m_2$$
 
 #### Cas sans inflation
 
 S'il n'y a pas d'inflation, la contrainte budgétaire est standard :
 
-$$
-p_1c_1 + p_2c_2 = m
-$$
+$$p_1c_1 + p_2c_2 = m$$
 
 #### Cas avec inflation
 
@@ -76,8 +72,9 @@ Jusqu'à présent, on avait considéré que les prix de consommation présente e
 >
 >$$
 >(1 + \rho) = \frac{1 + r}{1 + \pi}
->$$
 >
+>
+$$
 >On substitue $(1 + \rho)$ où il y avait $(1 + r)$ précédemment.
 
 Si le taux d'inflation est faible, on peut approximer $\rho \approx r - \pi$
@@ -85,13 +82,10 @@ Si le taux d'inflation est faible, on peut approximer $\rho \approx r - \pi$
 #### Impact sur les choix intertemporels
 
 Avec inflation, la contrainte budgétaire devient :
-
 $$
 c_1 + \frac{c_2}{(1 + \rho)(1 + \pi)} = m_1 + \frac{m_2}{(1 + \rho)(1 + \pi)}
 $$
-
 Ou, en simplifiant :
-
 $$
 c_1 + \frac{c_2}{1 + \rho} = m_1 + \frac{m_2}{1 + \rho}
 $$

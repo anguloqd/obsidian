@@ -6,9 +6,7 @@
 
 On suppose que la fonction d'utilité prend une forme quasi-linéaire :
 
-$$
-U(x,y) = v(x) + y
-$$
+$$U(x,y) = v(x) + y$$
 
 - $y$ représente la quantité d'euros dédiée aux autres produits
 - On définit $v(0) = 0$
@@ -18,35 +16,25 @@ $$
 
 La fonction d'utilité doit respecter la propriété suivante :
 
-$$
-U(0, m) = U(1, m - r_1)
-$$
+$$U(0, m) = U(1, m - r_1)$$
 
 Ce qui devient :
 
-$$
-v(0) + m = v(1) + (m - r_1)
-$$
+$$v(0) + m = v(1) + (m - r_1)$$
 
 On en déduit :
 
-$$
-v(1) = r_1
-$$
+$$v(1) = r_1$$
 
 ### Estimer l'utilité à partir de la demande
 
 Par récurrence, on dérive que :
 
-$$
-r_n = v(n) - v(n - 1)
-$$
+$$r_n = v(n) - v(n - 1)$$
 
 Aussi :
 
-$$
-\sum_{i=1}^n r_i = v(n)
-$$
+$$\sum_{i=1}^n r_i = v(n)$$
 
 - Puisque $n$ est naturel, cette expression a la forme d'une "dérivée discrète"
 - Elle est décroissante par rapport à $n$

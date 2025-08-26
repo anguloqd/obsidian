@@ -24,18 +24,14 @@ Réciproquement, la délinquance économique influence le chômage par son impac
 
 Cette double causalité se traduit par le système d'équations simultanées suivant :
 
-$$
-\begin{cases}
+$$\begin{cases}
 \text{déli}_i = a_0 + b_0 \times \text{chom}_i + e_i \\
 \text{chom}_i = \alpha_0 + \beta_0 \times \text{déli}_i + \varepsilon_i
-\end{cases}
-$$
+\end{cases}$$
 
 où $E[e_i] = E[\varepsilon_i] = 0$, mais cruciale ment :
 
-$$
-\text{Cov}(\text{chom}_i, e_i) \neq 0 \quad \text{et} \quad \text{Cov}(\text{déli}_i, \varepsilon_i) \neq 0
-$$
+$$\text{Cov}(\text{chom}_i, e_i) \neq 0 \quad \text{et} \quad \text{Cov}(\text{déli}_i, \varepsilon_i) \neq 0$$
 
 Cette structure révèle le problème fondamental : les variables explicatives sont endogènes dans chaque équation, rendant impossible l'estimation directe des paramètres causaux $b_0$ et $\beta_0$ par les moindres carrés ordinaires.
 
@@ -53,15 +49,11 @@ Le modèle structurel complet incorpore l'ensemble des déterminants des variabl
 
 **Équation de délinquance :**
 
-$$
-\text{déli}_i = a_0 + b_0 \times \text{chom}_i + \mathbf{d}_0' \mathbf{q}_{d,i} + \mathbf{r}_0' \mathbf{q}_{i} + u_{d,i}
-$$
+$$\text{déli}_i = a_0 + b_0 \times \text{chom}_i + \mathbf{d}_0' \mathbf{q}_{d,i} + \mathbf{r}_0' \mathbf{q}_{i} + u_{d,i}$$
 
 **Équation de chômage :**
 
-$$
-\text{chom}_i = \alpha_0 + \beta_0 \times \text{déli}_i + \boldsymbol{\delta}_0' \mathbf{q}_{i} + \boldsymbol{\rho}_0' \mathbf{q}_{c,i} + u_{c,i}
-$$
+$$\text{chom}_i = \alpha_0 + \beta_0 \times \text{déli}_i + \boldsymbol{\delta}_0' \mathbf{q}_{i} + \boldsymbol{\rho}_0' \mathbf{q}_{c,i} + u_{c,i}$$
 
 où :
 
@@ -75,26 +67,23 @@ où :
 
 La **forme structurelle** du système d'équations simultanées décrit les relations causales d'intérêt dans leur forme naturelle. Pour le modèle général, elle s'écrit :
 
-$$
-\begin{cases}
+$$\begin{cases}
 y_{d,i} = a_0 + b_0 y_{c,i} + \mathbf{d}_0' \mathbf{q}_{d,i} + \mathbf{r}_0' \mathbf{q}_i + u_{d,i} \\
 y_{c,i} = \alpha_0 + \beta_0 y_{d,i} + \boldsymbol{\delta}_0' \mathbf{q}_i + \boldsymbol{\rho}_0' \mathbf{q}_{c,i} + u_{c,i}
-\end{cases}
-$$
+\end{cases}$$
 
 avec $E[\mathbf{u}_i|\mathbf{z}_i] = \mathbf{0}$ où $\mathbf{u}_i = (u_{d,i}, u_{c,i})'$ et $\mathbf{z}_i = (1, \mathbf{q}_i', \mathbf{q}_{d,i}', \mathbf{q}_{c,i}')$ représente l'ensemble des variables exogènes du système.
 
 Sous forme matricielle compacte :
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 1 & -b_0 \\
 -\beta_0 & 1
 \end{pmatrix}
 \begin{pmatrix}
 y_{d,i} \\
 y_{c,i}
-\end{pmatrix} = 
+\end{pmatrix} =
 \begin{pmatrix}
 a_0 & \mathbf{d}_0' & \mathbf{r}_0' & \mathbf{0}' \\
 \alpha_0 & \boldsymbol{\delta}_0' & \mathbf{0}' & \boldsymbol{\rho}_0'
@@ -104,12 +93,11 @@ a_0 & \mathbf{d}_0' & \mathbf{r}_0' & \mathbf{0}' \\
 \mathbf{q}_i \\
 \mathbf{q}_{d,i} \\
 \mathbf{q}_{c,i}
-\end{pmatrix} + 
+\end{pmatrix} +
 \begin{pmatrix}
 u_{d,i} \\
 u_{c,i}
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 #### Forme réduite
 
@@ -117,11 +105,10 @@ La **forme réduite** exprime chaque variable endogène comme une fonction liné
 
 En résolvant le système matriciel précédent, on obtient :
 
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
 y_{d,i} \\
 y_{c,i}
-\end{pmatrix} = 
+\end{pmatrix} =
 \frac{1}{\Delta}
 \begin{pmatrix}
 1 & b_0 \\
@@ -136,24 +123,20 @@ a_0 & \mathbf{d}_0' & \mathbf{r}_0' & \mathbf{0}' \\
 \mathbf{q}_i \\
 \mathbf{q}_{d,i} \\
 \mathbf{q}_{c,i}
-\end{pmatrix} + \mathbf{v}_i
-$$
+\end{pmatrix} + \mathbf{v}_i$$
 
 où $\Delta = 1 - b_0\beta_0$ représente le déterminant du système (supposé non nul pour l'existence d'un équilibre) et $\mathbf{v}_i$ les termes d'erreur de la forme réduite.
 
 La forme réduite finale s'écrit :
 
-$$
-\begin{cases}
+$$\begin{cases}
 y_{d,i} = \pi_{d,1} + \pi_{d,2}' \mathbf{q}_i + \pi_{d,3}' \mathbf{q}_{d,i} + \pi_{d,4}' \mathbf{q}_{c,i} + v_{d,i} \\
 y_{c,i} = \pi_{c,1} + \pi_{c,2}' \mathbf{q}_i + \pi_{c,3}' \mathbf{q}_{d,i} + \pi_{c,4}' \mathbf{q}_{c,i} + v_{c,i}
-\end{cases}
-$$
+\end{cases}$$
 
 Les paramètres de forme réduite $\boldsymbol{\pi}_d$ et $\boldsymbol{\pi}_c$ s'expriment en fonction des paramètres structurels selon :
 
-$$
-\boldsymbol{\pi}_d = \frac{1}{\Delta}\begin{pmatrix}
+$$\boldsymbol{\pi}_d = \frac{1}{\Delta}\begin{pmatrix}
 a_0 + b_0\alpha_0 \\
 \mathbf{d}_0 + b_0\boldsymbol{\delta}_0 \\
 \mathbf{r}_0 \\
@@ -164,8 +147,7 @@ b_0\boldsymbol{\rho}_0
 \boldsymbol{\delta}_0 + \beta_0 \mathbf{d}_0 \\
 \beta_0 \mathbf{r}_0 \\
 \boldsymbol{\rho}_0
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 Cette forme réduite constitue un système de régressions empilées où les conditions d'exogénéité $E[\mathbf{v}_i|\mathbf{z}_i] = \mathbf{0}$ sont satisfaites par construction.
 
@@ -179,32 +161,24 @@ L'approche par les moindres carrés indirects exploite la structure du système 
 
 Dans le cas juste-identifié, le nombre de paramètres réduits égale le nombre de paramètres structurels, permettant une bijection exacte. Pour le modèle simplifié avec huit paramètres structurels et huit paramètres réduits, le système d'inversion s'écrit :
 
-$$
-\begin{cases}
+$$\begin{cases}
 b_0 = \frac{\pi_{d,4}}{\pi_{c,4}}, \quad a_0 = \pi_{d,1} - b_0\pi_{c,1}, \quad d_0 = \pi_{d,2} - b_0\pi_{c,2}, \quad r_0 = \frac{\pi_{d,3}}{\Delta} \\
 \beta_0 = \frac{\pi_{c,3}}{\pi_{d,3}}, \quad \alpha_0 = \pi_{c,1} - \beta_0\pi_{d,1}, \quad \delta_0 = \pi_{c,2} - \beta_0\pi_{d,2}, \quad \rho_0 = \frac{\pi_{c,4}}{\Delta}
-\end{cases}
-$$
+\end{cases}$$
 
 Les **estimateurs des MCI** se définissent alors comme :
 
-$$
-\hat{\mathbf{g}}_N^{MCI} = \mathbf{g}(\hat{\boldsymbol{\pi}}_{d,N}^{MCO}, \hat{\boldsymbol{\pi}}_{c,N}^{MCO}) \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} = \boldsymbol{\gamma}(\hat{\boldsymbol{\pi}}_{d,N}^{MCO}, \hat{\boldsymbol{\pi}}_{c,N}^{MCO})
-$$
+$$\hat{\mathbf{g}}_N^{MCI} = \mathbf{g}(\hat{\boldsymbol{\pi}}_{d,N}^{MCO}, \hat{\boldsymbol{\pi}}_{c,N}^{MCO}) \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} = \boldsymbol{\gamma}(\hat{\boldsymbol{\pi}}_{d,N}^{MCO}, \hat{\boldsymbol{\pi}}_{c,N}^{MCO})$$
 
 #### Propriétés de convergence
 
 La convergence des estimateurs des MCI découle directement de la convergence en probabilité des estimateurs de la forme réduite :
 
-$$
-\hat{\boldsymbol{\pi}}_{d,N}^{MCO} \xrightarrow{p} \boldsymbol{\pi}_d \quad \text{et} \quad \hat{\boldsymbol{\pi}}_{c,N}^{MCO} \xrightarrow{p} \boldsymbol{\pi}_c
-$$
+$$\hat{\boldsymbol{\pi}}_{d,N}^{MCO} \xrightarrow{p} \boldsymbol{\pi}_d \quad \text{et} \quad \hat{\boldsymbol{\pi}}_{c,N}^{MCO} \xrightarrow{p} \boldsymbol{\pi}_c$$
 
 Par continuité des fonctions $\mathbf{g}(\cdot)$ et $\boldsymbol{\gamma}(\cdot)$, on obtient :
 
-$$
-\hat{\mathbf{g}}_N^{MCI} \xrightarrow{p} \mathbf{g}_0 \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} \xrightarrow{p} \boldsymbol{\gamma}_0
-$$
+$$\hat{\mathbf{g}}_N^{MCI} \xrightarrow{p} \mathbf{g}_0 \quad \text{et} \quad \hat{\boldsymbol{\gamma}}_N^{MCI} \xrightarrow{p} \boldsymbol{\gamma}_0$$
 
 ## Conditions d'identification
 
@@ -220,17 +194,13 @@ L'approche par MCI révèle une équivalence fondamentale avec l'estimation par 
 
 Pour l'équation de $y_{d,i}$ :
 
-$$
-y_{d,i} = \mathbf{g}_0' \mathbf{x}_{d,i} + u_{d,i}
-$$
+$$y_{d,i} = \mathbf{g}_0' \mathbf{x}_{d,i} + u_{d,i}$$
 
 avec $\mathbf{x}_{d,i} = (1, y_{c,i}, \mathbf{q}_{d,i}', \mathbf{q}_i')'$ et le vecteur d'instruments $\mathbf{z}_i = (1, \mathbf{q}_i', \mathbf{q}_{d,i}', \mathbf{q}_{c,i})'$.
 
 L'estimateur par variables instrumentales s'écrit :
 
-$$
-\hat{\mathbf{g}}_N^{VI} = \left(\sum_{i=1}^N \mathbf{x}_{d,i} \mathbf{z}_i' \right)^{-1} \left(\sum_{i=1}^N \mathbf{z}_i \mathbf{z}_i' \right)^{-1} \sum_{i=1}^N \mathbf{z}_i y_{d,i}
-$$
+$$\hat{\mathbf{g}}_N^{VI} = \left(\sum_{i=1}^N \mathbf{x}_{d,i} \mathbf{z}_i' \right)^{-1} \left(\sum_{i=1}^N \mathbf{z}_i \mathbf{z}_i' \right)^{-1} \sum_{i=1}^N \mathbf{z}_i y_{d,i}$$
 
 Dans le cas juste-identifié, on démontre l'égalité $\hat{\mathbf{g}}_N^{MCI} = \hat{\mathbf{g}}_N^{VI}$, établissant l'équivalence conceptuelle entre les deux approches.
 
@@ -240,12 +210,10 @@ Dans le cas juste-identifié, on démontre l'égalité $\hat{\mathbf{g}}_N^{MCI}
 
 Pour le modèle général non nécessairement juste-identifié, la forme réduite devient :
 
-$$
-\begin{cases}
+$$\begin{cases}
 y_{d,i} = \boldsymbol{\pi}_d' \mathbf{z}_i + v_{d,i} \\
 y_{c,i} = \boldsymbol{\pi}_c' \mathbf{z}_i + v_{c,i}
-\end{cases}
-$$
+\end{cases}$$
 
 Le système d'inversion des paramètres réduits en paramètres structurels compte désormais $2 \times \dim(\mathbf{z}_i)$ équations pour $2 \times (2 + \dim(\mathbf{q}_{d,i}) + \dim(\mathbf{q}_{c,i}))$ inconnues.
 
@@ -257,15 +225,11 @@ Dans le cas sur-identifié où $\dim(\mathbf{q}_{d,i}) + \dim(\mathbf{q}_{c,i}) 
 
 Pour l'équation $m$ du système général :
 
-$$
-y_{m,i} = a_{m,0} + \mathbf{b}_{m,0}' \mathbf{y}_{m,i} + \mathbf{d}_{m,0}' \mathbf{q}_{m,i} + \mathbf{r}_{m,0}' \mathbf{q}_{m,i}^s + u_{m,i}
-$$
+$$y_{m,i} = a_{m,0} + \mathbf{b}_{m,0}' \mathbf{y}_{m,i} + \mathbf{d}_{m,0}' \mathbf{q}_{m,i} + \mathbf{r}_{m,0}' \mathbf{q}_{m,i}^s + u_{m,i}$$
 
 la condition d'ordre s'énonce :
 
-$$
-\dim(\mathbf{z}_i) \geq 1 + \dim(\mathbf{y}_{m,i}) + \dim(\mathbf{q}_{m,i}) + \dim(\mathbf{q}_{m,i}^s)
-$$
+$$\dim(\mathbf{z}_i) \geq 1 + \dim(\mathbf{y}_{m,i}) + \dim(\mathbf{q}_{m,i}) + \dim(\mathbf{q}_{m,i}^s)$$
 
 Cette condition exprime que le nombre de variables exogènes du système doit au moins égaler le nombre de variables explicatives de l'équation considérée.
 
@@ -317,15 +281,11 @@ Cette approche, bien que potentiellement moins efficace, offre une robustesse co
 
 La distribution asymptotique des estimateurs MCI découle de celle des estimateurs de la forme réduite via la méthode delta. Si :
 
-$$
-\sqrt{N}(\hat{\boldsymbol{\pi}}_N^{MCO} - \boldsymbol{\pi}_0) \xrightarrow{L} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)
-$$
+$$\sqrt{N}(\hat{\boldsymbol{\pi}}_N^{MCO} - \boldsymbol{\pi}_0) \xrightarrow{L} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)$$
 
 alors :
 
-$$
-\sqrt{N}(\hat{\boldsymbol{\theta}}_N^{MCI} - \boldsymbol{\theta}_0) \xrightarrow{L} \mathcal{N}\left(\mathbf{0}, \frac{\partial \mathbf{h}(\boldsymbol{\pi}_0)}{\partial \boldsymbol{\pi}'} \boldsymbol{\Sigma}_0 \frac{\partial \mathbf{h}(\boldsymbol{\pi}_0)'}{\partial \boldsymbol{\pi}}\right)
-$$
+$$\sqrt{N}(\hat{\boldsymbol{\theta}}_N^{MCI} - \boldsymbol{\theta}_0) \xrightarrow{L} \mathcal{N}\left(\mathbf{0}, \frac{\partial \mathbf{h}(\boldsymbol{\pi}_0)}{\partial \boldsymbol{\pi}'} \boldsymbol{\Sigma}_0 \frac{\partial \mathbf{h}(\boldsymbol{\pi}_0)'}{\partial \boldsymbol{\pi}}\right)$$
 
 où $\boldsymbol{\theta}_0 = \mathbf{h}(\boldsymbol{\pi}_0)$ avec $\mathbf{h}(\cdot) = (\mathbf{g}(\cdot)', \boldsymbol{\gamma}(\cdot)')'$.
 
@@ -333,15 +293,11 @@ où $\boldsymbol{\theta}_0 = \mathbf{h}(\boldsymbol{\pi}_0)$ avec $\mathbf{h}(\c
 
 La matrice de variance-covariance asymptotique de l'estimateur de la forme réduite s'exprime, en utilisant les produits de Kronecker :
 
-$$
-\boldsymbol{\Sigma}_0 = E\left[\left(\mathbf{I}_2 \otimes \mathbf{z}_i\mathbf{z}_i'\right)^{-1} \left(\mathbf{I}_2 \otimes \mathbf{z}_i\right) \mathbf{v}_i\mathbf{v}_i' \left(\mathbf{I}_2 \otimes \mathbf{z}_i'\right) \left(\mathbf{I}_2 \otimes \mathbf{z}_i\mathbf{z}_i'\right)^{-1}\right]
-$$
+$$\boldsymbol{\Sigma}_0 = E\left[\left(\mathbf{I}_2 \otimes \mathbf{z}_i\mathbf{z}_i'\right)^{-1} \left(\mathbf{I}_2 \otimes \mathbf{z}_i\right) \mathbf{v}_i\mathbf{v}_i' \left(\mathbf{I}_2 \otimes \mathbf{z}_i'\right) \left(\mathbf{I}_2 \otimes \mathbf{z}_i\mathbf{z}_i'\right)^{-1}\right]$$
 
 Dans le cas homoscédastique où $E[\mathbf{v}_i\mathbf{v}_i'|\mathbf{z}_i] = \boldsymbol{\Omega}_0$, cette expression se simplifie en :
 
-$$
-\boldsymbol{\Sigma}_0 = \boldsymbol{\Omega}_0 \otimes E[\mathbf{z}_i\mathbf{z}_i']^{-1}
-$$
+$$\boldsymbol{\Sigma}_0 = \boldsymbol{\Omega}_0 \otimes E[\mathbf{z}_i\mathbf{z}_i']^{-1}$$
 
 L'estimateur empirique de $\boldsymbol{\Sigma}_0$ s'obtient par substitution des estimateurs empiriques correspondants, permettant l'inférence statistique standard sur les paramètres structurels estimés par MCI.
 

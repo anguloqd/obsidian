@@ -145,8 +145,4 @@ Si on reprend la forme du master theorem,
 - On peut calculer que $c_\text{crit} = \log_b(a) = \log_2(2) = 1$.
 - On compare avec $c$ : on voit que $c_\text{crit} = c$, d’où ça correspond au cas #2 du MT, et la forme serré du temps de tri fusion correspond donc à :
 
-    $$
-    T(n) = O\left(n^{c_\text{crit}} \cdot \log_2(n)^{k+1}\right) = O\left(n^1 \cdot \log_2(n)^{0+1}\right)=O\left(n\log_2(n)\right)
-
-
-$$
+$$T(n) = O\left(n^{c_\text{crit}} \cdot \log_2(n)^{k+1}\right) = O\left(n^1 \cdot \log_2(n)^{0+1}\right)=O\left(n\log_2(n)\right)$$

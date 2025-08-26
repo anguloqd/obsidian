@@ -868,21 +868,15 @@ $ ./run infer r1.6
 
 Efficiency of execution of a program on a hardware is a measure between $0$ and $1$ representing how close we are to the **peak** theoretical execution time. We want to be as close to $1$ as possible. It is computed as follows:
 
-$$
-\text{Efficiency} = \frac{\text{Theoretical Execution Time}}{\text{Actual Execution Time}} 
-$$
+$$\text{Efficiency} = \frac{\text{Theoretical Execution Time}}{\text{Actual Execution Time}}$$
 
 For the theoretical time term, we need to retrieve the flops required from the `kann generate` logs. Then, we need to retrieve the theoretical hardware flops. The theoretical execution time is then:
 
-$$
-\text{Theoretical Execution Time = } \frac{\text{FLOPS required}}{\text{Reference FLOPS}}
-$$
+$$\text{Theoretical Execution Time = } \frac{\text{FLOPS required}}{\text{Reference FLOPS}}$$
 
 As an example, the flops required in the previous example in `kann-models-zoo` is 3.24 GFLOPS, and the reference FLOPS is 25 TFLOPS for MPPA. This gives then:
 
-$$
-\text{Theoretical Execution Time = } \frac{\text{3.24 GFLOPS}}{\text{25 TFLOPS}} = \frac{\text{3.24 GFLOPS}}{\text{25000 GFLOPS}} = 0.000129 s
-$$
+$$\text{Theoretical Execution Time = } \frac{\text{3.24 GFLOPS}}{\text{25 TFLOPS}} = \frac{\text{3.24 GFLOPS}}{\text{25000 GFLOPS}} = 0.000129 s$$
 
 So theoretically it takes $0.000129s$ or $129 \mu s$ to execute the CNN algorithm.
 
@@ -899,15 +893,11 @@ A kcycle or kilo-cycle is a measure of time based on the number of processor clo
 
 …
 
-$$
-\text{Actual Execution Time} = ...
-$$
+$$\text{Actual Execution Time} = ...$$
 
 Finally, putting everything together:
 
-$$
-\text{Efficiency} = \frac{129 \mu s}{\text{327 kcycles}} = 39\%
-$$
+$$\text{Efficiency} = \frac{129 \mu s}{\text{327 kcycles}} = 39\%$$
 
 NB PE * (taille matrix) 4 * 8 * 4 * 2 (FLOPS) * MPPA FREQ (1,1 GHZ)
 

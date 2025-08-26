@@ -8,15 +8,11 @@
 
 À un certain niveau de coût $C$, on pose :
 
-$$
-C = w_1x_1 + w_2x_2
-$$
+$$C = w_1x_1 + w_2x_2$$
 
 On peut réécrire comme :
 
-$$
-x_2 = \frac{C - w_1x_1}{w_2}
-$$
+$$x_2 = \frac{C - w_1x_1}{w_2}$$
 
 Pour différentes valeurs de $C$, on obtient différentes droites d'isocoût.
 
@@ -29,8 +25,9 @@ Le processus d'optimisation consiste à chercher la plus basse droite d'isocoût
 >
 >$$
 >TST = \frac{Pm_1}{Pm_2} = \frac{w_1}{w_2}
->$$
-
+>
+>
+$$
 ### Fonctions de demande conditionnelle de facteurs
 
 $x_1(w_1, w_2, q)$ exprime la quantité de $x_1$ demandée tenant compte des prix et avec un $q$ fixe.
@@ -45,19 +42,15 @@ Cette fonction est différente de la demande des facteurs pour la maximisation d
 #### Facteurs compléments parfaits
 
 Pour une fonction de production $f(x_1, x_2) = \min\{ax_1, bx_2\}$ :
-
 $$
 C(q) = (aw_1 + bw_2) \cdot q
 $$
-
 #### Facteurs substituts parfaits
 
 Pour une fonction de production $f(x_1, x_2) = ax_1 + bx_2$ :
-
 $$
 C(q) = \min\{aw_1, bw_2\} \cdot q
 $$
-
 #### Facteurs Cobb-Douglas
 
 Pour une fonction $f(x_1, x_2) = x_1^a x_2^b$ avec $a+b=1$ :
@@ -71,11 +64,9 @@ Pour une fonction $f(x_1, x_2) = x_1^a x_2^b$ avec $a+b=1$ :
 ### Les rendements d'échelle et la fonction de coût
 
 **Fonction de coût moyen** :
-
 $$
 CM(q) = \frac{C(q)}{q}
 $$
-
 Relation avec les rendements d'échelle :
 
 - Si la firme présente des rendements d'échelle constants, $CM$ est constant (indépendant de $q$)
@@ -96,25 +87,24 @@ Pour des rendements d'échelle homogènes de degré $r$ :
 - **Long terme** : tous les facteurs sont variables
 
 #### Coût à court terme
-
 $$
 CCT(q) = w_1x_1 + w_2\bar{x}_2
 $$
-
 Où la demande de $x_1$ dépend de $w_1$, $w_2$, $\bar{x}_2$ (fixé) et $q$.
 
 #### Coût à long terme
-
 $$
 C(q) = w_1x_1 + w_2x_2
 $$
-
 Où $x_1$ et $x_2$ sont tous deux dépendants de $w_1$, $w_2$ et $q$.
 
 >[!theorem] Relation entre coûts
 >
->$$
->C(q) = CCT(q, x_2(q))
->$$
 >
+$$
+>C(q) = CCT(q, x_2(q))
+>
+>
+$$
+
 >Explication : le coût à long terme égale le coût à court terme quand le facteur $x_2$ est au niveau qui minimise le coût à long terme.

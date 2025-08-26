@@ -69,27 +69,19 @@ Plusieurs métriques standardisées découlent de la matrice de confusion :
 
 **Exactitude (Accuracy)** : Proportion de résultats corrects parmi le nombre total de cas examinés.
 
-$$
-\text{Exactitude} = \frac{TP + TN}{TP + FP + FN + TN}
-$$
+$$\text{Exactitude} = \frac{TP + TN}{TP + FP + FN + TN}$$
 
 **Précision** : Proportion de prédictions positives qui sont effectivement positives.
 
-$$
-\text{Précision} = \frac{TP}{TP + FP}
-$$
+$$\text{Précision} = \frac{TP}{TP + FP}$$
 
 **Rappel (Recall)** : Proportion de positifs réels correctement classifiés.
 
-$$
-\text{Rappel} = \frac{TP}{TP + FN}
-$$
+$$\text{Rappel} = \frac{TP}{TP + FN}$$
 
 **Score F1** : Moyenne harmonique de la précision et du rappel.
 
-$$
-F_1 = 2 \times \frac{\text{précision} \times \text{rappel}}{\text{précision} + \text{rappel}}
-$$
+$$F_1 = 2 \times \frac{\text{précision} \times \text{rappel}}{\text{précision} + \text{rappel}}$$
 
 #### Choix des métriques
 

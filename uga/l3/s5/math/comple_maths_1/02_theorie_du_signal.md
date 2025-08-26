@@ -26,21 +26,14 @@ Une classification peut être faite à partir des notions d'énergie ou de puiss
 
 - L'énergie $E_f$ associée, si elle existe :
 
-    $$
-    E_f=\int_0^\tau |f(t)|^2dt
+$$E_f=\int_0^\tau |f(t)|^2dt$$
 
-
-$$
     
 - La puissance moyenne associée $P_f$, si elle existe :
     
-    
-$$
 
-    P_f=\lim_{\tau\rightarrow\infty} \frac{1}{\tau} \int_0^\tau|f(t)|^2dt=\lim_{\tau\rightarrow\infty}\frac{1}{\tau} E_f
-    
+$$P_f=\lim_{\tau\rightarrow\infty} \frac{1}{\tau} \int_0^\tau|f(t)|^2dt=\lim_{\tau\rightarrow\infty}\frac{1}{\tau} E_f$$
 
-$$
 Les signaux périodiques et les signaux aléatoires permanents font partie de la classification de signaux à puissance moyenne finie.
 
 Les signaux “réels” (rencontrés en pratique) sont des signaux a énergie finie (définis sur une durée finie), cependant les signaux a puissance moyenne finie sont souvent utilisés pour modéliser des générateurs de signaux périodiques, par exemple. Enfin, certains signaux théoriques n’appartiennent ni à l’une ni à l’autre de ces catégories.
@@ -68,9 +61,8 @@ La représentation spectrale d’un signal (à droite) est une fonction de la fr
 #### Continuité par morceaux
 
 Une fonction $f$ est continue par morceaux si son domaine admet une suite $C$ de $n$ valeurs $\{c_1, \dots, c_n\}$ tel que la fonction est continue sur l’intervalle ouvert délimité par les points de coupe adjacents et aussi si les limites sur chaque $c_i$ existe.
-$$
 
-f \text{ continue par morceaux sur Dom}_f \iff
+$$f \text{ continue par morceaux sur Dom}_f \iff
 
 \begin{cases}
 
@@ -80,9 +72,8 @@ f \text{ continue par morceaux sur Dom}_f \iff
 
 \forall x_i \in C, f(c_i^+) \text{ et } f(c_i^-) \text{ existe}
 
-\end{cases}
+\end{cases}$$
 
-$$
 Notons qu’il n’est jamais nécessaire que $f(c_i)$ soit définit, juste qu’elle admet une limite sur $f(c_i)$.
 
 ![untitled](ressources/02_theorie_du_signal_untitled_3.png)
@@ -90,17 +81,13 @@ Notons qu’il n’est jamais nécessaire que $f(c_i)$ soit définit, juste qu�
 #### L’harmonique fondamentale
 
 L’harmonique fondamentale est la fonction suivante :
-$$
 
-\theta \mapsto e^{\frac{2\pi k}{T}\theta i}
+$$\theta \mapsto e^{\frac{2\pi k}{T}\theta i}$$
 
-$$
 Tant que celle-ci n’est pas trop facile à voir, il faudrait rappeler l’égalité suivante :
-$$
 
-e^{\frac{2\pi k}{T}\theta i}=\cos\left(\frac{2\pi k}{T} \theta\right) + i\sin\left(\frac{2\pi k}{T} \theta\right)
+$$e^{\frac{2\pi k}{T}\theta i}=\cos\left(\frac{2\pi k}{T} \theta\right) + i\sin\left(\frac{2\pi k}{T} \theta\right)$$
 
-$$
 Donc, la harmonique fondamentale est juste une somme “orthogonale” d’une composante réelle $(\cos)$ et une composante imaginaire $(i\sin)$.
 
 ![untitled](ressources/02_theorie_du_signal_untitled_4.png)
@@ -108,15 +95,12 @@ Donc, la harmonique fondamentale est juste une somme “orthogonale” d’une c
 #### Périodicité (et examples avec l’harmonique fondamentale)
 
 Une fonction $f$ est périodique si :
-$$
 
-f\text{ périodique } \iff \exist T\in\mathbb{R}^+, \forall x\in\mathbb{R}, f(x)=f(x+T)
+$$f\text{ périodique } \iff \exist T\in\mathbb{R}^+, \forall x\in\mathbb{R}, f(x)=f(x+T)$$
 
-$$
 **Remarque**. Si $f$ est périodique sur
-$$
 
-, $f$ est périodique aussi sur $kT$, où $k\in\Z$. Un tel cas est si $f$ est $\frac T n$-périodique, $f$ est aussi $T$-périodique. Il faut absolument que $k\in\Z$. Un coefficient de période k réel non entier ne capture pas tous les évènements. Par exemple, $k=3/2$ capture un vrai période de chaque deux, càd. quand $k$ devient entier.
+$$, $f$ est périodique aussi sur $kT$, où $k\in\Z$. Un tel cas est si $f$ est $\frac T n$-périodique, $f$ est aussi $T$-périodique. Il faut absolument que $k\in\Z$. Un coefficient de période k réel non entier ne capture pas tous les évènements. Par exemple, $k=3/2$ capture un vrai période de chaque deux, càd. quand $k$ devient entier.
 
 **Propriété**. La périodicité peut être conservé dans la somme de plusieurs fonctions. Particulièrement, si $\{f_1,\cdots,f_n\}$ sont T-périodiques et si $\{a_1, \cdots, a_n\}$ sont des complexes, $\sum_j {a_j f_j}$ est aussi $T$-périodique.
 
@@ -132,33 +116,26 @@ La différence avec la première c’est que celle-ci trace tout un cercle en pr
 - Si $T\ne0$, $f_4(\theta)=e^{\frac{2\pi}{T} i \theta}$ est $T$-périodique. On trace un cercle (et on s’arrête sur $f_4(\theta)=1$) chaque fois que le coefficient de i, le $\frac{2 \pi}{T}\theta$, est un multiple de $2\pi$. Le $\theta$ plus petit pour cela est donc $\theta=T$.
 - Par ce même raisonnement, $f_5(\theta)=e^{\frac{2\pi k}{T} i \theta}$ est aussi T-périodique, car $2\pi k$ est un multiple de $2\pi$ si $\theta=T$. **La différence** ce que le plus petit $\theta$ pour que tout le coefficient vale juste $2\pi$ est $\theta =T/k$.
 
-Finalement, on peut faire une combinaison linéaire sur l’harmonique fondamentale **qui serait en tout T-périodique**. On appelle ceci un “polynôme trigonométrique” mais c’est un faux polynôme.
+Finalement, on peut faire une combinaison linéaire sur l’harmonique fondamentale **qui serait en tout T-périodique**. On appelle ceci un “polynôme trigonométrique” mais c’est un faux polynôme.$$
 
-$$
 P_N(x)=\sum_{_N}^N c_ke^{\frac{2pi k}{T}ix}=\sum_{_N}^N c_kz^k
-$$
 
-Les termes d’un polynôme sans coefficients sont $x^k+x^{k-1}+\cdots+x+1$, avec $k\in\Z$. On pose donc $z=e^{\frac{2pi k}{T}ix}$ et on pourra dire que $z^k+z^{k-1}+\cdots+z+1$ est un “polynôme trigonométrique”.
+$$Les termes d’un polynôme sans coefficients sont $x^k+x^{k-1}+\cdots+x+1$, avec $k\in\Z$. On pose donc $z=e^{\frac{2pi k}{T}ix}$ et on pourra dire que $z^k+z^{k-1}+\cdots+z+1$ est un “polynôme trigonométrique”.
 
 #### Base de $E(T)$
 
-À partir de l’espace des fonctions continues par morceaux T-périodiques, on peut définir un produit hermitien d’intérêt.
+À partir de l’espace des fonctions continues par morceaux T-périodiques, on peut définir un produit hermitien d’intérêt.$$
 
-$$
 \langle f,g\rangle\in E^2=\frac{1}{T}\int_0^Tf(u)\bar g (u)du
-$$
 
-Les harmoniques élémentaires (ou “harmoniques fondamentales”) pour reconstituer un signal $T$ périodique sont donnés par la famille suivante :
+$$Les harmoniques élémentaires (ou “harmoniques fondamentales”) pour reconstituer un signal $T$ périodique sont donnés par la famille suivante :$$
 
-$$
 (e_k)_{k\in\Z} \text{, avec } e_k(x)=e^{\frac{2\pi k}{T} i x}
 
 \\
-$$
 
-On admet que ce qui suit (la manipulation algébrique est dans les slides) :
+$$On admet que ce qui suit (la manipulation algébrique est dans les slides) :$$
 
-$$
 \langle e^{\frac{2\pi k}{T} i p}, e^{\frac{2\pi k}{T} i q}\rangle=
 
 \begin{cases}
@@ -170,9 +147,8 @@ $$
 0, \text{ si }p\ne q
 
 \end{cases}
-$$
 
-Comme rappel, une famille orthogonal est une famille d’éléments $(v_k)$ dont le produit scalaire (dans ce cas, produit hermitien) est $0$ deux-à-deux.
+$$Comme rappel, une famille orthogonal est une famille d’éléments $(v_k)$ dont le produit scalaire (dans ce cas, produit hermitien) est $0$ deux-à-deux.
 
 Si on prend des couples dans $(e_k)$, on voit que $p\ne q$ toujours, et donc $(e_k)$ est orthogonale (libre). En plus, on sait que elle trace le cercle unitaire, donc elle est de rayon $1$ et donc elle est orthonormée. Elle est génératrice de tout $E(T)$ mais c’est plus compliqué à voir, donc on l’admet.
 
@@ -180,19 +156,16 @@ Si on prend des couples dans $(e_k)$, on voit que $p\ne q$ toujours, et donc $(e
 
 #### Définition
 
-À ce stade, on voudrait décomposer une fonction de $E(T)$ comme une somme de signaux élémentaires de $(e_k)$. On cherche donc les coefficients de cette combinaison linéaire, appelés les coefficients de Fourier. On se sert du produit hermitien définit précédemment.
+À ce stade, on voudrait décomposer une fonction de $E(T)$ comme une somme de signaux élémentaires de $(e_k)$. On cherche donc les coefficients de cette combinaison linéaire, appelés les coefficients de Fourier. On se sert du produit hermitien définit précédemment.$$
 
-$$
 c_p(f)=\langle f, e_p\rangle=\frac{1}{T}\int_0^Tf(x)e^{-\frac{2\pi p}{T}ix}dx
-$$
 
-Le conjugué de $e_p$ se voit dans le signe négatif dans l’exposant, ce qui reflète le nombre complexe représenté sur l’axe des abscisses.
+$$Le conjugué de $e_p$ se voit dans le signe négatif dans l’exposant, ce qui reflète le nombre complexe représenté sur l’axe des abscisses.
 
 #### Exemple
 
-Supposons le signal binaire suivant :
+Supposons le signal binaire suivant :$$
 
-$$
 f(x)=
 
 \begin{cases}
@@ -204,21 +177,17 @@ f(x)=
 1, x\in[(2k+1)\pi, 2k\pi[ \text{ où }k\in\Z
 
 \end{cases}
-$$
 
-![untitled](ressources/02_theorie_du_signal_untitled_5.png)
+$$![untitled](ressources/02_theorie_du_signal_untitled_5.png)
 
 Notons qu’elle est donc de période $2\pi$. On fixe $T=2\pi$ et on cherche les coefficients de Fourier.
 
-**Une note très importante c’est qu’on calcule $c_0$ séparément**. Notons que de mettre $n=0$ sur l’expression en-dessus provoque une division par zéro. **Dans la pratique, on calcule $c_0$ directement de la définition des coefficients, puis on trouve une forme générale de $c_n$ pour les autres coefficients.**
+**Une note très importante c’est qu’on calcule $c_0$ séparément**. Notons que de mettre $n=0$ sur l’expression en-dessus provoque une division par zéro. **Dans la pratique, on calcule $c_0$ directement de la définition des coefficients, puis on trouve une forme générale de $c_n$ pour les autres coefficients.**$$
 
-$$
 c_o=\frac{1}{2\pi}\int_0^{2\pi}f(x)dx=\frac{1}{2\pi}(\pi)=\frac{1}{2}
-$$
 
-Après, on peut obtenir la forme générale en développant la définition des coefficients :
+$$Après, on peut obtenir la forme générale en développant la définition des coefficients :$$
 
-$$
 c_n(f)=\frac{1}{T}\int_0^Tf(x)e^{-\frac{\cancel{2\pi} p}{\cancel{2\pi}}ix}dx …=\frac{1-e^{-\pi i n}}{-2\pi in}=
 
 \begin{cases}
@@ -234,11 +203,9 @@ c_n(f)=\frac{1}{T}\int_0^Tf(x)e^{-\frac{\cancel{2\pi} p}{\cancel{2\pi}}ix}dx …
 \frac{1}{-\pi i n}, n\text{ impair}
 
 \end{cases}
-$$
 
-Notons que est défini pour $n\in\mathbb{N}$. Mais à travers une propriété, on pourrait étendre cette définition à des indices $n$ négatifs avec les conjugués.
+$$Notons que est défini pour $n\in\mathbb{N}$. Mais à travers une propriété, on pourrait étendre cette définition à des indices $n$ négatifs avec les conjugués.$$
 
-$$
 c_{-n}(f)=\begin{cases}
 
 \frac{1}{2}, \text{ si }n=0
@@ -256,52 +223,40 @@ c_{-n}(f)=\begin{cases}
 \\[10pt]
 
 \text{ Donc, et en générale, } c_n(f)=\overline{c_n(f)}, \text{ si } f \text{ réelle}
-$$
 
-Donc, en calculant quelques coefficients de Fourier, on obtient…
+$$Donc, en calculant quelques coefficients de Fourier, on obtient…$$
 
-$$
 n\in[-3,3], c_n\in\left\{\frac{1}{-3\pi i},0,\frac{1}{-\pi i},\frac{1}{2}, \frac{1}{-\pi i}, 0, \frac{1}{-3\pi i}\right\}
-$$
 
-#### Propriétés
+$$#### Propriétés
 
 - Si $f$ et $g$ continues par morceaux et égales sauf en leurs points de discontinuité, leurs coefficients de Fourier sont égaux.
-- Si $f$ est intégrable (intégrale à valeur finie), les coefficients de Fourier de $f$ sont bornés (finis). Rappelons la propriété des intégrales : $\left|\int_0^T h(x)dx\right|\le\int_0^T |h(x)|dx$. Donc, on peut voir que :
+- Si $f$ est intégrable (intégrale à valeur finie), les coefficients de Fourier de $f$ sont bornés (finis). Rappelons la propriété des intégrales : $\left|\int_0^T h(x)dx\right|\le\int_0^T |h(x)|dx$. Donc, on peut voir que :$$
 
-$$
     \underbrace{\left|\frac{1}{T}\int_0^T f(x)e^{-\frac{2\pi}{T}ipx}dx\right|}_{c_n} \le \frac{1}{T}\int_0^T|f(x)|\cancel{|e^{-\frac{2\pi}{T}ipx}|}^{\hspace{4pt}=1}dx
-$$
 
-- Si $f$ est de classe $\mathcal C^1$, donc
+$$- Si $f$ est de classe $\mathcal C^1$, donc$$
 
-$$
 c_n(f^\prime)=\frac{2\pi i n}{T}c_n(f) \iff c_n(f)=\frac{T}{2\pi i n}c_n(f^\prime),\hspace{1pt}n\ne0
-$$
 
-## Série de Fourier et théorèmes
+$$## Série de Fourier et théorèmes
 
 ### Définition
 
-Rappelons de la définition de coefficients de Fourier qu’ils sont la “quantité” de la harmonique fondamentale d’ordre $p$ dans $f$.
+Rappelons de la définition de coefficients de Fourier qu’ils sont la “quantité” de la harmonique fondamentale d’ordre $p$ dans $f$.$$
 
-$$
 c_p(f)=\langle f, e_p\rangle
-$$
 
-Donc, la série de Fourier est la somme en appliquant chaque quantité d’harmonique $c_p$ sur l’harmonique $e_p$. On peut aussi parle de la “$N$-ième somme partielle de Fourier”.
+$$Donc, la série de Fourier est la somme en appliquant chaque quantité d’harmonique $c_p$ sur l’harmonique $e_p$. On peut aussi parle de la “$N$-ième somme partielle de Fourier”.$$
 
-$$
 \underbrace{S_N(x)}_\text{somme partielle}\hspace{-8pt}=\sum_{-N}^N c_p e^{\frac{2\pi}{T}ipx} \longrightarrow_{N\rightarrow\infty} \underbrace{S_f(x)}_\text{ série}
-$$
 
-### Définition alternative, avec harmoniques réelles
+$$### Définition alternative, avec harmoniques réelles
 
 La présentation de cette définition (et la démonstration aussi !) se trouve dans l’exercice 3.2 de TD du cours.
 
-Les coefficients de la série se servent de l’harmonique complexe $e^{2\pi i n x}$. On peut définir des coefficients réels $a_n(f)$, $b_n(f)$ et une série de Fourier équivalente qui utilise seulement ces coefficients.
+Les coefficients de la série se servent de l’harmonique complexe $e^{2\pi i n x}$. On peut définir des coefficients réels $a_n(f)$, $b_n(f)$ et une série de Fourier équivalente qui utilise seulement ces coefficients.$$
 
-$$
 \begin{cases}
 
 a_n(f)=c_n(f)+c_{-n}(f)
@@ -339,41 +294,33 @@ a_n(f)&=\frac{2}{T} \int_Tf(t)\cos\left(\frac{2\pi}{T}nt\right)dt, n>0
 b_n(f)&=\frac{2}{T} \int_Tf(t)\sin\left(\frac{2\pi}{T}nt\right)dt, n>0
 
 \end{align*}
-$$
 
-La série de Fourier serait alors :
+$$La série de Fourier serait alors :$$
 
-$$
 S_n(f)=\frac 1 2 a_0(f)+\sum_{k=1}^n\left(a_k(f)\cos\left(\frac{2\pi}{T}kx \right)+b_k(f)\sin\left(\frac{2\pi}{T}kx \right) \right)
-$$
 
-### La convergence : théorème de Dirichlet
+$$### La convergence : théorème de Dirichlet
 
 La convergence de la série est la convergence des sommes partielles. La série de Fourier d’une fonction $f$ ne converge pas nécessairement, et, même lorsqu’elle converge en un point $x_0$, sa somme n’est pas toujours égale à $f(x_0)$.
 
 ![untitled](ressources/02_theorie_du_signal_untitled_6.png)
 
-**Théorème de Dirichlet**. Soit $f$ une fonction continue par morceaux, périodique de période $T$. Si $f$ admet en tout point une dérivée à gauche et une dérivée à droite, **donc sa série de Fourier converge en tout point $x_0$**.  De plus,
+**Théorème de Dirichlet**. Soit $f$ une fonction continue par morceaux, périodique de période $T$. Si $f$ admet en tout point une dérivée à gauche et une dérivée à droite, **donc sa série de Fourier converge en tout point $x_0$**.  De plus,$$
 
-$$
 S_f(x)=\frac{f(x_0^{-})+f(x_0^{+})}{2}
-$$
 
-De cette formula, on verra que la série attribue la moyenne sur un point de discontinuité.
+$$De cette formula, on verra que la série attribue la moyenne sur un point de discontinuité.
 
 ![untitled](ressources/02_theorie_du_signal_untitled_7.png)
 
-En plus, si $f$ est $\mathcal C^1$ par morceaux et continue, on a la convergence uniforme de la série (ici on parle de la norme sup) :
+En plus, si $f$ est $\mathcal C^1$ par morceaux et continue, on a la convergence uniforme de la série (ici on parle de la norme sup) :$$
 
-$$
 \lim_{N\to\infty}||S_N-f||_\infty=0 \iff\lim_{N\to\infty}\left(\sup_{x\in[0,T]} |S_N(x)-f(x)|\right)=0
-$$
 
-### Conservation d’énergie : théorème de Bassel-Parseval
+$$### Conservation d’énergie : théorème de Bassel-Parseval
 
-Ici, on voit une autre analogie avec le théorème de Pythagore. Rappelons Pythagore dans $\mathbb{R}^n$ : le carré de la norme-deux d’un vecteur et la somme des carrés de ses coefficients (coordonnées) au carré.
+Ici, on voit une autre analogie avec le théorème de Pythagore. Rappelons Pythagore dans $\mathbb{R}^n$ : le carré de la norme-deux d’un vecteur et la somme des carrés de ses coefficients (coordonnées) au carré.$$
 
-$$
 \begin{align*}
 
 ||v||^2&=\sum_{i=1}^n||P_{\text{vect}(e_i)}(v)||^2
@@ -391,29 +338,24 @@ $$
 &=\sum_{i=1}^n |\langle v, e_i\rangle|^2
 
 \end{align*}
-$$
 
-![untitled](ressources/02_theorie_du_signal_untitled_8.png)
+$$![untitled](ressources/02_theorie_du_signal_untitled_8.png)
 
-Donc, on en déduit que norme au carre de $f$ est égal à la somme de toutes les coefficients/coordonnées au carré. Ceci est l’**identité de Parseval**.
+Donc, on en déduit que norme au carre de $f$ est égal à la somme de toutes les coefficients/coordonnées au carré. Ceci est l’**identité de Parseval**.$$
 
-$$
 ||S_f||^2= ||f||^2 \iff
 
 \underbrace{\sum_{-\infty}^\infty|c_k|^2}_{||S_f||^2} = \underbrace{\frac{1}{T}\int_0^T|f(u)|^2du}_{||f||^2}
-$$
 
-Notons donc que la somme des carrés des coefficients “reconstitue” toute la quantité de l’intégrale du carré de f sur une période, qui est l’énergie. Avec le facteur de $1/T$, c’est plutôt la puissance moyenne, mais le passage à déduire l’énergie est assez simple.
+$$Notons donc que la somme des carrés des coefficients “reconstitue” toute la quantité de l’intégrale du carré de f sur une période, qui est l’énergie. Avec le facteur de $1/T$, c’est plutôt la puissance moyenne, mais le passage à déduire l’énergie est assez simple.
 
-Si on additionne juste une quantité fini de coefficients, de $-N$ à $N$, on obtient l’inégalité de Bessel. Elle devient égalité stricte juste dans le cas de somme de $-\infty$ à $\infty$, que c’est le cas de Parseval.
+Si on additionne juste une quantité fini de coefficients, de $-N$ à $N$, on obtient l’inégalité de Bessel. Elle devient égalité stricte juste dans le cas de somme de $-\infty$ à $\infty$, que c’est le cas de Parseval.$$
 
-$$
 ||S_N||^2 \le ||f||^2 \iff
 
 \underbrace{\sum_{-N}^N|c_k|^2}_{||S_N||^2} \le \underbrace{\frac{1}{T}\int_0^T|f(u)|^2du}_{||f||^2}
-$$
 
-## Transformée de Fourier
+$$## Transformée de Fourier
 
 ### Plus besoin de la périodicité
 
@@ -437,66 +379,51 @@ Quelques exemples d’intégrabilité :
 - $f(x)=P(x)e^{{-x}^2}$ est intégrable sur $\mathbb{R}$.
 - Si $f$ continue périodique non nulle, **elle n’est pas intégrable sur $\mathbb{R}$**.
 - Si $g$ intégrable et $h$ continue bornée, $gh$ est intégrable sur $\mathbb{R}$.
-    - $|h| < M$, donc $|gh| \le M|g|$.
+- $|h| < M$, donc $|gh| \le M|g|$.
 
 #### Définition et interprétation
 
-Si le signal non-périodique $f$ est intégrable sur $\mathbb{R}$, on appelle transformée de Fourier de $f$ la fonction $\hat f$ définie comme :
+Si le signal non-périodique $f$ est intégrable sur $\mathbb{R}$, on appelle transformée de Fourier de $f$ la fonction $\hat f$ définie comme :$$
 
-$$
 \hat f (y) = \langle f, e_{1/y}\rangle =\int_\mathbb{R} f(x)e^{-2\pi i x y} dx
-$$
 
-Notons qu’ici on préfère parler directement de la fréquence de l’harmonique, $y$, plutôt que de sa période, qui serait donc $1/y$. La définition du produit hermitien est la même utilisé dans le cas de séries de Fourier.
+$$Notons qu’ici on préfère parler directement de la fréquence de l’harmonique, $y$, plutôt que de sa période, qui serait donc $1/y$. La définition du produit hermitien est la même utilisé dans le cas de séries de Fourier.
 
-L’interprétation est intéressante. Pour chaque $y$, $\hat f(y)$ est la quantité d’harmonique $e_{1/y}$ dans le signal $f$. Quand $y=0$, $\hat f(0)$ est la composante continue de fréquence nulle (constante) du signale, le “baseline”.
+L’interprétation est intéressante. Pour chaque $y$, $\hat f(y)$ est la quantité d’harmonique $e_{1/y}$ dans le signal $f$. Quand $y=0$, $\hat f(0)$ est la composante continue de fréquence nulle (constante) du signale, le “baseline”.$$
 
-$$
 \hat f(0)=\int_\mathbb{R} f(u)du
-$$
 
-Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(f) = \langle f, e_n\rangle$, donc on pourrait penser que $\hat f (y)$ est le coefficient $1/y$ de Fourier. On explore ceci dans la section “théorème d’inversion”.
+$$Notons que, si on fait une analogie avec le cas des séries de Fourier où $c_n(f) = \langle f, e_n\rangle$, donc on pourrait penser que $\hat f (y)$ est le coefficient $1/y$ de Fourier. On explore ceci dans la section “théorème d’inversion”.
 
 #### Propriétés et théorèmes
 
 - Toute fonction continue par morceaux et a support compact (borné) est intégrable et admet donc une transformée de Fourier.
-    - Il faut cependant remarquer que la transformée de Fourier d’une telle fonction **n’est jamais a support borné**.
-- La transformée de Fourier est une application linéaire. Si $f,g$ intégrables et $\alpha,\beta \in\mathbb{R}$ :
+- Il faut cependant remarquer que la transformée de Fourier d’une telle fonction **n’est jamais a support borné**.
+- La transformée de Fourier est une application linéaire. Si $f,g$ intégrables et $\alpha,\beta \in\mathbb{R}$ :$$
 
-$$
     \widehat{\alpha f+\beta g}=\alpha \hat f + \beta \hat g
-    
-$$
 
-    Ceci est permis car le produit hermitien est linéaire à gauche.
-    
+$$Ceci est permis car le produit hermitien est linéaire à gauche.
+
 - Tout comme les séries de Fourier, si $f$ et $g$ sont intégrables et égales sauf en leurs points de discontinuités, elles ont la même transformée de Fourier.
 - Si $f$ intégrable, $\hat f$ est une fonction continue et tends vers $0$ à l’infini.
-- Si $f,g$ continues par morceaux intégrables, alors
+- Si $f,g$ continues par morceaux intégrables, alors$$
 
-$$
 \int_\mathbb{R} \hat f(t)g(t)dt=\int_\mathbb{R} f(t)\hat g(t)dt
-$$
 
-- La transformée de Fourier d’une fonction translatée est comme suit. (La computation algébrique est sur les diapos)
+$$- La transformée de Fourier d’une fonction translatée est comme suit. (La computation algébrique est sur les diapos)$$
 
-    $$
     f_a(x)=f(x+a) \iff \hat f_a(y)=e^{2\pi i a y} \hat f(y)
 
-
-$$
-### Rapport différentiation-Fourier
+$$### Rapport différentiation-Fourier
 
 Par rapport aux dérivées, la transformée de Fourier apparaît dans quelques équations intéressantes. En particulier, on s’intéresse en premier temps à la dérivé de la transformée $(\hat f)^\prime$, puis à la transformée de la dérivé $\widehat{(f^\prime)}$.
 
-Pour la dérivé de la transformée $(\hat f)^\prime$, il y a une condition importante a vérifier : $f$ intégrable mais aussi $g(t)=tf(t)$ intégrable :
-$$
+Pour la dérivé de la transformée $(\hat f)^\prime$, il y a une condition importante a vérifier : $f$ intégrable mais aussi $g(t)=tf(t)$ intégrable :$$
 
 (\hat f)^\prime(y)=\widehat{-2\pi i t f}(y)
 
-$$
-Pour la transformée de la dérivé $\widehat{(f^\prime)}$, il faut que $f$ soit de classe $\mathcal C^1$ (différentiable et dérivé continue), et aussi $f$ et $f^\prime$ intégrables. Il existe aussi un cas générale $k$ :
-$$
+$$Pour la transformée de la dérivé $\widehat{(f^\prime)}$, il faut que $f$ soit de classe $\mathcal C^1$ (différentiable et dérivé continue), et aussi $f$ et $f^\prime$ intégrables. Il existe aussi un cas générale $k$ :$$
 
 \widehat{(f^\prime)}(y)=2\pi i y \hat f(y)
 
@@ -504,13 +431,11 @@ $$
 
 \widehat{(f^{(k)})}(y)=(2\pi i y)^k \hat f(y)
 
-$$
-### Théorème d’inversion et théorème de Parseval
+$$### Théorème d’inversion et théorème de Parseval
 
 La synthèse harmonique n’est possible que si l’on peut, a partir d’une transformée de Fourier, revenir au signal temporel. Le théorème suivant montre en quelque sorte que $\hat f$ caractérise la fonction $f$.
 
-Notons déjà que $\hat f (y)$ pourrait être vu comme le coefficient $1/y$ de Fourier. **Est-ce que l’analogie se tienne ?**
-$$
+Notons déjà que $\hat f (y)$ pourrait être vu comme le coefficient $1/y$ de Fourier. **Est-ce que l’analogie se tienne ?**$$
 
 \text{Série : } c_n(f) = \langle f, e_n \rangle \to \lim_{N\to\infty} \sum_{n=-N}^N c_n(f) e^{\frac{2\pi}{T}inx} = f(x)
 
@@ -518,37 +443,32 @@ $$
 
 \text{Transf. : } \hat f(y)= \langle f, e_{1/y}\rangle \to \int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy \space\underbrace{=}_?\space f(x)
 
-$$
-Déjà, notons que telle intégrale serait juste la transformée de la transformée de Fourier. En plus, si $f$ continue intégrable et $\hat f$ intégrable, donc la égalité est vérifiée. Ceci est le **théorème d’inversion**.
-$$
+$$Déjà, notons que telle intégrale serait juste la transformée de la transformée de Fourier. En plus, si $f$ continue intégrable et $\hat f$ intégrable, donc la égalité est vérifiée. Ceci est le **théorème d’inversion**.$$
 
 \int_\mathbb{R} \hat f(y) e^{2\pi xyi}dy = \widehat {(\widehat f)}=f(-x)
 
-$$
-- Si $f$ et $g$ continues intégrables, $\hat f$ et $\hat g$ intégrables et égales, alors $f=g$.
+$$- Si $f$ et $g$ continues intégrables, $\hat f$ et $\hat g$ intégrables et égales, alors $f=g$.
 
-Finalement, un autre théorème utile est le **théorème de Parseval**, différent de l’identité de Parseval. Si $f$ et $g$ intégrables et leurs transformées de Fourier $\hat f$ et $\hat g$ aussi, donc le produit hermitien des transformées est égal au produit hermitien des signaux.
-$$
+Finalement, un autre théorème utile est le **théorème de Parseval**, différent de l’identité de Parseval. Si $f$ et $g$ intégrables et leurs transformées de Fourier $\hat f$ et $\hat g$ aussi, donc le produit hermitien des transformées est égal au produit hermitien des signaux.$$
 
 \int_\mathbb{R} \hat f \bar{\hat g}dx=\int_\mathbb{R} f\bar g dx
 
-$$
-- Un corollaire est que si $g=f$, $\int_\mathbb{R} |\hat f|^2dx=\int_\mathbb{R} |f|^2dx$, càd. l’énergie de la transformée équivaut l’énergie du signal.
+$$- Un corollaire est que si $g=f$, $\int_\mathbb{R} |\hat f|^2dx=\int_\mathbb{R} |f|^2dx$, càd. l’énergie de la transformée équivaut l’énergie du signal.
 
 ### Questions :
 
 - Graphique magnitude v. fréquence ????
 - Utilités :
-    - Delta de Dirac, définition dérivée de Fourier : [https://mathworld.wolfram.com/DeltaFunction.html](https://mathworld.wolfram.com/DeltaFunction.html)
-    - Transformée de sin(x) et cos(x) : [https://www.tutorialspoint.com/fourier-transform-of-the-sine-and-cosine-functions](https://www.tutorialspoint.com/fourier-transform-of-the-sine-and-cosine-functions)
-    - Transformée de Fourier de sin(x) selon Wolfram : 
-    [https://mathworld.wolfram.com/FourierTransformSine.html](https://mathworld.wolfram.com/FourierTransformSine.html)
-    Il semble qu’il faut normaliser/paramétriser le truc ????
-    - [https://en.wikipedia.org/wiki/Fourier_transform](https://en.wikipedia.org/wiki/Fourier_transform)
-    - [https://en.wikipedia.org/wiki/Dirac_comb](https://en.wikipedia.org/wiki/Dirac_comb)
-    - [https://en.wikipedia.org/wiki/Dirichlet_kernel](https://en.wikipedia.org/wiki/Dirichlet_kernel)
-    - [https://en.wikipedia.org/wiki/Band-pass_filter](https://en.wikipedia.org/wiki/Band-pass_filter)
-    - [https://en.wikipedia.org/wiki/Spectral_density](https://en.wikipedia.org/wiki/Spectral_density)
+- Delta de Dirac, définition dérivée de Fourier : [https://mathworld.wolfram.com/DeltaFunction.html](https://mathworld.wolfram.com/DeltaFunction.html)
+- Transformée de sin(x) et cos(x) : [https://www.tutorialspoint.com/fourier-transform-of-the-sine-and-cosine-functions](https://www.tutorialspoint.com/fourier-transform-of-the-sine-and-cosine-functions)
+- Transformée de Fourier de sin(x) selon Wolfram :
+[https://mathworld.wolfram.com/FourierTransformSine.html](https://mathworld.wolfram.com/FourierTransformSine.html)
+Il semble qu’il faut normaliser/paramétriser le truc ????
+- [https://en.wikipedia.org/wiki/Fourier_transform](https://en.wikipedia.org/wiki/Fourier_transform)
+- [https://en.wikipedia.org/wiki/Dirac_comb](https://en.wikipedia.org/wiki/Dirac_comb)
+- [https://en.wikipedia.org/wiki/Dirichlet_kernel](https://en.wikipedia.org/wiki/Dirichlet_kernel)
+- [https://en.wikipedia.org/wiki/Band-pass_filter](https://en.wikipedia.org/wiki/Band-pass_filter)
+- [https://en.wikipedia.org/wiki/Spectral_density](https://en.wikipedia.org/wiki/Spectral_density)
 
 ## Table des transformées fréquentes
 
@@ -560,8 +480,7 @@ $$
 
 Soit $f$ une fonction intégrable. Pour éliminer des fréquences gênantes dans le spectre de $f$, il suffit de multiplier, par exemple, $\hat f$ par une fonction $g$ nulle hors d'un intervalle $[a, b]$ (on parle alors de filtre passe-bas, passe-haut et passe-bande.
 
-Soit $H(y)=\hat f(y)\hat g(y)$ une fonction continue par morceaux nulle hors de $[a,b]$, donc intégrable. Supposons que $H$ est la transformée de Fourier d'une certaine fonction qu'on ne connaît pas, disons $h(x)$. Alors, par le théorème d'inversion :
-$$
+Soit $H(y)=\hat f(y)\hat g(y)$ une fonction continue par morceaux nulle hors de $[a,b]$, donc intégrable. Supposons que $H$ est la transformée de Fourier d'une certaine fonction qu'on ne connaît pas, disons $h(x)$. Alors, par le théorème d'inversion :$$
 
 \begin{align*}
 
@@ -581,14 +500,11 @@ h(x) &= \int_\mathbb{R} H(y)e^{2\pi i xy}dy
 
 \end{align*}
 
-$$
-En fait, cette dernière écriture est appelée le produit de convolution.
-$$
+$$En fait, cette dernière écriture est appelée le produit de convolution.$$
 
 f\star g(x) = \int_\mathbb{R} f(u)g(x-u)du
 
-$$
-Comme propriétés, on observe que :
+$$Comme propriétés, on observe que :
 
 - $f\star g(x) = g \star f(x)$
 - Si $f,g$ intégrables, donc $\widehat{f\star g}=\hat f \hat g$.
@@ -603,8 +519,7 @@ Soit $I$ un intervalle de bornes $a,b$ qui est ouvert, semi-ouvert ou fermé. L�
 - Si $A, B$ parties de $\mathbb{R}$, on note l’ensemble $“A+B”=\{a+b\in \mathbb{R}: a\in A, b\in B\}$.
 - Si $f,g$ continues par morceaux à supports bornés, $f\star g$ à support borné et $\text{supp}(f\star g)\sub\text{supp}(A) + \text{supp}(B)$.
 
-Finalement, il résulte du théorème de dérivation sous le signe intégral que si $f$ est intégrable et $g$ de classe $\mathcal C^∞$ a support compact (borné), $f ⋆ g$ est de classe $\mathcal C^∞$ et
-$$
+Finalement, il résulte du théorème de dérivation sous le signe intégral que si $f$ est intégrable et $g$ de classe $\mathcal C^∞$ a support compact (borné), $f ⋆ g$ est de classe $\mathcal C^∞$ et$$
 
 (f \star g)^{(k)}=f\star (g^{(k)})
 

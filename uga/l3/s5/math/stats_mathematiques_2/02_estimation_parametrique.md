@@ -64,15 +64,11 @@ Pour cette raison, dans le cas non dénombrable, $\mathcal{A} \subset\mathcal{P}
 
 **$\sigma$-additivité d’intervalles**. Imaginons que notre espace d’événements $\mathcal A$ contient des intervalles, qu’on notera $B_n$. On en prend une famille d’intervalles et on imagine que les intervalles devient de plus en plus grandes, c’est-à-dire, le prochain intervalle contient l’actuel, ou $B_n \subset B_{n+1}$.  Donc :
 
-$$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} \mathbb P(B_n)
-$$
+$$\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) = \lim_{n \rightarrow \infty} P(B_n)$$
 
 En outre, et ignorant la condition d’agrandissement du prochain intervalle $B_{n+1}$, on a la propriété suivante. Elle n’est pas une égalité stricte car il se peut que les $B_n$ ne soient pas disjoints.
 
-$$
-\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) \le \sum_{n \ge 1} \mathbb P (B_n)
-$$
+$$\mathbb P \left( \bigcup_{n \ge 1} B_n\right ) \le \sum_{n \ge 1} P(B_n)$$
 
 ## Motivation
 
@@ -95,9 +91,7 @@ Ce dernier élément du triplet permet de définir un autre ensemble important :
 
 Dans le cadre de la statistique paramétrique, on suppose que $\mathbb F$ est en bijection avec un ensemble de paramètres $\Theta$ appartenant à un espace de dimension finie $n$. Plus simplement, chaque fonction de répartition $F$ dans $\mathbb F$ correspond à un unique paramètre $\theta$ dans $\Theta$ et vice-versa.
 
-$$
-\mathbb F = \left\{F(\cdot,\theta) : \theta\in\Theta \subset \mathbb{R}^n \right\}
-$$
+$$\mathbb F = \left\{F(\cdot,\theta) : \theta\in\Theta \subset \mathbb{R}^n \right\}$$
 
 Le point $\cdot$ serait éventuellement la place d’une variable cumulative $x$ de l’élément aléatoire $X$ d’intérêt (on parle, finalement, d’une fonction de répartition). La valeur $F(x,\theta)$ serait donc “la probabilité d’observer une valeur inférieur ou égale à $x$ dans notre caractéristique d’intérêt $X$—taille, poids, etc.—, sachant que les paramètres de la population sont $\theta$”.
 
@@ -117,8 +111,7 @@ Ce chapitre navigue cette question, plus précisément la définition de deux ty
 
 Une statistique est à un échantillon ce qu’un paramètre est à une population : une certaine quantité numérique qui décrit un aspect de l’échantillon, ou tout simplement une **fonction des données**. Si $[X_i]_{1\le i\le n}=[X_1, \cdots, X_n]$ est un échantillon, voyons quelques exemples :
 
-$$
-\begin{align*}
+$$\begin{align*}
 &\hat\theta_1([X_i])=\bar X_n
 &\text{Moyenne échantillonnale}
 \\[8pt]
@@ -139,8 +132,7 @@ $$
 \\[14pt]
 &\hat\theta_7([X_i])=X_{(n)}-X_{(1)}
 &\text{Étendue échantillonnale}
-\end{align*}
-$$
+\end{align*}$$
 
 Chaque réalisation $[x_1, \cdots, x_n]$ de l’échantillon aléatoire $[X_1,\cdots, X_n]$, qu’on appelle les données statistiques ou observations, produit une valeur de chacune des statistiques.
 
@@ -168,27 +160,19 @@ Comme exemple, il se peut qu’il nous intéresse la moyenne d’une population 
 
 Le biais d’un estimateur est défini comme sa différence sa valeur espérée avec son estimande, donc :
 
-$$
-b_n=\mathbb E [\hat\theta_n]-\theta
-$$
+$$b_n=E(\hat\theta_n)-\theta$$
 
 Un estimateur est dit “sans biais” si sa valeur espérée est égale à l’estimande ou, en équivalence, si le biais est nul :
 
-$$
-\text{Estimateur sans biais }\iff\mathbb E[\hat\theta_n]=\theta
-$$
+$$\text{Estimateur sans biais }\iffE(\hat\theta_n)=\theta$$
 
 En plus, on peut parler d’un estimateur qui est asymptotiquement sans biais si l’espérance de l’estimateur tend vers l’estimande quand n tend vers l’infini :
 
-$$
-\text{Estimateur asymptotiquement sans biais }\iff \lim_{n\rightarrow \infty}\mathbb E[\hat\theta_n]=\theta
-$$
+$$\text{Estimateur asymptotiquement sans biais }\iff \lim_{n\rightarrow \infty}E(\hat\theta_n)=\theta$$
 
 Voyons que ce que dit l’équation précédente ce que l’espérance de l’estimateur tend vers l’estimande et non pas l’estimateur lui-même tend vers l’estimande. Par contre, ceci pourrait être le cas. On définit une suite $(\hat\theta_i)_{i\le n}$ et on dit que l’estimateur est convergente en probabilité à l’estimande si :
 
-$$
-\hat\theta_n \rightarrow \theta \text{ en probabilité} \iff \forall \varepsilon>0, \mathbb P\left(\lim_{n\rightarrow\infty}|\hat\theta_n-\theta|<\varepsilon\right)=1
-$$
+$$\hat\theta_n \rightarrow \theta \text{ en probabilité} \iff \forall \varepsilon>0, \mathbb P\left(\lim_{n\rightarrow\infty}|\hat\theta_n-\theta|<\varepsilon\right)=1$$
 
 **Théorème**. Tout estimateur sans biais, ou asymptotiquement sans biais, dont la variance tend vers $0$ quand $n$ tend vers l’infini, est convergent.
 
@@ -205,13 +189,11 @@ Il faut savoir qu’il n’existe pas un seul estimateur sans biais pour un para
 
 Une manière est de regarder l’erreur moyenne quadratique (ou MSE comme Mean Square Error en anglais) de l’estimateur par rapport à son estimande :
 
-$$
-\begin{align*}
-&\text{Var}(\hat\theta_n)=\mathbb E[(\hat\theta_n-\mathbb E[\hat\theta_n])^2]
+$$\begin{align*}
+&V(\hat\theta_n)=E((\hat\theta_n-E(\hat\theta_n))^2]
 \\
-&\text{EQM}(\hat\theta_n)= \mathbb E[(\hat\theta_n-\theta)^2]=\text{var}(\hat\theta_n)+\text{biais}(\hat\theta_n)^2
-\end{align*}
-$$
+&\text{EQM}(\hat\theta_n)= E((\hat\theta_n-\theta)^2]=V(\hat\theta_n)+\text{biais}(\hat\theta_n)^2
+\end{align*}$$
 
 (On peut arriver à la dernière égalité si on écrit $\text{EQM}(\hat\theta_n)= \mathbb E[(\hat\theta_n-\theta)^2]=\mathbb E\left[(\hat\theta_n-\mathbb E[\hat\theta_n])+\mathbb E[\hat\theta_n]-\theta)\right]^2$ et en développant. Ce théorème s’appelle la décomposition de l’erreur moyen quadratique).
 
@@ -237,29 +219,23 @@ Tout ce qui suit sera utile pour les méthodes de construction d’un estimateur
 - Si on fixe la réalisation $x$, on reste avec une fonction $f_X : \theta \mapsto f(\theta|x)$, et c’est cette fonction ici qui est notre fonction de vraisemblance $L$.
 - [Exemple avec distribution exponentielle ici](https://www.desmos.com/calculator/wy50ozzzrg). $L$ ici serait $g(x)$.
 
-$$
-L(\theta|x)=\prod_{i=1}^nf_X\left(x|\theta\right)
-$$
+$$L(\theta|x)=\prod_{i=1}^nf_X\left(x|\theta\right)$$
 
 Ayant défini la fonction de vraisemblance, on peut définir la [fonction de score](https://en.wikipedia.org/wiki/Score_(statistics)), qui sera le gradient de la log-vraisemblance quand les paramètres ont les valeurs réalisées $\theta^*$ (calculer la log-vraisemblance est moins coûteux si la loi mère en question contient des puissance ou des exponentielles). Le résultat est aussi un vecteur marquant la direction de plus vite croissance, et son module est le taux de croissance dans telle direction. Le score indique la sensitivité de la vraisemblance.
 
-$$
-\begin{align*}
+$$\begin{align*}
 &\text{Cas uniparamétrique : } s(\theta_I)=\frac{\partial\ln L}{\partial \theta}(\theta_I)=\frac{\partial}{\partial\theta}\sum_{i=1}^n\ln\left(f_X\left(x|\theta_I\right)\right)
 
 \\[8pt]
 
 &\text{Cas générale : } s(\theta_I)=\nabla{\ln(L(\theta_I))}=\left[\frac{\partial \ln L}{\partial \theta_1}(\theta_I), \hspace{3pt}\cdots, \frac{\partial \ln L}{\partial \theta_n}(\theta_I)\right]
-\end{align*}
-$$
+\end{align*}$$
 
 Ici, $\theta_I$ est “$\theta$ comme input”, pour distinguer du $\theta$ comme forme différentielle.
 
 Un point important du score **sous quelques conditions** est que, si $\theta_I$ est le vrai vecteur paramètre de la population càd. $\theta_I=\theta$, l’espérance du score évalué à $\theta$ est égal à $0$. Ce dernier résultat s’appelle l’équation de vraisemblence et est important pour le calcul de la variance.
 
-$$
-s(\theta_I)=\frac{\partial\ln L}{\partial \theta}(\theta_I)=0 \implies \theta_I=\theta
-$$
+$$s(\theta_I)=\frac{\partial\ln L}{\partial \theta}(\theta_I)=0 \implies \theta_I=\theta$$
 
 Les conditions sont :
 
@@ -270,95 +246,73 @@ Les conditions sont :
 
 Avec cette fonction, on peut créer la statistique dite “[information de Fisher](https://en.wikipedia.org/wiki/Fisher_information)”, qui quantifie l’information d’un paramètre contenue dans la loi de distribution de $X$, qui dépend précisément de $\theta$. Formellement, l’information est la variance du score.
 
-$$
-I(\theta)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)-\cancel{\mathbb E[s(\theta)]}^{\space0}\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|x)d\theta
+$$I(\theta)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)-\cancel{E(s(\theta)]}^{\space0}\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|x)d\theta
 
-\\[7pt]
-$$
+\\[7pt]$$
 
 **Note pratique #1**. On peut écrire la définition de l’information de Fisher avec la fonction de densité du paramètre étant donné l’échantillon réalisé $X=x$ (càd. la vraisemblance $L$), ou bien avec la fonction de densité de l’échantillon étant donné le paramètre réalisé ou le vrai paramètre. En fait, avec la fonction de densité de $X$ ça semble être plus facile.
 
-$$
-I(\theta)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|x)d\theta 
-$$
+$$I(\theta)=\mathbb E\left[\left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln L}{\partial\theta}(\theta)\right)^2L(\theta|x)d\theta$$
 
 ou, de manière équivalente,
 
-$$
-I(\theta)=\mathbb E\left[\left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2f(x|\theta)dx
-$$
+$$I(\theta)=\mathbb E\left[\left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2\right]=\int_\Omega \left( \frac{\partial \ln f}{\partial\theta}(x|\theta)\right)^2f(x|\theta)dx$$
 
 **Note pratique #2**. Si $\ln(L(\theta))$ est une fonction dérivable deux fois et la troisième condition de régularité mentionnée en dessus est vérifiée, on peut calculer l’information de Fisher d’une autre manière plus pratique.
 
-$$
-\text{Plus pratique pour les calculs }: I(\theta)=\mathbb E\left[-\frac{\partial^2 \ln L}{\partial\theta^2}(\theta^*)\right]
-$$
+$$\text{Plus pratique pour les calculs }: I(\theta)=\mathbb E\left[-\frac{\partial^2 \ln L}{\partial\theta^2}(\theta^*)\right]$$
 
 **Théorème**. L’inverse de l’information de Fisher d’un paramètre $\theta$ est un minorant de la variance d’un estimateur sans biais de tel paramètre. Telle inverse de l’information est appelée la borne de Cramér-Rao. Une condition est que $I(\theta)$ existe pour tout $\theta$.
 
-$$
-\text{var}(\hat\theta_n)\ge \frac{1}{I(\theta)}
-$$
+$$V(\hat\theta_n)\ge \frac{1}{I(\theta)}$$
 
 Finalement, on définit un estimateur sans biais $\hat\theta_n$ comme *efficace* si
 
-$$
-\text{var}(\hat\theta_n)= \frac{1}{I(\theta)}
-$$
+$$V(\hat\theta_n)= \frac{1}{I(\theta)}$$
 
 #### Exemple avec la distribution exponentielle
 
 - Prend un échantillon de la distribution exponentielle avec $\theta=\lambda$ indéterminé et une seule VA, $X$.
 
-$$
-X\sim f(x|\lambda)=\lambda e^{-\lambda x}
-$$
+$$X\sim f(x|\lambda)=\lambda e^{-\lambda x}$$
 
 - Puisque on a une seule VA, la fonction de vraisemblance est la même que la densité de $X$.
 
-$$
-L(\lambda|x)=f(x|\lambda)
-$$
+$$L(\lambda|x)=f(x|\lambda)$$
 
 - Détermine la log-vraisemblance, puis la fonction de score.
 
-$$
-\begin{align*}
+$$\begin{align*}
 
 &\ln(L(\lambda)) = \ln(\lambda)-\lambda x=\ln(\lambda)-\lambda x \implies
 
 s(\lambda)=\frac{\partial \ln L}{\partial \lambda}(\lambda)=\frac{1}{\lambda}-x
 
-\end{align*}
-$$
+\end{align*}$$
 
 - Puis, la fonction d’information de Fisher.
 
-$$
-\begin{align*}
-    &-\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)=\frac{1}{\lambda^2} &&\text{Préparation pour }I(\lambda)
-    \\[10pt]
-    &&\vdots
-    \\[10pt]
-    &I(\lambda)=\mathbb E \left[ -\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)\right]
-    &&\text{Définition de }I(\lambda)
-    \\[10pt]
-    &\int_\Omega \left( -\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)\right)L(\lambda|x)dx
-    &&\text{Définition de }\mathbb E
-    \\[14pt]
-    &\int_\Omega \left(\frac{1}{ \lambda^2}\right)L(\lambda|x)dx
-    &&\text{Remplacement de la valeur}
-    \\[14pt]
-    &\frac{1}{ \lambda^2}\int_\Omega L(\lambda|x)dx
-    &&\text{Constante sort de l'intégrale}
-    \end{align*}
-$$
+$$\begin{align*}
+&-\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)=\frac{1}{\lambda^2} &&\text{Préparation pour }I(\lambda)
+\\[10pt]
+&&\vdots
+\\[10pt]
+&I(\lambda)=\mathbb E \left[ -\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)\right]
+&&\text{Définition de }I(\lambda)
+\\[10pt]
+&\int_\Omega \left( -\frac{\partial^2 \ln L}{\partial \lambda^2}(\lambda)\right)L(\lambda|x)dx
+&&\text{Définition de }\mathbb E
+\\[14pt]
+&\int_\Omega \left(\frac{1}{ \lambda^2}\right)L(\lambda|x)dx
+&&\text{Remplacement de la valeur}
+\\[14pt]
+&\frac{1}{ \lambda^2}\int_\Omega L(\lambda|x)dx
+&&\text{Constante sort de l'intégrale}
+\end{align*}$$
 
 Mais, voyons que intégrale de la densité dans toutes les valeurs de $x$ définies doit être $1$, par définition. Donc, finalement :
 
-$$
-I(\lambda)=\frac{1}{ \lambda^2}\cancel{\int_\Omega f(x|\theta)dx}^{\space1}=\frac{1}{\lambda^2}
-$$
+$$I(\lambda)=\frac{1}{ \lambda^2}\cancel{\int_\Omega f(x|\theta)dx}^{\space1}=\frac{1}{\lambda^2}$$
 
 On est d’accords avec l’info de la distribution exponentielle sur Wikipédia. On est d’accord aussi avec [ce post de MathStackExchange](https://math.stackexchange.com/questions/1899995/fisher-information-for-exponential-distribution).
 
@@ -374,9 +328,7 @@ Supposons que $θ$, le paramètre qu’on veut estimer, soit le seul paramètre 
 
 Si $φ$ est bijective, elle admettra une application inverse qui nous permettra d’écrire $θ = φ^{−1}(\mu)$. On en conclut donc :
 
-$$
-\mu=\varphi(\theta) \hspace{10pt}\text{et}\hspace{10pt}\theta=\varphi^{-1}(\mu)\iff\hat\theta=\varphi^{-1}(\bar X_n)
-$$
+$$\mu=\varphi(\theta) \hspace{10pt}\text{et}\hspace{10pt}\theta=\varphi^{-1}(\mu)\iff\hat\theta=\varphi^{-1}(\bar X_n)$$
 
 Le but est de exprimer la moyenne populationnelle $\mu$ comme une fonction du paramètre $\theta$. Et, puisque la moyenne est le moment d’ordre $1$ d’une variable aléatoire, le nom de cette méthode est donc la méthode des moments.
 
@@ -394,8 +346,7 @@ En plus, pour chaque $\mu^\prime_k$, on considère qu’il existe une fonction $
 
 Dans le cas ou la distribution est déterminée par plus d’un paramètre, $\theta=[\theta_1, \cdots, \theta_n]$, on pourrait tenter de calculer autant de moments que des paramètres pour après faire un système d’équations. Supposons qu’on veut estimer $n$ paramètres, donc on sait que
 
-$$
-\begin{cases}
+$$\begin{cases}
 
 \mu^\prime_1&=&\varphi_1(\theta_1, \cdots,\theta_k)
 
@@ -423,19 +374,17 @@ m^\prime_1&=\varphi_1(\hat\theta_1,\cdots,\hat\theta_k)
 
 m^\prime_k&=\varphi_k(\hat\theta_1,\cdots,\hat\theta_k)
 
-\end{cases}
-$$
+\end{cases}$$
 
 Par exemple, pour estimer les paramètres d’une normale :
 
-$$
-\begin{cases}
+$$\begin{cases}
 
-\mathbb E[X] = \mu
+E(X) = \mu
 
 \\
 
-\mathbb E[X^2] = \mu^2 + \sigma^2
+E(X^2) = \mu^2 + \sigma^2
 
 \end{cases}
 
@@ -449,11 +398,9 @@ $$
 
 \hat{\mathbb E}[X^2] = \frac{1}{n}\sum_{i=1}^n X_i^2=\hat{\mu^2} + \hat{\sigma^2}
 
-\end{cases}
-$$
+\end{cases}$$
 
-$$
-\text{Finalement, }
+$$\text{Finalement, }
 
 \begin{cases}
 
@@ -463,8 +410,7 @@ $$
 
 \hat{\sigma^2} = \frac{1}{n}\sum_{i=1}^n X^2_i-\hat{\mu^2}
 
-\end{cases}
-$$
+\end{cases}$$
 
 Notons que le dernier pas c’est de “mettre un chapeau à tout”, càd. de passer du paramètre à l’estimateur.
 
@@ -474,16 +420,13 @@ Rappel. $S^{2}$ est la variance “qu’on ne veut pas”, la variance non corri
 
 On appelle l’estimateur du maximum de vraisemblance (EMV) du paramètre $\theta$, donne l’échantillon réalisé $x$, au $\beta$ tel que
 
-$$
-\theta ^*_{\mathbf{x}}\text{est EMV de }\theta\iff\theta^*_{\mathbf{x}}=\max_{\theta\in\Theta}L(\theta|\mathbf{x})
-$$
+$$\theta ^*_{\mathbf{x}}\text{est EMV de }\theta\iff\theta^*_{\mathbf{x}}=\max_{\theta\in\Theta}L(\theta|\mathbf{x})$$
 
 Bref, on appelle EMV l’input $\theta^*$ qui maximise la fonction de vraisemblance $L$ étant donné un échantillon observé. **Notons donc, pour toute réalisation différente de l’échantillon, on aura un EMV différent aussi, donc EMV est une fonction de l’échantillon $\mathbf{x}$.** Ceci étant dit, je vais juste simplifier sa notation à $\theta^*$.
 
 Par contre, la définition ci-dessus ne nous garantit ni l’existence, ni l’unicité d’un tel estimateur. Pour trouver l’input $\theta$ qui maximise $L$, et supposant que $L$ est deux fois dérivable, on calcule $\theta^*$ tel que
 
-$$
-\begin{cases}
+$$\begin{cases}
 
 \frac{\partial L}{\partial\theta}(\theta^*)=0
 
@@ -491,13 +434,11 @@ $$
 
 \frac{\partial^2 L}{\partial\theta^2}(\theta^*)<0
 
-\end{cases}
-$$
+\end{cases}$$
 
 Par contre, le plus souvent c’est de calculer $\theta^*$ tel que
 
-$$
-\begin{cases}
+$$\begin{cases}
 
 \frac{\partial \ln L}{\partial\theta}(\theta^*)=0
 
@@ -505,22 +446,17 @@ $$
 
 \frac{\partial^2 \ln L}{\partial\theta^2}(\theta^*)<0
 
-\end{cases}
-$$
+\end{cases}$$
 
 **Optimiser $\ln(L)$ est normalement plus simple que $L$. Dans la pratique, on injecte le resultat obtenu de la première équation dans la deuxième**. Rappelons, par ailleurs, que si $θ^*$ est un EMV de $θ$ alors $g(θ^*)$ est l’EMV du paramètre $g(θ)$ pour $g$ continue.
 
 **Exemple**. Supposons qu’on observe un échantillon, et qu’on s’intéresse au paramètre de la variance, donc $\theta=\text{var}(X)$. On détermine un estimateur sans biais de $\theta$, dans ce cas $\hat\theta={S^2}^\prime$. Puis, on calcule $\theta^*$ qui maximise la probabilité $L(\theta|x)$ . Finalement, si $g(x)=\sqrt{x}$, donc on a que
 
-$$
-g(\theta^*)\text{ est un EMV de }g(\theta)=g(\text{var(X)})=\sqrt{\text{var(X)}}=\sigma_X
-$$
+$$g(\theta^*)\text{ est un EMV de }g(\theta)=g(\text{var(X)})=\sqrt{\text{var(X)}}=\sigma_X$$
 
 **Note**. $g(\hat \theta)$ peut ne pas être sans biais. Notons que $g({S^2}^\prime)=\sqrt{{S^2}^\prime}=S^\prime$ ne peut pas être un estimateur sans biais de $σ$, car on aurait alors
 
-$$
-\text{var}(S^\prime)=\mathbb {E}[{S^2}^\prime]-\mathbb E^2[S^\prime]=\theta-\theta =0
-$$
+$$V(S^\prime)=E({S^2}^\prime)-\mathbb E^2[S^\prime]=\theta-\theta =0$$
 
 Et ce qui n’est pas possible, car $\text{var}(X) >0$ par définition. Contradiction.
 
@@ -528,9 +464,7 @@ Et ce qui n’est pas possible, car $\text{var}(X) >0$ par définition. Contradi
 
 Soit $\{\theta^*_n\}$ une suite de $\theta^*$ qui change avec l’augmentation de $n$. Donc, les valeurs de cette suite sont telles qu’elles se distribuent de manière gaussienne quand $n \rightarrow\infty$
 
-$$
-\lim_{n\rightarrow\infty} \sqrt{n}(\theta^*_n-\theta)\sim\mathcal N\left(0,\frac{1}{I(\theta)}\right) \iff \lim_{n\rightarrow\infty} \theta^*_n\sim\mathcal N\left(\theta,\frac{1}{nI(\theta)}\right)
-$$
+$$\lim_{n\rightarrow\infty} \sqrt{n}(\theta^*_n-\theta)\sim\mathcal N\left(0,\frac{1}{I(\theta)}\right) \iff \lim_{n\rightarrow\infty} \theta^*_n\sim\mathcal N\left(\theta,\frac{1}{nI(\theta)}\right)$$
 
 C’est qui est juste une application du théorème central de la limite, donc on cherche que $n\ge30$. On devra admettre à nouveau les conditions pour la nullité de l’espérance du score.
 
@@ -564,73 +498,56 @@ Par contre, cette supposition n’est pas réaliste. On y retournera après.
 3. On détermine la loi de notre estimateur $\bar X$. On devrait savoir qu’une somme de $n$ VA normales est aussi une VA normale, particulièrement $\bar X \sim (\mu, \frac{\sigma^2}{n})$. Il faudrait calculer ceci *analytiquement* si la loi des $X_i$ de base n’est pas normale.
 4. Une fois déterminée la loi de $\bar X$, on commence à se servir de ses propriétés connues pour établir un intervalle $[a,b]$ tel que
 
-$$
-\mathbb P(a\le \bar X \le b)=0.95
-$$
+$$P(a\le \bar X \le b)=0.95$$
 
 5. On se sert de la propriété de la distribution normale suivante. Notons qu’on peut s’en servir même si on connaît pas $\mu$.
 
-$$
-\bar X \sim \mathcal N(\mu,\frac{\sigma^2}{n}) \iff\underbrace{\left(\frac{\bar X-\mu}{\sigma/\sqrt n}\right)}_Z\sim\mathcal N(0,1)
-$$
+$$\bar X \sim \mathcal N(\mu,\frac{\sigma^2}{n}) \iff\underbrace{\left(\frac{\bar X-\mu}{\sigma/\sqrt n}\right)}_Z\sim\mathcal N(0,1)$$
 
 6. On change notre direction à vouloir encadrer $95\%$ de la loi de $z$ sous un nouveau intervalle. Arbitrairement, on voudra que cet intervalle soit symétrique autour de $0$, donc
 
-$$
-\mathbb P(-q\le Z\le q)=0.95 \implies q\approx1.96
-$$
+$$P(-q\le Z\le q)=0.95 \implies q\approx1.96$$
 
 7. On réécrit l’inégalité encadrante en termes des paramètres et l’estimateur
 
-$$
-\begin{align*}
-    &\mathbb P(-q\le Z\le q)
-    &\text{Préparation}
-    \\[5pt]
-    &\mathbb P \left( -1.96 \le \frac{\bar X-\mu}{\sigma/\sqrt n}\le1.96\right)
-    &\text{Substitution}
-    \\[5pt]
-    &\mathbb P \left( -1.96\frac{\sigma}{\sqrt n} \le \bar X-\mu\le1.96\frac{\sigma}{\sqrt n}\right)
-    &\text{Mult. par }\frac{\sigma}{\sqrt n}
-    \\[5pt]
-    &\mathbb P \left(\bar X -1.96\frac{\sigma}{\sqrt n} \le \mu\le\bar X+1.96\frac{\sigma}{\sqrt n}\right)
-    &\text{Isolation de }\mu
-    \end{align*}
-$$
+$$\begin{align*}
+&P(-q\le Z\le q)
+&\text{Préparation}
+\\[5pt]
+&\mathbb P \left( -1.96 \le \frac{\bar X-\mu}{\sigma/\sqrt n}\le1.96\right)
+&\text{Substitution}
+\\[5pt]
+&\mathbb P \left( -1.96\frac{\sigma}{\sqrt n} \le \bar X-\mu\le1.96\frac{\sigma}{\sqrt n}\right)
+&\text{Mult. par }\frac{\sigma}{\sqrt n}
+\\[5pt]
+&\mathbb P \left(\bar X -1.96\frac{\sigma}{\sqrt n} \le \mu\le\bar X+1.96\frac{\sigma}{\sqrt n}\right)
+&\text{Isolation de }\mu
+\end{align*}$$
 
-$$
-\mathbb P \left(\bar X -1.96\sigma_{\bar X} \le \mu\le\bar X+1.96\sigma_{\bar X}\right)=0.95, \text{ où } \sigma_{\bar X}=\frac{\sigma}{\sqrt n}
-$$
+$$\mathbb P \left(\bar X -1.96\sigma_{\bar X} \le \mu\le\bar X+1.96\sigma_{\bar X}\right)=0.95, \text{ où } \sigma_{\bar X}=\frac{\sigma}{\sqrt n}$$
 
 8. Ici, on peut finalement substituer les valeurs connus de $n$, de $\bar X$ et la valeur de $\sigma$ qui découle de la valeur supposée connue de $\sigma^2$. On obtient une borne numérique concrète.
 9. Éventuellement, si on veut une autre valeur de signification $\alpha$ différente de $5\%$, la forme générale de l’IC est
 
-$$
-\mathbb P \left(\bar X -z_{\alpha/2}\sigma_{\bar X} \le \mu\le\bar X+z_{\alpha/2}\sigma_{\bar X}\right)=\alpha,
-    \\[10pt]
-    \text{ où } z_{\alpha/2}\text{ est telle que }\mathbb P(-z_{\alpha/2}\le Z \le z_{\alpha/2})=1-\alpha
-$$
+$$\mathbb P \left(\bar X -z_{\alpha/2}\sigma_{\bar X} \le \mu\le\bar X+z_{\alpha/2}\sigma_{\bar X}\right)=\alpha,
+\\[10pt]
+\text{ où } z_{\alpha/2}\text{ est telle que }P(-z_{\alpha/2}\le Z \le z_{\alpha/2})=1-\alpha$$
 
 ### $\sigma^2$ inconnue et la loi de Student
 
 On avait dit qu’on supposée connue la valeur de $\sigma^2$, ce qui nous a permis d’établir l’IC. En réalité, ceci est difficilement le cas. Donc, avant d’estimer $\mu$ à travers un IC, on estime $\sigma^2$ avec une estimation ponctuelle, calculant dans ce cas $S^{2^\prime}$ et en le remplaçant dans l’IC de $\mu$, donc
 
-$$
-IC=[\bar X-z_{\alpha/2}\hat\sigma_{\bar X};\bar X+z_{\alpha/2}\hat\sigma_{\bar X}],\text{ où } \hat\sigma_{\bar X}=\sqrt{\frac{S^{2^\prime}}{n}}=\frac{S^\prime}{\sqrt n}
-$$
+$$IC=[\bar X-z_{\alpha/2}\hat\sigma_{\bar X};\bar X+z_{\alpha/2}\hat\sigma_{\bar X}],\text{ où } \hat\sigma_{\bar X}=\sqrt{\frac{S^{2^\prime}}{n}}=\frac{S^\prime}{\sqrt n}$$
 
 Il faut se rappeler que la construction de l’intervalle de confiance s’est faite sous l’hypothèse que nous échantillonnons une population normale :
 
-$$
-Z=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)
-$$
+$$Z=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)$$
 
 Mais, si on remplace $\sigma_{\bar X}$ dans la définition de $Z$ par $\hat\sigma_{\bar X}$, notons que le dénominateur est maintenant une variable aléatoire fonction des données (à cause de $S^\prime$) et ne plus une constante résultat de deux constantes, et donc **on ne peut pas assurer que $Z$ suit une loi $\mathcal N(0,1)$**.
 
 Afin de résoudre ce problème, on utilisera la loi de Student. La loi de Student à $k$ degrés de libertés est la loi du quotient, indépendant, d’une loi normale centrée-réduite et de la racine d’une loi de $χ^2$ divisé par son degré de liberté $k$.
 
-$$
-T=\frac{Z}{\sqrt{U/k}},\hspace{10pt}\text{ où }
+$$T=\frac{Z}{\sqrt{U/k}},\hspace{10pt}\text{ où }
 
 \begin{cases}
 
@@ -640,13 +557,11 @@ Z=\frac{\bar X-\mu}{\sigma/\sqrt n}=\frac{\bar X-\mu}{\sigma_{\bar X}}
 
 U=\sum_{i=1}^kX_i^2\iff U \sim\chi^2_k
 
-\end{cases}
-$$
+\end{cases}$$
 
 Dans ce cas, le numérateur $Z$ reste égal et on définit le dénominateur comme suit, où le facteur $1/\sigma^2$ devant est l’inverse de la variance de la population, pas de la moyenne échantillonnale.
 
-$$
-U=\frac{1}{\sigma^2}\underbrace{\sum_{i=1}^n(X_i-\bar X)^2}_{S^{2^\prime}\times(n-1)} \iff \begin{cases}
+$$U=\frac{1}{\sigma^2}\underbrace{\sum_{i=1}^n(X_i-\bar X)^2}_{S^{2^\prime}\times(n-1)} \iff \begin{cases}
 
 \frac{U}{n-1}=\frac{S^{2^\prime}}{\sigma^2}
 
@@ -654,13 +569,11 @@ U=\frac{1}{\sigma^2}\underbrace{\sum_{i=1}^n(X_i-\bar X)^2}_{S^{2^\prime}\times(
 
 U\sim\chi^2_{n-1}
 
-\end{cases}
-$$
+\end{cases}$$
 
 Finalement, on écrit la variable aléatoire de Student $T$ comme suit, où $S^\prime$ est la racine carrée de la variance échantillonnale corrigée $S^{2^\prime}$ :
 
-$$
-T=
+$$T=
 
 \frac{Z}{\sqrt{U/(n-1)}}
 =
@@ -668,20 +581,15 @@ T=
 \frac{\bar X-\mu}{\underbrace{(\sigma/\sqrt{n})}_{\sigma_{\bar X}}}\times\frac{1}{S^\prime/\sigma}
 =
 
-\frac{\bar X-\mu}{S^\prime/\sqrt{n}}
-$$
+\frac{\bar X-\mu}{S^\prime/\sqrt{n}}$$
 
-$$
-\text{Finalement, }
+$$\text{Finalement, }
 
-T\sim\mathcal T_{n-1}
-$$
+T\sim\mathcal T_{n-1}$$
 
 Une autre manière de voir $T$ : “quotient indépendant d’une normale avec la racine d’une loi chi-carré divisée par ses degrés de libertés”. Le degrés de libertés sont $(n-1)$ car, le fait que la moyenne a été réalisé est une équation que les $X_i$ doivent respecter.
 
-$$
-T = \frac{\bar X_n - \mu}{(S_n/\sqrt{n})}=\frac{\frac{\bar X_n-\mu}{\sigma/\sqrt{n}}}{\sqrt{\frac{S_n^2}{\sigma^2}}}=\frac{\mathcal N(0,1)}{\sqrt{\chi^2_{n-1}/(n-1)}}
-$$
+$$T = \frac{\bar X_n - \mu}{(S_n/\sqrt{n})}=\frac{\frac{\bar X_n-\mu}{\sigma/\sqrt{n}}}{\sqrt{\frac{S_n^2}{\sigma^2}}}=\frac{\mathcal N(0,1)}{\sqrt{\chi^2_{n-1}/(n-1)}}$$
 
 ### Les confusions autour des $\sigma$ et un exemple
 
@@ -703,9 +611,7 @@ Si on observe $\{2,3\}$, donc $\hat\sigma = \frac{1}{\sqrt{2}}\approx0.71$.
 
 Donc, si l’une de ces deux conditions est vérifiées, on peut prendre comme estimateur $\hat\sigma_{\bar X}$, qui dans ce cas serait
 
-$$
-\hat\sigma_{\bar X}=\frac{\hat\sigma}{\sqrt{n}}=\frac{1/\sqrt{2}}{\sqrt{2}}=0.5
-$$
+$$\hat\sigma_{\bar X}=\frac{\hat\sigma}{\sqrt{n}}=\frac{1/\sqrt{2}}{\sqrt{2}}=0.5$$
 
 Notons que, si les $X_i$ suivent chacune une loi normal, c’est strictement vraie l’équation $\sigma_{\bar X} = \frac{\sigma}{\sqrt{n}}$ (sans les chapeaux $\land$ des estimateurs, on parle des vraies paramètres !), c’est une dérivation algébrique.
 
@@ -717,20 +623,14 @@ Une statistique $\varphi([X_i], \theta)$, qui est une fonction des observations 
 
 Par exemple, et supposant $\sigma^2$ connue, la normalisation de la moyenne échantillonnale est une statistique pivotale, car sa distribution normalisée ne dépend pas de $\mu$. Peu importe la valeur de $\mu$, on sait que de prendre une moyenne échantillonnale et la normaliser par son $\mu$, quelle que soit, devrait suivre une loi normale standard.
 
-$$
-Z=\varphi([X_i])=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)
-$$
+$$Z=\varphi([X_i])=\frac{\bar X-\mu}{\sigma_{\bar X}}\sim\mathcal N(0,1)$$
 
 Dans le cas d’une distribution exponentielle de paramètre $\frac{1}{\theta}$, une statistique pivotale est
 
-$$
-\frac{2}{\theta}\sum_{i=1}^nX_i\sim\chi^2_{2n}
-$$
+$$\frac{2}{\theta}\sum_{i=1}^nX_i\sim\chi^2_{2n}$$
 
 C’est l’existence d’une quantité pivotale qui permet la construction d’un intervalle de confiance. En effet, le fait que la distribution de $φ$ ne dépend plus du paramètre inconnu $θ$, **permet de trouver deux nombres $a$ et $b$, indépendants également de $θ$**, tels que
 
-$$
-\mathbb P(a \le \varphi([X_i], \theta)\le b)=1-\alpha
-$$
+$$P(a \le \varphi([X_i], \theta)\le b)=1-\alpha$$
 
 où $α$ est un nombre choisi par avance dans $[0, 1]$, normalement très petit.

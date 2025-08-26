@@ -20,25 +20,33 @@ On classifie les biens par rapport à l'effet que leur quantité demandée subit
 >
 >  $$
 >  \frac{\partial x_1}{\partial m} > 0
->  $$
 >
+>
+$$
 >  - **Bien nécessaire** : La consommation augmente moins vite que le revenu
 >
->    $$
->    0 < \frac{\partial x_1}{\partial m} < 1
->    $$
 >
+$$
+>    0 < \frac{\partial x_1}{\partial m} < 1
+>
+>
+$$
 >  - **Bien de luxe** : La consommation augmente plus vite que le revenu
 >
->    $$
->    \frac{\partial x_1}{\partial m} > 1
->    $$
 >
+$$
+>    \frac{\partial x_1}{\partial m} > 1
+>
+>
+$$
 >- **Biens inférieurs** : Si le revenu augmente, la quantité demandée diminue
 >
->  $$
+>
+$$
 >  \frac{\partial x_1}{\partial m} < 0
->  $$
+>
+>
+$$
 
 Exemples de biens inférieurs : aliments peu onéreux, transport en bus, biens de faible qualité.
 

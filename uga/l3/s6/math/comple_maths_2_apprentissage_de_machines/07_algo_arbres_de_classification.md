@@ -38,9 +38,7 @@ Formellement, étant donnés des vecteurs d'entraînement $x_i \in \mathbb{R}^n$
 
 L'impureté de la division utilisant $H$ comme fonction de perte s'exprime :
 
-$$
-G(Q_m, \theta) = \frac{n_m^{left}}{n_m}H(Q_m^{left}(\theta)) + \frac{n_m^{right}}{n_m}H(Q_m^{right}(\theta))
-$$
+$$G(Q_m, \theta) = \frac{n_m^{left}}{n_m}H(Q_m^{left}(\theta)) + \frac{n_m^{right}}{n_m}H(Q_m^{right}(\theta))$$
 
 L'algorithme sélectionne alors $\theta^*$ qui minimise cette impureté.
 
@@ -63,9 +61,7 @@ L'indice de Gini mesure la fréquence à laquelle un élément choisi aléatoire
 
 Pour un problème de classification avec $J$ classes et des probabilités $p_i$, l'indice de Gini pour le nœud $m$ s'exprime :
 
-$$
-I_g(m) = \sum_{i=1}^{J} p_i(1-p_i) = 1 - \sum_{i=1}^{J} p_i^2
-$$
+$$I_g(m) = \sum_{i=1}^{J} p_i(1-p_i) = 1 - \sum_{i=1}^{J} p_i^2$$
 
 **Classification binaire** : L'indice se simplifie à $I_g(m) = 1 - p_0^2 - p_1^2$
 
@@ -77,9 +73,7 @@ $$
 
 L'entropie quantifie l'incertitude d'une distribution d'ensemble. Elle atteint son minimum (0) lorsque tous les individus sont correctement classifiés et son maximum lorsque les individus sont répartis équitablement entre les classes.
 
-$$
-\text{Entropie}(S) = -\sum_{i=1}^{J} p_i \times \log_2(p_i)
-$$
+$$\text{Entropie}(S) = -\sum_{i=1}^{J} p_i \times \log_2(p_i)$$
 
 avec la convention que $p_i \times \log_2(p_i) = 0$ lorsque $p_i = 0$.
 
@@ -87,9 +81,7 @@ avec la convention que $p_i \times \log_2(p_i) = 0$ lorsque $p_i = 0$.
 
 Le **gain d'information** calcule le gain en entropie d'une nouvelle division par rapport à l'entropie actuelle, normalisé par le nombre d'éléments :
 
-$$
-\text{Gain}(S, \text{division}) = \text{entropie}(S) - \sum_{i=0}^{j} \frac{|S_i|}{|S|} \times \text{entropie}(S_i)
-$$
+$$\text{Gain}(S, \text{division}) = \text{entropie}(S) - \sum_{i=0}^{j} \frac{|S_i|}{|S|} \times \text{entropie}(S_i)$$
 
 #### Gestion des Variables Numériques
 
@@ -114,15 +106,11 @@ Les variables numériques requièrent un traitement particulier et plus coûteux
 
 **Sous-ensemble "Court"** : $S_{\text{hauteur=court}} = \{\text{Légendaire, Légendaire, Non-légendaire, Non-légendaire}\}$
 
-$$
-I_g(S_{\text{hauteur=court}}) = 1 - \left(\frac{2}{4}\right)^2 - \left(\frac{2}{4}\right)^2 = \frac{1}{2}
-$$
+$$I_g(S_{\text{hauteur=court}}) = 1 - \left(\frac{2}{4}\right)^2 - \left(\frac{2}{4}\right)^2 = \frac{1}{2}$$
 
 **Sous-ensemble "Long"** : $S_{\text{hauteur=long}} = \{\text{Légendaire, Non-légendaire}\}$
 
-$$
-I_g(S_{\text{hauteur=long}}) = 1 - \left(\frac{1}{2}\right)^2 - \left(\frac{1}{2}\right)^2 = \frac{1}{2}
-$$
+$$I_g(S_{\text{hauteur=long}}) = 1 - \left(\frac{1}{2}\right)^2 - \left(\frac{1}{2}\right)^2 = \frac{1}{2}$$
 
 **Indice de Gini total pour la division sur hauteur** : $\frac{4}{6} \times \frac{1}{2} + \frac{2}{6} \times \frac{1}{2} = \frac{1}{2}$
 
@@ -130,15 +118,11 @@ $$
 
 **Sous-ensemble "Marron"** : $S_{\text{couleur=marron}} = \{\text{Légendaire, Légendaire, Non-légendaire}\}$
 
-$$
-I_g(S_{\text{couleur=marron}}) = 1 - \left(\frac{2}{3}\right)^2 - \left(\frac{1}{3}\right)^2 = \frac{4}{9}
-$$
+$$I_g(S_{\text{couleur=marron}}) = 1 - \left(\frac{2}{3}\right)^2 - \left(\frac{1}{3}\right)^2 = \frac{4}{9}$$
 
 **Sous-ensemble "Noir"** : $S_{\text{couleur=noir}} = \{\text{Légendaire, Non-légendaire, Non-légendaire}\}$
 
-$$
-I_g(S_{\text{couleur=noir}}) = 1 - \left(\frac{1}{3}\right)^2 - \left(\frac{2}{3}\right)^2 = \frac{4}{9}
-$$
+$$I_g(S_{\text{couleur=noir}}) = 1 - \left(\frac{1}{3}\right)^2 - \left(\frac{2}{3}\right)^2 = \frac{4}{9}$$
 
 **Indice de Gini total pour la division sur couleur** : $\frac{3}{6} \times \frac{4}{9} + \frac{3}{6} \times \frac{4}{9} = \frac{4}{9}$
 

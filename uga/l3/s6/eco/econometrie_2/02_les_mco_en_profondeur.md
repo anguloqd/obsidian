@@ -14,9 +14,7 @@ L'analyse se concentre sur plusieurs aspects fondamentaux : les propriétés asy
 
 Le modèle de régression linéaire se présente sous une forme générale où l'on considère :
 
-$$
-y_i = \mathbf{x}_i' \boldsymbol{a}_0 + u_i \text{ avec } E[u_i] \equiv 0
-$$
+$$y_i = \mathbf{x}_i' \boldsymbol{a}_0 + u_i \text{ avec } E[u_i] \equiv 0$$
 
 Ce modèle devient un modèle de régression proprement dit lorsque la condition d'exogénéité de $\mathbf{x}_i$ est vérifiée. L'exogénéité constitue une propriété fondamentale qui distingue un simple modèle linéaire d'un véritable modèle de régression.
 
@@ -38,9 +36,7 @@ Malgré sa forme apparemment simple, le modèle de régression linéaire peut re
 
 **Modèles avec effets carrés** : On peut inclure des termes quadratiques en transformant les variables originelles. Par exemple, avec $\tilde{x}_{1,i} \equiv x_i$ et $\tilde{x}_{2,i} \equiv x_i^2$, on obtient :
 
-$$
-y_i = b_{0,0} + b_{1,0}\tilde{x}_{1,i} + b_{2,0}\tilde{x}_{2,i} + u_i = \alpha + b_{1,0}x_i + b_{2,0}x_i^2 + u_i
-$$
+$$y_i = b_{0,0} + b_{1,0}\tilde{x}_{1,i} + b_{2,0}\tilde{x}_{2,i} + u_i = \alpha + b_{1,0}x_i + b_{2,0}x_i^2 + u_i$$
 
 **Modèles quadratiques complets** : Les modèles peuvent inclure simultanément des effets carrés et croisés pour capturer des interactions complexes entre les variables explicatives.
 
@@ -52,9 +48,7 @@ $$
 
 L'estimateur des MCO peut être calculé selon trois approches distinctes, chacune apportant un éclairage particulier sur la nature de cet estimateur. L'estimateur des MCO de $\boldsymbol{a}_0$ dans le modèle de régression linéaire s'écrit :
 
-$$
-\hat{\boldsymbol{a}}_N^{MCO} \equiv \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i y_i
-$$
+$$\hat{\boldsymbol{a}}_N^{MCO} \equiv \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i y_i$$
 
 Les trois approches diffèrent par leur fondement conceptuel : l'approche par les moindres carrés constitue une méthode d'ajustement pure, tandis que les approches directe et par la méthode des moments s'appuient explicitement sur les propriétés statistiques du processus générateur des $(\mathbf{x}_i, y_i)$.
 
@@ -62,9 +56,7 @@ Les trois approches diffèrent par leur fondement conceptuel : l'approche par le
 
 Cette première approche considère l'estimation comme un problème d'optimisation visant à minimiser la somme des carrés des résidus. L'estimateur des MCO est défini comme :
 
-$$
-\hat{\boldsymbol{a}}_N^{MCO} \equiv \arg\min_{\boldsymbol{a}} \sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})^2
-$$
+$$\hat{\boldsymbol{a}}_N^{MCO} \equiv \arg\min_{\boldsymbol{a}} \sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})^2$$
 
 L'objectif est de trouver la valeur de $\boldsymbol{a} \in \mathbb{R}^K$ qui minimise soit la somme des carrés des résidus, soit de manière équivalente l'erreur quadratique moyenne de prédiction des $y_i$ par les $\mathbf{x}_i'\boldsymbol{a}$.
 
@@ -72,9 +64,7 @@ L'objectif est de trouver la valeur de $\boldsymbol{a} \in \mathbb{R}^K$ qui min
 
 Les conditions du premier ordre du programme de minimisation conduisent à :
 
-$$
-\frac{\partial}{\partial \boldsymbol{a}} \sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})^2 = -2\sum_{i=1}^N \mathbf{x}_i(y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MCO}) = \mathbf{0}
-$$
+$$\frac{\partial}{\partial \boldsymbol{a}} \sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})^2 = -2\sum_{i=1}^N \mathbf{x}_i(y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MCO}) = \mathbf{0}$$
 
 Cette condition implique que les résidus de la régression sont orthogonaux aux variables explicatives par construction de $\hat{\boldsymbol{a}}_N^{MCO}$, soit $\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i(y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MCO}) = \mathbf{0}$.
 
@@ -86,21 +76,15 @@ L'approche directe exploite directement l'exogénéité des $\mathbf{x}_i$ dans 
 
 En partant du modèle $y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i$, on obtient :
 
-$$
-E[y_i|\mathbf{x}_i] = E[\mathbf{x}_i'\boldsymbol{a}_0 + u_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0 + E[u_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0
-$$
+$$E[y_i|\mathbf{x}_i] = E[\mathbf{x}_i'\boldsymbol{a}_0 + u_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0 + E[u_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0$$
 
 En multipliant par $\mathbf{x}_i$ et en prenant l'espérance :
 
-$$
-E[\mathbf{x}_i y_i] = E[\mathbf{x}_i \mathbf{x}_i'\boldsymbol{a}_0] = E[\mathbf{x}_i \mathbf{x}_i']\boldsymbol{a}_0
-$$
+$$E[\mathbf{x}_i y_i] = E[\mathbf{x}_i \mathbf{x}_i'\boldsymbol{a}_0] = E[\mathbf{x}_i \mathbf{x}_i']\boldsymbol{a}_0$$
 
 Si $E[\mathbf{x}_i \mathbf{x}_i']$ est inversible, on peut résoudre pour obtenir :
 
-$$
-\boldsymbol{a}_0 = (E[\mathbf{x}_i \mathbf{x}_i'])^{-1} E[\mathbf{x}_i y_i]
-$$
+$$\boldsymbol{a}_0 = (E[\mathbf{x}_i \mathbf{x}_i'])^{-1} E[\mathbf{x}_i y_i]$$
 
 L'estimateur convergent s'obtient en remplaçant les espérances théoriques par leurs contreparties empiriques selon la Loi des Grands Nombres. Cette démarche exploite la forme spécifique de $E[\mathbf{x}_i y_i]$ telle qu'elle découle du modèle de régression.
 
@@ -112,9 +96,7 @@ La méthode des moments constitue l'approche la plus générale et sera utilisé
 
 En combinant cette condition avec $u_i = y_i - \mathbf{x}_i'\boldsymbol{a}_0$, on obtient :
 
-$$
-E[\mathbf{x}_i(y_i - \mathbf{x}_i'\boldsymbol{a}_0)] = \mathbf{0}
-$$
+$$E[\mathbf{x}_i(y_i - \mathbf{x}_i'\boldsymbol{a}_0)] = \mathbf{0}$$
 
 Cette condition de moment peut être exploitée dans le cadre de la Méthode des Moments selon le principe d'analogie de Goldberger.
 
@@ -122,9 +104,7 @@ Cette condition de moment peut être exploitée dans le cadre de la Méthode des
 
 Dans le cas du modèle de régression, $\boldsymbol{a}_0$ est la solution de $E[\mathbf{x}_i(y_i - \mathbf{x}_i'\boldsymbol{a})] = \mathbf{0}$, et l'estimateur de la méthode des moments $\hat{\boldsymbol{a}}_N^{MM}$ est défini par :
 
-$$
-\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i(y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MM}) = \mathbf{0}_{K \times 1}
-$$
+$$\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i(y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MM}) = \mathbf{0}_{K \times 1}$$
 
 **Équivalence des méthodes** : La résolution de cette équation montre que $\hat{\boldsymbol{a}}_N^{MM} = \hat{\boldsymbol{a}}_N^{MCO}$, établissant l'équivalence entre les trois approches.
 
@@ -140,23 +120,17 @@ L'établissement de la convergence de l'estimateur des MCO constitue un résulta
 
 **Démonstration** : En partant de l'expression de l'estimateur et en substituant $y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i$, on obtient :
 
-$$
-\hat{\boldsymbol{a}}_N^{MCO} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i(\mathbf{x}_i'\boldsymbol{a}_0 + u_i)
-$$
+$$\hat{\boldsymbol{a}}_N^{MCO} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i(\mathbf{x}_i'\boldsymbol{a}_0 + u_i)$$
 
 Après simplification :
 
-$$
-\hat{\boldsymbol{a}}_N^{MCO} = \boldsymbol{a}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i u_i
-$$
+$$\hat{\boldsymbol{a}}_N^{MCO} = \boldsymbol{a}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i u_i$$
 
 La Loi des Grands Nombres implique que $\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i' \xrightarrow{p} E[\mathbf{x}_i\mathbf{x}_i']$ et $\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i u_i \xrightarrow{p} E[\mathbf{x}_i u_i]$. L'exogénéité des $\mathbf{x}_i$ assure que $E[\mathbf{x}_i u_i] = \mathbf{0}$.
 
 L'inverse de $\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'$ existe avec une probabilité approchant 1 et converge vers $(E[\mathbf{x}_i\mathbf{x}_i'])^{-1}$. Par continuité de l'application inverse, on obtient :
 
-$$
-\hat{\boldsymbol{a}}_N^{MCO} \xrightarrow{p} \boldsymbol{a}_0 + (E[\mathbf{x}_i\mathbf{x}_i'])^{-1} \cdot \mathbf{0} = \boldsymbol{a}_0
-$$
+$$\hat{\boldsymbol{a}}_N^{MCO} \xrightarrow{p} \boldsymbol{a}_0 + (E[\mathbf{x}_i\mathbf{x}_i'])^{-1} \cdot \mathbf{0} = \boldsymbol{a}_0$$
 
 #### Normalité asymptotique
 
@@ -164,35 +138,25 @@ La normalité asymptotique de l'estimateur des MCO découle de l'application du 
 
 **Propriété de normalité asymptotique** : Sous les conditions du modèle de régression, l'estimateur des MCO vérifie :
 
-$$
-\sqrt{N}(\hat{\boldsymbol{a}}_N^{MCO} - \boldsymbol{a}_0) \xrightarrow{L} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)
-$$
+$$\sqrt{N}(\hat{\boldsymbol{a}}_N^{MCO} - \boldsymbol{a}_0) \xrightarrow{L} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)$$
 
 où la matrice de variance asymptotique $\boldsymbol{\Sigma}_0$ prend deux formes selon l'homoscédasticité ou l'hétéroscédasticité des termes d'erreur.
 
 **Cas hétéroscédastique général** :
 
-$$
-\boldsymbol{\Sigma}_0 = (E[\mathbf{x}_i\mathbf{x}_i'])^{-1} E[u_i^2 \mathbf{x}_i\mathbf{x}_i'] (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}
-$$
+$$\boldsymbol{\Sigma}_0 = (E[\mathbf{x}_i\mathbf{x}_i'])^{-1} E[u_i^2 \mathbf{x}_i\mathbf{x}_i'] (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}$$
 
 **Cas homoscédastique** : Si $E[u_i^2|\mathbf{x}_i] = \sigma_0^2$, alors :
 
-$$
-\boldsymbol{\Sigma}_0 = \sigma_0^2 (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}
-$$
+$$\boldsymbol{\Sigma}_0 = \sigma_0^2 (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}$$
 
 **Démonstration** : En utilisant la décomposition précédente, on a :
 
-$$
-\sqrt{N}(\hat{\boldsymbol{a}}_N^{MCO} - \boldsymbol{a}_0) = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{\sqrt{N}}\sum_{i=1}^N \mathbf{x}_i u_i
-$$
+$$\sqrt{N}(\hat{\boldsymbol{a}}_N^{MCO} - \boldsymbol{a}_0) = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \frac{1}{\sqrt{N}}\sum_{i=1}^N \mathbf{x}_i u_i$$
 
 Le Théorème Central Limite appliqué à $\frac{1}{\sqrt{N}}\sum_{i=1}^N \mathbf{x}_i u_i$ donne :
 
-$$
-\frac{1}{\sqrt{N}}\sum_{i=1}^N \mathbf{x}_i u_i \xrightarrow{L} \mathcal{N}(\mathbf{0}, E[u_i^2 \mathbf{x}_i\mathbf{x}_i'])
-$$
+$$\frac{1}{\sqrt{N}}\sum_{i=1}^N \mathbf{x}_i u_i \xrightarrow{L} \mathcal{N}(\mathbf{0}, E[u_i^2 \mathbf{x}_i\mathbf{x}_i'])$$
 
 puisque $E[\mathbf{x}_i u_i] = \mathbf{0}$ par exogénéité et $V[\mathbf{x}_i u_i] = E[u_i^2 \mathbf{x}_i\mathbf{x}_i']$.
 
@@ -208,15 +172,11 @@ L'utilisation pratique des résultats de normalité asymptotique nécessite l'es
 
 **Estimateur robuste à l'hétéroscédasticité (White)** :
 
-$$
-\hat{\boldsymbol{\Sigma}}_N^W = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^N \hat{u}_{i,N}^2 \mathbf{x}_i\mathbf{x}_i'\right) \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1}
-$$
+$$\hat{\boldsymbol{\Sigma}}_N^W = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^N \hat{u}_{i,N}^2 \mathbf{x}_i\mathbf{x}_i'\right) \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1}$$
 
 **Estimateur sous homoscédasticité** :
 
-$$
-\hat{\boldsymbol{\Sigma}}_N = \hat{\sigma}_N^2 \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1}
-$$
+$$\hat{\boldsymbol{\Sigma}}_N = \hat{\sigma}_N^2 \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i\mathbf{x}_i'\right)^{-1}$$
 
 où $\hat{\sigma}_N^2 = \frac{1}{N-1}\sum_{i=1}^N \hat{u}_{i,N}^2$ et $\hat{u}_{i,N} = y_i - \mathbf{x}_i'\hat{\boldsymbol{a}}_N^{MCO}$.
 
@@ -264,9 +224,7 @@ La projection linéaire constitue un concept central qui éclaire la nature de l
 
 **Propriété de projection linéaire** : La projection linéaire de $y_i$ sur $\mathbf{x}_i$, notée $EL[y_i|\mathbf{x}_i]$, est définie par :
 
-$$
-EL[y_i|\mathbf{x}_i] \equiv \mathbf{x}_i'\boldsymbol{\gamma}
-$$
+$$EL[y_i|\mathbf{x}_i] \equiv \mathbf{x}_i'\boldsymbol{\gamma}$$
 
 où $\boldsymbol{\gamma} \equiv \arg\min_{\mathbf{g}} E[(y_i - \mathbf{x}_i'\mathbf{g})^2]$. Le paramètre $\boldsymbol{\gamma}$ est unique si et seulement si $E[\mathbf{x}_i\mathbf{x}_i']$ est inversible.
 
@@ -282,12 +240,8 @@ où $\boldsymbol{\gamma} \equiv \arg\min_{\mathbf{g}} E[(y_i - \mathbf{x}_i'\mat
 
 3.  **Décomposition avec constante** : Si $\mathbf{x}_i = (1, \tilde{\mathbf{x}}_i')'$, alors :
 
-    $$
+$$\boldsymbol{\gamma}' = (\delta, \boldsymbol{\lambda}')$$
 
-\boldsymbol{\gamma}' = (\delta, \boldsymbol{\lambda}')
-
-$$
-    
     avec $\boldsymbol{\lambda} = V[\tilde{\mathbf{x}}_i]^{-1}\text{Cov}[y_i, \tilde{\mathbf{x}}_i]$ et $\delta = E[y_i] - \boldsymbol{\lambda}'E[\tilde{\mathbf{x}}_i]$.
 
 ### Liens avec le modèle de régression
@@ -295,26 +249,19 @@ $$
 La projection linéaire entretient des liens profonds avec le modèle de régression linéaire, permettant de distinguer les aspects d'ajustement des aspects causals.
 
 **Équivalence projection-régression** : Les deux propositions suivantes sont équivalentes :
-$$
 
-y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i \text{ avec } E[u_i|\mathbf{x}_i] = E[u_i] = 0
+$$y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i \text{ avec } E[u_i|\mathbf{x}_i] = E[u_i] = 0$$
 
-$$
-$$
+$$EL[y_i|\mathbf{x}_i] = E[y_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0$$
 
-EL[y_i|\mathbf{x}_i] = E[y_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{a}_0
-
-$$
 Cette équivalence révèle que la projection de $y_i$ sur $\mathbf{x}_i$ coïncide avec la partie déterministe d'un modèle de $y_i$ en $\mathbf{x}_i$ si et seulement si $y_i$ suit un modèle de régression linéaire en $\mathbf{x}_i$. Deux conditions sont nécessaires : la linéarité du modèle et l'exogénéité des variables explicatives.
 
 ### Décomposition universelle
 
 **Propriété de décomposition** : On peut toujours écrire $y_i$ sous la forme :
-$$
 
-y_i = \boldsymbol{\gamma}'\mathbf{x}_i + e_i
+$$y_i = \boldsymbol{\gamma}'\mathbf{x}_i + e_i$$
 
-$$
 avec $E[e_i|\mathbf{x}_i] = \mathbf{0}$, en choisissant $\boldsymbol{\gamma} \equiv \arg\min_{\mathbf{g}} E[(y_i - \mathbf{x}_i'\mathbf{g})^2]$.
 
 Cette décomposition reste valable même si $y_i$ ne suit pas un modèle de régression linéaire. Il est toujours possible de calculer un estimateur convergent de $\boldsymbol{\gamma}$ et donc de $EL[y_i|\mathbf{x}_i] = \mathbf{x}_i'\boldsymbol{\gamma}$.
@@ -339,7 +286,7 @@ La condition d'identification $E[\mathbf{x}_i\mathbf{x}_i']$ inversible peut êt
 
 Avec $\mathbf{x}_i = (1, \tilde{\mathbf{x}}_i')'$, la condition $\text{rang}(E[\mathbf{x}_i\mathbf{x}_i']) = K$ équivaut à $V[\tilde{\mathbf{x}}_i]$ inversible, ce qui se traduit par :
 
-1.  $V(\tilde{x}_{k,i}) > 0$ pour tout $k = 1,...,K-1$ (chaque variable explicative doit varier)
+1.  $V(\tilde{x}_{k,i}) > 0$ pour tout $k = 1,…,K-1$ (chaque variable explicative doit varier)
 
 2.  Les éléments de $\tilde{\mathbf{x}}_i$ ne sont pas parfaitement linéairement liés entre eux (absence de multicolinéarité parfaite)
 
@@ -348,19 +295,15 @@ Avec $\mathbf{x}_i = (1, \tilde{\mathbf{x}}_i')'$, la condition $\text{rang}(E[\
 Pour analyser plus précisément ces conditions, on introduit le concept de partie spécifique d'une variable explicative.
 
 **Définition de partie spécifique** : Une variable $\tilde{x}_{k,i}$ d'un vecteur $\tilde{\mathbf{x}}_i$ peut toujours être décomposée :
-$$
 
-\tilde{x}_{k,i} = EL[\tilde{x}_{k,i}|\tilde{\mathbf{x}}_{i,-k}] + \tilde{e}_{k,i}
+$$\tilde{x}_{k,i} = EL[\tilde{x}_{k,i}|\tilde{\mathbf{x}}_{i,-k}] + \tilde{e}_{k,i}$$
 
-$$
 où $\tilde{e}_{k,i} \equiv \tilde{x}_{k,i} - EL[\tilde{x}_{k,i}|\tilde{\mathbf{x}}_{i,-k}]$ représente la partie spécifique de $\tilde{x}_{k,i}$ dans $\tilde{\mathbf{x}}_i$. Le vecteur $\tilde{\mathbf{x}}_{i,-k}$ désigne $\tilde{\mathbf{x}}_i$ amputé de $\tilde{x}_{k,i}$.
 
 Avec $EL[\tilde{x}_{k,i}|\tilde{\mathbf{x}}_{i,-k}] \equiv \delta_k + \boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-k}$, on obtient :
-$$
 
-\tilde{x}_{k,i} = \underbrace{\delta_k + \boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-k}}_{\text{Partie corrélée à } (1,\tilde{\mathbf{x}}_{i,-k}')'} + \underbrace{\tilde{e}_{k,i}}_{\text{Partie spécifique de } \tilde{x}_{k,i}}
+$$\tilde{x}_{k,i} = \underbrace{\delta_k + \boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-k}}_{\text{Partie corrélée à } (1,\tilde{\mathbf{x}}_{i,-k}')'} + \underbrace{\tilde{e}_{k,i}}_{\text{Partie spécifique de } \tilde{x}_{k,i}}$$
 
-$$
 ### Propriétés des parties spécifiques
 
 Les parties spécifiques $\tilde{e}_{k,i}$ vérifient des propriétés fondamentales :
@@ -380,7 +323,7 @@ Les parties spécifiques $\tilde{e}_{k,i}$ vérifient des propriétés fondament
 1.  $\text{rang}(E[\mathbf{x}_i\mathbf{x}_i']) = K$
 2.  $E[\mathbf{x}_i\mathbf{x}_i']$ est inversible
 3.  $V[\tilde{\mathbf{x}}_i]$ est inversible
-4.  $V[\tilde{e}_{k,i}] > 0$ pour $k = 1,...,K-1$
+4.  $V[\tilde{e}_{k,i}] > 0$ pour $k = 1,…,K-1$
 
 La dernière condition exprime qu'chaque variable explicative doit posséder une véritable partie spécifique, c'est-à-dire une source de variation qui lui est propre.
 
@@ -393,28 +336,22 @@ L'analyse par les parties spécifiques révèle le mécanisme fondamental d'iden
 Considérons le modèle : $y_i = \alpha_0 + \sum_{k=1}^{K-1} b_{k,0}\tilde{x}_{k,i} + u_i$ avec $E[u_i] = 0$.
 
 En substituant la décomposition $\tilde{x}_{k,i} = \delta_k + \boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-k} + \tilde{e}_{k,i}$, on obtient après regroupement :
-$$
 
-y_i = (\alpha_0 + \sum_{k=1}^{K-1} b_{k,0}\delta_k) + \sum_{k=1}^{K-1} b_{k,0}\tilde{e}_{k,i} + \sum_{\ell \neq k} b_{k,0}\boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-\ell} + u_i
+$$y_i = (\alpha_0 + \sum_{k=1}^{K-1} b_{k,0}\delta_k) + \sum_{k=1}^{K-1} b_{k,0}\tilde{e}_{k,i} + \sum_{\ell \neq k} b_{k,0}\boldsymbol{\lambda}_{k,-k}'\tilde{\mathbf{x}}_{i,-\ell} + u_i$$
 
-$$
 Cette reformulation montre que ce sont les variations de $\tilde{e}_{k,i}$ qui identifient $b_{k,0}$. Le reste de $\tilde{x}_{k,i}$ (sa projection sur les autres variables) ne contribue pas spécifiquement à l'identification du paramètre correspondant.
 
 ### Expression de l'estimateur
 
 **Propriété d'anatomie de l'estimateur MCO** : L'estimateur des MCO peut être exprimé sous la forme :
-$$
 
-b_{\ell,0} = V[\tilde{e}_{\ell,i}]^{-1}\text{Cov}(\tilde{e}_{\ell,i}, y_i)
+$$b_{\ell,0} = V[\tilde{e}_{\ell,i}]^{-1}\text{Cov}(\tilde{e}_{\ell,i}, y_i)$$
 
-$$
-pour $\ell = 2,...,K$, ou de manière équivalente :
-$$
+pour $\ell = 2,…,K$, ou de manière équivalente :
 
-\boldsymbol{b}_0 = V[\tilde{\mathbf{e}}_i]^{-1}\text{Cov}(\tilde{\mathbf{e}}_i, y_i)
+$$\boldsymbol{b}_0 = V[\tilde{\mathbf{e}}_i]^{-1}\text{Cov}(\tilde{\mathbf{e}}_i, y_i)$$
 
-$$
-où $\tilde{\mathbf{e}}_i = (\tilde{e}_{1,i},...,\tilde{e}_{K-1,i})'$.
+où $\tilde{\mathbf{e}}_i = (\tilde{e}_{1,i},…,\tilde{e}_{K-1,i})'$.
 
 L'équivalence entre ces formulations provient du fait que la matrice $V[\tilde{\mathbf{e}}_i]$ est diagonale par construction (les parties spécifiques ne sont pas corrélées entre elles).
 
@@ -425,11 +362,9 @@ L'équivalence entre ces formulations provient du fait que la matrice $V[\tilde{
 ### Précision asymptotique
 
 Dans le cas homoscédastique, la loi asymptotique de l'estimateur des MCO s'écrit :
-$$
 
-\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \sigma_0^2(E[\mathbf{x}_i\mathbf{x}_i'])^{-1})
+$$\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \sigma_0^2(E[\mathbf{x}_i\mathbf{x}_i'])^{-1})$$
 
-$$
 La matrice $(E[\mathbf{x}_i\mathbf{x}_i'])^{-1}$ mesure la précision asymptotique de l'estimateur. La précision est d'autant plus grande que :
 
 1.  $\sigma_0^2$ est petit (termes d'erreur du modèle faibles)
@@ -483,12 +418,9 @@ Les problèmes de multicolinéarité sont fréquents en économétrie, mais les 
 **Exemples typiques** :
 
 1.  **Économétrie de la consommation** : Modèles de la forme
-    
-$$
 
-Cons_i = \alpha_0 + b_{1,0} prix_{1,i} + b_{2,0} prix_{2,i} + b_{3,0} revenu_i + u_i
+$$Cons_i = \alpha_0 + b_{1,0} prix_{1,i} + b_{2,0} prix_{2,i} + b_{3,0} revenu_i + u_i$$
 
-$$
     avec $prix_{1,i}$ et $prix_{2,i}$ très liés. Solution habituelle : retirer une des variables ou abandonner l'estimation.
 
 2.  **Effets âge-expérience-génération** : Ces trois variables sont par définition linéairement liées (âge = expérience + âge d'entrée sur le marché du travail), posant un problème d'identification fondamental.
@@ -496,11 +428,9 @@ $$
 #### Multicolinéarité dans les données de panel
 
 **Données hiérarchisées ou en clusters** : Considérons le modèle
-$$
 
-y_{it} = \alpha_{i,0}\tilde{d}_i + \alpha_{t,0}\tilde{d}_t + b_{1,0}\tilde{x}_{it} + b_{2,0}\tilde{x}_{2,it} + b_{3,0}\tilde{x}_{3,t} + u_{it}
+$$y_{it} = \alpha_{i,0}\tilde{d}_i + \alpha_{t,0}\tilde{d}_t + b_{1,0}\tilde{x}_{it} + b_{2,0}\tilde{x}_{2,it} + b_{3,0}\tilde{x}_{3,t} + u_{it}$$
 
-$$
 où $\tilde{d}_i = 1$ si observation de l'individu $i$, 0 sinon.
 
 **Problèmes d'identification** :
@@ -546,41 +476,31 @@ Le paramètre $\boldsymbol{a}_0$ est identifiable dans ce modèle de régression
 #### Condition d'orthogonalité et estimation
 
 Lorsque les conditions précédentes sont satisfaites, le modèle $y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i$ avec $E[u_i] = 0$ et $E[u_i|\mathbf{x}_i] = \mathbf{0}$ implique la validité de la condition d'orthogonalité :
-$$
 
-E[(y_i - \mathbf{x}_i'\boldsymbol{a}_0)\mathbf{x}_i] = \mathbf{0}_{K \times 1}
+$$E[(y_i - \mathbf{x}_i'\boldsymbol{a}_0)\mathbf{x}_i] = \mathbf{0}_{K \times 1}$$
 
-$$
 Cette condition de moment, fondée sur l'exogénéité de $\mathbf{x}_i$, caractérise $\boldsymbol{a}_0$ de manière unique.
 
 #### Application du principe d'analogie
 
 Le principe d'analogie définit l'estimateur de la Méthode des Moments $\hat{\boldsymbol{a}}^{MM}_N$ à partir de la contrepartie empirique :
-$$
 
-\hat{\boldsymbol{a}}^{MM}_N \text{ est solution de } \frac{1}{N}\sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i = \mathbf{0}_{K \times 1}
+$$\hat{\boldsymbol{a}}^{MM}_N \text{ est solution de } \frac{1}{N}\sum_{i=1}^N (y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i = \mathbf{0}_{K \times 1}$$
 
-$$
 On démontre alors que $\hat{\boldsymbol{a}}_{MM,N} = \hat{\boldsymbol{a}}_{MCO,N}$ et que :
-$$
 
-\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}E[u_i^2\mathbf{x}_i\mathbf{x}_i'](E[\mathbf{x}_i\mathbf{x}_i'])^{-1})
+$$\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, (E[\mathbf{x}_i\mathbf{x}_i'])^{-1}E[u_i^2\mathbf{x}_i\mathbf{x}_i'](E[\mathbf{x}_i\mathbf{x}_i'])^{-1})$$
 
-$$
 #### Cas homoscédastique
 
 Dans le cas où les termes d'erreur sont homoscédastiques ($E[u_i^2|\mathbf{x}_i] = V[u_i|\mathbf{x}_i] = \sigma_0^2$), on a :
-$$
 
-E[u_i^2\mathbf{x}_i\mathbf{x}_i'] = \sigma_0^2 E[\mathbf{x}_i\mathbf{x}_i']
+$$E[u_i^2\mathbf{x}_i\mathbf{x}_i'] = \sigma_0^2 E[\mathbf{x}_i\mathbf{x}_i']$$
 
-$$
 et donc :
-$$
 
-\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \sigma_0^2(E[\mathbf{x}_i\mathbf{x}_i'])^{-1})
+$$\sqrt{N}(\hat{\boldsymbol{a}}_{MCO,N} - \boldsymbol{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \sigma_0^2(E[\mathbf{x}_i\mathbf{x}_i'])^{-1})$$
 
-$$
 #### Distinction ajustement-identification
 
 Le cours établit une distinction fondamentale : si $E[u_i|\mathbf{x}_i] \neq \mathbf{0}$ (endogénéité), alors :
@@ -598,11 +518,8 @@ Cependant, une mesure satisfaisante de $\boldsymbol{a}_0$ (l'effet causal recher
 #### Démarche générale d'identification
 
 La démarche d'identification des paramètres d'un modèle de régression linéaire suit une logique méthodique. Premièrement, on définit $\boldsymbol{a}_0$ comme la solution d'un problème théorique appelé "problème limite". Dans le cas du modèle de régression linéaire, ce problème s'énonce ainsi :
-$$
 
-\boldsymbol{a}_0 \text{ est solution en } \boldsymbol{a} \text{ de l'équation } E[(y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i] = \mathbf{0}
-
-$$
+$$\boldsymbol{a}_0 \text{ est solution en } \boldsymbol{a} \text{ de l'équation } E[(y_i - \mathbf{x}_i'\boldsymbol{a})\mathbf{x}_i] = \mathbf{0}$$
 
 Cette équation découle directement de la forme du modèle $y_i = \mathbf{x}_i'\boldsymbol{a}_0 + u_i$ avec $E[u_i] = 0$, combinée à l'exogénéité de $\mathbf{x}_i$ par rapport à $u_i$ qui implique $E[u_i|\mathbf{x}_i] = \mathbf{0}$.
 

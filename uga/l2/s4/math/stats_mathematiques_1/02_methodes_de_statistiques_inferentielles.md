@@ -24,9 +24,7 @@ Pour récapituler, le paramètre réel constant inconnu est $θ$. Il est approch
 
 f(X_1, \dots, X_n)$, variable aléatoire, estimé grâce au relevé statistique par $\hat{θ} = \hat{θ}_n = f(x_1, \dots, x_n)$. On note parfois comme suit :
 
-$$
-\hat{\theta}_n=E[\theta_n|X_1=x_1, \dots, X_n=x_n]
-$$
+$$\hat{\theta}_n=E[\theta_n|X_1=x_1, \dots, X_n=x_n]$$
 
 > [!note]
 > **Note de la variance estimée**. La variance est une moyenne des écarts (au carré). Dans un échantillon de taille $n$, il y a $n-1$ écarts.
@@ -35,9 +33,7 @@ $$
 
 On cherche à encadrer une V.A. ou une statistique dans un intervalle $[p,q]$ telle que la probabilité que la statistique appartienne à cet intervalle soit 95% (et donc 5% de risque). On veut donc déterminer $p$ et $q$. Ici, $f_n$ est notre statistique est c’est une fonction de la loi de $X$.
 
-$$
-P(\underbrace{\mu_n − aσ_n}_p ≤ f_n ≤ \underbrace{\mu_n + aσ_n}_q) = 0.95
-$$
+$$P(\underbrace{\mu_n − aσ_n}_p ≤ f_n ≤ \underbrace{\mu_n + aσ_n}_q) = 0.95$$
 
 On admettra que $a = 1.96$ si notre intervalle de confiance est de $95\%.$
 
@@ -49,9 +45,7 @@ Pour déterminer finalement les valeurs de $p$ et $q$, on calcule $\mu_n=E[f_n]$
 
 L’intervalle de fluctuation est l’intervalle qui nous permet de prendre une décision en fonction de si la valeur réalisé de notre statistique se retrouve dans l’intervalle ou non. À $5\%$ de risque, l’intervalle est :
 
-$$
-[\mu-2\sigma, \mu+2\sigma]
-$$
+$$[\mu-2\sigma, \mu+2\sigma]$$
 
 Note : réellement, le $2$ est remplacé pour un $1.96$.
 

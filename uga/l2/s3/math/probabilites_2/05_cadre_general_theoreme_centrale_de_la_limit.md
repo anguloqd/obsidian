@@ -8,9 +8,7 @@ La fonction caractéristique, de la même manière que la fonction de répartiti
 
 La fonction caractéristique existe toujours pour toute variable aléatoire (car $|e^{iXt}| = 1$), contrairement à la fonction génératrice des moments qui peut ne pas être définie. La fonction caractéristique d'une V.A. $X$, pour $t\in\mathbb{R}$, est :
 
-$$
-\varphi_X(t)=\mathbb{E}[e^{iXt}]
-$$
+$$\varphi_X(t)=E(e^{iXt})$$
 
 ## Convergence de variables aléatoires
 
@@ -20,9 +18,7 @@ La notion de convergence d'une V.A. n'est pas unique. Ici, nous étudions princi
 
 Soit $(X_n)_{n \geq 1}$ une suite de V.A. réelles, $(F_n)_{n \geq 1}$ leurs fonctions de répartition et $X$ une V.A. de fonction de répartition $F$. La suite $(X_n)$ **converge en loi** vers $X$ (noté $X_n \stackrel{d}{\rightarrow} X$) si :
 
-$$
-\lim_{n\rightarrow\infty} F_n(x) = F(x), \quad \forall x \in \mathbb{R} \text{ où } F \text{ est continue}
-$$
+$$\lim_{n\rightarrow\infty} F_n(x) = F(x), \quad \forall x \in \mathbb{R} \text{ où } F \text{ est continue}$$
 
 **Théorème de continuité de Lévy** : La suite $(X_n)$ converge en loi vers $X$ si et seulement si leurs fonctions caractéristiques $(\varphi_n)$ convergent ponctuellement vers une fonction $\varphi$ continue en $0$. De plus, $\varphi$ est alors la fonction caractéristique de $X$.
 
@@ -42,9 +38,7 @@ La variance de $\bar{X}_n$ est $\text{Var}(\bar{X}_n) = \frac{\sigma^2}{n} \righ
 
 Pour obtenir une limite non dégénérée, nous normalisons par $\sqrt{n}$ :
 
-$$
-Z_n = \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} = \frac{\sum_{i=1}^n (X_i - \mu)}{\sigma\sqrt{n}}
-$$
+$$Z_n = \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} = \frac{\sum_{i=1}^n (X_i - \mu)}{\sigma\sqrt{n}}$$
 
 Cette normalisation garantit que $\text{Var}(Z_n) = 1$ pour tout $n$.
 
@@ -52,15 +46,11 @@ Cette normalisation garantit que $\text{Var}(Z_n) = 1$ pour tout $n$.
 
 **Théorème (TCL de Lindeberg-Lévy)** : Soit $(X_i)_{i \geq 1}$ une suite de V.A. iid avec $\mathbb{E}[X_i] = \mu$ et $\text{Var}(X_i) = \sigma^2 < \infty$. Alors :
 
-$$
-\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1) \quad \text{quand } n \rightarrow \infty
-$$
+$$\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1) \quad \text{quand } n \rightarrow \infty$$
 
 **Équivalence** : Pour tout $a, b \in \mathbb{R}$ avec $a < b$ :
 
-$$
-\lim_{n \rightarrow \infty} \mathbb{P}\left(a \leq \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \leq b\right) = \frac{1}{\sqrt{2\pi}}\int_a^b e^{-\frac{x^2}{2}} dx
-$$
+$$\lim_{n \rightarrow \infty} \mathbb{P}\left(a \leq \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \leq b\right) = \frac{1}{\sqrt{2\pi}}\int_a^b e^{-\frac{x^2}{2}} dx$$
 
 **Conditions du TCL** :
 1. Les variables $X_i$ sont **iid** (indépendantes et identiquement distribuées)
@@ -78,9 +68,7 @@ Alors : $\mathbb{E}[S_n] = np$ et $\text{Var}(S_n) = np(1-p)$.
 
 **Théorème** :
 
-$$
-Z_n = \frac{S_n - np}{\sqrt{np(1-p)}} \stackrel{d}{\rightarrow} \mathcal{N}(0,1) \quad \text{quand } n \rightarrow \infty
-$$
+$$Z_n = \frac{S_n - np}{\sqrt{np(1-p)}} \stackrel{d}{\rightarrow} \mathcal{N}(0,1) \quad \text{quand } n \rightarrow \infty$$
 
 **Approximation pratique** : Pour $n$ fini, $Z_n \approx \mathcal{N}(0,1)$ si :
 - $np \geq 10$
@@ -94,17 +82,13 @@ Ces conditions garantissent une approximation acceptable de la loi binomiale par
 
 Pour $n$ grand, la variable normalisée suit exactement une loi normale :
 
-$$
-\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)
-$$
+$$\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)$$
 
 #### Version approximative (pratique)
 
 Pour $n$ suffisamment grand (typiquement $n \geq 30$), on peut approximer :
 
-$$
-\bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
-$$
+$$\bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)$$
 
 **Important** : Cette approximation est valide pour $n$ fini mais grand. Il ne faut **jamais** appliquer $\lim_{n \rightarrow \infty}$ à cette formulation car elle deviendrait dégénérée.
 
@@ -117,26 +101,20 @@ Soit $\bar{X}_n$ la moyenne empirique de $n$ V.A. iid avec $\mathbb{E}[X_i] = \m
 
 **Loi des Grands Nombres (LGN)** :
 
-$$
-\lim_{n\rightarrow\infty} \mathbb{P}(|\bar{X}_n - \mu| \leq \epsilon) = 1, \quad \forall \epsilon > 0
-$$
+$$\lim_{n\rightarrow\infty} P(|\bar{X}_n - \mu| \leq \epsilon) = 1, \quad \forall \epsilon > 0$$
 
 **Théorème Central de la Limite (TCL)** :
 
-$$
-\lim_{n\rightarrow\infty} \mathbb{P}\left(\left|\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma}\right| \leq a\right) = \frac{2}{\sqrt{2\pi}}\int_0^a e^{-\frac{x^2}{2}} dx
-$$
+$$\lim_{n\rightarrow\infty} \mathbb{P}\left(\left|\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma}\right| \leq a\right) = \frac{2}{\sqrt{2\pi}}\int_0^a e^{-\frac{x^2}{2}} dx$$
 
 #### Variables aléatoires dégénérées
 
 Quand $n \rightarrow \infty$, la variable $(\bar{X}_n - \mu)$ converge vers $0$ (LGN). Sa fonction de répartition limite est :
 
-$$
-F(x) = \begin{cases}
+$$F(x) = \begin{cases}
 0, & x < 0 \\
 1, & x \geq 0
-\end{cases}
-$$
+\end{cases}$$
 
 Cette fonction correspond à une **variable aléatoire dégénérée** concentrée en $0$, aussi appelée mesure de Dirac $\delta_0$.
 
@@ -156,12 +134,16 @@ La normalisation $\sqrt{n}(\bar{X}_n - \mu)$ permet d'obtenir une limite non dé
 >
 > $$
 > \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \stackrel{d}{\rightarrow} \mathcal{N}(0,1)
-> $$
+>
+$$
 >
 > **Approximation pratique** (pour $n \geq 30$) :
 >
-> $$
+>
+$$
 > \bar{X}_n \stackrel{approx}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
-> $$
+>
+$$
+
 >
 > **Attention** : Ne jamais mélanger limite asymptotique et approximation finie !

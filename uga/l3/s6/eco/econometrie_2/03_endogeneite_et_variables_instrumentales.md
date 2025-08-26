@@ -16,9 +16,7 @@ Le premier type d'endogénéité résulte de l'omission de variables explicative
 
 L'exemple classique de l'effet de la taille des classes sur les résultats scolaires illustre parfaitement ce problème. Considérons le modèle suivant où l'on souhaite estimer l'impact de la taille des classes de CE1 ($\text{tailclas}_i$) sur les résultats des élèves aux tests de mathématiques ou de français ($\text{score}_i$) :
 
-$$
-\text{score}_i = \alpha_0 + b_{1,0} \text{tailclas}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + u_i \quad \text{avec } E[u_i] = 0
-$$
+$$\text{score}_i = \alpha_0 + b_{1,0} \text{tailclas}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + u_i \quad \text{avec } E[u_i] = 0$$
 
 L'effet causal d'intérêt est $b_{1,0}$, qui mesure l'impact d'une augmentation d'une unité de la taille de classe sur le score. Intuitivement, on s'attend à ce que $b_{1,0} < 0$, reflétant l'hypothèse qu'une réduction de la taille des classes améliore les performances scolaires.
 
@@ -26,21 +24,15 @@ Le vecteur $\mathbf{c}_i$ contient les caractéristiques observables de l'élèv
 
 Ces éléments inobservés, regroupés dans le vecteur $\tilde{\mathbf{q}}_i$, influencent à la fois les résultats scolaires et l'affectation aux classes. Si le "vrai" modèle incluait ces variables :
 
-$$
-\text{score}_i = \delta_0 + b_{1,0} \text{tailclas}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + \boldsymbol{\lambda}' \tilde{\mathbf{q}}_i + v_i \quad \text{avec } E[v_i] = 0
-$$
+$$\text{score}_i = \delta_0 + b_{1,0} \text{tailclas}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + \boldsymbol{\lambda}' \tilde{\mathbf{q}}_i + v_i \quad \text{avec } E[v_i] = 0$$
 
 Alors le modèle estimé relie ces deux spécifications par :
 
-$$
-\alpha_0 = \delta_0 + E[\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i]
-$$
+$$\alpha_0 = \delta_0 + E[\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i]$$
 
 et
 
-$$
-u_i = v_i + (\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i - E[\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i])
-$$
+$$u_i = v_i + (\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i - E[\boldsymbol{\lambda}' \tilde{\mathbf{q}}_i])$$
 
 Les effets moyens des variables omises s'incorporent dans la constante du modèle, tandis que leurs déviations par rapport à cette moyenne contaminent le terme d'erreur.
 
@@ -52,9 +44,7 @@ La simultanéité constitue le deuxième type d'endogénéité majeur, survenant
 
 L'étude de l'impact de la maternité sur le salaire des femmes par Angrist et Evans exemplifie ce problème. Le modèle d'intérêt s'écrit :
 
-$$
-\text{salaire}_i = \alpha_0 + b_{1,0} \text{nbenf}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + u_i \quad \text{avec } E[u_i] = 0
-$$
+$$\text{salaire}_i = \alpha_0 + b_{1,0} \text{nbenf}_i + \mathbf{b}_{-1,0}' \mathbf{c}_i + u_i \quad \text{avec } E[u_i] = 0$$
 
 où $\text{nbenf}_i$ représente le nombre d'enfants et $\mathbf{c}_i$ les variables de contrôle démographiques et socioéconomiques.
 
@@ -68,39 +58,29 @@ Le troisième type d'endogénéité, souvent négligé en pratique, résulte des
 
 Considérons le modèle d'intérêt :
 
-$$
-y_i = \alpha_0 + b_0 \tilde{x}_i + u_i \quad \text{avec } E[u_i] = E[u_i | \tilde{x}_i] = 0
-$$
+$$y_i = \alpha_0 + b_0 \tilde{x}_i + u_i \quad \text{avec } E[u_i] = E[u_i | \tilde{x}_i] = 0$$
 
 où $\tilde{x}_i$ représente la vraie valeur de la variable explicative, qui n'est pas directement observée. Nous disposons seulement d'une mesure bruitée :
 
-$$
-x_i^e = \tilde{x}_i + e_i
-$$
+$$x_i^e = \tilde{x}_i + e_i$$
 
 où $e_i$ constitue l'erreur de mesure, supposée satisfaire $E[e_i] = E[e_i | \tilde{x}_i] = E[u_i | e_i] = 0$.
 
 Par substitution, le modèle observable devient :
 
-$$
-y_i = \alpha_0 + b_0 x_i^e + v_i
-$$
+$$y_i = \alpha_0 + b_0 x_i^e + v_i$$
 
 avec $v_i = u_i - b_0 e_i$ et $E[v_i] = 0$.
 
 L'endogénéité apparaît mécaniquement car :
 
-$$
-\text{Cov}(x_i^e, v_i) = \text{Cov}(x_i^e, u_i - b_0 e_i) = -b_0 V(e_i)
-$$
+$$\text{Cov}(x_i^e, v_i) = \text{Cov}(x_i^e, u_i - b_0 e_i) = -b_0 V(e_i)$$
 
 La variable explicative mesurée avec erreur est par construction corrélée avec le terme d'erreur du modèle observable.
 
 Cette corrélation induit un biais d'atténuation. L'estimateur MCO converge vers :
 
-$$
-\text{plim}_{N \to +\infty} \hat{b}_{MCO,N} = b_0 \times \frac{V(\tilde{x}_i)}{V(\tilde{x}_i) + V(e_i)} < b_0
-$$
+$$\text{plim}_{N \to +\infty} \hat{b}_{MCO,N} = b_0 \times \frac{V(\tilde{x}_i)}{V(\tilde{x}_i) + V(e_i)} < b_0$$
 
 L'erreur de mesure atténue systématiquement l'effet estimé en valeur absolue, d'autant plus que la variance de l'erreur est importante relativement à la variance de la vraie variable.
 
@@ -108,45 +88,31 @@ L'erreur de mesure atténue systématiquement l'effet estimé en valeur absolue,
 
 Le biais d'endogénéité représente une propriété générale de l'estimateur MCO lorsque la condition d'exogénéité stricte $E[\mathbf{x}_i u_i] = \mathbf{0}$ est violée. Dans le modèle linéaire général :
 
-$$
-y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i] = 0$$
 
 ce biais peut être formalisé à partir de l'équation de l'estimateur MCO :
 
-$$
-\hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i u_i
-$$
+$$\hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{x}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{x}_i u_i$$
 
 L'application de la loi des grands nombres aux suites convergeant en probabilité permet de montrer que :
 
-$$
-\text{plim}_{N \to +\infty} \hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + [E(\mathbf{x}_i \mathbf{x}_i')]^{-1} E[\mathbf{x}_i u_i]
-$$
+$$\text{plim}_{N \to +\infty} \hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + [E(\mathbf{x}_i \mathbf{x}_i')]^{-1} E[\mathbf{x}_i u_i]$$
 
 Le terme $[E(\mathbf{x}_i \mathbf{x}_i')]^{-1} E[\mathbf{x}_i u_i]$ constitue le biais asymptotique d'endogénéité de $\hat{\boldsymbol{\alpha}}_{MCO,N}$ pour $\boldsymbol{\alpha}_0$ si $E[\mathbf{x}_i u_i] \neq \mathbf{0}$.
 
 Une propriété cruciale de ce biais est sa nature systémique : même si une seule variable explicative est endogène, tous les coefficients du modèle sont potentiellement biaisés. Considérons le cas où seul le K-ième élément $x_{K,i}$ est endogène :
 
-$$
-E[x_{k,i} u_i] = 0 \text{ pour } k = 1, ..., K-1
-$$
+$$E[x_{k,i} u_i] = 0 \text{ pour } k = 1, ..., K-1$$
 
-$$
-E[x_{K,i} u_i] \neq 0
-$$
+$$E[x_{K,i} u_i] \neq 0$$
 
 Dans le modèle partitionné :
 
-$$
-y_i = \boldsymbol{\alpha}_{-K,0}' \mathbf{x}_{-K,i} + \alpha_{K,0} x_{K,i} + u_i \quad \text{avec } E[u_i] = E[u_i | \mathbf{x}_{-K,i}] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_{-K,0}' \mathbf{x}_{-K,i} + \alpha_{K,0} x_{K,i} + u_i \quad \text{avec } E[u_i] = E[u_i | \mathbf{x}_{-K,i}] = 0$$
 
 le biais de l'estimateur MCO $\hat{\boldsymbol{\alpha}}_{MCO,N} = (\hat{\boldsymbol{\alpha}}_{-K,N}^{MCO}, \hat{\alpha}_{K,N}^{MCO})'$ de $\boldsymbol{\alpha}_0 = (\boldsymbol{\alpha}_{-K,0}, \alpha_{K,0})'$ s'exprime par :
 
-$$
-\text{plim}_{N \to +\infty} \hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + \begin{pmatrix} \boldsymbol{\gamma} \\ 1 \end{pmatrix} \times \text{Cov}(x_{K,i}, u_i) \times \frac{1}{V(e_{K,i})}
-$$
+$$\text{plim}_{N \to +\infty} \hat{\boldsymbol{\alpha}}_{MCO,N} = \boldsymbol{\alpha}_0 + \begin{pmatrix} \boldsymbol{\gamma} \\ 1 \end{pmatrix} \times \text{Cov}(x_{K,i}, u_i) \times \frac{1}{V(e_{K,i})}$$
 
 où $e_{K,i} = x_{K,i} - EL(x_{K,i} | \mathbf{x}_{-K,i})$ représente la partie de $x_{K,i}$ non expliquée par $\mathbf{x}_{-K,i}$, et $\boldsymbol{\gamma} = E[\mathbf{x}_{-K,i} e_{K,i}]/V(e_{K,i})$.
 
@@ -160,23 +126,17 @@ Face aux limitations des MCO en présence d'endogénéité, la méthode des vari
 
 L'intuition sous-jacente à l'utilisation des variables instrumentales part du constat suivant : lorsque $\tilde{x}_i$ est endogène, la covariance $\text{Cov}(\tilde{x}_i, y_i)$ ne permet pas d'identifier $b_0$ car :
 
-$$
-\text{Cov}(\tilde{x}_i, y_i) = b_0 V(\tilde{x}_i) + \text{Cov}(\tilde{x}_i, u_i)
-$$
+$$\text{Cov}(\tilde{x}_i, y_i) = b_0 V(\tilde{x}_i) + \text{Cov}(\tilde{x}_i, u_i)$$
 
 Cette équation contient deux inconnues : le paramètre d'intérêt $b_0$ et le terme de biais $\text{Cov}(\tilde{x}_i, u_i)$.
 
 La stratégie instrumentale consiste à identifier une variable $\tilde{z}_i$ telle que $\text{Cov}(\tilde{z}_i, y_i)$ fournisse une équation permettant d'identifier $b_0$. Dans le modèle :
 
-$$
-y_i = \alpha_0 + b_0 \tilde{x}_i + u_i
-$$
+$$y_i = \alpha_0 + b_0 \tilde{x}_i + u_i$$
 
 nous avons :
 
-$$
-\text{Cov}(\tilde{z}_i, y_i) = \text{Cov}(\tilde{z}_i, \alpha_0 + b_0 \tilde{x}_i + u_i) = b_0 \text{Cov}(\tilde{z}_i, \tilde{x}_i) + \text{Cov}(\tilde{z}_i, u_i)
-$$
+$$\text{Cov}(\tilde{z}_i, y_i) = \text{Cov}(\tilde{z}_i, \alpha_0 + b_0 \tilde{x}_i + u_i) = b_0 \text{Cov}(\tilde{z}_i, \tilde{x}_i) + \text{Cov}(\tilde{z}_i, u_i)$$
 
 Pour que $\tilde{z}_i$ soit utile à l'identification de $b_0$, deux conditions doivent être satisfaites :
 
@@ -186,15 +146,11 @@ Pour que $\tilde{z}_i$ soit utile à l'identification de $b_0$, deux conditions 
 
 Sous ces conditions, nous obtenons :
 
-$$
-b_0 = \frac{\text{Cov}(\tilde{z}_i, y_i)}{\text{Cov}(\tilde{z}_i, \tilde{x}_i)}
-$$
+$$b_0 = \frac{\text{Cov}(\tilde{z}_i, y_i)}{\text{Cov}(\tilde{z}_i, \tilde{x}_i)}$$
 
 Cette relation permet de construire un estimateur convergent de $b_0$ :
 
-$$
-\hat{b}_{N} = \frac{\sum_{i=1}^N (z_i - \bar{z}_N)(y_i - \bar{y}_N)}{\sum_{i=1}^N (z_i - \bar{z}_N)(x_i - \bar{x}_N)} \xrightarrow{p} b_0
-$$
+$$\hat{b}_{N} = \frac{\sum_{i=1}^N (z_i - \bar{z}_N)(y_i - \bar{y}_N)}{\sum_{i=1}^N (z_i - \bar{z}_N)(x_i - \bar{x}_N)} \xrightarrow{p} b_0$$
 
 #### Définition formelle et conditions de validité
 
@@ -230,9 +186,7 @@ Les résultats obtenus par Angrist et Lavy (1999) et Piketty (2004) révèlent q
 
 Angrist et Evans se concentrent sur l'effet marginal du troisième enfant en définissant :
 
-$$
-\text{trois\_enf}_i = \begin{cases} 1 & \text{si la femme } i \text{ a 3 enfants ou plus} \\ 0 & \text{si la femme } i \text{ a exactement 2 enfants} \end{cases}
-$$
+$$\text{trois\_enf}_i = \begin{cases} 1 & \text{si la femme } i \text{ a 3 enfants ou plus} \\ 0 & \text{si la femme } i \text{ a exactement 2 enfants} \end{cases}$$
 
 Leur instrument $\text{meme\_sexe}_i$ prend la valeur 1 si les deux premiers enfants ont le même sexe, et 0 sinon.
 
@@ -257,23 +211,17 @@ La généralisation de l'approche instrumentale à des modèles multivariés né
 
 Considérons le modèle linéaire général :
 
-$$
-y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i] = 0$$
 
 où certaines variables explicatives sont potentiellement endogènes. Partitionnons le vecteur $\mathbf{x}_i$ en :
 
-$$
-\mathbf{x}_i = \begin{pmatrix} \mathbf{x}_i^x \\ \mathbf{x}_i^e \end{pmatrix}
-$$
+$$\mathbf{x}_i = \begin{pmatrix} \mathbf{x}_i^x \\ \mathbf{x}_i^e \end{pmatrix}$$
 
 où $\mathbf{x}_i^x$ contient les $M$ variables exogènes (incluant la constante) et $\mathbf{x}_i^e$ les $(K-M)$ variables endogènes.
 
 Pour chaque variable endogène, nous supposons disposer d'une variable instrumentale. Le vecteur d'instruments $\mathbf{z}_i$ se construit par :
 
-$$
-\mathbf{z}_i = \begin{pmatrix} \mathbf{x}_i^x \\ \mathbf{z}_i^e \end{pmatrix}
-$$
+$$\mathbf{z}_i = \begin{pmatrix} \mathbf{x}_i^x \\ \mathbf{z}_i^e \end{pmatrix}$$
 
 où $\mathbf{z}_i^e$ représente le vecteur des variables instrumentales pour $\mathbf{x}_i^e$.
 
@@ -288,43 +236,31 @@ La condition de pertinence sera formalisée ultérieurement en termes de conditi
 
 L'estimateur des variables instrumentales se fonde sur un système de **conditions d'orthogonalité** dérivées de l'exogénéité du vecteur d'instruments. Le modèle peut s'écrire sous la forme :
 
-$$
-y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i | \mathbf{z}_i] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i | \mathbf{z}_i] = 0$$
 
 Cette condition d'exogénéité conditionelle implique la condition de moment :
 
-$$
-E[\mathbf{z}_i u_i] = E[\mathbf{z}_i (y_i - \boldsymbol{\alpha}_0' \mathbf{x}_i)] = \mathbf{0}
-$$
+$$E[\mathbf{z}_i u_i] = E[\mathbf{z}_i (y_i - \boldsymbol{\alpha}_0' \mathbf{x}_i)] = \mathbf{0}$$
 
 Le vecteur $\mathbf{z}_i$ est parfois appelé **vecteur d'instruments** ou **ensemble d'information du modèle**, car il contient toutes les variables utilisées pour construire des conditions de moment estimantes.
 
 L'application du **principe d'analogie** de la méthode des moments définit l'estimateur des variables instrumentales $\hat{\boldsymbol{\alpha}}_{VI,N}$ comme la solution du système :
 
-$$
-\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i (y_i - \hat{\boldsymbol{\alpha}}_{VI,N}' \mathbf{x}_i) = \mathbf{0}
-$$
+$$\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i (y_i - \hat{\boldsymbol{\alpha}}_{VI,N}' \mathbf{x}_i) = \mathbf{0}$$
 
 Ce système de $K$ équations à $K$ inconnues admet une solution explicite sous la condition d'identification :
 
-$$
-\text{rang}[E(\mathbf{z}_i \mathbf{x}_i')] = K = \dim(\mathbf{x}_i)
-$$
+$$\text{rang}[E(\mathbf{z}_i \mathbf{x}_i')] = K = \dim(\mathbf{x}_i)$$
 
 La résolution du système donne :
 
-$$
-\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i
-$$
+$$\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i$$
 
 #### Définition formelle
 
 **Définition** : Dans le modèle à variables instrumentales $y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i$ avec $E[u_i | \mathbf{z}_i] = 0$, l'**estimateur des variables instrumentales** de $\boldsymbol{\alpha}_0$ est défini par :
 
-$$
-\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i
-$$
+$$\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i$$
 
 L'estimateur des VI est également connu sous le nom d'**estimateur des moindres carrés indirects** (MCI), soulignant le fait que l'identification se fait indirectement par l'intermédiaire des variables instrumentales plutôt que directement par la corrélation entre variables explicatives et variable dépendante.
 
@@ -336,38 +272,26 @@ L'analyse des propriétés statistiques de l'estimateur des variables instrument
 
 **Propriété (Convergence de l'estimateur VI)** : Soit $\{(y_i, \mathbf{x}_i, \mathbf{z}_i) ; i = 1, 2, …, N\}$ un échantillon de variables aléatoires tel que :
 
-$$
-y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i | \mathbf{z}_i] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i \quad \text{avec } E[u_i | \mathbf{z}_i] = 0$$
 
 L'estimateur des VI de $\boldsymbol{\alpha}_0$ :
 
-$$
-\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i
-$$
+$$\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i y_i$$
 
 1. **existe** avec une probabilité approchant 1 quand $N \to +\infty$
 2. **est convergent** : $\hat{\boldsymbol{\alpha}}_{VI,N} \xrightarrow{p} \boldsymbol{\alpha}_0$ quand $N \to +\infty$
 
 **Démonstration** : En substituant l'expression du modèle $y_i = \boldsymbol{\alpha}_0' \mathbf{x}_i + u_i$ dans la définition de l'estimateur :
 
-$$
-\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i (\boldsymbol{\alpha}_0' \mathbf{x}_i + u_i)
-$$
+$$\hat{\boldsymbol{\alpha}}_{VI,N} = \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i (\boldsymbol{\alpha}_0' \mathbf{x}_i + u_i)$$
 
-$$
-= \boldsymbol{\alpha}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i u_i
-$$
+$$= \boldsymbol{\alpha}_0 + \left(\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i'\right)^{-1} \frac{1}{N}\sum_{i=1}^N \mathbf{z}_i u_i$$
 
 Par la loi des grands nombres :
 
-$$
-\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i' \xrightarrow{p} E[\mathbf{z}_i \mathbf{x}_i']
-$$
+$$\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i \mathbf{x}_i' \xrightarrow{p} E[\mathbf{z}_i \mathbf{x}_i']$$
 
-$$
-\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i u_i \xrightarrow{p} E[\mathbf{z}_i u_i] = \mathbf{0}
-$$
+$$\frac{1}{N}\sum_{i=1}^N \mathbf{z}_i u_i \xrightarrow{p} E[\mathbf{z}_i u_i] = \mathbf{0}$$
 
 La dernière égalité utilise la condition d'exogénéité $E[u_i | \mathbf{z}_i] = 0$. Par conséquent :
 
@@ -661,9 +585,7 @@ L'estimateur $\hat{\Sigma}_N^W$ présente l'avantage d'être robuste à l'hété
 
 L'estimateur des variables instrumentales présente une limitation importante lorsque plusieurs variables instrumentales sont disponibles pour instrumenter une seule variable explicative endogène, ou lorsque plusieurs variables explicatives sont simultanément endogènes. Dans le modèle linéaire général à variables instrumentales :
 
-$$
-y_i = \boldsymbol{\alpha}_0'\mathbf{x}_i + u_i \text{ avec } E[u_i|\mathbf{z}_i] = 0
-$$
+$$y_i = \boldsymbol{\alpha}_0'\mathbf{x}_i + u_i \text{ avec } E[u_i|\mathbf{z}_i] = 0$$
 
 nous pouvons décomposer les variables explicatives en deux sous-ensembles : les variables exogènes $\mathbf{x}_i^x$ (de dimension $M \times 1$) et les variables endogènes $\tilde{\mathbf{x}}_i^e$ (de dimension $(K-M) \times 1$), de sorte que $\mathbf{x}_i = [\mathbf{x}_i^x, \tilde{\mathbf{x}}_i^e]'$.
 
@@ -673,9 +595,7 @@ Lorsque nous cherchons à instrumenter une variable explicative endogène $\tild
 
 Le vecteur des variables instrumentales $\mathbf{z}_i$ se compose des variables exogènes $\mathbf{x}_i^x$ et des variables instrumentales externes $\tilde{\mathbf{z}}_i^e$ nécessaires pour instrumenter $\tilde{\mathbf{x}}_i^e$ :
 
-$$
-\mathbf{z}_i = [\mathbf{x}_i^x, \tilde{\mathbf{z}}_i^e]'
-$$
+$$\mathbf{z}_i = [\mathbf{x}_i^x, \tilde{\mathbf{z}}_i^e]'$$
 
 La dimension de ce vecteur d'instruments vérifie $\dim(\mathbf{z}_i) = L = M + (L-M)$, où $(L-M)$ représente le nombre de variables instrumentales externes disponibles.
 
@@ -683,9 +603,7 @@ La relation entre le nombre de variables explicatives et le nombre de variables 
 
 Dans ce cas de sur-identification, la condition d'orthogonalité $E[\mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}$ définit un système de $L$ équations à $K$ inconnues. La contrepartie empirique :
 
-$$
-\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}) = \mathbf{0}
-$$
+$$\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}) = \mathbf{0}$$
 
 n'admet généralement pas de solution unique, créant un problème de résolution.
 
@@ -693,9 +611,7 @@ n'admet généralement pas de solution unique, créant un problème de résoluti
 
 L'estimateur des doubles moindres carrés résout ce problème en utilisant une astuce qui permet de réduire la dimension du vecteur de variables instrumentales sans perdre d'information. L'idée centrale consiste à définir un vecteur d'instruments $\mathbf{w}_i(\mathbf{z}_i)$ de dimension $K$ tel que :
 
-$$
-E[\mathbf{w}_i(\mathbf{z}_i)(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}
-$$
+$$E[\mathbf{w}_i(\mathbf{z}_i)(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}$$
 
 Un vecteur d'instruments optimal doit satisfaire deux conditions : être exogène par rapport à $u_i$ et permettre de bien prédire $\mathbf{x}_i$. La projection linéaire de $\mathbf{x}_i$ sur $\mathbf{z}_i$, notée $E_L[\mathbf{x}_i|\mathbf{z}_i]$, constitue un excellent candidat pour $\mathbf{w}_i(\mathbf{z}_i)$ car elle représente la meilleure combinaison linéaire des éléments de $\mathbf{z}_i$ pour prédire $\mathbf{x}_i$ au sens de l'erreur quadratique moyenne.
 
@@ -703,31 +619,23 @@ Un vecteur d'instruments optimal doit satisfaire deux conditions : être exogèn
 
 La projection linéaire de $\mathbf{x}_i$ sur $\mathbf{z}_i$ est définie comme :
 
-$$
-E_L[\mathbf{x}_i|\mathbf{z}_i] \equiv \boldsymbol{\gamma}'\mathbf{z}_i
-$$
+$$E_L[\mathbf{x}_i|\mathbf{z}_i] \equiv \boldsymbol{\gamma}'\mathbf{z}_i$$
 
 où $\boldsymbol{\gamma} = \arg\min_{\mathbf{g}} E[(\mathbf{x}_i - \mathbf{g}'\mathbf{z}_i)^2]$.
 
 Cette projection permet de décomposer $\mathbf{x}_i$ en deux composantes : la partie prédite par $\mathbf{z}_i$ et le résidu de cette prédiction :
 
-$$
-\mathbf{x}_i = \boldsymbol{\gamma}'\mathbf{z}_i + \mathbf{e}_i
-$$
+$$\mathbf{x}_i = \boldsymbol{\gamma}'\mathbf{z}_i + \mathbf{e}_i$$
 
 où $\mathbf{e}_i \equiv \mathbf{x}_i - \boldsymbol{\gamma}'\mathbf{z}_i$ vérifie par construction $E[\mathbf{z}_i\mathbf{e}_i'] = \mathbf{0}$.
 
 Lorsque $E[\mathbf{z}_i\mathbf{z}_i']$ est inversible, le paramètre de projection s'exprime comme :
 
-$$
-\boldsymbol{\gamma} = (E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i\mathbf{x}_i']
-$$
+$$\boldsymbol{\gamma} = (E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i\mathbf{x}_i']$$
 
 Un estimateur convergent de $\boldsymbol{\gamma}$ peut être obtenu par la méthode des moindres carrés ordinaires dans l'équation $\mathbf{x}_i = \boldsymbol{\gamma}'\mathbf{z}_i + \mathbf{e}_i$ :
 
-$$
-\hat{\boldsymbol{\gamma}}_N = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{z}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{x}_i'\right)
-$$
+$$\hat{\boldsymbol{\gamma}}_N = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{z}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{x}_i'\right)$$
 
 Il convient de noter que cette équation ne définit pas un modèle causal de $\mathbf{x}_i$ mais constitue simplement un outil mathématique de décomposition. La régression de $\mathbf{x}_i$ sur $\mathbf{z}_i$ fournit par construction le meilleur prédicteur linéaire au sens des moindres carrés, dans une logique d'ajustement sans référence à un modèle causal.
 
@@ -735,21 +643,15 @@ Il convient de noter que cette équation ne définit pas un modèle causal de $\
 
 Dans le cas multivarié où $\mathbf{x}_i$ est un vecteur de dimension $K$, la projection linéaire s'écrit :
 
-$$
-E_L[\mathbf{x}_i|\mathbf{z}_i] \equiv \boldsymbol{\Gamma}\mathbf{z}_i
-$$
+$$E_L[\mathbf{x}_i|\mathbf{z}_i] \equiv \boldsymbol{\Gamma}\mathbf{z}_i$$
 
 où $\boldsymbol{\Gamma}$ est une matrice $K \times L$ dont chaque ligne correspond à la projection d'un élément de $\mathbf{x}_i$ sur $\mathbf{z}_i$. Cette matrice vérifie :
 
-$$
-\boldsymbol{\Gamma} = E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}
-$$
+$$\boldsymbol{\Gamma} = E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}$$
 
 L'estimateur empirique de cette matrice de projection est donné par :
 
-$$
-\hat{\boldsymbol{\Gamma}}_N = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'\right) \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{z}_i'\right)^{-1}
-$$
+$$\hat{\boldsymbol{\Gamma}}_N = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'\right) \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{z}_i'\right)^{-1}$$
 
 Cette approche présente plusieurs avantages : $E_L[\mathbf{x}_i|\mathbf{z}_i]$ a la même dimension $K$ que $\mathbf{x}_i$, est exogène car fonction de variables exogènes, est bien corrélée à $\mathbf{x}_i$ par construction comme son meilleur prédicteur linéaire, et il est facile de construire un estimateur convergent de cette projection.
 
@@ -757,27 +659,19 @@ Cette approche présente plusieurs avantages : $E_L[\mathbf{x}_i|\mathbf{z}_i]$ 
 
 En utilisant la projection linéaire $\mathbf{w}_i(\mathbf{z}_i) \equiv E_L[\mathbf{x}_i|\mathbf{z}_i] = \boldsymbol{\Gamma}\mathbf{z}_i$, la condition d'orthogonalité modifiée devient :
 
-$$
-E[\boldsymbol{\Gamma}\mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}
-$$
+$$E[\boldsymbol{\Gamma}\mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}$$
 
 soit, en développant :
 
-$$
-E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}
-$$
+$$E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i(y_i - \mathbf{x}_i'\boldsymbol{\alpha}_0)] = \mathbf{0}$$
 
 L'application du principe d'analogie conduit à l'estimateur des doubles moindres carrés :
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} \hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i y_i\right)
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} \hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i y_i\right)$$
 
 En substituant l'expression de $\hat{\boldsymbol{\Gamma}}_N$, cet estimateur peut s'écrire sous la forme compacte :
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y}
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y}$$
 
 où $\mathbf{X}$, $\mathbf{Z}$ et $\mathbf{y}$ désignent respectivement les matrices empilées des observations $\mathbf{x}_i$, $\mathbf{z}_i$ et $y_i$.
 
@@ -795,17 +689,13 @@ L'estimateur des doubles moindres carrés tire son nom de la propriété qu'il p
 
 **Première étape** : Le calcul de $\hat{\boldsymbol{\Gamma}}_N$ correspond en fait au calcul d'estimateurs des moindres carrés pour chaque équation :
 
-$$
-x_{k,i} = \boldsymbol{\gamma}_k'\mathbf{z}_i + e_{k,i}
-$$
+$$x_{k,i} = \boldsymbol{\gamma}_k'\mathbf{z}_i + e_{k,i}$$
 
 pour $k = 1, \ldots, K$, où $\hat{\boldsymbol{\gamma}}_{k,N}^{MCO} = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i\mathbf{z}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{z}_i x_{k,i}\right)$.
 
 **Deuxième étape** : L'estimation finale s'obtient par :
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} (\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i)(\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i)'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} (\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i) y_i\right)
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} (\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i)(\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i)'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} (\hat{\boldsymbol{\Gamma}}_N\mathbf{z}_i) y_i\right)$$
 
 Cette propriété était importante lorsque les moyens de calcul étaient limités, mais elle doit être utilisée avec précaution. L'utilisation de régresseurs estimés en deuxième étape peut être dangereuse, particulièrement dans le contexte des estimateurs non linéaires des doubles moindres carrés qui ne possèdent pas cette propriété des "moindres carrés successifs". L'utilisation d'instruments estimés ne pose en revanche pas de problème particulier.
 
@@ -813,19 +703,13 @@ Cette propriété était importante lorsque les moyens de calcul étaient limit�
 
 L'écriture matricielle compacte permet d'établir la relation entre l'estimateur des variables instrumentales et celui des doubles moindres carrés. En utilisant la matrice d'instruments $\mathbf{Z}$ de dimension $N \times L$, les estimateurs s'écrivent :
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{VI} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{y}
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{VI} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{y}$$
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y}
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y}$$
 
 Lorsque $K = L$, les matrices $\mathbf{X}'\mathbf{Z}$, $\mathbf{Z}'\mathbf{Z}$ et $\mathbf{Z}'\mathbf{X}$ sont carrées et de même dimension $K \times K$. En utilisant les propriétés des inverses de produits de matrices inversibles $(\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$, on obtient :
 
-$$
-\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{Z}(\mathbf{X}'\mathbf{Z})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{y} = \hat{\boldsymbol{\alpha}}_N^{VI}
-$$
+$$\hat{\boldsymbol{\alpha}}_N^{2MC} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{Z}(\mathbf{X}'\mathbf{Z})^{-1}\mathbf{X}'\mathbf{Z}(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{Z}'\mathbf{y} = (\mathbf{Z}'\mathbf{X})^{-1}\mathbf{Z}'\mathbf{y} = \hat{\boldsymbol{\alpha}}_N^{VI}$$
 
 Ainsi, l'estimateur des variables instrumentales constitue un cas particulier de l'estimateur des doubles moindres carrés. De même, l'estimateur des moindres carrés ordinaires est un cas particulier d'estimateur des variables instrumentales lorsque les variables explicatives peuvent être utilisées comme leurs propres instruments ($\mathbf{Z} = \mathbf{X}$).
 
@@ -837,23 +721,17 @@ En économétrie, l'estimateur des doubles moindres carrés constitue une réfé
 
 La convergence de l'estimateur des doubles moindres carrés repose sur les mêmes principes fondamentaux que ceux de l'estimateur des variables instrumentales. Considérons un échantillon $\{(y_i, \mathbf{x}_i, \mathbf{z}_i); i = 1,2,\ldots,N\}$ de variables aléatoires tel que :
 
-$$
-y_i = \mathbf{a}_0'\mathbf{x}_i + u_i \text{ avec } E[u_i|\mathbf{z}_i] = 0
-$$
+$$y_i = \mathbf{a}_0'\mathbf{x}_i + u_i \text{ avec } E[u_i|\mathbf{z}_i] = 0$$
 
 L'estimateur des doubles moindres carrés :
 
-$$
-\hat{\mathbf{a}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i y_i\right)
-$$
+$$\hat{\mathbf{a}}_N^{2MC} = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i y_i\right)$$
 
 existe avec une probabilité approchant 1 et converge en probabilité vers le vrai paramètre : $\hat{\mathbf{a}}_N^{2MC} \xrightarrow{p} \mathbf{a}_0$ quand $N \to \infty$.
 
 Cette propriété de convergence se démontre en utilisant les techniques habituelles à partir de l'équation :
 
-$$
-\hat{\mathbf{a}}_N^{2MC} = \mathbf{a}_0 + \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i u_i\right)
-$$
+$$\hat{\mathbf{a}}_N^{2MC} = \mathbf{a}_0 + \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i u_i\right)$$
 
 obtenue en substituant $y_i = \mathbf{a}_0'\mathbf{x}_i + u_i$. Les résultats cruciaux pour la convergence sont l'application de la loi des grands nombres et la condition d'exogénéité $E[\mathbf{z}_i u_i] = \mathbf{0}$.
 
@@ -861,21 +739,15 @@ obtenue en substituant $y_i = \mathbf{a}_0'\mathbf{x}_i + u_i$. Les résultats c
 
 La distribution asymptotique de l'estimateur des doubles moindres carrés est particulièrement bien établie dans le cas où les termes d'erreur sont homoscédastiques. Dans le cadre d'un modèle à variables instrumentales avec $E[u_i^2|\mathbf{z}_i] = \sigma_0^2$, l'estimateur des doubles moindres carrés vérifie :
 
-$$
-\sqrt{N}(\hat{\mathbf{a}}_N^{2MC} - \mathbf{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)
-$$
+$$\sqrt{N}(\hat{\mathbf{a}}_N^{2MC} - \mathbf{a}_0) \xrightarrow{d} \mathcal{N}(\mathbf{0}, \boldsymbol{\Sigma}_0)$$
 
 où la matrice de variance asymptotique est donnée par :
 
-$$
-\boldsymbol{\Sigma}_0 = \sigma_0^2 (E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i\mathbf{x}_i'])^{-1}
-$$
+$$\boldsymbol{\Sigma}_0 = \sigma_0^2 (E[\mathbf{x}_i\mathbf{z}_i'](E[\mathbf{z}_i\mathbf{z}_i'])^{-1}E[\mathbf{z}_i\mathbf{x}_i'])^{-1}$$
 
 Cette propriété se démontre en utilisant le théorème central limite appliqué à l'équation :
 
-$$
-\sqrt{N}(\hat{\mathbf{a}}_N^{2MC} - \mathbf{a}_0) = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{\sqrt{N}}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i u_i\right)
-$$
+$$\sqrt{N}(\hat{\mathbf{a}}_N^{2MC} - \mathbf{a}_0) = \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1} \left(\frac{1}{\sqrt{N}}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i u_i\right)$$
 
 L'hypothèse d'homoscédasticité permet une simplification importante de l'expression de la variance asymptotique. Alors que dans le cas hétéroscédastique, l'expression de la variance asymptotique devient particulièrement complexe, l'homoscédasticité conduit à la forme simplifiée présentée ci-dessus.
 
@@ -887,9 +759,7 @@ La variance de la loi limite se simplifie grâce aux propriétés algébriques $
 
 Dans un modèle à variables instrumentales avec termes d'erreur homoscédastiques, la variance asymptotique $\boldsymbol{\Sigma}_0$ de l'estimateur des doubles moindres carrés peut être estimée par :
 
-$$
-\hat{\boldsymbol{\Sigma}}_N = \hat{\sigma}_N^2 \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1}
-$$
+$$\hat{\boldsymbol{\Sigma}}_N = \hat{\sigma}_N^2 \left(\frac{1}{N}\sum_{i=1}^{N} \mathbf{x}_i\mathbf{z}_i'(\mathbf{Z}'\mathbf{Z})^{-1}\mathbf{z}_i\mathbf{x}_i'\right)^{-1}$$
 
 avec $\hat{\sigma}_N^2 = \frac{1}{N-K}\sum_{i=1}^{N} \hat{u}_{i,N}^2$ et $\hat{u}_{i,N} = y_i - \mathbf{x}_i'\hat{\mathbf{a}}_N^{2MC}$.
 
@@ -1261,17 +1131,13 @@ Dans la pratique économétrique, un économètre s'intéresse généralement à
 
 Considérons le modèle :
 
-$$
-y_i = \alpha_0 + b_0 x_i + \boldsymbol{\beta}_0'\mathbf{c}_i + u_i
-$$
+$$y_i = \alpha_0 + b_0 x_i + \boldsymbol{\beta}_0'\mathbf{c}_i + u_i$$
 
 où $E[u_i] = 0$, $x_i$ représente la variable d'intérêt, $b_0$ l'effet d'intérêt, et $\mathbf{c}_i$ le vecteur des variables de contrôle.
 
 L'introduction de $\mathbf{c}_i$ dans le modèle améliore systématiquement la précision de l'estimation de $b_0$. Dans le modèle "simplifié" sans contrôle :
 
-$$
-y_i = \delta_0 + b_0 x_i + v_i
-$$
+$$y_i = \delta_0 + b_0 x_i + v_i$$
 
 où $E[v_i] = 0$, le terme d'erreur $v_i$ contient l'essentiel des effets des variables $\mathbf{c}_i$, conservant ainsi une large part de l'hétérogénéité de $y_i$. Ceci implique $V(v_i) \geq V(u_i)$, rendant l'estimation de $b_0$ moins précise dans le modèle simplifié que dans le modèle complet.
 
@@ -1281,9 +1147,7 @@ Dans certaines configurations, la variable explicative d'intérêt $x_i$ peut ê
 
 Cette situation se produit lorsque $x_i$ et $v_i$ sont liés par, et uniquement par, les variables $\mathbf{c}_i$. La transition du modèle complet au modèle simplifié implique une décomposition de $\boldsymbol{\beta}_0'\mathbf{c}_i$ :
 
-$$
-\boldsymbol{\beta}_0'\mathbf{c}_i = E[\boldsymbol{\beta}_0'\mathbf{c}_i] + (\boldsymbol{\beta}_0'\mathbf{c}_i - E[\boldsymbol{\beta}_0'\mathbf{c}_i])
-$$
+$$\boldsymbol{\beta}_0'\mathbf{c}_i = E[\boldsymbol{\beta}_0'\mathbf{c}_i] + (\boldsymbol{\beta}_0'\mathbf{c}_i - E[\boldsymbol{\beta}_0'\mathbf{c}_i])$$
 
 Cette décomposition sépare les effets "en moyenne" des effets "hors-moyenne", ces derniers constituant une source potentielle de corrélation entre $x_i$ et le nouveau terme d'erreur $v_i$.
 
@@ -1295,17 +1159,13 @@ La notion de "contrôle" est intimement liée à celle de "toutes choses égales
 
 Reprenons le modèle linéaire général avec une variable explicative endogène :
 
-$$
-y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + u_i
-$$
+$$y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + u_i$$
 
 où $E[u_i | \mathbf{x}_i] = E[u_i] = 0$ mais $E[u_i | x_i^e] \neq 0$.
 
 L'approche par variables de contrôle part du postulat qu'il existerait idéalement un modèle "latent" :
 
-$$
-y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \delta_0 q_i + v_i
-$$
+$$y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \delta_0 q_i + v_i$$
 
 où $E[v_i | \mathbf{x}_i, x_i^e, q_i] = E[v_i] = 0$, qui constituerait un modèle de régression parfait. Le problème pratique réside dans le fait que la variable $q_i$ n'est pas observée dans les données disponibles.
 
@@ -1315,9 +1175,7 @@ La variable latente $q_i$ présente plusieurs propriétés importantes. Nous sup
 
 Le lien entre les modèles utilisé et latent s'établit par :
 
-$$
-u_i = v_i + \delta_0 q_i
-$$
+$$u_i = v_i + \delta_0 q_i$$
 
 Cette relation montre que $u_i$ contient l'effet de $q_i$ sur $y_i$, représenté par $\delta_0 q_i$, qui constitue un effet de moyenne nulle accroissant l'hétérogénéité non contrôlée de $y_i$.
 
@@ -1325,9 +1183,7 @@ Cette relation montre que $u_i$ contient l'effet de $q_i$ sur $y_i$, représent�
 
 La variable $x_i^e$ est endogène dans le modèle utilisé si et seulement si $\text{Cov}(x_i^e, u_i) \neq 0$. En utilisant la relation entre les modèles, nous obtenons :
 
-$$
-\text{Cov}(x_i^e, u_i) = \text{Cov}(x_i^e, v_i + \delta_0 q_i) = \delta_0 \times \text{Cov}(x_i^e, q_i)
-$$
+$$\text{Cov}(x_i^e, u_i) = \text{Cov}(x_i^e, v_i + \delta_0 q_i) = \delta_0 \times \text{Cov}(x_i^e, q_i)$$
 
 La dernière égalité utilise le fait que $\text{Cov}(x_i^e, v_i) = 0$ dans le modèle latent.
 
@@ -1358,9 +1214,7 @@ L'idée repose sur une double observation. D'une part, nous ne pouvons rien fair
 
 Les variables de contrôle de l'endogénéité doivent permettre une décomposition de $q_i$ sous la forme :
 
-$$
-q_i = \gamma + \boldsymbol{\rho}'\mathbf{c}_i + \varepsilon_i
-$$
+$$q_i = \gamma + \boldsymbol{\rho}'\mathbf{c}_i + \varepsilon_i$$
 
 où cette décomposition satisfait des propriétés essentielles :
 
@@ -1374,21 +1228,15 @@ Ces conditions garantissent que $\boldsymbol{\rho}'\mathbf{c}_i$ "capte" exactem
 
 En substituant cette décomposition dans le modèle latent, nous obtenons :
 
-$$
-y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \delta_0(\gamma + \boldsymbol{\rho}'\mathbf{c}_i + \varepsilon_i) + v_i
-$$
+$$y_i = \alpha_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \delta_0(\gamma + \boldsymbol{\rho}'\mathbf{c}_i + \varepsilon_i) + v_i$$
 
 Ce qui se réécrit :
 
-$$
-y_i = (\alpha_0 + \delta_0\gamma) + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + (\delta_0\boldsymbol{\rho})'\mathbf{c}_i + (v_i + \delta_0\varepsilon_i)
-$$
+$$y_i = (\alpha_0 + \delta_0\gamma) + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + (\delta_0\boldsymbol{\rho})'\mathbf{c}_i + (v_i + \delta_0\varepsilon_i)$$
 
 En définissant $\theta_0 = \alpha_0 + \delta_0\gamma$, $\boldsymbol{\pi}_0 = \delta_0\boldsymbol{\rho}$, et $\eta_i = v_i + \delta_0\varepsilon_i$, nous obtenons le modèle contrôlé :
 
-$$
-y_i = \theta_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \boldsymbol{\pi}_0'\mathbf{c}_i + \eta_i
-$$
+$$y_i = \theta_0 + \mathbf{x}_i'\boldsymbol{\beta}_0 + x_i^e \beta_0 + \boldsymbol{\pi}_0'\mathbf{c}_i + \eta_i$$
 
 #### Propriétés du modèle contrôlé
 

@@ -52,9 +52,7 @@ Donc, si la machine a changé d’état, elle a effectué l’une de ces deux op
 
 Il existent deux versions pour l’écrire : les “quintuplets”, où on correspond une couple avec un triplet ; et les “quadruplets”, où on correspond une couple à une autre couple. Je préfère les quadruplets, mais le résultat est le même.
 
-$$
-\delta : \left\{(Q-\{h\})\times \Gamma\right\} \mapsto \left\{Q\times (\Gamma\cup\{G,D\})\right\}
-$$
+$$\delta : \left\{(Q-\{h\})\times \Gamma\right\} \mapsto \left\{Q\times (\Gamma\cup\{G,D\})\right\}$$
 
 Ici, $G$ et $D$ ne sont pas de symboles de $\Gamma$ mais des déplacement à gauche et droite, respectivement. Il existe trois possibilités de correspondance alors :
 
@@ -87,9 +85,7 @@ Exemple avec la notation $x/y/d$.
 
 Formellement, une Machine de Turing $T$ est donc :
 
-$$
-T=\{Q, q_0\in Q, h\in Q, \Gamma,\Sigma,\delta\}
-$$
+$$T=\{Q, q_0\in Q, h\in Q, \Gamma,\Sigma,\delta\}$$
 
 Normalement, une Machine de Turing démarre dans son état initial et exécute des transitions jusqu'à ce que son état d'arrêt soit atteint. **Deux notes importantes sont à faire :**
 

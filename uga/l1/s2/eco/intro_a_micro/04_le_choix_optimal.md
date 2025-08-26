@@ -9,15 +9,11 @@ Le marché offre au consommateur un taux d'échange égal à $-\frac{p_1}{p_2}$ 
 
 **Condition d'optimalité** : Pour maximiser l'utilité, le consommateur doit choisir un panier où :
 
-$$
-\text{TMS} = \frac{p_1}{p_2}
-$$
+$$\text{TMS} = \frac{p_1}{p_2}$$
 
 Ou de façon équivalente (condition équi-marginale) :
 
-$$
-\frac{Um_1}{p_1} = \frac{Um_2}{p_2}
-$$
+$$\frac{Um_1}{p_1} = \frac{Um_2}{p_2}$$
 
 ### Conditions d'optimalité par type de préférences
 
@@ -36,17 +32,13 @@ Le consommateur achètera uniquement le bien ayant le rapport qualité-prix le p
 
 Le consommateur achètera les biens dans une proportion fixe :
 
-$$
-\frac{y}{x} = \frac{a}{b}
-$$
+$$\frac{y}{x} = \frac{a}{b}$$
 
 #### Préférences quasi-linéaires
 
 Pour $U(x_1,y) = v(x_1) + y$, la condition d'optimalité est :
 
-$$
-v'(x_1) = \frac{p_1}{p_2}
-$$
+$$v'(x_1) = \frac{p_1}{p_2}$$
 
 ### Effets des taxes
 

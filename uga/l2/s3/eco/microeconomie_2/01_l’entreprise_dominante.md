@@ -32,9 +32,7 @@ Finalement, il existe une relation entre $Rm$, $p$ et la elasticité-prix $\epsi
 
 Sachant que la condition de maximisation de profit c’est $Rm = Cm$, on obtient avec un peu d’algèbre…
 
-$$
-Rm = Cm = p(q)[1-\frac{1}{|\epsilon|}]
-$$
+$$Rm = Cm = p(q)[1-\frac{1}{|\epsilon|}]$$
 
 On peut réarranger cette dernière équation pour obtenir la règle de l’élasticité inverse ou règle de mark-up.
 
@@ -43,9 +41,7 @@ On peut réarranger cette dernière équation pour obtenir la règle de l’éla
 > Un monopole augmente son taux de marge à mesure que la demande
 > devient faiblement élastique.*
 
-$$
-\underbrace{\frac{p-Cm}{p}}_{\text{Taux de marge}}=\underbrace{\frac{1}{|\epsilon|}}_\text{Élasticité inverse}
-$$
+$$\underbrace{\frac{p-Cm}{p}}_{\text{Taux de marge}}=\underbrace{\frac{1}{|\epsilon|}}_\text{Élasticité inverse}$$
 
 #### Pouvoir de marché du monopole
 
@@ -53,9 +49,7 @@ Le pouvoir de marché est la capacité d’une firme à proposer un prix supéri
 
 l’élasticité inverse ou règle du mark-up qui définit de fait l’indice de Lerner :
 
-$$
-L=\frac{p-Cm}{p}=\frac{1}{|\epsilon|}
-$$
+$$L=\frac{p-Cm}{p}=\frac{1}{|\epsilon|}$$
 
 - Si $|\epsilon| → \infty$, donc $L → 0$, qui est le cas de concurrence parfaite.
 - Si $|\epsilon| → 0$, donc $L → \infty$, qui est le cas du monopole (ou plutôt un nombre très grande, car $\infty$ n’est pas une quantité spécifique !)
@@ -176,9 +170,7 @@ Le prix de marché est $p = b - a(q_F + q_e)$. S’il doit être inférieur au c
 
 On veut vérifier la dernière inégalité. Il existe un prix $p_F$ associé a la quantité de la firme installée, $q_F$. $p_F = b - aq_F$. Donc, on isole $q_F$ pour injecter $p_F$ dans l’inegalité à vérifier. On arrive à :
 
-$$
-b - a(\frac{1}{a}(b-p_F) + q_e)<c_e \iff p_F < c_e +aq_e
-$$
+$$b - a(\frac{1}{a}(b-p_F) + q_e)<c_e \iff p_F < c_e +aq_e$$
 
 Le prix de vente qui dissuadera l'entrée d'un concurrent potentiel est donné par l'inégalité précédente : il s'agit du prix-limite.
 
@@ -188,9 +180,7 @@ Si on fait un raisonnement algébrique identique, on peut montrer que la conditi
 
 Finalement, le rangs de prix limites $p_F$ sont ceux qui vérifient :
 
-$$
-c_F + aq_e < p_F < c_e +aq_e
-$$
+$$c_F + aq_e < p_F < c_e +aq_e$$
 
 #### Situation #2 : Avantage lié à des économies d’échelle
 

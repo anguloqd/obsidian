@@ -16,11 +16,9 @@ Notons que l’équilibre de la balance des paiements signifie qu’il n’y a n
 
 La courbe IS représente le marché des biens. Si on considère les exportations et importations, l’équation d’équilibre de offre et demande des produits est :
 
-$$
-Y = C + I + G + XN
+$$Y = C + I + G + XN
 \newline
-Y = (C_0 + cY) + (bi) + G + (X-M)
-$$
+Y = (C_0 + cY) + (bi) + G + (X-M)$$
 
 $X$ et $M$ sont des fonctions d’exportation et importation, respectivement. Leurs définitions, et aussi les définitions de leurs variables, sont les suivantes :
 
@@ -33,19 +31,15 @@ $X$ et $M$ sont des fonctions d’exportation et importation, respectivement. Le
 - $m_1$ : sensibilité de $e_r$ sur la quantité d’importations.
 - $m_2$ : sensibilité de $Y$ sur la quantité d’importations.
 
-$$
-X=X(e_t,Y_{RDM})=x_1 e_r + x_2 Y_{RDM}
+$$X=X(e_t,Y_{RDM})=x_1 e_r + x_2 Y_{RDM}
 \newline
-M = M(e_t, Y)= m_1 e_r + m_2 Y
-$$
+M = M(e_t, Y)= m_1 e_r + m_2 Y$$
 
 Note sur l’équation de $M$ : elle est décroissante par rapport a $e_r$, la compétitivité. Si $e_r \uparrow$, les produits propres sont de meilleure qualité que ceux extérieurs, donc on les garde. Similairement, si $e_r \downarrow$, les produits extérieurs sont plus attractifs, donc on vend les propres pour acquérir les extérieurs.
 
 Finalement, on remplace leurs expressions sur la équation d’équilibre de IS ouverte. Le résultat final serait alors le suivante, rappelant que $s>0$ est proportion marginale à épargner et $b<0$ élasticité-intérêt de l’investissement (négatif).
 
-$$
-i = \frac{s+m_2}{b}Y - \frac{1}{b}(C_o +G+x_1e_r+x_2Y_{RDM}-m_1 e_r)
-$$
+$$i = \frac{s+m_2}{b}Y - \frac{1}{b}(C_o +G+x_1e_r+x_2Y_{RDM}-m_1 e_r)$$
 
 $i$ reste encore une fonction linéaire de $Y$. En comparaison avec la pente $\frac{s}{b}$ en économie ouverte de $Y$. la pente ici est $\frac{s+m_2}{b}$ et elle est encore toujours négative et **plus forte qu’en économie fermée** (en termes de valeurs absolue). L’explication est la suivante :
 
@@ -57,21 +51,15 @@ Finalement, si la compétitivité augmente $e_r$, on augmente les importations e
 
 Reprenons la définition originale de la courbe LM, où $g>0$ est élasticité-revenu de $O_M$ et $h<0$ est élasticité-intérêt de $O_M$ (**elle est croissante !!!**) :
 
-$$
-i = \frac{O_M/P}{h} - \frac{g}{h}Y
-$$
+$$i = \frac{O_M/P}{h} - \frac{g}{h}Y$$
 
 Sur la définition de masse monétaire réelle, notons qu’on peut décomposer le terme de masse monétaire $O_M$ comme suit. CINT est le crédit interne, RES sont les réserves de change.
 
-$$
-\frac{O_M}{P} = \frac{CINT+RES}{P}
-$$
+$$\frac{O_M}{P} = \frac{CINT+RES}{P}$$
 
 On introduit un nouveau composant : $BCA$, la balance de capitaux ou compte financier.
 
-$$
-BCA = K_\text{entrants} - K_\text{sortants}
-$$
+$$BCA = K_\text{entrants} - K_\text{sortants}$$
 
 Notons que $BCA > 0$ si $K_\text{entrants} > K_\text{sortants}$. C’est à dire, le pays local est attractif pour les placements de capitaux, donc $i > i_{RDM}$. Il est moins attractif si $BCA < 0$.
 
@@ -83,9 +71,7 @@ La prof. n’explicite pas la nouvelle équation pour la droite LM, mais en réa
 
 La condition d’équilibre de la balance des paiements est la suivante, où $BTC$ fonction de $Y$ et $BCA$ fonction de $i$.
 
-$$
-BP = BTC(Y) + BCA(i) = 0
-$$
+$$BP = BTC(Y) + BCA(i) = 0$$
 
 D’un point de vue d’analyse, on distingue les paiements extérieurs :
 
@@ -109,19 +95,15 @@ Cela dit, pour la construction de la droite BP sur le plan $(Y,i)$, on note seul
 
 La condition d’équilibre de la courbe BP est $BTC + BCA = 0$. On fait quelque remplacements et on arrive donc à ce qui suit. $ê$ est le taux de change anticipé.
 
-$$
-BTC+BCA=0
+$$BTC+BCA=0
 \newline
 (X-M)+BCA=0
 \newline
-(x_1 e_r+x_2 Y_{RDM})-(m_1 e_r + m_2 Y)+k(i-i_{RDM}+ê)=0
-$$
+(x_1 e_r+x_2 Y_{RDM})-(m_1 e_r + m_2 Y)+k(i-i_{RDM}+ê)=0$$
 
 On veut exprimer $i$ en termes de $Y$. Donc, avec de la manipulation algébrique, on arrive finalement à :
 
-$$
-i=i_{RDM}-ê+\frac{1}{k}(-x_1 e_r -x_2 Y_{RDM}+m_1 e_r)+\frac{m_2}{k}Y
-$$
+$$i=i_{RDM}-ê+\frac{1}{k}(-x_1 e_r -x_2 Y_{RDM}+m_1 e_r)+\frac{m_2}{k}Y$$
 
 On se rend compte que la pente de la fonction $i(Y)$ serait $\frac{m_2}{k}$, ce qui est positive, car l’elasticité-revenu des importations $m_2$ est positive, et de même pour l’élasticité-intérêt des entrées nettes de capitaux $k$. Elle est donc croissante.
 
@@ -226,15 +208,11 @@ Retournant à l’analyse, pour diminuer le déficit extérieur de BP, il faudra
 
 Ici, on peut énoncer les premiers des conditions, **appelé le théorème des élasticités critiques** : si la balance des transactions courantes est initialement en équilibre, elle retourne vers l’équilibre à la suite d’une dévaluation $\Delta^+ e_r$ (ou d’une dépréciation) si la somme en valeur absolue des élasticités-prix des exportations et des importations est supérieure à 1.
 
-$$
-e_X + e_M > 1, \text{ avec } e_X = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_X}{P_X}} \text{ et } e_M = \frac{\frac{\Delta M}{M}}{\frac{\Delta P_M}{P_M}}
-$$
+$$e_X + e_M > 1, \text{ avec } e_X = \frac{\frac{\Delta X}{X}}{\frac{\Delta P_X}{P_X}} \text{ et } e_M = \frac{\frac{\Delta M}{M}}{\frac{\Delta P_M}{P_M}}$$
 
 Cela dit, on peut explorer le cas aussi ou la $BTC$ n’est pas initialement en équilibre mais en déficit. Dans ce cas, la somme des élasticités doit être plus importante, dans une proportion qui dépend du déficit initial.
 
-$$
-e_X+e_M>1+e_M \left( \frac{M-X}{X} \right)
-$$
+$$e_X+e_M>1+e_M \left( \frac{M-X}{X} \right)$$
 
 #### La courbe en J
 

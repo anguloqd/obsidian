@@ -33,9 +33,7 @@ Le prix d'une action représente la valeur présente du flux de dividendes que l
 
 Pour un flux de profits $\pi_t$ sur T périodes avec un taux d'actualisation $r$ :
 
-$$
-V = \sum_{t=1}^T \frac{\pi_t}{(1+r)^t}
-$$
+$$V = \sum_{t=1}^T \frac{\pi_t}{(1+r)^t}$$
 
 ### Facteurs fixes et facteurs variables
 
@@ -55,9 +53,7 @@ Cadre d'analyse :
 
 L'optimisation de $\pi$ par rapport à $x_1$ donne la valeur de $x_1$ telle que :
 
-$$
-p \cdot Pm_1 = w_1
-$$
+$$p \cdot Pm_1 = w_1$$
 
 Où $Pm_1$ est le produit marginal du facteur 1.
 
@@ -67,23 +63,17 @@ On cherche la droite d'isoprofit la plus élevée qui croise l'isoquante de prod
 
 On peut réécrire le profit comme :
 
-$$
-\pi = pq - w_1x_1 - w_2x_2
-$$
+$$\pi = pq - w_1x_1 - w_2x_2$$
 
 Et en isolant $x_2$ :
 
-$$
-x_2 = \frac{pq - w_1x_1 - \pi}{w_2}
-$$
+$$x_2 = \frac{pq - w_1x_1 - \pi}{w_2}$$
 
 Ceci est l'équation d'une droite d'isoprofit à un niveau constant $\pi$.
 
 La condition d'optimisation devient :
 
-$$
-Pm_1 = \frac{w_1}{p}
-$$
+$$Pm_1 = \frac{w_1}{p}$$
 
 ### Statique comparative
 
@@ -96,13 +86,9 @@ Effets des variations de prix :
 
 On applique la condition d'optimisation à tous les facteurs de production :
 
-$$
-p \cdot Pm_1 = w_1
-$$
+$$p \cdot Pm_1 = w_1$$
 
-$$
-p \cdot Pm_2 = w_2
-$$
+$$p \cdot Pm_2 = w_2$$
 
 #### Cas de la fonction Cobb-Douglas
 
@@ -110,19 +96,13 @@ Pour une fonction Cobb-Douglas $q = x_1^a x_2^b$ :
 
 En multipliant (1) par $x_1$ et (2) par $x_2$, puis en isolant $x_1$ et $x_2$ :
 
-$$
-x_1 = \frac{ap}{w_1} \cdot q
-$$
+$$x_1 = \frac{ap}{w_1} \cdot q$$
 
-$$
-x_2 = \frac{bp}{w_2} \cdot q
-$$
+$$x_2 = \frac{bp}{w_2} \cdot q$$
 
 En remplaçant dans la fonction de production :
 
-$$
-q = \left(\frac{ap}{w_1}\right)^a \left(\frac{bp}{w_2}\right)^b q^{a+b}
-$$
+$$q = \left(\frac{ap}{w_1}\right)^a \left(\frac{bp}{w_2}\right)^b q^{a+b}$$
 
 D'où l'on déduit le $q$ optimal si $a+b \neq 1$.
 

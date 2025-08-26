@@ -102,17 +102,13 @@ Toutes choses égales par ailleurs, les risques $α$ et $β$ varient en sens inv
 - **Définition.** Considérons le cas où seule une hypothèse alternative $H_1$ est considérée face à $H_0$.
 - On appelle risque de première espèce $α$
 
-$$
-α = P(\text{rejeter }H₀|H₀) = P(\text{accepter }H₁|H₀) = P(X ∈ C|H₀)
-$$
+$$α = P(\text{rejeter }H₀|H₀) = P(\text{accepter }H₁|H₀) = P(X ∈ C|H₀)$$
 
 où $X$ est la statistique du test et $C$ la zone de rejet (région critique). La quantité $α$ est aussi appelée niveau du test.
 
 - On appelle risque de deuxième espèce $β$
 
-$$
-β = P(\text{accepter }H₀|H₁) = P(\text{rejeter }H₁|H₁) = P(X ∉ C|H₁)
-$$
+$$β = P(\text{accepter }H₀|H₁) = P(\text{rejeter }H₁|H₁) = P(X ∉ C|H₁)$$
 
 où $X$ est la statistique du test et $C$ la zone de rejet (région critique). La quantité $1 - β$ est aussi appelée puissance du test.
 
@@ -135,15 +131,11 @@ Sous $H_1$, la fonction de masse de $X$ est
 
 On obtient donc que
 
-$$
-1 - β = Pr(X ∈ C|H₁) = 1/64 + 15/64 + 20/64 = 36/64 = 9/16
-$$
+$$1 - β = Pr(X ∈ C|H₁) = 1/64 + 15/64 + 20/64 = 36/64 = 9/16$$
 
 Ainsi,
 
-$$
-β = 7/16
-$$
+$$β = 7/16$$
 
 En utilisant ce test, on a donc 1 chance sur 3 de se tromper si $H_0$ est vraie et 7 chances sur 16 de se tromper si c'est $H_1$ qui est vraie.
 
@@ -193,15 +185,11 @@ Cela est encore plus sensible dans la théorie de Neyman et Pearson puisque les 
 
 Le raisonnement manque de naturel, il est contre-intuitif. On calcule une probabilité correspondant à l'événement observé, conditionnellement à une hypothèse sur le paramètre d'intérêt
 
-$$
-P(\text{Données}|\text{Hypothèse})
-$$
+$$P(\text{Données}|\text{Hypothèse})$$
 
 alors qu'il semblerait plus naturel, à l'inverse, comme on le fait dans le cadre bayésien, de calculer une probabilité sur les valeurs possibles du paramètre, conditionnellement à l'événement observé
 
-$$
-P(\text{Hypothèse}|\text{Données})
-$$
+$$P(\text{Hypothèse}|\text{Données})$$
 
 ### Discontinu ou continu ?
 
@@ -229,9 +217,7 @@ La troisième erreur est de confondre la significativité statistique avec la si
 
 Prenons le test du $χ^2$… En statistiques, on ne peut que "quantifier la distance à l'indépendance" par la statistique du $χ^2$,
 
-$$
-D_χ² = n ∑ⱼ₌₁ᴶ ∑ₖ₌₁ᴷ (fⱼₖ - f_{ⱼ•} f_{•ₖ})²/(f_{ⱼ•} f_{•ₖ})
-$$
+$$D_χ² = n ∑ⱼ₌₁ᴶ ∑ₖ₌₁ᴷ (fⱼₖ - f_{ⱼ•} f_{•ₖ})²/(f_{ⱼ•} f_{•ₖ})$$
 
 où $J$ et $K$ sont le nombre de modalités de chacune des deux variables considérées.
 
@@ -239,13 +225,9 @@ où $J$ et $K$ sont le nombre de modalités de chacune des deux variables consid
 
 Les coefficients $φ$ et $C$ découlent de la statistique du $χ^2$ par les formules
 
-$$
-C = \sqrt{D_χ²/(D_χ² + n)}
-$$
+$$C = \sqrt{D_χ²/(D_χ² + n)}$$
 
-$$
-φ = \sqrt{D_χ²/n}
-$$
+$$φ = \sqrt{D_χ²/n}$$
 
 En réalité ces deux coefficients sont une variante l'un de l'autre. L'avantage de $C$ est qu'il est compris entre $0$ et $1$, alors que ce n'est pas le cas pour le $φ$. Plus ces indicateurs sont proche de zéro, plus il y a indépendance entre les deux variables $X$ et $Y$ étudiées.
 
@@ -255,9 +237,7 @@ Comme pour le coefficient $φ$, plus le $V$ de Cramér est proche de zéro, plus
 
 Le coefficient $V$ de Cramér nécessite l'utilisation de la statistique du $χ^2$ via la formule
 
-$$
-V = \sqrt{D_χ²/(n × \min({l-1, c-1}))}
-$$
+$$V = \sqrt{D_χ²/(n × \min({l-1, c-1}))}$$
 
 où $n$ est l'effectif total de la population, $c$ est le nombre de colonnes (nombre de modalités de $Y$) et $l$ le nombre de lignes (modalités de $X$).
 
@@ -307,9 +287,7 @@ Cette conception résout naturellement le problème du conditionnement précéde
 
 Le théorème de Bayes constitue le fondement mathématique de cette approche :
 
-$$
-P(θ|\text{Données}) = P(\text{Données}|θ) × P(θ) / P(\text{Données})
-$$
+$$P(θ|\text{Données}) = P(\text{Données}|θ) × P(θ) / P(\text{Données})$$
 
 où :
 

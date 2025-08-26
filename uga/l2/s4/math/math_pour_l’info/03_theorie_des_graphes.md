@@ -31,15 +31,13 @@ Pour le graphe précédent, on obtient cette matrice d’adjacence :
 
 ![untitled](ressources/03_theorie_des_graphes_untitled_1.png)
 
-$$
-M_G=\begin{bmatrix}
+$$M_G=\begin{bmatrix}
 0&0&1&0&1\\
 1&0&0&1&0\\
 0&1&1&0&0\\
 0&0&1&0&0\\
 1&0&0&0&0
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Si on ajoutait un autre chemin allant de $D$ à $C$, on changerait l’entrée $(4,3)$ à $2$ pour compter le total des chemins.
 
@@ -49,10 +47,8 @@ On peut définir aussi les ensembles de successeurs et de prédécesseurs d’un
 
 Un chemin est défini formellement comme une suite de sommets tel qu’un tout sommet est successeur du sommet précédent, à exception du premier sommet.
 
-$$
-\text{Il y a un chemin }v_a\text{-}v_z \text{ de longueur }n-1 \iff \exists(\{v_i\}_{i=0}^n): \\
-v_i\in V,(v_i,v_{i+1})\in E, v_0=v_a, v_n=v_z
-$$
+$$\text{Il y a un chemin }v_a\text{-}v_z \text{ de longueur }n-1 \iff \exists(\{v_i\}_{i=0}^n): \\
+v_i\in V,(v_i,v_{i+1})\in E, v_0=v_a, v_n=v_z$$
 
 - Un chemin élémentaire ne passe pas deux fois par un même sommet.
     - Un chemin *hamiltonien* passe une seule fois par tous les sommets du graphe.
@@ -70,8 +66,7 @@ Notons déjà qu’un chemin de longueur $1$ est tout simplement un arc, qui son
 
 ![untitled](ressources/03_theorie_des_graphes_untitled_1.png)
 
-$$
-M=\begin{bmatrix}
+$$M=\begin{bmatrix}
 0&0&1&0&1\\
 1&0&0&1&0\\
 0&1&1&0&0\\
@@ -85,8 +80,7 @@ M^2=\begin{bmatrix}
 1&1&1&1&0\\
 0&1&1&0&0\\
 0&0&1&0&1
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Il y a, par contre, de choses importantes à remarquer :
 
@@ -105,9 +99,7 @@ Graphe de départ à gauche, sa fermeture transitive à droite.
 
 En particulier, pour déterminer la fermeture transitive $\tilde{M}_G$ un graphe $G$ à $n$ sommets, l’opération est comme suit :
 
-$$
-\tilde{M}_G= M_G\oplus M^{[2]}_G\oplus\dots\oplus M^{[n]}_G=\bigoplus_{i=0}^n M^{[i]}_G
-$$
+$$\tilde{M}_G= M_G\oplus M^{[2]}_G\oplus\dots\oplus M^{[n]}_G=\bigoplus_{i=0}^n M^{[i]}_G$$
 
 Où $\oplus$ est l’addition booléenne et $M^{[n]}$ est la $n$-ième puissance booléenne de $M$.
 
@@ -117,8 +109,7 @@ Basiquement, nous dit s’il existe au moins un chemin entre deux sommets si $1$
 
 Donc, pour ce graphe $G$ :
 
-$$
-M_G^{[1]}=
+$$M_G^{[1]}=
 \begin{bmatrix}
 0&1&0\\
 1&0&1\\
@@ -144,8 +135,7 @@ M_G^{[3]}=
 1&1&1\\
 1&1&1\\
 0&0&0
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 Finalement, chaque entrée de $\tilde{M}_G$ devrait s’interpreter comme s’il existe au moins un chemin de taille égale ou inférieur à $n$ qui va de $v_i$ à $v_j$ si $\tilde{m}_{ij}=1$, et $0$ sinon.
 
@@ -171,11 +161,8 @@ Pour déduire la matrice d’adjacence $M_{G^\prime}$ d’un graphe non-orienté
 2. On l’additione avec la matrice du graphe original, pour obtenir celle du graphe orienté.
 On notera qu’on a été obligé d’orienter deux fois la boucle sur $C$, d’où le coefficient $2$ sur la diagonale. Aussi, la matrice $M_{G^*}$ est symétrique (par rapport à la diagonale).
 
-    $$
-    M_{G^*}=M_G+M_{G}^t
+$$M_{G^*}=M_G+M_{G}^t$$
 
-
-$$
 Un sommet $v$ est dit **connexe** si, pour tous les autres sommets $w$ ($w\ne v$), il existe une **chaîne** (équivalence de chemin d’un graphe non orienté) reliant $v$ à $w$. Bref, à partir de $v$, on peut arriver à tout autre sommet du graphe. Un graphe est **connexe** si tous ses sommets sont connexes.
 
 ## Arbres
@@ -274,11 +261,9 @@ Avant de commence, le terme “distance” dans le contexte de l’algorithme de
 ## Dessin d’un graphe par niveaux
 
 On peut dire qu’un sommet dans un graphe est de niveau $0$ s’il n’as pas de prédécesseur dans l’ensemble de sommets $S$. L’ensemble de sommets de niveau 0 est noté $S_0$. Ayant défini $S_0$, on peut définir $S_n$ récursivement comme suit :
-$$
 
-S_n = S - S_{n-1}
+$$S_n = S - S_{n-1}$$
 
-$$
 ![Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.](ressources/03_theorie_des_graphes_untitled_13.png)
 
 Cette méthode écrire, de gauche à droite, les sommes de $S_0$ jusqu’à $S_n$ resulte en des graphes bien ordonnés comme celui-ci.
@@ -312,18 +297,14 @@ On denote la date au plus tôt du sommet $B$ comme $t(B)$. En plus, on notera pa
 3. On voit que $t(E)=\min\big(t(D)+d(D,E), t(A)+d(A,E)\big)$. C’est-à-dire, la date au plus tôt des tâches prédécesseuses plus leurs distance à $E$. On déduit que $t(E)=7$, passant de D à E. 
 4. En general, si $\Gamma^-(X)$ est l’ensemble de prédécesseurs d’un sommet $X$, donc : 
     
-    
-$$
 
-    t(X)=
-    \begin{cases}
-    0, \text{ si } X\in S_0
-    \\
-    \max\big( \{t(s^-_X)+d(s^-_X,X): s^-_X \in \Gamma^-(X)\} \big), \text{ sinon }
-    \end{cases}
-    
+$$t(X)=
+\begin{cases}
+0, \text{ si } X\in S_0
+\\
+\max\big( \{t(s^-_X)+d(s^-_X,X): s^-_X \in \Gamma^-(X)\} \big), \text{ sinon }
+\end{cases}$$
 
-$$
 5. Quand on arrive à la fin, $t(\text{fin})=14$, le projet dure $14$ jours au mieux sans raté aucune tâche).
 
 #### Date au plus tard : $T(X)$
@@ -337,9 +318,8 @@ On lance un indice $i=0$ et on fixe $n$ comme la quantité des niveaux de tâche
 3. Pour $j=3$ c’est le sommet $E$. Même chose : $T(E)=T(C)-d(E,C)=10-3=7$.
 4. Pour $j=2$, on parle de $D$ et $A$. On commence par $A$. La chose intéressante ici c’est que on devra voir tous les successeurs de $A$ : $C$ et $E$, donc $T(A)=\min\big(T(C)-d(A,C),\hspace{2pt}T(E)-d(A,E)\big)$. On déduit aussi que $T(D)=2$.
 5. En général, si $\Gamma^+(X)$ est l’ensemble de prédécesseurs d’un sommet $X$, donc :
-$$
 
-T(X)=
+$$T(X)=
 
 \begin{cases}
 
@@ -349,9 +329,7 @@ t(\text{fin}), \text{ si } X=\text{fin}
 
 \min\big(\{T(s^+_X)-d(X,s^+_X):s^+_X \in \Gamma^+(X)\}\big), \text{ sinon}
 
-\end{cases}
-
-$$
+\end{cases}$$
 
 #### Graphique final et la marge d’une tâche
 

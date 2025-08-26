@@ -34,15 +34,11 @@ Le critère de Ward minimise la somme des différences quadratiques à l'intéri
 
 Formellement, pour deux clusters A et B, le critère de Ward se calcule :
 
-$$
-W(A,B) = \sum_{x \in A \cup B} ||x - \mu_{A \cup B}||^2 - \sum_{x \in A} ||x - \mu_A||^2 - \sum_{x \in B} ||x - \mu_B||^2
-$$
+$$W(A,B) = \sum_{x \in A \cup B} ||x - \mu_{A \cup B}||^2 - \sum_{x \in A} ||x - \mu_A||^2 - \sum_{x \in B} ||x - \mu_B||^2$$
 
 Cette formule peut être simplifiée sous la forme :
 
-$$
-W(A,B) = \frac{|A| \times |B|}{|A \cup B|} ||\mu_A - \mu_B||^2
-$$
+$$W(A,B) = \frac{|A| \times |B|}{|A \cup B|} ||\mu_A - \mu_B||^2$$
 
 où $\mu_A$ et $\mu_B$ représentent respectivement les centroïdes des clusters A et B.
 
@@ -52,9 +48,7 @@ La liaison complète minimise la distance maximale entre observations de paires 
 
 Étant donnée une mesure de dissimilarité d et deux ensembles A et B :
 
-$$
-C(A,B) = \max_{a \in A, b \in B} d(a,b)
-$$
+$$C(A,B) = \max_{a \in A, b \in B} d(a,b)$$
 
 Cette méthode garantit que tous les points d'un cluster sont relativement proches les uns des autres, mais peut être sensible aux valeurs aberrantes.
 
@@ -62,9 +56,7 @@ Cette méthode garantit que tous les points d'un cluster sont relativement proch
 
 La liaison simple minimise la distance entre les observations les plus proches de paires de clusters. Cette approche permissive peut produire des clusters de forme allongée.
 
-$$
-S(A,B) = \min_{a \in A, b \in B} d(a,b)
-$$
+$$S(A,B) = \min_{a \in A, b \in B} d(a,b)$$
 
 Cette méthode favorise la formation de chaînes d'observations et peut être sensible au phénomène de chaînage (chaining effect) où des clusters s'étendent de manière artificielle.
 
@@ -72,9 +64,7 @@ Cette méthode favorise la formation de chaînes d'observations et peut être se
 
 La liaison moyenne minimise la moyenne des distances entre toutes les observations de paires de clusters, offrant un compromis entre les approches simple et complète.
 
-$$
-A(A,B) = \frac{1}{|A| \times |B|} \sum_{a \in A} \sum_{b \in B} d(a,b)
-$$
+$$A(A,B) = \frac{1}{|A| \times |B|} \sum_{a \in A} \sum_{b \in B} d(a,b)$$
 
 Cette méthode considère l'ensemble des relations entre points des deux clusters, produisant généralement des résultats équilibrés.
 

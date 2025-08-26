@@ -60,8 +60,7 @@ La logique : puisque le coûts sont constants, la firme décide à quel segment 
 
 Si on applique le programme d’optimisation de profit pour chaque quantité de produit dirigé à un segment (dans ce cas, $q_1$ et $q_2$), on obtient la conclusion qui suit :
 
-$$
-\pi=p_1(q_1)q_1+p_2(q_2)q_2-c(q_1+q_2) \\
+$$\pi=p_1(q_1)q_1+p_2(q_2)q_2-c(q_1+q_2) \\
 \text{}
 \\\implies  \frac{\partial\pi}{\partial q_1}=\frac{\partial p_1(q_1)q_1}{\partial q_1}-\frac{\partial c(q_1+q_2)}{\partial q_1}=0 \iff Rm_1=Cm
 \\
@@ -70,14 +69,11 @@ $$
 \\
 \text{}
 \\
-\implies Rm_1=Rm_2
-$$
+\implies Rm_1=Rm_2$$
 
 Et, en général, pour $n$ segments/produits, leurs $Rm$ sont tous égaux et égaux aussi à $Cm$ :
 
-$$
-Rm_i=Rm_{i\ne j}\hspace{12pt}\text{ et }\hspace{12pt}Rm_i=Cm_i
-$$
+$$Rm_i=Rm_{i\ne j}\hspace{12pt}\text{ et }\hspace{12pt}Rm_i=Cm_i$$
 
 ### Modèle de coûts non constants
 
@@ -91,22 +87,18 @@ Ici, la fonction de coût marginale n’est plus $Q=q_i+q_j$ mais $2Q=2(q_1+q_2)
 
 Pour les deux segments de marché, normalement il y a un qui est disposé à payer plus que l’autre en général. Disons que $D_1$ est le segment disposer à payer plus cher, et $D_2$ moins cher. Un exemple de ceci se voit comme suit :
 
-$$
-p^{D_1} = \underbrace{100}_{a_1} - q\hspace{12pt}\text{ et }\hspace{12pt}p^{D_2} = \underbrace{20}_{a_2} - q
-$$
+$$p^{D_1} = \underbrace{100}_{a_1} - q\hspace{12pt}\text{ et }\hspace{12pt}p^{D_2} = \underbrace{20}_{a_2} - q$$
 
 On peut déduire que le client de $D_1$ qui a le plus grand prix de réserve est celui avec $100$ (le coefficient libre), et $20$ pour le plus grand prix de réserve de $D_2$. La firme donc confronte une dilemme : soit elle choisit le prix optimal pour le marché plus riche $D_1$, ou un prix pour le deux marchés $D_1$ et $D_2$.
 
 Une partie importante de ce modèle est déduire qu’est-ce que serait la courbe de demande des deux marchés. Pour cela, on écrit les courbes de demande dans la forme non inverse, on les additionne comme suit :
 
-$$
-\left.
+$$\left.
 \begin{array}{r}
 q^{D_1}=100-p \\
 q^{D_2}=20-p
 \end{array}
-\right\} \implies q^{\Sigma}=120-2p \implies p^{\Sigma}=60-\frac{1}{2}q
-$$
+\right\} \implies q^{\Sigma}=120-2p \implies p^{\Sigma}=60-\frac{1}{2}q$$
 
 $p^\Sigma$ n’est pas vraiment une courbe de demande, on verra à quoi elle sert après. Si on graphique les trois demandes, on obtient ce qui suit :
 
@@ -118,14 +110,12 @@ La courbe rouge est $p^{D_1}$, la bleue est $p^{D_2}$ et la verte est $p^\Sigma$
 
 Voyons : si le prix est entre $[20,100]$, le seule marché qui voudra acheter est $D_1$ (donc la courbe rouge entre $p=100$ et $p=20$). Par contre, si le prix est inférieur à $20$, les deux marchés participeront (donc, la courbe verte entre $p=20$ jusqu’à $p=0$). On en déduit que la courbe de demande pour les deux marchés est donc comme suit :
 
-$$
-p^{D_{1+2}}=
+$$p^{D_{1+2}}=
 \begin{cases}
 p^{D_1},  \text{ si }p\in[20,100]
 \\
 p^\Sigma, \text{ si }p < 20
-\end{cases}
-$$
+\end{cases}$$
 
 La courbe qui en résulte est une courbe défini par morceaux, d’où l’utilité de calculer $p^\Sigma$. Cette type de demande s’appelle “demande coudée”, car l’intersection en $p=20$ ressemble un coude.
 
@@ -137,13 +127,11 @@ Il faudra voir quelle profit est le plus grand : si le profit de servit le march
 
 On peut faire apparaître l’élasticité pour tracer de conclusions intéressantes dans l’optimisation du profit par rapport à chaque quantité. À nouveau, supposant des coûts constants :
 
-$$
-\pi=p_1(q_1)q_1+p_2(q_2)q_2-\underbrace{(cq_1+cq_2)}_{c(q_1+q_2)}
+$$\pi=p_1(q_1)q_1+p_2(q_2)q_2-\underbrace{(cq_1+cq_2)}_{c(q_1+q_2)}
 \\
 \text{}
 \\
-\frac{\partial\pi}{\partial q_i}=0 \implies \frac{\partial p_i(q_i)}{\partial q_i}q_i+p_i(q_i)-c=0\implies p_i(q_i)\left(1-\frac{1}{\epsilon_i}\right)=c
-$$
+\frac{\partial\pi}{\partial q_i}=0 \implies \frac{\partial p_i(q_i)}{\partial q_i}q_i+p_i(q_i)-c=0\implies p_i(q_i)\left(1-\frac{1}{\epsilon_i}\right)=c$$
 
 Pour maintenir la dernière égalité la plus à droite, si $\epsilon_i \nearrow$, donc $p_i \searrow$ et inversement.
 

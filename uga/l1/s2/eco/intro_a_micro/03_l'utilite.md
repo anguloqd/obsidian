@@ -21,17 +21,13 @@ L'utilité marginale est la variation d'utilité suite à un changement marginal
 
 #### Taux Marginal de Substitution (TMS)
 
-$$
-\text{TMS} = \frac{Um_1}{Um_2}
-$$
+$$\text{TMS} = \frac{Um_1}{Um_2}$$
 
 ### Fonctions d'utilité courantes
 
 #### Cobb-Douglas
 
-$$
-U(x,y) = x^a y^b
-$$
+$$U(x,y) = x^a y^b$$
 
 Propriétés :
 
@@ -41,9 +37,7 @@ Propriétés :
 
 #### Substituts parfaits
 
-$$
-U(x,y) = ax + by
-$$
+$$U(x,y) = ax + by$$
 
 Propriétés :
 
@@ -52,9 +46,7 @@ Propriétés :
 
 #### Compléments parfaits
 
-$$
-U(x,y) = \min\{ax, by\}
-$$
+$$U(x,y) = \min\{ax, by\}$$
 
 Propriétés :
 
@@ -63,9 +55,7 @@ Propriétés :
 
 #### Fonctions quasi-linéaires
 
-$$
-U(x,y) = f(x) + y
-$$
+$$U(x,y) = f(x) + y$$
 
 Propriétés :
 

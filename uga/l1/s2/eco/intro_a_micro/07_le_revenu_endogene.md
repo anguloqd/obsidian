@@ -23,21 +23,15 @@ Ancienne formulation : La contrainte budgétaire était exprimée comme $m = p_1
 
 Nouvelle formulation avec dotation : Ce qu'on gagne dépend de notre offre (combien on offre et à quel prix) :
 
-$$
-m = p_1\omega_1 + p_2\omega_2
-$$
+$$m = p_1\omega_1 + p_2\omega_2$$
 
 La contrainte budgétaire devient donc :
 
-$$
-p_1x_1 + p_2x_2 = p_1\omega_1 + p_2\omega_2
-$$
+$$p_1x_1 + p_2x_2 = p_1\omega_1 + p_2\omega_2$$
 
 Ou sous forme simplifiée :
 
-$$
-p_1(x_1 - \omega_1) + p_2(x_2 - \omega_2) = 0
-$$
+$$p_1(x_1 - \omega_1) + p_2(x_2 - \omega_2) = 0$$
 
 #### Représentation graphique
 
@@ -102,9 +96,7 @@ Dans le cas d'une diminution des prix :
 
 On réécrit l'équation de Slutsky en termes de variation du prix :
 
-$$
-\frac{\Delta x_1}{\Delta p_1} = \frac{\Delta x_1^s}{\Delta p_1} + \frac{\Delta x_1^m}{\Delta p_1}
-$$
+$$\frac{\Delta x_1}{\Delta p_1} = \frac{\Delta x_1^s}{\Delta p_1} + \frac{\Delta x_1^m}{\Delta p_1}$$
 
 L'effet revenu peut être divisé comme suit :
 
@@ -117,9 +109,7 @@ L'effet de revenu dotation est donc : $\frac{\Delta x_1^m}{\Delta m} \cdot \omeg
 
 L'équation finale de Slutsky devient :
 
-$$
-\frac{\Delta x_1}{\Delta p_1} = \underbrace{\frac{\Delta x_1^s}{\Delta p_1}}_{\text{Effet substitution}} + \underbrace{\frac{\Delta x_1^m}{\Delta m} \cdot (x_1 - \omega_1)}_{\text{Effet revenu net}}
-$$
+$$\frac{\Delta x_1}{\Delta p_1} = \underbrace{\frac{\Delta x_1^s}{\Delta p_1}}_{\text{Effet substitution}} + \underbrace{\frac{\Delta x_1^m}{\Delta m} \cdot (x_1 - \omega_1)}_{\text{Effet revenu net}}$$
 
 #### Analyse des effets
 
@@ -145,15 +135,11 @@ On suppose que le consommateur consomme tout ce qu'il gagne en revenu (pas d'ép
 
 La contrainte budgétaire s'écrit :
 
-$$
-pC = M + wL
-$$
+$$pC = M + wL$$
 
 On peut aussi l'écrire :
 
-$$
-pC - wL = M
-$$
+$$pC - wL = M$$
 
 $M$ peut être interprétée comme la dotation initiale de ressources.
 
@@ -164,13 +150,9 @@ $M$ peut être interprétée comme la dotation initiale de ressources.
 
 On modifie l'équation en ajoutant $w\bar{L}$ aux deux côtés :
 
-$$
-pC + w\bar{L} - wL = M + w\bar{L}
-$$
+$$pC + w\bar{L} - wL = M + w\bar{L}$$
 
-$$
-pC + w(\bar{L} - L) = M + w\bar{L}
-$$
+$$pC + w(\bar{L} - L) = M + w\bar{L}$$
 
 - La limite de consommation si on ne travaillait pas serait $\bar{C} = M/p$
 - On réécrit comme $p\bar{C} = M$ et on substitue
@@ -184,9 +166,7 @@ Le temps de loisir $R = (\bar{L} - L)$ ("R" de relaxation)
 
 L'équation devient finalement :
 
-$$
-pC + wR = p\bar{C} + w\bar{R}
-$$
+$$pC + wR = p\bar{C} + w\bar{R}$$
 
 Interprétation :
 
