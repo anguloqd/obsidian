@@ -11,10 +11,11 @@ TODO:
   - Econométrie 1 -> Endogeneité incomplet et il faut changer des images par du texte !
   - Rendériser les preuves avec callout de type "exemple"
   - Standardiser notation de math:
-    - E(X) pour espérance, V(X) pour variance…
+    - E(X) pour espérance, V(X) pour variance, N(\mu, \sigma) pour distribution normale au lieu de \mathcal{N}...
   - Changer caractères unicode (ε, ∫, …) pour du LaTeX explicit
   - Améliorer spacing des math blocks (\$\$), pas de whitelines vide entre les delimiteurs et l'expression math, et toujours des emptylines dehors de delimiteurs
   - "**Theorème**." "**Définition**." "**Corollaire**." Notation formelle comme des papers de math.
+  - Centrer toutes les images !!!
 - ENSIMAG : STYLE CHEAT SHEETS
   - Algo
   - Intro à unix

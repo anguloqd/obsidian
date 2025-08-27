@@ -49,7 +49,7 @@ V(\mathbf{u}) = E\left[\mathbf{u} \mathbf{u}^T\right] &=\begin{bmatrix}
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & \sigma_u^2
 \end{bmatrix}
-\\[30pt]
+\\[10pt]
 &= \sigma_u^2 \begin{bmatrix}
 1 & 0 & 0 & 0 & 0 \\
 0 & 1 & 0 & \cdots & 0 \\
@@ -58,23 +58,23 @@ V(\mathbf{u}) = E\left[\mathbf{u} \mathbf{u}^T\right] &=\begin{bmatrix}
 0 & 0 & 0 & \cdots & 1
 \end{bmatrix}
 = \sigma_u^2 I_N
-\end{aligned}
-\\[10pt]
-\text{Hétéroscédasticité : } V(\mathbf{u}) = \begin{bmatrix}
+\\[30pt]
+\text{Hétéroscédasticité : } V(\mathbf{u}) &= \begin{bmatrix}
 \omega_{11} & 0 & 0 & \cdots & 0 \\
 0 & \omega_{22} & 0 & \cdots & 0 \\
 0 & 0 & \omega_{33} & \cdots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & \omega_{NN}
 \end{bmatrix}
-\\[10pt]
-\text{Autocorrelation : } V(\mathbf{u}) = \begin{bmatrix}
+\\[30pt]
+\text{Autocorrelation : } V(\mathbf{u}) &= \begin{bmatrix}
 1 & \omega_{12} & \omega_{13} & \cdots & \omega_{1N} \\
 \omega_{21} & 1 & \omega_{31} & \cdots & \omega_{2N} \\
 \omega_{31} & \omega_{32} & 1 & \cdots & \omega_{3N} \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 \omega_{N1} & \omega_{N2} & \omega_{N3} & \cdots & 1
-\end{bmatrix}$$
+\end{bmatrix}
+\end{aligned}$$
 
 ## Hétéroscédasticité $(H_2)$
 
@@ -212,11 +212,21 @@ $$E(\hat{\sigma}^2_{u,MCO})=\frac{\hat{\mathbf{u}}^T \hat{\mathbf{u}}}{T-(k+1)}$
 
 Dans le chapitre deux, on a prouvé que $\hat{\mathbf{u}}^T \hat{\mathbf{u}}= \mathbf{u}^T \mathbf{M} \mathbf{u}$. Donc, finalement :
 
-![untitled](ressources/03_non_respect_des_hypotheses_untitled_6.png)
+$$E(\hat{\sigma}^2_{u,MCO}) = E\left[\frac{u^T Mu}{T - (k + 1)}\right] = \frac{1}{T - (k + 1)}E(u^T Mu)$$
+
+$$= \frac{1}{T - (k + 1)}E\left(Tr(Muu^T)\right) = \frac{1}{T - (k + 1)}Tr\left(M E(uu^T)\right)$$
+
+$$= \frac{1}{T - (k + 1)}Tr\left(M\sigma^2_u\Omega\right)$$
 
 La suite est donc :
 
-![untitled](ressources/03_non_respect_des_hypotheses_untitled_7.png)
+$$E(\hat{\sigma}^2_{u,MCO}) = \frac{1}{T - (k + 1)}Tr\left(M\sigma^2_u\Omega\right) = \frac{\sigma^2_u}{T - (k + 1)}Tr(M + M\Omega - M)$$
+
+$$= \frac{\sigma^2_u}{T - (k + 1)}Tr(M) + \frac{\sigma^2_u}{T - (k + 1)}Tr(M\Omega - M)$$
+
+$$= \frac{(T - (k + 1))\sigma^2_u}{T - (k + 1)} + \frac{\sigma^2_u}{T - (k + 1)}Tr(M(\Omega - I))$$
+
+$$E(\hat{\sigma}^2_{u,MCO}) = \sigma^2_u + \underbrace{\sigma^2_u \frac{Tr(M(\Omega - I))}{T - (k + 1)}}_{\neq 0}$$
 
 On conclut que $\hat{\sigma}^2_{u,MCO}$ est biaisé.
 
@@ -228,11 +238,25 @@ $$\hat{\sigma}^2_{u,MCG}=\frac{\hat{\mathbf{u}^*}^T \hat{\mathbf{u}^*}}{T-(k+1)}
 
 Donc,
 
-![untitled](ressources/03_non_respect_des_hypotheses_untitled_8.png)
+$$\hat{u}^{*T}\hat{u}^* = u^{*T} \underbrace{M^*}_{M^*} u^*$$
+
+$$= u^T\Omega^{-1/2}M^*\Omega^{-1/2}u,$$
+
+$$\text{Avec } \Omega^{-1/2} \text{ symétrique}$$
 
 Puis, finalement,
 
-![untitled](ressources/03_non_respect_des_hypotheses_untitled_9.png)
+$$E(\hat{\sigma}^2_{u,MCG}) = E\left(\frac{(u^T\Omega^{-1/2}M^*\Omega^{-1/2}u)}{T - (k + 1)}\right)$$
+
+$$= \frac{1}{T - (k + 1)}E\left(Tr\left(\Omega^{-1/2}M^*uu^T\Omega^{-1/2}\right)\right)$$
+
+$$= \frac{1}{T - (k + 1)}Tr\left(M^*\Omega^{-1/2}E(uu^T)\Omega^{-1/2}\right)$$
+
+$$= \frac{1}{T - (k + 1)}Tr\left(\Omega^{-1/2}\sigma^2_u\Omega\Omega^{-1/2}M^*\right)$$
+
+$$= \frac{\sigma^2_u}{T - (k + 1)}Tr(M^*)$$
+
+$$= \sigma^2_u, \text{ car } Tr(M^*) = T - (k + 1)$$
 
 On conclut que $\hat{\sigma}^2_{u,MCG}$ est donc sans biais.
 
@@ -436,14 +460,83 @@ y_t & =\beta_1 \tilde{x}_t+\beta_0+u_t \\
 & =\beta_1\left(x_t-v_t\right)+\beta_0+u_t \\
 & =\beta_1 x_t+\beta_0+w_t, \text{ avec } w_t=u_t-\beta_1 v_t
 \end{aligned}
-\\
+$$$$
 \mathbb{E}\left[x_t w_t\right]=\mathbb{E}\left[\left(\tilde{x}_t+v_t\right) w_t\right]=\mathbb{E}\left[\left(\tilde{x}_t+v_t\right)\left(u_t-\beta_1 v_t\right)\right]=-\beta_1 \sigma_v^2 \neq 0$$
 
 L'estimateur des MCO de $\beta_1$ est donc biaisé et non convergent. On voit que $x_t$ est corrélée avec $w_t$ à travers $\beta_1$.
 
 #### Méthode des variables instrumentales
 
-#TODO(À faire !)
+L'estimateur par Variables Instrumentales (noté VI) est l'application des MCO au modèle transformé suivant :
+
+$$P_Z y = P_Z Xb + P_Z u, \text{ avec } P_Z = Z (Z^T Z)^{-1} Z^T \qquad (5)$$
+
+La matrice $P_Z X$ revient à ne conserver que l'information apportée par les variables explicatives qui est asymptotiquement orthogonale aux perturbations. Pour utiliser cette méthode, il faut :
+
+- Définir un nombre d'instruments $p > k + 1$ supérieur ou égal à $k + 1$.
+- L'instrument doit être corrélé avec la variable endogène mais non corrélé avec le terme d'erreur.
+- **Plus les instruments sont corrélés avec les variables explicatives, plus l'estimateur par VI est précis.**
+- À distance finie, il est généralement biaisé, et il n'existe pas de formulation générale pour sa matrice des variances covariances.
+
+L'estimateur par variables instrumentales est donné par :
+
+$$\hat{b}_{VI} = (X^T P_Z X)^{-1} X^T P_Z y \qquad P_Z = Z (Z^T Z)^{-1} Z^T$$
+
+avec $Z$ la matrice des $p$ instruments tels que :
+
+$$\text{plim}_{T \to \infty} \frac{X^T P_Z X}{T} \Rightarrow Z \text{ et } X \text{ sont corrélés asymptotiquement}$$
+
+existe et est définie positive.
+
+$$\text{plim}_{T \to \infty} \frac{Z^T u}{T} = 0 \Rightarrow Z \text{ et } u \text{ sont } \textbf{non} \text{ corrélés asymptotiquement}$$
+
+##### Propriétés asymptotiques
+
+L'estimateur VI possède les propriétés asymptotiques suivantes :
+
+- **Convergent** : $\text{plim}_{T \to \infty} \hat{b}_{VI} = b$
+
+- **Asymptotiquement normal** :
+
+$$\sqrt{T} \left(\hat{b}_{VI} - b\right) \xrightarrow{\mathcal{L}}_{T \to \infty} \mathcal{N} \left(0, \sigma^2_u Q^{-1}_{XP_Z X}\right)$$
+
+- La variance est donnée par :
+
+$$V \left[\sqrt{T} \left(\hat{b}_{VI} - b\right)\right] = \sigma^2_u Q^{-1}_{XP_Z X}$$
+
+$$\hat{V} \left[\hat{b}_{VI}\right] = \hat{\sigma}^2_{u, VI} \left(\frac{X^T P_Z X}{T}\right)^{-1}$$
+
+- avec :
+
+$$\hat{\sigma}^2_{u, VI} = \frac{SCR_{VI}}{T} \qquad SCR_{VI} = \bar{u}^T \bar{u} \text{ où } \bar{u} = y - X \hat{b}_{VI}$$
+
+##### Convergence et efficacité
+
+Si $T \to \infty$, alors :
+
+- $\text{plim}_{T \to \infty} \hat{\sigma}^2_{u, VI} = \sigma^2_u$, c'est-à-dire que $\hat{\sigma}^2_{u, VI}$ est un estimateur convergent de la variance des perturbations $\sigma^2_u$
+
+- $\text{plim}_{T \to \infty} \hat{V}[\hat{b}_{VI}] = V[\sqrt{T}(\hat{b}_{VI} - b)]$, c'est-à-dire que $\hat{V}[\hat{b}_{VI}]$ est un estimateur convergent de la matrice des variances covariances asymptotique de $\sqrt{T}(\hat{b}_{VI} - b)$
+
+Si l'estimateur par VI est convergent, il n'est **pas asymptotiquement efficace**, càd il n'est pas l'estimateur convergent utilisant les instruments $Z$, dont la matrice des var-cov est minimale.
+
+Comme l'estimateur par VI n'a pas de bonnes propriétés à distance finie, les tests de restriction sont des test de $Wald$ basés sur les propriétés asymptotiques de l'estimateur par VI.
+
+##### Cas d'hétéroscédasticité et d'autocorrélation
+
+Si les perturbations sont autocorrélées et/ou hétéroscédastiques, l'estimateur par VI reste convergent. Mais sa distribution asymptotique est donnée par :
+
+$$V\left[\sqrt{T} \left(\hat{b}_{VI} - b\right)\right] \xrightarrow{\mathcal{L}}_{T \to \infty}$$
+
+$$\mathcal{N} \left\{0, \sigma^2_u \text{plim}_{T \to \infty} \left(\frac{X^T P_Z X}{T}\right)^{-1} \frac{X^T P_Z \Omega P_Z X}{T} \left(\frac{X^T P_Z X}{T}\right)^{-1}\right\}$$
+
+Rappel : l'estimateur par VI revient à appliquer les MCO au modèle 6. Mais, la matrice des var-cov est désormais égale à :
+
+$$V[P_Z u] = \sigma^2_u P_Z \Omega P_Z$$
+
+Cela conduit à estimer le modèle :
+
+$$\Omega^{-1/2} y = \Omega^{-1/2} Xb + \Omega^{-1/2} u \qquad (6)$$
 
 #### Tests
 

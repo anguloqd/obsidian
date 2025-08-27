@@ -107,7 +107,6 @@ $$R_i \sim \mathcal{U}([[ 1, n ]]), \quad \text{où } n = n_X + n_Y$$
 $$E(R_i) = \frac{n+1}{2}, \quad V(R_i) = \frac{n^2 - 1}{12}$$
 
     On a :
-    
 
 $$E(W) = \mathbb{E} \left[ \sum_{i=1}^{n_X} R_i \right] = \sum_{i=1}^{n_X} E(R_i) = n_X \cdot \frac{n+1}{2}$$
 

@@ -1,7 +1,6 @@
 ## Détection de points de rupture dans les séries temporelles
 
-> [!note]
-> Lien vers l'article original : [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5464762/)
+[02_resume_paper_2_paper.pdf](02_resume_paper_2_paper.pdf)
 
 ### Introduction
 
